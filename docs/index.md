@@ -14,7 +14,7 @@ title: Home
 - [beHub](https://behub.com.au)
 
 ### Related
-- [selfdriven.university](https://selfdriven.university)
+- [selfdriven.community](https://selfdriven.community)
 - [selfdriven.fyi/intelligence](https://selfdriven.fyi/intelligence)
 - [selfdriven.fyi/cog-assist](https://selfdriven.fyi/cog-assist)
 - [selfdriven.network AI Interface](https://selfdriven.network)
@@ -23,4 +23,5 @@ title: Home
 - [heyOcto.ai](https://heyocto.ai) - templates
 - [selfdriven.social](https://selfdriven.social) - AT Protocol
 - [selfdriven.fyi/research](https://selfdriven.fyi/research)
+- [selfdriven.space](https://selfdriven.space)
 
