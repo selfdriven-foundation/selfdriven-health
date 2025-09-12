@@ -9,6 +9,9 @@ title: Home
 - Traditional Health Care facilities are under pressure.
 - With the arrival of GAHI as a society we have the opportunity to decentralise health functions.
 
+### Resources
+- [Research](/research/)
+
 ### Contributors
 - [selfdriven.university](https://selfdriven.university)
 - [beHub](https://behub.com.au)
