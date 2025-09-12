@@ -23,7 +23,7 @@ permalink: /human-in-the-loop-services/
 
 - We are building a community of health practitioners who recognise the transformative impact of *GenAI*, helping deliver better health outcomes for humans, at scale.
     - Current focus is building the team in preparation for running pilots:
-    - How to organise now that we have GAHI as a society
+    - How to organise now that we have *GenAI* as a society
     - Practice framework (Why, What, How, Who, When, Where)
         - Application for diagnosis
         - How to collaborate with *GenAU*, now that it is being used by society for diagnosis
