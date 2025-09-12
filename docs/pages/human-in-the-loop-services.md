@@ -26,7 +26,7 @@ permalink: /human-in-the-loop-services/
     - How to organise now that we have GAHI as a society
     - Practice framework (Why, What, How, Who, When, Where)
         - Application for diagnosis
-        - How to collaborate with GAHI, now that it is being used by society for diagnosis
+        - How to collaborate with *GenAU*, now that it is being used by society for diagnosis
 
 ## Tech
 - **"*GenAI* searches for humans"**
