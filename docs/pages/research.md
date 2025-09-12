@@ -4,7 +4,7 @@ title: Research - selfdriven Health
 permalink: /research/
 ---
 
-## Research into better human health experiences in the era of Generally Available High Intelligence (GAHI).
+## Research into better human health experiences in the era of *Generally Available High Intelligence (GAHI)*.
 
 ## Topics
 - The only human skill is human-connection.
