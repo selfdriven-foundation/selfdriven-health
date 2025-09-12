@@ -19,7 +19,7 @@ eg:
     - Parent consults *GenAI*
     -  *GenAI* creates a plan
     - Parent starts the plan with child
-    - Child want engage
+    - Child wont engage with the plan / process
     - Parent goes back to  *GenAI*
     -  *GenAI* searches for humans that can be be incorported in the health loop.
 
