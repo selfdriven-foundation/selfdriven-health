@@ -10,11 +10,12 @@ permalink: /research/
 - The only human skill is human-connection.
 - Health is about human connections at all dimensions 
 
-## Human In The Loop Services (HITPS)
+## Human-In-The-Loop Services (HITPS)
 - GAHI based services *GenAI* need the ability to engage humans in to the loop to make the intelligence impactful.
 - Humans that are good at engaging with other humans to help them engage with intelligence.
 
-eg:
+## HITPS Example
+
 - **"Child with speech difficulties."**
     - Parent consults *GenAI*
     -  *GenAI* creates a plan
