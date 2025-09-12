@@ -10,7 +10,7 @@ title: Home
 - With the arrival of *GAHI* as a society we have the opportunity to decentralise health functions.
 
 ### Resources
-- [Research](/research/)
+- [Human In The Loop Services](/human-in-the-loop-services/)
 
 ### Contributors
 - [selfdriven.university](https://selfdriven.university)
