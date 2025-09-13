@@ -4,7 +4,7 @@ title: HITPS - selfdriven Health
 permalink: /practitioner-in-the-loop-services/
 ---
 
-## Practitioner-In-The-Loop Services (PITPS)
+## Practitioner-In-The-Loop Services (PITLS)
 
 - *GenAI* services (e.g., ChatGPT) often require a practitioner as part of the process ("in the loop") to ensure the intelligence is applied effectively and meaningfully.
 - Practitioners who excel at human connection are essential to help people engage with *GenAI*-driven solutions.
