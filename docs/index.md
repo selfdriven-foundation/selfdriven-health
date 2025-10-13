@@ -12,7 +12,7 @@ title: Home
 ### Research
 - [Practitioner In The Loop Services](/practitioner-in-the-loop-services/)
 - [Better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*](/research/)
-- [Communitisation - Funding](/research-communitisation/)
+- [Org](/research-org/) - organisation & funding
 
 ### Contributors
 - [selfdriven.university](https://selfdriven.university)

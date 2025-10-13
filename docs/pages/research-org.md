@@ -12,20 +12,20 @@ tags:
   - Research
   - University Collaboration
 status: "Draft for DAO Review"
+permalink: /research-org/
 ---
 
-# selfdriven Healthcare Research Incubator  
-*A collaborative 6-month pilot between selfdriven.community DAO and selfdriven.university*
+# selfdriven Healthcare Research Org
+*A collaborative organisation - supported by the selfdriven Foundation and selfdriven.university*
 
 ---
 
 ## 1. Overview  
 
-**Duration:** 6 Months  
-**Partners:** [selfdriven.community](https://www.selfdriven.community) × [selfdriven.university](https://www.selfdriven.university)  
+**Partners:** [selfdriven.foundation](https://www.selfdriven.foundation) × [selfdriven.university](https://www.selfdriven.university)  
 **Token / Incentive Layer:** SDH Token (Self-Driven Health)  
-**Budget Estimate:** ~AUD 210 000  
-**Type:** R&D · Proof-of-Concept · Collaborative Research  
+**Budget Estimate:** ~USD 100 000  
+**Type:** Collaborative Research  
 
 ---
 
@@ -34,7 +34,7 @@ status: "Draft for DAO Review"
 ### 2.1 Context  
 
 Global health systems face compounding pressures: aging populations, chronic conditions, and rising costs.  
-**Self-Driven Healthcare (SDH)** envisions a shift toward participatory, data-empowered health management.
+**selfdriven Healthc (SDH)** envisions a shift toward participatory, data-empowered health management.
 
 Research domains highlighted on [selfdriven.health](https://www.selfdriven.health/) include:
 
@@ -48,9 +48,9 @@ Research domains highlighted on [selfdriven.health](https://www.selfdriven.healt
 
 ---
 
-### 2.2 Why DAO + Token  
+### 2.2 Why ORG + Token  
 
-A **Decentralised Autonomous Organization (DAO)** enables transparent, community-governed research.  
+A selfdriven ORG enables transparent, community-governed research.  
 The **SDH token** aligns incentives by rewarding participation, governance, and data contribution.
 
 | **Feature** | **Value** |
@@ -65,21 +65,17 @@ The **SDH token** aligns incentives by rewarding participation, governance, and 
 
 ## 3. Objectives  
 
-1. Deploy a DAO-governed **R&D fund** powered by the SDH token.  
+1. Deploy a ORG-governed **R&D fund** powered by the SDH token.  
 2. Execute **two pilot studies** aligned with selfdriven.health research domains.  
 3. Measure outcomes in engagement, participation, and data quality.  
 4. Publish open findings and DAO governance whitepaper.  
-5. Validate the **tokenized R&D model** for sustainable research funding.
+5. Validate the **tokenised R&D model** for sustainable research funding.
 
 ---
 
 ## 4. Research Questions  
 
-- Can DAO + token incentives increase research participation and data quality?  
-- Which governance models best balance trust, inclusivity, and efficiency?  
-- Does practitioner-in-loop feedback improve adherence or outcomes?  
-- What ethics and data governance mechanisms suit tokenized research?  
-- How do tokenized research costs compare to traditional funding models?  
+- 
 
 ---
 
@@ -97,25 +93,19 @@ The **SDH token** aligns incentives by rewarding participation, governance, and 
 
 ## 6. Metrics / KPIs  
 
-- Participant retention & engagement rates  
-- Token flow and treasury transparency  
-- Governance participation (% voters, proposals)  
-- Health-behavior improvement indicators  
-- Data quality / completeness metrics  
-- Cost-per-impact ratio  
-- Ethical / privacy compliance (zero breaches)
+- 
 
 ---
 
 ## 7. Governance Model  
 
-### DAO Architecture  
+### ORG Architecture  
 
-- **Governance Token:** SDH (integrated with SDF / SDX ecosystem)  
-- **Voting Model:** Quadratic / delegated voting  
+- **Governance Token:** SDH
+- **Voting Model:** Quadratic with identity voting  
 - **Treasury:** Smart-contract-controlled multi-sig  
 - **Roles:**  
-  - *Stewards* — oversee milestones  
+  - *Facilitators* — oversee milestones  
   - *Contributors* — submit research proposals  
   - *Participants* — engage & earn tokens  
 
@@ -132,16 +122,16 @@ The **SDH token** aligns incentives by rewarding participation, governance, and 
 
 ## 8. Budget Estimate  
 
-| **Category** | **6 Month Cost (AUD)** | **Description** |
+| **Category** | ** Phase 1 Cost (USD)** | **Description** |
 |---------------|------------------------|-----------------|
-| Research & Personnel | 120 000 | Academic & technical staff |
-| Smart-Contract Dev & Audit | 30 000 | DAO + token logic |
-| Infrastructure & Analytics | 15 000 | Cloud + dashboards |
-| Participant Compensation | 20 000 | SDH / fiat hybrid |
-| Legal / Compliance / Ethics | 10 000 | Privacy, IRB, contracts |
-| Community Engagement | 5 000 | Workshops, comms |
-| Contingency | 10 000 | 10 % reserve |
-| **Total** | **210 000 AUD** | — |
+| Research & Personnel | - | Academic & technical staff |
+| Smart-Contract Dev & Audit | - | DAO + token logic |
+| Infrastructure & Analytics | - | Cloud + dashboards |
+| Participant Compensation | -| SDH / fiat hybrid |
+| Legal / Compliance / Ethics | - | Privacy, IRB, contracts |
+| Community Engagement | - | Workshops, comms |
+| Contingency | - | 10 % reserve |
+| **Total** | **100 000 USD** | — |
 
 ---
 
@@ -172,7 +162,7 @@ Potential sources include:
 
 ## 11. Expected Outcomes  
 
-By **Month 6**:  
+By **End Phase 1**:  
 - Operational DAO-governed research fund  
 - Two pilot studies completed  
 - Public whitepaper + open-data release  
@@ -180,7 +170,7 @@ By **Month 6**:
 - Template for future DAO-led research  
 
 **Long-Term Vision:**  
-A perpetual **Selfdriven Research Network** — funding, governing, and validating decentralized health innovation through tokenized collaboration.
+A perpetual **selfdriven Health Research Network** — funding, governing, and validating decentralized health innovation through tokenized collaboration.
 
 ---
 
@@ -205,5 +195,5 @@ A perpetual **Selfdriven Research Network** — funding, governing, and validati
 
 ## 14. Contact  
 
-[selfdriven.community](https://www.selfdriven.community)  
+[selfdriven.foundation](https://www.selfdriven.foundation)  
 [selfdriven.university](https://www.selfdriven.university)  
