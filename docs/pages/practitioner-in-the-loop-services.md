@@ -31,7 +31,7 @@ permalink: /practitioner-in-the-loop-services/
 ### Tech
 - **"*GenAI* searches for humans"**
     -  *GenAI* seeks *PITL services* using the Model-Context-Protocol (MCP) to find based on location and expertise.
-    - *selfdriven.health* supports the MCP service using the [selfdrivenOS](https://github.com/selfdriven-engagement/selfdrivenOS).
+    - *selfdriven.health* supports the MCP service using the [selfdriven.network](https://selfdriven.network).
 
 ---
 
