@@ -9,9 +9,9 @@ title: Home
 - Traditional Health Care facilities are under pressure.
 - With the arrival of *GAHI* as a society we have the opportunity to decentralise health functions.
 
-### Resources
+### Research
 - [Practitioner In The Loop Services](/practitioner-in-the-loop-services/)
-- [Research into better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*](/rearch/)
+- [Better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*](/rearch/)
 
 ### Contributors
 - [selfdriven.university](https://selfdriven.university)
