@@ -186,10 +186,9 @@ A perpetual **selfdriven Health Research Network** — funding, governing, and v
 
 ## 13. References  
 
-- [selfdriven.health – Research Themes](https://www.selfdriven.health/)  
 - [RSM 2022 – Self-Driven Healthcare](https://www.rsm.ac.uk/media-releases/2022/self-driven-healthcare-can-improve-health-outcomes-and-reduce-costs/)  
 - [News-Medical 2022 – SDH Ecosystems](https://www.news-medical.net/news/20221201/Self-driven-healthcare-ecosystems-could-help-improve-health-outcomes-and-control-costs.aspx)  
-- [blockapps.net – DAO Governance Models](https://blockapps.net/blog/governance-models-and-community-engagement-in-daos/)  
+- [Governance Frameworks](https://selfdriven.fyi/governance)  
 
 ---
 
