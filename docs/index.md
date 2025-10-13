@@ -11,6 +11,7 @@ title: Home
 
 ### Resources
 - [Practitioner In The Loop Services](/practitioner-in-the-loop-services/)
+- [Research into better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*](/rearch/)
 
 ### Contributors
 - [selfdriven.university](https://selfdriven.university)
