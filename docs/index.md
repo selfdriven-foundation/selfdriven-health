@@ -19,6 +19,7 @@ title: Home
 - [beHub](https://behub.com.au)
 
 ### Related
+- [selfdriven.clinic](https://selfdriven.clinic)
 - [selfdriven.community](https://selfdriven.community)
 - [selfdriven.fyi/intelligence](https://selfdriven.fyi/intelligence)
 - [selfdriven.fyi/cog-assist](https://selfdriven.fyi/cog-assist)
