@@ -4,20 +4,20 @@ title: Organisation Whitepaper - selfdriven Health
 permalink: /organisation/whitepaper/
 ---
 
-# Whitepaper - Members Based Organisation for Better Health Outcomes.
+# Members Based Organisation for Better Health Outcomes
 
-## Executive Summary
+## Whitepaper
 
-**selfdriven Health** is a proposed **member-based organisation (MBO)** in Australia focused on improving health outcomes for individuals, families and communities by leveraging secure digital infrastructure, licensed health-tech (**beHub**), and cooperative governance.
+**selfdriven Health** is a proposed **member-based organisation (MBO)** focused on improving health outcomes for individuals, families and communities.
 
 The goal is to shift from fragmented, service-driven care systems toward **proactive, participatory wellbeing ecosystems** — where members are co-owners of their data, collaborators in their care, and contributors to collective health intelligence.
 
-This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation within the Australian context.
+This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation - initially within an Australian context.
 
 ## 1. Vision & Mission
 
 ### 1.1 Vision
-> To empower every person and community in Australia to take control of their health journey — with trusted data, intelligent tools, and shared purpose.
+To empower every person and community to take control of their health journey — with trusted data, intelligent tools, and shared purpose.
 
 ### 1.2 Mission
 - **Empower Members:** Provide individuals and families with transparent, secure, and self-owned health data access.  
@@ -27,7 +27,8 @@ This whitepaper outlines the vision, mission, strategy, structure, technology fr
 
 ## 2. Strategic Context & Rationale
 
-Australia’s health system is challenged by increasing chronic disease burden, ageing population, rising costs, siloed data flows, and fragmented care pathways.  
+Health systems are challenged by increasing chronic disease burden, ageing population, rising costs, siloed data flows, and fragmented care pathways.  
+
 Member-based models offer a new paradigm: where the user (member) is central, data is interoperable and portable, and care becomes collaborative rather than provider-centric.
 
 By licensing the platform **beHub**, selfdriven Health will deploy modern digital identity, data exchange and AI-assisted tools that are purpose-built for cooperative, member-governed health ecosystems. This enables the organisation to:
@@ -39,22 +40,20 @@ By licensing the platform **beHub**, selfdriven Health will deploy modern digita
 
 ### 3.1 Legal Form & Membership Base
 selfdriven Health will be established as a **member-based organisation**, open to:
-- Individual members (people/families) seeking proactive health empowerment.  
 - Health professionals, clinics, allied health, wellness providers.  
 - Community organisations, local health networks.  
 - Researchers and health innovation partners.
+- Health device manufacturers.
 
-Membership rights include participation in governance, access to member services, and stewardship of shared infrastructure.
+Membership rights include participation in governance, access to selfdriven.health services, and stewardship of shared infrastructure.
 
 ### 3.2 Member Value Proposition
 Members benefit from:
-- Personal access to interoperable, portable health records via **beHub**.  
-- Insights and wellness tools derived from aggregated, anonymised data.  
+- Access to resource information via **beHub**.  
 - Community-based peer support, practitioner networks, and local ecosystem integration.  
 - Participation in research and innovation efforts with ethical, consented data sharing.
 
 ### 3.3 Services & Activities
-- Digital health record access and management.  
 - Collaborative care tools and community-clinic integration.  
 - Wellness analytics, AI-driven prevention and lifestyle support.  
 - Research portals enabling aggregated data sharing (with member consent).  
@@ -63,23 +62,18 @@ Members benefit from:
 ## 4. Technology Framework — Licensing beHub
 
 ### 4.1 Why beHub
-**beHub** is a licensed health-tech platform that enables:
+**beHub** is a platform that enables:
 - Secure data exchange and interoperability.  
-- Self-sovereign identity (SSI) for individuals, practitioners and institutions.  
-- Structured health records supporting verifiable credentials.  
-- Permissioned workflows for care coordination, research, and insights.  
-- Ethical AI engine layered on privacy-preserving architecture.
+- Self-sovereign identity (SSI) for practitioners and institutions.  
+- [More about behub](https://behub.com.au)
 
 ### 4.2 Integration Approach
-- Onboard members via SSI wallet for identity and consent tracking.  
 - Deploy beHub as core infrastructure across member base (individuals, clinics, networks).  
 - Build connector modules for existing health systems (EMRs, primary care, allied).  
 - Enable analytics layer for wellness, prevention and outcome measurement.  
 - Maintain governance and data stewardship framework to ensure trust, transparency and compliance.
 
 ### 4.3 Privacy, Security & Interoperability
-- Use standard Australian health data interoperability frameworks and privacy legislation (Australian Privacy Principles).  
-- Member-centric consent frameworks — members control who sees what, revoke as needed.  
 - Secure architecture: role-based access, encryption at rest & in transit, audit trails.  
 - Compliance with regulatory requirements (Health Records Acts, Data Breach Obligations).
 
@@ -88,7 +82,7 @@ Members benefit from:
 ### 5.1 Governance Model
 selfdriven Health will adopt a **cooperative governance model** characterised by:
 - Member voting rights on major decisions.  
-- Board of Directors drawn from member representatives (individuals, practitioners, community organisations).  
+- Board drawn from member representatives (practitioners, community organisations).  
 - Transparent policy frameworks: data stewardship, ethical AI, privacy, and member rights.  
 - Committees for technology oversight, research ethics, and member services.
 
