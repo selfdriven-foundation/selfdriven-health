@@ -25,7 +25,7 @@ from founding members ($25,000) and new members (with or without app/behub acces
 - services
     - research
     - engagement - community of practice
-    - services - app.selfdriven.health - based on beHub
+    - services - app.selfdriven.health - based on beHub - licence fee paid to beHub (base + usage)
 
 ---
 
