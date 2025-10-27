@@ -10,8 +10,6 @@ permalink: /organisation/whitepaper/
 
 **selfdriven Health** is proposing a **member-based organisation (MBO)** focused on improving health outcomes for individuals, families and communities.
 
-The goal is to shift from fragmented, service-driven care systems toward **proactive, participatory wellbeing ecosystems** — where members are co-owners of their data, collaborators in their care, and contributors to collective health intelligence.
-
 This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation - initially within an Australian context.
 
 ## 1. Vision & Mission
