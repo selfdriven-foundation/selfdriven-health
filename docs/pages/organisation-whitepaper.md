@@ -10,6 +10,25 @@ permalink: /organisation/whitepaper/
 
 **selfdriven Health** is proposing a **member-based organisation (MBO)** focused on improving health outcomes for individuals, families and communities.
 
+- 8 initial founding members
+    - $50,000 commitment
+        - hospitals (4)
+        - fanily offices (3)
+        - beHub - Liz (1) - $ as beHub access for founding hospitals
+    - $350,000 / year
+
+- associates
+    - selfdriven Foundation - Mark
+
+- services
+    - research
+    - engagement - community of practice
+    - services - app.selfdriven.health - based on beHub
+
+---
+
+! FOLLOWING IS THOUGHT STARTER FIRST CUT BY CHATGPT
+
 This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation - initially within an Australian context.
 
 ## 1. Vision & Mission
