@@ -11,7 +11,7 @@ title: Home
 
 ### Research
 
-- [Members Based Organisatio - Whitepaper](/organisation/whitepaper/)
+- [Members Based Organisation - Whitepaper](/organisation/whitepaper/)
 
 ### Resources
 
