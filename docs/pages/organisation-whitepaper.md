@@ -15,7 +15,7 @@ permalink: /organisation/whitepaper/
         - hospitals (4)
         - fanily offices (3)
         - beHub - Liz (1) - $ as investmemt to date.
-    - $350,000 for year 1 set up
+    - $350,000 (7x$50,000) for year 1 set up
         - $50,000 to beHub/entityos access for founding hospitals.
         - $100,000 to Liz to run MBO
         - $100,000 expenses
