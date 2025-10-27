@@ -4,15 +4,7 @@ title: Organisation Whitepaper - selfdriven Health
 permalink: /organisation/whitepaper/
 ---
 
-# selfdriven Health  
-### Whitepaper  
-**Empowering Members. Enhancing Health Outcomes. Australia-wide.**
-
-**Date:** October 2025  
-**Authors:** The selfdriven Health Founding Team  
-**Version:** 1.0
-
----
+# Whitepaper - Members Based Organisation for Better Health Outcomes.
 
 ## Executive Summary
 
@@ -21,8 +13,6 @@ permalink: /organisation/whitepaper/
 The goal is to shift from fragmented, service-driven care systems toward **proactive, participatory wellbeing ecosystems** — where members are co-owners of their data, collaborators in their care, and contributors to collective health intelligence.
 
 This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation within the Australian context.
-
----
 
 ## 1. Vision & Mission
 
@@ -35,8 +25,6 @@ This whitepaper outlines the vision, mission, strategy, structure, technology fr
 - **Enable Better Decisions:** Use AI-enabled insights and verified data to improve prevention, early detection and outcomes.  
 - **Support Decentralised Health Services:** Enable clinics, networks, and cooperatives to form trusted local ecosystems aligned with member-centred health.
 
----
-
 ## 2. Strategic Context & Rationale
 
 Australia’s health system is challenged by increasing chronic disease burden, ageing population, rising costs, siloed data flows, and fragmented care pathways.  
@@ -46,8 +34,6 @@ By licensing the platform **beHub**, selfdriven Health will deploy modern digita
 - Provide a unified, consent-driven health data layer for members.  
 - Enable communities, practitioners and researchers to coordinate in a privacy-preserving, permissioned way.  
 - Unlock insights at population scale (while preserving individual sovereignty) to drive improved health outcomes.
-
----
 
 ## 3. Organisation Structure & Membership Model
 
@@ -74,8 +60,6 @@ Members benefit from:
 - Research portals enabling aggregated data sharing (with member consent).  
 - Local member groups/chapters and practitioner networks.
 
----
-
 ## 4. Technology Framework — Licensing beHub
 
 ### 4.1 Why beHub
@@ -99,8 +83,6 @@ Members benefit from:
 - Secure architecture: role-based access, encryption at rest & in transit, audit trails.  
 - Compliance with regulatory requirements (Health Records Acts, Data Breach Obligations).
 
----
-
 ## 5. Governance & Member Participation
 
 ### 5.1 Governance Model
@@ -115,8 +97,6 @@ selfdriven Health will adopt a **cooperative governance model** characterised by
 - Local chapters or interest groups (e.g., chronic disease, wellness, community health).  
 - Feedback loops for members to influence platform features, data governance, and services.
 
----
-
 ## 6. Strategic Goals (2025-2028)
 
 | Focus Area | Goal | Key Outcome |
@@ -126,8 +106,6 @@ selfdriven Health will adopt a **cooperative governance model** characterised by
 | **Community Clinics** | Partner with or launch 3 Selfdriven Clinics using beHub tech | Accessible, decentralised care |
 | **Collaborative Research** | Establish partnerships with universities and research bodies | Accelerated translational research |
 | **Member Engagement** | Grow national cooperative network | Sustainable, scalable member model |
-
----
 
 ## 7. Setting up selfdriven Health in Australia: Legal & Regulatory Requirements
 
@@ -177,8 +155,6 @@ Prepare a **constitution** or **rules** that define:
 - Develop sustainable membership revenue model.  
 - Measure outcomes: adoption rate, satisfaction, health improvement metrics.
 
----
-
 ## 8. Risks & Mitigation
 
 | Risk | Mitigation |
@@ -188,8 +164,6 @@ Prepare a **constitution** or **rules** that define:
 | Regulatory change | Ongoing compliance reviews, legal advisory panel |
 | Technology integration issues | Phased rollout with beHub support |
 | Financial sustainability | Diversify revenue sources |
-
----
 
 ## 9. Financial Model & Sustainability
 
@@ -202,16 +176,12 @@ Revenue sources:
 Years 1–3: Establish membership base, infrastructure, and pilots.  
 Years 4–5: Achieve sustainability via membership and partnerships.
 
----
-
 ## 10. Conclusion & Call to Action
 
 selfdriven Health represents a new model for health in Australia — one that is **member-owned, technology-enabled, and community-driven**.  
 Through the integration of **beHub**, Self-Sovereign Identity, and cooperative governance, selfdriven Health provides the foundation for a trusted, decentralised health ecosystem focused on real outcomes.
 
-> **We invite practitioners, community groups, technology partners, researchers, and members to join us in co-creating this future.**
-
----
+**We invite practitioners, community groups, technology partners, researchers, and members to join us in co-creating this future.**
 
 ## Appendices
 
