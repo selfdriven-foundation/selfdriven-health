@@ -15,7 +15,7 @@ permalink: /organisation/whitepaper/
         - hospitals (4)
         - fanily offices (3)
         - beHub - Liz (1) - $ as beHub access for founding hospitals
-    - $350,000 / year
+    - $350,000 for year 1 set up
 
 - associates
     - selfdriven Foundation - Mark
