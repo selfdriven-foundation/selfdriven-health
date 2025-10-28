@@ -11,17 +11,17 @@ permalink: /organisation/opportunity/
 **selfdriven.Health** is proposing a **member-based organisation (MBO)**.
 
 - **Initial Founding Members (8)**
-    - $50,000 commitment
+    - $50,000 commitment:
         - hospitals (4)
-        - fanily offices (3)
+        - family offices (3)
         - beHub - Liz (1) - $ as investmemt to date.
-    - $350,000 (7x$50,000) for year 1 set up
-        - $50,000 to beHub/entityos access for founding hospitals.
+    - $350,000 (7x$50,000) for year 1 set up:
+        - $50,000 to beHub app/data (inc entityOS.cloud service) access for founding hospitals.
         - $100,000 to Liz to run MBO
         - $100,000 expenses
-        - $100,000 base for 2026
-    - then annual membership
-from founding members ($25,000) and new members (with or without app/behub access)
+        - $100,000 as base for 2026
+    - Then annual membership:
+        - from founding members ($25,000) and new members (with or without app/behub access)
 
 - **Associates (4)**
     - selfdriven Foundation - Mark
