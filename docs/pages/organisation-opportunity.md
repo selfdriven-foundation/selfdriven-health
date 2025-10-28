@@ -12,22 +12,29 @@ permalink: /organisation/opportunity/
 
 - **Initial Founding Members (8)**
     - $50,000 commitment:
-        - hospitals (4)
+        - hospitals (3)
         - family offices (3)
         - beHub - Liz (1) - $ as investmemt to date.
+        - selfdriven Foundation - $ as resources, team
     - $350,000 (7x$50,000) for year 1 set up:
         - $50,000 to beHub app/data (inc entityOS.cloud service) access for founding hospitals.
         - $100,000 to Liz to run MBO
-        - $100,000 expenses
+        - $50,000 expenses
+        - $50,000 grants for associates - initially
         - $100,000 as base for 2026
     - Then annual membership:
         - from founding members ($25,000) and new members (with or without app/behub access)
 
 - **Associates (4)**
-    - selfdriven Foundation - Mark
+    - Healthcare Educator
+    - Healthcare Thought Leader
+    - Health Care Policy Adviser 
+    - Futurist / Technologist
 
 - **Services**
     - Research
+        - Now (Practical)
+        - Future
     - Engagement
         - Facilitate a Community of Practice
     - Services
@@ -38,31 +45,29 @@ permalink: /organisation/opportunity/
 ---
 
 ! FOLLOWING IS THOUGHT STARTER FIRST CUT BY CHATGPT
+
 !! UPDATE AFTER SCOPE WORKED OUT
+
 
 This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation - initially within an Australian context.
 
 ## 1. Vision & Mission
 
 ### 1.1 Vision
-To empower every person and community to take control of their health journey — with trusted data, intelligent tools, and shared purpose.
+An organisation to navigate changing times.
 
-### 1.2 Mission
-- **Empower Members:** Provide individuals and families with transparent, secure, and self-owned health data access.  
-- **Connect Practitioners and Communities:** Foster shared learning, innovation, and collaborative care across health professions and community networks.  
-- **Enable Better Decisions:** Use AI-enabled insights and verified data to improve prevention, early detection and outcomes.  
-- **Support Decentralised Health Services:** Enable clinics, networks, and cooperatives to form trusted local ecosystems aligned with member-centred health.
+Reference: [Situational Awareness Framework for Organisations](https://www.selfdriven.ai/situational-awareness-framework/organisations/)
+
+### 1.2 Mission 
+
 
 ## 2. Strategic Context & Rationale
 
-Health systems are challenged by increasing chronic disease burden, ageing population, rising costs, siloed data flows, and fragmented care pathways.  
+Health systems are challenged by ...
 
 Member-based models offer a new paradigm: where the user (member) is central, data is interoperable and portable, and care becomes collaborative rather than provider-centric.
 
-By licensing the platform **beHub**, selfdriven Health will deploy modern digital identity, data exchange and AI-assisted tools that are purpose-built for cooperative, member-governed health ecosystems. This enables the organisation to:
-- Provide a unified, consent-driven health data layer for members.  
-- Enable communities, practitioners and researchers to coordinate in a privacy-preserving, permissioned way.  
-- Unlock insights at population scale (while preserving individual sovereignty) to drive improved health outcomes.
+...
 
 ## 3. Organisation Structure & Membership Model
 
