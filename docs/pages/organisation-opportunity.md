@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Organisation Whitepaper - selfdriven Health
-permalink: /organisation/whitepaper/
+permalink: /organisation/opportunity/
 ---
 
-# Members Based Organisation for Better Health Outcomes - Whitepaper
+# Members Based Organisation for Better Health Outcomes - Opportunity
 
 ## Scope
 
