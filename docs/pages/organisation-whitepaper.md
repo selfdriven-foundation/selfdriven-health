@@ -4,13 +4,13 @@ title: Organisation Whitepaper - selfdriven Health
 permalink: /organisation/whitepaper/
 ---
 
-# Members Based Organisation for Better Health Outcomes
+# Members Based Organisation for Better Health Outcomes - Whitepaper
 
-## Whitepaper
+## Scope
 
-**selfdriven Health** is proposing a **member-based organisation (MBO)** focused on improving health outcomes for individuals, families and communities.
+**selfdriven.Health** is proposing a **member-based organisation (MBO)**.
 
-- 8 initial founding members
+- **Initial Founding Members (8)**
     - $50,000 commitment
         - hospitals (4)
         - fanily offices (3)
@@ -23,17 +23,22 @@ permalink: /organisation/whitepaper/
     - then annual membership
 from founding members ($25,000) and new members (with or without app/behub access)
 
-- associates
+- **Associates (4)**
     - selfdriven Foundation - Mark
 
-- services
-    - research
-    - engagement - community of practice
-    - services - app.selfdriven.health - based on beHub - licence fee paid to beHub (base + usage)
+- **Services**
+    - Research
+    - Engagement
+        - Facilitate a Community of Practice
+    - Services
+        - app.selfdriven.health
+            - based on beHub
+            - licence fee paid to beHub (base + usage)
 
 ---
 
 ! FOLLOWING IS THOUGHT STARTER FIRST CUT BY CHATGPT
+!! UPDATE AFTER SCOPE WORKED OUT
 
 This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation - initially within an Australian context.
 
