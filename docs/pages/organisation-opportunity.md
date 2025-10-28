@@ -48,6 +48,14 @@ permalink: /organisation/opportunity/
 
 !! UPDATE AFTER SCOPE WORKED OUT
 
+References:
+- selfdriven.ai
+- selfdriven.institute
+- selfdriven.foundation
+- selfdriven.network - underlying interfaces to enable value of tech
+- for example: selfdriven.university
+
+---
 
 This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation - initially within an Australian context.
 
