@@ -162,11 +162,6 @@ Members remain independent entities but align around shared priorities, data, an
 - **Analytics & Insights:** Collective intelligence for outcome measurement.  
 - **Governance Layer:** Consent, data rights, and compliance management.  
 
-### 5.2 Implementation
-- beHub deployed as a shared service environment for members.  
-- entityOS.cloud hosts the operational backend.  
-- app.selfdriven.health used for governance dashboards and collaboration tools.  
-- Licence model: annual base fee + usage component, paid by members.
 
 ---
 
@@ -188,7 +183,7 @@ Members remain independent entities but align around shared priorities, data, an
 ## 7. Establishing the Organisation in Australia
 
 ### 7.1 Legal Structure
-Selfdriven.Health will be registered as a **Company Limited by Guarantee (CLG)** under the Corporations Act 2001 — suitable for multi-state membership and limited liability.  
+selfdriven.Health will be registered as a **Company Limited by Guarantee (CLG)** under the Corporations Act 2001 — suitable for multi-state membership and limited liability.  
 
 Alternate models (incorporated association or co-operative) may be used for local pilots but will transition into the CLG framework as the national body.
 
