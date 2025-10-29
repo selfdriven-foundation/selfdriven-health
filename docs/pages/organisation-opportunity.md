@@ -57,191 +57,221 @@ References:
 
 ---
 
-This whitepaper outlines the vision, mission, strategy, structure, technology framework, governance model, and the legal/regulatory roadmap required to establish this organisation - initially within an Australian context.
+# Selfdriven.Health  
+### Whitepaper  
+**Aligning Australia’s Leading Health Organisations for Systemic Impact**
 
-## 1. Vision & Mission
+**Date:** October 2025  
+**Authors:** The Selfdriven.Health Founding Team  
+**Version:** 1.2 (Member-Focused Revision)
 
-### 1.1 Vision
-An organisation to navigate changing times.
+---
 
-Reference: [Situational Awareness Framework for Organisations](https://www.selfdriven.ai/situational-awareness-framework/organisations/)
+## Executive Summary
 
-### 1.2 Mission 
+**Selfdriven.Health** is a **member-based organisation (MBO)** established in Australia to bring together hospitals, healthcare networks, family offices, and research partners around a shared mission: **to achieve better health outcomes through collaboration, innovation, and data-enabled insight**.
 
+This initiative focuses on how **health organisations can work together** — across institutional and sectoral boundaries — to co-develop shared infrastructure, coordinate research, and improve operational effectiveness.
 
-## 2. Strategic Context & Rationale
+Powered by **beHub**, a licensed health technology platform, Selfdriven.Health provides a **trusted digital and governance framework** that supports coordinated action, transparent performance measurement, and evidence-based innovation.
 
-Health systems are challenged by ...
+---
 
-Member-based models offer a new paradigm: where the user (member) is central, data is interoperable and portable, and care becomes collaborative rather than provider-centric.
+## 1. Purpose
 
-...
+Australia’s health landscape is increasingly fragmented — with rising costs, duplicated effort, and siloed systems.  
+Selfdriven.Health was established to create a **neutral, cooperative structure** where member organisations can:
 
-## 3. Organisation Structure & Membership Model
+- Share infrastructure and insights responsibly  
+- Test and evaluate new health technologies  
+- Develop collective research and innovation programs  
+- Influence policy and standards through evidence-based collaboration  
 
-### 3.1 Legal Form & Membership Base
-selfdriven Health will be established as a **member-based organisation**, open to:
-- Health professionals, clinics, allied health, wellness providers.  
-- Community organisations, local health networks.  
-- Researchers and health innovation partners.
-- Health device manufacturers.
+The outcome is a stronger, more connected ecosystem — driven by **health organisations working together**, not by individual competition.
 
-Membership rights include participation in governance, access to selfdriven.health services, and stewardship of shared infrastructure.
+---
 
-### 3.2 Member Value Proposition
-Members benefit from:
-- Access to resource information via **beHub**.  
-- Community-based peer support, practitioner networks, and local ecosystem integration.  
-- Participation in research and innovation efforts with ethical, consented data sharing.
+## 2. Founding Structure
 
-### 3.3 Services & Activities
-- Collaborative care tools and community-clinic integration.  
-- Wellness analytics, AI-driven prevention and lifestyle support.  
-- Research portals enabling aggregated data sharing (with member consent).  
-- Local member groups/chapters and practitioner networks.
+### 2.1 Initial Founding Members (8)
+Each founding member commits **AUD $50,000** to establish the organisation’s operational and digital foundation.
 
-## 4. Technology Framework — Licensing beHub
+| Member Type | Count | Role |
+|--------------|--------|------|
+| Hospitals | 3 | Founding institutional members and pilot implementation sites |
+| Family Offices | 3 | Strategic investors and social impact partners |
+| beHub (Liz) | 1 | Technology provider and infrastructure partner |
+| Selfdriven Foundation | 1 | Secretariat and coordination team |
 
-### 4.1 Why beHub
-**beHub** is a platform that enables:
-- Secure data exchange and interoperability.  
-- Self-sovereign identity (SSI) for practitioners and institutions.  
-- [More about behub](https://behub.com.au)
+#### Year 1 Setup (AUD 350,000)
+| Allocation | Amount | Purpose |
+|-------------|--------|----------|
+| beHub platform & data (via entityOS.cloud) | $50,000 | Platform access and implementation for founding hospitals |
+| MBO Operations (Liz) | $100,000 | Leadership, governance, coordination |
+| Operating Expenses | $50,000 | Legal, comms, admin, insurance |
+| Associate Grants | $50,000 | Seed funding for collaborative projects |
+| Reserve for 2026 | $100,000 | Continuity and growth funding |
 
-### 4.2 Integration Approach
-- Deploy beHub as core infrastructure across member base (individuals, clinics, networks).  
-- Build connector modules for existing health systems (EMRs, primary care, allied).  
-- Enable analytics layer for wellness, prevention and outcome measurement.  
-- Maintain governance and data stewardship framework to ensure trust, transparency and compliance.
+**Annual Membership (Year 2+)**
+- Founding Members: $25,000  
+- New Organisational Members: Tiered annual fee (with or without platform access)
 
-### 4.3 Privacy, Security & Interoperability
-- Secure architecture: role-based access, encryption at rest & in transit, audit trails.  
-- Compliance with regulatory requirements (Health Records Acts, Data Breach Obligations).
+---
 
-## 5. Governance & Member Participation
+## 3. Associates & Expertise
 
-### 5.1 Governance Model
-selfdriven Health will adopt a **cooperative governance model** characterised by:
-- Member voting rights on major decisions.  
-- Board drawn from member representatives (practitioners, community organisations).  
-- Transparent policy frameworks: data stewardship, ethical AI, privacy, and member rights.  
-- Committees for technology oversight, research ethics, and member services.
+Selfdriven.Health will be guided by **Associates**, recognised leaders who advise on direction and ensure impact across sectors.
 
-### 5.2 Member Engagement & Community-Driven Approach
-- Regular general meetings for members (strategy, performance, initiatives).  
-- Local chapters or interest groups (e.g., chronic disease, wellness, community health).  
-- Feedback loops for members to influence platform features, data governance, and services.
+| Associate Role | Focus Area |
+|-----------------|-------------|
+| Healthcare Educator | Workforce and professional learning frameworks |
+| Healthcare Thought Leader | System reform and strategy alignment |
+| Health Policy Adviser | Regulatory and government interface |
+| Futurist / Technologist | Innovation, AI, and data strategy |
 
-## 6. Strategic Goals (2025-2028)
+Associates participate in funded projects, panels, and Communities of Practice established by the organisation.
 
-| Focus Area | Goal | Key Outcome |
-|-------------|------|--------------|
-| **Data Sovereignty** | Deploy SSI-enabled health record access for 10,000 members | Members fully own/control health data |
-| **AI for Prevention** | Launch AI-driven wellness recommendations across 5 pilot communities | Early detection & lifestyle improvements |
-| **Community Clinics** | Partner with or launch 3 Selfdriven Clinics using beHub tech | Accessible, decentralised care |
-| **Collaborative Research** | Establish partnerships with universities and research bodies | Accelerated translational research |
-| **Member Engagement** | Grow national cooperative network | Sustainable, scalable member model |
+---
 
-## 7. Setting up selfdriven Health in Australia: Legal & Regulatory Requirements
+## 4. Operating Model
 
-### 7.1 Choose Legal Structure
-Options for member-based entities in Australia:
-- **Unincorporated association** — simple, but limited legal identity.  
-- **Incorporated association** — state/territory regulated, suitable for community-scale NFPs.  
-- **Company limited by guarantee (CLG)** — national, under the Corporations Act 2001, preferred for large MBOs.  
-- **Co-operative** — governed by Co-operatives National Law (CNL).  
+Selfdriven.Health is designed as a **platform for organisational collaboration**, not a direct service provider to patients.  
+Members remain independent entities but align around shared priorities, data, and governance structures.
 
-**Key considerations:**  
-Legal identity, liability, governance complexity, regulatory obligations, and tax concessions.
+### 4.1 Core Functions
+1. **Coordination** — Connect institutions, foundations, and innovators.  
+2. **Research & Evaluation** — Co-design, test, and assess new health solutions.  
+3. **Technology Integration** — Provide access to the beHub platform for data interoperability.  
+4. **Knowledge Sharing** — Disseminate insights and frameworks across sectors.  
+5. **Strategic Representation** — Engage with government, academia, and industry.
 
-### 7.2 Draft Governing Documents
-Prepare a **constitution** or **rules** that define:
-- Purpose and objects (member-benefit or not-for-profit).  
-- Membership eligibility, rights, obligations.  
-- Governance structure (board, committees, elections).  
-- Financial arrangements and use of surplus.  
-- Dispute resolution, amendments, winding-up provisions.
+### 4.2 Services
 
-### 7.3 Register & Incorporate
-- Register as an **incorporated association** (state-based) or **CLG** (nationally with ASIC).  
-- Register business name and apply for an **ABN**.  
-- Optionally register as a **charity** with ACNC if applicable.
+- **Research**  
+  - Practical projects addressing current system gaps.  
+  - Forward-looking studies into future models of care.
 
-### 7.4 Obtain Tax & Regulatory Concessions
-- Apply for **not-for-profit (NFP)** status with the **ATO**.  
-- Apply for **GST concessions, income tax exemption, FBT rebate**.  
-- Apply for **Deductible Gift Recipient (DGR)** if seeking donations.
+- **Engagement**  
+  - Facilitation of member roundtables and Communities of Practice.  
+  - Multi-sector working groups on data, workforce, and innovation.
 
-### 7.5 Governance & Compliance Obligations
-- Maintain member register, minutes, and financial statements.  
-- Hold Annual General Meetings (AGMs).  
-- Establish policies: privacy, conflicts of interest, board duties.  
-- Ensure compliance with ASIC or state regulator reporting.  
-- Follow the Privacy Act 1988 and relevant Health Records legislation.
+- **Digital Infrastructure**  
+  - Operated under licence from **beHub**.  
+  - Supports secure collaboration, data governance, and analytics.  
+  - Members pay base + usage licence fees to sustain platform access.
 
-### 7.6 Insurance, Risk & Regulatory Matters
-- Obtain public liability, professional indemnity, and cyber insurance.  
-- Ensure compliance with **privacy, employment, and data protection laws**.  
-- Maintain contracts with platform vendors (e.g., beHub) ensuring data security and compliance.
+---
 
-### 7.7 Launching Member Services & Scaling
-- Create member onboarding systems (SSI identity, consent management).  
-- Integrate **beHub** infrastructure and pilot health communities.  
-- Develop sustainable membership revenue model.  
-- Measure outcomes: adoption rate, satisfaction, health improvement metrics.
+## 5. Technology Partnership — beHub
 
-## 8. Risks & Mitigation
+**beHub** provides the technology layer underpinning Selfdriven.Health, enabling secure data exchange, multi-party collaboration, and applied analytics across member organisations.
 
-| Risk | Mitigation |
-|------|-------------|
-| Slow member adoption | Pilot with communities, build trust, strong engagement |
-| Data privacy / breach | Strict data governance, audits, insurance |
-| Regulatory change | Ongoing compliance reviews, legal advisory panel |
-| Technology integration issues | Phased rollout with beHub support |
-| Financial sustainability | Diversify revenue sources |
+### 5.1 Capabilities
+- **Data Interoperability:** Connecting systems across hospitals, research, and policy.  
+- **Secure Exchange:** Entity-based permissions and audit trails.  
+- **Analytics & Insights:** Collective intelligence for outcome measurement.  
+- **Governance Layer:** Consent, data rights, and compliance management.  
 
-## 9. Financial Model & Sustainability
+### 5.2 Implementation
+- beHub deployed as a shared service environment for members.  
+- entityOS.cloud hosts the operational backend.  
+- app.selfdriven.health used for governance dashboards and collaboration tools.  
+- Licence model: annual base fee + usage component, paid by members.
 
+---
+
+## 6. Governance Framework
+
+### 6.1 Structure
+- **Board of Directors:** Comprised of representatives from founding members.  
+- **Advisory Council:** Associates and strategic partners.  
+- **Working Groups:** Focused on research, policy, data, and innovation.
+
+### 6.2 Principles
+- Shared governance; no single controlling entity.  
+- Transparent decision-making.  
+- Financial and operational accountability.  
+- Evidence-based policy influence.
+
+---
+
+## 7. Establishing the Organisation in Australia
+
+### 7.1 Legal Structure
+Selfdriven.Health will be registered as a **Company Limited by Guarantee (CLG)** under the Corporations Act 2001 — suitable for multi-state membership and limited liability.  
+
+Alternate models (incorporated association or co-operative) may be used for local pilots but will transition into the CLG framework as the national body.
+
+### 7.2 Steps
+1. Draft constitution and membership rules.  
+2. Register CLG with **ASIC**; apply for ABN and business name.  
+3. Establish governance policies and conflict-of-interest framework.  
+4. Apply for not-for-profit status (if appropriate).  
+5. Insure for public liability, management, and cyber risks.  
+6. Launch initial operational phase with founding members.
+
+---
+
+## 8. Financial Model & Sustainability
+
+### 8.1 Year 1 Funding
+- Total: $350,000  
+- Funded by 8 founding members  
+- Used for setup, licensing, and operational leadership.
+
+### 8.2 Ongoing Sustainability
 Revenue sources:
-- Membership fees (individuals, practitioners, organisations).  
-- Partnerships and cooperative ventures.  
-- Grants, philanthropic funding, and research collaborations.  
-- Value-added services (AI-driven wellness analytics).  
+- Annual membership fees (organisational tiers).  
+- Platform licence and data usage fees.  
+- Research grants and government partnerships.  
+- Strategic project co-funding with members.  
 
-Years 1–3: Establish membership base, infrastructure, and pilots.  
-Years 4–5: Achieve sustainability via membership and partnerships.
+### 8.3 Growth Path
+- Year 1: Establish foundation and digital platform.  
+- Year 2: Grow membership base and joint projects.  
+- Year 3–5: Expand into national networks and influence health policy.
 
-## 10. Conclusion & Call to Action
+---
 
-selfdriven Health represents a new model for health in Australia — one that is **member-owned, technology-enabled, and community-driven**.  
-Through the integration of **beHub**, Self-Sovereign Identity, and cooperative governance, selfdriven Health provides the foundation for a trusted, decentralised health ecosystem focused on real outcomes.
+## 9. Strategic Impact (2025–2028)
 
-**We invite practitioners, community groups, technology partners, researchers, and members to join us in co-creating this future.**
+| Area | Objective | Outcome |
+|------|------------|----------|
+| **Collaboration** | Establish trusted organisational network | Coordinated action among hospitals, educators, and investors |
+| **Technology** | Operate shared data platform via beHub | Secure, interoperable collaboration environment |
+| **Research** | Launch multi-institution applied projects | Evidence for reform and innovation |
+| **Policy** | Influence through data-backed insights | Health reforms grounded in evidence |
+| **Sustainability** | Build national membership & long-term funding | Self-sustaining MBO by 2028 |
+
+---
+
+## 10. Conclusion
+
+**Selfdriven.Health** is a structured alliance for Australia’s health leaders — a vehicle for coordination, innovation, and measurable impact.  
+It brings together organisations that share a belief in **collaborative intelligence, transparent data use, and cooperative governance** to improve health outcomes at scale.
+
+This is not a new health service — it’s a **new way for health organisations to work together.**
+
+> **Hospitals, foundations, and innovators are invited to join as founding members to shape the next era of coordinated health leadership in Australia.**
+
+---
 
 ## Appendices
 
-### A. Glossary
-- **MBO:** Member-Based Organisation  
-- **SSI:** Self-Sovereign Identity  
-- **DGR:** Deductible Gift Recipient  
-- **CLG:** Company Limited by Guarantee  
-- **beHub:** Licensed health-tech platform
+### A. Founding Member Composition
+| Category | Count | Contribution |
+|-----------|--------|--------------|
+| Hospitals | 3 | $150,000 |
+| Family Offices | 3 | $150,000 |
+| beHub (Liz) | 1 | $50,000 |
+| Selfdriven Foundation | 1 | Resources & team support |
 
-### B. References & Resources
-- [ASIC: Structuring not-for-profits and charities](https://www.asic.gov.au/for-business-and-companies/nfps-and-charities/registering-and-structuring-not-for-profit-organisations/)  
-- [ATO: Starting an NFP organisation](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/getting-started/starting-an-nfp)  
-- [NFP Law: Free resources for setup](https://www.nfplaw.org.au/free-resources/how-to-set-up-your-organisation)  
-- [SprintLaw: How to set up an incorporated association](https://sprintlaw.com.au/articles/how-to-set-up-an-incorporated-association/)  
-- [FECCA: Starting and Running Your Community Organisation Guide (PDF)](https://fecca.org.au/wp-content/uploads/2016/06/startingandrunningyourcommunityorganisation_aguide.pdf)
+### B. Year 1 Financial Overview
+| Allocation | Amount | Description |
+|-------------|---------|-------------|
+| beHub licence & setup | $50,000 | Platform provisioning |
+| MBO Operations | $100,000 | Coordination & leadership |
+| Expenses | $50,000 | Legal, administration, comms |
+| Associate grants | $50,000 | Pilot research & engagement |
+| 2026 reserve | $100,000 | Forward sustainability |
 
-### C. Implementation Timeline
-1. Form founding steering committee (members, practitioners, community rep).  
-2. Define business plan & membership model (months 0–3).  
-3. Select legal structure, adopt constitution, register organisation (months 3–6).  
-4. License **beHub** and begin pilot infrastructure build (months 4–12).  
-5. Launch pilot cohorts (months 9–18).  
-6. Evaluate pilot, refine model, scale membership & services (years 2–3).  
-7. Expand nationally and establish research partnerships (years 3–5).
-
----
-[selfdriven Health](https://selfdriven Health)
