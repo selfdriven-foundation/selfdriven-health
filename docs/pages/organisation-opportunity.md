@@ -94,6 +94,7 @@ Each founding member commits **AUD $50,000** to establish the organisation’s o
 | Selfdriven Foundation | 1 | Secretariat and coordination team |
 
 #### Year 1 Setup (AUD 350,000)
+
 | Allocation | Amount | Purpose |
 |-------------|--------|----------|
 | beHub platform & data (via entityOS.cloud) | $50,000 | Platform access and implementation for founding hospitals |
@@ -244,6 +245,7 @@ This is not a new health service — it’s a **new way for health organisations
 ## Appendices
 
 ### A. Founding Member Composition
+
 | Category | Count | Contribution |
 |-----------|--------|--------------|
 | Hospitals | 3 | $150,000 |
@@ -252,6 +254,7 @@ This is not a new health service — it’s a **new way for health organisations
 | Selfdriven Foundation | 1 | Resources & team support |
 
 ### B. Year 1 Financial Overview
+
 | Allocation | Amount | Description |
 |-------------|---------|-------------|
 | beHub licence & setup | $50,000 | Platform provisioning |
