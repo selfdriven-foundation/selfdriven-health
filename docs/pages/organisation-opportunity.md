@@ -49,11 +49,11 @@ permalink: /organisation/opportunity/
 !! UPDATE AFTER SCOPE WORKED OUT
 
 References:
-- selfdriven.ai
-- selfdriven.institute
-- selfdriven.foundation
-- selfdriven.network - underlying interfaces to enable value of tech
-- for example: selfdriven.university
+- [selfdriven.ai](https://selfdriven.ai)
+- [selfdriven.institute](https://selfdriven.institute)
+- [selfdriven.foundation](https://selfdriven.foundation)
+- [selfdriven.network](htts://selfdriven.network) - underlying interfaces to enable value of tech
+- [selfdriven.university](https://selfdriven.university)
 
 ---
 
