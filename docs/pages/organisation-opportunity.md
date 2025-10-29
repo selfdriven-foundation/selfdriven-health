@@ -57,23 +57,13 @@ References:
 
 ---
 
-# Selfdriven.Health  
-### Whitepaper  
-**Aligning Australia’s Leading Health Organisations for Systemic Impact**
-
-**Date:** October 2025  
-**Authors:** The Selfdriven.Health Founding Team  
-**Version:** 1.2 (Member-Focused Revision)
-
----
-
 ## Executive Summary
 
-**Selfdriven.Health** is a **member-based organisation (MBO)** established in Australia to bring together hospitals, healthcare networks, family offices, and research partners around a shared mission: **to achieve better health outcomes through collaboration, innovation, and data-enabled insight**.
+**selfdriven.Health** is a **member-based organisation (MBO)** established in Australia to bring together hospitals, healthcare networks, family offices, and research partners around a shared mission: **to achieve better health outcomes through collaboration, innovation, and data-enabled insight**.
 
 This initiative focuses on how **health organisations can work together** — across institutional and sectoral boundaries — to co-develop shared infrastructure, coordinate research, and improve operational effectiveness.
 
-Powered by **beHub**, a licensed health technology platform, Selfdriven.Health provides a **trusted digital and governance framework** that supports coordinated action, transparent performance measurement, and evidence-based innovation.
+selfdriven.Health provides a **trusted digital and governance framework** that supports coordinated action, transparent performance measurement, and evidence-based innovation.
 
 ---
 
