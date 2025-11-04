@@ -6,11 +6,9 @@ permalink: /organisation/opportunity/paper/
 
 # Opportunity Paper for an Action-Focused Organisation for Better Health Outcomes. 
 
-! FOLLOWING IS THOUGHT STARTER FIRST CUT
+**! FOLLOWING IS THOUGHT STARTER FIRST CUT**
 
 !! It is being progessively being updated based on scope and conversations.
-
-References:
 
 ---
 
