@@ -11,7 +11,7 @@ title: Home
 
 ### Research
 
-- [Members Based Organisation - Opportunity Paper](/organisation/opportunity/)
+- [pportunity for an Action-Focused Organisation for Better Health Outcomes](/organisation/opportunity/)
 
 ### Resources
 
