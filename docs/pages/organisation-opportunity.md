@@ -9,38 +9,45 @@ permalink: /organisation/opportunity/
 ## Scope
 
 ### Initial Founding Members (8)
-    - Hospitals (2) - $50,000 each
-    - Family offices (2) - $50,000 each
-    - Individuals (2) - $10,000 each
-    - BeHub (1)
-    - selfdriven Services (1)
+
+- Hospitals (2) - $50,000 each
+- Family offices (2) - $50,000 each
+- Individuals (2) - $10,000 each
+- BeHub (1)
+- selfdriven Services (1)
 
 ### Associates (4)
-    - Healthcare Educator
-    - Healthcare Thought Leader
-    - Healthcare Policy Adviser 
-    - Futurist / Technologist
 
-### Year 1 Set Up 
-    - $220,000 for year 1 set up:
-        - $40,000 to beHub app/data (inc entityOS.cloud service) access for founding hospitals.
-        - $40,000 to Liz to facilitate the organisation
-        - $20,000 expenses
-        - $40,000 grants for associates - initially
-        - $80,000 as base for 2026
-    - Then annual membership:
-        - from founding members ($25,000) and new members (TBC)
+- Healthcare Educator
+- Healthcare Thought Leader
+- Healthcare Policy Adviser 
+- Futurist / Technologist
+
+### Year 1 Set Up
+
+- $220,000 for year 1 set up:
+    - $40,000 to beHub app/data (inc entityOS.cloud service) access for founding hospitals.
+    - $40,000 to Liz to facilitate the organisation
+    - $20,000 expenses
+    - $40,000 grants for associates - initially
+    - $80,000 as base for 2026
+
+- Then annual membership:
+    - from founding members ($25,000) and new members (TBC)
 
 ### Services
-    - Research
-        - Now (Practical)
-        - Future
-    - Engagement
-        - Facilitate a Community of Practice
-    - Services
-        - app.selfdriven.health
-            - based on beHub
-            - licence fee paid to beHub (base + usage)
+
+- Research
+    - Now (Practical)
+    - Future
+
+- Engagement
+    - Facilitate a Community of Practice
+    
+- Services
+    - app.selfdriven.health
+        - based on beHub
+        - licence fee paid to beHub (base + usage)
 
 ---
 
