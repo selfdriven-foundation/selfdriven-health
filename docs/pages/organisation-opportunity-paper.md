@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Organisation Whitepaper - selfdriven Health
-permalink: /organisation/opportunity/paper
+permalink: /organisation/opportunity/paper/
 ---
 
 # Opportunity Paper for an Action-Focused Organisation for Better Health Outcomes. 
