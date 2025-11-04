@@ -13,7 +13,7 @@ permalink: /organisation/opportunity/
 - Hospitals (2) - $50,000 each
 - Family offices (2) - $50,000 each
 - Individuals (2) - $10,000 each
-- BeHub (1)
+- beHub (1)
 - selfdriven Services (1)
 
 ### Associates (4)
@@ -27,7 +27,7 @@ permalink: /organisation/opportunity/
 
 - $220,000 for year 1 set up:
     - $40,000 to beHub app/data (inc entityOS.cloud service) access for founding hospitals.
-    - $40,000 to Liz to facilitate the organisation
+    - $40,000 to facilitate the organisation (Liz)
     - $20,000 expenses
     - $40,000 grants for associates - initially
     - $80,000 as base for 2026
@@ -43,7 +43,7 @@ permalink: /organisation/opportunity/
 
 - Engagement
     - Facilitate a Community of Practice
-    
+
 - Services
     - app.selfdriven.health
         - based on beHub
