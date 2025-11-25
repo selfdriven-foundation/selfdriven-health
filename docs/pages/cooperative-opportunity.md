@@ -51,7 +51,7 @@ permalink: /cooperative/opportunity/
 
 ---
 
-- [Opportunity Paper](/organisation/opportunity/paper/) - Progessively being updated based on scope and conversations.
+- [Opportunity Paper](/cooperative/opportunity/paper/) - Progessively being updated based on scope and conversations.
 
 ---
 
