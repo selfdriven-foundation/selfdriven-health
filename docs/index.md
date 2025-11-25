@@ -11,7 +11,7 @@ title: Home
 
 ### Research
 
-- [Opportunity for an Action-Focused Organisation for Better Health Outcomes](/organisation/opportunity/)
+- [Opportunity for an Action-Focused Cooperative for Better Health Outcomes](/cooperative/opportunity/)
 
 ### Resources
 

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Organisation Whitepaper - selfdriven Health
-permalink: /organisation/opportunity/paper/
+title: Cooperative Whitepaper - selfdriven Health
+permalink: /cooperative/opportunity/paper/
 ---
 
-# Opportunity Paper for an Action-Focused Organisation for Better Health Outcomes. 
+# Opportunity Paper for an Action-Focused Cooperative for Better Health Outcomes. 
 
 **! FOLLOWING IS THOUGHT STARTER FIRST CUT**
 
@@ -14,7 +14,7 @@ permalink: /organisation/opportunity/paper/
 
 ## Executive Summary
 
-The **selfdriven.Health Action-Focused Organisation ** is a **member-based organisation (MBO)** established in Australia to bring together hospitals, healthcare networks, family offices, and research partners around a shared mission: **to achieve better health outcomes through collaboration, innovation, and data-enabled insight**.
+The **selfdriven.Health Action-Focused Cooperative ** is a **member-based organisation (MBO)** established in Australia to bring together hospitals, healthcare networks, family offices, and research partners around a shared mission: **to achieve better health outcomes through collaboration, innovation, and data-enabled insight**.
 
 This initiative focuses on how **health organisations can work together** — across institutional and sectoral boundaries — to co-develop shared infrastructure, coordinate research, and improve operational effectiveness.
 

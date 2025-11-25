@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Opportunity for an Organisation - selfdriven Health
-permalink: /organisation/opportunity/
+title: Opportunity for an Cooperative - selfdriven Health
+permalink: /cooperative/opportunity/
 ---
 
-# Opportunity for an Action-Focused Organisation for Better Health Outcomes 
+# Opportunity for an Action-Focused Cooperative for Better Health Outcomes 
 
 ## Scope
 
