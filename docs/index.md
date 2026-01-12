@@ -12,7 +12,8 @@ title: Home
 ## Opportunities
 
 - [Overview](/opportunity/overview)
-- [Opportunity for an Action-Focused Cooperative for Better Health Outcomes](/cooperative/opportunity/)
+- [An Action-Focused Cooperative for Better Health Outcomes](/cooperative/opportunity/)
+- [Intelligence-Native Hospital](/cooperative/opportunity/) - from the Ground Up
 
 ### Resources
 
