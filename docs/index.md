@@ -9,8 +9,9 @@ title: Home
 - Traditional Health Care facilities are under pressure.
 - With the arrival of *GAHI* as a society we have the opportunity to decentralise health functions.
 
-### Research
+## Opportunities
 
+- [Overview](/opportunity/overview)
 - [Opportunity for an Action-Focused Cooperative for Better Health Outcomes](/cooperative/opportunity/)
 
 ### Resources
