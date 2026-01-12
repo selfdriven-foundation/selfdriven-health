@@ -361,3 +361,7 @@ This is essential for safety/regulatory acceptance as AI adoption expands.
 - [selfdriven.foundation](https://selfdriven.foundation)
 - [selfdriven.network](htts://selfdriven.network) - underlying interfaces to enable value of tech
 - [selfdriven.university](https://selfdriven.university)
+
+---
+
+- [Australia](/opportunity/intelligence-native-hospital/australia)
