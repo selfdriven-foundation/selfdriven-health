@@ -6,8 +6,14 @@ title: Home
 ## Health systems for a better human experience in the era of Generally Available High Intelligence (*GAHI*).
 
 ### Why
+
 - Traditional Health Care facilities are under pressure.
-- With the arrival of *GAHI* as a society we have the opportunity to decentralise health functions.
+- With the arrival of *GAHI* as a society we have the opportunity to re-imagine health & functions and the health-care ecosystem.
+
+- [Our Purpose](/our-purpose) - get & stay ahead of the curve.
+- [Our Identity](/our-identity) - our style & voice.
+
+---
 
 ## Opportunities
 
@@ -19,7 +25,7 @@ title: Home
 
 - [Practitioner In The Loop Services](/practitioner-in-the-loop-services/)
 - [Research into Better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*](/research/)
-- [selfdriven.clinic](https://selfdriven.clinic) - organisation, services, funding
+- [selfdriven.clinic](https://selfdriven.clinic) - organisation, services, funding.
 
 ### Contributors
 
