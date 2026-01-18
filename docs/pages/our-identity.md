@@ -106,7 +106,7 @@ Healthcare cannot modernise on trust alone — it requires proof. selfdriven.hea
 
 ---
 
-- [Our Purpose](/our/purpose) - get & stay ahead of the curve.
+- [Our Purpose](/our-purpose) - get & stay ahead of the curve.
 
 ---
 *Identity-native healthcare. Intelligence-native care.*
