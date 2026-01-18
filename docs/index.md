@@ -26,6 +26,7 @@ title: Home
 - [Practitioner In The Loop Services](/practitioner-in-the-loop-services/)
 - [Research into Better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*](/research/)
 - [selfdriven.clinic](https://selfdriven.clinic) - organisation, services, funding.
+- [Informational & Mechanical Energy - as system inputs](/resources/energy) - eg GenAI, Robotics
 
 ### Contributors
 
