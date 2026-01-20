@@ -6,7 +6,7 @@ permalink: /opportunity/intelligence-native-hospital
 
 # Intelligence-Native Hospital (from-scratch design)
 
-Below is a **from-scratch hospital** (full traditional capability: **ED, ICU, surgery, imaging, wards, pharmacy, labs**) redesigned for the **new intelligence era** — where **AI, robotics, autonomy, and continuous sensing** are **native infrastructure**, not add-ons.
+**Below is a conceptual design for "from the ground up" hospital (with full traditional capability: ED, ICU, surgery, imaging, wards, pharmacy, labs) redesigned for the new intelligence era — where AI, robotics, autonomy, and continuous sensing are native infrastructure, not add-ons.**
 
 ---
 
@@ -14,7 +14,7 @@ Below is a **from-scratch hospital** (full traditional capability: **ED, ICU, su
 
 A hospital is no longer a building full of departments.
 
-It’s a **real-time clinical operating system** that happens to occupy a physical space.
+It’s a real-time clinical operating system that happens to occupy a physical space.
 
 ### Design goals (non-negotiables)
 
@@ -40,9 +40,7 @@ This aligns with what’s already accelerating: widespread AI tooling in hospita
 
 #### Outputs
 - ED team gets a “probable diagnosis set + risk + suggested pathway”
-- Bed + imaging + specialist booking begins **before arrival**
-
----
+- Bed + imaging + specialist booking begins before arrival
 
 ### 1.2 Arrival + triage
 
@@ -53,7 +51,7 @@ This aligns with what’s already accelerating: widespread AI tooling in hospita
   - AI alerts: stroke/sepsis/MI likelihood
 - On arrival: the system has already built a care plan draft
 
-*(This is consistent with the trend of AI-enhanced emergency response and operational prediction becoming core capabilities.)*
+*Consistent with the trend of AI-enhanced emergency response and operational prediction becoming core capabilities.*
 
 #### Triage becomes mostly “data ingestion”
 Patients enter through:
@@ -75,8 +73,6 @@ Patients enter through:
 
 Clinician approves / overrides.
 
----
-
 ### 1.3 Diagnosis + decisioning
 
 The “diagnostic core” is built around:
@@ -96,8 +92,6 @@ GenAI is used for:
 But the human clinician remains the accountable decision-maker (and it’s logged).
 
 AI integration into hospital workflows + decision support is now mainstream and expanding.
-
----
 
 ### 1.4 Treatment
 
@@ -120,8 +114,6 @@ Split into 3 “care modes”:
   - robotic cleaning/UV + disinfection cycle
 - surgeon uses robotic assistance where appropriate
 - OR logistics bots reduce delays (restocking, retrieval) — a major current robotics focus
-
----
 
 ### 1.5 Discharge (becomes “handover to home system”)
 
@@ -165,8 +157,6 @@ Robotic/service flow includes:
 
 The workforce shortage pressure is one of the main drivers of this robotics expansion.
 
----
-
 ### 2.2 The Logistics Spine (the hospital’s hidden superpower)
 
 A sealed service corridor network that connects:
@@ -184,8 +174,6 @@ It runs like an airport baggage system:
 
 This pattern is already working in hospitals today (robots doing “hunting and gathering” to free nurses).
 
----
-
 ### 2.3 Wards are “adaptive pods”
 
 Instead of fixed wards (cardio ward, neuro ward), use **acuity pods**.
@@ -200,8 +188,6 @@ Each pod:
 - modular oxygen/suction
 - swap-in robotics (e.g., lifting assistance)
 
----
-
 ### 2.4 Environmental intelligence: the building observes safety
 
 Sensors (privacy-safe where possible):
@@ -212,8 +198,6 @@ Sensors (privacy-safe where possible):
 - infection control analytics
 
 Building becomes a clinical safety actor.
-
----
 
 ### 2.5 Infection control: “air is treated like blood”
 
@@ -238,8 +222,6 @@ A single shared fabric that every system plugs into:
 - devices + wearables
 - robotic fleet manager
 
----
-
 ### 3.2 The “Clinical Digital Twin”
 
 Every patient has a continuously updated model:
@@ -254,8 +236,6 @@ This enables:
 - load forecasting
 - resource planning
 
----
-
 ### 3.3 GenAI “agents” (role-based)
 - **Intake Agent:** structured history, consent prompts
 - **Orders Agent:** draft tests/meds based on pathways
@@ -264,14 +244,14 @@ This enables:
 - **Family Comms Agent:** approved updates + education
 - **Coding/Billing Agent:** reduces admin burden
 
-*(These align with current trends towards agentic architectures and unified AI assistants in healthcare.)*
+*Trends towards agentic architectures and unified AI assistants in healthcare.*
 
 ---
 
 ## 4) Robotics & autonomy: what robots actually do
 
 **Key principle:**  
-Robots win where tasks are **repetitive, physical, time-critical, or sterile**.
+Robots win where tasks are repetitive, physical, time-critical, or sterile.
 
 ### Tier 1: Logistics automation (highest ROI)
 - supply delivery
@@ -353,6 +333,7 @@ This is essential for safety/regulatory acceptance as AI adoption expands.
 - Agent suite
 - Robotics fleet orchestration
 - Clinical governance console
+
 ---
 
 ### References

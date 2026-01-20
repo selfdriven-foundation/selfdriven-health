@@ -8,12 +8,13 @@ permalink: /opportunity/intelligence-native-hospital/australia
 ## Capability Maturity Ladder + Regulatory/Governance Model
 
 This document provides:
-1) A **capability maturity ladder** for hospitals transitioning from **manual → assisted → autonomous** operation.
-2) A practical **Australian regulatory + governance model** aligned to **NSQHS**, **TGA SaMD**, **Privacy Act/APPs**, and **clinical safety**.
+
+1) A capability maturity ladder for hospitals transitioning from *manual → assisted → autonomous* operation.
+2) A practical Australian regulatory + governance model aligned to **NSQHS**, **TGA SaMD**, **Privacy Act/APPs**, and **clinical safety**.
 
 ---
 
-# 1) Capability maturity ladder (Manual → Assisted → Autonomous)
+## 1) Capability maturity ladder (Manual → Assisted → Autonomous)
 
 This ladder is intended to be applied:
 - **across the hospital**
@@ -21,9 +22,7 @@ This ladder is intended to be applied:
 
 > Principle: **autonomy increases only when governance + evidence quality increases.**
 
----
-
-## Level 0 — Manual / Legacy
+### Level 0 — Manual / Legacy
 **Description**
 - Human-led care + human coordination
 - Digital systems exist but are fragmented
@@ -43,9 +42,8 @@ This ladder is intended to be applied:
 **Outputs**
 - Mostly unstructured notes
 
----
+### Level 1 — Digitised
 
-## Level 1 — Digitised
 **Description**
 - Core systems digitised (EHR/PACS/LIS/pharmacy)
 - Still low interoperability; workflows remain manual
@@ -59,9 +57,8 @@ This ladder is intended to be applied:
 **AI**
 - None or trivial automation (templating, macros)
 
----
+### Level 2 — Assisted (Non-clinical automation)
 
-## Level 2 — Assisted (Non-clinical automation)
 **Description**
 - Automation improves **flow and admin** without impacting clinical decisions
 
@@ -82,9 +79,7 @@ This ladder is intended to be applied:
 - nursing/admin burden reduced
 - ED length-of-stay improves
 
----
-
-## Level 3 — Assisted Clinical Decision Support (CDS)
+### Level 3 — Assisted Clinical Decision Support (CDS)
 **Description**
 - AI becomes a clinical co-pilot — but **always human-confirmed**
 
@@ -104,9 +99,8 @@ This ladder is intended to be applied:
 **Regulatory note**
 Many CDS systems become **Software as a Medical Device (SaMD)** if they influence diagnosis/treatment.
 
----
+### Level 4 — Semi-autonomous execution (bounded autonomy)
 
-## Level 4 — Semi-autonomous execution (bounded autonomy)
 **Description**
 - AI can trigger actions **within constraints**
 - Humans supervise outcomes and exceptions
@@ -128,9 +122,8 @@ Many CDS systems become **Software as a Medical Device (SaMD)** if they influenc
 - Continuous monitoring + drift detection
 - Real-time auditability
 
----
+### Level 5 — High autonomy clinical ops (“autonomous hospital in normal mode”)
 
-## Level 5 — High autonomy clinical ops (“autonomous hospital in normal mode”)
 **Description**
 - Most operations are autonomous under policy
 - Humans are supervisors, decision authorities, and consent holders
@@ -151,9 +144,8 @@ Many CDS systems become **Software as a Medical Device (SaMD)** if they influenc
   - incident replay
   - safety case for each autonomous system
 
----
+### Level 6 — Network-autonomous healthcare (system-of-systems)
 
-## Level 6 — Network-autonomous healthcare (system-of-systems)
 **Description**
 - Hospital is a node in a regional autonomous care network
 
@@ -167,9 +159,7 @@ Many CDS systems become **Software as a Medical Device (SaMD)** if they influenc
 - strong Australian data residency + security posture
 - cross-border disclosure controls
 
----
-
-## Recommended scoring model (per capability)
+### Recommended scoring model (per capability)
 Score each hospital capability across:
 
 - **Clinical risk** (low → high)
@@ -182,7 +172,7 @@ Score each hospital capability across:
 
 ---
 
-# 2) Australian regulatory + governance model (TGA, NSQHS, Privacy, clinical safety)
+## 2) Australian regulatory + governance model (TGA, NSQHS, Privacy, clinical safety)
 
 This section defines an operating model for an AI/robotics-native hospital compliant with:
 
@@ -191,11 +181,9 @@ This section defines an operating model for an AI/robotics-native hospital compl
 - **Privacy Act 1988 / APPs** (health information = sensitive data)
 - practical clinical safety expectations for autonomous systems
 
----
+### 2.1 Regulatory perimeter (what you must comply with)
 
-## 2.1 Regulatory perimeter (what you must comply with)
-
-### A) NSQHS Standards (Australian Commission on Safety and Quality in Health Care)
+#### A) NSQHS Standards (Australian Commission on Safety and Quality in Health Care)
 NSQHS is the hospital’s **quality & safety operating baseline**.
 
 Most critical anchor:
@@ -203,9 +191,8 @@ Most critical anchor:
 
 AI/robotics must be governed within NSQHS clinical governance, not treated as a separate digital project.
 
----
+#### B) TGA — Software as a Medical Device (SaMD), including AI
 
-### B) TGA — Software as a Medical Device (SaMD), including AI
 If software **influences diagnosis or treatment**, it may be regulated as a medical device.
 
 Key implications:
@@ -213,9 +200,8 @@ Key implications:
 - Classification depends on potential harm
 - Requires documentation, validation, cybersecurity, post-market monitoring
 
----
+#### C) Privacy Act 1988 + Australian Privacy Principles (APPs)
 
-### C) Privacy Act 1988 + Australian Privacy Principles (APPs)
 Health data is **sensitive information**.
 
 Key themes:
@@ -226,28 +212,27 @@ Key themes:
 - third-party disclosure constraints
 - cross-border disclosure obligations
 
----
+#### D) National clinical governance for digital health
 
-### D) National clinical governance for digital health
 Use Australia’s digital health clinical governance frameworks as the bridge between:
 - clinical safety
 - privacy
 - cybersecurity
 - operational accountability
 
----
-
-### E) Emerging AI governance guidance (Australia)
+#### E) Emerging AI governance guidance (Australia)
 Adopt national clinical AI usage guidance as internal operational policy (training + acceptable use + safety expectations).
 
 ---
 
-## 2.2 Governance operating model (how the hospital runs safely)
+### 2.2 Governance operating model (how the hospital runs safely)
 
-### The “Three-Layer Governance Stack”
+**The “Three-Layer Governance Stack”**
+
 Three intersecting lines of governance are required:
 
 #### 1) Clinical Governance (NSQHS-driven)
+
 **Owned by**
 - Medical Director / Chief Nurse / Board Clinical Governance Committee
 
@@ -257,8 +242,6 @@ Three intersecting lines of governance are required:
 - clinical policy
 - credentialing & training
 - “acceptable use” rules for AI
-
----
 
 #### 2) Medical Device / SaMD Governance (TGA-driven)
 **Owned by**
@@ -270,8 +253,6 @@ Three intersecting lines of governance are required:
 - validation, versioning, change control
 - post-deployment performance monitoring
 - reporting and corrective action
-
----
 
 #### 3) Information Governance (Privacy + Security)
 **Owned by**
@@ -285,24 +266,22 @@ Three intersecting lines of governance are required:
 - model data lineage
 - cross-border vendor controls
 
----
+### 2.3 Committees required (operationally credible setup)
 
-## 2.3 Committees required (operationally credible setup)
-
-### 1) Clinical AI Safety Committee
+#### 1) Clinical AI Safety Committee
 - approves AI use cases
 - reviews safety cases
 - owns “human override policy”
 - approves autonomy escalation (L2→L3→L4…)
 
-### 2) Model Registry & Change Control Board
+#### 2) Model Registry & Change Control Board
 No model goes live without:
 - evaluation report
 - drift plan
 - rollback plan
 - versioned documentation
 
-### 3) Robotics Safety Committee
+#### 3) Robotics Safety Committee
 Robotics = physical harm domain. Requires:
 - physical safety case
 - collision/injury prevention protocols
@@ -310,9 +289,7 @@ Robotics = physical harm domain. Requires:
 - emergency stop standards
 - OR sterile boundary rules
 
----
-
-## 2.4 Clinical Safety Case template (mandatory for AI/autonomy)
+### 2.4 Clinical Safety Case template (mandatory for AI/autonomy)
 Every AI capability above Level 2 should have a safety case:
 
 - intended use statement
@@ -325,11 +302,9 @@ Every AI capability above Level 2 should have a safety case:
 - training/credentialing requirements
 - accountability map (RACI)
 
----
+### 2.5 Data + model controls (privacy + safety combined)
 
-## 2.5 Data + model controls (privacy + safety combined)
-
-### Minimum viable controls
+#### Minimum viable controls
 - **data minimisation**
 - **privacy by design**
 - immutable audit logging (who/what/when)
@@ -339,24 +314,22 @@ Every AI capability above Level 2 should have a safety case:
 - release channels:
   - shadow mode → assisted → bounded autonomy → higher autonomy
 
-### Continuous monitoring requirements
+#### Continuous monitoring requirements
 - performance drift
 - calibration drift
 - false-negative monitoring (highest safety priority)
 - subgroup monitoring (bias)
 - novelty detection (“unknown unknowns”)
 
----
+### 2.6 Practical TGA mapping: what becomes SaMD in your hospital
 
-## 2.6 Practical TGA mapping: what becomes SaMD in your hospital
-
-### Usually SaMD
+#### Usually SaMD
 - AI suggesting diagnosis likelihood
 - AI recommending treatment actions
 - imaging interpretation algorithms
 - triage severity scoring that influences clinical action
 
-### Usually not SaMD (but still governed)
+####Usually not SaMD (but still governed)
 - transcription
 - summarisation
 - workflow automation
@@ -365,9 +338,7 @@ Every AI capability above Level 2 should have a safety case:
 
 > Even non-SaMD automation requires governance because admin errors can become clinical harm.
 
----
-
-## 2.7 Compliance statement (what you should be able to assert)
+### 2.7 Compliance statement (what you should be able to assert)
 An intelligence-native hospital should be able to state:
 
 - All clinical AI is governed under NSQHS clinical governance
