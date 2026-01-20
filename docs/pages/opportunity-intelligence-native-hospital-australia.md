@@ -5,6 +5,7 @@ permalink: /opportunity/intelligence-native-hospital/australia
 ---
 
 # Intelligence-Native Hospital (Australia)
+
 ## Capability Maturity Ladder + Regulatory/Governance Model
 
 This document provides:
