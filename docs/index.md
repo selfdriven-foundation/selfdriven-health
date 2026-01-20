@@ -19,7 +19,7 @@ title: Home
 
 - [Overview](/opportunity/overview)
 - [An Action-Focused Cooperative for Better Health Outcomes](/cooperative/opportunity/)
-- [Intelligence-Native Hospital](/cooperative/opportunity/) - from the ground up
+- [Intelligence-Native Hospital](/opportunity/intelligence-native-hospital) - from the ground up
 
 ### Resources
 

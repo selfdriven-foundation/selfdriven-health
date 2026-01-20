@@ -378,3 +378,5 @@ An intelligence-native hospital should be able to state:
 - All autonomous systems have safety cases, drift monitoring, and rollback procedures
 
 ---
+
+- [Intelligence-Native Hospital](/opportunity/intelligence-native-hospital)
