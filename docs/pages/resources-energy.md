@@ -13,6 +13,8 @@ Intelligence as a form of energy that reduces system entropy (the tendency of sy
 - [OpenAI For Healthcare](https://openai.com/index/openai-for-healthcare/)
 - [ChatGPT Health](https://openai.com/index/introducing-chatgpt-health/)
 - [DeepMind MedGemma](https://deepmind.google/models/gemma/medgemma/)
+- [Claude Healthcare](https://www.anthropic.com/news/healthcare-life-sciences)
+
 - [selfdriven.ai](https://selfdriven.ai)
 
 *Autonomous information state change - eg decisions*
