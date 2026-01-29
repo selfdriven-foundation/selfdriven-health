@@ -8,43 +8,46 @@ permalink: /opportunity/cooperative
 
 **We are looking for healthcare organisations ready to reimagine the hospital in the age of generally available higher intelligence (“AI”), explore its limits, and translate that understanding into practical, incremental transformations that improve today’s hospital systems, operational efficiency, and strategic impact.**
 
-### Scope
+---
 
-#### Initial Founding Members (8)
+### Initial Founding Members (9)
 
-- Hospitals (2) - $50,000 each
-- Family offices (2) - $50,000 each
-- Individuals (2) - $10,000 each
+- Hospitals (2)
 - beHub (1)
 - selfdriven Services (1)
+- Family offices (3) - $60,000 each
+- Individuals (2) - $10,000 each
 
-#### Associates (4)
+### Associates (4)
 
 - Healthcare Educator
 - Healthcare Thought Leader
 - Healthcare Policy Adviser 
 - Futurist / Technologist
 
-#### Year 1 Set Up
+### Year 1 Set Up
 
-- $220,000 for year 1 set up:
-    - $40,000 to beHub app/data (inc entityOS.cloud service) access for founding hospitals.
+- $200,000 for year 1 set up:
     - $40,000 to facilitate the organisation (Liz)
     - $20,000 expenses
     - $40,000 grants for associates - initially
-    - $80,000 as base for 2026
+    - $80,000 fund engagement, design & deveopment
+	- $20,000 to beHub app/data (inc entityOS.cloud service) access for founding hospitals
 
 - Then annual membership:
     - from founding members ($25,000) and new members (TBC)
 
-#### Services
-
-- Research
-    - Now (Practical)
-    - Future
+### Scope
 
 - Engagement
     - Facilitate a Community of Practice
+
+- Design
+    - Now (Practical)
+    - Future
+
+- Development
+	- Intelligence-Native Hospital - Stage 1 (Identity)
 
 - Services
     - app.selfdriven.health
