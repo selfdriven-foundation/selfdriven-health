@@ -6,7 +6,7 @@ permalink: /opportunity/cooperative
 
 ## Opportunity for an Action-Focused Cooperative for Better Health Outcomes 
 
-**We are looking for healthcare organisations ready to reimagine the hospital in the age of generally available higher intelligence (“AI”), explore its limits, and translate that understanding into practical, incremental transformations that improve today’s hospital systems, operational efficiency, and strategic impact.**
+**An opportunity for healthcare organisations ready to reimagine the hospital in the age of generally available higher intelligence (“AI”), explore its limits, and translate that understanding into practical, incremental transformations that improve today’s hospital systems, operational efficiency, and strategic impact.**
 
 ---
 
