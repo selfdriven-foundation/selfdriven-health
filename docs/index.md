@@ -9,7 +9,6 @@ title: Home
 
 - Traditional Health Care facilities are under pressure.
 - With the arrival of *GAHI* as a society we have the opportunity to re-imagine health & functions and the health-care ecosystem.
-
 - [Our Purpose](/our-purpose) - get & stay ahead of the curve.
 - [Our Identity](/our-identity) - our style & voice.
 
