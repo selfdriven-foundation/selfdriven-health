@@ -1,7 +1,7 @@
 ---
 layout: default
 title: HITPS - selfdriven Health
-permalink: /practitioner-in-the-loop-services/
+permalink: /resources/practitioner-in-the-loop-services
 ---
 
 ## Practitioner-In-The-Loop Services (PITLS)

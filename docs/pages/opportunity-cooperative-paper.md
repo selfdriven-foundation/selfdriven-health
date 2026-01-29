@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cooperative Whitepaper - selfdriven Health
-permalink: /cooperative/opportunity/paper/
+permalink: /opportunity/cooperative/paper
 ---
 
 # Opportunity Paper for an Action-Focused Cooperative for Better Health Outcomes. 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Opportunity for an Cooperative - selfdriven Health
-permalink: /cooperative/opportunity/
+permalink: /opportunity/cooperative
 ---
 
 # Opportunity for an Action-Focused Cooperative for Better Health Outcomes 
@@ -51,7 +51,7 @@ permalink: /cooperative/opportunity/
 
 ---
 
-- [Opportunity Paper](/cooperative/opportunity/paper/) - Progessively being updated based on scope and conversations.
+- [Opportunity Paper](/opportunity/cooperative/paper) - Progessively being updated based on scope and conversations.
 
 ---
 

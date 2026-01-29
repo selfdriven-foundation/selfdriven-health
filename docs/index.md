@@ -17,15 +17,13 @@ title: Home
 
 ## Opportunities
 
-- [Overview](/opportunity/overview)
-- [An Action-Focused Cooperative for Better Health Outcomes](/cooperative/opportunity/)
+- [Overview](/opportunity/overview) - Better health experiences & verifiable observations
+- [An Action-Focused Cooperative for Better Health Outcomes](/opportunity/cooperative)
 - [Intelligence-Native Hospital](/opportunity/intelligence-native-hospital) - from the ground up
 
 ### Resources
 
-- [Practitioner In The Loop Services](/practitioner-in-the-loop-services/)
-- [Research into Better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*](/research/)
-- [selfdriven.clinic](https://selfdriven.clinic) - organisation, services, funding.
+- [Practitioner In The Loop Services](/resources/practitioner-in-the-loop-services)
 - [Informational & Mechanical Energy - as system inputs](/resources/energy) - eg GenAI, Robotics
 
 ### Contributors
@@ -35,6 +33,7 @@ title: Home
 
 ### Related
 
+- [selfdriven.clinic](https://selfdriven.clinic) - organisation, services, funding.
 - [selfdriven.community](https://selfdriven.community)
 - [selfdriven.fyi/intelligence](https://selfdriven.fyi/intelligence)
 - [selfdriven.fyi/cog-assist](https://selfdriven.fyi/cog-assist)
