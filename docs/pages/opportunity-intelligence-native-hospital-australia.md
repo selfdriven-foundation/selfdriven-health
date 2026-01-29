@@ -22,7 +22,7 @@ This ladder is intended to be applied across the hospital, and per capability (t
 Principle: **autonomy increases only when governance + evidence quality increases.**
 
 |Level|Description|
-|:---:|:---------:|
+|:---:|:----------|
 |0|Manual / Legacy|
 |1|Digitised|
 |2|Assisted (Non-clinical automation)|
