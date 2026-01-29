@@ -338,7 +338,7 @@ Every AI capability above Level 2 should have a safety case:
 - imaging interpretation algorithms
 - triage severity scoring that influences clinical action
 
-####Usually not SaMD (but still governed)
+#### Usually not SaMD (but still governed)
 - transcription
 - summarisation
 - workflow automation
