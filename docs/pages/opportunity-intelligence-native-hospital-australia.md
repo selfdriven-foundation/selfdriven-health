@@ -8,20 +8,28 @@ permalink: /opportunity/intelligence-native-hospital/australia
 
 ## Capability Maturity Ladder + Regulatory/Governance Model
 
-This document provides:
+This document covers:
 
-1) A capability maturity ladder for hospitals transitioning from *manual → assisted → autonomous* operation.
-2) A practical Australian regulatory + governance model aligned to **NSQHS**, **TGA SaMD**, **Privacy Act/APPs**, and **clinical safety**.
+- A capability maturity ladder for hospitals transitioning from *manual → assisted → autonomous* operation.
+-  A practical Australian regulatory + governance model aligned to **NSQHS**, **TGA SaMD**, **Privacy Act/APPs**, and **clinical safety**.
 
 ---
 
 ## 1) Capability maturity ladder (Manual → Assisted → Autonomous)
 
-This ladder is intended to be applied:
-- **across the hospital**
-- and **per capability** (triage, imaging, surgery, pharmacy, discharge, robotics, etc.)
+This ladder is intended to be applied across the hospital, and per capability (triage, imaging, surgery, pharmacy, discharge, robotics, etc.)
 
-> Principle: **autonomy increases only when governance + evidence quality increases.**
+Principle: **autonomy increases only when governance + evidence quality increases.**
+
+|Level|Description|
+|:---:|:---------:|
+|0|Manual / Legacy|
+|1|Digitised|
+|2|Assisted (Non-clinical automation)|
+|3|Assisted Clinical Decision Support (CDS)|
+|4|Semi-autonomous execution (bounded autonomy)|
+|5|High autonomy clinical ops (“autonomous hospital in normal mode”)|
+|6|Network-autonomous healthcare (system-of-systems)|
 
 ### Level 0 — Manual / Legacy
 **Description**
@@ -168,8 +176,8 @@ Score each hospital capability across:
 - **Evidence maturity** (data completeness + bias + drift)
 - **Governance maturity** (safety case + audits)
 
-> Realistic state: a hospital can run multiple autonomy levels at once  
-> (e.g., logistics at Level 5, triage at Level 3, surgery at Level 4).
+Realistic state: a hospital can run multiple autonomy levels at once  
+(e.g., logistics at Level 5, triage at Level 3, surgery at Level 4).
 
 ---
 
@@ -337,7 +345,7 @@ Every AI capability above Level 2 should have a safety case:
 - rostering
 - supply chain optimisation
 
-> Even non-SaMD automation requires governance because admin errors can become clinical harm.
+Even non-SaMD automation requires governance because admin errors can become clinical harm.
 
 ### 2.7 Compliance statement (what you should be able to assert)
 An intelligence-native hospital should be able to state:
