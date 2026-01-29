@@ -12,9 +12,7 @@ permalink: /opportunity/cooperative/paper
 
 ---
 
-## Executive Summary
-
-The **selfdriven.Health Action-Focused Cooperative ** is a **member-based organisation (MBO)** established in Australia to bring together hospitals, healthcare networks, family offices, and research partners around a shared mission: **to achieve better health outcomes through collaboration, innovation, and data-enabled insight**.
+The **selfdriven.Health Action-Focused Cooperative** is a member-based organisation (MBO) established in Australia to bring together hospitals, healthcare networks, family offices, and research partners around a shared mission: **to achieve better health outcomes through collaboration, innovation, and data-enabled insight**.
 
 This initiative focuses on how **health organisations can work together** — across institutional and sectoral boundaries — to co-develop shared infrastructure, coordinate research, and improve operational effectiveness.
 

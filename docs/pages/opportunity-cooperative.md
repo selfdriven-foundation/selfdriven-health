@@ -4,11 +4,13 @@ title: Opportunity for an Cooperative - selfdriven Health
 permalink: /opportunity/cooperative
 ---
 
-# Opportunity for an Action-Focused Cooperative for Better Health Outcomes 
+## Opportunity for an Action-Focused Cooperative for Better Health Outcomes 
 
-## Scope
+**We are looking for healthcare organisations ready to reimagine the hospital in the age of generally available higher intelligence (“AI”), explore its limits, and translate that understanding into practical, incremental transformations that improve today’s hospital systems, operational efficiency, and strategic impact.**
 
-### Initial Founding Members (8)
+### Scope
+
+#### Initial Founding Members (8)
 
 - Hospitals (2) - $50,000 each
 - Family offices (2) - $50,000 each
@@ -16,14 +18,14 @@ permalink: /opportunity/cooperative
 - beHub (1)
 - selfdriven Services (1)
 
-### Associates (4)
+#### Associates (4)
 
 - Healthcare Educator
 - Healthcare Thought Leader
 - Healthcare Policy Adviser 
 - Futurist / Technologist
 
-### Year 1 Set Up
+#### Year 1 Set Up
 
 - $220,000 for year 1 set up:
     - $40,000 to beHub app/data (inc entityOS.cloud service) access for founding hospitals.
@@ -35,7 +37,7 @@ permalink: /opportunity/cooperative
 - Then annual membership:
     - from founding members ($25,000) and new members (TBC)
 
-### Services
+#### Services
 
 - Research
     - Now (Practical)
@@ -55,7 +57,7 @@ permalink: /opportunity/cooperative
 
 ---
 
-### References
+#### References
 - [selfdriven.ai](https://selfdriven.ai)
 - [selfdriven.institute](https://selfdriven.institute)
 - [selfdriven.foundation](https://selfdriven.foundation)
