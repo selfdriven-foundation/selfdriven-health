@@ -336,6 +336,10 @@ This is essential for safety/regulatory acceptance as AI adoption expands.
 
 ---
 
+- [Capability Maturity Ladder + Regulatory/Governance Model - Australia](/opportunity/intelligence-native-hospital/australia)
+
+---
+
 ### References
 - [selfdriven.ai](https://selfdriven.ai)
 - [selfdriven.institute](https://selfdriven.institute)
@@ -343,6 +347,5 @@ This is essential for safety/regulatory acceptance as AI adoption expands.
 - [selfdriven.network](htts://selfdriven.network) - underlying interfaces to enable value of tech
 - [selfdriven.university](https://selfdriven.university)
 
----
 
-- [Australia](/opportunity/intelligence-native-hospital/australia)
+
