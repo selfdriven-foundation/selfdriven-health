@@ -12,9 +12,7 @@ With the arrival of *GAHI* as a society we have the opportunity to re-imagine he
 - [Overview](/opportunity/overview) - Better health experiences & verifiable observations
 - [An Action-Focused Cooperative for Better Health Outcomes](/opportunity/cooperative)
 - [Intelligence-Native Hospital](/opportunity/intelligence-native-hospital) - from the ground up
-
-## Resources
-- [Situational Awareness Framework for Organisations](/situational-awareness-framework/organisations/)
+- [AI Situational Awareness Framework for Organisations](/situational-awareness-framework/organisations/)
 - [Practitioner In The Loop Services](/resources/practitioner-in-the-loop-services)
 - [Informational & Mechanical Energy - as system inputs](/resources/energy) - eg GenAI, Robotics
 
