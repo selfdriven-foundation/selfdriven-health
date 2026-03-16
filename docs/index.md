@@ -25,7 +25,7 @@ title: selfdriven Health
 
 ## Contributors
 
-- [selfdriven.university](https://selfdriven.university)
+- [selfdriven.foundation](https://selfdriven.foundation)
 - [beHub](https://behub.com.au)
 
 ## Related
