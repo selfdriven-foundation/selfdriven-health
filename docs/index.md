@@ -12,8 +12,6 @@ title: selfdriven Health
 - [Our Purpose](/our-purpose) - get & stay ahead of the curve.
 - [Our Identity](/our-identity) - our style & voice.
 
----
-
 ## Opportunities
 
 - [Overview](/opportunity/overview) - Better health experiences & verifiable observations
