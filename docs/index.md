@@ -5,9 +5,9 @@ title: selfdriven Health
 
 # Health systems for a better human experience in the era of Generally Available High Intelligence (*GAHI*).
 
+Traditional Health Care facilities are under pressure.
 
-- Traditional Health Care facilities are under pressure.
-- With the arrival of *GAHI* as a society we have the opportunity to re-imagine health & functions and the health-care ecosystem.
+With the arrival of *GAHI* as a society we have the opportunity to re-imagine health & functions and the health-care ecosystem.
 
 ## Opportunities
 - [Overview](/opportunity/overview) - Better health experiences & verifiable observations
