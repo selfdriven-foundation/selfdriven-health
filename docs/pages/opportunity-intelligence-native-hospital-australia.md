@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: selfdriven
 title: Intelligence-Native Hospital Australia Opportunity - selfdriven Health
 permalink: /opportunity/intelligence-native-hospital/australia
 ---

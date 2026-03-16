@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: selfdriven
 title: HITPS - selfdriven Health
 permalink: /resources/practitioner-in-the-loop-services
 ---

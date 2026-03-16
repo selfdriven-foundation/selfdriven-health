@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: selfdriven
 title: Cooperative Whitepaper - selfdriven Health
 permalink: /opportunity/cooperative/paper
 ---

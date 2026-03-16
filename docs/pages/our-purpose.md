@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: selfdriven
 title: Our Purpose - selfdriven Health
 permalink: /our-purpose
 ---

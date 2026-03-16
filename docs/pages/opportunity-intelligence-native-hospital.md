@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: selfdriven
 title: Intelligence-Native Hospital Opportunity - selfdriven Health
 permalink: /opportunity/intelligence-native-hospital
 ---

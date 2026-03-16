@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Home
+layout: selfdriven
+title: selfdriven Health
 ---
 
 ## Health systems for a better human experience in the era of Generally Available High Intelligence (*GAHI*).

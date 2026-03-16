@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: selfdriven
 title: Energy Resources - selfdriven Health
 permalink: /resources/energy
 ---

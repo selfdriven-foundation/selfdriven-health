@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: selfdriven
 title: Our Identity - selfdriven Health
 permalink: /our-identity
 ---

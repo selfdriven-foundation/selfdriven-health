@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: selfdriven
 title: Opportunity for an Cooperative - selfdriven Health
 permalink: /opportunity/cooperative
 ---
