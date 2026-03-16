@@ -3,9 +3,9 @@ layout: selfdriven
 title: selfdriven Health
 ---
 
-## Health systems for a better human experience in the era of Generally Available High Intelligence (*GAHI*).
+# Health systems for a better human experience in the era of Generally Available High Intelligence (*GAHI*).
 
-### Why
+## Why
 
 - Traditional Health Care facilities are under pressure.
 - With the arrival of *GAHI* as a society we have the opportunity to re-imagine health & functions and the health-care ecosystem.
@@ -20,17 +20,17 @@ title: selfdriven Health
 - [An Action-Focused Cooperative for Better Health Outcomes](/opportunity/cooperative)
 - [Intelligence-Native Hospital](/opportunity/intelligence-native-hospital) - from the ground up
 
-### Resources
+## Resources
 
 - [Practitioner In The Loop Services](/resources/practitioner-in-the-loop-services)
 - [Informational & Mechanical Energy - as system inputs](/resources/energy) - eg GenAI, Robotics
 
-### Contributors
+## Contributors
 
 - [selfdriven.university](https://selfdriven.university)
 - [beHub](https://behub.com.au)
 
-### Related
+## Related
 
 - [selfdriven.clinic](https://selfdriven.clinic) - organisation, services, funding.
 - [selfdriven.community](https://selfdriven.community)

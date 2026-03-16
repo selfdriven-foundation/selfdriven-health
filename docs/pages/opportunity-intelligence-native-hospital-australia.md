@@ -13,8 +13,6 @@ This document covers:
 - A capability maturity ladder for hospitals transitioning from *manual → assisted → autonomous* operation.
 -  A practical Australian regulatory + governance model aligned to **NSQHS**, **TGA SaMD**, **Privacy Act/APPs**, and **clinical safety**.
 
----
-
 ## 1) Capability maturity ladder (Manual → Assisted → Autonomous)
 
 This ladder is intended to be applied across the hospital, and per capability (triage, imaging, surgery, pharmacy, discharge, robotics, etc.)
@@ -179,8 +177,6 @@ Score each hospital capability across:
 Realistic state: a hospital can run multiple autonomy levels at once  
 (e.g., logistics at Level 5, triage at Level 3, surgery at Level 4).
 
----
-
 ## 2) Australian regulatory + governance model (TGA, NSQHS, Privacy, clinical safety)
 
 This section defines an operating model for an AI/robotics-native hospital compliant with:
@@ -231,8 +227,6 @@ Use Australia’s digital health clinical governance frameworks as the bridge be
 
 #### E) Emerging AI governance guidance (Australia)
 Adopt national clinical AI usage guidance as internal operational policy (training + acceptable use + safety expectations).
-
----
 
 ### 2.2 Governance operating model (how the hospital runs safely)
 

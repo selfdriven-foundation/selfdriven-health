@@ -18,7 +18,7 @@ This initiative focuses on how **health organisations can work together** — ac
 
 selfdriven.Health provides a **trusted digital and governance framework** that supports coordinated action, transparent performance measurement, and evidence-based innovation.
 
----
+
 
 ## 1. Purpose
 
@@ -32,7 +32,7 @@ Selfdriven.Health was established to create a **neutral, cooperative structure**
 
 The outcome is a stronger, more connected ecosystem — driven by **health organisations working together**, not by individual competition.
 
----
+
 
 ## 2. Founding Structure
 
@@ -40,7 +40,7 @@ The outcome is a stronger, more connected ecosystem — driven by **health organ
 Each founding member commits **AUD $50,000** to establish the organisation’s operational and digital foundation.
 
 | Member Type | Count | Role |
-|--------------|--------|------|
+|--------|--------|------|
 | Hospitals | 3 | Founding institutional members and pilot implementation sites |
 | Family Offices | 3 | Strategic investors and social impact partners |
 | beHub (Liz) | 1 | Technology provider and infrastructure partner |
@@ -60,7 +60,7 @@ Each founding member commits **AUD $50,000** to establish the organisation’s o
 - Founding Members: $25,000  
 - New Organisational Members: Tiered annual fee (with or without platform access)
 
----
+
 
 ## 3. Associates & Expertise
 
@@ -74,8 +74,6 @@ Selfdriven.Health will be guided by **Associates**, recognised leaders who advis
 | Futurist / Technologist | Innovation, AI, and data strategy |
 
 Associates participate in funded projects, panels, and Communities of Practice established by the organisation.
-
----
 
 ## 4. Operating Model
 
@@ -104,7 +102,7 @@ Members remain independent entities but align around shared priorities, data, an
   - Supports secure collaboration, data governance, and analytics.  
   - Members pay base + usage licence fees to sustain platform access.
 
----
+
 
 ## 5. Technology Partnership — beHub
 
@@ -117,7 +115,7 @@ Members remain independent entities but align around shared priorities, data, an
 - **Governance Layer:** Consent, data rights, and compliance management.  
 
 
----
+
 
 ## 6. Governance Framework
 
@@ -132,7 +130,7 @@ Members remain independent entities but align around shared priorities, data, an
 - Financial and operational accountability.  
 - Evidence-based policy influence.
 
----
+
 
 ## 7. Establishing the Organisation in Australia
 
@@ -149,7 +147,7 @@ Alternate models (incorporated association or co-operative) may be used for loca
 5. Insure for public liability, management, and cyber risks.  
 6. Launch initial operational phase with founding members.
 
----
+
 
 ## 8. Financial Model & Sustainability
 
@@ -170,7 +168,7 @@ Revenue sources:
 - Year 2: Grow membership base and joint projects.  
 - Year 3–5: Expand into national networks and influence health policy.
 
----
+
 
 ## 9. Strategic Impact (2025–2028)
 
@@ -182,7 +180,7 @@ Revenue sources:
 | **Policy** | Influence through data-backed insights | Health reforms grounded in evidence |
 | **Sustainability** | Build national membership & long-term funding | Self-sustaining MBO by 2028 |
 
----
+
 
 ## 10. Conclusion
 
@@ -193,7 +191,7 @@ This is not a new health service — it’s a **new way for health organisations
 
 > **Hospitals, foundations, and innovators are invited to join as founding members to shape the next era of coordinated health leadership in Australia.**
 
----
+
 
 ## Appendices
 

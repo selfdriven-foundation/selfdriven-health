@@ -4,9 +4,9 @@ title: Opportunity Overview - selfdriven Health
 permalink: /opportunity/overview
 ---
 
-## An opportunity for better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*.
+# An opportunity for better human health experiences in the age of *Generally Available High Intelligence (GAHI) & Verifiable Observations*.
 
-### Design Focuses
+## Design Focuses
 
 *Fundamental shift to a new system*
 
@@ -18,7 +18,7 @@ permalink: /opportunity/overview
     - "Sovereign state obligations"
 
 
-### Practical Focuses
+## Practical Focuses
 
 *Efficiency in current systems*
 

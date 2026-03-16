@@ -4,11 +4,11 @@ title: Energy Resources - selfdriven Health
 permalink: /resources/energy
 ---
 
-## Informational & Mechanical Energy - as System Inputs
+# Informational & Mechanical Energy - as System Inputs
 
 Intelligence as a form of energy that reduces system entropy (the tendency of systems to drift toward disorder unless countered by intelligent energy).
 
-### Informational
+## Informational
 
 - [OpenAI For Healthcare](https://openai.com/index/openai-for-healthcare/)
 - [ChatGPT Health](https://openai.com/index/introducing-chatgpt-health/)
@@ -18,15 +18,13 @@ Intelligence as a form of energy that reduces system entropy (the tendency of sy
 
 *Autonomous information state change - eg decisions*
 
-### Mechanical
+###Mechanical
 
 - Robotics etc
 
 *Autonomous atomic state change*
 
----
-
-### Related
+## Related
 
 - [selfdriven.id](https://selfdriven.id) - energy input & output identification. 
 

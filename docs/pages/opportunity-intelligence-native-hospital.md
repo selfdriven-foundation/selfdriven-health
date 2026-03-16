@@ -8,8 +8,6 @@ permalink: /opportunity/intelligence-native-hospital
 
 **Below is a conceptual design for "from the ground up" hospital (with full traditional capability: ED, ICU, surgery, imaging, wards, pharmacy, labs) redesigned for the new intelligence era — where AI, robotics, autonomy, and continuous sensing are native infrastructure, not add-ons.**
 
----
-
 ## 0) Core concept: the “Intelligence-Native Hospital”
 
 A hospital is no longer a building full of departments.
@@ -26,8 +24,6 @@ It’s a real-time clinical operating system that happens to occupy a physical s
 6. **Every step produces structured evidence** (audit, safety, insurance, quality)
 
 This aligns with what’s already accelerating: widespread AI tooling in hospitals, growth in hospital robotics to reduce workforce load, and facilities being redesigned to accommodate automation.
-
----
 
 ## 1) Patient journey: Intake → Treatment → Discharge (end-to-end)
 
@@ -134,8 +130,6 @@ Discharge is treated like:
 - flags deterioration
 - offers telehealth escalation
 
----
-
 ## 2) Physical facility design (built environment)
 
 ### 2.1 Hospital layout = “loops not corridors”
@@ -207,8 +201,6 @@ A major future-ready differentiator:
 - UV disinfection cycles
 - autonomous cleaning robots
 
----
-
 ## 3) The AI architecture (what makes it intelligence-native)
 
 ### 3.1 The Hospital OS
@@ -246,8 +238,6 @@ This enables:
 
 *Trends towards agentic architectures and unified AI assistants in healthcare.*
 
----
-
 ## 4) Robotics & autonomy: what robots actually do
 
 **Key principle:**  
@@ -275,8 +265,6 @@ This is exactly where real deployments are growing right now.
 
 Research direction: multi-robot coordination and OR logistics automation are active areas.
 
----
-
 ## 5) Staffing model: “small humans, huge leverage”
 
 ### Roles change dramatically
@@ -290,8 +278,6 @@ Research direction: multi-robot coordination and OR logistics automation are act
 - Model risk officer (healthcare)
 
 Robots and AI are increasingly positioned to offset staffing shortages.
-
----
 
 ## 6) Safety, governance, and “evidence”
 
@@ -308,8 +294,6 @@ In this facility:
 - incident replay (like aviation)
 
 This is essential for safety/regulatory acceptance as AI adoption expands.
-
----
 
 ## 7) A concrete blueprint (what you’d actually build)
 
@@ -334,13 +318,11 @@ This is essential for safety/regulatory acceptance as AI adoption expands.
 - Robotics fleet orchestration
 - Clinical governance console
 
----
 
 - [Capability Maturity Ladder + Regulatory/Governance Model - Australia](/opportunity/intelligence-native-hospital/australia)
+-
 
----
-
-### References
+## References
 - [selfdriven.ai](https://selfdriven.ai)
 - [selfdriven.institute](https://selfdriven.institute)
 - [selfdriven.foundation](https://selfdriven.foundation)

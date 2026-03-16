@@ -4,24 +4,19 @@ title: Our Purpose - selfdriven Health
 permalink: /our-purpose
 ---
 
-## To accelerate a new healthcare system: preventive, coordinated, and intelligence-native — by uniting leading organisations around trusted identity infrastructure, AI, robotics, and verifiable governance.
+# To accelerate a new healthcare system: preventive, coordinated, and intelligence-native — by uniting leading organisations around trusted identity infrastructure, AI, robotics, and verifiable governance.
 
 To get and stay ahead of the healthcare curve by convening leading people and organisations to imagine and deliver the next phase of care — powered by identity, intelligence, robotics, and trust.
 
----
-
 selfdriven.health exists to accelerate the shift from institution-centred healthcare to person-centred health systems. We convene the pioneers — clinicians, hospitals, insurers, researchers, regulators, builders — to design a new operating model where trusted identity (SSI + verifiable credentials) enables safe data portability, consent, and coordination across organisations. On top of this trust layer, intelligence becomes a real-time clinical copilot (triage, workflow, safety monitoring) and robotics becomes practical infrastructure (logistics, precision tasks, sterile repeatability). The result is not “more apps”, but a governed ecosystem: composable services, shared safety and audit evidence, and measurable improvement loops — enabling prevention-first care, lower friction, and better outcomes at scale.
 
----
-
-### What
+## What
 
 - Convene leaders across health, insurance, research, government, and technology to align around a next-generation care model.
 - Build trust infrastructure using SSI + Verifiable Credentials for identity, consent, permissions, provenance, and auditability.
 - Deploy intelligence + robotics to reduce friction, improve safety, and unlock prevention-first health systems at scale.
 
 *selfdriven.health brings the right people together to build the future of healthcare as a governed ecosystem, not a patchwork of disconnected systems. We create the trust layer (identity, credentials, consent, audit evidence), then enable AI and robotics to operate safely inside those boundaries — improving coordination, reducing admin, increasing clinical safety, and shifting the system from reactive treatment toward prevention and continuous improvement.*
-
 
 ## Mission, Vision, Values
 
@@ -54,11 +49,9 @@ A world where healthcare becomes a continuously improving, intelligence-native p
 7. **Interoperability as a moral stance**
    - Open standards, portable records, composable services — no walled gardens.
 
----
-
 ## Trust → Intelligence → Robotics → Coordination
 
-## 1) Trust (Identity + governance)
+### 1) Trust (Identity + governance)
 
 **SSI + Verifiable Credentials become the health system’s shared truth layer**
 - Patient identity + consent
@@ -68,7 +61,7 @@ A world where healthcare becomes a continuously improving, intelligence-native p
 - Data provenance + integrity chains
 - Audit-ready logs + verifiable events
 
-## 2) Intelligence (Agentic systems)
+### 2) Intelligence (Agentic systems)
 
 **AI becomes the coordination layer (not the authority)**
 - intake + triage + routing
@@ -80,7 +73,7 @@ A world where healthcare becomes a continuously improving, intelligence-native p
 
 **Boundaries are explicit:** *AI assists, clinicians decide, patients consent.*
 
-## 3) Robotics (automation in the physical world)
+### 3) Robotics (automation in the physical world)
 **Robotics becomes “health ops infrastructure”**
 - sterile repeatable tasks
 - logistics + pharmacy movement
@@ -88,7 +81,7 @@ A world where healthcare becomes a continuously improving, intelligence-native p
 - bedside assistance + monitoring
 - facility throughput optimisation
 
-## 4) Coordination (ecosystem outcomes)
+### 4) Coordination (ecosystem outcomes)
 **Care moves across institutions without friction**
 - portable permissions
 - composable service providers
