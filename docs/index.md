@@ -9,7 +9,6 @@ Traditional Health Care facilities are under pressure.
 
 With the arrival of *GAHI* as a society we have the opportunity to re-imagine health & functions and the health-care ecosystem.
 
-## Opportunities
 - [Overview](/opportunity/overview) - Better health experiences & verifiable observations
 - [An Action-Focused Cooperative for Better Health Outcomes](/opportunity/cooperative)
 - [Intelligence-Native Hospital](/opportunity/intelligence-native-hospital) - from the ground up
