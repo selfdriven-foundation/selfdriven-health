@@ -18,7 +18,7 @@ Intelligence as a form of energy that reduces system entropy (the tendency of sy
 
 *Autonomous information state change - eg decisions*
 
-###Mechanical
+## Mechanical
 
 - Robotics etc
 
