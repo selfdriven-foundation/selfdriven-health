@@ -15,6 +15,7 @@ With the arrival of *GAHI* as a society we have the opportunity to re-imagine he
 - [AI Situational Awareness Framework for Organisations](/situational-awareness-framework/organisations/)
 - [Practitioner In The Loop Services](/resources/practitioner-in-the-loop-services)
 - [Informational & Mechanical Energy - as system inputs](/resources/energy) - eg GenAI, Robotics
+- [Research](/research)
 
 ## Contributors
 - [selfdriven.foundation](https://selfdriven.foundation)
