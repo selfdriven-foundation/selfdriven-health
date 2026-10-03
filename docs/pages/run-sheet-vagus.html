@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%2309090f%27/%3E%3Ccircle cx=%2721%27 cy=%2721%27 r=%279%27 fill=%27%23f5c842%27/%3E%3Ccircle cx=%2743%27 cy=%2721%27 r=%279%27 fill=%27%23ff5f7e%27/%3E%3Ccircle cx=%2721%27 cy=%2743%27 r=%279%27 fill=%27%237b6cff%27/%3E%3Ccircle cx=%2743%27 cy=%2743%27 r=%279%27 fill=%27%2300e5a0%27/%3E%3C/svg%3E">
+<title>Vagus nerve · selfdriven.health</title>
+<meta name="description" content="What the vagus nerve does, how to read it with HRV, and which habits the evidence supports, with a paced-breathing guide and daily checklist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  /* Layout: guide page in the selfdriven.you dark 4Cs system. Glow behind the hero, hero copy beside the page's
+     main tool, then the evidence sections. Accent = the page's action colour; mint always means done;
+     rose marks cautions and emergencies. Single dark theme, matching the selfdriven.health home page. */
+  color-scheme:dark;
+  --bg:#09090f;--paper:#111118;--surface:#18181f;--surface2:#24232e;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);--rule:#34333f;
+  --text:#f0eeff;--soft:#b4b0cf;--muted:#9591b3;--muted2:#5f5b7a;
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --accent:#9b8fff;--accent-dim:rgba(123,108,255,.15);--accent-strong:rgba(123,108,255,.32);--on-accent:#09090f;--sd-accent:var(--accent);
+  --area:#9b8fff;--area-dim:rgba(123,108,255,.15);
+  --ok:#00e5a0;--ok-dim:rgba(0,229,160,.13);--on-ok:#09090f;
+  --mid:#9b8fff;--mid-dim:rgba(123,108,255,.16);
+  --warn:#ff5f7e;--warn-dim:rgba(255,95,126,.12);
+  --ink-card:var(--paper);--ink-card-text:var(--soft);--ink-card-head:var(--text);--ink-card-num:var(--area);
+  --shadow:0 18px 56px rgba(0,0,0,.42);
+  --r:22px;
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+@media (min-width:720px){.wrap{padding-inline:28px}}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.03em;line-height:1.1}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+section[id]{scroll-margin-top:80px}
+
+/* nav */
+.btn-pill{border:0;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:13px;padding:9px 16px;border-radius:999px;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-pill:hover{filter:brightness(1.06)}
+.btn-ghost{border:1px solid var(--border);background:var(--paper);color:var(--text);font-weight:600;font-size:13px;padding:9px 16px;border-radius:999px;cursor:pointer}
+
+/* hero */
+.hero{display:grid;gap:28px;padding-block:40px 20px;align-items:start}
+@media (min-width:900px){.hero{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;padding-block:56px 28px}}
+.hero-copy{display:grid;gap:18px}
+.hero h1{font-size:clamp(2.1rem,5.4vw,3.6rem);font-weight:800;letter-spacing:-.045em;line-height:1.02}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.lead{color:var(--muted);font-size:16px;max-width:58ch;line-height:1.7}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:4px;max-width:560px}
+.fact{border:1px solid var(--border);border-radius:14px;padding:12px 14px;background:var(--paper);display:grid;gap:2px}
+.fact b{font-family:var(--mono);font-size:17px;font-weight:600;letter-spacing:-.02em}
+.fact span{font-size:12.5px;color:var(--muted);line-height:1.45}
+
+/* pacer */
+.pacer{background:var(--paper);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:var(--r);padding:20px;display:grid;gap:16px;box-shadow:var(--shadow)}
+.pacer-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pacer-head h2{font-size:19px;font-weight:800}
+.pacer-head .mono{font-size:12px;color:var(--muted)}
+.orb-wrap{position:relative;width:100%;max-width:250px;aspect-ratio:1;margin:4px auto 0;display:grid;place-items:center}
+.orb-ring{position:absolute;inset:0;border-radius:50%;border:1.5px dashed var(--rule)}
+.orb-min{position:absolute;inset:25%;border-radius:50%;border:1px solid var(--border)}
+.orb{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 38% 34%,var(--accent-strong),var(--accent-dim) 70%);border:2px solid var(--accent);transform:scale(.72);will-change:transform}
+.orb-label{position:relative;display:grid;justify-items:center;gap:2px;text-align:center}
+.orb-label .ph{font-weight:700;font-size:17px;letter-spacing:-.02em}
+.orb-label .ct{font-family:var(--mono);font-size:38px;font-weight:600;letter-spacing:-.04em;line-height:1}
+.orb-label .sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.phasebar{height:6px;border-radius:999px;background:var(--surface2);overflow:hidden}
+.phasebar i{display:block;height:100%;width:0;background:var(--accent);border-radius:999px}
+.pace-meta{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--muted);gap:10px;flex-wrap:wrap}
+.progress{height:3px;background:var(--surface2);border-radius:999px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--ok)}
+.opts{display:grid;gap:10px}
+.opt{display:grid;grid-template-columns:78px minmax(0,1fr);align-items:center;gap:10px}
+.opt>span{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{border:1px solid var(--border);background:var(--bg);border-radius:10px;padding:6px 11px;font-size:12.5px;font-weight:500;cursor:pointer;font-family:var(--mono)}
+.seg button[aria-pressed="true"]{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);font-weight:600}
+.pace-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pace-actions .btn-pill{padding:11px 22px;font-size:14px}
+.safety{font-size:12.5px;color:var(--muted);line-height:1.5}
+
+/* sections */
+.sec-head{display:grid;gap:10px;margin-top:72px;margin-bottom:24px;max-width:64ch}
+.sec-head h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800;letter-spacing:-.04em}
+.sec-head p{color:var(--muted)}
+
+/* route */
+.route{list-style:none;margin:0;padding:0;position:relative;background:var(--paper);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.stop{display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 14px;padding:16px 20px 16px 14px;position:relative;border-bottom:1px solid var(--border)}
+.stop:last-child{border-bottom:0}
+.stop::before{content:"";position:absolute;left:35px;top:0;bottom:0;width:4px;background:var(--accent);opacity:.85}
+.stop:first-child::before{top:26px}
+.stop:last-child::before{bottom:calc(100% - 26px)}
+.node{position:relative;z-index:1;width:22px;height:22px;border-radius:50%;background:var(--paper);border:4px solid var(--accent);margin:3px 0 0 12px}
+.stop.major .node{background:var(--accent)}
+.stop-body{display:grid;gap:4px 28px}
+@media (min-width:760px){.stop-body{grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);align-items:start}}
+.stop h3{font-size:17px;font-weight:700;letter-spacing:-.02em}
+.stop .br{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:2px}
+.stop p{font-size:14px;color:var(--muted);line-height:1.6}
+.stop p strong{color:var(--text);font-weight:600}
+.band{display:grid;gap:16px;margin-top:16px}
+@media (min-width:760px){.band{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.band-card{border-radius:var(--r);padding:20px;display:grid;gap:8px;align-content:start}
+.band-card.dark{background:#1a1410;color:#f0ede8}
+.band-card.dark .big{font-family:var(--mono);font-size:clamp(2.4rem,6vw,3.4rem);font-weight:600;letter-spacing:-.05em;line-height:1;color:#ef7a68}
+.band-card.dark p{color:#cfc6bb;font-size:14px}
+.band-card.dark b{color:#f0ede8}
+.band-card.plain{background:var(--surface);border:1px solid var(--border)}
+.band-card.plain h3{font-size:17px;font-weight:700}
+.band-card.plain p{font-size:14px;color:var(--muted)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-family:var(--mono);font-size:11.5px;margin-top:4px}
+.chain span{padding:4px 8px;border-radius:8px;background:var(--paper);border:1px solid var(--border)}
+.chain i{font-style:normal;color:var(--accent)}
+
+/* measure */
+.measure{display:grid;gap:16px}
+@media (min-width:860px){.measure{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.m-card{background:var(--paper);border:1px solid var(--border);border-radius:var(--r);padding:20px;display:grid;gap:8px;align-content:start}
+.m-card .k{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.m-card h3{font-size:18px;font-weight:700}
+.m-card p{font-size:14px;color:var(--muted)}
+.m-card .unit{font-family:var(--mono);font-size:13px;color:var(--text);background:var(--surface);border-radius:8px;padding:6px 9px;justify-self:start}
+.downs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;align-items:center}
+.downs>span:first-child{font-size:12.5px;font-weight:600;color:var(--muted);margin-right:4px}
+.chip{font-size:12.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--border);background:var(--paper);color:var(--text)}
+.chip::before{content:"↓ ";color:var(--warn);font-family:var(--mono)}
+
+/* evidence */
+.ladder{background:var(--paper);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.lad-head,.rung{display:grid;grid-template-columns:minmax(0,1.05fr) 132px minmax(0,1.6fr) minmax(0,1.2fr);gap:0 20px;padding:14px 20px}
+.lad-head{background:var(--surface);border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rung{border-bottom:1px solid var(--border);align-items:start}
+.rung:last-child{border-bottom:0}
+.rung h3{font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.35}
+.rung p{font-size:13.5px;color:var(--muted);line-height:1.55}
+.rung .how{color:var(--text)}
+.grade{display:grid;gap:4px;align-content:start}
+.dots{display:flex;gap:4px}
+.dots i{width:10px;height:10px;border-radius:50%;border:1.5px solid currentColor;display:block}
+.dots i.f{background:currentColor}
+.grade b{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.g4{color:var(--ok)}.g3{color:var(--mid)}.g2{color:var(--warn)}.g1{color:var(--muted2)}
+.lbl-m{display:none}
+@media (max-width:820px){
+  .lad-head{display:none}
+  .rung{grid-template-columns:minmax(0,1fr) auto;gap:8px 14px}
+  .rung .what,.rung .how{grid-column:1/-1}
+  .lbl-m{display:block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+}
+
+/* routine */
+.routine{display:grid;gap:16px;align-items:start}
+@media (min-width:900px){.routine{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.item{display:grid;grid-template-columns:62px minmax(0,1fr) auto;align-items:center;gap:14px;padding:12px 12px 12px 16px;border:1px solid var(--border);border-radius:14px;background:var(--paper)}
+.item .when{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.item .nm{font-weight:600;font-size:14.5px;line-height:1.35}
+.item .ds{font-size:12.5px;color:var(--muted);margin-top:2px}
+.item .opt-tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);border-radius:6px;padding:1px 5px;margin-left:6px;vertical-align:2px}
+.item.taken{background:var(--ok-dim);border-color:transparent}
+.item.taken .nm{text-decoration:line-through;text-decoration-color:var(--ok);text-decoration-thickness:2px}
+.tick{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--rule);background:var(--bg);display:grid;place-items:center;cursor:pointer;transition:background .15s,border-color .15s}
+.tick svg{width:20px;height:20px;stroke:#fff;opacity:0}
+.tick:hover{border-color:var(--accent)}
+.tick[aria-pressed="true"]{background:var(--ok);border-color:var(--ok)}
+.tick[aria-pressed="true"] svg{opacity:1}
+@media (max-width:520px){.item{grid-template-columns:minmax(0,1fr) auto}.item .when{grid-column:1/-1;margin-bottom:-6px}}
+.today{background:var(--paper);border:1px solid var(--border);border-radius:var(--r);padding:20px;display:grid;gap:16px}
+.today-top{display:flex;gap:16px;align-items:center}
+.ring{position:relative;width:84px;height:84px;flex:none}
+.ring svg{width:84px;height:84px;transform:rotate(-90deg)}
+.ring .trk{stroke:var(--surface2)}
+.ring .val{stroke:var(--accent);transition:stroke-dashoffset .4s ease}
+.ring.full .val{stroke:var(--ok)}
+.ring-label{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-size:20px;font-weight:600}
+.ring-label small{font-size:12px;color:var(--muted);font-weight:500}
+.today-top .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.today-top .d{font-weight:700;font-size:17px;letter-spacing:-.02em}
+.today-top .s{font-size:13px;color:var(--muted)}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{display:grid;justify-items:center;gap:5px}
+.day .bar{width:100%;max-width:30px;height:40px;border-radius:8px;background:var(--surface);position:relative;overflow:hidden;border:1px solid var(--border)}
+.day .fill{position:absolute;left:0;right:0;bottom:0;background:var(--accent-strong)}
+.day.full .fill{background:var(--ok)}
+.day.is-today .bar{border-color:var(--accent)}
+.day span{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.day.is-today span{color:var(--accent);font-weight:600}
+.cap{font-size:12px;color:var(--muted)}
+
+/* myths */
+.myths{display:grid;gap:16px}
+@media (min-width:760px){.myths{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.myth{background:var(--paper);border:1px solid var(--border);border-radius:var(--r);padding:20px;display:grid;gap:12px;align-content:start}
+.myth .claim{font-weight:700;font-size:16px;letter-spacing:-.01em;line-height:1.4}
+.myth .claim::before{content:"Claim";display:block;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warn);margin-bottom:4px}
+.myth .ev{font-size:14px;color:var(--muted);border-top:1px dashed var(--rule);padding-top:12px}
+.myth .ev::before{content:"Evidence";display:block;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ok);margin-bottom:4px}
+
+/* medical table */
+.tbl-wrap{overflow-x:auto;background:var(--paper);border:1px solid var(--border);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--surface)}
+td.yr{font-family:var(--mono);font-weight:600;white-space:nowrap}
+td .m{color:var(--muted)}
+
+/* GP */
+.gp{display:grid;gap:16px;align-items:start}
+@media (min-width:860px){.gp{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}}
+.flags{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.flags li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--paper);border:1px solid var(--border);border-left:4px solid var(--warn);border-radius:12px;padding:12px 14px;font-size:14px}
+.flags li b{font-weight:600}
+.flags li .i{font-family:var(--mono);font-size:12px;color:var(--warn);font-weight:600;padding-top:1px}
+.safe{background:var(--warn-dim);border-radius:var(--r);padding:20px;display:grid;gap:10px;font-size:14px;line-height:1.6}
+.safe h3{font-size:16px;font-weight:700;color:var(--warn)}
+
+/* refs + footer */
+.refs{margin-top:64px;padding-top:22px;border-top:1px solid var(--border);display:grid;gap:12px}
+.refs h2{font-size:16px;font-weight:700;letter-spacing:-.01em}
+.refs ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:13.5px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--text);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:13.5px;font-weight:500;transition:opacity .2s,transform .2s;z-index:40;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.orb{transform:scale(.8)!important}}
+
+/* ---------- selfdriven.health chrome: nav, glow, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1120px;margin:0 auto;padding-inline:16px;min-height:63px;display:flex;align-items:center;gap:14px}
+@media (min-width:720px){.sd-nav-in{padding-inline:28px}}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-date{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:#09090f;font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb,.sd-date{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+
+.sd-glow{position:absolute;top:0;left:0;right:0;height:860px;overflow:hidden;pointer-events:none;z-index:0;-webkit-mask-image:linear-gradient(#000 45%,transparent);mask-image:linear-gradient(#000 45%,transparent)}
+.sd-glow i{position:absolute;display:block;border-radius:50%;filter:blur(110px);opacity:.17}
+.sd-glow .g1{width:520px;height:520px;background:var(--curious);top:-220px;left:-180px;animation:sdgb 14s ease-in-out infinite}
+.sd-glow .g2{width:460px;height:460px;background:var(--caring);top:0;right:-170px;animation:sdgb 18s ease-in-out infinite reverse}
+.sd-glow .g3{width:380px;height:380px;background:var(--constructive);top:380px;left:16%;animation:sdgb 22s ease-in-out infinite 4s}
+.sd-glow .g4{width:360px;height:360px;background:var(--chill);top:300px;right:8%;animation:sdgb 16s ease-in-out infinite 9s}
+@keyframes sdgb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(36px,-28px) scale(1.08)}70%{transform:translate(-24px,32px) scale(.93)}}
+body>main,body>.wrap,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,[role="button"],[role="checkbox"],[role="switch"]{cursor:none}
+  input[type="text"],input[type="time"],textarea{cursor:text}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+  #cur.off{opacity:0!important}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.sd-glow i,.markdots.wave i{animation:none!important}#cur{transition:none}}
+
+/* ---------- skin: guide components in the 4Cs look ---------- */
+html{background:var(--bg)}
+body{font-family:var(--sans);overflow-x:hidden}
+h1,h2,h3{font-family:var(--display)}
+a{color:var(--accent)}
+.refs a{color:var(--soft)}
+:focus-visible{outline-color:var(--curious)}
+section[id]{scroll-margin-top:84px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--area);flex:none}
+.hero{padding-block:64px 24px}
+@media (min-width:880px){.hero{padding-block:92px 36px}}
+.hero h1{font-size:clamp(2.5rem,6vw,4.3rem);font-weight:800;letter-spacing:-.045em;line-height:1;padding-bottom:.04em}
+.hero h1 em{color:var(--area)}
+.lead{color:var(--soft);font-size:17px}
+.fact{background:rgba(17,17,24,.72);border-radius:16px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.fact b{color:var(--area)}
+.units .chip{background:rgba(17,17,24,.72);border-color:var(--border2);color:var(--soft)}
+.sec-head{margin-top:108px;gap:12px}
+.sec-head h2{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:800;letter-spacing:-.04em;line-height:1.04}
+.sec-head p{color:var(--soft);font-size:16px}
+
+/* the hero tool gets the four-mode stripe */
+.pacer,.guide,.hero .today{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:28px;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.pacer::before,.guide::before,.hero .today::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--curious),var(--caring),var(--constructive),var(--chill))}
+.pacer-head h2,.guide-head h2{font-size:22px;font-weight:800;letter-spacing:-.03em}
+.orb{box-shadow:0 0 70px var(--accent-strong)}
+.now h3,.region h3{letter-spacing:-.03em}
+
+/* buttons */
+.btn-pill{background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:700;transition:transform .2s,box-shadow .2s}
+.btn-pill:hover{filter:none;transform:translateY(-2px);box-shadow:0 12px 32px var(--accent-strong)}
+.btn-ghost{background:transparent;border:1.5px solid var(--border2);color:var(--soft);font-family:var(--display);font-weight:600;transition:color .2s,border-color .2s}
+.btn-ghost:hover{color:var(--text);border-color:rgba(255,255,255,.3)}
+.seg button,.rchips button{background:var(--bg);color:var(--soft)}
+.seg button[aria-pressed="true"],.rchips button[aria-pressed="true"]{color:var(--accent)}
+
+/* cards and rows */
+.item{border-radius:16px}
+.tick{background:var(--bg);border-color:var(--rule)}
+.tick[aria-pressed="true"]{background:var(--ok);border-color:var(--ok)}
+.tick[aria-pressed="true"] svg{stroke:var(--on-ok)}
+.band-card.dark{background:radial-gradient(ellipse at 0 0,var(--area-dim),transparent 70%),var(--paper);border:1px solid var(--border);color:var(--text)}
+.band-card.dark .big{color:var(--area)}
+.band-card.dark p{color:var(--soft)}
+.band-card.dark b{color:var(--text)}
+.chain span{background:var(--bg)}
+.g4{color:var(--constructive)}.g3{color:var(--chill-bright)}.g2{color:var(--curious)}.g1{color:var(--muted)}
+.flags li{border-left-color:var(--curious)}
+.flags li .i{color:var(--curious)}
+.flags li.now000{border-left-color:var(--caring)}
+.flags li.now000 .i{color:var(--caring)}
+.urg{color:var(--caring);background:var(--caring-dim)}
+.safe,.caution{background:var(--caring-dim);border:1px solid rgba(255,95,126,.22)}
+.safe h3,.caution b{color:var(--caring)}
+.myth .claim{font-family:var(--display);font-size:17px}
+.card h3,.myth .claim{letter-spacing:-.02em}
+.fig{fill:#2b2a36}.fig-l{stroke:#2b2a36}
+.toast{font-family:var(--display);font-weight:700}
+.refs h2{font-family:var(--display)}
+</style>
+</head>
+<body>
+<div class="sd-glow" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i><i class="g4"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<header class="sd-nav" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="index.html" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+    <span class="sd-crumb">/ Vagus nerve</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a href="#route">The route</a><a href="#measure">Measure</a><a href="#evidence">Evidence</a><a href="#routine">Routine</a><a href="#gp">See a GP</a></nav>
+    <a class="sd-cta" href="#pacer">Breathe · 5 min</a>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Body systems · Cranial nerve X</p>
+      <h1>Your body's brake runs through <em>one nerve</em>.</h1>
+      <p class="lead">The vagus nerve runs from your brainstem to your gut. It slows your heart, runs digestion, damps down inflammation, and carries most of your body's status reports back to the brain. This page covers what it does, how to track it, and which habits the evidence backs.</p>
+      <div class="facts">
+        <div class="fact"><b>X</b><span>Tenth cranial nerve, one on each side</span></div>
+        <div class="fact"><b>80–90%</b><span>of its fibres carry signals up to the brain</span></div>
+        <div class="fact"><b>~100 bpm</b><span>Roughly where your resting heart would sit without it</span></div>
+        <div class="fact"><b>RMSSD</b><span>The HRV measure most tied to vagal activity, in ms</span></div>
+      </div>
+    </div>
+
+    <aside class="pacer" id="pacer" aria-labelledby="pacerH">
+      <div class="pacer-head">
+        <h2 id="pacerH">Slow breathing</h2>
+        <span class="mono" id="paceSummary">6/min · 4 s in · 6 s out</span>
+      </div>
+      <div class="orb-wrap" aria-hidden="true">
+        <span class="orb-ring"></span><span class="orb-min"></span>
+        <span class="orb" id="orb"></span>
+        <div class="orb-label"><span class="ph" id="phase">Ready</span><span class="ct" id="count">5:00</span><span class="sub" id="orbSub">press start</span></div>
+      </div>
+      <div class="phasebar" aria-hidden="true"><i id="phaseBar"></i></div>
+      <p class="sr" id="liveStatus" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></p>
+      <div class="pace-meta"><span id="elapsed">0:00 / 5:00</span><span id="breaths">0 breaths</span></div>
+      <div class="progress" aria-hidden="true"><i id="progress"></i></div>
+      <div class="opts">
+        <div class="opt"><span>Rate</span><div class="seg" role="group" aria-label="Breaths per minute" data-key="rate"><button type="button" data-v="5.5">5.5/min</button><button type="button" data-v="6">6/min</button><button type="button" data-v="6.5">6.5/min</button></div></div>
+        <div class="opt"><span>Rhythm</span><div class="seg" role="group" aria-label="Breathing rhythm" data-key="ratio"><button type="button" data-v="long">Longer out</button><button type="button" data-v="even">Even</button></div></div>
+        <div class="opt"><span>Length</span><div class="seg" role="group" aria-label="Session length" data-key="mins"><button type="button" data-v="2">2 min</button><button type="button" data-v="5">5 min</button><button type="button" data-v="10">10 min</button></div></div>
+        <div class="opt"><span>Sound</span><div class="seg" role="group" aria-label="Chime at each breath" data-key="chime"><button type="button" data-v="off">Silent</button><button type="button" data-v="on">Soft chime</button></div></div>
+      </div>
+      <div class="pace-actions">
+        <button class="btn-pill" type="button" id="startBtn">Start</button>
+        <button class="btn-ghost" type="button" id="resetBtn">Reset</button>
+      </div>
+      <p class="safety">In through the nose as the circle grows, out slowly as it shrinks. Stop if you feel lightheaded. A finished session of 5 minutes or more ticks today's breathing item.</p>
+    </aside>
+  </section>
+
+  <section id="route" aria-labelledby="routeH">
+    <div class="sec-head">
+      <p class="eyebrow">The route</p>
+      <h2 id="routeH">From brainstem to gut, one wandering nerve</h2>
+      <p>"Vagus" is Latin for wandering. It is the longest cranial nerve and reaches more organs than any other. Top to bottom, it goes here.</p>
+    </div>
+    <ol class="route">
+      <li class="stop major"><span class="node"></span><div class="stop-body"><div><h3>Brainstem</h3><p class="br">Medulla · jugular foramen</p></div><p>Starts in four nuclei in the medulla that send and receive its signals. It leaves the skull through the <strong>jugular foramen</strong>, one nerve on each side.</p></div></li>
+      <li class="stop"><span class="node"></span><div class="stop-body"><div><h3>Ear</h3><p class="br">Auricular branch</p></div><p>Supplies skin in the ear canal. It is why cleaning your ear can make you cough, and why ear-clip stimulators target this spot.</p></div></li>
+      <li class="stop"><span class="node"></span><div class="stop-body"><div><h3>Throat and voice box</h3><p class="br">Pharyngeal and laryngeal branches</p></div><p>Swallowing, the gag reflex and your vocal cords. The left recurrent laryngeal branch loops under the aorta before climbing back to the voice box, so problems in the chest can show up as a hoarse voice.</p></div></li>
+      <li class="stop"><span class="node"></span><div class="stop-body"><div><h3>Neck</h3><p class="br">Carotid sheath</p></div><p>Runs beside the carotid artery and jugular vein. Implanted stimulators wrap the left vagus here, and handheld devices press on the side of the neck.</p></div></li>
+      <li class="stop major"><span class="node"></span><div class="stop-body"><div><h3>Heart</h3><p class="br">Cardiac branches</p></div><p><strong>The brake on your heart's pacemaker.</strong> Left alone, the pacemaker would run near 100 bpm. Heart rate rises a little on each breath in and falls on each breath out. That swing is vagal, and slow breathing makes it bigger.</p></div></li>
+      <li class="stop"><span class="node"></span><div class="stop-body"><div><h3>Lungs</h3><p class="br">Pulmonary branches</p></div><p>Airway tone, stretch sensing and the cough reflex. Stretch signals from the lungs are part of why breathing pattern changes heart rate.</p></div></li>
+      <li class="stop major"><span class="node"></span><div class="stop-body"><div><h3>Stomach, liver and pancreas</h3><p class="br">Gastric and hepatic branches · through the oesophageal hiatus</p></div><p>Relaxes the stomach to receive a meal, drives acid and enzyme release, and reports fullness and nausea to the brain.</p></div></li>
+      <li class="stop"><span class="node"></span><div class="stop-body"><div><h3>Intestines</h3><p class="br">Coeliac branches</p></div><p>Moves food along most of the gut, as far as the colon, and senses what is inside it. Signals from the gut make up most of the traffic in the nerve.</p></div></li>
+    </ol>
+    <div class="band">
+      <div class="band-card dark">
+        <p class="big">80–90%</p>
+        <p><b>Mostly a listening nerve.</b> Most vagal fibres carry information up from the organs to the brain: how full the stomach is, how the gut is doing, how the lungs are stretching. Only 10–20% carry commands down.</p>
+      </div>
+      <div class="band-card plain">
+        <h3>The inflammatory reflex</h3>
+        <p>When the brain senses inflammation, vagal signals lead to acetylcholine release near immune cells called macrophages. Acetylcholine binds their α7 nicotinic receptors and they make less TNF, a key inflammatory messenger.</p>
+        <div class="chain" aria-label="Signal chain"><span>Vagus</span><i>→</i><span>Acetylcholine</span><i>→</i><span>α7 receptor</span><i>→</i><span>Less TNF-α</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="measure" aria-labelledby="measureH">
+    <div class="sec-head">
+      <p class="eyebrow">How to read it</p>
+      <h2 id="measureH">You can't measure the nerve, but you can watch your heart</h2>
+      <p>There is no direct test of "vagal tone" at home. Heart rate variability (HRV) and resting heart rate are indirect markers that most rings, watches and chest straps already record.</p>
+    </div>
+    <div class="measure">
+      <div class="m-card"><span class="k">What</span><h3>RMSSD and resting heart rate</h3><p>RMSSD is the beat-to-beat HRV measure most tied to vagal activity. Resting heart rate works too: lower usually means more vagal braking.</p><span class="unit">RMSSD in ms · HR in bpm</span></div>
+      <div class="m-card"><span class="k">When</span><h3>Same conditions, every day</h3><p>Use the overnight average from a ring or watch, or a 1-minute reading lying down just after waking. Readings taken at random times mostly measure what you were just doing.</p><span class="unit">Overnight avg or 1 min on waking</span></div>
+      <div class="m-card"><span class="k">Compare</span><h3>Against yourself only</h3><p>HRV falls with age and differs a lot between healthy people and between devices. Watch your 7-day average against your own baseline.</p><span class="unit">Today vs your 7-day average</span></div>
+    </div>
+    <div class="downs" aria-label="Common reasons HRV drops"><span>Common reasons it drops</span><span class="chip">Alcohol</span><span class="chip">Short or broken sleep</span><span class="chip">Illness or fever</span><span class="chip">Hard training blocks</span><span class="chip">Acute stress</span></div>
+  </section>
+
+  <section id="evidence" aria-labelledby="evH">
+    <div class="sec-head">
+      <p class="eyebrow">What helps</p>
+      <h2 id="evH">Habits ranked by the evidence</h2>
+      <p>Graded by the strength of the research on vagal markers or related outcomes, strongest first.</p>
+    </div>
+    <div class="ladder">
+      <div class="lad-head" aria-hidden="true"><span>Practice</span><span>Evidence</span><span>What the research shows</span><span>How to do it</span></div>
+      <div class="rung"><h3>Slow breathing, about 6 breaths a minute</h3><div class="grade g4"><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></div><b>Solid</b></div><p class="what"><span class="lbl-m">Research</span>A 2022 meta-analysis of 223 studies found vagally mediated HRV rises during slow breathing and stays higher after sessions and training programs.</p><p class="how"><span class="lbl-m">How</span>5 minutes, once or twice a day. In through the nose for 4 seconds, out for 6. Use the guide above.</p></div>
+      <div class="rung"><h3>Regular aerobic exercise</h3><div class="grade g4"><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></div><b>Solid</b></div><p class="what"><span class="lbl-m">Research</span>Endurance training lowers resting heart rate and raises resting HRV over weeks to months.</p><p class="how"><span class="lbl-m">How</span>2.5 to 5 hours a week of moderate activity, the Australian guideline. Brisk walking, cycling or swimming all count.</p></div>
+      <div class="rung"><h3>Less alcohol</h3><div class="grade g4"><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></div><b>Solid</b></div><p class="what"><span class="lbl-m">Research</span>In 4,098 Finnish employees, HRV-based recovery in the first 3 hours of sleep fell about 9% after 1–2 drinks, 24% after 2–6 and 39% after more than 6.</p><p class="how"><span class="lbl-m">How</span>Alcohol-free evenings. Your next-morning HRV will usually show the difference.</p></div>
+      <div class="rung"><h3>HRV biofeedback</h3><div class="grade g3"><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i></i></div><b>Moderate</b></div><p class="what"><span class="lbl-m">Research</span>24 studies, 484 people: a large drop in self-reported stress and anxiety (g = 0.83). The authors call for better-controlled trials.</p><p class="how"><span class="lbl-m">How</span>Breathe at your own resonance rate, usually 4.5–7 per minute, with a chest strap or app that shows heart rate rising and falling.</p></div>
+      <div class="rung"><h3>Cold on the face or neck</h3><div class="grade g3"><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i></i></div><b>Moderate</b></div><p class="what"><span class="lbl-m">Research</span>In a trial of 71 adults, cold on the side of the neck raised RMSSD and lowered heart rate compared with no cold. The effect is short-term.</p><p class="how"><span class="lbl-m">How</span>Splash cold water on your face, or hold a wrapped cold pack on the side of your neck, when you need to settle quickly.</p></div>
+      <div class="rung"><h3>Enough sleep</h3><div class="grade g3"><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i></i></div><b>Moderate</b></div><p class="what"><span class="lbl-m">Research</span>HRV peaks in deep sleep. Short or broken nights show up as lower overnight readings.</p><p class="how"><span class="lbl-m">How</span>7 to 9 hours, with a regular lights-out time.</p></div>
+      <div class="rung"><h3>Meditation and yoga</h3><div class="grade g2"><div class="dots"><i class="f"></i><i class="f"></i><i></i><i></i></div><b>Limited</b></div><p class="what"><span class="lbl-m">Research</span>Studies are small and mixed. The slow breathing built into many practices is the likely active part.</p><p class="how"><span class="lbl-m">How</span>Fine to keep if you enjoy it. Pick styles with slow, long exhales.</p></div>
+      <div class="rung"><h3>Humming, chanting, singing</h3><div class="grade g2"><div class="dots"><i class="f"></i><i class="f"></i><i></i><i></i></div><b>Limited</b></div><p class="what"><span class="lbl-m">Research</span>Small studies only. All three stretch out the exhale, which is the likely mechanism.</p><p class="how"><span class="lbl-m">How</span>Harmless. Treat it as slow breathing with sound.</p></div>
+      <div class="rung"><h3>Gargling, ear massage, "reset" moves</h3><div class="grade g1"><div class="dots"><i class="f"></i><i></i><i></i><i></i></div><b>Unproven</b></div><p class="what"><span class="lbl-m">Research</span>No controlled trials show a lasting change in vagal activity.</p><p class="how"><span class="lbl-m">How</span>Spend the time on breathing or a walk instead.</p></div>
+      <div class="rung"><h3>Consumer ear-clip stimulators</h3><div class="grade g1"><div class="dots"><i class="f"></i><i></i><i></i><i></i></div><b>Early</b></div><p class="what"><span class="lbl-m">Research</span>Ear (auricular) stimulation is being studied for many conditions. Devices sold online for general wellness claim more than the evidence shows.</p><p class="how"><span class="lbl-m">How</span>Wait for better trials, or use one inside a study or with a clinician.</p></div>
+    </div>
+  </section>
+
+  <section id="routine" aria-labelledby="routineH">
+    <div class="sec-head">
+      <p class="eyebrow">Daily routine</p>
+      <h2 id="routineH">Six habits, ticked off as you go</h2>
+      <p>Built from the solid and moderate rows above. Ticks are saved in this browser only.</p>
+    </div>
+    <div class="routine">
+      <ul class="checks" id="checks"></ul>
+      <aside class="today" aria-label="Today's progress">
+        <div class="today-top">
+          <div class="ring" id="ring">
+            <svg viewBox="0 0 84 84" aria-hidden="true"><circle class="trk" cx="42" cy="42" r="34" fill="none" stroke-width="8"/><circle class="val" id="ringVal" cx="42" cy="42" r="34" fill="none" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.63" stroke-dashoffset="213.63"/></svg>
+            <div class="ring-label"><span><span id="doneCount">0</span><small>/<span id="dueCount">5</span></small></span></div>
+          </div>
+          <div><p class="k">Today</p><p class="d" id="todayDate"></p><p class="s">Cold water is optional and doesn't count toward the total.</p></div>
+        </div>
+        <div class="week" id="week" aria-label="Last 7 days"></div>
+        <p class="cap">Last 7 days.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="myths" aria-labelledby="mythH">
+    <div class="sec-head">
+      <p class="eyebrow">Claims vs evidence</p>
+      <h2 id="mythH">What social media gets wrong</h2>
+    </div>
+    <div class="myths">
+      <article class="myth"><p class="claim">"Low vagal tone" is something you can diagnose from a wearable.</p><p class="ev">Vagal tone isn't directly measurable. HRV is an indirect marker shaped by breathing, fitness, age, medication and the device itself.</p></article>
+      <article class="myth"><p class="claim">You can reset your vagus nerve in 30 seconds.</p><p class="ev">Practices shift your nervous system's balance for minutes to hours. Your baseline moves over weeks of exercise, sleep and less alcohol.</p></article>
+      <article class="myth"><p class="claim">Polyvagal theory explains how the vagus nerve works.</p><p class="ev">It is popular in therapy and online, but a 2023 review in Biological Psychology found each of its five core premises untenable. Its language can help people talk about stress; the physiology behind it is disputed.</p></article>
+      <article class="myth"><p class="claim">Higher HRV is always better, so compare yours with friends.</p><p class="ev">HRV varies widely between healthy people and between devices. Your own trend is what matters.</p></article>
+    </div>
+  </section>
+
+  <section id="medical" aria-labelledby="medH">
+    <div class="sec-head">
+      <p class="eyebrow">Medical stimulation</p>
+      <h2 id="medH">Where vagus nerve stimulation is a proven treatment</h2>
+      <p>These are prescribed devices for specific conditions, with US FDA approval or clearance. They are not wellness tools.</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Device</th><th>Where it acts</th><th>Approved use</th><th>Year</th></tr></thead>
+        <tbody>
+          <tr><td>Implanted VNS</td><td>Electrode on the left vagus in the neck <span class="m">· generator under the collarbone</span></td><td>Drug-resistant epilepsy</td><td class="yr">1997</td></tr>
+          <tr><td>Implanted VNS</td><td>Same device</td><td>Treatment-resistant depression</td><td class="yr">2005</td></tr>
+          <tr><td>Paired VNS (Vivistim)</td><td>Implanted, switched on during rehab exercises</td><td>Arm weakness after ischaemic stroke</td><td class="yr">2021</td></tr>
+          <tr><td>Handheld nVNS (gammaCore)</td><td>Held against the side of the neck</td><td>Cluster headache <span class="m">(2017)</span>, migraine <span class="m">(2018)</span></td><td class="yr">2017–18</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="gp" aria-labelledby="gpH">
+    <div class="sec-head">
+      <p class="eyebrow">When to get checked</p>
+      <h2 id="gpH">See your GP if you notice</h2>
+    </div>
+    <div class="gp">
+      <ul class="flags">
+        <li><span class="i">!</span><span><b>Fainting or near-fainting</b>, especially during exercise or with no clear trigger.</span></li>
+        <li><span class="i">!</span><span><b>Palpitations</b>, or a slow pulse with dizziness or breathlessness.</span></li>
+        <li><span class="i">!</span><span><b>A hoarse voice</b> lasting more than 3 weeks.</span></li>
+        <li><span class="i">!</span><span><b>Trouble swallowing</b>, or food sticking on the way down.</span></li>
+        <li><span class="i">!</span><span><b>Feeling full after small meals</b>, repeated vomiting, or bloating that doesn't settle.</span></li>
+      </ul>
+      <div class="safe">
+        <h3>Before you start</h3>
+        <p>Cold plunges and ice baths can trigger a cold-shock response. If you have heart disease, high blood pressure or a history of fainting, check with your GP first.</p>
+        <p>Never practise breath-holding in or near water.</p>
+        <p>Pregnant, or on heart or blood pressure medication? Ask before starting anything that changes your heart rate on purpose.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="refs" aria-labelledby="refsH">
+    <h2 id="refsH">References</h2>
+    <ol>
+      <li>Breit S et al. <a href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2018.00044/full" target="_blank" rel="noopener">Vagus nerve as modulator of the brain–gut axis in psychiatric and inflammatory disorders</a>. Frontiers in Psychiatry, 2018.</li>
+      <li>Laborde S et al. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0149763422002007" target="_blank" rel="noopener">Effects of voluntary slow breathing on heart rate and heart rate variability: a systematic review and meta-analysis</a>. Neuroscience &amp; Biobehavioral Reviews, 2022.</li>
+      <li>Goessl VC et al. <a href="https://www.cambridge.org/core/journals/psychological-medicine/article/abs/effect-of-heart-rate-variability-biofeedback-training-on-stress-and-anxiety-a-metaanalysis/A839E9C968E54774DF5C8FB186764EF0" target="_blank" rel="noopener">The effect of heart rate variability biofeedback training on stress and anxiety: a meta-analysis</a>. Psychological Medicine, 2017.</li>
+      <li>Jungmann M et al. <a href="https://formative.jmir.org/2018/2/e10257/" target="_blank" rel="noopener">Effects of cold stimulation on cardiac-vagal activation in healthy participants: randomized controlled trial</a>. JMIR Formative Research, 2018.</li>
+      <li>Pietilä J et al. <a href="https://mental.jmir.org/2018/1/e23/" target="_blank" rel="noopener">Acute effect of alcohol intake on cardiovascular autonomic regulation during the first hours of sleep</a>. JMIR Mental Health, 2018.</li>
+      <li>Grossman P. <a href="https://www.sciencedirect.com/science/article/pii/S0301051123001060" target="_blank" rel="noopener">Fundamental challenges and likely refutations of the five basic premises of the polyvagal theory</a>. Biological Psychology, 2023.</li>
+      <li>Summary of FDA approvals: <a href="https://en.wikipedia.org/wiki/Vagus_nerve_stimulation" target="_blank" rel="noopener">Vagus nerve stimulation</a>.</li>
+    </ol>
+  </section>
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="index.html" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="the-undertow.html"><i style="background:var(--chill-bright)"></i>The undertow</a><a href="the-obsessive-nature.html"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="health-fascia.html"><i style="background:var(--constructive)"></i>Fascia</a><a href="eye-movement-routine.html"><i style="background:var(--constructive)"></i>Eye movement</a><a href="index.html#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>General information for healthy adults, not medical advice.</b> Talk to your GP before changing your routine, especially if you are pregnant, take heart or blood pressure medication, or have a heart condition.</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var KEY = 'sdh-vagus-v1';
+  var DEF = { prefs:{ rate:'6', ratio:'long', mins:'5', chime:'off' }, log:{} };
+  var ITEMS = [
+    { id:'hrv',    when:'Waking',  name:'Check resting HR or HRV', desc:'Overnight average, or 1 minute lying down.' },
+    { id:'breathe',when:'Morning', name:'5 minutes of slow breathing', desc:'About 6 a minute. The guide above ticks this for you.' },
+    { id:'move',   when:'Day',     name:'30 minutes of aerobic movement', desc:'Brisk walk, ride or swim.' },
+    { id:'cold',   when:'Any',     name:'Cold water on the face or neck', desc:'When you need to settle quickly.', optional:true },
+    { id:'dry',    when:'Evening', name:'Alcohol-free evening', desc:'Check tomorrow’s HRV against a drinking night.' },
+    { id:'sleep',  when:'Night',   name:'Lights out on time', desc:'Aim for 7 to 9 hours.' }
+  ];
+  function clone(o){ return JSON.parse(JSON.stringify(o)); }
+  function load(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (raw) {
+        var s = JSON.parse(raw) || {}, out = clone(DEF);
+        Object.keys(s.prefs || {}).forEach(function(k){ out.prefs[k] = String(s.prefs[k]); });
+        out.log = s.log && typeof s.log === 'object' ? s.log : {};
+        return out;
+      }
+    } catch (e) {}
+    return clone(DEF);
+  }
+  var state = load();
+  function save(){
+    try {
+      var ks = Object.keys(state.log).sort(); while (ks.length > 60) delete state.log[ks.shift()];
+      localStorage.setItem(KEY, JSON.stringify(state));
+    } catch (e) {}
+  }
+  function dayKey(d){ var m = d.getMonth() + 1, dd = d.getDate(); return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (dd < 10 ? '0' : '') + dd; }
+  function todayLog(create){ var k = dayKey(new Date()); if (!state.log[k] && create) state.log[k] = {}; return state.log[k] || {}; }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  var REQUIRED = ITEMS.filter(function(i){ return !i.optional; });
+  var toastT;
+  function toast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function(){ t.classList.remove('show'); }, 2400); }
+
+  /* ---------- checklist ---------- */
+  var CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>';
+  function renderChecks(){
+    var log = todayLog(false);
+    document.getElementById('checks').innerHTML = ITEMS.map(function(it){
+      var on = !!log[it.id];
+      return '<li class="item' + (on ? ' taken' : '') + '"><span class="when">' + esc(it.when) + '</span><div><div class="nm">' + esc(it.name) + (it.optional ? '<span class="opt-tag">optional</span>' : '') + '</div><div class="ds">' + esc(it.desc) + '</div></div>' +
+        '<button class="tick" type="button" data-id="' + it.id + '" aria-pressed="' + on + '" aria-label="' + (on ? 'Done: ' : 'Mark done: ') + esc(it.name) + '">' + CHECK + '</button></li>';
+    }).join('');
+    var done = REQUIRED.filter(function(i){ return !!log[i.id]; }).length, n = REQUIRED.length;
+    document.getElementById('doneCount').textContent = done;
+    document.getElementById('dueCount').textContent = n;
+    var C = 213.63;
+    document.getElementById('ringVal').setAttribute('stroke-dashoffset', String(C * (1 - done / n)));
+    document.getElementById('ring').classList.toggle('full', done >= n);
+    var now = new Date();
+    document.getElementById('todayDate').textContent = now.toLocaleDateString('en-AU', { weekday:'long', day:'numeric', month:'long' });
+    var wk = [];
+    for (var i = 6; i >= 0; i--) {
+      var d = new Date(now.getFullYear(), now.getMonth(), now.getDate() - i), l = state.log[dayKey(d)] || {};
+      var c = REQUIRED.filter(function(it){ return !!l[it.id]; }).length, f = c / n;
+      var wd = d.toLocaleDateString('en-AU', { weekday:'short' });
+      wk.push('<div class="day' + (i === 0 ? ' is-today' : '') + (f >= 1 ? ' full' : '') + '" title="' + wd + ' ' + d.getDate() + ': ' + c + ' of ' + n + '"><div class="bar"><div class="fill" style="height:' + Math.round(f * 100) + '%"></div></div><span>' + wd.slice(0, 2) + ' ' + d.getDate() + '</span></div>');
+    }
+    document.getElementById('week').innerHTML = wk.join('');
+  }
+  document.getElementById('checks').addEventListener('click', function(e){
+    var b = e.target.closest('.tick'); if (!b) return;
+    var id = b.getAttribute('data-id'), l = todayLog(true);
+    if (l[id]) delete l[id]; else l[id] = 1;
+    save(); renderChecks();
+    var nb = document.querySelector('.tick[data-id="' + id + '"]'); if (nb) nb.focus();
+  });
+
+  /* ---------- pacer ---------- */
+  var P = state.prefs;
+  var run = { on:false, t0:0, acc:0, raf:0, last:null, lock:null, audio:null };
+  var el = function(id){ return document.getElementById(id); };
+  var orb = el('orb'), phaseEl = el('phase'), countEl = el('count'), subEl = el('orbSub'), barEl = el('phaseBar'), progEl = el('progress'), elapsedEl = el('elapsed'), breathsEl = el('breaths'), startBtn = el('startBtn'), live = el('liveStatus');
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function dims(){ var cyc = 60 / parseFloat(P.rate), f = P.ratio === 'long' ? 0.4 : 0.5; return { cyc:cyc, tin:cyc * f, tout:cyc * (1 - f) }; }
+  function total(){ return parseFloat(P.mins) * 60; }
+  function mmss(s){ s = Math.max(0, Math.floor(s)); var m = Math.floor(s / 60), r = s % 60; return m + ':' + (r < 10 ? '0' : '') + r; }
+  function fmt1(x){ return (Math.round(x * 10) / 10).toString(); }
+  function elapsed(){ return run.acc + (run.on ? (performance.now() - run.t0) / 1000 : 0); }
+  function syncSegs(){
+    Array.prototype.forEach.call(document.querySelectorAll('.seg'), function(g){
+      var k = g.getAttribute('data-key');
+      Array.prototype.forEach.call(g.querySelectorAll('button'), function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === String(P[k]))); });
+    });
+    var d = dims();
+    el('paceSummary').textContent = P.rate + '/min · ' + fmt1(d.tin) + ' s in · ' + fmt1(d.tout) + ' s out';
+  }
+  function idle(){
+    orb.style.transform = 'scale(.72)';
+    phaseEl.textContent = run.acc > 0 ? 'Paused' : 'Ready';
+    countEl.textContent = mmss(total() - run.acc);
+    subEl.textContent = run.acc > 0 ? 'press resume' : 'press start';
+    barEl.style.width = '0%';
+    progEl.style.width = (run.acc / total() * 100) + '%';
+    elapsedEl.textContent = mmss(run.acc) + ' / ' + mmss(total());
+    breathsEl.textContent = Math.floor(run.acc / dims().cyc) + ' breaths';
+  }
+  function ease(x){ return 0.5 - 0.5 * Math.cos(Math.PI * x); }
+  function draw(e){
+    var d = dims(), t = e % d.cyc, phase, p, rem;
+    if (t < d.tin) { phase = 'in'; p = t / d.tin; rem = d.tin - t; } else { phase = 'out'; p = (t - d.tin) / d.tout; rem = d.cyc - t; }
+    var s = phase === 'in' ? 0.45 + 0.55 * ease(p) : 1 - 0.55 * ease(p);
+    if (!reduced) orb.style.transform = 'scale(' + s.toFixed(4) + ')';
+    phaseEl.textContent = phase === 'in' ? 'Breathe in' : 'Breathe out';
+    countEl.textContent = Math.ceil(rem);
+    subEl.textContent = phase === 'in' ? 'through the nose' : 'slow and long';
+    barEl.style.width = ((phase === 'in' ? p : 1 - p) * 100).toFixed(1) + '%';
+    progEl.style.width = (e / total() * 100).toFixed(2) + '%';
+    elapsedEl.textContent = mmss(e) + ' / ' + mmss(total());
+    breathsEl.textContent = Math.floor(e / d.cyc) + ' breaths';
+    if (phase !== run.last) {
+      if (run.last !== null) { if (P.chime === 'on') chime(phase); live.textContent = phase === 'in' ? 'Breathe in' : 'Breathe out'; }
+      run.last = phase;
+    }
+  }
+  function frame(){
+    var e = elapsed();
+    if (e >= total()) { finish(); return; }
+    draw(e);
+    run.raf = requestAnimationFrame(frame);
+  }
+  function chime(phase){
+    try {
+      var ac = run.audio; if (!ac) return;
+      var o = ac.createOscillator(), g = ac.createGain();
+      o.type = 'sine'; o.frequency.value = phase === 'in' ? 528 : 396;
+      g.gain.setValueAtTime(0.0001, ac.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.08, ac.currentTime + 0.04);
+      g.gain.exponentialRampToValueAtTime(0.0001, ac.currentTime + 1.1);
+      o.connect(g); g.connect(ac.destination); o.start(); o.stop(ac.currentTime + 1.2);
+    } catch (e) {}
+  }
+  function lock(){ try { if (navigator.wakeLock) navigator.wakeLock.request('screen').then(function(l){ run.lock = l; }, function(){}); } catch (e) {} }
+  function unlock(){ try { if (run.lock) { run.lock.release(); run.lock = null; } } catch (e) {} }
+  function start(){
+    if (run.on) return;
+    if (P.chime === 'on' && !run.audio) { try { var AC = window.AudioContext || window.webkitAudioContext; if (AC) run.audio = new AC(); } catch (e) {} }
+    try { if (run.audio && run.audio.state === 'suspended') run.audio.resume(); } catch (e) {}
+    run.on = true; run.t0 = performance.now(); run.last = null;
+    startBtn.textContent = 'Pause'; lock();
+    live.textContent = 'Session started';
+    run.raf = requestAnimationFrame(frame);
+  }
+  function pause(){
+    if (!run.on) return;
+    run.acc = elapsed(); run.on = false; cancelAnimationFrame(run.raf); unlock();
+    startBtn.textContent = 'Resume'; idle();
+  }
+  function reset(){
+    run.on = false; run.acc = 0; cancelAnimationFrame(run.raf); unlock();
+    startBtn.textContent = 'Start'; idle();
+  }
+  function finish(){
+    var mins = parseFloat(P.mins), breaths = Math.floor(total() / dims().cyc);
+    run.on = false; run.acc = 0; cancelAnimationFrame(run.raf); unlock();
+    startBtn.textContent = 'Start again';
+    orb.style.transform = 'scale(.72)';
+    phaseEl.textContent = 'Done'; countEl.textContent = mmss(total()); subEl.textContent = breaths + ' slow breaths';
+    barEl.style.width = '0%'; progEl.style.width = '100%';
+    elapsedEl.textContent = mmss(total()) + ' / ' + mmss(total()); breathsEl.textContent = breaths + ' breaths';
+    if (P.chime === 'on') chime('out');
+    if (mins >= 5) { todayLog(true).breathe = 1; save(); renderChecks(); toast('Session done. Breathing ticked for today.'); }
+    else { toast('Session done. 5 minutes or more ticks today’s item.'); }
+    live.textContent = 'Session complete';
+  }
+  startBtn.addEventListener('click', function(){ if (run.on) pause(); else start(); });
+  el('resetBtn').addEventListener('click', reset);
+  Array.prototype.forEach.call(document.querySelectorAll('.seg'), function(g){
+    g.addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b) return;
+      var k = g.getAttribute('data-key'); P[k] = b.getAttribute('data-v'); save(); syncSegs();
+      if (k === 'chime' && P.chime === 'on' && !run.audio) { try { var AC = window.AudioContext || window.webkitAudioContext; if (AC) run.audio = new AC(); } catch (err) {} }
+      if (k === 'mins' || k === 'rate' || k === 'ratio') { if (!run.on) { if (run.acc >= total()) run.acc = 0; idle(); } }
+    });
+  });
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) { renderChecks(); if (run.on) lock(); } });
+
+  syncSegs(); idle(); renderChecks();
+  var shownDay = dayKey(new Date());
+  setInterval(function(){ var k = dayKey(new Date()); if (k !== shownDay) { shownDay = k; renderChecks(); } }, 60000);
+})();
+</script>
+
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,[role="button"],[role="checkbox"],[role="switch"],.mcard';
+    var OFF = '.stage,input[type="text"],input[type="time"],textarea,select';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){
+      var t = e.target; if (!t || !t.closest) return;
+      cur.classList.toggle('big', !!t.closest(HOT));
+      cur.classList.toggle('off', !!t.closest(OFF));
+    });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
+  Array.prototype.forEach.call(dotsList, function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+</body>
+</html>
