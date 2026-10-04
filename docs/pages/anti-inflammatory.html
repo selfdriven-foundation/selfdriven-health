@@ -1,0 +1,1177 @@
+---
+layout: null
+title: "Anti-inflammatory - selfdriven Health"
+permalink: /anti-inflammatory
+---
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Anti-inflammatory - selfdriven Health</title>
+<meta name="description" content="Five bowls built on the anti-inflammatory pattern, in Australian measures, with a week planner, a shopping list and what the evidence actually supports.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='27' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='40' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='53' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* selfdriven.health 4Cs system, dark by design (single look, shared with every guide).
+   Layout: long-form guide. Hero = the five bowls seen from above. Mint (Constructive) leads for the Move domain;
+   rose marks heat, mint marks cooling, amber marks things to watch. */
+:root{
+  color-scheme:dark;
+  --bg:#09090f;--surface:#111118;--surface2:#18181f;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#f0eeff;--muted:#8f8bad;--muted2:#3d3a55;
+  --soft:rgba(240,238,255,.8);
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --neutral-dim:rgba(240,238,255,.07);
+  --pill:999px;
+  --sd-accent:var(--constructive);
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+button{font:inherit;color:inherit;background:none;border:0}
+select{font:inherit}
+:focus-visible{outline:2px solid var(--constructive);outline-offset:2px}
+a{color:inherit}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:140px 0 76px}
+.gblob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.16;z-index:0}
+.gb1{width:520px;height:520px;background:var(--caring);top:-160px;left:-170px;animation:gb 16s ease-in-out infinite}
+.gb2{width:460px;height:460px;background:var(--constructive);top:30px;right:-140px;animation:gb 20s ease-in-out infinite reverse}
+.gb3{width:340px;height:340px;background:var(--curious);bottom:-80px;left:22%;animation:gb 23s ease-in-out infinite 3s}
+.gb4{width:300px;height:300px;background:var(--chill);bottom:10px;right:14%;animation:gb 18s ease-in-out infinite 8s}
+@keyframes gb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(34px,-26px) scale(1.08)}70%{transform:translate(-22px,30px) scale(.93)}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 74% at 50% 50%,rgba(9,9,15,.86),rgba(9,9,15,.55) 46%,rgba(9,9,15,.18) 78%,transparent)}
+.hero .wrap{position:relative;z-index:2;text-align:center}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(9,9,15,.55);border:1px solid rgba(255,255,255,.22);border-radius:var(--pill);padding:8px 18px;font-size:12px;font-weight:500;color:rgba(240,238,255,.7);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--constructive);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(40px,7.4vw,86px);line-height:.98;letter-spacing:-.045em;margin:24px auto 20px;max-width:980px}
+.grad{background:linear-gradient(90deg,var(--caring),var(--curious) 48%,var(--constructive));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:690px;margin:0 auto;font-size:clamp(17px,2.1vw,20px);line-height:1.55;color:rgba(240,238,255,.9)}
+.hero .fine{margin-top:18px;font-size:13px;color:rgba(240,238,255,.62)}
+
+/* hero bowls: the five photos seen from above */
+.hbowls{display:flex;justify-content:center;align-items:center;margin:40px auto 4px;padding-left:22px}
+.hb{position:relative;display:block;width:clamp(78px,13vw,132px);aspect-ratio:1;max-width:100%;margin-left:-22px;border-radius:50%;text-decoration:none;transition:transform .35s cubic-bezier(.34,1.56,.64,1),z-index 0s}
+.hb img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;display:block;border:3px solid var(--bg);box-shadow:0 18px 44px rgba(0,0,0,.55)}
+.hb span{position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);white-space:nowrap;font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:-.01em;color:var(--soft);opacity:0;transition:opacity .2s}
+.hb:hover,.hb:focus-visible{transform:translateY(-10px) scale(1.06);z-index:3}
+.hb:hover span,.hb:focus-visible span{opacity:1}
+.hb:nth-child(1){transform:rotate(-6deg)}.hb:nth-child(2){transform:translateY(10px)}.hb:nth-child(4){transform:translateY(10px)}.hb:nth-child(5){transform:rotate(6deg)}
+.hb:nth-child(1):hover,.hb:nth-child(2):hover,.hb:nth-child(4):hover,.hb:nth-child(5):hover{transform:translateY(-10px) scale(1.06)}
+.jump-row{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:34px}
+
+/* pills + chips */
+.mode-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--pill);font-family:var(--display);font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.mode-pill:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.mode-pill svg{width:16px;height:16px}
+.mp-c{background:var(--curious-dim);color:var(--curious);border-color:rgba(245,200,66,.28)}
+.mp-k{background:var(--caring-dim);color:var(--caring);border-color:rgba(255,95,126,.28)}
+.mp-b{background:var(--constructive-dim);color:var(--constructive);border-color:rgba(0,229,160,.28)}
+.mp-l{background:var(--chill-dim);color:var(--chill-bright);border-color:rgba(123,108,255,.28)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:var(--pill);font-family:var(--display);font-size:12.5px;font-weight:600;border:1px solid transparent;line-height:1.5;white-space:nowrap}
+.c-curious{background:var(--curious-dim);color:var(--curious);border-color:rgba(245,200,66,.28)}
+.c-caring{background:var(--caring-dim);color:var(--caring);border-color:rgba(255,95,126,.28)}
+.c-constructive{background:var(--constructive-dim);color:var(--constructive);border-color:rgba(0,229,160,.28)}
+.c-chill{background:var(--chill-dim);color:var(--chill-bright);border-color:rgba(123,108,255,.28)}
+.c-neutral{background:var(--neutral-dim);color:var(--soft);border-color:var(--border2)}
+
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface);color:var(--text);font-family:var(--sans);font-size:13px;font-weight:600;transition:border-color .2s,background .2s,transform .2s;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px}
+.btn.go{background:var(--constructive);border-color:var(--constructive);color:#09090f}
+.btn.ghost{background:transparent;color:var(--muted)}
+.btn.ghost:hover{color:var(--text)}
+
+/* sections */
+section.block{padding:84px 0 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:500;color:var(--constructive)}
+h2{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(31px,4.8vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 14px;max-width:880px}
+.lede{max-width:700px;font-size:17px;color:var(--soft)}
+h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+.note{margin-top:14px;font-size:14px;color:var(--muted);max-width:780px}
+.note b{color:var(--text);font-weight:600}
+.ref{font-family:var(--mono);font-size:.72em;font-weight:500;color:var(--muted);text-decoration:none;vertical-align:.32em;margin-left:1px;white-space:nowrap}
+.ref:hover{color:var(--constructive)}
+.sub-h{font-family:var(--display);font-weight:800;font-size:clamp(23px,3vw,30px);letter-spacing:-.035em;line-height:1.1;margin:52px 0 10px;text-wrap:balance}
+
+/* 01: acute vs chronic */
+.line{margin-top:28px;background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden}
+.lrow{display:grid;grid-template-columns:150px 1fr 1fr;border-top:1px solid var(--border)}
+.lrow:first-child{border-top:0}
+.lrow>div{padding:14px 22px;min-width:0}
+.lk{display:flex;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.li{color:var(--soft);font-size:15.5px}
+.ld{color:var(--text);font-size:15.5px;background:rgba(255,95,126,.05);border-left:1px solid var(--border)}
+.lhead>div{padding-top:18px;padding-bottom:14px}
+.lhead .li,.lhead .ld{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.03em;display:flex;align-items:center;gap:9px}
+.lhead .li{color:var(--text)}
+.lhead .ld{color:var(--caring)}
+.lhead i{width:10px;height:10px;border-radius:50%;flex:none}
+
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}
+.fact{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.fact .big{font-family:var(--display);font-weight:800;font-size:clamp(34px,4.2vw,46px);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.fact .big small{font-size:.42em;letter-spacing:-.01em;font-weight:700;margin-left:4px;color:var(--soft)}
+.fact .what{font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em;line-height:1.25}
+.fact p{font-size:14px;color:var(--muted);line-height:1.5}
+.fact p b{color:var(--soft);font-weight:600}
+.fact.f-mint .big{color:var(--constructive)}
+.fact.f-violet .big{color:var(--chill-bright)}
+.fact.f-amber .big{color:var(--curious)}
+
+/* 02: matrix */
+.mx-wrap{margin-top:28px;background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow-x:auto}
+.mx{width:100%;border-collapse:collapse;min-width:720px;font-size:14.5px}
+.mx th,.mx td{padding:13px 16px;text-align:center;border-top:1px solid var(--border);vertical-align:middle}
+.mx thead th{border-top:0;font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:16px;padding-bottom:12px}
+.mx th.rowh{text-align:left}
+.mx tbody th{font-weight:400;text-align:left}
+.mx tbody th,.mx thead th:first-child{position:sticky;left:0;z-index:1;background:var(--surface)}
+.mx .bn{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-family:var(--display);font-weight:700;font-size:15.5px;letter-spacing:-.02em}
+.mx .bn img{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:none;border:1.5px solid var(--border2)}
+.mx .bn:hover{color:var(--constructive)}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:middle}
+.dot.on{background:var(--constructive);box-shadow:0 0 0 4px var(--constructive-dim)}
+.dot.half{background:linear-gradient(90deg,var(--chill-bright) 50%,transparent 50%);border:1.5px solid var(--chill-bright)}
+.dot.off{border:1.5px solid var(--muted2)}
+.mx .num{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--text)}
+.mx .wt{font-size:13px;color:var(--curious);text-align:left}
+.mx .wt.none{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend .dot{width:11px;height:11px}
+.legend .dot.on{box-shadow:0 0 0 3px var(--constructive-dim)}
+
+/* 02: bowl cards */
+.measures{display:flex;align-items:flex-start;gap:12px;margin-top:22px;padding:14px 18px;border-radius:16px;background:var(--surface);border:1px dashed var(--border2);font-size:14px;color:var(--soft);max-width:860px}
+.measures svg{width:18px;height:18px;flex:none;color:var(--curious);margin-top:2px}
+.measures b{color:var(--text);font-weight:600}
+.bowls{display:grid;gap:22px;margin-top:28px}
+.bowl{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:28px;background:var(--surface);border:1px solid var(--border);border-radius:26px;padding:24px;scroll-margin-top:84px}
+.bowl .ph{position:sticky;top:84px;align-self:start}
+.bowl .ph img{width:100%;height:auto;aspect-ratio:1;max-width:100%;object-fit:cover;border-radius:50%;display:block;border:4px solid var(--surface2);box-shadow:0 20px 48px rgba(0,0,0,.45)}
+.bowl .ph .no{position:absolute;top:2px;left:2px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:1.5px solid var(--border2);font-family:var(--mono);font-size:13px;color:var(--soft)}
+.bowl .bd{min-width:0;display:flex;flex-direction:column;gap:16px}
+.bowl .hd{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:12px 20px}
+.bowl h3{font-size:clamp(24px,2.8vw,30px)}
+.bowl .meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.bowl .meta b{color:var(--text);font-weight:500}
+.bowl .tags{display:flex;flex-wrap:wrap;gap:6px}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--border2);border-radius:var(--pill);background:var(--surface2);overflow:hidden}
+.stepper button{width:36px;height:36px;display:grid;place-items:center;color:var(--soft);font-size:18px;line-height:1;transition:background .15s,color .15s}
+.stepper button:hover{background:var(--constructive-dim);color:var(--constructive)}
+.stepper button[disabled]{opacity:.35;pointer-events:none}
+.stepper output{min-width:86px;text-align:center;font-family:var(--mono);font-size:12.5px;color:var(--text);font-variant-numeric:tabular-nums}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:22px}
+.colh{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.ing{list-style:none;display:grid;gap:0}
+.ing li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;padding:7px 0;border-top:1px solid var(--border);font-size:14.5px;color:var(--soft);line-height:1.4}
+.ing li:first-child{border-top:0}
+.ing .q{font-family:var(--mono);font-size:12.5px;color:var(--text);text-align:right;font-variant-numeric:tabular-nums;padding-top:1px}
+.ing .q.tt{color:var(--muted)}
+.steps{list-style:none;counter-reset:s;display:grid;gap:10px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;font-size:14.5px;color:var(--soft);line-height:1.5}
+.steps li::before{content:counter(s);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--surface2);border:1px solid var(--border2);font-family:var(--mono);font-size:11px;color:var(--text);margin-top:1px}
+.steps b{color:var(--text);font-weight:600}
+.adv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.adv>div{border-radius:16px;padding:14px 16px;min-width:0}
+.adv .up{background:var(--constructive-dim);border:1px solid rgba(0,229,160,.22)}
+.adv .wa{background:var(--curious-dim);border:1px solid rgba(245,200,66,.22)}
+.adv h4{display:flex;align-items:center;gap:7px;font-family:var(--display);font-weight:700;font-size:14.5px;letter-spacing:-.01em;margin-bottom:6px}
+.adv .up h4{color:var(--constructive)}
+.adv .wa h4{color:var(--curious)}
+.adv h4 svg{width:15px;height:15px}
+.adv ul{list-style:none;display:grid;gap:6px}
+.adv li{font-size:13.5px;color:var(--soft);line-height:1.45;padding-left:14px;position:relative}
+.adv li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.6}
+.adv .up li::before{background:var(--constructive)}
+.adv .wa li::before{background:var(--curious)}
+
+/* 03: week planner */
+.planner{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:18px;margin-top:28px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;min-width:0}
+.panel-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 14px;margin-bottom:14px}
+.panel-h h3{font-size:20px}
+.ex-flag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--curious);border:1px solid rgba(245,200,66,.35);background:var(--curious-dim);border-radius:var(--pill);padding:3px 10px}
+.days{display:grid;gap:8px}
+.day{display:grid;grid-template-columns:52px 34px minmax(0,1fr);align-items:center;gap:10px;padding:6px 8px 6px 12px;border-radius:14px;background:var(--surface2);border:1px solid var(--border)}
+.day label{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.day .th{width:34px;height:34px;border-radius:50%;background:var(--bg);border:1.5px dashed var(--muted2);overflow:hidden}
+.day .th img{width:100%;height:100%;object-fit:cover;display:block}
+.day select{appearance:none;-webkit-appearance:none;width:100%;min-width:0;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238f8bad' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center/14px;border:1px solid var(--border2);border-radius:12px;color:var(--text);padding:9px 34px 9px 12px;font-size:14.5px;cursor:pointer}
+.day select:hover{border-color:rgba(255,255,255,.28)}
+.day select option{background:var(--surface);color:var(--text)}
+.prow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.prow .lbl{font-size:14px;color:var(--soft)}
+.prow .acts{display:flex;flex-wrap:wrap;gap:8px}
+
+.sum{display:grid;gap:12px}
+.meter{display:grid;gap:8px;padding:14px 16px;border-radius:16px;background:var(--surface2);border:1px solid var(--border)}
+.meter .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.meter .nm{font-family:var(--display);font-weight:700;font-size:15.5px;letter-spacing:-.02em}
+.meter .val{font-family:var(--mono);font-size:13px;color:var(--soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.meter .val b{font-size:18px;color:var(--text);font-weight:700}
+.track{position:relative;height:8px;border-radius:99px;background:var(--bg);overflow:visible}
+.track .fill{position:absolute;left:0;top:0;bottom:0;border-radius:99px;transition:width .45s cubic-bezier(.34,1.56,.64,1)}
+.track .zone{position:absolute;top:-4px;bottom:-4px;border-radius:6px;border:1.5px dashed rgba(240,238,255,.35)}
+.meter .why{font-size:13px;color:var(--muted);line-height:1.45}
+.m-fish .fill{background:var(--chill-bright)}
+.m-legume .fill{background:var(--constructive)}
+.m-plants .fill{background:linear-gradient(90deg,var(--caring),var(--curious),var(--constructive))}
+.m-salt .fill{background:var(--curious)}
+.verdict{display:flex;gap:10px;align-items:flex-start;padding:14px 16px;border-radius:16px;font-size:14px;line-height:1.5;color:var(--soft);background:var(--constructive-dim);border:1px solid rgba(0,229,160,.25)}
+.verdict svg{width:18px;height:18px;flex:none;color:var(--constructive);margin-top:2px}
+.verdict b{color:var(--text);font-weight:600}
+
+.shop{margin-top:18px}
+.shop-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.aisle h4{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.aisle h4 i{width:8px;height:8px;border-radius:50%;flex:none}
+.aisle ul{list-style:none;display:grid;gap:2px}
+.aisle li label{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:start;padding:7px 8px;margin:0 -8px;border-radius:10px;font-size:14px;line-height:1.4;color:var(--soft);cursor:pointer;transition:background .15s}
+.aisle li label:hover{background:var(--surface2)}
+.aisle input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.aisle .bx{width:18px;height:18px;border-radius:6px;border:1.5px solid var(--border2);display:grid;place-items:center;margin-top:1px;transition:background .15s,border-color .15s}
+.aisle .bx svg{width:12px;height:12px;color:#09090f;opacity:0}
+.aisle input:checked+.bx{background:var(--constructive);border-color:var(--constructive)}
+.aisle input:checked+.bx svg{opacity:1}
+.aisle input:checked~.it{text-decoration:line-through;color:var(--muted)}
+.aisle input:focus-visible+.bx{outline:2px solid var(--constructive);outline-offset:2px}
+.aisle .it b{font-family:var(--mono);font-weight:500;font-size:12.5px;color:var(--text);margin-right:6px;font-variant-numeric:tabular-nums}
+.aisle .it em{font-style:normal;display:block;font-size:12.5px;color:var(--muted)}
+.empty{font-size:14px;color:var(--muted);padding:6px 0}
+.copy-fallback{display:block;width:100%;margin:12px 0 0;min-height:140px;background:var(--bg);color:var(--text);border:1px solid var(--border2);border-radius:12px;padding:10px 12px;font-family:var(--mono);font-size:12px}
+.toast{font-size:13px;color:var(--constructive);white-space:nowrap}
+
+/* 04: evidence ladder */
+.ladder{margin-top:28px;display:grid;gap:10px}
+.rung{display:grid;grid-template-columns:132px minmax(0,1fr) minmax(0,1.1fr);gap:18px;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:16px 20px}
+.rung .g{padding-top:2px}
+.rung .cl{font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em;line-height:1.3}
+.rung .ev{font-size:14px;color:var(--soft);line-height:1.5}
+.rung .ev b{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+.rung.r-myth{border-color:rgba(255,95,126,.25)}
+.rung.r-myth .cl{text-decoration:line-through;text-decoration-color:rgba(255,95,126,.7);text-decoration-thickness:2px}
+
+/* 05: check first */
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.ck{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.ck .ico{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--accent-dim);color:var(--accent);flex-shrink:0}
+.ck .ico svg{width:20px;height:20px}
+.ck h3{font-size:18px}
+.ck p{font-size:14px;color:var(--soft);line-height:1.5}
+.ck p b{color:var(--text);font-weight:600}
+.ck a{color:var(--text);text-decoration-color:var(--constructive);text-underline-offset:3px}
+
+/* sources */
+.sources{margin-top:36px;border-top:1px solid var(--border);padding-top:18px}
+.sources summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary svg{width:16px;height:16px;transition:transform .2s;color:var(--muted)}
+.sources[open] summary svg{transform:rotate(90deg)}
+.sources summary span{font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--muted);border:1px solid var(--border2);border-radius:var(--pill);padding:1px 9px}
+.sources ol{margin:16px 0 0 0;padding-left:26px;display:grid;gap:8px;font-size:13.5px;color:var(--muted);max-width:900px}
+.sources li{padding-left:4px;scroll-margin-top:90px}
+.sources li:target{color:var(--soft)}
+.sources a{color:var(--soft);text-decoration-color:var(--border2);text-underline-offset:3px}
+.sources a:hover{color:var(--constructive)}
+
+/* closing */
+.closing{padding:96px 0 12px;text-align:center;overflow:hidden}
+.closing h2{margin:10px auto 14px}
+.closing .lede{margin:0 auto}
+.companion{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:14.5px;color:var(--soft);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:2px}
+.companion:hover{color:var(--text)}
+.companion svg{width:15px;height:15px}
+
+@media (prefers-reduced-motion:reduce){
+  .gblob,.hero-pill .dot{animation:none}
+  html{scroll-behavior:auto}
+  .hb,.track .fill{transition:none}
+}
+
+/* responsive */
+@media (max-width:980px){
+  .bowl{grid-template-columns:minmax(0,240px) minmax(0,1fr);gap:22px}
+  .cols{grid-template-columns:1fr}
+  .planner{grid-template-columns:1fr}
+  .shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .checks{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .facts{grid-template-columns:1fr}
+  .rung{grid-template-columns:1fr;gap:8px}
+  .adv{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .bowl{grid-template-columns:1fr;padding:18px}
+  .bowl .ph{position:relative;top:auto;max-width:260px;margin:0 auto;width:100%}
+  .lrow{grid-template-columns:1fr 1fr}
+  .lrow .lk{grid-column:1/-1;padding-bottom:0}
+  .lhead .lk{display:none}
+  .lrow>div{padding:12px 16px}
+  .lrow:not(.lhead) .lk~div{padding-top:6px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .hero{padding:118px 0 60px}
+  section.block{padding-top:64px}
+  .gblob{opacity:.14}
+  .hbowls{padding-left:16px}
+  .hb{margin-left:-16px}
+  .hb span{display:none}
+  .checks{grid-template-columns:1fr}
+  .shop-grid{grid-template-columns:1fr}
+  .panel{padding:16px}
+  .day{grid-template-columns:44px 30px minmax(0,1fr);gap:8px;padding:6px 6px 6px 10px}
+  .day .th{width:30px;height:30px}
+  .ing li{grid-template-columns:68px minmax(0,1fr)}
+  .li,.ld{font-size:14.5px}
+}
+
+/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:#09090f;font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:640px){.sd-nav-in{padding-inline:16px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+body>main,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,summary,select,[role="button"],[role="checkbox"]{cursor:none}
+  textarea{cursor:text}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+  #cur.off{opacity:0!important}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-telescope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="13" r="3"/><path d="M3 7l5.5 2.5"/><path d="M3 7l2-4 14.5 6.5-2 4"/><path d="M8.5 9.5L6 20h5l1.5-4"/><path d="M17 16v4"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+  <symbol id="ic-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></symbol>
+  <symbol id="ic-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ic-reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="ic-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.4 6 11.3a6 6 0 0 1-12 0c0-4.9 6-11.3 6-11.3z"/></symbol>
+  <symbol id="ic-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="ic-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+  <symbol id="ic-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="m8 12 4 4 4-4"/></symbol>
+  <symbol id="ic-steth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></symbol>
+  <symbol id="ic-egg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c6.23-.05 7.87-5.57 7.5-10-.36-4.34-3.95-9.96-7.5-10-3.55.04-7.14 5.66-7.5 10-.37 4.43 1.27 9.95 7.5 10z"/></symbol>
+</svg>
+
+<div id="cur" aria-hidden="true"></div>
+
+<header class="sd-nav sd-fixed" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+    <span class="sd-crumb">/ Anti-inflammatory</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a href="#heat">The heat</a><a href="#bowls">Bowls</a><a href="#week">Week</a><a href="#evidence">Evidence</a><a href="#check">Check first</a></nav>
+    <a class="sd-cta" href="#week">Plan my week</a>
+  </div>
+</header>
+
+<main>
+<header class="hero" id="top">
+  <div class="gblob gb1"></div><div class="gblob gb2"></div><div class="gblob gb3"></div><div class="gblob gb4"></div>
+  <div class="wrap">
+    <span class="hero-pill"><span class="dot"></span>Move · Food</span>
+    <h1>Five bowls that <span class="grad">turn the heat down.</span></h1>
+    <p class="sub">Chronic, low-grade inflammation hums in the background of heart disease and type 2 diabetes. No single food switches it off. A Mediterranean-style pattern lowers it a little, and in a large trial cut heart attacks and strokes by about 30%. Here are five bowls built on that pattern, in Australian measures, with a week planner and a shopping list.</p>
+    <nav class="hbowls" id="hbowls" aria-label="Jump to a bowl"></nav>
+    <div class="jump-row">
+      <a class="mode-pill mp-b" href="#week"><svg><use href="#ic-hammer"/></svg>Plan my week</a>
+      <a class="mode-pill mp-l" href="#bowls"><svg><use href="#ic-waves"/></svg>The bowls</a>
+      <a class="mode-pill mp-c" href="#evidence"><svg><use href="#ic-telescope"/></svg>Evidence</a>
+      <a class="mode-pill mp-k" href="#check"><svg><use href="#ic-heart"/></svg>Check first</a>
+    </div>
+    <p class="fine">Evidence-checked, and not a diet prescription. Your week plan stays on this device.</p>
+  </div>
+</header>
+
+<!-- 01 -->
+<section class="block" id="heat">
+  <div class="wrap">
+    <div class="eyebrow"><b>01</b> · The heat</div>
+    <h2>A short burst heals. A low hum that never switches off is the problem.</h2>
+    <p class="lede">A cut, a cold or a hard training session sets off acute inflammation: heat, swelling, then repair. Chronic low-grade inflammation is quieter and lasts for years. Food is one lever on it, alongside waist size, smoking, sleep and movement.</p>
+
+    <div class="line" role="table" aria-label="Acute versus chronic low-grade inflammation">
+      <div class="lrow lhead" role="row"><div class="lk" role="columnheader"></div><div class="li" role="columnheader"><i style="background:var(--constructive)"></i>Acute</div><div class="ld" role="columnheader"><i style="background:var(--caring)"></i>Chronic low-grade</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Feels like</div><div class="li" role="cell">Heat, redness, swelling, pain</div><div class="ld" role="cell">Usually nothing at all</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Lasts</div><div class="li" role="cell">Days</div><div class="ld" role="cell">Months to years</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Shows up as</div><div class="li" role="cell">A wound, a sore throat, sore muscles</div><div class="ld" role="cell">Slightly raised hs-CRP or IL-6 on a blood test</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Linked with</div><div class="li" role="cell">Injury, infection, hard training</div><div class="ld" role="cell">Fat around the waist, smoking, short sleep, long sitting, and the overall diet</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Its job</div><div class="li" role="cell">Repair</div><div class="ld" role="cell">None useful. It travels with heart disease and type 2 diabetes.</div></div>
+    </div>
+    <p class="note">Anti-inflammatory eating aims only at the right-hand column, and it works through the whole pattern rather than single foods. Researchers even score diets with a Dietary Inflammatory Index built from 45 foods and nutrients.<a class="ref" href="#src-3">[3]</a></p>
+
+    <h3 class="sub-h">What food can do, in three numbers</h3>
+    <div class="facts">
+      <div class="fact f-violet">
+        <div class="big">−0.39<small>mg/L</small></div>
+        <div class="what">Average drop in hs-CRP on Mediterranean-style diets</div>
+        <p>Across <b>33 trials and 3,476 adults</b>. IL-6 fell by 0.16 pg/mL. Real but modest, and results varied a lot between trials.<a class="ref" href="#src-1">[1]</a></p>
+      </div>
+      <div class="fact f-mint">
+        <div class="big">~30%<small>fewer events</small></div>
+        <div class="what">Heart attacks, strokes and cardiovascular deaths in PREDIMED</div>
+        <p><b>7,447 adults at high risk</b>, about 5 years. The extra virgin olive oil arm beat a reduced-fat diet: about 1 fewer event per 100 people.<a class="ref" href="#src-2">[2]</a></p>
+      </div>
+      <div class="fact f-amber">
+        <div class="big">3–6<small>days</small></div>
+        <div class="what">Of omega-3 from one 150 g serve of Australian farmed salmon</div>
+        <p>At about <b>980 mg EPA+DHA per 100 g</b> raw, one fillet covers 3 to 6 days of the Heart Foundation’s 250–500 mg a day. Food first, label second.<a class="ref" href="#src-5">[5]</a><a class="ref" href="#src-4">[4]</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="block" id="bowls">
+  <div class="wrap">
+    <div class="eyebrow"><b>02</b> · The bowls</div>
+    <h2>Five bowls, one pattern.</h2>
+    <p class="lede">Each bowl uses some of the same building blocks: fish, extra virgin olive oil, legumes, wholegrains and plenty of plants. The table shows what each one brings and what to watch, so you can mix them across a week.</p>
+
+    <div class="mx-wrap">
+      <table class="mx" id="matrix">
+        <thead><tr><th class="rowh" scope="col">Bowl</th><th scope="col">Fish</th><th scope="col">Olive oil</th><th scope="col">Legumes</th><th scope="col">Wholegrain</th><th scope="col">Plants</th><th class="rowh" scope="col">Watch</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><i class="dot on"></i>Yes</span>
+      <span><i class="dot half"></i>Fish, but low in omega-3</span>
+      <span><i class="dot off"></i>Not in this bowl</span>
+      <span>Plants counts different plant foods, not oil or spices</span>
+    </div>
+
+    <div class="measures"><svg><use href="#ic-ruler"/></svg><div><b>Converted to grams and millilitres.</b> The original recipes use US cups and spoons, and a US tablespoon is 15 ml where an Australian one is 20 ml. Every oil here is extra virgin olive oil. Use the serves control on each bowl to scale it.</div></div>
+
+    <div class="bowls" id="bowlList"></div>
+    <p class="note">Bowl ideas and photos adapted from a recipe thread by No filter Skin on X. Methods, measures and notes are ours.</p>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="block" id="week">
+  <div class="wrap">
+    <div class="eyebrow"><b>03</b> · The week</div>
+    <h2>Plan a week, get the shopping list.</h2>
+    <p class="lede">Pick one bowl a day. The planner counts fish meals against the Heart Foundation’s 2–3 a week, tallies legumes, plants and salty extras, then builds one list scaled to your household.</p>
+
+    <div class="planner">
+      <div class="panel">
+        <div class="panel-h"><h3>Your week</h3><span class="ex-flag" id="exFlag">Example week, change any day</span></div>
+        <div class="days" id="days"></div>
+        <div class="prow">
+          <span class="lbl">Cooking for</span>
+          <div class="stepper" role="group" aria-label="People">
+            <button type="button" id="ppl-minus" aria-label="Fewer people">−</button>
+            <output id="ppl-out" aria-live="polite">2 people</output>
+            <button type="button" id="ppl-plus" aria-label="More people">+</button>
+          </div>
+        </div>
+        <div class="prow">
+          <div class="acts">
+            <button type="button" class="btn ghost" id="wk-example"><svg><use href="#ic-reset"/></svg>Example week</button>
+            <button type="button" class="btn ghost" id="wk-clear">Clear week</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-h"><h3>How the week adds up</h3></div>
+        <div class="sum" id="sum"></div>
+      </div>
+    </div>
+
+    <div class="panel shop">
+      <div class="panel-h">
+        <h3>Shopping list</h3>
+        <div class="acts" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <span class="toast" id="copyToast" hidden>Copied</span>
+          <button type="button" class="btn go" id="copyList"><svg><use href="#ic-copy"/></svg>Copy list</button>
+        </div>
+      </div>
+      <div class="shop-grid" id="shop"></div>
+      <textarea class="copy-fallback" id="copyFallback" hidden readonly aria-label="Shopping list text"></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="block" id="evidence">
+  <div class="wrap">
+    <div class="eyebrow"><b>04</b> · The evidence</div>
+    <h2>What the evidence supports.</h2>
+    <p class="lede">Graded from solid to myth. Small, real effects are still worth having when they come from meals you would eat anyway.</p>
+
+    <div class="ladder">
+      <div class="rung"><div class="g"><span class="chip c-constructive">Solid</span></div><div class="cl">A Mediterranean-style pattern cuts heart attacks and strokes.</div><div class="ev">PREDIMED: 7,447 adults at high risk, followed for a median 4.8 years. Hazard ratios <b>0.69</b> with extra virgin olive oil and <b>0.72</b> with nuts, against a reduced-fat diet. About 1 fewer event per 100 people.<a class="ref" href="#src-2">[2]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-chill">Guideline</span></div><div class="cl">Eat 2–3 serves of fish a week, including oily fish.</div><div class="ev">Heart Foundation: a serve is <b>100 g cooked</b>, about the size of your palm. Aim for <b>250–500 mg</b> of marine omega-3 (EPA and DHA) a day, plus <b>1 g</b> of plant omega-3 (ALA).<a class="ref" href="#src-4">[4]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-chill">Moderate</span></div><div class="cl">The same pattern lowers inflammation markers, a little.</div><div class="ev">33 trials, 3,476 adults: hs-CRP <b>−0.39 mg/L</b>, IL-6 <b>−0.16 pg/mL</b>. CRP results varied widely between trials, and TNF-α didn’t move.<a class="ref" href="#src-1">[1]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-curious">Limited</span></div><div class="cl">Beans and fibre lower CRP.</div><div class="ev">Linked in population studies. In trials, non-soy legumes moved CRP by <b>−0.21 mg/L</b>, which was not significant, and a 2024 review in adults with overweight found no effect on CRP, IL-6 or TNF-α. Eat them for fibre, protein and low salt.<a class="ref" href="#src-10">[10]</a><a class="ref" href="#src-11">[11]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-curious">Limited</span></div><div class="cl">Berries calm inflammation.</div><div class="ev">A 2020 review of 32 trials found small drops, mostly with concentrated anthocyanin doses above <b>300 mg a day</b>. Newer reviews find no clear effect from usual intakes.<a class="ref" href="#src-12">[12]</a><a class="ref" href="#src-13">[13]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-curious">Limited</span></div><div class="cl">Extra virgin olive oil works like ibuprofen.</div><div class="ev">Its oleocanthal blocks the same COX enzymes in the lab. The researchers estimated <b>50 g</b> of oil, about 2¾ Australian tablespoons, matches roughly 10% of an adult ibuprofen dose. It has never been tested as pain relief.<a class="ref" href="#src-17">[17]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-neutral">Association</span></div><div class="cl">Ultra-processed food drives inflammation.</div><div class="ev">A 2025 review of 24 studies: more ultra-processed food went with higher CRP in <b>11 of 17</b> adult analyses and higher IL-6 in <b>5 of 6</b>. Observational, so cause isn’t proven.<a class="ref" href="#src-18">[18]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-neutral">Association</span></div><div class="cl">Eat 30 different plants a week.</div><div class="ev">From the American Gut Project: people eating <b>30+</b> plant types a week had more diverse gut microbes than those eating 10 or fewer. A rule of thumb, not a tested target. All five bowls together reach <b>17</b>.<a class="ref" href="#src-19">[19]</a></div></div>
+      <div class="rung r-myth"><div class="g"><span class="chip c-caring">Myth</span></div><div class="cl">Nightshades cause inflammation.</div><div class="ev">Arthritis Australia: there is no proof that tomatoes, potatoes, eggplant or capsicum affect arthritis symptoms. Keep the cherry tomatoes.<a class="ref" href="#src-16">[16]</a></div></div>
+      <div class="rung r-myth"><div class="g"><span class="chip c-caring">Myth</span></div><div class="cl">Dairy is inflammatory.</div><div class="ev">Trial reviews find dairy neutral to slightly anti-inflammatory, except in people with a cow’s milk allergy. One of the reviews had a dairy-council author.<a class="ref" href="#src-14">[14]</a><a class="ref" href="#src-15">[15]</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="block" id="check">
+  <div class="wrap">
+    <div class="eyebrow"><b>05</b> · Check first</div>
+    <h2>Check these before you change how you eat.</h2>
+    <p class="lede">General guidance, not a meal plan for you. If any of these apply, the bowls may need changes, and a GP or Accredited Practising Dietitian can tailor them.</p>
+
+    <div class="checks">
+      <div class="ck" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <span class="ico"><svg><use href="#ic-egg"/></svg></span>
+        <h3>Pregnant or planning</h3>
+        <p>Cook eggs until the white is firm and the yolk has started to set, so boil the soft-boiled eggs in bowls 1 and 2 for 8 minutes or more.<a class="ref" href="#src-8">[8]</a> Canned tuna and salmon are fine. Limit shark (flake) and billfish to <b>one 150 g serve a fortnight</b> with no other fish that fortnight.<a class="ref" href="#src-7">[7]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--curious);--accent-dim:var(--curious-dim)">
+        <span class="ico"><svg><use href="#ic-drop"/></svg></span>
+        <h3>Watching salt</h3>
+        <p>Australia’s sodium target is <b>2,000 mg a day</b>; average intake is about 3,600 mg.<a class="ref" href="#src-20">[20]</a> Feta, olives, canned fish and packet roasted chickpeas carry most of the salt here. Pick springwater tuna, rinse olives and chickpeas, and use feta or olives rather than both.</p>
+      </div>
+      <div class="ck" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)">
+        <span class="ico"><svg><use href="#ic-pill"/></svg></span>
+        <h3>On warfarin</h3>
+        <p>Spinach and other leafy greens are high in vitamin K, which affects warfarin. You don’t need to avoid them, but <b>keep the amount steady</b> from week to week and tell your doctor before a big change.</p>
+      </div>
+      <div class="ck" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)">
+        <span class="ico"><svg><use href="#ic-shield"/></svg></span>
+        <h3>Kidney disease</h3>
+        <p>Avocado, tomato, sweet potato, legumes and yoghurt are high in potassium. If you’ve been told to limit potassium or phosphorus, ask your renal dietitian <b>before</b> making these bowls a habit.</p>
+      </div>
+      <div class="ck" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <span class="ico"><svg><use href="#ic-alert"/></svg></span>
+        <h3>Allergies</h3>
+        <p>The bowls contain <b>fish, egg and milk</b>. Swap fish or chicken for more chickpeas or firm tofu, and leave out the feta or yoghurt. With a cow’s milk allergy, dairy is inflammatory for you.<a class="ref" href="#src-15">[15]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--constructive);--accent-dim:var(--constructive-dim)">
+        <span class="ico"><svg><use href="#ic-steth"/></svg></span>
+        <h3>An inflammatory condition</h3>
+        <p>With arthritis, IBD or psoriasis, food supports treatment and <b>doesn’t replace it</b>. High-fibre, legume-heavy bowls may not suit an IBD flare. Find an Accredited Practising Dietitian at <a href="https://dietitiansaustralia.org.au/find-an-apd" target="_blank" rel="noopener">Dietitians Australia</a>.</p>
+      </div>
+    </div>
+
+    <details class="sources" id="sources">
+      <summary><svg><use href="#ic-chev"/></svg>Sources<span>22</span></summary>
+      <ol>
+        <li id="src-1">Keshani M, Rafiee S, Heidari H, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/41211687/" target="_blank" rel="noopener">Mediterranean diet reduces inflammation in adults: a systematic review and meta-analysis of randomized controlled trials</a>. Nutr Rev, 2025.</li>
+        <li id="src-2">Estruch R, Ros E, Salas-Salvadó J, et al. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1800389" target="_blank" rel="noopener">Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts</a>. N Engl J Med, 2018.</li>
+        <li id="src-3">Shivappa N, Steck SE, Hurley TG, et al. <a href="https://www.cambridge.org/core/journals/public-health-nutrition/article/designing-and-developing-a-literaturederived-populationbased-dietary-inflammatory-index/30BE2C2295CE93DC6B54F9F9AD50CC68" target="_blank" rel="noopener">Designing and developing a literature-derived, population-based dietary inflammatory index</a>. Public Health Nutr, 2014.</li>
+        <li id="src-4">Heart Foundation. <a href="https://www.heartfoundation.org.au/healthy-living/healthy-eating/omega-3-omega-6-heart-health" target="_blank" rel="noopener">Omega-3, omega-6 and heart health</a>. Updated June 2025.</li>
+        <li id="src-5">Nichols PD, Glencross B, Petrie JR, Singh SP. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3967178/" target="_blank" rel="noopener">Readily available sources of long-chain omega-3 oils: is farmed Australian seafood a better source of the good oil than wild-caught seafood?</a> Nutrients, 2014. Salmon figures are 2013 data and vary by farm and feed.</li>
+        <li id="src-6">USDA. <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">FoodData Central</a>: cooked farmed Atlantic salmon (FDC 175168) and canned light tuna in water (FDC 171986, 334194).</li>
+        <li id="src-7">Food Standards Australia New Zealand. <a href="https://www.foodstandards.gov.au/consumer/chemicals/mercury" target="_blank" rel="noopener">Mercury in fish</a>. Reviewed December 2020.</li>
+        <li id="src-8">NSW Food Authority. <a href="https://www.foodauthority.nsw.gov.au/consumers/life-events-and-food/pregnancy/pregnancy-table" target="_blank" rel="noopener">Pregnancy and food safety: foods to eat and avoid</a>; and <a href="https://www.foodauthority.nsw.gov.au/consumer/special-care-foods/eggs-enjoy-safely" target="_blank" rel="noopener">Eggs: enjoy safely</a>.</li>
+        <li id="src-9">Food Safety Information Council. <a href="https://www.foodsafety.asn.au/is-it-done-yet-summer-tv-and-radio-campaign-launched-to-reduce-food-poisoning-14-november-2017/" target="_blank" rel="noopener">Is it done yet? Cook chicken to 75°C</a>. 2017.</li>
+        <li id="src-10">Salehi-Abargouei A, Saraf-Bank S, Bellissimo N, Azadbakht L. <a href="https://pubmed.ncbi.nlm.nih.gov/25837205/" target="_blank" rel="noopener">Effects of non-soy legume consumption on C-reactive protein: a systematic review and meta-analysis</a>. Nutrition, 2015.</li>
+        <li id="src-11">Mansouri F, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/39103105/" target="_blank" rel="noopener">The effects of nonsoy legumes consumption on serum levels of inflammatory biomarkers and adiponectin in overweight/obese adults</a>. J Nutr Biochem, 2024.</li>
+        <li id="src-12">Fallah AA, Sarmast E, Fatehi P, Jafari T. <a href="https://pubmed.ncbi.nlm.nih.gov/31669599/" target="_blank" rel="noopener">Impact of dietary anthocyanins on systemic and vascular inflammation: systematic review and meta-analysis on randomised clinical trials</a>. Food Chem Toxicol, 2020.</li>
+        <li id="src-13">Avendano EE, et al. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13494092/" target="_blank" rel="noopener">Dietary intakes of anthocyanins and cardiometabolic health</a>. Am J Clin Nutr, 2026.</li>
+        <li id="src-14">Nieman KM, Anderson BD, Cifelli CJ. <a href="https://pubmed.ncbi.nlm.nih.gov/32870744/" target="_blank" rel="noopener">The effects of dairy product and dairy protein intake on inflammation: a systematic review of the literature</a>. J Am Coll Nutr, 2021.</li>
+        <li id="src-15">Bordoni A, Danesi F, Dardevet D, et al. <a href="https://doi.org/10.1080/10408398.2014.967385" target="_blank" rel="noopener">Dairy products and inflammation: a review of the clinical evidence</a>. Crit Rev Food Sci Nutr, 2017.</li>
+        <li id="src-16">Arthritis Australia. <a href="https://arthritisaustralia.com.au/wordpress/wp-content/uploads/2024/06/4042-AA-Info-Sheet-Healthy-eating-and-arthritis-AA032-06-24-ISS1.pdf" target="_blank" rel="noopener">Healthy eating and arthritis</a> (PDF). June 2024.</li>
+        <li id="src-17">Beauchamp GK, Keast RSJ, Morel D, et al. <a href="https://www.nature.com/articles/437045a" target="_blank" rel="noopener">Ibuprofen-like activity in extra-virgin olive oil</a>. Nature, 2005; and <a href="https://www.nature.com/news/2005/050829/full/news050829-11.html" target="_blank" rel="noopener">Nature news coverage</a>.</li>
+        <li id="src-18">Ciaffi J, Mancarella L, Ripamonti C, et al. <a href="https://www.mdpi.com/2072-6643/17/18/3012" target="_blank" rel="noopener">Ultra-processed food consumption and systemic inflammatory biomarkers: a scoping review</a>. Nutrients, 2025.</li>
+        <li id="src-19">McDonald D, Hyde E, Debelius JW, et al. <a href="https://doi.org/10.1128/mSystems.00031-18" target="_blank" rel="noopener">American Gut: an open platform for citizen science microbiome research</a>. mSystems, 2018.</li>
+        <li id="src-20">NHMRC. <a href="https://www.eatforhealth.gov.au/sites/default/files/2022-10/17122_NHMRC_NRV_Update-Changes_in_sodium_NRVs-final.pdf" target="_blank" rel="noopener">Nutrient Reference Values update: changes in sodium NRVs</a> (PDF). 2017.</li>
+        <li id="src-21">NHMRC. <a href="https://www.eatforhealth.gov.au/node/22" target="_blank" rel="noopener">Australian Dietary Guidelines, Guideline 3: limit saturated fat, added salt, added sugars and alcohol</a>. 2013.</li>
+        <li id="src-22">World Health Organization. <a href="https://www.who.int/publications/i/item/9789241549028" target="_blank" rel="noopener">Guideline: sugars intake for adults and children</a>. 2015.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Start here</div>
+    <h2>Two fish meals and one bean meal this week.</h2>
+    <p class="lede">That covers the Heart Foundation’s fish target and adds a legume meal. Build from there, one bowl at a time.</p>
+    <div class="jump-row">
+      <a class="mode-pill mp-b" href="#week"><svg><use href="#ic-hammer"/></svg>Plan my week</a>
+      <a class="mode-pill mp-l" href="#bowls"><svg><use href="#ic-waves"/></svg>The bowls</a>
+      <a class="mode-pill mp-c" href="#evidence"><svg><use href="#ic-telescope"/></svg>Evidence</a>
+      <a class="mode-pill mp-k" href="#check"><svg><use href="#ic-heart"/></svg>Check first</a>
+    </div>
+    <a class="companion" href="https://www.selfdriven.health/fascia">Movement matters too. Try the Fascia movement guide <svg><use href="#ic-arrow"/></svg></a>
+  </div>
+</section>
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="https://www.selfdriven.health/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="https://www.selfdriven.health/the-undertow"><i style="background:var(--caring)"></i>The undertow</a><a href="https://www.selfdriven.health/obsessive-by-nature"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="https://www.selfdriven.health/depression"><i style="background:var(--chill-bright)"></i>Depression</a><a href="https://www.selfdriven.health/fascia"><i style="background:var(--constructive)"></i>Fascia</a><a href="https://www.selfdriven.health/eye-movement"><i style="background:var(--constructive)"></i>Eye movement</a><a href="https://www.selfdriven.health/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>Plain language, evidence-checked, and not a diet prescription.</b> Your week plan and shopping ticks save privately on this device. If you have a health condition, check with your GP or an Accredited Practising Dietitian before changing how you eat.</p>
+</footer>
+
+<script>
+/* ---------- content model ---------- */
+var IMG = '/assets/img/anti-inflammatory/';
+var R = function(n){ return '<a class="ref" href="#src-' + n + '">[' + n + ']</a>'; };
+
+var BOWLS = [
+  { id:'salmon', no:1, name:'Mediterranean salmon bowl', short:'Salmon', img:'salmon-bowl.webp', serves:1, time:'35 min',
+    fish:1, oily:1, legume:1, whole:0, oil:1, salty:'Feta',
+    plants:['avocado','chickpeas','sweetPotato','cucumber','cherryTom','redOnion','greens','lemon'],
+    ing:[
+      {k:'salmon', q:1, t:'salmon fillet, about 150 g', tp:'salmon fillets, about 150 g each'},
+      {k:'sweetPotato', q:150, u:'g', t:'sweet potato, in 2 cm cubes'},
+      {k:'chickpeas', q:80, u:'g', t:'cooked chickpeas, drained and patted dry'},
+      {k:'avocado', q:1, t:'avocado, halved', tp:'avocados, halved'},
+      {k:'egg', q:1, t:'egg', tp:'eggs'},
+      {k:'cucumber', q:65, u:'g', t:'cucumber, diced'},
+      {k:'cherryTom', q:75, u:'g', t:'cherry tomatoes, halved'},
+      {k:'redOnion', q:40, u:'g', t:'red onion, thinly sliced'},
+      {k:'feta', q:35, u:'g', t:'feta, crumbled'},
+      {k:'greens', q:40, u:'g', t:'mixed salad greens or microgreens'},
+      {k:'oil', q:15, u:'ml', t:'extra virgin olive oil'},
+      {k:'lemon', q:15, u:'ml', t:'lemon juice'},
+      {q:null, qt:'to taste', t:'Salt and black pepper'}
+    ],
+    steps:[
+      'Heat the oven to <b>200°C</b> (180°C fan). Toss the sweet potato and chickpeas with a third of the oil and a pinch of salt. Roast for <b>25 minutes</b>, turning once, until golden.',
+      'Lower the egg into boiling water for <b>6½ minutes</b> for a jammy yolk, then into cold water and peel.',
+      'Pat the salmon dry and season. Cook skin-side down in a hot pan for <b>4 minutes</b>, flip, then 2–3 minutes more until just opaque in the centre.',
+      'Build the bowl on the greens: roasted veg, cucumber, tomato, onion, salmon, avocado, egg and feta.',
+      'Whisk the rest of the oil with the lemon juice, salt and pepper, and spoon it over.'
+    ],
+    up:[
+      'Twice a week, this bowl alone meets the Heart Foundation’s 2–3 fish serves.' + R(4),
+      'Keep the oil extra virgin. That is the oil used in PREDIMED.' + R(2),
+      'Halve the feta to cut the salt without losing the flavour.'
+    ],
+    watch:[
+      'Australian farmed salmon had about half the omega-3 in 2013 that it had in 2002: 980 vs 2,010 mg per 100 g raw. It is still one of the richest sources.' + R(5),
+      'If pregnant, boil the egg 8 minutes or more.' + R(8)
+    ]
+  },
+  { id:'chickenAvocado', no:2, name:'Chicken avocado bowl', short:'Chicken avocado', img:'chicken-avocado-bowl.webp', serves:1, time:'30 min',
+    fish:0, oily:0, legume:0, whole:1, oil:1, salty:'Feta and olives',
+    plants:['rice','avocado','cherryTom','olives','redOnion','greens','lemon','parsley'],
+    ing:[
+      {k:'chicken', q:1, t:'chicken breast, about 180 g', tp:'chicken breasts, about 180 g each'},
+      {k:'rice', q:100, u:'g', t:'cooked brown rice'},
+      {k:'avocado', q:0.5, t:'avocado, cubed', tp:'avocados, cubed'},
+      {k:'egg', q:2, t:'egg', tp:'eggs'},
+      {k:'cherryTom', q:75, u:'g', t:'cherry tomatoes, halved'},
+      {k:'feta', q:35, u:'g', t:'feta, crumbled'},
+      {k:'olives', q:35, u:'g', t:'kalamata olives'},
+      {k:'redOnion', q:20, u:'g', t:'red onion, finely chopped'},
+      {k:'greens', q:40, u:'g', t:'lettuce or spinach leaves'},
+      {k:'oil', q:15, u:'ml', t:'extra virgin olive oil'},
+      {k:'lemon', q:10, u:'ml', t:'lemon juice'},
+      {k:'parsley', q:null, qt:'handful', t:'Fresh parsley, chopped'},
+      {q:null, qt:'to taste', t:'Salt and black pepper'}
+    ],
+    steps:[
+      'Season the chicken and grill or pan-cook over medium-high heat for about <b>5–6 minutes a side</b>, until the thickest part reaches <b>75°C</b>.' + R(9) + ' Rest 5 minutes, then dice.',
+      'Lower the eggs into boiling water for <b>6½ minutes</b>, cool in cold water, peel and halve.',
+      'Warm the rice, or use leftover rice straight from the fridge.',
+      'Arrange the greens, rice, chicken, avocado, tomato, olives, onion, feta and eggs.',
+      'Dress with the oil, lemon, salt and pepper, and scatter over the parsley.'
+    ],
+    up:[
+      'Add 80 g of chickpeas or lentils. It is the one savoury bowl with no legumes.',
+      'Use feta or olives, not both, to roughly halve the salty extras.',
+      'Swap the chicken for leftover salmon to make it an oily-fish meal.'
+    ],
+    watch:[
+      'If pregnant, boil the eggs 8 minutes or more so the yolk has started to set.' + R(8)
+    ]
+  },
+  { id:'tuna', no:3, name:'Tuna and chickpea bowl', short:'Tuna', img:'tuna-bowl.webp', serves:1, time:'15 min',
+    fish:1, oily:0, legume:1, whole:0, oil:1, salty:'Olives, canned fish',
+    plants:['avocado','cherryTom','cucumber','olives','chickpeas','parsley'],
+    ing:[
+      {k:'tuna', q:1, t:'can (185 g) tuna in springwater or olive oil, drained', tp:'cans (185 g each) tuna in springwater or olive oil, drained'},
+      {k:'egg', q:1, t:'egg', tp:'eggs'},
+      {k:'avocado', q:0.5, t:'avocado, diced', tp:'avocados, diced'},
+      {k:'cherryTom', q:75, u:'g', t:'cherry tomatoes, halved'},
+      {k:'cucumber', q:60, u:'g', t:'cucumber, sliced'},
+      {k:'olives', q:35, u:'g', t:'black olives'},
+      {k:'chickpeas', q:80, u:'g', t:'cooked chickpeas, rinsed'},
+      {k:'oil', q:15, u:'ml', t:'extra virgin olive oil'},
+      {k:'paprika', q:null, qt:'sprinkle', t:'Paprika'},
+      {k:'parsley', q:null, qt:'handful', t:'Fresh parsley or chives'},
+      {q:null, qt:'to taste', t:'Salt and black pepper'}
+    ],
+    steps:[
+      'Boil the egg for <b>8 minutes</b>, cool in cold water, peel and halve.',
+      'Drain the tuna and flake it. Rinse and drain the chickpeas and olives.',
+      'Arrange everything in sections around the tuna.',
+      'Drizzle with the oil, dust with paprika and pepper, and finish with the herbs. No cooking beyond the egg.'
+    ],
+    up:[
+      'Swap the tuna for canned salmon or sardines. Both are oily fish and lift the omega-3.',
+      'Choose tuna in springwater or olive oil, not brine.',
+      'Rinsing the olives and chickpeas washes off some of the salt.'
+    ],
+    watch:[
+      'Canned light tuna is lean: about 0.23–0.27 g omega-3 per 100 g, against about 2.15 g in cooked farmed Atlantic salmon. Count it as a fish meal, not an oily-fish meal.' + R(6),
+      'Canned tuna is safe for everyone, including in pregnancy.' + R(7)
+    ]
+  },
+  { id:'yoghurt', no:4, name:'Berry mango yoghurt bowl', short:'Berry yoghurt', img:'berry-yoghurt-bowl.webp', serves:1, time:'5 min',
+    fish:0, oily:0, legume:0, whole:0, oil:0, salty:'',
+    plants:['strawberries','blueberries','mango','mint','chia'],
+    ing:[
+      {k:'yoghurt', q:240, u:'g', t:'plain unsweetened Greek yoghurt'},
+      {k:'strawberries', q:100, u:'g', t:'strawberries, halved'},
+      {k:'blueberries', q:75, u:'g', t:'blueberries'},
+      {k:'mango', q:0.5, t:'mango, diced', tp:'mangoes, diced'},
+      {k:'honey', q:15, u:'ml', t:'honey, optional'},
+      {k:'mint', q:null, qt:'few', t:'Fresh mint leaves'},
+      {k:'chia', q:null, qt:'pinch', t:'Chia seeds or black pepper, optional'}
+    ],
+    steps:[
+      'Spoon the yoghurt into a bowl.',
+      'Top with the strawberries, blueberries and mango.',
+      'Finish with mint and a pinch of chia. Taste before adding any honey.'
+    ],
+    up:[
+      'Skip the honey. Ripe mango does the sweetening.',
+      'Add a spoon of chia or a few walnuts for plant omega-3 (ALA). The Heart Foundation suggests 1 g a day.' + R(4),
+      'Frozen berries work just as well and cost less out of season.'
+    ],
+    watch:[
+      'Many “Greek style” tubs add sugar. Check the label for plain, unsweetened.',
+      'Honey counts as free sugar. WHO advises under 10% of energy, ideally about 25 g a day, and a tablespoon of honey uses well over half of that.' + R(22)
+    ]
+  },
+  { id:'chickenChickpea', no:5, name:'Chicken chickpea bowl', short:'Chicken chickpea', img:'chicken-chickpea-bowl.webp', serves:2, time:'35 min',
+    fish:0, oily:0, legume:1, whole:0, oil:1, salty:'',
+    plants:['avocado','chickpeas','cherryTom','spinach','parsley','lemon'],
+    ing:[
+      {k:'chickenCooked', q:210, u:'g', t:'cooked chicken, shredded'},
+      {k:'egg', q:2, t:'egg', tp:'eggs'},
+      {k:'avocado', q:1, t:'avocado, sliced', tp:'avocados, sliced'},
+      {k:'chickpeas', q:165, u:'g', t:'cooked chickpeas, drained and patted dry'},
+      {k:'cherryTom', q:150, u:'g', t:'cherry tomatoes, halved'},
+      {k:'spinach', q:30, u:'g', t:'baby spinach'},
+      {k:'parsley', q:null, qt:'handful', t:'Fresh parsley, chopped'},
+      {k:'lemon', q:15, u:'ml', t:'lemon juice'},
+      {k:'oil', q:15, u:'ml', t:'extra virgin olive oil'},
+      {q:null, qt:'to taste', t:'Salt and black pepper'}
+    ],
+    steps:[
+      'Heat the oven to <b>200°C</b> (180°C fan). Toss the chickpeas with a little of the oil and salt, and roast <b>25–30 minutes</b> until crisp. A 400 g can drains to about 240 g.',
+      'Boil the eggs for <b>10 minutes</b>, cool in cold water, peel and halve.',
+      'Shred leftover roast or poached chicken.',
+      'Divide the spinach between two bowls and add the chicken, chickpeas, tomatoes, avocado and eggs.',
+      'Dress with the rest of the oil, the lemon, salt and pepper, and scatter over the parsley.'
+    ],
+    up:[
+      'Roast your own chickpeas. Packet versions are often salted and fried.',
+      'Add a wholegrain such as brown rice, quinoa or farro if it is your main meal.',
+      'Use leftover salmon instead of chicken for an oily-fish meal.'
+    ],
+    watch:[
+      'The hard-boiled eggs here are already pregnancy-safe.' + R(8),
+      'Spinach is high in vitamin K. On warfarin, keep your greens steady week to week.'
+    ]
+  }
+];
+var BY = {}; BOWLS.forEach(function(b){ BY[b.id] = b; });
+
+var AISLES = [
+  {id:'fish', name:'Fish & meat', c:'var(--chill-bright)'},
+  {id:'dairy', name:'Dairy & eggs', c:'var(--curious)'},
+  {id:'veg', name:'Fruit & veg', c:'var(--constructive)'},
+  {id:'pantry', name:'Pantry', c:'var(--caring)'}
+];
+var ING = {
+  salmon:{a:'fish', u:'each', n1:'salmon fillet', n:'salmon fillets', sub:function(){ return 'about 150 g each, skin on'; }},
+  chicken:{a:'fish', u:'each', n1:'chicken breast', n:'chicken breasts', sub:function(){ return 'about 180 g each'; }},
+  chickenCooked:{a:'fish', u:'g', n:'cooked chicken', sub:function(){ return 'leftover roast or poached'; }},
+  tuna:{a:'fish', u:'each', n1:'can of tuna, 185 g', n:'cans of tuna, 185 g', sub:function(){ return 'in springwater or olive oil'; }},
+  egg:{a:'dairy', u:'each', n1:'egg', n:'eggs'},
+  feta:{a:'dairy', u:'g', n:'feta'},
+  yoghurt:{a:'dairy', u:'g', n:'plain Greek yoghurt', sub:function(){ return 'unsweetened'; }},
+  avocado:{a:'veg', u:'each', n1:'avocado', n:'avocados'},
+  sweetPotato:{a:'veg', u:'g', n:'sweet potato'},
+  cucumber:{a:'veg', u:'g', n:'cucumber'},
+  cherryTom:{a:'veg', u:'g', n:'cherry tomatoes', sub:function(v){ var p = Math.ceil(v/250); return 'about ' + p + ' × 250 g punnet' + (p>1?'s':''); }},
+  redOnion:{a:'veg', u:'g', n:'red onion', sub:function(v){ return 'about ' + frac(v/160) + ' onion' + (v/160>1.13?'s':''); }},
+  greens:{a:'veg', u:'g', n:'salad greens'},
+  spinach:{a:'veg', u:'g', n:'baby spinach'},
+  lemon:{a:'veg', u:'lemon', n1:'lemon', n:'lemons', sub:function(v){ return 'for about ' + r5(v) + ' ml juice'; }},
+  parsley:{a:'veg', u:'bunch', n:'flat-leaf parsley'},
+  mint:{a:'veg', u:'bunch', n:'mint'},
+  strawberries:{a:'veg', u:'g', n:'strawberries', sub:function(v){ var p = Math.ceil(v/250); return 'about ' + p + ' × 250 g punnet' + (p>1?'s':''); }},
+  blueberries:{a:'veg', u:'g', n:'blueberries', sub:function(v){ var p = Math.ceil(v/125); return 'about ' + p + ' × 125 g punnet' + (p>1?'s':'') + ', or frozen'; }},
+  mango:{a:'veg', u:'each', n1:'mango', n:'mangoes'},
+  chickpeas:{a:'pantry', u:'g', n:'chickpeas, drained weight', sub:function(v){ var c = Math.ceil(v/240); return 'about ' + c + ' × 400 g can' + (c>1?'s':''); }},
+  rice:{a:'pantry', u:'g', n:'brown rice, cooked weight', sub:function(v){ return 'from about ' + (Math.ceil(v/3/10)*10) + ' g dry'; }},
+  olives:{a:'pantry', u:'g', n:'kalamata or black olives'},
+  oil:{a:'pantry', u:'ml', n:'extra virgin olive oil', sub:function(v){ return 'about ' + Math.ceil(v/20) + ' Australian tablespoon' + (Math.ceil(v/20)>1?'s':''); }},
+  honey:{a:'pantry', u:'ml', n:'honey, optional'},
+  chia:{a:'pantry', u:'staple', n:'chia seeds'},
+  paprika:{a:'pantry', u:'staple', n:'paprika'}
+};
+var DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+var EXAMPLE = ['salmon','chickenChickpea','tuna','chickenAvocado','salmon','yoghurt','chickenChickpea'];
+
+/* ---------- helpers ---------- */
+function r5(v){ return Math.max(5, Math.round(v/5)*5); }
+function frac(x){
+  var r = Math.round(x*4)/4; if (r <= 0) r = 0.25;
+  var w = Math.floor(r), f = r - w;
+  var fs = f === 0.25 ? '¼' : f === 0.5 ? '½' : f === 0.75 ? '¾' : '';
+  return w === 0 ? fs : (w + fs);
+}
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+function fmtIng(it, f){
+  if (it.q == null) return {q:it.qt || 'to taste', tt:true, t:it.t};
+  var v = it.q * f;
+  if (it.u === 'g') return {q:r5(v) + ' g', t:it.t};
+  if (it.u === 'ml') return {q:r5(v) + ' ml', t:it.t};
+  var rv = Math.round(v*4)/4;
+  return {q:frac(v), t:(rv > 1 && it.tp) ? it.tp : it.t};
+}
+
+/* ---------- state (localStorage, guarded) ---------- */
+var KEY = 'sdh-anti-inflammatory-v1';
+var state = { week:EXAMPLE.slice(), people:2, touched:false, got:{}, serves:{} };
+function load(){
+  try {
+    var raw = window.localStorage && localStorage.getItem(KEY);
+    if (!raw) return;
+    var s = JSON.parse(raw);
+    if (s && Array.isArray(s.week) && s.week.length === 7) {
+      state.week = s.week.map(function(id){ return BY[id] ? id : ''; });
+      state.people = Math.min(8, Math.max(1, parseInt(s.people, 10) || 2));
+      state.touched = !!s.touched;
+      state.got = (s.got && typeof s.got === 'object') ? s.got : {};
+      state.serves = (s.serves && typeof s.serves === 'object') ? s.serves : {};
+    }
+  } catch (e) {}
+}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+/* ---------- hero + matrix ---------- */
+function renderHero(){
+  document.getElementById('hbowls').innerHTML = BOWLS.map(function(b){
+    return '<a class="hb" href="#b-' + b.id + '" aria-label="' + esc(b.name) + '"><img src="' + IMG + b.img + '" alt="" width="132" height="132" loading="eager"><span>' + esc(b.short) + '</span></a>';
+  }).join('');
+}
+function dot(on, half){ return '<i class="dot ' + (half ? 'half' : on ? 'on' : 'off') + '" aria-label="' + (half ? 'Fish, low omega-3' : on ? 'Yes' : 'No') + '"></i>'; }
+function renderMatrix(){
+  document.querySelector('#matrix tbody').innerHTML = BOWLS.map(function(b){
+    return '<tr><th scope="row"><a class="bn" href="#b-' + b.id + '"><img src="' + IMG + b.img + '" alt="" width="38" height="38" loading="lazy">' + esc(b.name) + '</a></th>' +
+      '<td>' + dot(b.oily, b.fish && !b.oily) + '</td><td>' + dot(b.oil) + '</td><td>' + dot(b.legume) + '</td><td>' + dot(b.whole) + '</td>' +
+      '<td class="num">' + b.plants.length + '</td>' +
+      '<td class="wt' + (b.salty ? '' : ' none') + '">' + (b.salty ? esc(b.salty) : (b.id === 'yoghurt' ? '<span style="color:var(--curious)">Optional honey</span>' : 'Nothing salty')) + '</td></tr>';
+  }).join('');
+}
+
+/* ---------- bowl cards ---------- */
+function tagsFor(b){
+  var t = [];
+  if (b.oily) t.push('<span class="chip c-chill">Oily fish</span>'); else if (b.fish) t.push('<span class="chip c-chill">Fish</span>');
+  if (b.oil) t.push('<span class="chip c-curious">Olive oil</span>');
+  if (b.legume) t.push('<span class="chip c-constructive">Legumes</span>');
+  if (b.whole) t.push('<span class="chip c-curious">Wholegrain</span>');
+  if (b.id === 'yoghurt') t.push('<span class="chip c-caring">Berries</span>');
+  t.push('<span class="chip c-neutral">' + b.plants.length + ' plants</span>');
+  return t.join('');
+}
+function servesOf(b){ var s = parseInt(state.serves[b.id], 10); return (s >= 1 && s <= 8) ? s : b.serves; }
+function ingHTML(b){
+  var f = servesOf(b) / b.serves;
+  return b.ing.map(function(it){
+    var r = fmtIng(it, f);
+    return '<li><span class="q' + (r.tt ? ' tt' : '') + '">' + esc(r.q) + '</span><span>' + esc(r.t) + '</span></li>';
+  }).join('');
+}
+function renderBowls(){
+  document.getElementById('bowlList').innerHTML = BOWLS.map(function(b){
+    var s = servesOf(b);
+    return '<article class="bowl" id="b-' + b.id + '">' +
+      '<div class="ph"><img src="' + IMG + b.img + '" alt="' + esc(b.name) + ', seen from above" width="720" height="720" loading="lazy"><span class="no">' + b.no + '</span></div>' +
+      '<div class="bd">' +
+        '<div class="hd"><div><h3>' + esc(b.name) + '</h3><div class="meta"><span><b>' + b.time + '</b></span><span>Recipe serves <b>' + b.serves + '</b></span></div></div>' +
+          '<div class="stepper" role="group" aria-label="Serves for ' + esc(b.name) + '">' +
+            '<button type="button" id="sv-minus-' + b.id + '" data-sv="-1" data-b="' + b.id + '" aria-label="Fewer serves"' + (s <= 1 ? ' disabled' : '') + '>−</button>' +
+            '<output id="sv-out-' + b.id + '" aria-live="polite">Serves ' + s + '</output>' +
+            '<button type="button" id="sv-plus-' + b.id + '" data-sv="1" data-b="' + b.id + '" aria-label="More serves"' + (s >= 8 ? ' disabled' : '') + '>+</button>' +
+          '</div></div>' +
+        '<div class="tags">' + tagsFor(b) + '</div>' +
+        '<div class="cols">' +
+          '<div><div class="colh">Ingredients</div><ul class="ing" id="ing-' + b.id + '">' + ingHTML(b) + '</ul></div>' +
+          '<div><div class="colh">Method</div><ol class="steps">' + b.steps.map(function(x){ return '<li><span>' + x + '</span></li>'; }).join('') + '</ol></div>' +
+        '</div>' +
+        '<div class="adv">' +
+          '<div class="up"><h4><svg><use href="#ic-down"/></svg>Turn it down further</h4><ul>' + b.up.map(function(x){ return '<li>' + x + '</li>'; }).join('') + '</ul></div>' +
+          '<div class="wa"><h4><svg><use href="#ic-alert"/></svg>Watch</h4><ul>' + b.watch.map(function(x){ return '<li>' + x + '</li>'; }).join('') + '</ul></div>' +
+        '</div>' +
+      '</div></article>';
+  }).join('');
+}
+function updateServes(id, d){
+  var b = BY[id]; var s = Math.min(8, Math.max(1, servesOf(b) + d));
+  state.serves[id] = s; save();
+  document.getElementById('ing-' + id).innerHTML = ingHTML(b);
+  document.getElementById('sv-out-' + id).textContent = 'Serves ' + s;
+  document.getElementById('sv-minus-' + id).disabled = s <= 1;
+  document.getElementById('sv-plus-' + id).disabled = s >= 8;
+}
+
+/* ---------- week planner ---------- */
+function renderDays(){
+  var opts = '<option value="">Something else</option>' + BOWLS.map(function(b){ return '<option value="' + b.id + '">' + esc(b.name) + '</option>'; }).join('');
+  document.getElementById('days').innerHTML = DAYS.map(function(d, i){
+    return '<div class="day"><label for="day-' + i + '">' + d + '</label><span class="th" id="th-' + i + '"></span><select id="day-' + i + '" data-day="' + i + '">' + opts + '</select></div>';
+  }).join('');
+  syncDays();
+}
+function syncDays(){
+  state.week.forEach(function(id, i){
+    var sel = document.getElementById('day-' + i); if (sel) sel.value = id || '';
+    var th = document.getElementById('th-' + i);
+    if (th) th.innerHTML = id ? '<img src="' + IMG + BY[id].img + '" alt="">' : '';
+  });
+  document.getElementById('ppl-out').textContent = state.people + (state.people === 1 ? ' person' : ' people');
+  document.getElementById('ppl-minus').disabled = state.people <= 1;
+  document.getElementById('ppl-plus').disabled = state.people >= 8;
+  document.getElementById('exFlag').hidden = state.touched;
+}
+function stats(){
+  var s = {fish:0, oily:0, legume:0, salty:0, days:0, plants:{}};
+  state.week.forEach(function(id){
+    if (!id) return; var b = BY[id]; s.days++;
+    s.fish += b.fish; s.oily += b.oily; s.legume += b.legume; if (b.salty) s.salty++;
+    b.plants.forEach(function(p){ s.plants[p] = 1; });
+  });
+  s.nPlants = Object.keys(s.plants).length;
+  return s;
+}
+function meter(cls, name, valHTML, pct, zone, why){
+  return '<div class="meter ' + cls + '"><div class="top"><span class="nm">' + name + '</span><span class="val">' + valHTML + '</span></div>' +
+    '<div class="track" aria-hidden="true">' + (zone ? '<span class="zone" style="left:' + zone[0] + '%;width:' + zone[1] + '%"></span>' : '') + '<span class="fill" style="width:' + Math.min(100, pct) + '%"></span></div>' +
+    '<div class="why">' + why + '</div></div>';
+}
+function renderSummary(){
+  var s = stats();
+  var h = '';
+  h += meter('m-fish', 'Fish meals', '<b>' + s.fish + '</b> / 2–3 a week', s.fish/7*100, [2/7*100, 1/7*100],
+    s.oily + ' of them oily fish. The dashed box is the Heart Foundation’s target.' + R(4));
+  h += meter('m-legume', 'Legume meals', '<b>' + s.legume + '</b> of 7', s.legume/7*100, null,
+    'Chickpeas bring fibre and protein for very little salt.');
+  h += meter('m-plants', 'Different plants', '<b>' + s.nPlants + '</b> of 30', s.nPlants/30*100, null,
+    'Rule of thumb from an observational study. Rotate greens, beans and fruit to climb.' + R(19));
+  h += meter('m-salt', 'Meals with salty extras', '<b>' + s.salty + '</b> of 7', s.salty/7*100, null,
+    'Feta, olives or canned fish. Rinse, or use one salty extra per bowl.');
+  var tips = [];
+  if (!s.days) tips.push('Pick a bowl for a few days to see how the week adds up.');
+  else {
+    if (s.fish < 2) tips.push('Add <b>' + (2 - s.fish) + ' more fish meal' + (2 - s.fish > 1 ? 's' : '') + '</b> to reach the Heart Foundation’s 2–3 a week.');
+    else if (s.fish <= 3) tips.push('<b>Fish target met.</b>');
+    else tips.push('<b>Above the fish target</b>, which is fine: salmon and canned tuna are low in mercury.');
+    if (s.fish > 0 && s.oily === 0) tips.push('Make one of them the salmon bowl. Canned tuna is low in omega-3.');
+    if (s.legume === 0) tips.push('Add one chickpea bowl for a legume meal.');
+    if (s.nPlants < 30) tips.push(s.nPlants + ' different plants so far. Swap in other greens, beans or fruit to get closer to 30.');
+  }
+  h += '<div class="verdict"><svg><use href="#ic-check"/></svg><div>' + tips.join(' ') + '</div></div>';
+  document.getElementById('sum').innerHTML = h;
+}
+
+/* ---------- shopping list ---------- */
+function aggregate(){
+  var agg = {}, any = false;
+  state.week.forEach(function(id){
+    if (!id) return; any = true;
+    var b = BY[id], f = state.people / b.serves;
+    b.ing.forEach(function(it){
+      if (!it.k) return;
+      agg[it.k] = (agg[it.k] || 0) + (it.q == null ? 0 : it.q * f);
+    });
+  });
+  return {agg:agg, any:any};
+}
+function lineFor(k, v){
+  var d = ING[k], amt, name = d.n, sub = d.sub ? d.sub(v) : '';
+  if (d.u === 'each'){ var n = Math.max(1, Math.ceil(v - 1e-9)); amt = String(n); name = n === 1 ? (d.n1 || d.n) : d.n; }
+  else if (d.u === 'g'){ amt = v >= 1000 ? (Math.ceil(v/100)/10) + ' kg' : (Math.ceil(v/10)*10) + ' g'; }
+  else if (d.u === 'ml'){ amt = r5(v) + ' ml'; }
+  else if (d.u === 'lemon'){ var l = Math.max(1, Math.ceil(v/30)); amt = String(l); name = l === 1 ? d.n1 : d.n; }
+  else if (d.u === 'bunch'){ amt = '1 bunch'; }
+  else { amt = ''; sub = 'check the pantry'; }
+  return {k:k, amt:amt, name:name, sub:sub};
+}
+function shopLines(){
+  var r = aggregate(); var by = {};
+  AISLES.forEach(function(a){ by[a.id] = []; });
+  if (!r.any) return {by:by, any:false};
+  Object.keys(ING).forEach(function(k){ if (k in r.agg) by[ING[k].a].push(lineFor(k, r.agg[k])); });
+  by.pantry.push({k:'saltpepper', amt:'', name:'salt and black pepper', sub:'check the pantry'});
+  return {by:by, any:true};
+}
+function renderShop(){
+  var s = shopLines();
+  var el = document.getElementById('shop');
+  if (!s.any){ el.innerHTML = '<p class="empty">Your list fills in as you pick bowls for the week.</p>'; return; }
+  el.innerHTML = AISLES.map(function(a){
+    var items = s.by[a.id];
+    return '<div class="aisle"><h4><i style="background:' + a.c + '"></i>' + a.name + '</h4>' +
+      (items.length ? '<ul>' + items.map(function(it){
+        var id = 'got-' + it.k;
+        return '<li><label for="' + id + '"><input type="checkbox" id="' + id + '" data-got="' + it.k + '"' + (state.got[it.k] ? ' checked' : '') + '><span class="bx"><svg><use href="#ic-check"/></svg></span><span class="it">' + (it.amt ? '<b>' + esc(it.amt) + '</b>' : '') + esc(it.name) + (it.sub ? '<em>' + esc(it.sub) + '</em>' : '') + '</span></label></li>';
+      }).join('') + '</ul>' : '<p class="empty">Nothing this week</p>') + '</div>';
+  }).join('');
+}
+function listText(){
+  var s = shopLines();
+  var head = 'Anti-inflammatory bowls: shopping list for ' + state.people + (state.people === 1 ? ' person' : ' people');
+  var plan = state.week.map(function(id, i){ return DAYS[i] + ': ' + (id ? BY[id].name : 'something else'); }).join('\n');
+  var out = [head, '', plan, ''];
+  AISLES.forEach(function(a){
+    if (!s.by[a.id].length) return;
+    out.push(a.name);
+    s.by[a.id].forEach(function(it){ out.push('- ' + (it.amt ? it.amt + ' ' : '') + it.name + (it.sub ? ' (' + it.sub + ')' : '')); });
+    out.push('');
+  });
+  out.push('From selfdriven.health/anti-inflammatory');
+  return out.join('\n');
+}
+function refresh(){ syncDays(); renderSummary(); renderShop(); }
+
+/* ---------- events ---------- */
+function bind(){
+  document.getElementById('bowlList').addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-sv]'); if (!btn) return;
+    updateServes(btn.getAttribute('data-b'), parseInt(btn.getAttribute('data-sv'), 10));
+  });
+  document.getElementById('days').addEventListener('change', function(e){
+    var sel = e.target.closest('select[data-day]'); if (!sel) return;
+    state.week[parseInt(sel.getAttribute('data-day'), 10)] = BY[sel.value] ? sel.value : '';
+    state.touched = true; save(); refresh();
+  });
+  document.getElementById('ppl-minus').addEventListener('click', function(){ state.people = Math.max(1, state.people - 1); state.touched = true; save(); refresh(); });
+  document.getElementById('ppl-plus').addEventListener('click', function(){ state.people = Math.min(8, state.people + 1); state.touched = true; save(); refresh(); });
+  document.getElementById('wk-example').addEventListener('click', function(){ state.week = EXAMPLE.slice(); state.people = 2; state.touched = false; state.got = {}; save(); refresh(); });
+  document.getElementById('wk-clear').addEventListener('click', function(){ state.week = ['','','','','','','']; state.touched = true; state.got = {}; save(); refresh(); });
+  document.getElementById('shop').addEventListener('change', function(e){
+    var cb = e.target.closest('input[data-got]'); if (!cb) return;
+    if (cb.checked) state.got[cb.getAttribute('data-got')] = 1; else delete state.got[cb.getAttribute('data-got')];
+    save();
+  });
+  document.getElementById('copyList').addEventListener('click', function(){
+    var text = listText();
+    var toast = document.getElementById('copyToast'), fb = document.getElementById('copyFallback');
+    function fallback(){ fb.hidden = false; fb.value = text; fb.focus(); fb.select(); toast.textContent = 'Select all and copy'; toast.hidden = false; }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){ fb.hidden = true; toast.textContent = 'Copied'; toast.hidden = false; setTimeout(function(){ toast.hidden = true; }, 2200); }, fallback);
+      } else fallback();
+    } catch (e) { fallback(); }
+  });
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.ref'); if (!a) return;
+    var d = document.getElementById('sources'); if (d && !d.open) d.open = true;
+  });
+}
+
+load(); renderHero(); renderMatrix(); renderBowls(); renderDays(); renderSummary(); renderShop(); bind();
+</script>
+
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,summary,select,[role="button"],[role="checkbox"]';
+    var OFF = 'textarea';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){
+      var t = e.target; if (!t || !t.closest) return;
+      cur.classList.toggle('big', !!t.closest(HOT));
+      cur.classList.toggle('off', !!t.closest(OFF));
+    });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
+  Array.prototype.forEach.call(dotsList, function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+
+</body>
+</html>

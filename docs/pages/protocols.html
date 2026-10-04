@@ -1,0 +1,669 @@
+---
+layout: null
+title: "Protocols - selfdriven Health"
+permalink: /protocols
+---
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Protocols - selfdriven Health</title>
+<meta name="description" content="Andrew Huberman's first book, Protocols: what it covers across seven areas of health, why it puts behaviours before supplements, and where to get it in Australia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='27' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='40' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='53' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* selfdriven.health 4Cs system, dark by design (single look, shared with every guide).
+   Layout: book guide. Hero = the manual's contents page with thumb-index tabs, one per area.
+   Amber (Curious) leads because this page is about reading and learning; area colours follow the
+   site's domains: Feel = violet, Grow = amber, Move = mint. Rose marks things to check. */
+:root{
+  color-scheme:dark;
+  --bg:#09090f;--surface:#111118;--surface2:#18181f;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#f0eeff;--muted:#8f8bad;--muted2:#3d3a55;
+  --soft:rgba(240,238,255,.8);
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --curious-line:rgba(245,200,66,.3);--caring-line:rgba(255,95,126,.3);--constructive-line:rgba(0,229,160,.3);--chill-line:rgba(123,108,255,.34);
+  --neutral-dim:rgba(240,238,255,.07);
+  --ink:#09090f;
+  --pill:999px;
+  --sd-accent:var(--curious);
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:24px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--curious);outline-offset:2px}
+a{color:inherit}
+
+/* domain colour sets, applied per area */
+.d-feel{--c:var(--chill-bright);--c-dim:var(--chill-dim);--c-line:var(--chill-line)}
+.d-grow{--c:var(--curious);--c-dim:var(--curious-dim);--c-line:var(--curious-line)}
+.d-move{--c:var(--constructive);--c-dim:var(--constructive-dim);--c-line:var(--constructive-line)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:136px 76px}
+.gblob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.16;z-index:0}
+.gb1{width:520px;height:520px;background:var(--curious);top:-170px;left:-180px;animation:gb 17s ease-in-out infinite}
+.gb2{width:460px;height:460px;background:var(--chill);top:40px;right:-150px;animation:gb 21s ease-in-out infinite reverse}
+.gb3{width:340px;height:340px;background:var(--constructive);bottom:-90px;left:30%;animation:gb 23s ease-in-out infinite 3s}
+.gb4{width:280px;height:280px;background:var(--caring);bottom:20px;right:30%;animation:gb 19s ease-in-out infinite 8s}
+@keyframes gb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(34px,-26px) scale(1.08)}70%{transform:translate(-22px,30px) scale(.93)}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 74% at 50% 50%,rgba(9,9,15,.86),rgba(9,9,15,.55) 46%,rgba(9,9,15,.18) 78%,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:56px;align-items:center}
+.hero-copy{min-width:0}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(9,9,15,.55);border:1px solid rgba(255,255,255,.22);border-radius:var(--pill);padding:8px 18px;font-size:12px;font-weight:500;color:rgba(240,238,255,.7);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--curious);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(40px,6.3vw,76px);line-height:.98;letter-spacing:-.045em;margin:24px 0 20px}
+.grad{background:linear-gradient(90deg,var(--caring),var(--curious) 52%,var(--constructive));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:560px;font-size:clamp(17px,2vw,19.5px);line-height:1.55;color:rgba(240,238,255,.9)}
+.byline{margin-top:18px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.byline b{color:var(--soft);font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+
+/* the manual: contents page with thumb-index tabs */
+.manual{--mpad:26px;--tab:14px;position:relative;margin-right:var(--tab);background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border2);border-radius:20px 6px 6px 20px;padding:24px var(--mpad) 18px;box-shadow:0 30px 70px rgba(0,0,0,.55);min-width:0}
+.manual::before{content:'';position:absolute;left:14px;top:14px;bottom:14px;width:1px;background:var(--border)}
+.m-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--border2);margin-bottom:4px}
+.m-title{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.035em}
+.m-count{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.m-list{list-style:none}
+.m-list li{position:relative}
+.m-list a{display:flex;align-items:baseline;gap:10px;padding:10px 0;text-decoration:none;color:var(--soft);font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:-.02em;transition:color .2s}
+.m-list a:hover,.m-list a:focus-visible{color:var(--text)}
+.m-list .lead{flex:1;min-width:16px;border-bottom:1.5px dotted var(--muted2);transform:translateY(-4px)}
+.m-list .dom{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.m-list .tab{position:absolute;top:3px;bottom:3px;right:calc(-1 * (var(--mpad) + var(--tab)));width:var(--tab);border-radius:0 6px 6px 0;background:var(--c);opacity:.85;transition:width .2s,right .2s,opacity .2s}
+.m-list li:hover .tab,.m-list a:focus-visible+.tab{opacity:1;width:calc(var(--tab) + 6px);right:calc(-1 * (var(--mpad) + var(--tab) + 6px))}
+.m-foot{margin-top:10px;padding-top:12px;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 14px}
+
+/* pills + chips + buttons */
+.mode-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--pill);font-family:var(--display);font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.mode-pill:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.mode-pill svg{width:16px;height:16px}
+.mp-c{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.mp-k{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.mp-b{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.mp-l{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.mp-solid{background:var(--curious);color:var(--ink);border-color:var(--curious)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:var(--pill);font-family:var(--display);font-size:12.5px;font-weight:600;border:1px solid transparent;line-height:1.5;white-space:nowrap}
+.c-curious{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.c-caring{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.c-constructive{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.c-chill{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.c-area{background:var(--c-dim);color:var(--c);border-color:var(--c-line)}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--sans);font-size:13.5px;font-weight:600;transition:border-color .2s,transform .2s;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px}
+.btn.go{background:var(--curious);border-color:var(--curious);color:var(--ink)}
+
+/* sections */
+section.block{padding-block:84px 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:500;color:var(--curious)}
+h2{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(31px,4.8vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 14px;max-width:880px}
+.lede{max-width:700px;font-size:17px;color:var(--soft)}
+h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+.note{margin-top:16px;font-size:14px;color:var(--muted);max-width:760px}
+.note b{color:var(--text);font-weight:600}
+.ref{font-family:var(--mono);font-size:.72em;font-weight:500;color:var(--muted);text-decoration:none;vertical-align:.32em;margin-left:1px;white-space:nowrap}
+.ref:hover{color:var(--curious)}
+
+/* the book: three figures */
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.fact{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.fact .big{font-family:var(--display);font-weight:800;font-size:clamp(38px,4.6vw,52px);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.fact .big small{font-size:.38em;letter-spacing:-.01em;font-weight:700;margin-left:6px;color:var(--soft)}
+.fact p{font-size:14.5px;color:var(--muted);line-height:1.5}
+.f-amber .big{color:var(--curious)}.f-violet .big{color:var(--chill-bright)}.f-mint .big{color:var(--constructive)}
+.two-ways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.way{border-radius:20px;padding:20px 22px;border:1px dashed var(--border2);min-width:0}
+.way h3{font-size:19px;margin-bottom:4px}
+.way p{font-size:14.5px;color:var(--soft)}
+.way .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+
+/* seven areas */
+.areas{display:grid;grid-template-columns:270px minmax(0,1fr);gap:18px;margin-top:30px;align-items:start}
+.alist{display:flex;flex-direction:column;gap:6px;position:sticky;top:84px}
+.abtn{display:flex;align-items:center;gap:12px;width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--border);background:var(--surface);text-align:left;font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:-.02em;color:var(--soft);transition:border-color .2s,background .2s,color .2s}
+.abtn i{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}
+.abtn small{margin-left:auto;font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.abtn:hover{border-color:var(--border2);color:var(--text)}
+.abtn[aria-selected="true"]{background:var(--c-dim);border-color:var(--c-line);color:var(--text)}
+.abtn[aria-selected="true"] small{color:var(--c)}
+.apanel{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:30px;min-width:0;scroll-margin-top:84px}
+.ap-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.ap-top h3{font-size:clamp(26px,3.2vw,34px)}
+.start{margin-top:22px;padding:20px 22px;border-radius:18px;background:var(--c-dim);border:1px solid var(--c-line)}
+.start .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);margin-bottom:6px}
+.start p{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.4vw,25px);line-height:1.2;letter-spacing:-.025em;color:var(--text);text-wrap:balance}
+.why{margin-top:18px;display:grid;gap:10px;max-width:640px}
+.why p{font-size:15.5px;color:var(--soft)}
+.why p b{color:var(--text);font-weight:600}
+.ap-foot{margin-top:22px;padding-top:16px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px}
+.src{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.deeper{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;color:var(--soft);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:2px}
+.deeper:hover{color:var(--text);border-color:var(--c)}
+.deeper svg{width:15px;height:15px}
+
+/* behaviours first: a stack, widest at the base */
+.stack{display:flex;flex-direction:column-reverse;align-items:center;gap:10px;margin-top:32px}
+.rung{width:var(--w);max-width:100%;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;align-items:start;padding:20px 24px;border-radius:18px;border:1px solid var(--line);background:var(--fill)}
+.r1{--w:100%;--fill:var(--constructive-dim);--line:var(--constructive-line);--n:var(--constructive)}
+.r2{--w:80%;--fill:var(--curious-dim);--line:var(--curious-line);--n:var(--curious)}
+.r3{--w:58%;--fill:var(--neutral-dim);--line:var(--border2);--n:var(--soft)}
+.rung .n{grid-row:span 2;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--n);color:var(--n);font-family:var(--mono);font-size:13px;margin-top:2px}
+.rung h3{font-size:20px;color:var(--text)}
+.rung p{font-size:14.5px;color:var(--soft)}
+.stack-cap{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pull{margin-top:28px;max-width:760px;font-family:var(--display);font-weight:700;font-size:clamp(21px,2.6vw,27px);line-height:1.25;letter-spacing:-.025em;color:var(--text);text-wrap:balance}
+.pull span{color:var(--muted);font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;display:block;margin-top:10px;text-transform:uppercase}
+
+/* the thread */
+.thread{margin-top:30px;background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden}
+.trow{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);border-top:1px solid var(--border)}
+.trow:first-child{border-top:0}
+.trow>div{padding:18px 22px;min-width:0}
+.thead>div{padding-block:14px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tname{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.025em}
+.tsaid{margin-top:4px;font-family:var(--mono);font-size:12.5px;color:var(--soft);font-variant-numeric:tabular-nums}
+.tcheck{display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-left:1px solid var(--border)}
+.tcheck p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.tcheck p b{color:var(--text);font-weight:600}
+.flag{display:flex;align-items:flex-start;gap:12px;margin-top:14px;padding:14px 18px;border-radius:16px;border:1px dashed var(--border2);font-size:14px;color:var(--soft);max-width:860px}
+.flag svg{width:18px;height:18px;flex:none;color:var(--caring);margin-top:2px}
+
+/* get the book */
+.eds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:30px}
+.ed{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.ed-top{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.ed h3{font-size:20px}
+.ed dl{display:grid;gap:6px;font-size:13.5px}
+.ed dl div{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px}
+.ed dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.ed dd{color:var(--soft);min-width:0;overflow-wrap:anywhere}
+.ed dd.mono{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums}
+.ed .btn{margin-top:auto;align-self:flex-start}
+.else{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.else>div{padding:18px 20px;border-radius:18px;border:1px dashed var(--border2);display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0}
+.else h3{font-size:17px}
+.else p{font-size:14px;color:var(--soft)}
+
+/* sources */
+.sources{margin-top:36px;border-top:1px solid var(--border);padding-top:18px}
+.sources summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary svg{width:16px;height:16px;transition:transform .2s;color:var(--muted)}
+.sources[open] summary svg{transform:rotate(90deg)}
+.sources summary span{font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--muted);border:1px solid var(--border2);border-radius:var(--pill);padding:1px 9px}
+.sources ol{margin:16px 0 0;padding-left:26px;display:grid;gap:8px;font-size:13.5px;color:var(--muted);max-width:900px}
+.sources li{padding-left:4px;scroll-margin-top:90px}
+.sources li:target{color:var(--soft)}
+.sources a{color:var(--soft);text-decoration-color:var(--border2);text-underline-offset:3px;overflow-wrap:anywhere}
+.sources a:hover{color:var(--curious)}
+
+/* closing */
+.closing{padding-block:96px 12px;text-align:center;overflow:hidden}
+.closing h2{margin:10px auto 14px}
+.closing .lede{margin:0 auto}
+.jump-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.companion{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:14.5px;color:var(--soft);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:2px}
+.companion:hover{color:var(--text)}
+.companion svg{width:15px;height:15px}
+
+@media (prefers-reduced-motion:reduce){
+  .gblob,.hero-pill .dot{animation:none}
+  html{scroll-behavior:auto}
+  .m-list .tab{transition:none}
+}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .manual{max-width:520px}
+  .eds{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .areas{grid-template-columns:1fr}
+  .alist{position:static;flex-direction:row;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+  .abtn{width:auto;flex:none}
+  .abtn small{display:none}
+}
+@media (max-width:820px){
+  .facts,.two-ways,.else{grid-template-columns:1fr}
+  .trow{grid-template-columns:1fr}
+  .thead{display:none}
+  .tcheck{border-left:0;padding-top:0!important}
+  .r2{--w:92%}.r3{--w:84%}
+}
+@media (max-width:640px){
+  .wrap{padding-inline:16px}
+  .hero{padding-block:116px 60px}
+  section.block{padding-top:64px}
+  .gblob{opacity:.14}
+  .manual{--mpad:18px;--tab:12px}
+  .apanel{padding:20px}
+  .start{padding:16px 18px}
+  .eds{grid-template-columns:1fr}
+  .rung{padding:16px 18px}
+  .trow>div{padding:16px 18px}
+}
+
+/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:var(--ink);font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:640px){.sd-nav-in{padding-inline:16px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+body>main,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,summary,select,[role="button"],[role="tab"]{cursor:none}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+  <symbol id="ic-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+  <symbol id="ic-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+  <symbol id="ic-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+</svg>
+
+<div id="cur" aria-hidden="true"></div>
+
+<header class="sd-nav sd-fixed" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+    <span class="sd-crumb">/ Protocols</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a href="#book">The book</a><a href="#areas">Seven areas</a><a href="#first">Behaviours first</a><a href="#thread">The thread</a><a href="#get">Get it</a></nav>
+    <a class="sd-cta" href="#get">Get the book</a>
+  </div>
+</header>
+
+<main>
+<header class="hero" id="top">
+  <div class="gblob gb1"></div><div class="gblob gb2"></div><div class="gblob gb3"></div><div class="gblob gb4"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="hero-pill"><span class="dot"></span>New book · Andrew Huberman</span>
+        <h1>An <span class="grad">operating manual</span> for the human body.</h1>
+        <p class="sub"><em>Protocols</em> collects about fifty science-based practices across seven areas of health. It starts with what you do every day and leaves supplements for last.</p>
+        <p class="byline"><b>Andrew D. Huberman, PhD</b> · Penguin Australia · out 15 September 2026</p>
+        <div class="cta-row">
+          <a class="mode-pill mp-solid" href="https://www.penguin.com.au/books/protocols-9781529921298" target="_blank" rel="noopener"><svg><use href="#ic-book"/></svg>Get it in Australia</a>
+          <a class="mode-pill mp-l" href="https://www.hubermanlab.com/protocols-book" target="_blank" rel="noopener"><svg><use href="#ic-out"/></svg>Official book page</a>
+        </div>
+      </div>
+
+      <nav class="manual" aria-label="The book's seven areas">
+        <div class="m-head"><span class="m-title">Contents</span><span class="m-count">7 areas</span></div>
+        <ol class="m-list">
+          <li class="d-feel"><a href="#sleep" data-area="sleep"><span>Sleep</span><span class="lead"></span><span class="dom">Feel</span></a><span class="tab"></span></li>
+          <li class="d-move"><a href="#exercise" data-area="exercise"><span>Exercise</span><span class="lead"></span><span class="dom">Move</span></a><span class="tab"></span></li>
+          <li class="d-feel"><a href="#stress" data-area="stress"><span>Stress control</span><span class="lead"></span><span class="dom">Feel</span></a><span class="tab"></span></li>
+          <li class="d-move"><a href="#nutrition" data-area="nutrition"><span>Nutrition</span><span class="lead"></span><span class="dom">Move</span></a><span class="tab"></span></li>
+          <li class="d-feel"><a href="#light" data-area="light"><span>Light</span><span class="lead"></span><span class="dom">Feel</span></a><span class="tab"></span></li>
+          <li class="d-grow"><a href="#focus" data-area="focus"><span>Focus, motivation &amp; learning</span><span class="lead"></span><span class="dom">Grow</span></a><span class="tab"></span></li>
+          <li class="d-grow"><a href="#growth" data-area="growth"><span>Personal growth</span><span class="lead"></span><span class="dom">Grow</span></a><span class="tab"></span></li>
+        </ol>
+        <div class="m-foot"><span>Book order</span><span>Tabs coloured by selfdriven.health domain</span></div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="block" id="book">
+  <div class="wrap">
+    <div class="eyebrow"><b>The book</b> · what it is</div>
+    <h2>One reference to come back to, not a book to read once.</h2>
+    <p class="lede">Huberman is a Stanford neuroscientist and host of the Huberman Lab podcast. <em>Protocols</em> is his first book. It turns years of the podcast's material into practices, and explains the biology behind each one so you can adapt it to your own life.<a class="ref" href="#s1">[1]</a></p>
+
+    <div class="facts">
+      <div class="fact f-amber"><div class="big">7<small>areas</small></div><p>Sleep, exercise, stress control, nutrition, light, focus and learning, and personal growth.<a class="ref" href="#s1">[1]</a></p></div>
+      <div class="fact f-violet"><div class="big">~50<small>protocols</small></div><p>Steven Bartlett's count when Huberman came on Diary of a CEO to launch the book.<a class="ref" href="#s4">[4]</a></p></div>
+      <div class="fact f-mint"><div class="big">688<small>pages</small></div><p>The Australian trade paperback. The US hardcover from Simon Element runs to 512.<a class="ref" href="#s2">[2]</a><a class="ref" href="#s3">[3]</a></p></div>
+    </div>
+
+    <div class="two-ways">
+      <div class="way"><div class="k">Kind one</div><h3>Foundations</h3><p>Daily behaviours that lift your baseline mood, energy and health, whatever else you are working on.</p></div>
+      <div class="way"><div class="k">Kind two</div><h3>Targeted tools</h3><p>Specific protocols for a common problem or goal, like falling asleep, calming down fast or learning a skill.</p></div>
+    </div>
+    <p class="note"><b>How to read it.</b> Front to back, or open the chapter you need. Some protocols rest on strong trials and others on early or mechanistic research. Because each one comes with its reasoning, you can tell which is which.</p>
+  </div>
+</section>
+
+<section class="block" id="areas">
+  <div class="wrap">
+    <div class="eyebrow"><b>Seven areas</b> · one way to start in each</div>
+    <h2>Pick an area. Try one thing this week.</h2>
+    <p class="lede">For each area, here is what the book covers and one place to start, drawn from what Huberman has published or said about it. The source sits under each one.</p>
+
+    <div class="areas">
+      <div class="alist" role="tablist" aria-label="Areas">
+        <button class="abtn d-feel" role="tab" id="t-sleep" aria-controls="p-sleep" aria-selected="true"><i></i>Sleep<small>Feel</small></button>
+        <button class="abtn d-move" role="tab" id="t-exercise" aria-controls="p-exercise" aria-selected="false" tabindex="-1"><i></i>Exercise<small>Move</small></button>
+        <button class="abtn d-feel" role="tab" id="t-stress" aria-controls="p-stress" aria-selected="false" tabindex="-1"><i></i>Stress control<small>Feel</small></button>
+        <button class="abtn d-move" role="tab" id="t-nutrition" aria-controls="p-nutrition" aria-selected="false" tabindex="-1"><i></i>Nutrition<small>Move</small></button>
+        <button class="abtn d-feel" role="tab" id="t-light" aria-controls="p-light" aria-selected="false" tabindex="-1"><i></i>Light<small>Feel</small></button>
+        <button class="abtn d-grow" role="tab" id="t-focus" aria-controls="p-focus" aria-selected="false" tabindex="-1"><i></i>Focus &amp; learning<small>Grow</small></button>
+        <button class="abtn d-grow" role="tab" id="t-growth" aria-controls="p-growth" aria-selected="false" tabindex="-1"><i></i>Personal growth<small>Grow</small></button>
+      </div>
+
+      <div class="apanels">
+        <article class="apanel d-feel" role="tabpanel" id="p-sleep" aria-labelledby="t-sleep">
+          <div class="ap-top"><h3>Sleep</h3><span class="chip c-area">Feel</span></div>
+          <div class="start"><div class="k">Start with</div><p>Get outside into daylight as soon as you can after waking.</p></div>
+          <div class="why">
+            <p>Morning light sets your body clock, so you get sleepy at the right time that night. The book's own publicity uses this as its example of a simple sleep protocol.<a class="ref" href="#s1">[1]</a></p>
+            <p><b>Australian note:</b> morning UV can climb fast in summer. Use sun protection whenever the UV index is 3 or above.<a class="ref" href="#s12">[12]</a></p>
+          </div>
+          <div class="ap-foot"><span class="src">Source: official book page and FAQ</span></div>
+        </article>
+
+        <article class="apanel d-move" role="tabpanel" id="p-exercise" aria-labelledby="t-exercise" hidden>
+          <div class="ap-top"><h3>Exercise</h3><span class="chip c-area">Move</span></div>
+          <div class="start"><div class="k">Start with</div><p>Two resistance sessions this week, each under an hour of hard work.</p></div>
+          <div class="why">
+            <p>The book covers getting stronger and leaner at any age.<a class="ref" href="#s1">[1]</a> His published Foundational Fitness Protocol mixes resistance, cardio and endurance work across the week, trains each muscle group twice (once directly, once indirectly) and caps weight sessions at about 50 to 60 minutes after a warm-up.<a class="ref" href="#s7">[7]</a></p>
+          </div>
+          <div class="ap-foot"><span class="src">Source: Huberman Lab fitness protocol</span><a class="deeper" href="https://www.selfdriven.health/fascia">Fascia movement guide <svg><use href="#ic-arrow"/></svg></a></div>
+        </article>
+
+        <article class="apanel d-feel" role="tabpanel" id="p-stress" aria-labelledby="t-stress" hidden>
+          <div class="ap-top"><h3>Stress control</h3><span class="chip c-area">Feel</span></div>
+          <div class="start"><div class="k">Start with</div><p>Two breaths in through the nose, then one long breath out through the mouth.</p></div>
+          <div class="why">
+            <p>This is the physiological sigh. On Diary of a CEO he called it the most effective tool he knows for bringing stress down quickly.<a class="ref" href="#s5">[5]</a></p>
+            <p>In a 2023 Stanford study he co-authored, five minutes a day of cyclic sighing for a month lifted mood more than mindfulness meditation did.<a class="ref" href="#s8">[8]</a></p>
+          </div>
+          <div class="ap-foot"><span class="src">Source: DOAC interview, Cell Reports Medicine</span><a class="deeper" href="https://www.selfdriven.health/vagus-nerve">Vagus nerve breathing guide <svg><use href="#ic-arrow"/></svg></a></div>
+        </article>
+
+        <article class="apanel d-move" role="tabpanel" id="p-nutrition" aria-labelledby="t-nutrition" hidden>
+          <div class="ap-top"><h3>Nutrition</h3><span class="chip c-area">Move</span></div>
+          <div class="start"><div class="k">Start with</div><p>Take a short walk after your biggest meal of the day.</p></div>
+          <div class="why">
+            <p>The book uses this as an example of a protocol that takes only minutes: walking after you eat helps your body manage blood glucose.<a class="ref" href="#s1">[1]</a></p>
+          </div>
+          <div class="ap-foot"><span class="src">Source: official book FAQ</span><a class="deeper" href="https://www.selfdriven.health/anti-inflammatory">Anti-inflammatory bowls <svg><use href="#ic-arrow"/></svg></a></div>
+        </article>
+
+        <article class="apanel d-feel" role="tabpanel" id="p-light" aria-labelledby="t-light" hidden>
+          <div class="ap-top"><h3>Light</h3><span class="chip c-area">Feel</span></div>
+          <div class="start"><div class="k">Start with</div><p>Bright light early, dim warm light late.</p></div>
+          <div class="why">
+            <p>His published light routine: 10 to 15 minutes of sunlight soon after waking, some time outside around midday, a little sun before sunset, then dim, warm indoor lighting at night.<a class="ref" href="#s1">[1]</a></p>
+            <p>Overcast daylight outdoors still counts. Light through a window does not.<a class="ref" href="#s5">[5]</a> Pair it with sun protection when the UV index is 3 or above.<a class="ref" href="#s12">[12]</a></p>
+          </div>
+          <div class="ap-foot"><span class="src">Source: Huberman Lab, DOAC interview</span></div>
+        </article>
+
+        <article class="apanel d-grow" role="tabpanel" id="p-focus" aria-labelledby="t-focus" hidden>
+          <div class="ap-top"><h3>Focus, motivation &amp; learning</h3><span class="chip c-area">Grow</span></div>
+          <div class="start"><div class="k">Start with</div><p>Practise just past the point where you start making mistakes.</p></div>
+          <div class="why">
+            <p>He describes learning as driven by challenge and errors, done while you are alert enough to notice them.<a class="ref" href="#s5">[5]</a> The book adds protocols for learning faster.<a class="ref" href="#s1">[1]</a></p>
+          </div>
+          <div class="ap-foot"><span class="src">Source: DOAC interview, book description</span></div>
+        </article>
+
+        <article class="apanel d-grow" role="tabpanel" id="p-growth" aria-labelledby="t-growth" hidden>
+          <div class="ap-top"><h3>Personal growth</h3><span class="chip c-area">Grow</span></div>
+          <div class="start"><div class="k">Start with</div><p>Do one small hard thing a day that you would rather skip.</p></div>
+          <div class="why">
+            <p>In the same interview he linked willpower to a brain region, the anterior mid-cingulate cortex, and treated it as something you can build.<a class="ref" href="#s6">[6]</a> The daily hard thing is our way in; the chapter goes further.</p>
+          </div>
+          <div class="ap-foot"><span class="src">Source: DOAC interview summary</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="first">
+  <div class="wrap">
+    <div class="eyebrow"><b>Behaviours first</b> · the order the book works in</div>
+    <h2>Foundations at the base. Supplements at the top, and smallest.</h2>
+    <p class="lede">The book is built in layers. Supplements and medicines can add to a strong base, but in his account they do little without one.<a class="ref" href="#s6">[6]</a></p>
+
+    <div class="stack" role="list">
+      <div class="rung r1" role="listitem"><span class="n">1</span><h3>Foundations</h3><p>Light, sleep, movement, food and breathing. Daily, mostly free, and the largest effect.</p></div>
+      <div class="rung r2" role="listitem"><span class="n">2</span><h3>Targeted tools</h3><p>A specific protocol for the problem in front of you.</p></div>
+      <div class="rung r3" role="listitem"><span class="n">3</span><h3>Supplements</h3><p>Adjuncts, added on top.</p></div>
+    </div>
+
+    <p class="pull">“Foundational behaviors come first, before supplements, technology, or products.”<span>Huberman Lab, official book FAQ<a class="ref" href="#s1">[1]</a></span></p>
+  </div>
+</section>
+
+<section class="block" id="thread">
+  <div class="wrap">
+    <div class="eyebrow"><b>The thread</b> · five supplements, checked</div>
+    <h2>Saw the “five supplements” thread? Check these first.</h2>
+    <p class="lede">On Diary of a CEO, Steven Bartlett asked Huberman which five supplements he would keep for life.<a class="ref" href="#s4">[4]</a> Summaries of his answer are circulating on X with shop links attached. Here is what to check before buying, against Australian limits.</p>
+
+    <div class="thread">
+      <div class="trow thead"><div>What the thread says</div><div>Check in Australia</div></div>
+      <div class="trow">
+        <div><div class="tname">Magnesium</div><div class="tsaid">Bisglycinate, for sleep</div></div>
+        <div class="tcheck"><span class="chip c-curious">Check the dose</span><p>The adult upper limit for magnesium from supplements is <b>350 mg a day</b>. Diarrhoea is usually the first sign of too much.<a class="ref" href="#s10">[10]</a></p></div>
+      </div>
+      <div class="trow">
+        <div><div class="tname">Omega-3</div><div class="tsaid">At least 1 g EPA a day</div></div>
+        <div class="tcheck"><span class="chip c-constructive">Read the label</span><p>The thread is right that 1,000 mg of fish oil is not 1,000 mg of EPA and DHA. Read the back of the bottle. If you take blood-thinning medication, ask your GP first.</p></div>
+      </div>
+      <div class="trow">
+        <div><div class="tname">Vitamin D</div><div class="tsaid">5,000–10,000 IU a day</div></div>
+        <div class="tcheck"><span class="chip c-caring">Above the Australian limit</span><p>The adult upper level is <b>80 µg, or 3,200 IU a day</b>. Both ends of that range sit above it. Ask your GP for a blood test and dose to the result.<a class="ref" href="#s9">[9]</a></p></div>
+      </div>
+      <div class="trow">
+        <div><div class="tname">Alpha-GPC</div><div class="tsaid">600–900 mg</div></div>
+        <div class="tcheck"><span class="chip c-caring">Ask your GP first</span><p>A Korean study of 12 million adults over 50 found users had about 43% higher stroke risk over ten years. It cannot prove cause, but it is a reason to ask first. The episode's own fact-check sheet also flags a caveat.<a class="ref" href="#s11">[11]</a><a class="ref" href="#s5b">[5]</a></p></div>
+      </div>
+      <div class="trow">
+        <div><div class="tname">Creatine</div><div class="tsaid">5–10 g a day</div></div>
+        <div class="tcheck"><span class="chip c-constructive">Well studied</span><p>One of the most researched supplements for both effect and safety. The usual maintenance dose is <b>3–5 g a day</b>.<a class="ref" href="#s13">[13]</a></p></div>
+      </div>
+    </div>
+    <div class="flag"><svg><use href="#ic-alert"/></svg><span>The products linked in those threads are the posting account's choices, sold through Amazon. Huberman did not pick them, and neither did we. Supplements can interact with medicines, so check with your GP or pharmacist before starting one.</span></div>
+  </div>
+</section>
+
+<section class="block" id="get">
+  <div class="wrap">
+    <div class="eyebrow"><b>Get the book</b> · Australian editions</div>
+    <h2>Out now in Australia.</h2>
+    <p class="lede">Penguin publishes the Australian edition under its Cornerstone imprint. Each link goes to Penguin's page for that format, which lists Australian bookshops.<a class="ref" href="#s2">[2]</a></p>
+
+    <div class="eds">
+      <div class="ed">
+        <div class="ed-top"><span class="chip c-constructive">Out now</span><h3>Paperback</h3></div>
+        <dl><div><dt>Out</dt><dd>15 Sep 2026</dd></div><div><dt>Detail</dt><dd>688 pages · RRP $39.99</dd></div><div><dt>ISBN</dt><dd class="mono">9781529921298</dd></div></dl>
+        <a class="btn go" href="https://www.penguin.com.au/books/protocols-9781529921298" target="_blank" rel="noopener">Penguin Australia <svg><use href="#ic-out"/></svg></a>
+      </div>
+      <div class="ed">
+        <div class="ed-top"><span class="chip c-constructive">Out now</span><h3>eBook</h3></div>
+        <dl><div><dt>Out</dt><dd>15 Sep 2026</dd></div><div><dt>Detail</dt><dd>Read on any e-reader</dd></div><div><dt>ISBN</dt><dd class="mono">9781804948460</dd></div></dl>
+        <a class="btn" href="https://www.penguin.com.au/books/protocols-9781804948460" target="_blank" rel="noopener">Penguin Australia <svg><use href="#ic-out"/></svg></a>
+      </div>
+      <div class="ed">
+        <div class="ed-top"><span class="chip c-constructive">Out now</span><h3>Audiobook</h3></div>
+        <dl><div><dt>Out</dt><dd>15 Sep 2026</dd></div><div><dt>Detail</dt><dd>Read by the author</dd></div><div><dt>ISBN</dt><dd class="mono">9781804949061</dd></div></dl>
+        <a class="btn" href="https://www.penguin.com.au/books/protocols-9781804949061" target="_blank" rel="noopener">Penguin Australia <svg><use href="#ic-out"/></svg></a>
+      </div>
+      <div class="ed">
+        <div class="ed-top"><span class="chip c-curious">From 15 Oct</span><h3>Hardback</h3></div>
+        <dl><div><dt>Out</dt><dd>15 Oct 2026</dd></div><div><dt>Detail</dt><dd>Hardcover edition</dd></div><div><dt>ISBN</dt><dd class="mono">9781529921281</dd></div></dl>
+        <a class="btn" href="https://www.penguin.com.au/books/protocols-9781529921281" target="_blank" rel="noopener">Penguin Australia <svg><use href="#ic-out"/></svg></a>
+      </div>
+    </div>
+
+    <div class="else">
+      <div><h3>Outside Australia</h3><p>The official page lists retailers by country and language, including the US edition from Simon Element.<a class="ref" href="#s1">[1]</a></p><a class="btn" href="https://www.hubermanlab.com/protocols-book" target="_blank" rel="noopener">Official book page <svg><use href="#ic-out"/></svg></a></div>
+      <div><h3>Borrow it</h3><p>Ask your local library for the book or the audiobook. New releases often have a hold queue, so reserve early.</p></div>
+      <div><h3>Hear it first</h3><p>The Diary of a CEO episode from 3 September 2026 walks through ten of the protocols in about two hours.<a class="ref" href="#s4">[4]</a></p><a class="btn" href="https://podcasts.happyscribe.com/the-diary-of-a-ceo-with-steven-bartlett/andrew-huberman-stop-wasting-money-on-bad-vitamins-i-take-these-supplements-every-single-day" target="_blank" rel="noopener">Episode transcript <svg><use href="#ic-out"/></svg></a></div>
+    </div>
+
+    <details class="sources">
+      <summary><svg><use href="#ic-chev"/></svg>Sources <span>13</span></summary>
+      <ol>
+        <li id="s1">Huberman Lab. <a href="https://www.hubermanlab.com/protocols-book" target="_blank" rel="noopener">Protocols: An Operating Manual for the Human Body — book page and FAQ</a>. Release date, seven areas, example protocols, light routine.</li>
+        <li id="s2">Penguin Books Australia. <a href="https://www.penguin.com.au/books/protocols-9781529921298" target="_blank" rel="noopener">Protocols by Andrew Huberman</a>. Cornerstone Press, trade paperback, 688 pp, RRP $39.99; formats and dates.</li>
+        <li id="s3">Porchlight Books. <a href="https://www.porchlightbooks.com/products/protocols-andrew-d-huberman-9781668032145" target="_blank" rel="noopener">Protocols, US hardcover</a>. Simon Element, 512 pp, ISBN 9781668032145.</li>
+        <li id="s4">The Diary of a CEO, 3 September 2026. <a href="https://podcasts.happyscribe.com/the-diary-of-a-ceo-with-steven-bartlett/andrew-huberman-stop-wasting-money-on-bad-vitamins-i-take-these-supplements-every-single-day" target="_blank" rel="noopener">Andrew Huberman episode transcript</a>.</li>
+        <li id="s5">Shortform. <a href="https://www.shortform.com/podcast/episode/the-diary-of-a-ceo-with-steven-bartlett-2026-09-03-episode-summary-andrew-huberman-stop-wasting-money-on-bad-vitamins-i-take-these-supplements-every-single-day" target="_blank" rel="noopener">Episode summary</a>: light through glass, physiological sigh, learning. <span id="s5b">Also: The Diary of a CEO, <a href="https://stevenbartlett.com/wp-content/uploads/2026/09/DOAC-Prof-Andrew-Huberman-Independent-Research-Further-Reading-v2.1.pdf" target="_blank" rel="noopener">independent research and further reading sheet</a> (EPA, vitamin D, alpha-GPC caveat).</span></li>
+        <li id="s6">Shortform. <a href="https://www.shortform.com/podcast/episode/the-diary-of-a-ceo-with-steven-bartlett-2026-09-03-episode-summary-andrew-huberman-my-exact-routine-to-optimize-brain-body-i-do-all-of-these-every-day" target="_blank" rel="noopener">Episode summary</a>: supplements as adjuncts to behaviour; willpower and the anterior mid-cingulate cortex.</li>
+        <li id="s7">Huberman Lab. <a href="https://www.hubermanlab.com/neural-network/foundational-fitness-protocol" target="_blank" rel="noopener">Foundational Fitness Protocol</a>.</li>
+        <li id="s8">Balban MY, et al. Brief structured respiration practices enhance mood and reduce physiological arousal. <a href="https://doi.org/10.1016/j.xcrm.2022.100895" target="_blank" rel="noopener">Cell Reports Medicine, 2023</a>.</li>
+        <li id="s9">NHMRC Nutrient Reference Values. <a href="https://www.eatforhealth.gov.au/nutrient-reference-values/nutrients/vitamin-d" target="_blank" rel="noopener">Vitamin D</a>. Adult upper level 80 µg/day.</li>
+        <li id="s10">NHMRC Nutrient Reference Values. <a href="https://www.eatforhealth.gov.au/nutrient-reference-values/nutrients/magnesium" target="_blank" rel="noopener">Magnesium</a>. Upper level from supplements 350 mg/day.</li>
+        <li id="s11">Lee G, et al. Association of L-α glycerylphosphorylcholine with subsequent stroke risk after 10 years. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8613599/" target="_blank" rel="noopener">JAMA Network Open, 2021</a>.</li>
+        <li id="s12">Cancer Council. <a href="https://www.sunsmart.com.au/" target="_blank" rel="noopener">SunSmart</a>. Sun protection when the UV index is 3 or above.</li>
+        <li id="s13">Kreider RB, et al. International Society of Sports Nutrition position stand on creatine. <a href="https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0173-z" target="_blank" rel="noopener">JISSN, 2017</a>.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Start here</div>
+    <h2>Tomorrow morning, step outside.</h2>
+    <p class="lede">Daylight soon after waking is the book's own example, and it costs nothing. Once it sticks, pick one more area.</p>
+    <div class="jump-row">
+      <a class="mode-pill mp-c" href="#areas"><svg><use href="#ic-sun"/></svg>Seven areas</a>
+      <a class="mode-pill mp-b" href="#first"><svg><use href="#ic-layers"/></svg>Behaviours first</a>
+      <a class="mode-pill mp-k" href="#thread"><svg><use href="#ic-pill"/></svg>Supplement checks</a>
+      <a class="mode-pill mp-l" href="#get"><svg><use href="#ic-book"/></svg>Get the book</a>
+    </div>
+    <a class="companion" href="https://www.selfdriven.health/vagus-nerve">Want the breathing side now? Try the Vagus nerve guide <svg><use href="#ic-arrow"/></svg></a>
+  </div>
+</section>
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="https://www.selfdriven.health/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="https://www.selfdriven.health/the-undertow"><i style="background:var(--caring)"></i>The undertow</a><a href="https://www.selfdriven.health/obsessive-by-nature"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="https://www.selfdriven.health/depression"><i style="background:var(--chill-bright)"></i>Depression</a><a href="https://www.selfdriven.health/fascia"><i style="background:var(--constructive)"></i>Fascia</a><a href="https://www.selfdriven.health/eye-movement"><i style="background:var(--constructive)"></i>Eye movement</a><a href="https://www.selfdriven.health/anti-inflammatory"><i style="background:var(--constructive)"></i>Anti-inflammatory</a><a href="https://www.selfdriven.health/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>Plain language, evidence-checked, and not medical advice.</b> The book links on this page carry no affiliate codes, and selfdriven.health earns nothing from sales. If you have a health condition or take medication, talk to your GP before changing your routine.</p>
+</footer>
+
+<script>
+/* seven areas: tabs, contents links and #area deep links */
+(function(){
+  var KEYS = ['sleep','exercise','stress','nutrition','light','focus','growth'];
+  var tabs = KEYS.map(function(k){ return document.getElementById('t-' + k); });
+  var panels = KEYS.map(function(k){ return document.getElementById('p-' + k); });
+  function select(key, focus){
+    var i = KEYS.indexOf(key); if (i < 0) return;
+    tabs.forEach(function(t, j){ var on = j === i; t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1; });
+    panels.forEach(function(p, j){ p.hidden = j !== i; });
+    if (focus) tabs[i].focus();
+    if (tabs[i].scrollIntoView && window.matchMedia('(max-width:980px)').matches) {
+      try { tabs[i].scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'}); } catch(e) {}
+    }
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(KEYS[i]); });
+    t.addEventListener('keydown', function(e){
+      var n = null;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = (i + 1) % KEYS.length;
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = (i - 1 + KEYS.length) % KEYS.length;
+      if (e.key === 'Home') n = 0;
+      if (e.key === 'End') n = KEYS.length - 1;
+      if (n !== null) { e.preventDefault(); select(KEYS[n], true); }
+    });
+  });
+  function openFromKey(key){
+    select(key);
+    var sec = document.getElementById('areas');
+    var target = window.matchMedia('(max-width:980px)').matches ? sec : document.getElementById('p-' + key);
+    target.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth', block:'start'});
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-area]'), function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); openFromKey(a.getAttribute('data-area')); });
+  });
+  var h = (location.hash || '').slice(1);
+  if (KEYS.indexOf(h) > -1) { select(h); setTimeout(function(){ document.getElementById('areas').scrollIntoView(); }, 60); }
+})();
+</script>
+
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,summary,select,[role="button"],[role="tab"]';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){ var t = e.target; if (!t || !t.closest) return; cur.classList.toggle('big', !!t.closest(HOT)); });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
+  Array.prototype.forEach.call(dotsList, function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+
+</body>
+</html>
