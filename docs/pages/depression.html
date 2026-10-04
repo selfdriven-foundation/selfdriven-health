@@ -1,0 +1,1219 @@
+---
+layout: null
+title: Depression - selfdriven Health
+permalink: /depression
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Depression - selfdriven Health</title>
+<meta name="description" content="Depression isn’t sadness, and it isn’t the opposite of happiness. What it is, why the low-serotonin story didn’t hold up, and how doing small things that matter starts the way back.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2716%27%20fill=%27%2309090f%27/%3E%3Ccircle%20cx=%2721%27%20cy=%2721%27%20r=%279%27%20fill=%27%23f5c842%27/%3E%3Ccircle%20cx=%2743%27%20cy=%2721%27%20r=%279%27%20fill=%27%23ff5f7e%27/%3E%3Ccircle%20cx=%2721%27%20cy=%2743%27%20r=%279%27%20fill=%27%237b6cff%27/%3E%3Ccircle%20cx=%2743%27%20cy=%2743%27%20r=%279%27%20fill=%27%2300e5a0%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* selfdriven.health 4Cs system, dark by design. Layout: long-form guide, numbered sections, one violet control (the nine-signs check), rose for help, mint for done. */
+:root{
+  color-scheme:dark;
+  --bg:#09090f;--surface:#111118;--surface2:#18181f;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#f0eeff;--muted:#8f8bad;--muted2:#3d3a55;
+  --soft:rgba(240,238,255,.8);
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --pill:999px;
+  --sd-accent:var(--caring);
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+button{font:inherit;color:inherit;background:none;border:0}
+:focus-visible{outline:2px solid var(--chill-bright);outline-offset:2px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:148px 0 84px}
+.gblob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.17;z-index:0}
+.gb1{width:520px;height:520px;background:var(--chill);top:-150px;left:-160px;animation:gb 15s ease-in-out infinite}
+.gb2{width:440px;height:440px;background:var(--caring);top:40px;right:-130px;animation:gb 19s ease-in-out infinite reverse}
+.gb3{width:360px;height:360px;background:var(--constructive);bottom:-60px;left:18%;animation:gb 23s ease-in-out infinite 3s}
+.gb4{width:320px;height:320px;background:var(--curious);bottom:20px;right:12%;animation:gb 17s ease-in-out infinite 8s}
+@keyframes gb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(34px,-26px) scale(1.08)}70%{transform:translate(-22px,30px) scale(.93)}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 74% at 50% 50%,rgba(9,9,15,.86),rgba(9,9,15,.55) 46%,rgba(9,9,15,.18) 78%,transparent)}
+.hero .wrap{position:relative;z-index:2;text-align:center}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(9,9,15,.55);border:1px solid rgba(255,255,255,.22);border-radius:var(--pill);padding:8px 18px;font-size:12px;font-weight:500;color:rgba(240,238,255,.7);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--chill-bright);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(40px,7.6vw,88px);line-height:.98;letter-spacing:-.045em;margin:24px auto 20px;max-width:960px}
+.grad{background:linear-gradient(90deg,var(--chill-bright),var(--caring));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:680px;margin:0 auto;font-size:clamp(17px,2.1vw,20px);line-height:1.55;color:rgba(240,238,255,.9)}
+.safety{display:inline-block;text-align:center;margin-top:26px;padding:10px 18px;border-radius:16px;background:rgba(9,9,15,.6);border:1px solid rgba(255,95,126,.3);font-size:14px;color:rgba(240,238,255,.86)}
+.safety a{color:var(--text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,95,126,.5)}
+.hero .fine{margin-top:16px;font-size:13px;color:rgba(240,238,255,.62)}
+.jump-row{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+
+/* mode pills + chips */
+.mode-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--pill);font-family:var(--display);font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.mode-pill:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.mode-pill svg{width:16px;height:16px}
+.mp-c{background:var(--curious-dim);color:var(--curious);border-color:rgba(245,200,66,.28)}
+.mp-k{background:var(--caring-dim);color:var(--caring);border-color:rgba(255,95,126,.28)}
+.mp-b{background:var(--constructive-dim);color:var(--constructive);border-color:rgba(0,229,160,.28)}
+.mp-l{background:var(--chill-dim);color:var(--chill-bright);border-color:rgba(123,108,255,.28)}
+.chip{display:inline-flex;align-items:center;padding:2px 10px;border-radius:var(--pill);font-family:var(--display);font-size:12.5px;font-weight:600;border:1px solid transparent;line-height:1.5;white-space:nowrap}
+.c-curious{background:var(--curious-dim);color:var(--curious);border-color:rgba(245,200,66,.28)}
+.c-caring{background:var(--caring-dim);color:var(--caring);border-color:rgba(255,95,126,.28)}
+.c-constructive{background:var(--constructive-dim);color:var(--constructive);border-color:rgba(0,229,160,.28)}
+.c-chill{background:var(--chill-dim);color:var(--chill-bright);border-color:rgba(123,108,255,.28)}
+
+/* progress bar */
+.progress-wrap{position:sticky;top:calc(64px + env(safe-area-inset-top,0px));z-index:50;background:rgba(9,9,15,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.progress-wrap .wrap{display:flex;align-items:center;gap:14px;height:56px}
+.ptext{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ptext b{color:var(--text);font-weight:700}
+.ptext .sep{margin:0 8px;color:var(--muted2)}
+.bar{flex:1;min-width:40px;height:6px;border-radius:99px;background:var(--surface2);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--chill-bright),var(--caring),var(--curious),var(--constructive));transition:width .5s cubic-bezier(.34,1.56,.64,1)}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface);color:var(--text);font-family:var(--sans);font-size:13px;font-weight:600;transition:border-color .2s,background .2s,transform .2s;white-space:nowrap}
+.btn:hover{border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px}
+.btn.ghost{background:transparent;color:var(--muted)}
+.btn.ghost:hover{color:var(--text)}
+.btn.warn{border-color:rgba(255,95,126,.55);background:var(--caring-dim);color:var(--caring)}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.confirm{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--soft);white-space:nowrap}
+.copy-fallback{display:block;width:100%;margin:0 0 12px;min-height:120px;background:var(--bg);color:var(--text);border:1px solid var(--border2);border-radius:12px;padding:10px 12px;font-family:var(--mono);font-size:12px}
+
+/* sections */
+section.block{padding:76px 0 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:500;color:var(--text)}
+h2{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(31px,4.8vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 14px;max-width:860px}
+.lede{max-width:690px;font-size:17px;color:var(--soft)}
+h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.15}
+.ico{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--accent-dim);color:var(--accent);flex-shrink:0}
+.ico svg{width:20px;height:20px}
+.sub-h{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.2vw,32px);letter-spacing:-.035em;line-height:1.1;margin:56px 0 10px;text-wrap:balance}
+.note{margin-top:14px;font-size:14px;color:var(--muted);max-width:780px}
+.note b{color:var(--text);font-weight:600}
+
+/* 01 — sadness vs depression table */
+.line{margin-top:28px;background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden}
+.lrow{display:grid;grid-template-columns:150px 1fr 1fr;border-top:1px solid var(--border)}
+.lrow:first-child{border-top:0}
+.lrow>div{padding:14px 22px;min-width:0}
+.lk{display:flex;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.li{color:var(--soft);font-size:15.5px}
+.ld{color:var(--text);font-size:15.5px;background:rgba(123,108,255,.06);border-left:1px solid var(--border)}
+.lhead>div{padding-top:18px;padding-bottom:14px}
+.lhead .li,.lhead .ld{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.03em;display:flex;align-items:center;gap:9px}
+.lhead .li{color:var(--text)}
+.lhead .ld{color:var(--chill-bright)}
+.lhead svg{width:18px;height:18px}
+
+/* 01 — feeling × vitality map */
+.fvwrap{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-top:24px;align-items:stretch}
+.fv{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px 22px 16px;display:grid;grid-template-columns:30px 1fr 1fr;grid-template-rows:auto auto auto auto;gap:10px;min-width:0}
+.yax{grid-column:1;grid-row:1/4;display:flex;flex-direction:column;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);position:relative}
+.yax .ylbl{writing-mode:vertical-rl;transform:rotate(180deg);color:var(--soft)}
+.yax .yline{flex:1;width:1px;background:linear-gradient(var(--constructive),var(--muted2));margin:6px 0;position:relative}
+.yax .yline::before{content:'';position:absolute;top:-2px;left:-4px;border:4.5px solid transparent;border-bottom:7px solid var(--constructive);border-top:0}
+.st{background:var(--surface2);border:1px solid var(--border);border-radius:16px;padding:12px 14px;min-width:0}
+.st .nm{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em}
+.st .nm i{width:9px;height:9px;border-radius:50%;flex:none}
+.st p{font-size:13.5px;color:var(--muted);margin-top:2px;line-height:1.45}
+.band{grid-column:2/4;grid-row:3;position:relative;margin-top:26px;border-radius:18px;padding:16px 16px 14px;background:linear-gradient(180deg,rgba(123,108,255,.2),rgba(123,108,255,.08));border:1.5px solid rgba(155,143,255,.55)}
+.band .nm{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.03em;color:var(--chill-bright)}
+.band .bd{font-size:13.5px;color:var(--soft);margin-top:2px}
+.band .faces{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.band .faces span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--soft);text-align:center;padding:6px 4px;border-radius:10px;background:rgba(9,9,15,.45);border:1px solid rgba(155,143,255,.22)}
+.upway{position:absolute;left:50%;top:-30px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:var(--pill);background:var(--constructive-dim);border:1px solid rgba(0,229,160,.4);color:var(--constructive);font-family:var(--display);font-weight:700;font-size:12.5px;white-space:nowrap}
+.upway svg{width:13px;height:13px;transform:rotate(-90deg)}
+.xax{grid-column:2/4;grid-row:4;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.xax .xline{flex:1;height:1px;background:var(--border2)}
+.xax .xmid{color:var(--soft)}
+.quote{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:26px 26px 22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.quote blockquote{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,30px);line-height:1.12;letter-spacing:-.035em}
+.quote cite{font-style:normal;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--muted)}
+.quote p{font-size:15px;color:var(--soft)}
+.quote .ev{margin-top:auto;padding-top:14px;border-top:1px solid var(--border);font-size:14px;color:var(--soft)}
+.quote .ev b{color:var(--text);font-weight:600}
+
+/* 02 — the nine signs (PHQ-9) */
+.split{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:22px;font-size:14.5px;color:var(--soft)}
+.split .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.split .seg{display:inline-flex;align-items:center;gap:8px}
+.split .seg b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.g-feel{background:var(--chill-dim);color:var(--chill-bright);border-color:rgba(123,108,255,.3)}
+.g-body{background:var(--constructive-dim);color:var(--constructive);border-color:rgba(0,229,160,.28)}
+.g-mind{background:var(--curious-dim);color:var(--curious);border-color:rgba(245,200,66,.28)}
+.phq{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;margin-top:22px;align-items:start}
+.qs{display:grid;gap:10px}
+.qhead{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 4px}
+.q{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:16px 18px;display:grid;gap:12px;transition:border-color .2s}
+.q.ans{border-color:rgba(155,143,255,.35)}
+.q.mood{border-color:rgba(155,143,255,.55);box-shadow:inset 3px 0 0 var(--chill-bright)}
+.q.safety9.flag{border-color:rgba(255,95,126,.7);box-shadow:inset 3px 0 0 var(--caring)}
+.q .top{display:flex;align-items:flex-start;gap:12px}
+.q .n{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px;min-width:18px}
+.q .qt{flex:1;min-width:0}
+.q .qt .txt{font-size:15.5px;color:var(--text);line-height:1.45}
+.q .qt .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.q .only{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--chill-bright);align-self:center}
+.opts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.opts input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.opts label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;text-align:center;padding:8px 6px;border-radius:12px;border:1px solid var(--border2);background:var(--surface2);font-size:12.5px;line-height:1.25;color:var(--soft);transition:border-color .15s,background .15s,color .15s;-webkit-user-select:none;user-select:none;min-height:46px}
+.opts label b{font-family:var(--mono);font-weight:500;font-size:11px;color:var(--muted)}
+.opts label:hover{border-color:rgba(255,255,255,.3)}
+.opts input:checked+label{background:var(--chill-dim);border-color:var(--chill-bright);color:var(--text)}
+.opts input:checked+label b{color:var(--chill-bright)}
+.opts input:focus-visible+label{outline:2px solid var(--chill-bright);outline-offset:2px}
+.safety9 .opts input:checked:not([value="0"])+label{background:var(--caring-dim);border-color:var(--caring)}
+.safety9 .opts input:checked:not([value="0"])+label b{color:var(--caring)}
+.inline-help{border-radius:14px;padding:12px 14px;background:var(--caring-dim);border:1px solid rgba(255,95,126,.45);font-size:14.5px;color:var(--text)}
+.inline-help .go{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.q.fnq{background:transparent;border-style:dashed}
+.q.fnq .opts label{font-size:12px}
+.score{position:sticky;top:140px;background:var(--surface);border:1px solid var(--border2);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.score::before{content:'';position:absolute;left:0;top:0;right:0;height:3px;background:var(--bandc,var(--muted2));transition:background .3s}
+.score .sk{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.score .sn{display:flex;align-items:baseline;gap:8px;font-variant-numeric:tabular-nums}
+.score .sn b{font-family:var(--display);font-weight:800;font-size:64px;line-height:.9;letter-spacing:-.04em}
+.score .sn span{font-family:var(--mono);font-size:14px;color:var(--muted)}
+.score .bandname{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.025em;color:var(--bandc,var(--soft))}
+.scale{position:relative;display:flex;gap:3px;height:10px;margin:4px 0 18px}
+.scale i{display:block;height:100%;border-radius:4px;opacity:.55}
+.scale i:nth-child(1){flex:5;background:var(--constructive)}
+.scale i:nth-child(2){flex:5;background:#b8e35a}
+.scale i:nth-child(3){flex:5;background:var(--curious)}
+.scale i:nth-child(4){flex:5;background:#ff9a5f}
+.scale i:nth-child(5){flex:8;background:var(--caring)}
+.scale .mk{position:absolute;top:-4px;width:4px;height:18px;margin-left:-2px;border-radius:3px;background:var(--text);box-shadow:0 0 0 2px var(--bg);transition:left .4s cubic-bezier(.34,1.56,.64,1)}
+.scale .ticks{position:absolute;left:0;right:0;top:14px;font-family:var(--mono);font-size:10px;color:var(--muted)}
+.scale .ticks span{position:absolute;transform:translateX(-50%)}
+.score p{font-size:14.5px;color:var(--soft)}
+.score .urgent{border-radius:14px;padding:12px 14px;background:var(--caring-dim);border:1px solid rgba(255,95,126,.55);font-size:14px}
+.score .urgent b{color:var(--text)}
+.score .urgent .go{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.score .acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.score .acts .logged{font-family:var(--mono);font-size:11.5px;color:var(--constructive)}
+.hist{display:flex;align-items:flex-end;gap:6px;min-height:84px;padding:10px 0 0;border-top:1px solid var(--border)}
+.hist .empty{font-size:13px;color:var(--muted);align-self:center}
+.hist .hb{flex:1;max-width:30px;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+.hist .hb i{display:block;width:100%;border-radius:5px 5px 2px 2px;min-height:3px}
+.hist .hb span{font-family:var(--mono);font-size:9.5px;color:var(--muted);white-space:nowrap}
+.hist .hb em{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--soft)}
+.score .fine{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* 03 — serotonin timeline */
+.tl{position:relative;margin-top:28px;display:grid;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:8px 0}
+.tli{display:grid;grid-template-columns:120px 26px 1fr;gap:0 14px;padding:14px 22px}
+.tli .yr{font-family:var(--mono);font-size:13px;color:var(--text);padding-top:2px;font-variant-numeric:tabular-nums}
+.tli .yr small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.tli .rail{position:relative;display:flex;justify-content:center}
+.tli .rail::before{content:'';position:absolute;top:0;bottom:-28px;width:1px;background:var(--border2)}
+.tli:last-child .rail::before{bottom:auto;height:14px}
+.tli .rail i{position:relative;width:11px;height:11px;border-radius:50%;margin-top:6px;background:var(--bg);border:2px solid var(--muted)}
+.tli.k .rail i{border-color:var(--chill-bright);background:var(--chill-bright)}
+.tli.r .rail i{border-color:var(--caring)}
+.tli .bd h3{font-size:18px;margin-bottom:3px}
+.tli .bd p{font-size:15px;color:var(--soft);max-width:720px}
+.tli .bd .src{display:inline-block;margin-top:6px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.means{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.mean{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.mean h3{font-size:20px;display:flex;align-items:center;gap:12px}
+.mean p{font-size:15px;color:var(--soft)}
+.mean .stat{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.mean .stat span{font-family:var(--mono);font-size:11.5px;padding:4px 10px;border-radius:var(--pill);background:var(--surface2);border:1px solid var(--border);color:var(--soft);font-variant-numeric:tabular-nums}
+.mean.warn{border-color:rgba(255,95,126,.35)}
+
+/* 04 — purpose loops + evidence */
+.loops{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.loop{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:6px}
+.loop .lh{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.loop .lh h3{font-size:21px}
+.loop .lh .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.steps{list-style:none;display:grid;gap:0;position:relative;padding-left:26px}
+.steps::before{content:'';position:absolute;left:8px;top:14px;bottom:14px;width:2px;border-radius:2px;background:var(--accent);opacity:.45}
+.steps li{position:relative;padding:8px 0;font-size:15px;color:var(--soft)}
+.steps li b{color:var(--text);font-weight:600}
+.steps li::before{content:'';position:absolute;left:-23px;top:15px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.round{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-family:var(--mono);font-size:11.5px;color:var(--accent)}
+.round svg{width:14px;height:14px}
+.evi{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.ecard{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.ecard .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ecard h3{font-size:20px}
+.ecard p{font-size:15px;color:var(--soft)}
+.ecard .nums{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.ecard .nums span{font-family:var(--mono);font-size:11.5px;padding:4px 10px;border-radius:var(--pill);background:var(--constructive-dim);color:var(--constructive);border:1px solid rgba(0,229,160,.25);font-variant-numeric:tabular-nums}
+.purpose-line{position:relative;overflow:hidden;margin-top:16px;padding:22px 24px 22px 28px;background:var(--surface);border:1px solid var(--border2);border-radius:20px}
+.purpose-line::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--chill-bright),var(--caring),var(--constructive),var(--curious))}
+.purpose-line .rt{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.03em;margin-bottom:6px}
+.purpose-line p{color:var(--soft);font-size:15.5px;max-width:820px}
+
+/* 05 — small moves (cards + checks) */
+.moves{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px;transition:border-color .3s,box-shadow .3s}
+.card-head{display:flex;align-items:center;gap:12px}
+.card-head .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.card h3{font-size:23px}
+.card-head .count-pill{margin-left:auto}
+.card.done{box-shadow:0 0 0 1px var(--constructive),0 18px 60px -24px var(--constructive)}
+.card .why{font-size:14.5px;color:rgba(240,238,255,.74);padding-left:14px;border-left:2px solid var(--accent)}
+.rows{list-style:none;display:grid;gap:8px}
+.check-row{display:grid;grid-template-columns:22px 1fr;column-gap:12px;align-items:start;padding:12px 14px;border-radius:14px;background:var(--surface2);border:1px solid var(--border);transition:border-color .2s,background .2s;-webkit-user-select:none;user-select:none}
+.check-row:hover{border-color:var(--border2)}
+.check-row .check{width:22px;height:22px;border-radius:7px;border:1.5px solid var(--border2);display:grid;place-items:center;margin-top:1px;transition:background .2s,border-color .2s}
+.check-row .check svg{width:14px;height:14px;opacity:0;color:var(--bg);transition:opacity .15s}
+.check-row .tier{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+.check-row .txt{font-size:15px;color:var(--text)}
+.check-row.on{border-color:rgba(0,229,160,.5);background:var(--constructive-dim)}
+.check-row.on .check{background:var(--constructive);border-color:var(--constructive)}
+.check-row.on .check svg{opacity:1}
+.count-pill{font-family:var(--mono);font-size:11.5px;padding:4px 11px;border-radius:var(--pill);background:var(--surface2);color:var(--muted);border:1px solid var(--border);white-space:nowrap;font-variant-numeric:tabular-nums}
+.card.done .count-pill{background:var(--constructive-dim);color:var(--constructive);border-color:transparent}
+.boxes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.box{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.box h3{font-size:21px;display:flex;align-items:center;gap:12px}
+.box h3 small{font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:1px}
+.box label{font-size:14px;font-weight:600;color:var(--text);margin-top:2px}
+.box textarea{width:100%;min-height:92px;resize:vertical;background:var(--bg);border:1px solid var(--border2);border-radius:14px;padding:12px 14px;color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.5;outline:none;transition:border-color .2s,box-shadow .2s}
+.box textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+.box textarea::placeholder{color:rgba(240,238,255,.32)}
+.saved{margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--muted);transition:color .3s}
+.saved.flash{color:var(--constructive)}
+
+/* 06 — red flags */
+.flags{margin-top:28px;display:grid;gap:12px}
+.rf{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 22px;background:var(--surface);border:1px solid rgba(255,95,126,.28);border-radius:20px}
+.rf .ico{--accent:var(--caring);--accent-dim:var(--caring-dim);width:44px;height:44px}
+.rf.calm{border-color:var(--border)}
+.rf.calm .ico{--accent:var(--chill-bright);--accent-dim:var(--chill-dim)}
+.rf h3{font-size:19px;margin-bottom:4px}
+.rf p{color:var(--soft);font-size:15px}
+.rf .go{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tel{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:var(--pill);background:var(--surface2);border:1px solid var(--border2);color:var(--text);text-decoration:none;font-size:13.5px;font-weight:600;transition:border-color .2s}
+.tel:hover{border-color:rgba(255,255,255,.32)}
+.tel b{font-family:var(--mono);font-weight:500;color:var(--curious);white-space:nowrap}
+.tel.urgent{border-color:rgba(255,95,126,.55);background:var(--caring-dim)}
+.tel.urgent b{color:var(--caring)}
+.path{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.pstep{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.pstep .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--chill-bright)}
+.pstep h3{font-size:18px}
+.pstep p{font-size:14.5px;color:var(--soft)}
+.pstep a{color:var(--text)}
+
+/* 07 — someone you love */
+.two{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin-top:28px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px 26px}
+.panel h3{font-size:21px;display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.panel ul{list-style:none;display:grid;gap:12px}
+.panel li{position:relative;padding-left:20px;color:var(--soft);font-size:15.5px}
+.panel li b{color:var(--text);font-weight:600}
+.panel li::before{content:'';position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.panel p{color:var(--soft);font-size:15.5px}
+.panel .go{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+
+/* 08 — help */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.svc{display:flex;flex-direction:column;gap:3px;padding:16px 18px;border-radius:18px;background:var(--surface);border:1px solid var(--border);color:var(--text);text-decoration:none;transition:border-color .2s,transform .2s}
+a.svc:hover{border-color:var(--border2);transform:translateY(-2px)}
+.svc .nm{font-weight:600;font-size:15px}
+.svc .num{font-family:var(--mono);font-size:16px;color:var(--curious)}
+.svc .for{font-size:13.5px;color:var(--muted)}
+.svc.urgent{border-color:rgba(255,95,126,.45);background:linear-gradient(180deg,rgba(255,95,126,.08),var(--surface))}
+.svc.urgent .num{color:var(--caring)}
+.help-else{margin-top:16px;font-size:14px;color:var(--muted)}
+.help-else a{color:var(--text)}
+
+/* sources */
+.sources{margin-top:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:0 22px}
+.sources summary{list-style:none;display:flex;align-items:center;gap:10px;padding:18px 0;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary svg{width:16px;height:16px;color:var(--muted);transition:transform .2s}
+.sources[open] summary svg{transform:rotate(90deg)}
+.sources summary span{font-family:var(--mono);font-weight:500;font-size:11.5px;color:var(--muted);margin-left:auto}
+.sources ol{padding:0 0 20px 20px;display:grid;gap:8px;font-size:13.5px;color:var(--soft)}
+.sources ol li::marker{color:var(--muted);font-family:var(--mono);font-size:11px}
+.sources a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2)}
+.sources a:hover{border-color:var(--chill-bright)}
+
+/* closing */
+.closing{padding:96px 0 12px;text-align:center;overflow:hidden}
+.closing h2{margin:10px auto 14px}
+.closing .lede{margin:0 auto}
+.closing .jump-row{margin-top:28px}
+.companion{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:14.5px;color:var(--soft);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:2px}
+.companion:hover{color:var(--text)}
+.companion svg{width:15px;height:15px}
+
+@media (prefers-reduced-motion:reduce){
+  .gblob,.hero-pill .dot{animation:none}
+  html{scroll-behavior:auto}
+  .scale .mk{transition:none}
+}
+
+/* responsive */
+@media (max-width:980px){.services,.path{grid-template-columns:1fr 1fr}.fvwrap{grid-template-columns:1fr}}
+@media (max-width:900px){.phq{grid-template-columns:1fr}.score{position:static}}
+@media (max-width:820px){.moves,.boxes,.two,.means,.loops,.evi{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .lrow{grid-template-columns:1fr 1fr}
+  .lrow .lk{grid-column:1/-1;padding-bottom:0}
+  .lhead .lk{display:none}
+  .lrow>div{padding:12px 16px}
+  .lrow:not(.lhead) .lk~div{padding-top:6px}
+  .tli{grid-template-columns:22px 1fr;padding:12px 18px}
+  .tli .yr{grid-column:2;grid-row:1;padding-top:0}
+  .tli .rail{grid-column:1;grid-row:1/3}
+  .tli .bd{grid-column:2}
+  .tli .rail::before{bottom:-24px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .hero{padding:124px 0 64px}
+  section.block{padding-top:60px}
+  .services,.path{grid-template-columns:1fr}
+  .ptext .lbl{display:none}
+  .btn span{display:none}
+  .btn{padding:8px 10px}
+  .card,.panel,.rf,.quote,.ecard,.mean,.loop{padding:20px}
+  .rf{grid-template-columns:1fr;gap:12px}
+  .gblob{opacity:.15}
+  .li,.ld{font-size:14.5px}
+  .fv{padding:16px 14px 12px;grid-template-columns:22px 1fr 1fr;gap:8px}
+  .st{padding:10px 11px}
+  .st .nm{font-size:15px}
+  .st p{font-size:12.5px}
+  .band .faces{grid-template-columns:1fr}
+  .opts{grid-template-columns:repeat(2,1fr)}
+  .q{padding:14px}
+  .score .sn b{font-size:54px}
+  .confirm .ctext{display:none}
+}
+
+/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:#09090f;font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:640px){.sd-nav-in{padding-inline:16px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+body>main,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,summary,[role="button"],[role="checkbox"]{cursor:none}
+  textarea{cursor:text}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+  #cur.off{opacity:0!important}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-telescope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="13" r="3"/><path d="M3 7l5.5 2.5"/><path d="M3 7l2-4 14.5 6.5-2 4"/><path d="M8.5 9.5L6 20h5l1.5-4"/><path d="M17 16v4"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+  <symbol id="ic-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></symbol>
+  <symbol id="ic-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+  <symbol id="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ic-reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="ic-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.4 6 11.3a6 6 0 0 1-12 0c0-4.9 6-11.3 6-11.3z"/></symbol>
+  <symbol id="ic-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></symbol>
+  <symbol id="ic-loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+  <symbol id="ic-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="ic-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2Z"/></symbol>
+  <symbol id="ic-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+</svg>
+
+<div id="cur" aria-hidden="true"></div>
+
+<header class="sd-nav sd-fixed" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+    <span class="sd-crumb">/ Depression</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a href="#not-sad">Not sadness</a><a href="#signs">Nine signs</a><a href="#serotonin">Serotonin</a><a href="#purpose">Purpose</a><a href="#moves">Small moves</a></nav>
+    <a class="sd-cta" href="#help">Get help now</a>
+  </div>
+</header>
+
+<header class="hero" id="top">
+  <div class="gblob gb1"></div><div class="gblob gb2"></div><div class="gblob gb3"></div><div class="gblob gb4"></div>
+  <div class="wrap">
+    <span class="hero-pill"><span class="dot"></span>Feel · Depression</span>
+    <h1>Depression isn’t sadness.<br><span class="grad">It’s the dimmer switch.</span></h1>
+    <p class="sub">It isn’t the opposite of happiness either. Depression turns down interest, energy, sleep, appetite, focus and self-worth, and often feeling itself. This guide covers what it is, why the low-serotonin story didn’t hold up, and why doing small things that matter before you feel like it, a therapy called behavioural activation, is one of the best-tested ways back.</p>
+    <div class="safety">In danger right now? Call <a href="tel:000">000</a>, or Lifeline on <a href="tel:131114">13 11 14</a>, any time.</div>
+    <div class="jump-row">
+      <a class="mode-pill mp-l" href="#m-chill"><svg><use href="#ic-waves"/></svg>Chill</a>
+      <a class="mode-pill mp-b" href="#m-constructive"><svg><use href="#ic-hammer"/></svg>Constructive</a>
+      <a class="mode-pill mp-k" href="#m-caring"><svg><use href="#ic-heart"/></svg>Caring</a>
+      <a class="mode-pill mp-c" href="#m-curious"><svg><use href="#ic-telescope"/></svg>Curious</a>
+    </div>
+    <p class="fine">Plain language, evidence-checked, and not a diagnosis. Everything you tick or type stays on this device.</p>
+  </div>
+</header>
+
+<div class="progress-wrap">
+  <div class="wrap">
+    <span class="ptext"><b id="ansN">0</b>/9<span class="lbl"> answered</span><span class="sep">·</span><span class="lbl">score </span><b id="pScore">–</b><span class="sep">·</span><b id="movN">0</b>/<span id="movTotal">12</span><span class="lbl"> small moves</span></span>
+    <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+    <span id="toolBtns" style="display:inline-flex;gap:8px">
+      <button type="button" class="btn" id="copyBtn" title="Copy a summary to take to your GP"><svg><use href="#ic-copy"/></svg><span>Copy</span></button>
+      <button type="button" class="btn" id="dlBtn" title="Download as Markdown"><svg><use href="#ic-download"/></svg><span>Download</span></button>
+      <button type="button" class="btn ghost" id="resetBtn" title="Clear everything on this page"><svg><use href="#ic-reset"/></svg><span>Reset</span></button>
+    </span>
+    <span class="confirm" id="confirmBar" hidden><span class="ctext">Clear everything?</span><button type="button" class="btn warn" id="resetYes">Clear</button><button type="button" class="btn ghost" id="resetNo">Cancel</button></span>
+  </div>
+</div>
+
+<main>
+
+<section class="block" id="not-sad">
+  <div class="wrap">
+    <div class="eyebrow"><b>01</b> · Not sadness</div>
+    <h2>Sadness is a feeling. Depression is a state.</h2>
+    <p class="lede">Sadness is usually about something, and it moves. Depression can arrive without a reason, outlast the reason it had, and flatten everything else on the way, good feelings and bad ones alike.</p>
+    <div class="line" role="table" aria-label="Sadness compared with depression">
+      <div class="lrow lhead" role="row"><div class="lk" role="columnheader"></div><div class="li" role="columnheader"><svg><use href="#ic-drop"/></svg>Sadness</div><div class="ld" role="columnheader"><svg><use href="#ic-dim"/></svg>Depression</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Cause</div><div class="li" role="cell">About something: a loss, a letdown, a goodbye</div><div class="ld" role="cell">Can arrive with no clear reason, or outlast the one it had</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Shape</div><div class="li" role="cell">Comes in waves, often set off by reminders</div><div class="ld" role="cell">Flat and steady, most of the day, nearly every day</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Other feelings</div><div class="li" role="cell">Still there. You can laugh in the middle of grief</div><div class="ld" role="cell">Turned down too. Many people feel numb, empty or irritable rather than sad</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Good things</div><div class="li" role="cell">Still land, even if briefly</div><div class="ld" role="cell">Stop landing. Clinicians call this anhedonia</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Self-worth</div><div class="li" role="cell">Mostly intact</div><div class="ld" role="cell">Erodes into guilt, worthlessness, feeling like a burden</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Body</div><div class="li" role="cell">Mostly unchanged</div><div class="ld" role="cell">Sleep, appetite, energy and movement shift</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Time</div><div class="li" role="cell">Eases over days to weeks</div><div class="ld" role="cell">Two weeks or more, and often doesn’t lift on its own</div></div>
+    </div>
+    <p class="note">Grief can turn into depression, and the two can sit together. <b>If the right-hand column has fit for two weeks or more, book a GP appointment.</b></p>
+
+    <h3 class="sub-h">It isn’t the opposite of happiness either.</h3>
+    <p class="lede">Mood runs from sad to happy. Depression sits on a different axis: how alive things feel. That’s why someone can smile through a dinner and still be depressed, and why grief, painful as it is, usually isn’t.</p>
+    <div class="fvwrap">
+      <figure class="fv" aria-label="Mood runs left to right from sad to happy. Vitality runs bottom to top from flat to alive. Grief and a good day sit high on vitality. Depression is a band along the bottom, across the whole mood range. The way out points up.">
+        <div class="yax"><span>Alive</span><span class="yline"></span><span class="ylbl">Vitality</span><span class="yline" style="background:var(--muted2)"></span><span>Flat</span></div>
+        <div class="st" style="grid-column:2;grid-row:1"><div class="nm"><i style="background:var(--curious)"></i>Grief</div><p>Sad, and still feeling and caring</p></div>
+        <div class="st" style="grid-column:3;grid-row:1"><div class="nm"><i style="background:var(--constructive)"></i>A good day</div><p>Happy and engaged</p></div>
+        <div class="st" style="grid-column:2;grid-row:2"><div class="nm"><i style="background:var(--caring)"></i>A bad week</div><p>Fed up, but still yourself</p></div>
+        <div class="st" style="grid-column:3;grid-row:2"><div class="nm"><i style="background:var(--chill-bright)"></i>A lazy Sunday</div><p>Content, low energy</p></div>
+        <div class="band">
+          <span class="upway"><svg><use href="#ic-arrow"/></svg>The way out runs up</span>
+          <div class="nm">Depression</div>
+          <div class="bd">Low vitality, whichever way mood points</div>
+          <div class="faces"><span>quietly sad</span><span>numb</span><span>smiling, still empty</span></div>
+        </div>
+        <div class="xax"><span>Sad</span><span class="xline"></span><span class="xmid">Mood</span><span class="xline"></span><span>Happy</span></div>
+      </figure>
+      <div class="quote">
+        <blockquote>“The opposite of depression is not happiness, but vitality.”</blockquote>
+        <cite>Andrew Solomon · TEDxMet, 2013</cite>
+        <p>Pushing for happiness aims right on that map. Recovery mostly comes from moving up: interest, energy, contact and doing things that matter.</p>
+        <p class="ev"><b>Chasing happy may not help.</b> In a 2014 study of people who’d had depression, those who valued happiness most had more symptoms, and as a group they valued happiness more than people who’d never been depressed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="signs">
+  <div class="wrap">
+    <div class="eyebrow"><b>02</b> · The nine signs</div>
+    <h2>Of nine signs doctors ask about, one is feeling down.</h2>
+    <p class="lede">This is the PHQ-9, one of the most widely used depression questionnaires. Four of its nine questions are about your body. To be diagnosed you need low mood <em>or</em> lost interest, so depression is possible without feeling sad at all.</p>
+    <div class="split" aria-label="How the nine questions group">
+      <span class="k">The nine, grouped</span>
+      <span class="seg"><span class="chip g-feel">Feeling</span><b>3</b></span>
+      <span class="seg"><span class="chip g-body">Body</span><b>4</b></span>
+      <span class="seg"><span class="chip g-mind">Mind</span><b>2</b></span>
+    </div>
+    <div class="phq">
+      <div>
+        <div class="qhead"><span>Over the last 2 weeks, how often have you been bothered by…</span></div>
+        <div class="qs" id="qs"></div>
+      </div>
+      <aside class="score" id="scoreCard" aria-live="polite">
+        <div class="sk">Your PHQ-9 · last 2 weeks</div>
+        <div class="sn"><b id="scoreN">–</b><span>/ 27</span></div>
+        <div class="bandname" id="bandName">Answer all nine</div>
+        <div class="scale" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><span class="mk" id="scaleMk" style="left:0;display:none"></span>
+          <div class="ticks"><span style="left:0%">0</span><span style="left:17.86%">5</span><span style="left:35.71%">10</span><span style="left:53.57%">15</span><span style="left:71.43%">20</span><span style="left:100%">27</span></div>
+        </div>
+        <p id="readText">Pick one answer for each question. Your score and what it means appear here.</p>
+        <div class="urgent" id="urgent" hidden>
+          <b>You said you’ve had thoughts of being better off dead or of hurting yourself.</b> Whatever your total, that’s a reason to talk to someone today.
+          <div class="go"><a class="tel urgent" href="tel:131114">Lifeline <b>13 11 14</b></a><a class="tel" href="tel:1300659467">Suicide Call Back <b>1300 659 467</b></a><a class="tel urgent" href="tel:000">Danger <b>000</b></a></div>
+        </div>
+        <div class="acts"><button type="button" class="btn" id="logBtn" disabled><svg><use href="#ic-check"/></svg>Log today’s score</button><span class="logged" id="loggedMsg"></span></div>
+        <div class="hist" id="hist"><span class="empty">Log a score every couple of weeks to see the trend. Your GP will find it useful.</span></div>
+        <p class="fine">A screening tool, not a diagnosis. PHQ-9 developed by Drs R.L. Spitzer, J.B.W. Williams, K. Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="serotonin">
+  <div class="wrap">
+    <div class="eyebrow"><b>03</b> · The serotonin story</div>
+    <h2>The low-serotonin story didn’t hold up.</h2>
+    <p class="lede">For decades depression was explained as a chemical imbalance: too little serotonin, topped up by a pill. It was simple and it eased stigma. When researchers pulled the evidence together, it wasn’t there.</p>
+    <div class="tl">
+      <div class="tli"><div class="yr">1950s<small>Accident</small></div><div class="rail"><i></i></div><div class="bd"><h3>Two drugs lift mood by chance</h3><p>Iproniazid, a tuberculosis drug, and imipramine, tested for other conditions, both improve mood in some patients. Both act on brain chemicals called monoamines.</p></div></div>
+      <div class="tli"><div class="yr">1965–67<small>Hypothesis</small></div><div class="rail"><i></i></div><div class="bd"><h3>Reasoning backwards</h3><p>If drugs that raise these chemicals help, perhaps depression is a shortage of them. Noradrenaline is proposed first, then serotonin.</p></div></div>
+      <div class="tli"><div class="yr">1987–90s<small>Marketing</small></div><div class="rail"><i></i></div><div class="bd"><h3>Prozac, and “chemical imbalance”</h3><p>Fluoxetine reaches the US market and the SSRI era begins. A serotonin shortage becomes the standard public explanation, much of it through advertising.</p></div></div>
+      <div class="tli r"><div class="yr">2014<small>Side effect</small></div><div class="rail"><i></i></div><div class="bd"><h3>The story changes how people cope</h3><p>People with current or past depression who were told (via a fake test) that a chemical imbalance caused it didn’t blame themselves less. They grew more pessimistic about recovery and less confident they could manage their own mood.</p><span class="src">Kemp, Lickel &amp; Deacon · Behaviour Research and Therapy</span></div></div>
+      <div class="tli k"><div class="yr">Jul 2022<small>Review</small></div><div class="rail"><i></i></div><div class="bd"><h3>No consistent evidence of a shortage</h3><p>An umbrella review led by Joanna Moncrieff at UCL pooled decades of work on serotonin in blood and brain fluid, its receptors and transporter, artificial depletion, and genes. It found no convincing evidence that depression is caused by low serotonin.</p><span class="src">Moncrieff et al. · Molecular Psychiatry</span></div></div>
+      <div class="tli"><div class="yr">Dec 2022<small>Counterpoint</small></div><div class="rail"><i></i></div><div class="bd"><h3>Some evidence of reduced release</h3><p>A brain-imaging study of 17 people with depression and 20 without found a reduced capacity to release serotonin in depression. It’s a small study, and the authors said serotonin problems are unlikely to explain everything about depression.</p><span class="src">Erritzoe et al. · Biological Psychiatry</span></div></div>
+      <div class="tli k"><div class="yr">Now<small>Consensus</small></div><div class="rail"><i></i></div><div class="bd"><h3>Many causes, interacting</h3><p>Genes, ongoing stress, loss, loneliness, trauma, poor sleep, inflammation, physical illness and some medications all contribute. Serotonin may play a part for some people. No single chemical explains depression.</p></div></div>
+    </div>
+
+    <h3 class="sub-h">What this does and doesn’t mean.</h3>
+    <div class="means">
+      <article class="mean" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)">
+        <h3><span class="ico"><svg><use href="#ic-brain"/></svg></span>It’s still real, and still physical</h3>
+        <p>Depression changes sleep, appetite, stress hormones and how the brain learns from experience. A one-chemical story was too simple. Plenty is still going on in the body and brain.</p>
+      </article>
+      <article class="mean" style="--accent:var(--constructive);--accent-dim:var(--constructive-dim)">
+        <h3><span class="ico"><svg><use href="#ic-pill"/></svg></span>Antidepressants still help many people</h3>
+        <p>All 21 antidepressants in the largest comparison beat placebo over about eight weeks. Average effects were modest, and some people respond strongly. Serotonin rises within hours of a dose but mood shifts over weeks, a clue that they work through slower changes.</p>
+        <div class="stat"><span>522 trials</span><span>116,477 adults</span><span>Lancet 2018</span></div>
+      </article>
+      <article class="mean warn" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <h3><span class="ico"><svg><use href="#ic-alert"/></svg></span>Don’t stop suddenly</h3>
+        <p>Coming off antidepressants can cause withdrawal effects. The 2022 review’s own authors advised talking to a health professional first. If you want to stop, plan a gradual reduction with your prescriber.</p>
+      </article>
+      <article class="mean" style="--accent:var(--curious);--accent-dim:var(--curious-dim)">
+        <h3><span class="ico"><svg><use href="#ic-key"/></svg></span>The story you believe changes what you do</h3>
+        <p>An explanation with no levers makes recovery look further away. You have many: sleep, movement, people, therapy, medication and purpose all act on depression. You can pull more than one at once.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="purpose">
+  <div class="wrap">
+    <div class="eyebrow"><b>04</b> · Purpose</div>
+    <h2>Motivation comes after you start.</h2>
+    <p class="lede">Depression says to wait until you feel like it. Waiting makes the day smaller, and a smaller day gives you fewer reasons to feel like anything. Purpose here doesn’t mean a life mission. It means one small thing that matters to you, done before the feeling arrives.</p>
+    <div class="loops">
+      <div class="loop" style="--accent:var(--caring)">
+        <div class="lh"><div><div class="k">The shrinking loop</div><h3>Waiting to feel like it</h3></div></div>
+        <ol class="steps">
+          <li><b>Feel flat.</b> Nothing seems worth the effort.</li>
+          <li><b>Wait to feel like it.</b> Cancel, put off, stay in.</li>
+          <li><b>Do less.</b> Fewer people, less movement, more time to ruminate.</li>
+          <li><b>Fewer good moments.</b> Less contact, less achievement, less pleasure.</li>
+        </ol>
+        <span class="round"><svg><use href="#ic-loop"/></svg>Round again, a little flatter</span>
+      </div>
+      <div class="loop" style="--accent:var(--constructive)">
+        <div class="lh"><div><div class="k">The activation loop</div><h3>Acting on what matters</h3></div></div>
+        <ol class="steps">
+          <li><b>Pick one small thing that matters.</b> Small enough that starting is easy.</li>
+          <li><b>Do it before you feel like it.</b> Schedule it, then follow the plan, not the mood.</li>
+          <li><b>Notice what it gave you.</b> A little contact, achievement or pleasure. Even 1% counts.</li>
+          <li><b>Slightly more energy.</b> Enough to pick the next small thing.</li>
+        </ol>
+        <span class="round"><svg><use href="#ic-loop"/></svg>Round again, a little wider</span>
+      </div>
+    </div>
+    <div class="evi">
+      <article class="ecard">
+        <div class="k">Behavioural activation · Lancet 2016</div>
+        <h3>Scheduling what matters is a therapy</h3>
+        <p>In the COBRA trial, 440 adults with depression got either behavioural activation from junior workers with five days’ training, or CBT from therapists. A year on, both groups had dropped from about 17 to about 8 on the PHQ-9, the same scale as section 02. Activation cost about a fifth less.</p>
+        <div class="nums"><span>440 adults</span><span>PHQ-9 ~17 → ~8</span><span>~21% cheaper</span></div>
+      </article>
+      <article class="ecard">
+        <div class="k">Exercise · BMJ 2024</div>
+        <h3>Moving counts, and harder counts more</h3>
+        <p>A review of 218 trials found walking or jogging, yoga and strength training each brought moderate drops in depression. Harder sessions helped more than light ones. Yoga and strength training had the fewest dropouts. The authors rated the certainty of this evidence low to very low, so treat the size of the effect with caution.</p>
+        <div class="nums"><span>218 trials</span><span>14,170 people</span><span>walk · yoga · strength</span></div>
+      </article>
+    </div>
+    <div class="purpose-line">
+      <div class="rt">Ask what matters, not what you feel like.</div>
+      <p>“What would I do today if it mattered?” gets a different answer from “What do I feel like doing?” The first question is where purpose starts. The 4Cs give you four places to look.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="moves">
+  <div class="wrap">
+    <div class="eyebrow"><b>05</b> · Small moves</div>
+    <h2>One small move per mode, before you feel like it.</h2>
+    <p class="lede">Depression flattens all four modes at once. Each card names how, and three moves sized for a flat day. Start with Chill and Constructive; rhythm and one finished thing make the other two easier.</p>
+    <div class="moves" id="movesGrid"></div>
+    <h3 class="sub-h">Write it down while you can see it.</h3>
+    <p class="lede">Plans made on a better day carry you through a flat one. These save on this device and come with you when you copy or download.</p>
+    <div class="boxes" id="boxes"></div>
+    <div class="saved" id="savedMsg" aria-live="polite">Saves as you type.</div>
+  </div>
+</section>
+
+<section class="block" id="flags">
+  <div class="wrap">
+    <div class="eyebrow"><b>06</b> · When to get help</div>
+    <h2>See someone soon if any of these are true.</h2>
+    <p class="lede">Small moves help, and they work best alongside proper care. Each of these is a reason to talk to a person, not a page.</p>
+    <div class="flags">
+      <div class="rf">
+        <span class="ico"><svg><use href="#ic-alert"/></svg></span>
+        <div><h3>You’re thinking about death, suicide or hurting yourself</h3><p>Or that people would be better off without you. You don’t need to be sure it’s serious enough to call.</p>
+        <div class="go"><a class="tel urgent" href="tel:131114">Lifeline <b>13 11 14</b></a><a class="tel" href="tel:1300659467">Suicide Call Back Service <b>1300 659 467</b></a><a class="tel urgent" href="tel:000">Immediate danger <b>000</b></a></div></div>
+      </div>
+      <div class="rf">
+        <span class="ico"><svg><use href="#ic-alert"/></svg></span>
+        <div><h3>Low mood with voices, or beliefs others find strange</h3><p>Hearing or seeing things others don’t, or becoming convinced of things that worry the people around you. This needs an assessment today: call your GP or go to an emergency department.</p></div>
+      </div>
+      <div class="rf calm">
+        <span class="ico"><svg><use href="#ic-alert"/></svg></span>
+        <div><h3>It’s been two weeks or more and life is slipping</h3><p>Work, study, home or relationships are suffering. Book a GP appointment this week. A GP also checks for physical causes that look like depression, such as an underactive thyroid, anaemia, sleep apnoea or a medication side effect.</p></div>
+      </div>
+      <div class="rf calm">
+        <span class="ico"><svg><use href="#ic-alert"/></svg></span>
+        <div><h3>You’ve also had highs</h3><p>Stretches of unusual energy, little need for sleep, racing ideas or risky spending. Tell your GP before starting an antidepressant, because depression in bipolar disorder is treated differently.</p></div>
+      </div>
+      <div class="rf calm">
+        <span class="ico"><svg><use href="#ic-alert"/></svg></span>
+        <div><h3>You’re pregnant or have a new baby</h3><p>Depression around pregnancy and birth is common and treatable, for mums and dads.</p>
+        <div class="go"><a class="tel" href="tel:1300726306">PANDA <b>1300 726 306</b></a></div></div>
+      </div>
+      <div class="rf calm">
+        <span class="ico"><svg><use href="#ic-alert"/></svg></span>
+        <div><h3>You’re drinking or using more to get through</h3><p>Alcohol eases the evening and deepens the next day.</p>
+        <div class="go"><a class="tel" href="tel:1800250015">National Alcohol and Other Drug Hotline <b>1800 250 015</b></a></div></div>
+      </div>
+    </div>
+
+    <h3 class="sub-h">How care works in Australia.</h3>
+    <div class="path">
+      <div class="pstep"><div class="k">Start here</div><h3>Your GP</h3><p>Book with your usual GP or the practice you’re enrolled with in MyMedicare. Say it plainly: “I think I might be depressed.” Bring your PHQ-9 score.</p></div>
+      <div class="pstep"><div class="k">Better Access</div><h3>Plan and referral</h3><p>A mental health treatment plan and a written referral give you up to 10 individual and 10 group sessions a calendar year with Medicare rebates.</p></div>
+      <div class="pstep"><div class="k">Free, no referral</div><h3>Start this week</h3><p>Medicare Mental Health Check In offers free low-intensity CBT for people 16 and over on <a href="tel:1800595212">1800 595 212</a>. <a href="https://www.mindspot.org.au" target="_blank" rel="noopener">MindSpot</a> runs free online courses for adults.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="loved">
+  <div class="wrap">
+    <div class="eyebrow"><b>07</b> · Someone you love</div>
+    <h2>If someone you love has gone flat.</h2>
+    <p class="lede">You can’t lift it for them. You can make the next step easier and keep showing up.</p>
+    <div class="two">
+      <div class="panel" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <h3><span class="ico"><svg><use href="#ic-users"/></svg></span>What helps</h3>
+        <ul>
+          <li><b>Ask directly about suicide if you’re worried.</b> Asking doesn’t put the idea in someone’s head. It tells them they’re allowed to say it.</li>
+          <li><b>Skip “cheer up”.</b> It aims at happiness. Invite them to do one small thing with you instead: a walk, a coffee, an errand.</li>
+          <li><b>Make the first step smaller.</b> Offer to book the GP, drive them there, or sit with them while they call.</li>
+          <li><b>Keep inviting.</b> Expect “no” for a while. The invitation itself tells them they still belong.</li>
+          <li><b>Look after yourself too.</b> Most services below support family and friends as well.</li>
+        </ul>
+      </div>
+      <div class="panel" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)">
+        <h3><span class="ico"><svg><use href="#ic-shield"/></svg></span>If you’re worried about their safety</h3>
+        <p>Stay with them if you can, and call Lifeline together. If they’re in immediate danger, call 000. You can also call Lifeline about someone else, any time.</p>
+        <div class="go"><a class="tel urgent" href="tel:131114">Lifeline <b>13 11 14</b></a><a class="tel urgent" href="tel:000">Immediate danger <b>000</b></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="help">
+  <div class="wrap">
+    <div class="eyebrow"><b>08</b> · Help</div>
+    <h2>People whose job this is.</h2>
+    <p class="lede">Free and confidential in Australia. Calling isn’t admitting defeat. It’s Caring and Curious, pointed at yourself.</p>
+    <div class="services">
+      <a class="svc urgent" href="tel:000"><span class="nm">Emergency</span><span class="num">000</span><span class="for">Immediate danger to you or anyone else.</span></a>
+      <a class="svc urgent" href="tel:131114"><span class="nm">Lifeline</span><span class="num">13 11 14</span><span class="for">24/7 crisis support, whatever’s going on.</span></a>
+      <a class="svc" href="tel:1300659467"><span class="nm">Suicide Call Back Service</span><span class="num">1300 659 467</span><span class="for">24/7 counselling if suicide is on your mind or someone else’s.</span></a>
+      <a class="svc" href="tel:1300224636"><span class="nm">Beyond Blue</span><span class="num">1300 22 4636</span><span class="for">24/7 support for depression, anxiety and feeling overwhelmed.</span></a>
+      <a class="svc" href="tel:1800595212"><span class="nm">Medicare Mental Health</span><span class="num">1800 595 212</span><span class="for">Free Check In program, 16+, no referral or diagnosis needed.</span></a>
+      <a class="svc" href="tel:139276"><span class="nm">13YARN</span><span class="num">13 92 76</span><span class="for">24/7 crisis support for Aboriginal and Torres Strait Islander people.</span></a>
+      <a class="svc" href="tel:1300789978"><span class="nm">MensLine Australia</span><span class="num">1300 78 99 78</span><span class="for">24/7 counselling for men, about anything.</span></a>
+      <a class="svc" href="tel:1300726306"><span class="nm">PANDA</span><span class="num">1300 726 306</span><span class="for">Perinatal anxiety and depression, for expecting and new parents.</span></a>
+      <a class="svc" href="tel:1800184527"><span class="nm">QLife</span><span class="num">1800 184 527</span><span class="for">LGBTIQ+ peer support and referral, every afternoon and evening.</span></a>
+      <a class="svc" href="tel:1800551800"><span class="nm">Kids Helpline</span><span class="num">1800 55 1800</span><span class="for">24/7 counselling for young people aged 5 to 25.</span></a>
+      <a class="svc" href="https://www.mindspot.org.au" target="_blank" rel="noopener"><span class="nm">MindSpot</span><span class="num">mindspot.org.au</span><span class="for">Free online assessment and courses for adults.</span></a>
+      <div class="svc"><span class="nm">Your GP</span><span class="num">Book this week</span><span class="for">Ask about a mental health treatment plan and a referral.</span></div>
+    </div>
+    <p class="help-else">Outside Australia, <a href="https://findahelpline.com" rel="noopener" target="_blank">findahelpline.com</a> lists free, confidential support by country.</p>
+
+    <details class="sources">
+      <summary><svg><use href="#ic-chev"/></svg>Sources<span>11</span></summary>
+      <ol>
+        <li>Solomon A. <a href="https://www.ted.com/talks/andrew_solomon_depression_the_secret_we_share" target="_blank" rel="noopener">Depression, the secret we share</a>. TEDxMet, 2013.</li>
+        <li>Ford BQ, Shallcross AJ, Mauss IB, et al. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4321693/" target="_blank" rel="noopener">Desperately seeking happiness: valuing happiness is associated with symptoms and diagnosis of depression</a>. J Soc Clin Psychol, 2014.</li>
+        <li>Kroenke K, Spitzer RL, Williams JBW. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med, 2001. <a href="https://cde.nida.nih.gov/system/files/PatientHealthQuestionnaire-9_2014Mar19.pdf" target="_blank" rel="noopener">Questionnaire (PDF)</a>.</li>
+        <li>Moncrieff J, Cooper RE, Stockmann T, et al. The serotonin theory of depression: a systematic umbrella review of the evidence. Mol Psychiatry, 2023 (online July 2022). <a href="https://www.sciencedaily.com/releases/2022/07/220720080145.htm" target="_blank" rel="noopener">Summary</a>.</li>
+        <li>Erritzoe D, Godlewska BR, Rizzo G, et al. Brain serotonin release is reduced in patients with depression: a [11C]Cimbi-36 PET study with a d-amphetamine challenge. Biol Psychiatry, 2023 (online December 2022). <a href="https://www.elsevier.com/about/press-releases/new-support-for-a-serotonin-deficit-in-depression" target="_blank" rel="noopener">Summary</a>.</li>
+        <li>Kemp JJ, Lickel JJ, Deacon BJ. <a href="https://ro.uow.edu.au/sspapers/2078" target="_blank" rel="noopener">Effects of a chemical imbalance causal explanation on individuals’ perceptions of their depressive symptoms</a>. Behav Res Ther, 2014.</li>
+        <li>Cipriani A, Furukawa TA, Salanti G, et al. Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder. Lancet, 2018. <a href="https://evidence.nihr.ac.uk/alert/the-most-effective-antidepressants-for-adults-revealed-in-major-review/" target="_blank" rel="noopener">NIHR summary</a>.</li>
+        <li>Richards DA, Ekers D, McMillan D, et al. Cost and outcome of behavioural activation versus CBT for depression (COBRA). Lancet, 2016. <a href="https://evidence.nihr.ac.uk/alert/simpler-cheaper-therapy-behavioural-activation-can-be-as-good-as-cbt-for-treating-depression/" target="_blank" rel="noopener">NIHR summary</a>.</li>
+        <li>Noetel M, Sanders T, Gallardo-Gómez D, et al. <a href="https://www.bmj.com/content/384/bmj-2023-075847" target="_blank" rel="noopener">Effect of exercise for depression: systematic review and network meta-analysis</a>. BMJ, 2024.</li>
+        <li>Australian Government Department of Health. <a href="https://www.health.gov.au/sites/default/files/2026-03/better-access-fact-sheet-professionals_0.pdf" target="_blank" rel="noopener">Better Access fact sheet</a>, March 2026.</li>
+        <li>Australian Government. <a href="https://www.medicarementalhealth.gov.au/news/medicare-mental-health-check-in-more-choice-same-support" target="_blank" rel="noopener">Medicare Mental Health Check In</a>, 2026.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Turning it up</div>
+    <h2>You don’t have to feel like it to start.</h2>
+    <p class="lede">Pick one small move from one mode and do it today. Then tell one person how it’s really been. Vitality comes back in steps, and the first one is usually small.</p>
+    <div class="jump-row">
+      <a class="mode-pill mp-l" href="#m-chill"><svg><use href="#ic-waves"/></svg>Chill</a>
+      <a class="mode-pill mp-b" href="#m-constructive"><svg><use href="#ic-hammer"/></svg>Constructive</a>
+      <a class="mode-pill mp-k" href="#m-caring"><svg><use href="#ic-heart"/></svg>Caring</a>
+      <a class="mode-pill mp-c" href="#m-curious"><svg><use href="#ic-telescope"/></svg>Curious</a>
+    </div>
+    <a class="companion" href="/vagus-nerve">For a body-first way to settle, try the Vagus nerve breathing guide <svg><use href="#ic-arrow"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="/the-undertow"><i style="background:var(--caring)"></i>The undertow</a><a href="/obsessive-by-nature"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="/fascia"><i style="background:var(--constructive)"></i>Fascia</a><a href="/eye-movement"><i style="background:var(--constructive)"></i>Eye movement</a><a href="/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>Plain language, evidence-checked, and not a diagnosis.</b> Your answers save privately on this device. On a shared device, use Reset when you’re done. In danger right now? Call 000, or Lifeline on 13 11 14.</p>
+</footer>
+
+<script>
+/* ---------- content model ---------- */
+const MODES = {
+  curious:      { name:'Curious',      icon:'ic-telescope', color:'var(--curious)',      dim:'var(--curious-dim)' },
+  caring:       { name:'Caring',       icon:'ic-heart',     color:'var(--caring)',       dim:'var(--caring-dim)' },
+  constructive: { name:'Constructive', icon:'ic-hammer',    color:'var(--constructive)', dim:'var(--constructive-dim)' },
+  chill:        { name:'Chill',        icon:'ic-waves',     color:'var(--chill-bright)', dim:'var(--chill-dim)' }
+};
+const GROUPS = { feel:['Feeling','g-feel'], body:['Body','g-body'], mind:['Mind','g-mind'] };
+
+const PHQ = [
+  { t:'Little interest or pleasure in doing things', tag:'Interest', g:'feel' },
+  { t:'Feeling down, depressed, or hopeless', tag:'Mood', g:'feel', mood:true },
+  { t:'Trouble falling or staying asleep, or sleeping too much', tag:'Sleep', g:'body' },
+  { t:'Feeling tired or having little energy', tag:'Energy', g:'body' },
+  { t:'Poor appetite or overeating', tag:'Appetite', g:'body' },
+  { t:'Feeling bad about yourself — or that you are a failure or have let yourself or your family down', tag:'Self-worth', g:'feel' },
+  { t:'Trouble concentrating on things, such as reading the newspaper or watching television', tag:'Focus', g:'mind' },
+  { t:'Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual', tag:'Movement', g:'body' },
+  { t:'Thoughts that you would be better off dead or of hurting yourself in some way', tag:'Thoughts of death', g:'mind', safety:true }
+];
+const OPTS = ['Not at all','Several days','More than half the days','Nearly every day'];
+const FN_Q = 'If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?';
+const FN_OPTS = ['Not difficult at all','Somewhat difficult','Very difficult','Extremely difficult'];
+
+const BANDS = [
+  { max:4,  name:'Minimal',            color:'var(--constructive)',
+    text:'Few signs right now. If you came here worried about someone else, section 07 is for you. If something still feels off, check again in two weeks.' },
+  { max:9,  name:'Mild',               color:'#b8e35a',
+    text:'Some signs. Worth watching. Try the small moves in section 05 for two weeks, then check again. If it’s rising, or daily life is slipping, see your GP.' },
+  { max:14, name:'Moderate',           color:'var(--curious)',
+    text:'10 is the usual point where clinicians look more closely. Book a GP appointment and bring this score. Free low-intensity support can start this week (section 06).' },
+  { max:19, name:'Moderately severe',  color:'#ff9a5f',
+    text:'Please see your GP this week. Depression at this level usually needs treatment, such as therapy, medication or both, and it responds better started early.' },
+  { max:27, name:'Severe',             color:'var(--caring)',
+    text:'Please talk to your GP or one of the services below in the next day or two. You don’t have to fix anything first. This is exactly what they’re for.' }
+];
+
+const TIERS = ['Today', 'This week', 'Keep doing'];
+const MOVES = [
+  { key:'chill', mode:'chill', title:'Steady the rhythm', sub:'Sleep and energy',
+    why:'Depression scrambles sleep, appetite and energy. A steady rhythm comes before motivation, not after.',
+    actions:[
+      'Get outside in daylight for 10 minutes before midday, even if it’s grey.',
+      'Fix your wake-up time, every day including weekends. Let bedtime follow it.',
+      'Cut back on alcohol. It eases the evening and makes the next day heavier.'
+    ]},
+  { key:'constructive', mode:'constructive', title:'Finish one small thing', sub:'Starting and finishing',
+    why:'Every task looks huge from inside depression. Shrink it until starting is easy, and let finishing count.',
+    actions:[
+      'Pick one task you can finish in 10 minutes and do it before deciding whether you feel like it.',
+      'Move three times this week: a brisk walk, yoga or a short strength session. Harder counts for more.',
+      'Each evening, choose tomorrow’s one thing and write it where you’ll see it.'
+    ]},
+  { key:'caring', mode:'caring', title:'Let one person in', sub:'People and self-talk',
+    why:'Pulling away feels like rest. It works more like the problem: fewer people means fewer reasons and less feedback.',
+    actions:[
+      'Message one person today. It doesn’t have to be about how you feel.',
+      'Tell one person you trust how it’s actually been, or book your GP and tell them.',
+      'When the harsh voice says “useless” or “burden”, answer it the way you’d answer a friend.'
+    ]},
+  { key:'curious', mode:'curious', title:'Find what still matters', sub:'Interest and values',
+    why:'Interest is the first thing depression takes, and the best compass back. Look for 1% better, not happy.',
+    actions:[
+      'Rate your mood 0 to 10 before and after one activity. Notice which things move it, even slightly.',
+      'Spend 15 minutes on something you used to care about, without needing to enjoy it.',
+      'List what matters to you (people, work, making, learning) and pick next week’s small things from it.'
+    ]}
+];
+const PLAN = [
+  { key:'rhythm', mode:'chill',        title:'My anchors',       q:'My wake-up time, my daylight, my movement:',             ph:'e.g. up at 7 every day · walk to the café before 10 · yoga Tue and Sat' },
+  { key:'one',    mode:'constructive', title:'Tomorrow’s one thing', q:'One small thing I’ll finish tomorrow, and when:',      ph:'e.g. reply to that email at 9 · put one load of washing on' },
+  { key:'person', mode:'caring',       title:'My people',        q:'Who I’ll message, and who I’ll tell how it’s really been:', ph:'Two names, and the day' },
+  { key:'matter', mode:'curious',      title:'What used to matter', q:'Things I cared about before this, even if they feel flat now:', ph:'e.g. the guitar · Sunday swims · building things with Sam' }
+];
+const MOV_TOTAL = MOVES.reduce((s, m) => s + m.actions.length, 0);
+
+/* ---------- state + persistence (IndexedDB, localStorage fallback, all guarded) ---------- */
+const DB_NAME = 'selfdriven-depression', DB_VER = 1, STORE = 'depression', KEY = 'state', LS_KEY = 'sd-depression-v1';
+let state = { a:{}, fn:null, done:{}, plan:{}, hist:[] };
+function normalise(v){
+  const o = (v && typeof v === 'object') ? v : {};
+  const obj = x => (x && typeof x === 'object' && !Array.isArray(x)) ? x : {};
+  return { a:obj(o.a), fn:(typeof o.fn === 'number') ? o.fn : null, done:obj(o.done), plan:obj(o.plan), hist:Array.isArray(o.hist) ? o.hist.filter(h => h && typeof h.s === 'number' && typeof h.d === 'string') : [] };
+}
+let dbPromise = null;
+function idbOpen(){
+  if (dbPromise) return dbPromise;
+  dbPromise = new Promise((resolve, reject) => {
+    try {
+      if (!('indexedDB' in window) || !window.indexedDB) { reject(new Error('no idb')); return; }
+      const req = indexedDB.open(DB_NAME, DB_VER);
+      req.onupgradeneeded = () => { const db = req.result; if (!db.objectStoreNames.contains(STORE)) db.createObjectStore(STORE); };
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+      req.onblocked = () => reject(new Error('blocked'));
+    } catch (e) { reject(e); }
+  });
+  dbPromise.catch(() => { dbPromise = null; });
+  return dbPromise;
+}
+function idbGet(k){ return idbOpen().then(db => new Promise((res, rej) => { try { const r = db.transaction(STORE,'readonly').objectStore(STORE).get(k); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } })); }
+function idbSet(k, v){ return idbOpen().then(db => new Promise((res, rej) => { try { const tx = db.transaction(STORE,'readwrite'); tx.objectStore(STORE).put(v, k); tx.oncomplete = () => res(); tx.onerror = () => rej(tx.error); } catch (e) { rej(e); } })); }
+function idbDel(k){ return idbOpen().then(db => new Promise((res, rej) => { try { const tx = db.transaction(STORE,'readwrite'); tx.objectStore(STORE).delete(k); tx.oncomplete = () => res(); tx.onerror = () => rej(tx.error); } catch (e) { rej(e); } })); }
+function lsGet(){ try { return JSON.parse(localStorage.getItem(LS_KEY) || 'null'); } catch (e) { return null; } }
+function lsSet(v){ try { localStorage.setItem(LS_KEY, JSON.stringify(v)); } catch (e) {} }
+function lsDel(){ try { localStorage.removeItem(LS_KEY); } catch (e) {} }
+
+const savedMsg = document.getElementById('savedMsg');
+let flashTimer = null;
+function flashSaved(){
+  savedMsg.textContent = 'Saved on this device · ' + new Date().toLocaleTimeString([], { hour:'2-digit', minute:'2-digit' });
+  savedMsg.classList.add('flash');
+  clearTimeout(flashTimer);
+  flashTimer = setTimeout(() => savedMsg.classList.remove('flash'), 1400);
+}
+function save(){
+  const snap = JSON.parse(JSON.stringify(state));
+  return idbSet(KEY, snap).then(flashSaved).catch(() => { lsSet(snap); flashSaved(); });
+}
+let typeTimer = null;
+function saveSoon(){ clearTimeout(typeTimer); typeTimer = setTimeout(save, 400); }
+
+/* ---------- rendering ---------- */
+const accentStyle = m => `--accent:${MODES[m].color};--accent-dim:${MODES[m].dim}`;
+function optRow(name, labels, scored){
+  return `<div class="opts" role="radiogroup">${labels.map((l, v) =>
+    `<input type="radio" id="${name}-${v}" name="${name}" value="${v}"><label for="${name}-${v}">${scored ? `<b>${v}</b>` : ''}${l}</label>`).join('')}</div>`;
+}
+function renderPHQ(){
+  const html = PHQ.map((q, i) => {
+    const n = i + 1, g = GROUPS[q.g];
+    return `<div class="q${q.mood ? ' mood' : ''}${q.safety ? ' safety9' : ''}" id="q${n}" data-q="${n}">
+      <div class="top"><span class="n">${n}</span><div class="qt"><div class="txt">${q.t}</div>
+        <div class="meta"><span class="chip ${g[1]}">${g[0]}</span><span class="chip" style="color:var(--soft);border-color:var(--border2)">${q.tag}</span>${q.mood ? '<span class="only">The only “feeling down” question</span>' : ''}</div></div></div>
+      ${optRow('q' + n, OPTS, true)}
+      ${q.safety ? `<div class="inline-help" id="inlineHelp" hidden>If this is happening now, please call someone today. You don’t have to be sure it’s serious enough.<div class="go"><a class="tel urgent" href="tel:131114">Lifeline <b>13 11 14</b></a><a class="tel" href="tel:1300659467">Suicide Call Back <b>1300 659 467</b></a><a class="tel urgent" href="tel:000">Danger <b>000</b></a></div></div>` : ''}
+    </div>`;
+  }).join('') + `<div class="q fnq" id="qfn"><div class="top"><span class="n">+</span><div class="qt"><div class="txt">${FN_Q}</div><div class="meta"><span class="chip" style="color:var(--soft);border-color:var(--border2)">Not scored</span></div></div></div>${optRow('fn', FN_OPTS, false)}</div>`;
+  document.getElementById('qs').innerHTML = html;
+}
+const checkRow = (id, tier, txt) =>
+  `<li class="check-row" data-id="${id}" role="checkbox" aria-checked="false" tabindex="0"><span class="check"><svg><use href="#ic-check"/></svg></span><span class="body"><span class="tier">${tier}</span><span class="txt">${txt}</span></span></li>`;
+function renderMoves(){
+  document.getElementById('movesGrid').innerHTML = MOVES.map(m => {
+    const md = MODES[m.mode];
+    return `<article class="card" id="m-${m.key}" style="${accentStyle(m.mode)}">
+      <div class="card-head"><span class="ico"><svg><use href="#${md.icon}"/></svg></span><div><div class="k">${md.name} · ${m.sub}</div><h3>${m.title}</h3></div><span class="count-pill" data-mcount="${m.key}">0 / ${m.actions.length}</span></div>
+      <p class="why">${m.why}</p>
+      <ul class="rows">${m.actions.map((a, i) => checkRow(`${m.key}-${i}`, TIERS[i], a)).join('')}</ul>
+    </article>`;
+  }).join('');
+}
+function renderBoxes(){
+  document.getElementById('boxes').innerHTML = PLAN.map(p => {
+    const md = MODES[p.mode];
+    return `<div class="box" style="${accentStyle(p.mode)}">
+      <h3><span class="ico"><svg><use href="#${md.icon}"/></svg></span><span><small>${md.name}</small>${p.title}</span></h3>
+      <label for="plan-${p.key}">${p.q}</label>
+      <textarea id="plan-${p.key}" data-plan="${p.key}" placeholder="${p.ph}"></textarea>
+    </div>`;
+  }).join('');
+}
+
+/* ---------- derived ---------- */
+const answered = () => PHQ.filter((_, i) => typeof state.a[i + 1] === 'number').length;
+const total = () => PHQ.reduce((s, _, i) => s + (state.a[i + 1] || 0), 0);
+const complete = () => answered() === 9;
+const bandFor = s => BANDS.find(b => s <= b.max);
+const movCount = m => m.actions.filter((_, i) => state.done[`${m.key}-${i}`]).length;
+const movTotal = () => MOVES.reduce((s, m) => s + movCount(m), 0);
+const item9 = () => (state.a[9] || 0) > 0;
+function todayStr(){ const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+
+function refresh(){
+  const n = answered(), s = total(), done = complete();
+  document.getElementById('ansN').textContent = n;
+  document.getElementById('pScore').textContent = done ? s : '–';
+  document.getElementById('movN').textContent = movTotal();
+  document.getElementById('movTotal').textContent = MOV_TOTAL;
+  document.getElementById('barFill').style.width = (((n / 9) * 0.5) + ((movTotal() / MOV_TOTAL) * 0.5)) * 100 + '%';
+
+  PHQ.forEach((_, i) => { const el = document.getElementById('q' + (i + 1)); if (el) el.classList.toggle('ans', typeof state.a[i + 1] === 'number'); });
+  const q9 = document.getElementById('q9'); if (q9) q9.classList.toggle('flag', item9());
+  document.getElementById('inlineHelp').hidden = !item9();
+  document.getElementById('urgent').hidden = !item9();
+
+  const card = document.getElementById('scoreCard'), mk = document.getElementById('scaleMk');
+  const sn = document.getElementById('scoreN'), bn = document.getElementById('bandName'), rt = document.getElementById('readText');
+  if (done){
+    const b = bandFor(s);
+    sn.textContent = s; bn.textContent = b.name; card.style.setProperty('--bandc', b.color);
+    mk.style.display = 'block'; mk.style.left = ((s + 0.5) / 28 * 100) + '%';
+    let txt = b.text;
+    if (state.fn !== null && state.fn >= 2 && s < 10) txt += ' You said these problems make daily life very or extremely difficult. That matters as much as the number, so see your GP either way.';
+    rt.textContent = txt;
+  } else {
+    sn.textContent = n ? s : '–'; bn.textContent = n ? `${n} of 9 answered` : 'Answer all nine';
+    card.style.removeProperty('--bandc'); mk.style.display = 'none';
+    rt.textContent = n ? 'Answer the rest for your score and what it means. Running total shown above.' : 'Pick one answer for each question. Your score and what it means appear here.';
+  }
+  document.getElementById('logBtn').disabled = !done;
+
+  MOVES.forEach(m => {
+    const c = movCount(m), el = document.getElementById('m-' + m.key); if (!el) return;
+    el.querySelector(`[data-mcount="${m.key}"]`).textContent = `${c} / ${m.actions.length}`;
+    el.classList.toggle('done', c === m.actions.length);
+  });
+  renderHist();
+}
+
+function renderHist(){
+  const host = document.getElementById('hist');
+  const h = state.hist.slice(-12);
+  if (!h.length){ host.innerHTML = '<span class="empty">Log a score every couple of weeks to see the trend. Your GP will find it useful.</span>'; return; }
+  host.innerHTML = h.map(e => {
+    const b = bandFor(e.s), p = e.d.split('-');
+    return `<div class="hb" title="${e.d}: ${e.s} (${b.name})"><em>${e.s}</em><i style="height:${Math.max(3, Math.round(e.s / 27 * 56))}px;background:${b.color}"></i><span>${p[2]}/${p[1]}</span></div>`;
+  }).join('');
+}
+
+function applyState(){
+  PHQ.forEach((_, i) => {
+    const n = i + 1, v = state.a[n];
+    document.querySelectorAll(`input[name="q${n}"]`).forEach(r => { r.checked = (typeof v === 'number' && Number(r.value) === v); });
+  });
+  document.querySelectorAll('input[name="fn"]').forEach(r => { r.checked = (state.fn !== null && Number(r.value) === state.fn); });
+  document.querySelectorAll('.check-row').forEach(el => {
+    const on = !!state.done[el.dataset.id];
+    el.classList.toggle('on', on); el.setAttribute('aria-checked', on ? 'true' : 'false');
+  });
+  document.querySelectorAll('textarea[data-plan]').forEach(ta => { ta.value = state.plan[ta.dataset.plan] || ''; });
+  refresh();
+}
+
+/* ---------- interaction ---------- */
+function toggleRow(el){
+  const id = el.dataset.id;
+  if (state.done[id]) delete state.done[id]; else state.done[id] = 1;
+  const on = !!state.done[id];
+  el.classList.toggle('on', on); el.setAttribute('aria-checked', on ? 'true' : 'false');
+  refresh(); save();
+}
+function bindEvents(){
+  document.getElementById('qs').addEventListener('change', e => {
+    const r = e.target; if (!r || r.type !== 'radio') return;
+    if (r.name === 'fn') state.fn = Number(r.value);
+    else state.a[Number(r.name.slice(1))] = Number(r.value);
+    document.getElementById('loggedMsg').textContent = '';
+    refresh(); save();
+  });
+  const mg = document.getElementById('movesGrid');
+  mg.addEventListener('click', e => { const r = e.target.closest('.check-row'); if (r) toggleRow(r); });
+  mg.addEventListener('keydown', e => { const r = e.target.closest('.check-row'); if (r && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggleRow(r); } });
+  document.getElementById('boxes').addEventListener('input', e => {
+    const ta = e.target.closest('textarea[data-plan]'); if (!ta) return;
+    if (ta.value.trim()) state.plan[ta.dataset.plan] = ta.value; else delete state.plan[ta.dataset.plan];
+    saveSoon();
+  });
+  document.getElementById('logBtn').addEventListener('click', () => {
+    if (!complete()) return;
+    const d = todayStr(), s = total();
+    const i = state.hist.findIndex(h => h.d === d);
+    if (i >= 0) state.hist[i].s = s; else state.hist.push({ d, s });
+    state.hist.sort((x, y) => x.d < y.d ? -1 : 1);
+    if (state.hist.length > 60) state.hist = state.hist.slice(-60);
+    document.getElementById('loggedMsg').textContent = i >= 0 ? 'Today’s entry updated' : 'Logged';
+    refresh(); save();
+  });
+  document.getElementById('dlBtn').addEventListener('click', downloadMarkdown);
+  document.getElementById('copyBtn').addEventListener('click', copyMarkdown);
+  const tools = document.getElementById('toolBtns'), conf = document.getElementById('confirmBar');
+  document.getElementById('resetBtn').addEventListener('click', () => { tools.style.display = 'none'; conf.hidden = false; document.getElementById('resetNo').focus(); });
+  document.getElementById('resetNo').addEventListener('click', () => { conf.hidden = true; tools.style.display = 'inline-flex'; });
+  document.getElementById('resetYes').addEventListener('click', () => {
+    state = { a:{}, fn:null, done:{}, plan:{}, hist:[] };
+    clearTimeout(typeTimer);
+    idbDel(KEY).catch(() => {}).then(lsDel);
+    applyState();
+    document.getElementById('loggedMsg').textContent = '';
+    savedMsg.classList.remove('flash'); savedMsg.textContent = 'Cleared. Saves as you type.';
+    conf.hidden = true; tools.style.display = 'inline-flex';
+  });
+}
+
+/* ---------- markdown summary ---------- */
+function buildMarkdown(){
+  const L = [], done = complete(), s = total();
+  L.push('# Depression check-in — selfdriven.health', '');
+  L.push(`_Exported ${new Date().toLocaleString()} · private: your own self-check, not a diagnosis_`, '');
+  L.push('## PHQ-9 (last 2 weeks)', '');
+  PHQ.forEach((q, i) => {
+    const v = state.a[i + 1];
+    L.push(`${i + 1}. ${q.t} — **${typeof v === 'number' ? `${OPTS[v]} (${v})` : 'not answered'}**`);
+  });
+  L.push('', `Daily life: **${state.fn !== null ? FN_OPTS[state.fn] : 'not answered'}**`, '');
+  if (done){ const b = bandFor(s); L.push(`**Total: ${s} / 27 — ${b.name}**`, '', `> ${b.text}`, ''); }
+  else L.push(`**${answered()} of 9 answered** (running total ${s})`, '');
+  if (item9()) L.push('> **Item 9 was answered above zero. Please talk to someone today:** Lifeline 13 11 14 · Suicide Call Back Service 1300 659 467 · 000 in immediate danger.', '');
+  if (state.hist.length){
+    L.push('### Logged scores', '');
+    state.hist.forEach(h => L.push(`- ${h.d}: ${h.s} (${bandFor(h.s).name})`));
+    L.push('');
+  }
+  L.push('---', '', '## My plan', '');
+  PLAN.forEach(p => {
+    const v = (state.plan[p.key] || '').trim();
+    L.push(`**${p.title}** (${MODES[p.mode].name}) — ${p.q}`, '');
+    L.push(v ? v.split('\n').map(l => '> ' + l).join('\n') : '> _not written yet_', '');
+  });
+  L.push('---', '', '## Small moves', '');
+  MOVES.forEach(m => {
+    L.push(`### ${MODES[m.mode].name} — ${m.title} (${movCount(m)} / ${m.actions.length})`, '');
+    m.actions.forEach((a, i) => L.push(`- [${state.done[`${m.key}-${i}`] ? 'x' : ' '}] **${TIERS[i]}** — ${a}`));
+    L.push('');
+  });
+  L.push('---', '', '## Help', '');
+  L.push('- Immediate danger: **000**', '- Lifeline (24/7): **13 11 14**', '- Suicide Call Back Service (24/7): **1300 659 467**', '- Beyond Blue (24/7): **1300 22 4636**', '- Medicare Mental Health (free Check In, 16+): **1800 595 212**', '- Your GP: ask about a mental health treatment plan and referral (Better Access)', '');
+  L.push('_PHQ-9 developed by Drs R.L. Spitzer, J.B.W. Williams, K. Kroenke and colleagues, with an educational grant from Pfizer Inc._', '');
+  L.push('_selfdriven.health — the health companion to selfdriven.you_', '');
+  return L.join('\n');
+}
+function fileName(){ const d = new Date(), p = n => String(n).padStart(2,'0'); return `depression-check-in-${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}.md`; }
+function downloadMarkdown(){
+  try {
+    const blob = new Blob([buildMarkdown()], { type:'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob), a = document.createElement('a');
+    a.href = url; a.download = fileName(); document.body.appendChild(a); a.click();
+    setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 500);
+  } catch (e) { copyMarkdown(); }
+}
+function copyMarkdown(){
+  const md = buildMarkdown(), btn = document.getElementById('copyBtn'), lbl = btn.querySelector('span');
+  const ok = () => { if (lbl) { lbl.textContent = 'Copied'; setTimeout(() => { lbl.textContent = 'Copy'; }, 1600); } savedMsg.textContent = 'Summary copied. Paste it into a note or email to yourself.'; };
+  const fallback = () => {
+    let ta = document.getElementById('copyFallback');
+    if (!ta){ ta = document.createElement('textarea'); ta.id = 'copyFallback'; ta.className = 'copy-fallback'; ta.setAttribute('aria-label','Summary to copy'); document.getElementById('scoreCard').prepend(ta); }
+    ta.value = md; ta.focus(); ta.select();
+    savedMsg.textContent = 'Select-all is ready in the box above your score. Copy it with your keyboard or long-press.';
+  };
+  try { navigator.clipboard.writeText(md).then(ok, fallback); } catch (e) { fallback(); }
+}
+
+/* ---------- boot ---------- */
+function boot(){
+  return idbGet(KEY)
+    .then(v => { if (v) return v; const l = lsGet(); return l ? idbSet(KEY, l).then(() => { lsDel(); return l; }).catch(() => l) : null; })
+    .catch(() => lsGet())
+    .then(v => { if (v) state = normalise(v); applyState(); })
+    .catch(() => applyState());
+}
+renderPHQ(); renderMoves(); renderBoxes(); bindEvents(); refresh(); boot();
+</script>
+
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,summary,[role="button"],[role="checkbox"]';
+    var OFF = 'textarea';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){
+      var t = e.target; if (!t || !t.closest) return;
+      cur.classList.toggle('big', !!t.closest(HOT));
+      cur.classList.toggle('off', !!t.closest(OFF));
+    });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
+  Array.prototype.forEach.call(dotsList, function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+</body>
+</html>

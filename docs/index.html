@@ -267,6 +267,7 @@ section[id]{scroll-margin-top:84px}
 .pt-soon{background:rgba(255,255,255,.06);color:var(--muted)}
 .pcard.soon{background:transparent;border:1.5px dashed var(--border2)}
 .pcard.soon:hover{transform:none;box-shadow:none}
+@media (min-width:921px){.pcards .pcard.soon{grid-column:1/-1}}
 .soon-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:10px}
 .soon-list li{display:inline-flex;align-items:center;gap:8px;border:1.5px dashed var(--border2);border-radius:var(--pill);padding:6px 13px;font-size:13px;color:var(--soft)}
 .soon-list i{width:7px;height:7px;border-radius:50%;display:inline-block}
@@ -468,6 +469,7 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
           <ul class="glist">
             <li><a href="/vagus-nerve">Vagus nerve and paced breathing</a><span class="st on">Live</span></li>
             <li><a href="/the-undertow">The undertow</a><span class="st on">Live</span></li>
+            <li><a href="/depression">Depression</a><span class="st on">Live</span></li>
             <li><span class="soon">Sleep</span><span class="st">Planned</span></li>
           </ul>
         </article>
@@ -641,6 +643,12 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
           <h3>The undertow</h3>
           <p>When an obsession starts costing your health, money or the people around you. Count the cost, spot the red flags that need a real person, and plan your way back.</p>
           <div class="pmeta"><span class="mono">Self-check · repair plan</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
+        </a>
+        <a class="pcard rev" href="/depression">
+          <div class="ptags"><span class="ptag pt-mind">Mental</span><span class="ptag pt-care">Support</span></div>
+          <h3>Depression</h3>
+          <p>Why depression isn’t sadness or the opposite of happiness. The nine signs doctors check, why the low-serotonin story didn’t hold up, and small moves that start the way back.</p>
+          <div class="pmeta"><span class="mono">PHQ-9 · 12 moves</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
         </a>
         <div class="pcard soon rev">
           <div class="ptags"><span class="ptag pt-soon">Planned</span></div>
@@ -937,6 +945,7 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
     document.getElementById('outText').textContent = a.text;
     var links = document.getElementById('outLinks'); links.innerHTML = '';
     if (a.guide) links.appendChild(chip(a.guide.label + ' →', a.guide.href, DOTS[key], false));
+    if (key === 'mind' && min <= 2) links.appendChild(chip('Depression self-check →', '/depression#signs', DOTS.mind, false));
     links.appendChild(chip(MODES[a.mode].label + ' on selfdriven.you ↗', 'https://selfdriven.you', MODES[a.mode].color, true));
     document.getElementById('outSupport').hidden = state.mind !== 1;
     var tag = document.getElementById('ckTag');
