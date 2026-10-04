@@ -130,6 +130,8 @@ section[id]{scroll-margin-top:84px}
 .crisis .mono{color:var(--caring);font-weight:600}
 .crisis .nw{white-space:nowrap}
 .crisis a{color:var(--muted);font-weight:500}
+.disclaimer{margin-top:12px;max-width:600px;text-wrap:pretty;font-size:12px;line-height:1.55;color:var(--muted);animation:fu .8s .75s both}
+.disclaimer b{color:var(--caring);font-weight:600}
 
 /* tickers */
 .ticker{padding:12px 0;overflow:hidden;white-space:nowrap;position:relative;z-index:2}
@@ -286,6 +288,8 @@ section[id]{scroll-margin-top:84px}
 .companion::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--curious),var(--caring),var(--constructive),var(--chill))}
 .companion p{font-size:15px;color:var(--muted);max-width:600px;line-height:1.6}
 .companion .btns{display:flex;gap:10px;flex-wrap:wrap}
+.sec.alt .companion{background:var(--bg)}
+.claims+.companion{margin-top:40px}
 
 /* claims */
 .claims{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:48px;align-items:start}
@@ -435,6 +439,7 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
         <a class="btn-ghost" href="#guides">Browse the guides</a>
       </div>
       <p class="crisis"><b>Need to talk to someone now?</b> <span class="nw">Lifeline <span class="mono">13 11 14</span></span> <span class="nw">Emergency <span class="mono">000</span></span> <a class="nw" href="#help">More support</a></p>
+      <p class="disclaimer"><b>Education, not medical advice.</b> The guides are for general education only. They don't diagnose or treat any condition, so talk to your GP or another health professional about your own health.</p>
     </div>
   </section>
 
@@ -488,6 +493,7 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
           <div class="start"><span>Start today</span><p>Practise one skill for 15 focused minutes. Stop while it still feels easy, so you want to come back tomorrow.</p></div>
           <ul class="glist">
             <li><a href="/obsessive-by-nature">Obsessive by nature</a><span class="st on">Live</span></li>
+            <li><a href="/protocols">Protocols, the book</a><span class="st on">Live</span></li>
             <li><span class="soon">Learning that sticks</span><span class="st">Planned</span></li>
             <li><span class="soon">Neurodiversity at home and work</span><span class="st">Planned</span></li>
           </ul>
@@ -504,8 +510,10 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
             <li class="mc-tag"><span class="ico"><svg class="i" width="12" height="12"><use href="#ic-check"/></svg></span>Body systems</li>
             <li class="mc-tag"><span class="ico"><svg class="i" width="12" height="12"><use href="#ic-check"/></svg></span>Energy and check-ups</li>
           </ul>
-          <div class="start"><span>Start today</span><p>Take a brisk 10-minute walk after your biggest meal, or do the <a href="/fascia#guide">5-minute movement sequence</a>.</p></div>
+          <div class="start"><span>Start today</span><p>Take a <a href="/walking#pace">brisk 10-minute walk</a> after your biggest meal, or do the <a href="/fascia#guide">5-minute movement sequence</a>.</p></div>
           <ul class="glist">
+            <li><a href="/walking">Walking</a><span class="st on">Live</span></li>
+            <li><a href="/anti-inflammatory">Anti-inflammatory bowls</a><span class="st on">Live</span></li>
             <li><a href="/fascia">Fascia and movement</a><span class="st on">Live</span></li>
             <li><a href="/eye-movement">Eye movement routine</a><span class="st on">Live</span></li>
             <li><a href="/vagus-nerve">Vagus nerve</a><span class="st on">Live</span></li>
@@ -650,6 +658,24 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
           <p>Why depression isn’t sadness or the opposite of happiness. The nine signs doctors check, why the low-serotonin story didn’t hold up, and small moves that start the way back.</p>
           <div class="pmeta"><span class="mono">PHQ-9 · 12 moves</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
         </a>
+        <a class="pcard rev" href="/walking">
+          <div class="ptags"><span class="ptag pt-move">Physical</span><span class="ptag pt-mind">Mental</span></div>
+          <h3>Walking</h3>
+          <p>Why about 7,000 steps a day does most of the work and 10,000 came from a pedometer’s name. What walking does for your back, blood sugar and mood, a 15-second pace check and a week planner.</p>
+          <div class="pmeta"><span class="mono">Pace check · planner</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
+        </a>
+        <a class="pcard rev" href="/anti-inflammatory">
+          <div class="ptags"><span class="ptag pt-move">Physical</span></div>
+          <h3>Anti-inflammatory bowls</h3>
+          <p>Five bowls built on the Mediterranean pattern, in Australian measures. What food can and can’t do for chronic inflammation, plus a week planner and a shopping list.</p>
+          <div class="pmeta"><span class="mono">5 bowls · shopping list</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
+        </a>
+        <a class="pcard rev" href="/protocols">
+          <div class="ptags"><span class="ptag pt-grow">Developmental</span><span class="ptag pt-mind">Mental</span></div>
+          <h3>Protocols</h3>
+          <p>Andrew Huberman’s first book across its seven areas, with one place to start in each. Why behaviours come before supplements, and the viral five-supplement thread checked against Australian limits.</p>
+          <div class="pmeta"><span class="mono">Book guide · 7 areas</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
+        </a>
         <div class="pcard soon rev">
           <div class="ptags"><span class="ptag pt-soon">Planned</span></div>
           <h3>Coming next</h3>
@@ -766,6 +792,13 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
           <li><h3>How does the dose compare with the safe limit?</h3><p>The Australian upper level of intake for vitamin D in adults is <strong>80 µg (3,200 IU) a day</strong>. 10,000 IU is about three times that. Higher doses are sometimes prescribed after a blood test, but they aren't a safe default.</p></li>
           <li><h3>Was it tested on people like you?</h3><p>Age, pregnancy, health conditions and other medicines all change what's safe. Ask your pharmacist about interactions, and your GP whether a blood test makes sense first.</p></li>
         </ol>
+      </div>
+      <div class="companion rev">
+        <p><strong>Seen the "five supplements" thread about Huberman's new book?</strong> We put each pick through these checks against Australian limits.</p>
+        <div class="btns">
+          <a class="btn-primary" href="/protocols#thread">See the five checked <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></a>
+          <a class="btn-ghost" href="/protocols">About the book</a>
+        </div>
       </div>
     </div>
   </section>
@@ -946,6 +979,7 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
     var links = document.getElementById('outLinks'); links.innerHTML = '';
     if (a.guide) links.appendChild(chip(a.guide.label + ' →', a.guide.href, DOTS[key], false));
     if (key === 'mind' && min <= 2) links.appendChild(chip('Depression self-check →', '/depression#signs', DOTS.mind, false));
+    if (key === 'move') links.appendChild(chip('Walking planner →', '/walking#week', DOTS.move, false));
     links.appendChild(chip(MODES[a.mode].label + ' on selfdriven.you ↗', 'https://selfdriven.you', MODES[a.mode].color, true));
     document.getElementById('outSupport').hidden = state.mind !== 1;
     var tag = document.getElementById('ckTag');
