@@ -218,9 +218,11 @@ h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 .closing h2{margin:10px auto 14px}
 .closing .lede{margin:0 auto}
 .jump-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
-.companion{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:14.5px;color:var(--soft);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:2px}
-.companion:hover{color:var(--text)}
-.companion svg{width:15px;height:15px}
+.companion-row{margin-top:26px;max-width:100%}
+.companion{font-size:14.5px;line-height:1.7;color:var(--soft);text-decoration:underline;text-decoration-color:var(--border2);text-underline-offset:5px;text-decoration-thickness:1px}
+.companion:hover{color:var(--text);text-decoration-color:var(--soft)}
+.companion .nw{white-space:nowrap}
+.companion svg{display:inline-block;width:15px;height:15px;vertical-align:-2px;margin-left:6px}
 
 @media (prefers-reduced-motion:reduce){
   .gblob,.hero-pill .dot{animation:none}
@@ -591,7 +593,7 @@ body>main,.sd-foot{position:relative;z-index:1}
       <a class="mode-pill mp-k" href="#thread"><svg><use href="#ic-pill"/></svg>Supplement checks</a>
       <a class="mode-pill mp-l" href="#get"><svg><use href="#ic-book"/></svg>Get the book</a>
     </div>
-    <a class="companion" href="https://www.selfdriven.health/vagus-nerve">Want the breathing side now? Try the Vagus nerve guide <svg><use href="#ic-arrow"/></svg></a>
+    <p class="companion-row"><a class="companion" href="https://www.selfdriven.health/vagus-nerve">Breathing first? Try the Vagus nerve <span class="nw">guide<svg><use href="#ic-arrow"/></svg></span></a></p>
   </div>
 </section>
 </main>
