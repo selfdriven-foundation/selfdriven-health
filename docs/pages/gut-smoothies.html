@@ -1,0 +1,1225 @@
+---
+layout: null
+title: Gut smoothies - selfdriven Health
+permalink: /gut-smoothies
+---
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gut smoothies - selfdriven Health</title>
+<meta name="description" content="Six fibre-rich smoothies for a personal blender, a build-your-own formula, a week planner with a shopping list, and what the evidence says about gut health.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='27' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='40' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='53' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* selfdriven.health 4Cs system, dark by design (single look, shared with every guide).
+   Layout: long-form guide. Hero = the six smoothies as glasses. Mint (Constructive) leads for the Move domain;
+   amber marks things to watch, violet marks fermented food, rose marks red flags and what hasn't been shown. */
+:root{
+  color-scheme:dark;
+  --bg:#09090f;--surface:#111118;--surface2:#18181f;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#f0eeff;--muted:#8f8bad;--muted2:#3d3a55;
+  --soft:rgba(240,238,255,.8);
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --curious-line:rgba(245,200,66,.3);--caring-line:rgba(255,95,126,.3);--constructive-line:rgba(0,229,160,.3);--chill-line:rgba(123,108,255,.34);
+  --neutral-dim:rgba(240,238,255,.07);
+  --ink:#09090f;
+  --pill:999px;
+  --sd-accent:var(--constructive);
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:24px}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--constructive);outline-offset:2px}
+a{color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:140px 72px}
+.gblob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.16;z-index:0}
+.gb1{width:520px;height:520px;background:var(--constructive);top:-170px;left:-160px;animation:gb 17s ease-in-out infinite}
+.gb2{width:460px;height:460px;background:var(--caring);top:40px;right:-150px;animation:gb 21s ease-in-out infinite reverse}
+.gb3{width:340px;height:340px;background:var(--curious);bottom:-90px;left:24%;animation:gb 23s ease-in-out infinite 3s}
+.gb4{width:300px;height:300px;background:var(--chill);bottom:0;right:16%;animation:gb 19s ease-in-out infinite 7s}
+@keyframes gb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(34px,-26px) scale(1.08)}70%{transform:translate(-22px,30px) scale(.93)}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 74% at 50% 50%,rgba(9,9,15,.86),rgba(9,9,15,.55) 46%,rgba(9,9,15,.18) 78%,transparent)}
+.hero .wrap{position:relative;z-index:2;text-align:center}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(9,9,15,.55);border:1px solid rgba(255,255,255,.22);border-radius:var(--pill);padding:8px 18px;font-size:12px;font-weight:500;color:rgba(240,238,255,.7);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--constructive);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(40px,7.2vw,84px);line-height:.98;letter-spacing:-.045em;margin:24px auto 20px;max-width:960px}
+.grad{background:linear-gradient(90deg,var(--constructive),var(--curious) 52%,var(--caring));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:680px;margin:0 auto;font-size:clamp(17px,2.1vw,20px);line-height:1.55;color:rgba(240,238,255,.9)}
+.hero .fine{margin-top:18px;font-size:13px;color:rgba(240,238,255,.62)}
+
+/* hero glasses: the six smoothies, each a jump link */
+.hcups{display:flex;justify-content:center;align-items:flex-end;gap:clamp(4px,1.6vw,18px);margin:40px auto 0;flex-wrap:nowrap}
+.hc{position:relative;display:block;width:clamp(46px,9.5vw,96px);text-decoration:none;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.hc svg{display:block;width:100%;height:auto;filter:drop-shadow(0 16px 26px rgba(0,0,0,.5))}
+.hc span{position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);white-space:nowrap;font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:-.01em;color:var(--soft);opacity:0;transition:opacity .2s}
+.hc:nth-child(odd){transform:translateY(-8px)}
+.hc:hover,.hc:focus-visible{transform:translateY(-14px) scale(1.06)}
+.hc:hover span,.hc:focus-visible span{opacity:1}
+.jump-row{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:40px}
+
+/* pills, chips, buttons */
+.mode-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--pill);font-family:var(--display);font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.mode-pill:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.mode-pill svg{width:16px;height:16px}
+.mp-c{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.mp-k{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.mp-b{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.mp-l{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:var(--pill);font-family:var(--display);font-size:12.5px;font-weight:600;border:1px solid transparent;line-height:1.5;white-space:nowrap}
+.c-curious{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.c-caring{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.c-constructive{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.c-chill{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.c-neutral{background:var(--neutral-dim);color:var(--soft);border-color:var(--border2)}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--sans);font-size:13.5px;font-weight:600;transition:border-color .2s,transform .2s;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px}
+.btn.go{background:var(--constructive);border-color:var(--constructive);color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--muted)}
+.btn.ghost:hover{color:var(--text)}
+
+/* sections */
+section.block{padding-block:84px 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:500;color:var(--constructive)}
+h2{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(31px,4.8vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 14px;max-width:880px}
+.lede{max-width:700px;font-size:17px;color:var(--soft)}
+h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+.note{margin-top:14px;font-size:14px;color:var(--muted);max-width:780px}
+.note b{color:var(--text);font-weight:600}
+.ref{font-family:var(--mono);font-size:.72em;font-weight:500;color:var(--muted);text-decoration:none;vertical-align:.32em;margin-left:1px;white-space:nowrap}
+.ref:hover{color:var(--constructive)}
+.sub-h{font-family:var(--display);font-weight:800;font-size:clamp(23px,3vw,30px);letter-spacing:-.035em;line-height:1.1;margin:52px 0 10px;text-wrap:balance}
+
+/* 01: blender vs juicer */
+.line{margin-top:28px;background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden}
+.lrow{display:grid;grid-template-columns:170px minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--border)}
+.lrow:first-child{border-top:0}
+.lrow>div{padding:14px 22px;min-width:0}
+.lk{display:flex;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.li{color:var(--text);font-size:15.5px;background:rgba(0,229,160,.045)}
+.ld{color:var(--soft);font-size:15.5px;border-left:1px solid var(--border)}
+.lhead>div{padding-top:18px;padding-bottom:14px}
+.lhead .li,.lhead .ld{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.03em;display:flex;align-items:center;gap:9px}
+.lhead .li{color:var(--constructive)}
+.lhead .ld{color:var(--muted)}
+.lhead i{width:10px;height:10px;border-radius:50%;flex:none}
+
+/* fibre's route */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px;counter-reset:f}
+.flow li{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:16px 18px 18px;min-width:0}
+.flow li:not(:last-child)::after{content:'';position:absolute;top:50%;right:-11px;width:10px;height:10px;border-top:2px solid var(--constructive);border-right:2px solid var(--constructive);transform:translateY(-50%) rotate(45deg);z-index:1}
+.flow .st{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--constructive)}
+.flow h4{font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em;line-height:1.25;margin:6px 0 4px}
+.flow p{font-size:13.5px;color:var(--muted);line-height:1.45}
+
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}
+.fact{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.fact .big{font-family:var(--display);font-weight:800;font-size:clamp(34px,4.2vw,46px);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.fact .big small{font-size:.42em;letter-spacing:-.01em;font-weight:700;margin-left:4px;color:var(--soft)}
+.fact .what{font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em;line-height:1.25}
+.fact p{font-size:14px;color:var(--muted);line-height:1.5}
+.fact p b{color:var(--soft);font-weight:600}
+.fact.f-mint .big{color:var(--constructive)}
+.fact.f-violet .big{color:var(--chill-bright)}
+.fact.f-amber .big{color:var(--curious)}
+
+.repair{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;margin-top:16px;padding:20px 22px;border-radius:20px;border:1px dashed var(--caring-line);background:rgba(255,95,126,.04)}
+.repair .ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--caring-dim);color:var(--caring)}
+.repair .ico svg{width:22px;height:22px}
+.repair h3{font-size:19px;margin-bottom:6px}
+.repair p{font-size:14.5px;color:var(--soft);line-height:1.55;max-width:820px}
+
+/* 02: the smoothies */
+.measures{display:flex;align-items:flex-start;gap:12px;margin-top:22px;padding:14px 18px;border-radius:16px;background:var(--surface);border:1px dashed var(--border2);font-size:14px;color:var(--soft);max-width:880px}
+.measures svg{width:18px;height:18px;flex:none;color:var(--curious);margin-top:2px}
+.measures b{color:var(--text);font-weight:600}
+.smoothies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.sm{position:relative;display:flex;flex-direction:column;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:22px 22px 20px;min-width:0;scroll-margin-top:90px;overflow:hidden}
+.sm::before{content:'';position:absolute;inset:0 0 auto 0;height:120px;background:radial-gradient(ellipse 60% 100% at 14% 0%,color-mix(in srgb,var(--d) 22%,transparent),transparent 70%);pointer-events:none}
+.sm-hd{position:relative;display:grid;grid-template-columns:62px minmax(0,1fr);gap:16px;align-items:center}
+.sm-cup svg{display:block;width:62px;height:auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.45))}
+.sm-no{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sm h3{font-size:clamp(22px,2.4vw,26px);margin:2px 0 3px}
+.sm-for{font-size:13.5px;color:var(--soft)}
+.sm-for b{color:var(--d);font-weight:600;filter:brightness(1.15)}
+.ing{list-style:none;display:grid}
+.ing li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px;padding:7px 0;border-top:1px solid var(--border);font-size:14.5px;color:var(--soft);line-height:1.4}
+.ing li:first-child{border-top:0}
+.ing .q{font-family:var(--mono);font-size:12.5px;color:var(--text);padding-top:2px;font-variant-numeric:tabular-nums}
+.sm-why{font-size:14.5px;color:var(--soft);line-height:1.55}
+.sm-why b{color:var(--text);font-weight:600}
+.sm-tip{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--muted);line-height:1.5;padding:10px 12px;border-radius:12px;background:var(--surface2);border:1px solid var(--border)}
+.sm-tip svg{width:15px;height:15px;flex:none;margin-top:3px;color:var(--curious)}
+.sm-tip b{color:var(--soft);font-weight:600}
+.sm-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:2px}
+
+/* 03: builder */
+.bld{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px;margin-top:28px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;min-width:0}
+.panel-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 14px;margin-bottom:14px}
+.panel-h h3{font-size:20px}
+.pick{display:grid;gap:16px}
+.pick fieldset{border:0;min-width:0}
+.pick legend{display:flex;align-items:baseline;gap:10px;font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:-.02em;margin-bottom:8px}
+.pick legend .n{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.1em;color:var(--constructive)}
+.pick legend small{font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:0;color:var(--muted)}
+.opts{display:flex;flex-wrap:wrap;gap:7px}
+.opt{position:relative;display:inline-flex}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.opt span{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface2);font-size:13.5px;color:var(--soft);cursor:pointer;transition:border-color .15s,background .15s,color .15s;line-height:1.35}
+.opt span:hover{border-color:rgba(255,255,255,.3);color:var(--text)}
+.opt span i{width:9px;height:9px;border-radius:50%;flex:none}
+.opt input:checked+span{background:var(--constructive-dim);border-color:var(--constructive);color:var(--text)}
+.opt input:focus-visible+span{outline:2px solid var(--constructive);outline-offset:2px}
+.out{position:sticky;top:84px;background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border2);border-radius:24px;padding:22px;min-width:0;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.out-hd{display:grid;grid-template-columns:70px minmax(0,1fr);gap:14px;align-items:center;margin-bottom:12px}
+.out-hd svg{display:block;width:70px;height:auto}
+.out-hd .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.out-hd h3{font-size:21px;margin-top:3px}
+.out .ing li{grid-template-columns:minmax(0,1fr);padding:6px 0}
+.notes{list-style:none;display:grid;gap:8px;margin-top:14px}
+.notes li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:9px;font-size:13.5px;color:var(--soft);line-height:1.45}
+.notes li i{width:9px;height:9px;border-radius:50%;margin-top:5px}
+.notes .n-ok i{background:var(--constructive)}
+.notes .n-watch i{background:var(--curious)}
+.notes .n-info i{background:var(--chill-bright)}
+
+.meter{display:grid;gap:8px;padding:14px 16px;border-radius:16px;background:var(--surface2);border:1px solid var(--border)}
+.out .meter{background:var(--bg);margin-top:14px}
+.meter .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.meter .nm{font-family:var(--display);font-weight:700;font-size:15.5px;letter-spacing:-.02em}
+.meter .val{font-family:var(--mono);font-size:13px;color:var(--soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.meter .val b{font-size:18px;color:var(--text);font-weight:700}
+.track{position:relative;height:8px;border-radius:99px;background:var(--bg);overflow:visible}
+.out .track{background:var(--surface2)}
+.track .fill{position:absolute;left:0;top:0;bottom:0;border-radius:99px;max-width:100%;transition:width .45s cubic-bezier(.34,1.56,.64,1)}
+.track .tick{position:absolute;top:-5px;bottom:-5px;width:2px;border-radius:2px;background:rgba(240,238,255,.45)}
+.meter .why{font-size:13px;color:var(--muted);line-height:1.45}
+.f-fruit{background:linear-gradient(90deg,var(--constructive),var(--curious))}
+.f-ferm{background:var(--chill-bright)}
+.f-kiwi{background:var(--constructive)}
+.f-plant{background:linear-gradient(90deg,var(--caring),var(--curious),var(--constructive))}
+.f-fod{background:var(--curious)}
+.f-over{background:linear-gradient(90deg,var(--curious),var(--caring))}
+
+.bomb{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:18px 26px;margin-top:18px;padding:22px;border-radius:22px;border:1px dashed var(--caring-line);background:rgba(255,95,126,.035)}
+.bomb .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--caring);margin-bottom:6px}
+.bomb h3{font-size:clamp(20px,2.4vw,24px)}
+.bomb p{font-size:14.5px;color:var(--soft);margin-top:8px;line-height:1.55}
+.bomb .bars{display:grid;gap:10px;align-content:center;min-width:0}
+.bomb .meter{background:var(--surface)}
+
+/* 04: goals */
+.goals{margin-top:28px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tab{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border-radius:var(--pill);border:1.5px solid var(--border2);background:var(--surface);font-family:var(--display);font-weight:700;font-size:14.5px;letter-spacing:-.01em;color:var(--muted);transition:color .2s,border-color .2s,background .2s}
+.tab b{font-family:var(--mono);font-weight:500;font-size:11px;color:var(--muted)}
+.tab:hover{color:var(--text)}
+.tab[aria-selected="true"]{color:var(--text);border-color:var(--constructive);background:var(--constructive-dim)}
+.tab[aria-selected="true"] b{color:var(--constructive)}
+.gpanel{margin-top:14px;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:24px;display:grid;gap:18px;min-width:0}
+.gpanel h3{font-size:clamp(22px,2.6vw,28px)}
+.gpanel .gl{font-size:15.5px;color:var(--soft);max-width:820px;margin-top:8px;line-height:1.55}
+.adv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.adv>div{padding:16px 18px;border-radius:16px;background:var(--surface2);border:1px solid var(--border);min-width:0}
+.adv h4{display:flex;align-items:center;gap:7px;font-family:var(--display);font-weight:700;font-size:14.5px;letter-spacing:-.01em;margin-bottom:8px}
+.adv .up h4{color:var(--constructive)}
+.adv .wa h4{color:var(--curious)}
+.adv h4 svg{width:15px;height:15px}
+.adv ul{list-style:none;display:grid;gap:7px}
+.adv li{font-size:14px;color:var(--soft);line-height:1.5;padding-left:14px;position:relative}
+.adv li::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;opacity:.8}
+.adv .up li::before{background:var(--constructive)}
+.adv .wa li::before{background:var(--curious)}
+.gfoot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid var(--border)}
+.gpicks{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13.5px;color:var(--muted)}
+.gpicks a.chip{text-decoration:none}
+.gpicks a.chip:hover{border-color:var(--constructive)}
+
+/* 05: week */
+.planner{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:18px;margin-top:28px;align-items:start}
+.ex-flag{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--curious);border:1px solid var(--curious-line);background:var(--curious-dim);border-radius:var(--pill);padding:3px 10px}
+.days{display:grid;gap:8px}
+.day{display:grid;grid-template-columns:52px 30px minmax(0,1fr);align-items:center;gap:10px;padding:6px 8px 6px 12px;border-radius:14px;background:var(--surface2);border:1px solid var(--border)}
+.day label{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.day .th{width:30px;height:36px;display:grid;place-items:center}
+.day .th svg{width:24px;height:auto;display:block}
+.day .th .none{width:20px;height:20px;border-radius:50%;border:1.5px dashed var(--muted2)}
+.day select{appearance:none;-webkit-appearance:none;width:100%;min-width:0;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238f8bad' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center/14px;border:1px solid var(--border2);border-radius:12px;color:var(--text);padding:9px 34px 9px 12px;font-size:14.5px;cursor:pointer}
+.day select:hover{border-color:rgba(255,255,255,.28)}
+.day select option{background:var(--surface);color:var(--text)}
+.prow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.prow .lbl{font-size:13.5px;color:var(--muted)}
+.prow .acts{display:flex;flex-wrap:wrap;gap:8px}
+.sum{display:grid;gap:10px}
+.verdict{display:flex;gap:10px;align-items:flex-start;padding:14px 16px;border-radius:16px;font-size:14px;line-height:1.5;color:var(--soft);background:var(--constructive-dim);border:1px solid var(--constructive-line)}
+.verdict svg{width:18px;height:18px;flex:none;color:var(--constructive);margin-top:2px}
+.verdict b{color:var(--text);font-weight:600}
+
+.shop{margin-top:18px}
+.shop-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.aisle h4{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.aisle h4 i{width:8px;height:8px;border-radius:50%;flex:none}
+.aisle ul{list-style:none;display:grid;gap:2px}
+.aisle li label{position:relative;display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:start;padding:7px 8px;margin:0 -8px;border-radius:10px;font-size:14px;line-height:1.4;color:var(--soft);cursor:pointer;transition:background .15s}
+.aisle li label:hover{background:var(--surface2)}
+.aisle input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.aisle .bx{width:18px;height:18px;border-radius:6px;border:1.5px solid var(--border2);display:grid;place-items:center;margin-top:1px;transition:background .15s,border-color .15s}
+.aisle .bx svg{width:12px;height:12px;color:var(--ink);opacity:0}
+.aisle input:checked+.bx{background:var(--constructive);border-color:var(--constructive)}
+.aisle input:checked+.bx svg{opacity:1}
+.aisle input:checked~.it{text-decoration:line-through;color:var(--muted)}
+.aisle input:focus-visible+.bx{outline:2px solid var(--constructive);outline-offset:2px}
+.aisle .it b{font-family:var(--mono);font-weight:500;font-size:12.5px;color:var(--text);margin-right:6px;font-variant-numeric:tabular-nums}
+.aisle .it em{font-style:normal;display:block;font-size:12.5px;color:var(--muted)}
+.empty{font-size:14px;color:var(--muted);padding:6px 0}
+.copy-fallback{display:block;width:100%;margin:12px 0 0;min-height:140px;background:var(--bg);color:var(--text);border:1px solid var(--border2);border-radius:12px;padding:10px 12px;font-family:var(--mono);font-size:12px}
+.toast{font-size:13px;color:var(--constructive);white-space:nowrap}
+
+/* 06: evidence ladder */
+.ladder{margin-top:28px;display:grid;gap:10px}
+.rung{display:grid;grid-template-columns:132px minmax(0,1fr) minmax(0,1.15fr);gap:18px;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:16px 20px}
+.rung .g{padding-top:2px}
+.rung .cl{font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em;line-height:1.3}
+.rung .ev{font-size:14px;color:var(--soft);line-height:1.5}
+.rung .ev b{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+.rung.r-no{border-color:var(--caring-line)}
+.rung.r-no .cl{text-decoration:line-through;text-decoration-color:rgba(255,95,126,.7);text-decoration-thickness:2px}
+
+/* 07: check first */
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.ck{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.ck .ico{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--accent-dim);color:var(--accent);flex-shrink:0}
+.ck .ico svg{width:20px;height:20px}
+.ck h3{font-size:18px}
+.ck p{font-size:14px;color:var(--soft);line-height:1.5}
+.ck p b{color:var(--text);font-weight:600}
+.ck a{color:var(--text);text-decoration-color:var(--constructive);text-underline-offset:3px}
+.redflag{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:18px 28px;margin-top:14px;padding:22px 24px;border-radius:22px;background:rgba(255,95,126,.05);border:1px solid var(--caring-line)}
+.redflag .k{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--caring);margin-bottom:8px}
+.redflag .k svg{width:15px;height:15px}
+.redflag h3{font-size:21px;margin-bottom:10px}
+.redflag ul{list-style:none;display:grid;gap:6px}
+.redflag li{font-size:14.5px;color:var(--soft);padding-left:16px;position:relative;line-height:1.45}
+.redflag li::before{content:'';position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--caring)}
+.redflag .scr{align-self:start;padding:16px 18px;border-radius:16px;background:var(--surface);border:1px solid var(--border);min-width:0}
+.redflag .scr h4{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:-.02em;margin-bottom:6px}
+.redflag .scr p{font-size:14px;color:var(--soft);line-height:1.5}
+.redflag .scr .num{font-family:var(--mono);color:var(--text);user-select:all;white-space:nowrap}
+
+/* sources */
+.sources{margin-top:36px;border-top:1px solid var(--border);padding-top:18px}
+.sources summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary svg{width:16px;height:16px;transition:transform .2s;color:var(--muted)}
+.sources[open] summary svg{transform:rotate(90deg)}
+.sources summary span{font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--muted);border:1px solid var(--border2);border-radius:var(--pill);padding:1px 9px}
+.sources ol{margin:16px 0 0;padding-left:26px;display:grid;gap:8px;font-size:13.5px;color:var(--muted);max-width:900px}
+.sources li{padding-left:4px;scroll-margin-top:90px}
+.sources li:target{color:var(--soft)}
+.sources a{color:var(--soft);text-decoration-color:var(--border2);text-underline-offset:3px;overflow-wrap:anywhere}
+.sources a:hover{color:var(--constructive)}
+
+/* closing */
+.closing{padding-block:96px 12px;text-align:center;overflow:hidden}
+.closing h2{margin:10px auto 14px}
+.closing .lede{margin:0 auto}
+.companion-row{margin-top:26px;max-width:100%}
+.companion{font-size:14.5px;line-height:1.7;color:var(--soft);text-decoration:underline;text-decoration-color:var(--border2);text-underline-offset:5px;text-decoration-thickness:1px}
+.companion:hover{color:var(--text);text-decoration-color:var(--soft)}
+.companion .nw{white-space:nowrap}
+.companion svg{display:inline-block;width:15px;height:15px;vertical-align:-2px;margin-left:6px}
+
+@media (prefers-reduced-motion:reduce){
+  .gblob,.hero-pill .dot{animation:none}
+  html{scroll-behavior:auto}
+  .hc,.track .fill{transition:none}
+}
+
+/* responsive */
+@media (max-width:980px){
+  .bld{grid-template-columns:1fr}
+  .out{position:relative;top:auto}
+  .planner{grid-template-columns:1fr}
+  .shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .checks{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2)::after{display:none}
+}
+@media (max-width:860px){
+  .smoothies{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .rung{grid-template-columns:1fr;gap:8px}
+  .adv{grid-template-columns:1fr}
+  .bomb,.redflag{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .lrow{grid-template-columns:1fr 1fr}
+  .lrow .lk{grid-column:1/-1;padding-bottom:0}
+  .lhead .lk{display:none}
+  .lrow>div{padding:12px 16px}
+  .lrow:not(.lhead) .lk~div{padding-top:6px}
+}
+@media (max-width:640px){
+  .wrap{padding-inline:16px}
+  .hero{padding-block:118px 56px}
+  section.block{padding-block:64px 0}
+  .gblob{opacity:.14}
+  .hc span{display:none}
+  .checks{grid-template-columns:1fr}
+  .shop-grid{grid-template-columns:1fr}
+  .panel,.out,.gpanel,.sm{padding:16px}
+  .bomb,.redflag{padding:18px}
+  .day{grid-template-columns:44px 26px minmax(0,1fr);gap:8px;padding:6px 6px 6px 10px}
+  .ing li{grid-template-columns:76px minmax(0,1fr)}
+  .li,.ld{font-size:14.5px}
+  .flow{grid-template-columns:1fr}
+  .flow li::after{display:none}
+  .repair{grid-template-columns:1fr}
+}
+
+/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:#09090f;font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:640px){.sd-nav-in{padding-inline:16px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+body>main,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,summary,select,[role="button"],[role="checkbox"]{cursor:none}
+  textarea{cursor:text}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+  #cur.off{opacity:0!important}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-telescope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="13" r="3"/><path d="M3 7l5.5 2.5"/><path d="M3 7l2-4 14.5 6.5-2 4"/><path d="M8.5 9.5L6 20h5l1.5-4"/><path d="M17 16v4"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+  <symbol id="ic-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></symbol>
+  <symbol id="ic-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ic-reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="ic-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.4 6 11.3a6 6 0 0 1-12 0c0-4.9 6-11.3 6-11.3z"/></symbol>
+  <symbol id="ic-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="ic-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+  <symbol id="ic-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="m8 12 4 4 4-4"/></symbol>
+  <symbol id="ic-steth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></symbol>
+  <symbol id="ic-egg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c6.23-.05 7.87-5.57 7.5-10-.36-4.34-3.95-9.96-7.5-10-3.55.04-7.14 5.66-7.5 10-.37 4.43 1.27 9.95 7.5 10z"/></symbol>
+  <symbol id="ic-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+  <symbol id="ic-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.54a2 2 0 0 0 2-1.72L18 8"/><path d="M5 8h14"/><path d="M7 15a6.47 6.47 0 0 1 5 0 6.47 6.47 0 0 0 5 0"/><path d="m12 8 1-6h2"/></symbol>
+  <symbol id="ic-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+</svg>
+
+<div id="cur" aria-hidden="true"></div>
+<header class="sd-nav sd-fixed" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+    <span class="sd-crumb">/ Gut smoothies</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a href="#blend">Why blend</a><a href="#smoothies">Smoothies</a><a href="#build">Build</a><a href="#goals">Goals</a><a href="#week">Week</a><a href="#evidence">Evidence</a><a href="#check">Check first</a></nav>
+    <a class="sd-cta" href="#week">Plan my week</a>
+  </div>
+</header>
+
+<main>
+<header class="hero" id="top">
+  <div class="gblob gb1"></div><div class="gblob gb2"></div><div class="gblob gb3"></div><div class="gblob gb4"></div>
+  <div class="wrap">
+    <span class="hero-pill"><span class="dot"></span>Move · Food</span>
+    <h1>Six smoothies that <span class="grad">keep the fibre in.</span></h1>
+    <p class="sub">A blender keeps the whole fruit and vegetable in the cup, where a juicer throws the pulp away. These six share one simple formula. Here is what each can do for your gut, what none of them can, and a week planner with a shopping list.</p>
+    <nav class="hcups" aria-label="Jump to a smoothie"><a class="hc" href="#s-morning" aria-label="Morning gut smoothie"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-h-morning" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a996f2"/><stop offset="1" stop-color="#a996f2" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-h-morning)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#f2dc8f"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg><span>Morning gut smoothie</span></a><a class="hc" href="#s-kiwi" aria-label="Ginger–kiwi"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-h-kiwi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd14f"/><stop offset="1" stop-color="#8fd14f" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-h-kiwi)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#5f9e2e"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg><span>Ginger–kiwi</span></a><a class="hc" href="#s-apple" aria-label="Apple–oat fibre drink"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-h-apple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3cc9c"/><stop offset="1" stop-color="#e3cc9c" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-h-apple)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#e35d5b"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg><span>Apple–oat fibre drink</span></a><a class="hc" href="#s-green" aria-label="Green gut smoothie"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-h-green" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fae6a"/><stop offset="1" stop-color="#4fae6a" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-h-green)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#b5e06a"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg><span>Green gut smoothie</span></a><a class="hc" href="#s-berry" aria-label="Berry kefir"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-h-berry" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e85d8a"/><stop offset="1" stop-color="#e85d8a" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-h-berry)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#ff5f7e"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg><span>Berry kefir</span></a><a class="hc" href="#s-pineapple" aria-label="Pineapple–ginger"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-h-pineapple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5c842"/><stop offset="1" stop-color="#f5c842" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-h-pineapple)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#ffe27a"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg><span>Pineapple–ginger</span></a></nav>
+    <div class="jump-row">
+      <a class="mode-pill mp-b" href="#week"><svg><use href="#ic-cal"/></svg>Plan my week</a>
+      <a class="mode-pill mp-l" href="#build"><svg><use href="#ic-hammer"/></svg>Build your own</a>
+      <a class="mode-pill mp-c" href="#evidence"><svg><use href="#ic-telescope"/></svg>Evidence</a>
+      <a class="mode-pill mp-k" href="#check"><svg><use href="#ic-heart"/></svg>Check first</a>
+    </div>
+    <p class="fine">Evidence-checked, and not a diet prescription. Your week plan stays on this device.</p>
+  </div>
+</header>
+
+<!-- 01 -->
+<section class="block" id="blend">
+  <div class="wrap">
+    <div class="eyebrow"><b>01</b> · Why blend</div>
+    <h2>A blender keeps what a juicer throws away.</h2>
+    <p class="lede">Most of a fruit’s fibre sits in its skin, pulp and seeds. A juicer strains those out. A personal blender keeps the whole fruit or vegetable, and that fibre is what your gut bacteria live on.</p>
+
+    <div class="line" role="table" aria-label="Blender versus juicer">
+      <div class="lrow lhead" role="row"><div class="lk" role="columnheader"></div><div class="li" role="columnheader"><i style="background:var(--constructive)"></i>Blender</div><div class="ld" role="columnheader"><i style="background:var(--muted)"></i>Juicer</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">In the cup</div><div class="li" role="cell">The whole fruit or vegetable: skin, pulp and seeds</div><div class="ld" role="cell">The liquid. The pulp goes in the bin.</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Fibre</div><div class="li" role="cell">Kept</div><div class="ld" role="cell">Mostly gone. A medium orange has about 2.7 g; half a cup of its juice, about 0.2 g.<a class="ref" href="#src-5">[5]</a></div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">For gut bacteria</div><div class="li" role="cell">Fermentable fibre reaches the large bowel</div><div class="ld" role="cell">Very little gets there</div></div>
+      <div class="lrow" role="row"><div class="lk" role="rowheader">Australian guidelines</div><div class="li" role="cell">Count the fruit toward your 2 serves a day</div><div class="ld" role="cell">Juice only occasionally, 125 mL at a time<a class="ref" href="#src-8">[8]</a></div></div>
+    </div>
+
+    <h3 class="sub-h">Where the fibre goes</h3>
+    <ol class="flow">
+      <li><div class="st">Step 1</div><h4>Into the cup</h4><p>Oats, seeds, skins and leaves, blended whole.</p></li>
+      <li><div class="st">Step 2</div><h4>Past the small intestine</h4><p>Fibre and resistant starch aren’t digested on the way through.<a class="ref" href="#src-12">[12]</a></p></li>
+      <li><div class="st">Step 3</div><h4>Fermented in the colon</h4><p>Gut bacteria break them down and make short-chain fatty acids, such as butyrate.</p></li>
+      <li><div class="st">Step 4</div><h4>Fuel for the lining</h4><p>Butyrate is the main fuel for the cells lining the colon.<a class="ref" href="#src-13">[13]</a></p></li>
+    </ol>
+
+    <h3 class="sub-h">What a smoothie can do, in three numbers</h3>
+    <div class="facts">
+      <div class="fact f-mint">
+        <div class="big">+1.5<small>a week</small></div>
+        <div class="what">More complete bowel movements with 2 green kiwifruit a day</div>
+        <p><b>184 adults</b> in New Zealand, Italy and Japan, 4 weeks per treatment. Funded by Zespri, and the fruit was eaten whole.<a class="ref" href="#src-1">[1]</a></p>
+      </div>
+      <div class="fact f-violet">
+        <div class="big">19<small>of 93</small></div>
+        <div class="what">Inflammatory proteins that fell when people ate more fermented food</div>
+        <p><b>36 healthy adults</b> over 10 weeks, IL-6 among them. Gut microbe diversity rose. In the high-fibre group it didn’t change.<a class="ref" href="#src-3">[3]</a></p>
+      </div>
+      <div class="fact f-amber">
+        <div class="big">17%</div>
+        <div class="what">Of Australian adults reach the fibre target that lowers disease risk</div>
+        <p>That target is <b>28 g a day for women and 38 g for men</b>. Median intake was about 21 g in the 2011–12 survey, the latest with fibre in grams.<a class="ref" href="#src-9">[9]</a><a class="ref" href="#src-10">[10]</a></p>
+      </div>
+    </div>
+
+    <div class="repair">
+      <span class="ico"><svg><use href="#ic-x"/></svg></span>
+      <div>
+        <h3>What about gut repair?</h3>
+        <p>No food or smoothie has been shown to repair the gut lining in people without a diagnosed gut disease, and leaky gut is a description rather than a diagnosis.<a class="ref" href="#src-18">[18]</a><a class="ref" href="#src-19">[19]</a> What these smoothies can do is smaller and real: add fibre toward your daily target, add live cultures, and, with kiwifruit, ease constipation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="block" id="smoothies">
+  <div class="wrap">
+    <div class="eyebrow"><b>02</b> · The smoothies</div>
+    <h2>Six smoothies, one formula.</h2>
+    <p class="lede">Each is a single serve for a personal blender cup. They share the same building blocks, so you can rotate them across a week.</p>
+    <div class="measures"><svg><use href="#ic-ruler"/></svg><div><b>Australian measures:</b> 1 tbsp is 20 mL and 1 cup is 250 mL. Fill to your cup’s max line, and never blend hot liquid in a sealed personal-blender cup. Drink it fresh, or keep it covered in the fridge and finish it the same day.</div></div>
+    <div class="smoothies">
+<article class="sm" id="s-morning" style="--d:#a996f2"><div class="sm-hd"><div class="sm-cup"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-c-morning" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a996f2"/><stop offset="1" stop-color="#a996f2" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-c-morning)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#f2dc8f"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg></div><div><div class="sm-no">01</div><h3>Morning gut smoothie</h3><p class="sm-for">Best for: <b>Everyday, with breakfast</b></p></div></div><ul class="ing"><li><span class="q">½</span><span>banana, firm and slightly green</span></li><li><span class="q">½ cup</span><span>blueberries (frozen is fine)</span></li><li><span class="q">2 tbsp</span><span>plain Greek yoghurt or kefir</span></li><li><span class="q">1 tbsp</span><span>chia seeds</span></li><li><span class="q">1 tbsp</span><span>rolled oats</span></li><li><span class="q">200–250 mL</span><span>water or milk</span></li></ul><p class="sm-why">Oats and chia add fibre, and the yoghurt or kefir adds live cultures. A firm banana carries far more resistant starch than a ripe one, and gut bacteria ferment that starch.<a class="ref" href="#src-12">[12]</a></p><p class="sm-tip"><svg><use href="#ic-bulb"/></svg><span><b>Ripe or frozen-ripe banana</b> tastes sweeter but has little resistant starch left. Buy a few green and use them first.</span></p><div class="sm-tags"><span class="chip c-neutral">≈1 fruit serve</span><span class="chip c-chill">Live cultures</span><span class="chip c-constructive">Low FODMAP if lactose-free</span></div></article>
+<article class="sm" id="s-kiwi" style="--d:#8fd14f"><div class="sm-hd"><div class="sm-cup"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-c-kiwi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd14f"/><stop offset="1" stop-color="#8fd14f" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-c-kiwi)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#5f9e2e"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg></div><div><div class="sm-no">02</div><h3>Ginger–kiwi</h3><p class="sm-for">Best for: <b>Regular bowel movements</b></p></div></div><ul class="ing"><li><span class="q">2</span><span>green kiwifruit, peeled</span></li><li><span class="q">1 small piece</span><span>fresh ginger</span></li><li><span class="q">½</span><span>cucumber</span></li><li><span class="q">1 handful</span><span>baby spinach</span></li><li><span class="q">½</span><span>lemon, juiced</span></li><li><span class="q">200 mL</span><span>cold water</span></li><li><span class="q"></span><span>Ice</span></li></ul><p class="sm-why"><b>Two green kiwifruit a day</b> is the best-tested food for constipation: about 1½ more complete bowel movements a week after 4 weeks.<a class="ref" href="#src-1">[1]</a> The trial used whole fruit. Blending keeps the fibre, but blended kiwi hasn’t been tested.</p><p class="sm-tip"><svg><use href="#ic-bulb"/></svg><span><b>Give it 4 weeks.</b> Guidelines suggest 2–3 kiwifruit a day for at least that long before you judge it.<a class="ref" href="#src-2">[2]</a></span></p><div class="sm-tags"><span class="chip c-neutral">≈1 fruit serve</span><span class="chip c-constructive">Low FODMAP</span></div></article>
+<article class="sm" id="s-apple" style="--d:#e3cc9c"><div class="sm-hd"><div class="sm-cup"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-c-apple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3cc9c"/><stop offset="1" stop-color="#e3cc9c" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-c-apple)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#e35d5b"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg></div><div><div class="sm-no">03</div><h3>Apple–oat fibre drink</h3><p class="sm-for">Best for: <b>Three kinds of fibre in one cup</b></p></div></div><ul class="ing"><li><span class="q">½–1</span><span>apple, skin on</span></li><li><span class="q">2 tbsp</span><span>rolled oats</span></li><li><span class="q">1 tbsp</span><span>ground flaxseed</span></li><li><span class="q">Pinch</span><span>cinnamon</span></li><li><span class="q">200 mL</span><span>milk, kefir or water</span></li></ul><p class="sm-why">Skin-on apple, oats and ground flax each bring a different fibre. Use ground flax; whole seeds tend to pass straight through. Let it sit 5–10 minutes after blending and it thickens.</p><p class="sm-tip"><svg><use href="#ic-bulb"/></svg><span><b>Bloat easily?</b> Apple is high FODMAP at any useful amount. Swap in 2 kiwifruit or ½ cup strawberries.<a class="ref" href="#src-22">[22]</a></span></p><div class="sm-tags"><span class="chip c-neutral">½–1 fruit serve</span><span class="chip c-curious">Higher FODMAP: apple</span></div></article>
+<article class="sm" id="s-green" style="--d:#4fae6a"><div class="sm-hd"><div class="sm-cup"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-c-green" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fae6a"/><stop offset="1" stop-color="#4fae6a" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-c-green)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#b5e06a"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg></div><div><div class="sm-no">04</div><h3>Green gut smoothie</h3><p class="sm-for">Best for: <b>The most vegetables</b></p></div></div><ul class="ing"><li><span class="q">½</span><span>cucumber</span></li><li><span class="q">1 handful</span><span>baby spinach</span></li><li><span class="q">½</span><span>green apple</span></li><li><span class="q">½</span><span>avocado</span></li><li><span class="q">A few leaves</span><span>fresh mint</span></li><li><span class="q">Squeeze</span><span>lime</span></li><li><span class="q">200–250 mL</span><span>water</span></li></ul><p class="sm-why">The avocado makes it creamy without dairy and adds fibre and unsaturated fat. It’s the lowest in fruit of the six.</p><p class="sm-tip"><svg><use href="#ic-bulb"/></svg><span><b>On warfarin?</b> A daily spinach smoothie is a big change in vitamin K. Keep greens steady and tell your doctor first.<a class="ref" href="#src-28">[28]</a></span></p><div class="sm-tags"><span class="chip c-neutral">≈½ fruit serve</span><span class="chip c-curious">Higher FODMAP: apple, avocado</span></div></article>
+<article class="sm" id="s-berry" style="--d:#e85d8a"><div class="sm-hd"><div class="sm-cup"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-c-berry" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e85d8a"/><stop offset="1" stop-color="#e85d8a" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-c-berry)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#ff5f7e"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg></div><div><div class="sm-no">05</div><h3>Berry kefir</h3><p class="sm-for">Best for: <b>The simplest fibre-plus-cultures pair</b></p></div></div><ul class="ing"><li><span class="q">200 mL</span><span>plain, unsweetened kefir</span></li><li><span class="q">½ cup</span><span>mixed berries</span></li><li><span class="q">1 tbsp</span><span>chia seeds or ground flaxseed</span></li><li><span class="q">Pinch</span><span>cinnamon</span></li><li><span class="q">Optional ½</span><span>banana</span></li></ul><p class="sm-why">Berries and chia bring the fibre; kefir brings live cultures. In a 10-week trial, eating more fermented food raised gut microbe diversity in healthy adults.<a class="ref" href="#src-3">[3]</a></p><p class="sm-tip"><svg><use href="#ic-bulb"/></svg><span><b>Live cultures aren’t the same as probiotics.</b> That word needs a named strain with trial evidence behind it.<a class="ref" href="#src-25">[25]</a></span></p><div class="sm-tags"><span class="chip c-neutral">½–1 fruit serve</span><span class="chip c-chill">Live cultures</span><span class="chip c-chill">Lactose: kefir</span></div></article>
+<article class="sm" id="s-pineapple" style="--d:#f5c842"><div class="sm-hd"><div class="sm-cup"><svg viewBox="0 0 80 104" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-c-pineapple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5c842"/><stop offset="1" stop-color="#f5c842" stop-opacity=".72"/></linearGradient></defs><path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-c-pineapple)"/><ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/><path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/><path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="64" cy="19" r="10" fill="#ffe27a"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg></div><div><div class="sm-no">06</div><h3>Pineapple–ginger</h3><p class="sm-for">Best for: <b>A cold, light one for hot days</b></p></div></div><ul class="ing"><li><span class="q">¾ cup</span><span>pineapple</span></li><li><span class="q">1 small piece</span><span>fresh ginger</span></li><li><span class="q">½</span><span>cucumber</span></li><li><span class="q">A few leaves</span><span>fresh mint</span></li><li><span class="q">200 mL</span><span>coconut water or water</span></li><li><span class="q"></span><span>Ice</span></li></ul><p class="sm-why">Very refreshing, and the only one of the six with no seeds or oats, so it’s the lowest in fibre. Add 1 tbsp chia to lift it. Keep the pineapple to about this amount.</p><p class="sm-tip"><svg><use href="#ic-bulb"/></svg><span><b>Coconut water</b> is high in potassium, and above about 100 mL it’s no longer low FODMAP. Half water, half coconut water works.<a class="ref" href="#src-22">[22]</a><a class="ref" href="#src-27">[27]</a></span></p><div class="sm-tags"><span class="chip c-neutral">≈¾ fruit serve</span><span class="chip c-constructive">Low FODMAP with water</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="block" id="build">
+  <div class="wrap">
+    <div class="eyebrow"><b>03</b> · Build your own</div>
+    <h2>One fruit, one vegetable, fibre, a fermented food, liquid.</h2>
+    <p class="lede">That formula sits behind all six. Pick one of each and the card shows what you’ve made, how much fruit it counts as, and anything to watch.</p>
+
+    <div class="bld">
+      <form class="panel pick" id="bldForm" aria-label="Build a smoothie"></form>
+      <aside class="out" id="bldOut" aria-live="polite"></aside>
+    </div>
+
+    <div class="bomb">
+      <div>
+        <div class="k">What not to build</div>
+        <h3>Banana, mango, dates, honey and juice looks healthy. It’s close to three days of fruit.</h3>
+        <p>A banana, a cup of mango, two Medjool dates and a cup of juice comes to about 5½ serves of fruit against a guideline of 2 a day, plus a tablespoon of honey.<a class="ref" href="#src-8">[8]</a> The UK’s NHS counts sugar in juice and blended fruit as free sugar, and suggests no more than 150 mL of juice and smoothies a day combined.<a class="ref" href="#src-7">[7]</a></p>
+        <p>Blending isn’t the problem. In small studies, whole fruit blended with its fibre and seeds raised blood sugar no more than eating it whole.<a class="ref" href="#src-6">[6]</a> The amount is the problem. Keep to about one fruit serve and add chia, flax or oats. If you have diabetes, check how a smoothie affects your glucose.</p>
+      </div>
+      <div class="bars" aria-label="Fruit serves compared">
+        <div class="meter">
+          <div class="top"><span class="nm">Ginger–kiwi</span><span class="val"><b>1</b> serve</span></div>
+          <div class="track"><div class="fill f-fruit" style="width:16.6%"></div><span class="tick" style="left:33.3%"></span></div>
+        </div>
+        <div class="meter">
+          <div class="top"><span class="nm">The sugar bomb</span><span class="val"><b>5½</b> serves</span></div>
+          <div class="track"><div class="fill f-over" style="width:91.6%"></div><span class="tick" style="left:33.3%"></span></div>
+          <div class="why">The tick marks 2 serves, the whole day’s fruit. Scale runs to 6.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="block" id="goals">
+  <div class="wrap">
+    <div class="eyebrow"><b>04</b> · Your goal</div>
+    <h2>Match the smoothie to what you’re after.</h2>
+    <p class="lede">Ingredients that feed a diverse microbiome can make an irritated gut feel worse, so the best pick depends on the goal.</p>
+
+    <div class="goals">
+      <div class="tabs" role="tablist" aria-label="Goals">
+        <button type="button" class="tab" role="tab" id="t-reg" aria-controls="g-reg" aria-selected="true"><b>A</b>Going regularly</button>
+        <button type="button" class="tab" role="tab" id="t-bloat" aria-controls="g-bloat" aria-selected="false" tabindex="-1"><b>B</b>Less bloating</button>
+        <button type="button" class="tab" role="tab" id="t-abx" aria-controls="g-abx" aria-selected="false" tabindex="-1"><b>C</b>After antibiotics</button>
+        <button type="button" class="tab" role="tab" id="t-every" aria-controls="g-every" aria-selected="false" tabindex="-1"><b>D</b>Everyday gut health</button>
+      </div>
+
+      <div class="gpanel" role="tabpanel" id="g-reg" aria-labelledby="t-reg">
+        <div>
+          <h3>The one goal with good food evidence.</h3>
+          <p class="gl">Two green kiwifruit a day for 4 weeks added about 1½ complete bowel movements a week in people with chronic constipation, and did better than psyllium across the two constipated groups.<a class="ref" href="#src-1">[1]</a> The British Dietetic Association now recommends 2–3 kiwifruit a day for at least 4 weeks.<a class="ref" href="#src-2">[2]</a></p>
+        </div>
+        <div class="adv">
+          <div class="up"><h4><svg><use href="#ic-check"/></svg>What helps</h4><ul>
+            <li>The ginger–kiwi smoothie every day for 4 weeks before you judge it.</li>
+            <li>The other foods with guideline support: 8–10 prunes a day, rye bread, and high-mineral water. Psyllium is the supplement with the best evidence.<a class="ref" href="#src-2">[2]</a></li>
+            <li>More fluid as your fibre goes up.<a class="ref" href="#src-11">[11]</a></li>
+          </ul></div>
+          <div class="wa"><h4><svg><use href="#ic-alert"/></svg>Watch</h4><ul>
+            <li>“Eat more fibre” on its own isn’t well supported for constipation. Name the food instead.<a class="ref" href="#src-2">[2]</a></li>
+            <li>The trial used whole kiwifruit. Blended kiwi keeps the fibre but hasn’t been tested.</li>
+            <li>See your GP about a change in bowel habit that lasts, especially with bleeding or weight loss.<a class="ref" href="#src-31">[31]</a></li>
+          </ul></div>
+        </div>
+        <div class="gfoot"><div class="gpicks">Picks: <a class="chip c-constructive" href="#s-kiwi">Ginger–kiwi</a><a class="chip c-neutral" href="#s-apple">Apple–oat</a></div><button type="button" class="btn go" data-preset="regular"><svg><use href="#ic-cal"/></svg>Load a kiwi-every-day week</button></div>
+      </div>
+
+      <div class="gpanel" role="tabpanel" id="g-bloat" aria-labelledby="t-bloat" hidden>
+        <div>
+          <h3>Go slowly, and lean on low-FODMAP picks.</h3>
+          <p class="gl">Fibre that feeds bacteria also makes gas, so adding a lot at once often makes wind worse. In the one diet trial in constipation, the lower-fibre group reported less wind and bloating.<a class="ref" href="#src-2">[2]</a> Monash University rates most ingredients here as low FODMAP at these amounts.<a class="ref" href="#src-22">[22]</a></p>
+        </div>
+        <div class="adv">
+          <div class="up"><h4><svg><use href="#ic-check"/></svg>What helps</h4><ul>
+            <li>Ginger–kiwi, pineapple–ginger made with water, and the morning smoothie with a firm banana and lactose-free yoghurt.</li>
+            <li>Halve the chia, flax and oats for the first week, then build up.</li>
+            <li>Keep to about one fruit serve per smoothie. Small FODMAP amounts in one sitting add up.<a class="ref" href="#src-21">[21]</a></li>
+          </ul></div>
+          <div class="wa"><h4><svg><use href="#ic-alert"/></svg>Watch</h4><ul>
+            <li>Apple is high FODMAP at any useful amount, avocado is high at a standard serve, and ripe banana is high above about a third of one.<a class="ref" href="#src-22">[22]</a><a class="ref" href="#src-24">[24]</a></li>
+            <li>Kefir and yoghurt carry lactose. That only matters if you’re lactose intolerant, and lactose-free versions exist.<a class="ref" href="#src-23">[23]</a></li>
+            <li>The low FODMAP diet is a short, three-step plan for diagnosed IBS, best done with a dietitian. Have ongoing bloating checked by a GP first.<a class="ref" href="#src-20">[20]</a></li>
+          </ul></div>
+        </div>
+        <div class="gfoot"><div class="gpicks">Picks: <a class="chip c-constructive" href="#s-kiwi">Ginger–kiwi</a><a class="chip c-constructive" href="#s-pineapple">Pineapple–ginger</a><a class="chip c-neutral" href="#s-morning">Morning</a></div><button type="button" class="btn go" data-preset="bloat"><svg><use href="#ic-cal"/></svg>Load a gentler week</button></div>
+      </div>
+
+      <div class="gpanel" role="tabpanel" id="g-abx" aria-labelledby="t-abx" hidden>
+        <div>
+          <h3>Nothing has been shown to speed recovery.</h3>
+          <p class="gl">No food or capsule has been shown to bring your gut back faster after antibiotics. In one small study, a multi-strain probiotic capsule slowed recovery for months.<a class="ref" href="#src-4">[4]</a> Eating normally, with plenty of plant variety and some fermented food, is the reasonable default.</p>
+        </div>
+        <div class="adv">
+          <div class="up"><h4><svg><use href="#ic-check"/></svg>What helps</h4><ul>
+            <li>Yoghurt or kefir with live cultures on most days. In a 10-week trial in healthy adults, this raised gut microbe diversity.<a class="ref" href="#src-3">[3]</a></li>
+            <li>Variety over volume: rotate the six rather than repeating one.</li>
+            <li>Ease fibre back in if your gut is unsettled.</li>
+          </ul></div>
+          <div class="wa"><h4><svg><use href="#ic-alert"/></svg>Watch</h4><ul>
+            <li>Diarrhoea that is severe, bloody, or goes on for days during or after antibiotics needs a GP.</li>
+            <li>Skip probiotic capsules unless your doctor suggests a specific one.<a class="ref" href="#src-4">[4]</a></li>
+          </ul></div>
+        </div>
+        <div class="gfoot"><div class="gpicks">Picks: <a class="chip c-chill" href="#s-berry">Berry kefir</a><a class="chip c-chill" href="#s-morning">Morning</a><a class="chip c-neutral" href="#s-green">Green</a></div><button type="button" class="btn go" data-preset="abx"><svg><use href="#ic-cal"/></svg>Load a fermented-most-days week</button></div>
+      </div>
+
+      <div class="gpanel" role="tabpanel" id="g-every" aria-labelledby="t-every" hidden>
+        <div>
+          <h3>For most people, the win is reaching the fibre target.</h3>
+          <p class="gl">Adults need 25 g of fibre a day (women) or 30 g (men), and 28 g or 38 g to lower chronic disease risk. Fewer than 1 in 5 Australian adults reach that.<a class="ref" href="#src-9">[9]</a><a class="ref" href="#src-10">[10]</a> A smoothie can add a useful few grams on top of your meals.</p>
+        </div>
+        <div class="adv">
+          <div class="up"><h4><svg><use href="#ic-check"/></svg>What helps</h4><ul>
+            <li>Rotate all six for different fibres: oats, chia, flax, fruit skins and leaves.</li>
+            <li>Fermented food on some days.<a class="ref" href="#src-3">[3]</a></li>
+            <li>Count each smoothie’s fruit toward your 2 serves a day.<a class="ref" href="#src-8">[8]</a></li>
+          </ul></div>
+          <div class="wa"><h4><svg><use href="#ic-alert"/></svg>Watch</h4><ul>
+            <li>A smoothie adds to meals. It doesn’t replace the vegetables, legumes and wholegrains on your plate.</li>
+            <li>Fruit adds up fast. Keep to about one serve per cup.</li>
+          </ul></div>
+        </div>
+        <div class="gfoot"><div class="gpicks">Picks: all six, in rotation</div><button type="button" class="btn go" data-preset="variety"><svg><use href="#ic-cal"/></svg>Load a variety week</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="block" id="week">
+  <div class="wrap">
+    <div class="eyebrow"><b>05</b> · The week</div>
+    <h2>Plan a week, get the shopping list.</h2>
+    <p class="lede">Pick one smoothie a day, or load a week from a goal above. The planner counts fruit serves, fermented-food days and kiwi days, then builds one shopping list.</p>
+
+    <div class="planner">
+      <div class="panel">
+        <div class="panel-h"><h3>Your week</h3><span class="ex-flag" id="exFlag">Example week, change any day</span></div>
+        <div class="days" id="days"></div>
+        <div class="prow">
+          <span class="lbl">Load a week</span>
+          <div class="acts">
+            <button type="button" class="btn ghost" data-preset="variety"><svg><use href="#ic-reset"/></svg>Variety</button>
+            <button type="button" class="btn ghost" data-preset="regular">Kiwi every day</button>
+            <button type="button" class="btn ghost" data-preset="bloat">Gentler</button>
+            <button type="button" class="btn ghost" id="wk-clear">Clear</button>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-h"><h3>How the week adds up</h3></div>
+        <div class="sum" id="sum"></div>
+      </div>
+    </div>
+
+    <div class="panel shop">
+      <div class="panel-h">
+        <h3>Shopping list</h3>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <span class="toast" id="copyToast" hidden>Copied</span>
+          <button type="button" class="btn go" id="copyList"><svg><use href="#ic-copy"/></svg>Copy list</button>
+        </div>
+      </div>
+      <div class="shop-grid" id="shop"></div>
+      <textarea class="copy-fallback" id="copyFallback" hidden readonly aria-label="Shopping list text"></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="block" id="evidence">
+  <div class="wrap">
+    <div class="eyebrow"><b>06</b> · The evidence</div>
+    <h2>What the evidence supports.</h2>
+    <p class="lede">Graded from solid to not shown. Most gut-health claims rest on small trials or lab work, and the grades say which.</p>
+    <div class="ladder">
+      <div class="rung"><div class="g"><span class="chip c-constructive">Solid</span></div><div class="cl">Blending keeps fibre that juicing removes.</div><div class="ev">Most fibre is in the skin and pulp. A medium orange has about <b>2.7 g</b> of fibre; half a cup of its juice has about <b>0.2 g</b>.<a class="ref" href="#src-5">[5]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-chill">Guideline</span></div><div class="cl">Adults need 25–30 g of fibre a day.</div><div class="ev">NHMRC: <b>25 g</b> for women and <b>30 g</b> for men, and <b>28 g</b> and <b>38 g</b> to lower chronic disease risk. Median adult intake was about 21 g.<a class="ref" href="#src-9">[9]</a><a class="ref" href="#src-10">[10]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-chill">Moderate</span></div><div class="cl">Two green kiwifruit a day ease constipation.</div><div class="ev">184 adults, 4 weeks: about <b>+1.5</b> complete bowel movements a week in functional constipation and IBS-C, better than psyllium overall. Industry-funded, and now in UK dietetic guidelines at 2–3 a day for 4 weeks or more.<a class="ref" href="#src-1">[1]</a><a class="ref" href="#src-2">[2]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-chill">Moderate</span></div><div class="cl">Ginger eases nausea in pregnancy.</div><div class="ev">12 trials, <b>1,278</b> pregnant women: nausea improved, vomiting didn’t clearly change. Most trials used capsules of about 1–1.5 g a day, more than a slice in a smoothie.<a class="ref" href="#src-15">[15]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-curious">Limited</span></div><div class="cl">Fermented foods increase gut microbe diversity.</div><div class="ev">One 10-week trial in <b>36</b> healthy adults: diversity rose and 19 of 93 inflammatory proteins fell. Its main immune outcome didn’t change.<a class="ref" href="#src-3">[3]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-curious">Limited</span></div><div class="cl">Green bananas feed butyrate-making bacteria.</div><div class="ev">The least-ripe bananas held about <b>37%</b> starch by dry weight against 3% when fully ripe, and most of it reached the large bowel undigested. Human trials of green banana for gut health are few.<a class="ref" href="#src-12">[12]</a><a class="ref" href="#src-13">[13]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-curious">Limited</span></div><div class="cl">Ginger helps digestion and bloating.</div><div class="ev">In a small trial in indigestion, ginger sped stomach emptying without easing symptoms. The one IBS trial found no benefit.<a class="ref" href="#src-15">[15]</a><a class="ref" href="#src-16">[16]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-curious">Limited</span></div><div class="cl">Oats in a smoothie lower cholesterol.</div><div class="ev">Trials used <b>3 g</b> or more of oat beta-glucan a day, which lowered LDL by about 0.25 mmol/L. A spoon or two of oats gives far less.<a class="ref" href="#src-14">[14]</a></div></div>
+      <div class="rung"><div class="g"><span class="chip c-curious">Limited</span></div><div class="cl">Berry polyphenols feed your good bacteria.</div><div class="ev">Mostly lab and animal work. A 2022 review found <b>3</b> human trials and no overall effect on gut bacteria.<a class="ref" href="#src-17">[17]</a></div></div>
+      <div class="rung r-no"><div class="g"><span class="chip c-caring">Not shown</span></div><div class="cl">Blended fruit spikes blood sugar more than whole fruit.</div><div class="ev">In three small studies, fruit blended with its fibre and seeds raised blood sugar the same as or less than the same fruit eaten whole. Sweetened shop smoothies weren’t tested.<a class="ref" href="#src-6">[6]</a></div></div>
+      <div class="rung r-no"><div class="g"><span class="chip c-caring">Not shown</span></div><div class="cl">A smoothie repairs a leaky gut.</div><div class="ev">Leaky gut is a description, not a diagnosis. A 2024 review found no strong evidence that diet changes gut permeability in healthy people.<a class="ref" href="#src-18">[18]</a><a class="ref" href="#src-19">[19]</a></div></div>
+      <div class="rung r-no"><div class="g"><span class="chip c-caring">Not shown</span></div><div class="cl">Probiotics restore your gut after antibiotics.</div><div class="ev">In <b>21</b> adults, a multi-strain probiotic delayed the gut’s return to normal for months. One small study of one product.<a class="ref" href="#src-4">[4]</a></div></div>
+      <div class="rung r-no"><div class="g"><span class="chip c-caring">Myth</span></div><div class="cl">Live cultures mean probiotic.</div><div class="ev">In Australia, yoghurt and fermented milk must carry at least <b>1 million</b> cultures per gram. A probiotic is a named strain with trial evidence of benefit.<a class="ref" href="#src-25">[25]</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="block" id="check">
+  <div class="wrap">
+    <div class="eyebrow"><b>07</b> · Check first</div>
+    <h2>Check these before a daily smoothie habit.</h2>
+    <p class="lede">General guidance, not a plan for you. If any of these apply, the recipes may need changes, and a GP or Accredited Practising Dietitian can tailor them.</p>
+
+    <div class="checks">
+      <div class="ck" style="--accent:var(--curious);--accent-dim:var(--curious-dim)">
+        <span class="ico"><svg><use href="#ic-drop"/></svg></span>
+        <h3>Build fibre slowly</h3>
+        <p>Add chia, flax and oats gradually and drink more as you go, because fibre takes up water.<a class="ref" href="#src-11">[11]</a> <b>Never eat chia dry and wash it down.</b> One man needed an endoscopy when dry chia swelled in his oesophagus. Blend or soak it.<a class="ref" href="#src-30">[30]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)">
+        <span class="ico"><svg><use href="#ic-shield"/></svg></span>
+        <h3>Kidney disease</h3>
+        <p>Banana, avocado, kiwifruit, spinach and coconut water are high in potassium. Not everyone with kidney disease needs to limit it, so <b>ask your renal team or dietitian</b> before a daily smoothie habit.<a class="ref" href="#src-27">[27]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)">
+        <span class="ico"><svg><use href="#ic-pill"/></svg></span>
+        <h3>On warfarin</h3>
+        <p>Spinach is high in vitamin K. Don’t avoid it, but <b>keep the amount about the same each week</b>. A new daily green smoothie is a big change, so tell your doctor first. You may need extra INR blood tests.<a class="ref" href="#src-28">[28]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <span class="ico"><svg><use href="#ic-alert"/></svg></span>
+        <h3>Allergies</h3>
+        <p>An itchy, tingly mouth from raw kiwi is usually oral allergy syndrome and mild, but kiwi can also cause a true allergy, rarely anaphylaxis. With a latex allergy, <b>banana, avocado, kiwifruit and strawberry</b> are common cross-reactors. Yoghurt and kefir contain milk.<a class="ref" href="#src-26">[26]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <span class="ico"><svg><use href="#ic-egg"/></svg></span>
+        <h3>Pregnant</h3>
+        <p>Kefir and yoghurt made from pasteurised milk are fine. <b>Avoid raw-milk or homemade kefir</b> of unknown milk, and ready-to-drink juices or smoothies sold unpasteurised. A smoothie you make at home with washed fruit is fine.<a class="ref" href="#src-29">[29]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--constructive);--accent-dim:var(--constructive-dim)">
+        <span class="ico"><svg><use href="#ic-steth"/></svg></span>
+        <h3>A gut condition</h3>
+        <p>With Crohn’s disease, a known narrowing of the bowel, or during an IBD flare, <b>ask your gastroenterologist or dietitian</b> before adding seeds and skins. With diagnosed IBS, the low FODMAP diet works best with a dietitian.<a class="ref" href="#src-20">[20]</a> Find one at <a href="https://dietitiansaustralia.org.au/find-an-apd" target="_blank" rel="noopener">Dietitians Australia</a>.</p>
+      </div>
+    </div>
+
+    <div class="redflag">
+      <div>
+        <div class="k"><svg><use href="#ic-alert"/></svg>See a GP, whatever you’re drinking</div>
+        <h3>No smoothie fixes these. Get them checked.</h3>
+        <ul>
+          <li>Blood in your poo, or black poo</li>
+          <li>A change in bowel habit that lasts: looser, narrower or more often</li>
+          <li>Weight loss you can’t explain</li>
+          <li>Ongoing tummy pain, cramping or bloating</li>
+          <li>Tiredness, or low iron found on a blood test</li>
+        </ul>
+      </div>
+      <div class="scr">
+        <h4>Bowel screening is free from 45</h4>
+        <p>From 45 to 74 you can do the free home test every 2 years. At 45–49 you ask for your first kit at ncsr.gov.au or on <span class="num">1800 627 701</span>, or through your GP.<a class="ref" href="#src-31">[31]</a></p>
+      </div>
+    </div>
+
+    <details class="sources" id="sources">
+      <summary><svg><use href="#ic-chev"/></svg>Sources<span>31</span></summary>
+      <ol>
+        <li id="src-1">Gearry R, Fukudo S, Barbara G, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/36537785/" target="_blank" rel="noopener">Consumption of 2 green kiwifruits daily improves constipation and abdominal comfort: results of an international multicenter randomized controlled trial</a>. Am J Gastroenterol, 2023. Principal sponsor: Zespri.</li>
+        <li id="src-2">Dimidi E, van der Schoot A, Barrett K, et al. <a href="https://doi.org/10.1111/jhn.70133" target="_blank" rel="noopener">British Dietetic Association guidelines for the dietary management of chronic constipation in adults</a>. J Hum Nutr Diet, 2025; and the <a href="https://www.bda.uk.com/resource/the-first-bda-evidence-based-dietary-guidelines-for-chronic-constipation-in-adults-from-evidence-to-practice.html" target="_blank" rel="noopener">BDA summary</a>.</li>
+        <li id="src-3">Wastyk HC, Fragiadakis GK, Perelman D, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/34256014/" target="_blank" rel="noopener">Gut-microbiota-targeted diets modulate human immune status</a>. Cell, 2021; and <a href="https://med.stanford.edu/news/all-news/2021/07/fermented-food-diet-increases-microbiome-diversity-lowers-inflammation.html" target="_blank" rel="noopener">Stanford Medicine news release</a>.</li>
+        <li id="src-4">Suez J, Zmora N, Zilberman-Schapira G, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/30193113/" target="_blank" rel="noopener">Post-antibiotic gut mucosal microbiome reconstitution is impaired by probiotics and improved by autologous FMT</a>. Cell, 2018.</li>
+        <li id="src-5">Tufts Health &amp; Nutrition Letter. <a href="https://www.nutritionletter.tufts.edu/general-nutrition/q-i-have-a-new-blender-that-will-take-a-whole-fruit-and-turn-it-into-juice-is-there-a-loss-of-nutrients-when-i-do-this-am-i-destroying-the-fiber/" target="_blank" rel="noopener">I have a new blender that will take a whole fruit and turn it into juice. Am I destroying the fiber?</a> 2014, updated 2019.</li>
+        <li id="src-6">Redfern KM, Cammack VL, Sweet N, et al. <a href="https://doi.org/10.1038/nutd.2017.36" target="_blank" rel="noopener">Nutrient-extraction blender preparation reduces postprandial glucose responses from fruit juice consumption</a>. Nutr Diabetes, 2017; Alkutbe R, Redfern K, Jarvis M, Rees G. <a href="https://doi.org/10.3390/nu12030766" target="_blank" rel="noopener">Nutrient extraction lowers postprandial glucose response of fruit in adults with obesity as well as healthy weight adults</a>. Nutrients, 2020; Crummett LT, Grosso RJ. <a href="https://doi.org/10.3390/nu14214565" target="_blank" rel="noopener">Postprandial glycemic response to whole fruit versus blended fruit in healthy, young adults</a>. Nutrients, 2022.</li>
+        <li id="src-7">NHS. <a href="https://www.nhs.uk/live-well/eat-well/5-a-day/5-a-day-what-counts/" target="_blank" rel="noopener">5 A Day: what counts?</a>; and <a href="https://www.nhs.uk/live-well/eat-well/food-types/how-does-sugar-in-our-diet-affect-our-health/" target="_blank" rel="noopener">Sugar: the facts</a>.</li>
+        <li id="src-8">NHMRC, Eat For Health. <a href="https://www.eatforhealth.gov.au/food-essentials/how-much-do-we-need-each-day/serve-sizes" target="_blank" rel="noopener">Serve sizes</a>; and <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit" target="_blank" rel="noopener">Fruit</a>. Australian Dietary Guidelines, 2013 (a revision is under way).</li>
+        <li id="src-9">NHMRC. <a href="https://www.eatforhealth.gov.au/nutrient-reference-values/nutrients/dietary-fibre" target="_blank" rel="noopener">Nutrient Reference Values: dietary fibre</a>.</li>
+        <li id="src-10">Fayet-Moore F, Cassettari T, Tuck K, McConnell A, Petocz P. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5986479/" target="_blank" rel="noopener">Dietary fibre intake in Australia. Paper I: associations with demographic, socio-economic, and anthropometric factors</a>. Nutrients, 2018. Data from the 2011–12 Australian Health Survey.</li>
+        <li id="src-11">healthdirect. <a href="https://www.healthdirect.gov.au/high-fibre-foods-and-diet" target="_blank" rel="noopener">High-fibre foods and diet</a>.</li>
+        <li id="src-12">Englyst HN, Cummings JH. <a href="https://doi.org/10.1093/ajcn/44.1.42" target="_blank" rel="noopener">Digestion of the carbohydrates of banana (Musa paradisiaca sapientum) in the human small intestine</a>. Am J Clin Nutr, 1986; and Munir H, et al. <a href="https://doi.org/10.1002/fsn3.4063" target="_blank" rel="noopener">Green banana resistant starch: a promising potential as functional ingredient against certain maladies</a>. Food Sci Nutr, 2024.</li>
+        <li id="src-13">Roediger WE. <a href="https://pubmed.ncbi.nlm.nih.gov/7429343/" target="_blank" rel="noopener">Role of anaerobic bacteria in the metabolic welfare of the colonic mucosa in man</a>. Gut, 1980.</li>
+        <li id="src-14">Whitehead A, Beck EJ, Tosh S, Wolever TMS. <a href="https://doi.org/10.3945/ajcn.114.086108" target="_blank" rel="noopener">Cholesterol-lowering effects of oat β-glucan: a meta-analysis of randomized controlled trials</a>. Am J Clin Nutr, 2014.</li>
+        <li id="src-15">Viljoen E, Visser J, Koen N, Musekiwa A. <a href="https://doi.org/10.1186/1475-2891-13-20" target="_blank" rel="noopener">A systematic review and meta-analysis of the effect and safety of ginger in the treatment of pregnancy-associated nausea and vomiting</a>. Nutr J, 2014; Anh NH, Kim SJ, Long NP, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/31935866/" target="_blank" rel="noopener">Ginger on human health: a comprehensive systematic review of 109 randomized controlled trials</a>. Nutrients, 2020.</li>
+        <li id="src-16">Hu ML, Rayner CK, Wu KL, et al. <a href="https://doi.org/10.3748/wjg.v17.i1.105" target="_blank" rel="noopener">Effect of ginger on gastric motility and symptoms of functional dyspepsia</a>. World J Gastroenterol, 2011.</li>
+        <li id="src-17">Sweeney M, Burns G, Sturgeon N, et al. <a href="https://doi.org/10.3390/nu14112263" target="_blank" rel="noopener">The effects of berry polyphenols on the gut microbiota and blood pressure: a systematic review of randomized clinical trials in humans</a>. Nutrients, 2022.</li>
+        <li id="src-18">Monash University FODMAP blog. <a href="https://www.monashfodmap.com/blog/gut-permeability-ibs-do-i-really-have-leaky-gut/" target="_blank" rel="noopener">Gut permeability and IBS: do I really have leaky gut?</a> 2019; Camilleri M. <a href="https://pubmed.ncbi.nlm.nih.gov/31076401/" target="_blank" rel="noopener">Leaky gut: mechanisms, measurement and clinical implications in humans</a>. Gut, 2019.</li>
+        <li id="src-19">Nascimento DSM, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/38931225/" target="_blank" rel="noopener">Can diet alter the intestinal barrier permeability in healthy people? A systematic review</a>. Nutrients, 2024.</li>
+        <li id="src-20">Monash University. <a href="https://www.monashfodmap.com/ibs-central/i-have-ibs/starting-the-low-fodmap-diet/" target="_blank" rel="noopener">Starting the low FODMAP diet</a>.</li>
+        <li id="src-21">Monash University FODMAP blog. <a href="https://www.monashfodmap.com/blog/fodmap-stacking-explained/" target="_blank" rel="noopener">FODMAP stacking explained</a>.</li>
+        <li id="src-22">Monash University FODMAP blog. <a href="https://www.monashfodmap.com/blog/getting-enough-fibre/" target="_blank" rel="noopener">Getting enough fibre</a> (low FODMAP serves for kiwifruit, berries, pineapple, firm banana, spinach, chia, linseed and oats); <a href="https://www.monashfodmap.com/blog/update-bananas-re-tested/" target="_blank" rel="noopener">Bananas re-tested</a>; and <a href="https://www.monashfodmap.com/about-fodmap-and-ibs/high-and-low-fodmap-foods/" target="_blank" rel="noopener">High and low FODMAP foods</a>. Check the Monash app for current serves.</li>
+        <li id="src-23">Monash University FODMAP blog. <a href="https://www.monashfodmap.com/blog/fermented-foods-and-fodmaps/" target="_blank" rel="noopener">Fermented foods and FODMAPs</a>; and <a href="https://www.monashfodmap.com/blog/lactose-and-dairy-products-on-low/" target="_blank" rel="noopener">Lactose and dairy products on a low FODMAP diet</a>.</li>
+        <li id="src-24">Monash University FODMAP blog. <a href="https://www.monashfodmap.com/blog/avocado-and-fodmaps-a-smashing-new-discovery/" target="_blank" rel="noopener">Avocado and FODMAPs: a smashing new discovery</a>. 2024.</li>
+        <li id="src-25">ISAPP. <a href="https://isappscience.org/do-fermented-foods-contain-probiotics/" target="_blank" rel="noopener">Do fermented foods contain probiotics?</a>; and Food Standards Code <a href="https://www.legislation.gov.au/F2015L00413/latest/text" target="_blank" rel="noopener">Standard 2.5.3, Fermented milk products</a>.</li>
+        <li id="src-26">ASCIA. <a href="https://allergy.org.au/patients/food-other-adverse-reactions/oral-allergy-syndrome" target="_blank" rel="noopener">Oral allergy syndrome</a>; and <a href="https://www.allergy.org.au/patients/other-allergy/latex-allergy" target="_blank" rel="noopener">Latex allergy</a>. 2024.</li>
+        <li id="src-27">Kidney Health Australia. <a href="https://kidney.org.au/your-kidneys/living-with-kidney-disease/health-and-wellbeing/diet-nutrition/" target="_blank" rel="noopener">Diet and nutrition</a>; RACGP newsGP. <a href="https://www1.racgp.org.au/newsgp/clinical/managing-hyperkalemia-with-dietary-changes" target="_blank" rel="noopener">Managing hyperkalaemia with dietary changes</a>, 2018; and Ohio State Wexner Medical Center. <a href="https://health.osu.edu/wellness/exercise-and-nutrition/is-coconut-water-healthy" target="_blank" rel="noopener">Is coconut water healthy?</a> 2024.</li>
+        <li id="src-28">healthdirect. <a href="https://www.healthdirect.gov.au/blood-thinners" target="_blank" rel="noopener">Blood thinners</a>; and HealthyWA. <a href="https://healthywa.health.wa.gov.au/Articles/U_Z/Your-lifestyle-choices-with-warfarin" target="_blank" rel="noopener">Your lifestyle choices with warfarin</a>.</li>
+        <li id="src-29">FSANZ. <a href="https://www.foodstandards.gov.au/consumer/prevention-of-foodborne-illness/Food-safety-for-vulnerable-populations" target="_blank" rel="noopener">Food safety for vulnerable people</a>; Pregnancy, Birth and Baby. <a href="https://www.pregnancybirthbaby.org.au/pregnancy/health-conditions-and-complications/listeria-food-poisoning" target="_blank" rel="noopener">Listeria</a>; and Safe Food Queensland. <a href="https://www.safefood.qld.gov.au/newsroom/new-foods-identified-as-high-risk-for-pregnant-women/" target="_blank" rel="noopener">New foods identified as high-risk for pregnant women</a>, 2021.</li>
+        <li id="src-30">Simmelink A, Rawl RE, Browne L, Scobey M. <a href="https://sciedupress.com/journal/index.php/crim/article/view/11135" target="_blank" rel="noopener">Watch it grow: esophageal impaction with chia seeds</a>. Case Rep Intern Med, 2017.</li>
+        <li id="src-31">healthdirect. <a href="https://www.healthdirect.gov.au/bowel-cancer" target="_blank" rel="noopener">Bowel cancer</a>; and Cancer Council Australia. <a href="https://www.cancer.org.au/bowelscreening/faq" target="_blank" rel="noopener">Bowel screening FAQ</a>.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Start here</div>
+    <h2>Start with the <span style="white-space:nowrap">ginger–kiwi</span> tomorrow morning.</h2>
+    <p class="lede">It has the best evidence of the six, it’s low FODMAP, and it takes two minutes. Give it four weeks before you judge it.</p>
+    <div class="jump-row">
+      <a class="mode-pill mp-b" href="#week"><svg><use href="#ic-cal"/></svg>Plan my week</a>
+      <a class="mode-pill mp-l" href="#smoothies"><svg><use href="#ic-cup"/></svg>The smoothies</a>
+      <a class="mode-pill mp-c" href="#evidence"><svg><use href="#ic-telescope"/></svg>Evidence</a>
+      <a class="mode-pill mp-k" href="#check"><svg><use href="#ic-heart"/></svg>Check first</a>
+    </div>
+    <p class="companion-row"><a class="companion" href="https://www.selfdriven.health/anti-inflammatory">Want meals as well? Try the five anti-inflammatory <span class="nw">bowls<svg><use href="#ic-arrow"/></svg></span></a></p>
+  </div>
+</section>
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="https://www.selfdriven.health/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="https://www.selfdriven.health/the-undertow"><i style="background:var(--caring)"></i>The undertow</a><a href="https://www.selfdriven.health/obsessive-by-nature"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="https://www.selfdriven.health/depression"><i style="background:var(--chill-bright)"></i>Depression</a><a href="https://www.selfdriven.health/fascia"><i style="background:var(--constructive)"></i>Fascia</a><a href="https://www.selfdriven.health/eye-movement"><i style="background:var(--constructive)"></i>Eye movement</a><a href="https://www.selfdriven.health/walking"><i style="background:var(--constructive)"></i>Walking</a><a href="https://www.selfdriven.health/anti-inflammatory"><i style="background:var(--constructive)"></i>Anti-inflammatory</a><a href="https://www.selfdriven.health/protocols"><i style="background:var(--curious)"></i>Protocols</a><a href="https://www.selfdriven.health/restless-legs"><i style="background:var(--chill-bright)"></i>Restless legs</a><a href="https://www.selfdriven.health/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>Plain language, evidence-checked, and not medical advice.</b> Your week plan and shopping ticks save privately on this device. If you have a health condition, check with your GP or an Accredited Practising Dietitian before changing how you eat.</p>
+</footer>
+
+<script>
+/* ---------- content model ---------- */
+var SM = [{"id":"morning","name":"Morning gut smoothie","col":"#a996f2","gar":"#f2dc8f","serves":1,"ferm":true,"hi":false,"lac":false,"kiwi":false,"plants":["banana","blueberries","chia","oats"],"shop":[["banana",0.5],["blueberries",0.5],["greekyog",2],["chia",1],["oats",1],["milk",225]]},{"id":"kiwi","name":"Ginger–kiwi","col":"#8fd14f","gar":"#5f9e2e","serves":1,"ferm":false,"hi":false,"lac":false,"kiwi":true,"plants":["kiwifruit","cucumber","spinach"],"shop":[["kiwi",2],["ginger",1],["cucumber",0.5],["spinach",1],["lemon",0.5],["ice",1]]},{"id":"apple","name":"Apple–oat fibre drink","col":"#e3cc9c","gar":"#e35d5b","serves":1,"ferm":false,"hi":true,"lac":false,"kiwi":false,"plants":["apple","oats","flaxseed"],"shop":[["apple",1],["oats",2],["flax",1],["cinnamon",1],["milk",200]]},{"id":"green","name":"Green gut smoothie","col":"#4fae6a","gar":"#b5e06a","serves":0.5,"ferm":false,"hi":true,"lac":false,"kiwi":false,"plants":["cucumber","spinach","apple","avocado"],"shop":[["cucumber",0.5],["spinach",1],["greenapple",0.5],["avocado",0.5],["mint",1],["lime",0.25]]},{"id":"berry","name":"Berry kefir","col":"#e85d8a","gar":"#ff5f7e","serves":0.5,"ferm":true,"hi":false,"lac":true,"kiwi":false,"plants":["berries","chia"],"shop":[["kefir",200],["berries",0.5],["chia",1],["cinnamon",1]]},{"id":"pineapple","name":"Pineapple–ginger","col":"#f5c842","gar":"#ffe27a","serves":0.75,"ferm":false,"hi":false,"lac":false,"kiwi":false,"plants":["pineapple","cucumber"],"shop":[["pineapple",0.75],["ginger",1],["cucumber",0.5],["mint",1],["coconut",200],["ice",1]]}];
+var BY = {}; SM.forEach(function(s){ BY[s.id] = s; });
+function ref(n){ return '<a class="ref" href="#src-' + n + '">[' + n + ']</a>'; }
+function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function cup(fill, gar, uid){
+  return '<svg viewBox="0 0 80 104" aria-hidden="true" focusable="false">' +
+    '<defs><linearGradient id="lg-' + uid + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + fill + '"/><stop offset="1" stop-color="' + fill + '" stop-opacity=".72"/></linearGradient></defs>' +
+    '<path d="M47 3 L41 62" stroke="#f0eeff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/>' +
+    '<path d="M15.8 34 H64.2 L59.4 91 Q59 95 55.5 95 H24.5 Q21 95 20.6 91 Z" fill="url(#lg-' + uid + ')"/>' +
+    '<ellipse cx="40" cy="34" rx="24.2" ry="3" fill="#ffffff" fill-opacity=".28"/>' +
+    '<path d="M12 20 H68 L61.5 94 Q61 98 57 98 H23 Q19 98 18.5 94 Z" fill="#ffffff" fill-opacity=".04" stroke="#f0eeff" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/>' +
+    '<path d="M20 27 L24.6 86" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/>' +
+    '<circle cx="64" cy="19" r="10" fill="' + gar + '"/><circle cx="64" cy="19" r="6.5" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.5"/></svg>';
+}
+
+function frac(q, ceil){
+  if (ceil) q = Math.ceil(q);
+  var w = Math.floor(q + 1e-9), r = Math.round((q - w) * 4) / 4;
+  if (r >= 1) { w += 1; r = 0; }
+  var g = {0:'', 0.25:'¼', 0.5:'½', 0.75:'¾'}[r];
+  return (w ? String(w) : (g ? '' : '0')) + g;
+}
+
+/* ---------- storage (per viewer, best effort) ---------- */
+var KEY = 'sdh-gut-smoothies-v1';
+function load(){ try { var v = JSON.parse(localStorage.getItem(KEY) || 'null'); return v && typeof v === 'object' ? v : null; } catch (e) { return null; } }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+/* ---------- builder ---------- */
+var OPTS = [
+  {k:'fruit', n:'1', t:'Fruit', sub:'pick one', items:[
+    {id:'kiwi', t:'2 green kiwifruit', short:'Kiwi', s:1, col:'#8fd14f', fod:'low'},
+    {id:'berries', t:'½ cup mixed berries', short:'Berry', s:.5, col:'#e85d8a', fod:'low'},
+    {id:'banana', t:'½ firm banana', short:'Banana', s:.5, col:'#ecd58a', fod:'low'},
+    {id:'pineapple', t:'¾ cup pineapple', short:'Pineapple', s:.75, col:'#f5c842', fod:'low'},
+    {id:'apple', t:'½ apple, skin on', short:'Apple', s:.5, col:'#e3cc9c', fod:'high', nm:'Apple'},
+    {id:'mango', t:'½ cup mango', short:'Mango', s:.5, col:'#f7a541', fod:'high', nm:'Mango'}]},
+  {k:'veg', n:'2', t:'Vegetable', sub:'pick one', items:[
+    {id:'spinach', t:'Handful of baby spinach', short:'spinach', col:'#4fae6a'},
+    {id:'cucumber', t:'½ cucumber', short:'cucumber', col:'#b6e0a8'},
+    {id:'avocado', t:'¼ avocado', short:'avocado', col:'#9cc35a'}]},
+  {k:'fibre', n:'3', t:'Fibre', sub:'1 tbsp chia adds about 4 g', items:[
+    {id:'chia', t:'1 tbsp chia seeds', short:'chia'},
+    {id:'flax', t:'1 tbsp ground flaxseed', short:'flax'},
+    {id:'oats', t:'2 tbsp rolled oats', short:'oats'}]},
+  {k:'ferm', n:'4', t:'Fermented food', sub:'for live cultures', items:[
+    {id:'kefir', t:'150 mL plain kefir', lac:true, ferm:'kefir'},
+    {id:'yog', t:'3 tbsp plain Greek yoghurt', lac:true, ferm:'yoghurt'},
+    {id:'lfy', t:'3 tbsp lactose-free yoghurt', ferm:'yoghurt'},
+    {id:'none', t:'None today'}]},
+  {k:'liq', n:'5', t:'Liquid', sub:'about 200 mL', items:[
+    {id:'water', t:'200 mL water'},
+    {id:'milk', t:'200 mL milk', lac:true},
+    {id:'almond', t:'200 mL unsweetened almond milk'},
+    {id:'coco', t:'100 mL coconut water + 100 mL water'}]},
+  {k:'extra', n:'+', t:'Extras', sub:'any or none', multi:true, items:[
+    {id:'ginger', t:'Small piece of ginger'},
+    {id:'mint', t:'A few mint leaves'},
+    {id:'citrus', t:'Squeeze of lemon or lime'},
+    {id:'cinnamon', t:'Pinch of cinnamon'}]}
+];
+var OBY = {}; OPTS.forEach(function(g){ OBY[g.k] = {}; g.items.forEach(function(it){ OBY[g.k][it.id] = it; }); });
+var bstate = {fruit:'berries', veg:'spinach', fibre:'chia', ferm:'kefir', liq:'water', extra:{cinnamon:true}};
+
+function renderBuilderForm(){
+  var f = document.getElementById('bldForm');
+  f.innerHTML = OPTS.map(function(g){
+    return '<fieldset><legend><span class="n">' + g.n + '</span>' + g.t + ' <small>' + g.sub + '</small></legend><div class="opts">' +
+      g.items.map(function(it){
+        var id = 'b-' + g.k + '-' + it.id, on = g.multi ? !!bstate.extra[it.id] : bstate[g.k] === it.id;
+        var dot = it.col ? '<i style="background:' + it.col + '"></i>' : '';
+        return '<label class="opt" for="' + id + '"><input type="' + (g.multi ? 'checkbox' : 'radio') + '" name="b-' + g.k + '" id="' + id + '" value="' + it.id + '"' + (on ? ' checked' : '') + '><span>' + dot + esc(it.t) + '</span></label>';
+      }).join('') + '</div></fieldset>';
+  }).join('');
+  f.addEventListener('change', function(e){
+    var t = e.target; if (!t || !t.name) return;
+    var k = t.name.slice(2);
+    if (k === 'extra') bstate.extra[t.value] = t.checked; else bstate[k] = t.value;
+    renderBuilderOut();
+  });
+  f.addEventListener('submit', function(e){ e.preventDefault(); });
+}
+
+function renderBuilderOut(){
+  var fr = OBY.fruit[bstate.fruit], vg = OBY.veg[bstate.veg], fb = OBY.fibre[bstate.fibre], fm = OBY.ferm[bstate.ferm], lq = OBY.liq[bstate.liq];
+  var ex = OPTS[5].items.filter(function(it){ return bstate.extra[it.id]; });
+  var name = fr.short + ', ' + vg.short + ' & ' + fb.short;
+  var lines = [fr.t, vg.t, fb.t].concat(fm.id === 'none' ? [] : [fm.t]).concat([lq.t]).concat(ex.map(function(it){ return it.t; }));
+  var notes = [];
+  var lac = (fm.lac ? 1 : 0) + (lq.lac ? 1 : 0);
+  if (fr.fod === 'high') notes.push(['watch', fr.nm + ' is high FODMAP. If you bloat, swap for kiwifruit, berries, a firm banana or pineapple.' + ref(22)]);
+  if (vg.id === 'avocado') notes.push(['watch', 'Avocado is higher FODMAP at a standard serve. Keep it small if you bloat.' + ref(24)]);
+  if (lac) notes.push(['info', 'Contains lactose. That only matters if you’re lactose intolerant, and lactose-free versions exist.' + ref(23)]);
+  if (fr.fod !== 'high' && vg.id !== 'avocado' && !lac) notes.push(['ok', 'Low FODMAP at these amounts, going by Monash serves.' + ref(22)]);
+  if (fm.ferm) notes.push(['ok', 'Live cultures from the ' + fm.ferm + '.']);
+  else notes.push(['watch', 'No live cultures today. Add yoghurt or kefir on some days if you eat dairy.']);
+  if (fr.id === 'kiwi') notes.push(['ok', 'Two green kiwifruit a day is the best-tested food for constipation.' + ref(1)]);
+  if (vg.id === 'spinach') notes.push(['info', 'On warfarin? Keep leafy greens steady from week to week.' + ref(28)]);
+  if (lq.id === 'coco') notes.push(['info', 'Coconut water is high in potassium. Check first if you have kidney disease.' + ref(27)]);
+  var pct = Math.min(100, fr.s / 2 * 100);
+  document.getElementById('bldOut').innerHTML =
+    '<div class="out-hd">' + cup(fr.col, vg.col, 'bld') + '<div><div class="lab">Your smoothie</div><h3>' + esc(name) + '</h3></div></div>' +
+    '<ul class="ing">' + lines.map(function(l){ return '<li><span>' + esc(l) + '</span></li>'; }).join('') + '</ul>' +
+    '<div class="meter"><div class="top"><span class="nm">Fruit</span><span class="val"><b>' + frac(fr.s) + '</b> of 2 serves a day</span></div>' +
+    '<div class="track"><div class="fill f-fruit" style="width:' + pct + '%"></div></div></div>' +
+    '<ul class="notes">' + notes.map(function(n){ return '<li class="n-' + n[0] + '"><i></i><span>' + n[1] + '</span></li>'; }).join('') + '</ul>';
+}
+
+/* ---------- goal tabs ---------- */
+function bindTabs(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function sel(t, focus){
+    tabs.forEach(function(x){
+      var on = x === t;
+      x.setAttribute('aria-selected', on ? 'true' : 'false');
+      x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) t.focus();
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ sel(t); });
+    t.addEventListener('keydown', function(e){
+      var j = null;
+      if (e.key === 'ArrowRight') j = (i + 1) % tabs.length;
+      if (e.key === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === 'Home') j = 0;
+      if (e.key === 'End') j = tabs.length - 1;
+      if (j !== null) { e.preventDefault(); sel(tabs[j], true); }
+    });
+  });
+}
+
+/* ---------- week planner ---------- */
+var DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+var PRESETS = {
+  variety: {label:'Variety week', days:['morning','kiwi','green','berry','apple','pineapple','kiwi']},
+  regular: {label:'Kiwi every day', days:['kiwi','kiwi','kiwi','kiwi','kiwi','kiwi','kiwi']},
+  bloat: {label:'Gentler week', days:['kiwi','morning','pineapple','kiwi','morning','pineapple','kiwi']},
+  abx: {label:'Fermented most days', days:['berry','morning','kiwi','berry','green','morning','berry']}
+};
+var state = {days:PRESETS.variety.days.slice(), flag:'Example week, change any day', ticks:{}};
+var saved = load();
+if (saved && Array.isArray(saved.days) && saved.days.length === 7) {
+  state.days = saved.days.map(function(d){ return BY[d] ? d : ''; });
+  state.flag = typeof saved.flag === 'string' ? saved.flag : '';
+  state.ticks = saved.ticks && typeof saved.ticks === 'object' ? saved.ticks : {};
+}
+
+function renderDays(){
+  var box = document.getElementById('days');
+  box.innerHTML = DAYS.map(function(d, i){
+    var v = state.days[i], s = BY[v];
+    var opts = '<option value="">No smoothie</option>' + SM.map(function(x){ return '<option value="' + x.id + '"' + (x.id === v ? ' selected' : '') + '>' + esc(x.name) + '</option>'; }).join('');
+    return '<div class="day"><label for="d-' + i + '">' + d + '</label><span class="th" id="th-' + i + '">' + (s ? cup(s.col, s.gar, 'd' + i) : '<span class="none"></span>') + '</span><select id="d-' + i + '" data-i="' + i + '">' + opts + '</select></div>';
+  }).join('');
+  var f = document.getElementById('exFlag');
+  f.textContent = state.flag; f.hidden = !state.flag;
+}
+
+function meter(cls, nm, val, pct, why){
+  return '<div class="meter"><div class="top"><span class="nm">' + nm + '</span><span class="val">' + val + '</span></div>' +
+    '<div class="track"><div class="fill ' + cls + '" style="width:' + Math.max(0, Math.min(100, pct)) + '%"></div></div>' +
+    (why ? '<div class="why">' + why + '</div>' : '') + '</div>';
+}
+
+function renderSummary(){
+  var picked = state.days.filter(function(d){ return BY[d]; }).map(function(d){ return BY[d]; });
+  var fruit = 0, ferm = 0, kiwi = 0, hi = 0, plants = {};
+  picked.forEach(function(s){
+    fruit += s.serves; if (s.ferm) ferm++; if (s.kiwi) kiwi++; if (s.hi) hi++;
+    s.plants.forEach(function(p){ plants[p] = 1; });
+  });
+  var allPlants = {}; SM.forEach(function(s){ s.plants.forEach(function(p){ allPlants[p] = 1; }); });
+  var nP = Object.keys(plants).length, maxP = Object.keys(allPlants).length;
+  var v;
+  if (!picked.length) v = '<b>No smoothies planned.</b> Pick one for any day, or load a week.';
+  else if (kiwi === 7) v = '<b>A kiwi-every-day week.</b> Keep it going for 4 weeks to match the trial, and drink more as your fibre goes up.';
+  else v = '<b>' + picked.length + ' smoothie' + (picked.length === 1 ? '' : 's') + ', about ' + frac(fruit) + ' fruit serves.</b> That leaves about ' + frac(Math.max(0, 14 - fruit)) + ' serves of whole fruit for the rest of the week.';
+  document.getElementById('sum').innerHTML =
+    meter('f-fruit', 'Fruit from smoothies', '<b>' + frac(fruit) + '</b> of 14 serves', fruit / 14 * 100, 'The week’s guideline is 2 serves a day. Whole fruit can cover the rest.' + ref(8)) +
+    meter('f-ferm', 'Fermented food', '<b>' + ferm + '</b> of 7 days', ferm / 7 * 100, 'Yoghurt or kefir with live cultures. In the 10-week trial, people worked up to about 6 serves of fermented food a day, from all sources.' + ref(3)) +
+    meter('f-kiwi', 'Kiwifruit days', '<b>' + kiwi + '</b> of 7 days', kiwi / 7 * 100, 'For constipation, the trial used 2 kiwifruit every day for 4 weeks.' + ref(1)) +
+    meter('f-plant', 'Different plant foods', '<b>' + nP + '</b> of ' + maxP, nP / maxP * 100, 'Fruit, vegetables, seeds and oats across the week, not counting herbs, spices or citrus juice.') +
+    meter('f-fod', 'Higher-FODMAP days', '<b>' + hi + '</b> of 7 days', hi / 7 * 100, 'Only matters if you bloat. Apple and avocado are the higher-FODMAP ingredients.' + ref(22)) +
+    '<div class="verdict"><svg><use href="#ic-check"/></svg><span>' + v + '</span></div>';
+}
+
+var ITEMS = {
+  banana:{a:'fruit', n:['Banana, firm and slightly green','Bananas, firm and slightly green']},
+  blueberries:{a:'fruit', n:'Blueberries', u:'cup', note:'Frozen is fine'},
+  berries:{a:'fruit', n:'Mixed berries', u:'cup', note:'Frozen is fine'},
+  kiwi:{a:'fruit', n:'Green kiwifruit'},
+  apple:{a:'fruit', n:['Apple','Apples']},
+  greenapple:{a:'fruit', n:['Green apple','Green apples']},
+  pineapple:{a:'fruit', n:'Pineapple', u:'cup', note:'Fresh or frozen'},
+  lemon:{a:'fruit', n:['Lemon','Lemons'], ceil:true},
+  lime:{a:'fruit', n:['Lime','Limes'], ceil:true},
+  cucumber:{a:'veg', n:['Cucumber','Cucumbers']},
+  spinach:{a:'veg', n:'Baby spinach', u:'handful'},
+  avocado:{a:'veg', n:['Avocado','Avocados']},
+  ginger:{a:'veg', n:'Fresh ginger', u:'small piece'},
+  mint:{a:'veg', n:'Fresh mint', once:'1 bunch'},
+  greekyog:{a:'dairy', n:'Plain Greek yoghurt or kefir', u:'tbsp', note:'With live cultures'},
+  kefir:{a:'dairy', n:'Plain unsweetened kefir', u:'mL', note:'Pasteurised, with live cultures'},
+  milk:{a:'dairy', n:'Milk, or use water', u:'mL', note:'For blending'},
+  chia:{a:'pantry', n:'Chia seeds', u:'tbsp'},
+  flax:{a:'pantry', n:'Ground flaxseed (linseed)', u:'tbsp'},
+  oats:{a:'pantry', n:'Rolled oats', u:'tbsp'},
+  cinnamon:{a:'pantry', n:'Ground cinnamon', once:''},
+  coconut:{a:'pantry', n:'Coconut water', u:'mL', note:'Or use water'},
+  ice:{a:'pantry', n:'Ice', once:''}
+};
+var AISLES = [['fruit','Fruit','var(--caring)'],['veg','Vegetables and herbs','var(--constructive)'],['dairy','Dairy','var(--chill-bright)'],['pantry','Pantry','var(--curious)']];
+var PL = {cup:'cups', handful:'handfuls', 'small piece':'small pieces'};
+
+function nameOf(k, q){ var n = ITEMS[k].n; if (typeof n === 'string') return n; var c = ITEMS[k].ceil ? Math.ceil(q) : q; return c > 1 ? n[1] : n[0]; }
+function qtyText(k, q){
+  var it = ITEMS[k];
+  if ('once' in it) return it.once;
+  if (it.u === 'mL') return (Math.round(q / 25) * 25) + ' mL';
+  var f = frac(q, it.ceil);
+  if (it.u) return f + ' ' + (q > 1 && PL[it.u] ? PL[it.u] : it.u);
+  return f;
+}
+
+function shopList(){
+  var tot = {};
+  state.days.forEach(function(d){ var s = BY[d]; if (!s) return; s.shop.forEach(function(p){ tot[p[0]] = (tot[p[0]] || 0) + p[1]; }); });
+  return tot;
+}
+
+function renderShop(){
+  var tot = shopList(), keys = Object.keys(ITEMS).filter(function(k){ return tot[k]; });
+  var box = document.getElementById('shop');
+  if (!keys.length) { box.innerHTML = '<p class="empty">Plan at least one smoothie to build the list.</p>'; return; }
+  box.innerHTML = AISLES.map(function(a){
+    var ks = keys.filter(function(k){ return ITEMS[k].a === a[0]; });
+    var lis = ks.length ? ks.map(function(k){
+      var it = ITEMS[k], q = qtyText(k, tot[k]), id = 'sh-' + k;
+      return '<li><label for="' + id + '"><input type="checkbox" id="' + id + '" data-k="' + k + '"' + (state.ticks[k] ? ' checked' : '') + '><span class="bx"><svg><use href="#ic-check"/></svg></span>' +
+        '<span class="it">' + (q ? '<b>' + esc(q) + '</b>' : '') + esc(nameOf(k, tot[k])) + (it.note ? '<em>' + esc(it.note) + '</em>' : '') + '</span></label></li>';
+    }).join('') : '<li class="empty">Nothing this week</li>';
+    return '<div class="aisle"><h4><i style="background:' + a[2] + '"></i>' + a[1] + '</h4><ul>' + lis + '</ul></div>';
+  }).join('');
+}
+
+function listText(){
+  var tot = shopList(), out = ['Gut smoothies: shopping list', ''];
+  AISLES.forEach(function(a){
+    var ks = Object.keys(ITEMS).filter(function(k){ return tot[k] && ITEMS[k].a === a[0]; });
+    if (!ks.length) return;
+    out.push(a[1]);
+    ks.forEach(function(k){ var q = qtyText(k, tot[k]); out.push('- ' + (q ? q + ' ' : '') + nameOf(k, tot[k]) + (ITEMS[k].note ? ' (' + ITEMS[k].note.toLowerCase() + ')' : '')); });
+    out.push('');
+  });
+  return out.join('\n').trim();
+}
+
+function applyPreset(name, scroll){
+  var p = PRESETS[name]; if (!p) return;
+  state.days = p.days.slice(); state.flag = 'Loaded: ' + p.label; state.ticks = {};
+  save(); renderDays(); renderSummary(); renderShop();
+  if (scroll) { var w = document.getElementById('week'); if (w) w.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }
+}
+
+function bindPlanner(){
+  document.getElementById('days').addEventListener('change', function(e){
+    var t = e.target; if (!t || t.tagName !== 'SELECT') return;
+    var i = +t.getAttribute('data-i'), v = t.value, s = BY[v];
+    state.days[i] = s ? v : ''; state.flag = '';
+    document.getElementById('th-' + i).innerHTML = s ? cup(s.col, s.gar, 'd' + i) : '<span class="none"></span>';
+    document.getElementById('exFlag').hidden = true;
+    save(); renderSummary(); renderShop();
+  });
+  document.querySelectorAll('[data-preset]').forEach(function(b){
+    b.addEventListener('click', function(){ applyPreset(b.getAttribute('data-preset'), !!b.closest('.gpanel')); });
+  });
+  document.getElementById('wk-clear').addEventListener('click', function(){
+    state.days = ['','','','','','','']; state.flag = ''; state.ticks = {};
+    save(); renderDays(); renderSummary(); renderShop();
+  });
+  document.getElementById('shop').addEventListener('change', function(e){
+    var t = e.target; if (!t || !t.getAttribute('data-k')) return;
+    state.ticks[t.getAttribute('data-k')] = t.checked; save();
+  });
+  var toast = document.getElementById('copyToast'), fb = document.getElementById('copyFallback');
+  document.getElementById('copyList').addEventListener('click', function(){
+    var txt = listText();
+    function ok(){ toast.hidden = false; fb.hidden = true; setTimeout(function(){ toast.hidden = true; }, 1800); }
+    function fail(){ fb.value = txt; fb.hidden = false; fb.focus(); fb.select(); }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, fail);
+      else fail();
+    } catch (e) { fail(); }
+  });
+}
+
+renderBuilderForm(); renderBuilderOut(); bindTabs();
+renderDays(); renderSummary(); renderShop(); bindPlanner();
+
+</script>
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,summary,select,[role="button"],[role="checkbox"]';
+    var OFF = 'textarea';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){
+      var t = e.target; if (!t || !t.closest) return;
+      cur.classList.toggle('big', !!t.closest(HOT));
+      cur.classList.toggle('off', !!t.closest(OFF));
+    });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
+  Array.prototype.forEach.call(dotsList, function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+
+</body>
+</html>
