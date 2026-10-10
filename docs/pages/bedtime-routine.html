@@ -9,16 +9,16 @@ permalink: /bedtime-routine
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Bedtime routine - selfdriven Health</title>
-<meta name="description" content="A viral 9-minute bedtime routine promises lymphatic drainage, vagus nerve stimulation and 23% lower cortisol. What each step can really do, a corrected guided version, and when to see your GP.">
+<meta name="description" content="A nine-minute wind-down for bed: slow breathing, a gentle twist and a belly massage, with a guided timer, what the research shows each step does, and who should change it.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='27' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='40' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='53' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* selfdriven.health 4Cs system, dark by design (single look, shared with every guide).
-   Layout: a claim check that turns into a bedtime player. Violet (Chill) carries breathing and sleep;
-   mint (Constructive) carries the twist and what holds up; amber (Curious) carries the belly massage and
-   anything overstated; rose (Caring) marks claims with no source and red flags. */
+   Layout: a bedtime player first, then what to expect and when. Violet (Chill) carries breathing and sleep;
+   mint (Constructive) carries the twist and what's well shown; amber (Curious) carries the belly massage
+   and limited evidence; rose (Caring) marks red flags and what hasn't been shown. */
 :root{
   color-scheme:dark;
   --bg:#09090f;--surface:#111118;--surface2:#18181f;
@@ -74,7 +74,7 @@ a{color:inherit}
 .byline b{color:var(--soft);font-weight:500}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 
-/* hero card: the thread, scored */
+/* hero card: what the evidence says */
 .score{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border2);border-radius:22px;padding:22px 24px 10px;box-shadow:0 30px 70px rgba(0,0,0,.55);min-width:0}
 .score-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:10px}
 .score-title{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.035em}
@@ -160,73 +160,26 @@ h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 .companion .nw{white-space:nowrap}
 .companion svg{display:inline-block;width:15px;height:15px;vertical-align:-2px;margin-left:6px}
 
-/* the thread as posted */
-.posted{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
-.pcard{background:var(--surface);border:1px solid var(--c-line);border-radius:22px;padding:22px;min-width:0;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
-.pcard::before{content:'';position:absolute;inset:0 0 auto 0;height:84px;background:linear-gradient(180deg,var(--c-dim),transparent);pointer-events:none}
-.pcard>*{position:relative}
-.pcard .min{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
-.pcard h3{font-size:21px}
-.pcard p{font-size:14.5px;color:var(--soft);line-height:1.5}
-.pcard .claim{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);font-size:14.5px;color:var(--text);line-height:1.45}
-.pcard .claim span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.sell{margin-top:14px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:20px 32px;padding:24px;border-radius:22px;border:1px dashed var(--border2);align-items:start}
-.sell .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--curious);margin-bottom:6px}
-.sell h3{font-size:clamp(21px,2.4vw,25px)}
-.sell p{font-size:15px;color:var(--soft);margin-top:8px;max-width:560px}
-.sell aside{padding:18px 20px;border-radius:18px;background:var(--surface);border:1px solid var(--border);min-width:0}
-.sell aside p{font-size:14px;margin-top:0}
-.sell aside .chip{margin-bottom:10px}
 .textlink{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:14px;font-weight:600;color:var(--text);text-decoration:underline;text-decoration-color:var(--border2);text-underline-offset:4px}
 .textlink:hover{text-decoration-color:var(--soft)}
 .textlink svg{width:14px;height:14px;flex:none}
 
-/* claim by claim */
-.claims{margin-top:30px;display:grid;border:1px solid var(--border);border-radius:24px;overflow:hidden;background:var(--surface)}
-.crow{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:12px 32px;padding:22px 26px;border-top:1px solid var(--border)}
-.crow:first-child{border-top:0}
-.crow .said{font-family:var(--display);font-weight:700;font-size:clamp(18px,2vw,20px);letter-spacing:-.025em;line-height:1.25;text-wrap:balance}
-.crow .said span{display:block;font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.crow .chk{min-width:0}
-.crow .chk .chip{margin-bottom:10px}
-.crow .chk p{font-size:15px;color:var(--soft);line-height:1.55}
-.crow .chk p+p{margin-top:8px}
-
-/* time scale */
-.tscale{grid-column:1/-1;margin-top:4px;padding:18px 22px 14px;border-radius:18px;background:var(--surface2);border:1px solid var(--border)}
-.ts-k{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.ts-plot{margin-top:6px}
-.ts-top{position:relative;height:62px}
-.ts-lab{position:absolute;bottom:16px;font-size:12.5px;color:var(--soft);line-height:1.3;white-space:nowrap}
-.ts-lab b{display:block;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.03em;color:var(--c);font-variant-numeric:tabular-nums}
-.ts-lab.left{transform:translateX(-1px)}
-.ts-lab.right{text-align:right;transform:translateX(1px)}
-.ts-track{position:relative;height:12px;border-radius:6px;background:var(--neutral-dim);border:1px solid var(--border)}
-.ts-band{position:absolute;top:-1px;bottom:-1px;background:var(--curious);opacity:.85;border-radius:3px}
-.ts-pin{position:absolute;top:-10px;height:22px;width:2px;background:var(--c);transform:translateX(-1px)}
-.ts-pin::after{content:'';position:absolute;left:-5px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--c);border:2px solid var(--surface2)}
-.ts-under{position:relative;height:50px}
-.ts-under .ts-lab{bottom:auto;top:8px}
-.ts-under .ts-lab::before{content:'';position:absolute;left:0;top:-8px;height:8px;width:1px;background:var(--curious)}
-.ts-ticks{position:relative;height:22px;border-top:1px dashed var(--border2);padding-top:4px;font-family:var(--mono);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
-.ts-ticks span{position:absolute;top:5px;transform:translateX(-50%);white-space:nowrap}
-.ts-ticks span:first-child{transform:none}
-.ts-ticks span:last-child{transform:translateX(-100%)}
-.c-claim{--c:var(--caring)}.c-study{--c:var(--chill-bright)}.c-cort{--c:var(--curious)}
-.tscale figcaption{margin-top:10px;font-size:13.5px;color:var(--muted);max-width:760px}
-
-/* the linked studies */
-.studies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
-.scard{background:var(--surface);border:1px solid var(--border2);border-radius:22px;padding:24px;min-width:0;display:flex;flex-direction:column}
-.scard .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;line-height:1.5}
-.scard h3{font-size:clamp(20px,2.3vw,23px)}
-.scard dl{margin-top:14px;display:grid}
-.scard dl div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--border)}
-.scard dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.scard dd{font-size:14.5px;color:var(--soft);line-height:1.5;min-width:0}
-.scard .vrow{margin-top:auto;padding-top:14px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-size:13.5px;color:var(--muted)}
-.takeaway{margin-top:16px;font-size:15px;color:var(--soft);max-width:860px}
-.takeaway b{color:var(--text);font-weight:600}
+/* what to expect, and when */
+.expect{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;position:relative}
+.expect::before{content:'';position:absolute;left:12px;right:12px;top:11px;height:2px;background:linear-gradient(90deg,var(--chill-bright),var(--constructive),var(--curious));opacity:.45}
+.stop{position:relative;min-width:0;display:flex;flex-direction:column;gap:14px}
+.stop .when{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.stop .when i{width:24px;height:24px;border-radius:50%;background:var(--bg);border:2px solid var(--c);display:grid;place-items:center;flex:none;position:relative;z-index:1}
+.stop .when i::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--c)}
+.stop .card{background:var(--surface);border:1px solid var(--c-line);border-radius:22px;padding:22px;flex:1;display:flex;flex-direction:column;gap:10px;min-width:0}
+.stop h3{font-size:21px}
+.stop p{font-size:14.5px;color:var(--soft);line-height:1.55}
+.stop .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.isnt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.isnt article{padding:22px 24px;border-radius:22px;border:1px dashed var(--border2);min-width:0}
+.isnt .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--curious);margin-bottom:6px}
+.isnt h3{font-size:clamp(19px,2.2vw,22px)}
+.isnt p{font-size:14.5px;color:var(--soft);margin-top:8px;line-height:1.55}
 
 /* the routine */
 .routine{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);gap:16px;margin-top:30px;align-items:start}
@@ -339,14 +292,14 @@ h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 @media (max-width:980px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
   .score{max-width:560px}
-  .posted{grid-template-columns:1fr}
   .routine{grid-template-columns:1fr}
   .player{position:static}
   .cau{grid-template-columns:1fr}
 }
 @media (max-width:860px){
-  .sell,.studies,.help{grid-template-columns:1fr}
-  .crow{grid-template-columns:1fr;gap:10px}
+  .help,.isnt{grid-template-columns:1fr}
+  .expect{grid-template-columns:1fr}
+  .expect::before{display:none}
 }
 @media (max-width:640px){
   .wrap{padding-inline:16px}
@@ -354,12 +307,8 @@ h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
   section.block{padding-top:64px}
   .gblob{opacity:.14}
   .score{padding:18px 18px 6px}
-  .pcard,.sell,.scard,.player,.rstep,.ccol,.hcard,.flags{padding:18px}
-  .crow{padding:18px}
-  .tscale{padding:16px 14px 12px}
-  .ts-lab{font-size:11.5px}
-  .ts-lab b{font-size:17px}
-  .scard dl div,.parts div{grid-template-columns:1fr;gap:2px}
+  .player,.rstep,.ccol,.hcard,.flags,.stop .card,.isnt article{padding:18px}
+  .parts div{grid-template-columns:1fr;gap:2px}
   .lrow{grid-template-columns:1fr;padding:14px 16px}
   .lrow p{grid-column:1}
 }
@@ -370,7 +319,6 @@ h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
   .pctl .long{display:none}
   .score li{grid-template-columns:1fr}
   .score li .chip{justify-self:start}
-  .ts-ticks span.opt{display:none}
 }
 
 /* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
@@ -433,7 +381,7 @@ body>main,.sd-foot{position:relative;z-index:1}
   <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
   <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
-  <symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   <symbol id="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></symbol>
   <symbol id="ic-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></symbol>
   <symbol id="ic-skip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 4 10 8-10 8V4z"/><path d="M19 5v14"/></symbol>
@@ -449,7 +397,7 @@ body>main,.sd-foot{position:relative;z-index:1}
     <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
     <span class="sd-crumb">/ Bedtime routine</span>
     <span class="sd-sp"></span>
-    <nav class="sd-links" aria-label="Sections"><a href="#thread">The thread</a><a href="#claims">Claims</a><a href="#studies">Its studies</a><a href="#evidence">Evidence</a><a href="#cautions">Cautions</a><a href="#sleep">Sleep help</a></nav>
+    <nav class="sd-links" aria-label="Sections"><a href="#routine">Routine</a><a href="#expect">What to expect</a><a href="#evidence">Evidence</a><a href="#cautions">Cautions</a><a href="#sleep">Sleep help</a></nav>
     <a class="sd-cta" href="#routine">Start the 9 minutes</a>
   </div>
 </header>
@@ -460,213 +408,34 @@ body>main,.sd-foot{position:relative;z-index:1}
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="hero-pill"><span class="dot"></span>Claim check · Feel + Move</span>
-        <h1>Nine minutes before bed. <span class="grad">What holds up?</span></h1>
-        <p class="sub">A thread on X says three moves before sleep drain your lymph, stimulate your vagus nerve and cut cortisol by 23% in three minutes. The moves are gentle and mostly safe. Most of the claims attached to them have nothing behind them. Here's what each step can really do, and a version worth keeping.</p>
-        <p class="byline"><b>Checked against 25 sources</b> · Australian context · October 2026</p>
+        <span class="hero-pill"><span class="dot"></span>Guide · Feel + Move</span>
+        <h1>Nine minutes to <span class="grad">wind down.</span></h1>
+        <p class="sub">Slow breathing, a gentle twist and a belly massage, timed for bed. Here's how to do each step, what the research shows it does, and who should change it.</p>
+        <p class="byline"><b>Checked against 19 sources</b> · Australian context · October 2026</p>
         <div class="cta-row">
           <a class="mode-pill mp-solid" href="#routine"><svg><use href="#ic-moon"/></svg>Start the 9 minutes</a>
-          <a class="mode-pill mp-c" href="#claims"><svg><use href="#ic-search"/></svg>Check the claims</a>
+          <a class="mode-pill mp-b" href="#expect"><svg><use href="#ic-clock"/></svg>What to expect</a>
         </div>
       </div>
 
-      <aside class="score" aria-label="The thread's claims, scored">
-        <div class="score-head"><span class="score-title">The thread, scored</span><span class="score-count">6 claims</span></div>
+      <aside class="score" aria-label="What the evidence says about each step">
+        <div class="score-head"><span class="score-title">What the evidence says</span><span class="score-count">4 findings</span></div>
         <ol>
-          <li><p>Lowers blood cortisol 23% in 3 minutes<small>Breathing step</small></p><span class="chip c-caring">No source found</span></li>
-          <li><p>Massage drains cortisol out through lymph<small>Twist + massage</small></p><span class="chip c-caring">Not how it works</span></li>
-          <li><p>Named by a Dr Sarah Chen<small>The opening</small></p><span class="chip c-neutral">Can't identify</span></li>
-          <li><p>Stimulates the vagus nerve<small>Breathing step</small></p><span class="chip c-curious">Overstated</span></li>
-          <li><p>Slow breathing before bed helps sleep<small>The whole routine</small></p><span class="chip c-chill">Some support</span></li>
-          <li><p>Belly massage moves things along<small>Massage step</small></p><span class="chip c-constructive">Holds up, for constipation</span></li>
+          <li><p>Slow breathing raises heart rate variability<small>Minutes 1–3 · during the session</small></p><span class="chip c-constructive">Solid</span></li>
+          <li><p>Belly massage eases constipation<small>Minutes 7–9 · over a few weeks</small></p><span class="chip c-chill">Moderate</span></li>
+          <li><p>People report sleeping better<small>Whole routine · after about a month</small></p><span class="chip c-curious">Limited</span></li>
+          <li><p>The twist is a comfortable stretch<small>Minutes 4–6 · not tested on its own</small></p><span class="chip c-neutral">Untested alone</span></li>
         </ol>
       </aside>
     </div>
   </div>
 </header>
 
-<section class="block" id="thread">
-  <div class="wrap">
-    <div class="eyebrow e-chk"><b>The thread</b> · posted 14 August 2026, still circulating</div>
-    <h2>Three moves, two study links, one product.</h2>
-    <p class="lede">It opens by crediting an unnamed Stanford neuroscientist with the idea that your belly holds on to cortisol, and that one bedtime habit clears it. Then it sets out three steps of three minutes each.<a class="ref" href="#s1">[1]</a></p>
-
-    <div class="posted">
-      <article class="pcard t-breath">
-        <span class="min">Minutes 1–3</span>
-        <h3>Belly breathing</h3>
-        <p>Lie flat. Breathe in through the nose for 4 seconds so the belly rises. Breathe out through the mouth for 8 seconds until it falls.</p>
-        <p class="claim"><span>It claims</span>Lowers blood cortisol by 23% in three minutes.</p>
-      </article>
-      <article class="pcard t-twist">
-        <span class="min">Minutes 4–6</span>
-        <h3>Spinal twist</h3>
-        <p>Pull the right knee to the chest and twist it to the left. Right arm out, head turned right. Hold, breathe deeply, then swap sides.</p>
-        <p class="claim"><span>It claims</span>Part of a combined drainage and vagus nerve effect.</p>
-      </article>
-      <article class="pcard t-belly">
-        <span class="min">Minutes 7–9</span>
-        <h3>Belly massage</h3>
-        <p>Palms just below the ribs, fingers pointing down. Press firmly and sweep both hands down to the pubic bone in a slow wave, about 15 times.</p>
-        <p class="claim"><span>It claims</span>Pushes lymph, and the cortisol it carries, out of the belly.</p>
-      </article>
-    </div>
-
-    <div class="sell">
-      <div>
-        <div class="k">Then the pitch</div>
-        <h3>The free routine ends with a supplement link.</h3>
-        <p>After the three steps, the thread recommends a magnesium glycinate product. It says one in two people are low in magnesium, gives no source for that, and asks readers to message for the link, which runs through a shortened, affiliate-style address.<a class="ref" href="#s1">[1]</a></p>
-        <p>None of the claims about cortisol, lymph or sleep depend on buying anything. The routine stands or falls on its own.</p>
-      </div>
-      <aside>
-        <span class="chip c-curious">Before you buy magnesium</span>
-        <p>The Australian upper limit for magnesium from supplements is 350 mg a day for adults. Diarrhoea is usually the first sign of too much.<a class="ref" href="#s25">[25]</a></p>
-        <a class="textlink" href="https://www.selfdriven.health/protocols#thread">Supplement checks on the Protocols guide<svg><use href="#ic-arrow"/></svg></a>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="claims">
-  <div class="wrap">
-    <div class="eyebrow e-red"><b>Claims</b> · six checked</div>
-    <h2>What each claim rests on.</h2>
-    <p class="lede">We looked for the source behind every claim in the thread. Where there was none, we looked for the closest real research.</p>
-
-    <div class="claims">
-      <div class="crow">
-        <p class="said"><span>The thread says</span>Belly breathing lowers blood cortisol by 23% in three minutes.</p>
-        <div class="chk">
-          <span class="chip c-caring">No source found</span>
-          <p>The thread cites no study for this number, and we couldn't find one. The closest trial had 40 healthy adults practise slow belly breathing in 20 sessions over 8 weeks. Their saliva cortisol was lower by the end of training.<a class="ref" href="#s2">[2]</a></p>
-          <p>That study measured saliva across weeks. The thread claims blood within minutes. Cortisol is also slow to respond: after a stressor it takes about 20 to 40 minutes to peak.<a class="ref" href="#s3">[3]</a></p>
-        </div>
-        <figure class="tscale" aria-labelledby="tsCap">
-          <div class="ts-k"><span>How long each thing takes</span><span>Log scale</span></div>
-          <div class="ts-plot" aria-hidden="true">
-            <div class="ts-top">
-              <div class="ts-lab left c-claim" style="left:9.54%"><b>3 min</b>the thread's claim</div>
-              <div class="ts-lab right c-study" style="right:1.94%"><b>8 weeks</b>the closest trial</div>
-            </div>
-            <div class="ts-track">
-              <div class="ts-band" style="left:26%;width:6.02%"></div>
-              <div class="ts-pin c-claim" style="left:9.54%"></div>
-              <div class="ts-pin c-study" style="left:98.06%"></div>
-            </div>
-            <div class="ts-under">
-              <div class="ts-lab c-cort" style="left:26%"><b>20–40 min</b>cortisol peaks after a stressor</div>
-            </div>
-            <div class="ts-ticks"><span style="left:0">1 min</span><span class="opt" style="left:19.99%">10 min</span><span style="left:35.54%">1 hr</span><span class="opt" style="left:63.12%">1 day</span><span style="left:80.01%">1 wk</span><span style="left:100%">10 wks</span></div>
-          </div>
-          <figcaption id="tsCap">The thread's three minutes is shorter than the time cortisol takes to peak after a stressor, and the nearest supportive trial ran for eight weeks. Each step along the scale is roughly ten times longer than the last.</figcaption>
-        </figure>
-      </div>
-
-      <div class="crow">
-        <p class="said"><span>The thread says</span>Cortisol "waste" collects in the belly, and the twist and massage drain it out.</p>
-        <div class="chk">
-          <span class="chip c-caring">Not how cortisol works</span>
-          <p>Your liver breaks cortisol down and your kidneys clear what's left.<a class="ref" href="#s4">[4]</a> There's no store of it sitting in belly fat for a massage to push out.</p>
-        </div>
-      </div>
-
-      <div class="crow">
-        <p class="said"><span>The thread says</span>Dr Sarah Chen calls it lymphatic drainage combined with vagus nerve stimulation.</p>
-        <div class="chk">
-          <span class="chip c-neutral">Can't identify</span>
-          <p>The thread gives no title, workplace or paper for Dr Chen, and we couldn't find a researcher by that name linked to this routine. The Stanford neuroscientist in the opening isn't named either.<a class="ref" href="#s1">[1]</a> A name with no details adds no evidence.</p>
-        </div>
-      </div>
-
-      <div class="crow">
-        <p class="said"><span>The thread says</span>Pressing firmly from ribs to pubic bone drains your lymph.</p>
-        <div class="chk">
-          <span class="chip c-curious">Mixed-up methods</span>
-          <p>Lymphatic drainage is a treatment for lymphoedema. It uses light strokes that just move the skin, and usually starts near the neck and collarbone.<a class="ref" href="#s5">[5]</a> Firm pressure over the belly is bowel massage, a different technique.</p>
-          <p>Lymph moves mostly because the vessels pump it themselves.<a class="ref" href="#s6">[6]</a> Lymphoedema researchers at Macquarie University say people with no swelling probably don't need drainage at all.<a class="ref" href="#s7">[7]</a></p>
-        </div>
-      </div>
-
-      <div class="crow">
-        <p class="said"><span>The thread says</span>The routine stimulates the vagus nerve.</p>
-        <div class="chk">
-          <span class="chip c-curious">Overstated</span>
-          <p>Slow breathing with a long out-breath does raise heart rate variability, a sign the vagus nerve is more active. A review of 223 studies found the rise during a session and just after it.<a class="ref" href="#s8">[8]</a> Medical vagus nerve stimulation uses a device. Slow breathing is a much gentler nudge.</p>
-          <a class="textlink" href="https://www.selfdriven.health/vagus-nerve">More on the vagus nerve guide<svg><use href="#ic-arrow"/></svg></a>
-        </div>
-      </div>
-
-      <div class="crow">
-        <p class="said"><span>The thread says</span>Do it before bed for better sleep.</p>
-        <div class="chk">
-          <span class="chip c-chill">Some support</span>
-          <p>A 2026 review of 9 studies found that people said they slept better after weeks of slow breathing before bed. Sleep-lab and wrist-tracker results were mixed.<a class="ref" href="#s9">[9]</a> The twist and the belly massage haven't been tested for sleep.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="studies">
-  <div class="wrap">
-    <div class="eyebrow e-chk"><b>Its studies</b> · two links, read</div>
-    <h2>It links two real studies. Neither measured cortisol or sleep.</h2>
-    <p class="lede">The thread posts both links without saying what they found. Here's what each one tested.</p>
-
-    <div class="studies">
-      <article class="scard">
-        <div class="k">Link 1 · Journal of Bodywork and Movement Therapies, 2021</div>
-        <h3>Lymphatic drainage and the nervous system in healthy adults</h3>
-        <dl>
-          <div><dt>Who</dt><dd>66 healthy adults aged 40 to 65.</dd></div>
-          <div><dt>What</dt><dd>One 45-minute session of light-touch drainage by a therapist, over the neck, belly and legs. The comparison group lay on their backs for the same time.</dd></div>
-          <div><dt>Measured</dt><dd>Spinal reflexes, heart rate variability, a saliva stress enzyme and muscle tension.</dd></div>
-          <div><dt>Found</dt><dd>Reflexes quietened after drainage. Heart rate variability and the saliva enzyme were no different between the groups.<a class="ref" href="#s10">[10]</a></dd></div>
-        </dl>
-        <div class="vrow"><span class="chip c-caring">No cortisol, no sleep</span>Light touch, not firm pressure</div>
-      </article>
-      <article class="scard">
-        <div class="k">Link 2 · Int J Environmental Research and Public Health, 2020</div>
-        <h3>Drainage, belly massage or electrical stimulation for constipation</h3>
-        <dl>
-          <div><dt>Who</dt><dd>Young adults with functional constipation.</dd></div>
-          <div><dt>What</dt><dd>Lymphatic drainage, belly massage or electrical stimulation from a therapist, four times a week for four weeks.</dd></div>
-          <div><dt>Measured</dt><dd>Bowel habits and heart rate variability.</dd></div>
-          <div><dt>Found</dt><dd>Each group improved on some measures. Most differences between the three groups weren't significant.<a class="ref" href="#s11">[11]</a></dd></div>
-        </dl>
-        <div class="vrow"><span class="chip c-curious">A constipation study</span>No cortisol or sleep outcomes</div>
-      </article>
-    </div>
-    <p class="takeaway"><b>Both studies used trained therapists and sessions far longer than three minutes.</b> Neither tested the routine in the thread, and neither is about sleep.</p>
-  </div>
-</section>
-
-<section class="block" id="evidence">
-  <div class="wrap">
-    <div class="eyebrow e-nrv"><b>Evidence</b> · graded</div>
-    <h2>Where each piece of the routine stands.</h2>
-    <p class="lede">From what's well shown to what has no source at all.</p>
-
-    <div class="ladder">
-      <div class="lrow grade-solid"><span class="chip c-constructive">Solid</span><h3>Slow breathing raises heart rate variability</h3><p>Seen during and straight after a session across 223 studies.<a class="ref" href="#s8">[8]</a> A longer out-breath also felt more relaxing in a 30-person lab study.<a class="ref" href="#s12">[12]</a></p></div>
-      <div class="lrow grade-mod"><span class="chip c-chill">Moderate</span><h3>Belly massage eases constipation</h3><p>In small randomised trials, constipation severity fell 28% to 55% more than in comparison groups. A US family-medicine review rates it a B.<a class="ref" href="#s13">[13]</a><a class="ref" href="#s14">[14]</a></p></div>
-      <div class="lrow grade-mod"><span class="chip c-chill">Moderate</span><h3>A regular yoga practice improves sleep quality</h3><p>Across 19 trials in women, yoga improved self-rated sleep quality, but not insomnia severity. These tested whole classes, not one pose.<a class="ref" href="#s15">[15]</a></p></div>
-      <div class="lrow grade-early"><span class="chip c-curious">Limited</span><h3>Slow breathing before bed improves sleep</h3><p>People report sleeping better after weeks of practice. Objective measures are mixed and most studies are small, such as one of 14 people with insomnia.<a class="ref" href="#s9">[9]</a><a class="ref" href="#s16">[16]</a></p></div>
-      <div class="lrow grade-early"><span class="chip c-curious">Limited</span><h3>Deep breathing helps move lymph</h3><p>Slow, deep breaths raised lymph flow in a study of dogs. In people, the lymph vessels' own pumping does most of the work.<a class="ref" href="#s17">[17]</a><a class="ref" href="#s6">[6]</a></p></div>
-      <div class="lrow grade-no"><span class="chip c-caring">None found</span><h3>A spinal twist on its own improves sleep</h3><p>We found no study of this pose and sleep.</p></div>
-      <div class="lrow grade-no"><span class="chip c-caring">None found</span><h3>Lymphatic drainage helps people without swelling</h3><p>Australian lymphoedema experts say healthy people probably don't need it. Even in lymphoedema, adding drainage to compression gave only a modest extra benefit in small trials.<a class="ref" href="#s7">[7]</a><a class="ref" href="#s18">[18]</a></p></div>
-      <div class="lrow grade-no"><span class="chip c-caring">Myth</span><h3>Cortisol waste collects in the belly</h3><p>The liver and kidneys clear cortisol.<a class="ref" href="#s4">[4]</a></p></div>
-      <div class="lrow grade-no"><span class="chip c-caring">No source</span><h3>23% less blood cortisol in three minutes</h3><p>No study found. Cortisol takes longer than that to peak after a stressor.<a class="ref" href="#s3">[3]</a></p></div>
-    </div>
-  </div>
-</section>
-
 <section class="block" id="routine">
   <div class="wrap">
-    <div class="eyebrow"><b>The routine</b> · 9 minutes, adjusted</div>
-    <h2>Keep the nine minutes. Change two things.</h2>
-    <p class="lede">Slow breathing has the best evidence, so it stays as written. The twist stays gentle. The massage follows your bowel at a pressure that feels comfortable. Turn on the tones and you can follow along with your eyes closed.</p>
+    <div class="eyebrow"><b>The routine</b> · three steps, three minutes each</div>
+    <h2>Lie down, lights low, press start.</h2>
+    <p class="lede">The player times each step and tells you when to swap sides. Turn on the tones and you can follow the breathing with your eyes closed.</p>
 
     <div class="routine">
       <div class="player" id="player" data-phase="idle">
@@ -716,7 +485,7 @@ body>main,.sd-foot{position:relative;z-index:1}
 
         <div class="pctl">
           <button type="button" class="btn go" id="playBtn"><svg id="playIc"><use href="#ic-play"/></svg><span id="playLab">Start</span></button>
-          <button type="button" class="btn" id="skipBtn"><svg><use href="#ic-skip"/></svg>Next<span class="long">&nbsp;step</span></button>
+          <button type="button" class="btn" id="skipBtn"><svg><use href="#ic-skip"/></svg><span>Next<span class="long"> step</span></span></button>
           <button type="button" class="btn" id="resetBtn"><svg><use href="#ic-reset"/></svg>Reset</button>
         </div>
         <div class="snds">
@@ -733,24 +502,92 @@ body>main,.sd-foot{position:relative;z-index:1}
 
       <div class="rsteps">
         <article class="rstep t-breath" data-step="0">
-          <div class="rstep-top"><span class="min">Minutes 1–3</span><span class="now">Now</span><span class="chip c-constructive">Kept as written</span></div>
+          <div class="rstep-top"><span class="min">Minutes 1–3</span><span class="now">Now</span><span class="chip c-constructive">Best evidence</span></div>
           <h3>Slow belly breathing</h3>
           <p>Lie on your back with your knees bent or a pillow under them. Rest one hand on your belly. Breathe in through your nose for 4 seconds so your belly rises, then out for 8 seconds, through your mouth or nose.</p>
           <p class="alt"><span>If it's a strain</span>Switch to 4 in · 6 out. Both paces sit in the slow range the research tested. If you feel light-headed, go back to normal breathing.</p>
         </article>
         <article class="rstep t-twist" data-step="1">
-          <div class="rstep-top"><span class="min">Minutes 4–6</span><span class="now">Now</span><span class="chip c-chill">Made gentler</span></div>
+          <div class="rstep-top"><span class="min">Minutes 4–6</span><span class="now">Now</span><span class="chip c-chill">Go gently</span></div>
           <h3>Gentle twist</h3>
           <p>Bend your right knee and let it fall across to the left. Right arm out, and look right if your neck is comfortable. Stop where you feel a stretch, not pain. Keep breathing slowly, and swap sides every 45 seconds.</p>
           <p class="alt"><span>Easier version</span>Keep both knees bent and together, and let them drop slowly to one side, then the other.</p>
         </article>
         <article class="rstep t-belly" data-step="2">
-          <div class="rstep-top"><span class="min">Minutes 7–9</span><span class="now">Now</span><span class="chip c-curious">Changed</span></div>
+          <div class="rstep-top"><span class="min">Minutes 7–9</span><span class="now">Now</span><span class="chip c-curious">Follow the bowel</span></div>
           <h3>Belly massage</h3>
           <p>Flat hand, comfortable pressure. Start low on your right side, slide up to your ribs, across under them, and down your left side. Repeat in slow loops.</p>
-          <p class="alt"><span>Why it changed</span>This follows the bowel, the way NHS constipation leaflets teach it.<a class="ref" href="#s19">[19]</a> The thread's firm sweep from ribs to pubic bone doesn't follow the bowel, and drainage would use a far lighter touch.</p>
+          <p class="alt"><span>Why this direction</span>The loop follows your large bowel, the way NHS constipation leaflets teach it. Pressure should be firm enough to feel and never painful.<a class="ref" href="#s9">[9]</a></p>
         </article>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="expect">
+  <div class="wrap">
+    <div class="eyebrow e-nrv"><b>What to expect</b> · and when</div>
+    <h2>Some effects show up tonight. Others take weeks.</h2>
+    <p class="lede">Studies of these steps measured different things over different lengths of time. Here's what they found, in the order you'd notice it.</p>
+
+    <div class="expect">
+      <div class="stop t-breath">
+        <div class="when"><i></i>Tonight</div>
+        <div class="card">
+          <h3>Your body shifts down a gear</h3>
+          <p>Heart rate variability rises while you breathe slowly, a sign the vagus nerve is more active. A review of 223 studies found the rise during a session and just after it.<a class="ref" href="#s1">[1]</a> A longer out-breath also feels more relaxing.<a class="ref" href="#s2">[2]</a></p>
+          <div class="chips"><span class="chip c-constructive">Solid</span></div>
+        </div>
+      </div>
+      <div class="stop t-twist">
+        <div class="when"><i></i>About 4 weeks</div>
+        <div class="card">
+          <h3>Bowels, and how you feel you slept</h3>
+          <p>In small trials, regular belly massage eased constipation within four weeks.<a class="ref" href="#s7">[7]</a><a class="ref" href="#s8">[8]</a> People who practised slow breathing before bed for about a month said they slept better, though sleep-lab results were mixed.<a class="ref" href="#s4">[4]</a></p>
+          <div class="chips"><span class="chip c-chill">Massage: moderate</span><span class="chip c-curious">Sleep: limited</span></div>
+        </div>
+      </div>
+      <div class="stop t-belly">
+        <div class="when"><i></i>About 8 weeks</div>
+        <div class="card">
+          <h3>Stress hormones</h3>
+          <p>In one trial, 40 healthy adults did 20 sessions of slow belly breathing over 8 weeks. Afterwards their saliva cortisol was lower and they reported fewer negative feelings.<a class="ref" href="#s3">[3]</a> It's one small study, so treat it as a promising lead.</p>
+          <div class="chips"><span class="chip c-curious">Limited</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="isnt">
+      <article>
+        <div class="k">A common mix-up</div>
+        <h3>The belly massage isn't lymphatic drainage.</h3>
+        <p>Lymphatic drainage is a light-touch therapy for lymphoedema. It just moves the skin and usually starts at the neck.<a class="ref" href="#s10">[10]</a> Lymph moves mostly because the vessels pump it themselves.<a class="ref" href="#s12">[12]</a> Lymphoedema researchers at Macquarie University say people without swelling probably don't need drainage.<a class="ref" href="#s11">[11]</a> The massage here is for your bowel.</p>
+      </article>
+      <article>
+        <div class="k">Keep expectations right</div>
+        <h3>A wind-down routine isn't an insomnia treatment.</h3>
+        <p>It can help you relax before sleep. If you have trouble sleeping most nights, the recommended first treatment is cognitive behavioural therapy for insomnia (CBT-I).<a class="ref" href="#s19">[19]</a><a class="ref" href="#s18">[18]</a></p>
+        <a class="textlink" href="#sleep">When to see your GP<svg><use href="#ic-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="evidence">
+  <div class="wrap">
+    <div class="eyebrow e-nrv"><b>Evidence</b> · graded</div>
+    <h2>Where each piece of the routine stands.</h2>
+    <p class="lede">From what's well shown to what hasn't been shown at all.</p>
+
+    <div class="ladder">
+      <div class="lrow grade-solid"><span class="chip c-constructive">Solid</span><h3>Slow breathing raises heart rate variability</h3><p>Seen during and straight after a session across 223 studies.<a class="ref" href="#s1">[1]</a> A longer out-breath also felt more relaxing in a 30-person lab study.<a class="ref" href="#s2">[2]</a></p></div>
+      <div class="lrow grade-mod"><span class="chip c-chill">Moderate</span><h3>Belly massage eases constipation</h3><p>In small randomised trials, constipation severity fell 28% to 55% more than in comparison groups. A US family-medicine review rates it a B.<a class="ref" href="#s7">[7]</a><a class="ref" href="#s8">[8]</a></p></div>
+      <div class="lrow grade-mod"><span class="chip c-chill">Moderate</span><h3>A regular yoga practice improves sleep quality</h3><p>Across 19 trials in women, yoga improved self-rated sleep quality, but not insomnia severity. These tested whole classes, not one pose.<a class="ref" href="#s6">[6]</a></p></div>
+      <div class="lrow grade-early"><span class="chip c-curious">Limited</span><h3>Slow breathing before bed improves sleep</h3><p>People report sleeping better after weeks of practice. Objective measures are mixed and most studies are small, such as one of 14 people with insomnia.<a class="ref" href="#s4">[4]</a><a class="ref" href="#s5">[5]</a></p></div>
+      <div class="lrow grade-early"><span class="chip c-curious">Limited</span><h3>Slow breathing practice lowers cortisol</h3><p>One trial of 40 adults found lower saliva cortisol after 8 weeks of training. It hasn't been repeated at scale.<a class="ref" href="#s3">[3]</a></p></div>
+      <div class="lrow grade-early"><span class="chip c-curious">Limited</span><h3>Deep breathing helps move lymph</h3><p>Slow, deep breaths raised lymph flow in a study of dogs. In people, the lymph vessels' own pumping does most of the work.<a class="ref" href="#s13">[13]</a><a class="ref" href="#s12">[12]</a></p></div>
+      <div class="lrow grade-no"><span class="chip c-caring">Not shown</span><h3>A spinal twist on its own improves sleep</h3><p>We found no study of this pose and sleep. It's in the routine as a comfortable stretch.</p></div>
+      <div class="lrow grade-no"><span class="chip c-caring">Not shown</span><h3>Lymphatic drainage helps people without swelling</h3><p>Australian lymphoedema experts say healthy people probably don't need it. Even in lymphoedema, adding drainage to compression gave only a modest extra benefit in small trials.<a class="ref" href="#s11">[11]</a><a class="ref" href="#s14">[14]</a></p></div>
     </div>
   </div>
 </section>
@@ -774,8 +611,8 @@ body>main,.sd-foot{position:relative;z-index:1}
         <div class="k">Minutes 4–6</div>
         <h3>Twist</h3>
         <ul>
-          <li><span><b>You have osteoporosis.</b> Twisting movements are on the list to avoid. Skip this step and keep breathing instead.<a class="ref" href="#s20">[20]</a></span></li>
-          <li><span><b>You've had a hip replacement.</b> Hospital advice is no bending the hip past 90°, crossing your legs or twisting the leg for at least six weeks. Ask your surgeon or physio first.<a class="ref" href="#s21">[21]</a></span></li>
+          <li><span><b>You have osteoporosis.</b> Twisting movements are on the list to avoid. Skip this step and keep breathing instead.<a class="ref" href="#s15">[15]</a></span></li>
+          <li><span><b>You've had a hip replacement.</b> Hospital advice is no bending the hip past 90°, crossing your legs or twisting the leg for at least six weeks. Ask your surgeon or physio first.<a class="ref" href="#s16">[16]</a></span></li>
           <li><span><b>Pain shoots down a leg, or your back hurts more.</b> Stop.</span></li>
         </ul>
       </div>
@@ -783,8 +620,8 @@ body>main,.sd-foot{position:relative;z-index:1}
         <div class="k">Minutes 7–9</div>
         <h3>Belly massage</h3>
         <ul>
-          <li><span><b>Skip it</b> if you're pregnant, have inflammatory bowel disease or an unstable spinal injury, or have a belly wound less than six weeks old.<a class="ref" href="#s19">[19]</a></span></li>
-          <li><span><b>Reflux or a hiatus hernia.</b> Avoid long upward strokes toward the ribs. One NHS leaflet turns its opening stroke downward for this.<a class="ref" href="#s19">[19]</a></span></li>
+          <li><span><b>Skip it</b> if you're pregnant, have inflammatory bowel disease or an unstable spinal injury, or have a belly wound less than six weeks old.<a class="ref" href="#s9">[9]</a></span></li>
+          <li><span><b>Reflux or a hiatus hernia.</b> Avoid long upward strokes toward the ribs. One NHS leaflet turns its opening stroke downward for this.<a class="ref" href="#s9">[9]</a></span></li>
           <li><span><b>New, severe or unexplained belly pain.</b> See your GP instead of massaging it.</span></li>
         </ul>
       </div>
@@ -796,13 +633,13 @@ body>main,.sd-foot{position:relative;z-index:1}
   <div class="wrap">
     <div class="eyebrow"><b>Sleep</b> · when nine minutes isn't enough</div>
     <h2>Still not sleeping? Ask your GP about CBT-I.</h2>
-    <p class="lede">Australian GP guidance names cognitive behavioural therapy for insomnia (CBT-I) as the first treatment for ongoing insomnia. Breathing and relaxation are one part of it.<a class="ref" href="#s24">[24]</a><a class="ref" href="#s23">[23]</a></p>
+    <p class="lede">Australian GP guidance names cognitive behavioural therapy for insomnia (CBT-I) as the first treatment for ongoing insomnia. Breathing and relaxation are one part of it.<a class="ref" href="#s19">[19]</a><a class="ref" href="#s18">[18]</a></p>
 
     <div class="help">
       <div class="hcard">
         <div class="k">First treatment</div>
         <h3>Cognitive behavioural therapy for insomnia</h3>
-        <p>A structured course, usually 4 to 8 sessions a week or a fortnight apart, with a psychologist, in a group or through a digital program. The Sleep Health Foundation says it helps up to 80% of people with insomnia.<a class="ref" href="#s23">[23]</a></p>
+        <p>A structured course, usually 4 to 8 sessions a week or a fortnight apart, with a psychologist, in a group or through a digital program. The Sleep Health Foundation says it helps up to 80% of people with insomnia.<a class="ref" href="#s18">[18]</a></p>
         <dl class="parts">
           <div><dt>Sleep restriction</dt><dd>Time in bed is matched to the sleep you're actually getting, then widened.</dd></div>
           <div><dt>Stimulus control</dt><dd>The bed is for sleep. If you're awake after 15 to 20 minutes, you get up.</dd></div>
@@ -813,42 +650,36 @@ body>main,.sd-foot{position:relative;z-index:1}
       <div class="flags">
         <h3><svg><use href="#ic-alert"/></svg>See your GP if</h3>
         <ul>
-          <li>Poor sleep is affecting your days, or you often wake up unrefreshed.<a class="ref" href="#s22">[22]</a></li>
-          <li>Your mood is low or you're anxious as well.<a class="ref" href="#s22">[22]</a></li>
-          <li>You feel restless in bed. Restless legs can cause insomnia; our <a href="https://www.selfdriven.health/restless-legs">restless legs guide</a> helps you describe it.<a class="ref" href="#s22">[22]</a></li>
-          <li>You snore heavily, or someone notices you stop breathing in your sleep. Sleep apnoea needs its own check.<a class="ref" href="#s24">[24]</a></li>
+          <li>Poor sleep is affecting your days, or you often wake up unrefreshed.<a class="ref" href="#s17">[17]</a></li>
+          <li>Your mood is low or you're anxious as well.<a class="ref" href="#s17">[17]</a></li>
+          <li>You feel restless in bed. Restless legs can cause insomnia; our <a href="https://www.selfdriven.health/restless-legs">restless legs guide</a> helps you describe it.<a class="ref" href="#s17">[17]</a></li>
+          <li>You snore heavily, or someone notices you stop breathing in your sleep. Sleep apnoea needs its own check.<a class="ref" href="#s19">[19]</a></li>
         </ul>
       </div>
     </div>
 
     <details class="sources">
-      <summary><svg><use href="#ic-chev"/></svg>Sources <span>25</span></summary>
+      <summary><svg><use href="#ic-chev"/></svg>Sources <span>19</span></summary>
       <ol>
-        <li id="s1">Cole D (@CoachDanCole_). Thread on a 9-minute bedtime routine, 14 August 2026. <a href="https://threadreaderapp.com/thread/2088265453684797565" target="_blank" rel="noopener">Unrolled on Thread Reader</a>.</li>
-        <li id="s2">Ma X, et al. The effect of diaphragmatic breathing on attention, negative affect and stress in healthy adults. <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00874/full" target="_blank" rel="noopener">Frontiers in Psychology, 2017</a>.</li>
-        <li id="s3">Dickerson SS, Kemeny ME. Acute stressors and cortisol responses: a theoretical integration and synthesis of laboratory research. <a href="https://pubmed.ncbi.nlm.nih.gov/15122924/" target="_blank" rel="noopener">Psychological Bulletin, 2004</a>.</li>
-        <li id="s4">StatPearls. <a href="https://www.ncbi.nlm.nih.gov/books/NBK538239/" target="_blank" rel="noopener">Physiology, Cortisol</a>. NCBI Bookshelf.</li>
-        <li id="s5">Macmillan Cancer Support. <a href="https://www.macmillan.org.uk/cancer-information-and-support/impacts-of-cancer/lymphoedema/lymphatic-drainage-for-lymphoedema" target="_blank" rel="noopener">Lymphatic drainage for lymphoedema</a>.</li>
-        <li id="s6">Razavi MS, Munn LL, Padera TP. Mechanics of lymphatic pumping and lymphatic function. <a href="https://perspectivesinmedicine.cshlp.org/content/15/3/a041171.abstract" target="_blank" rel="noopener">Cold Spring Harbor Perspectives in Medicine, 2025</a>.</li>
-        <li id="s7">Thompson B, Koelmeyer L (Macquarie University). <a href="https://theconversation.com/can-you-really-drain-your-lymphatic-system-and-should-you-278411" target="_blank" rel="noopener">Can you really drain your lymphatic system, and should you?</a> The Conversation, June 2026.</li>
-        <li id="s8">Laborde S, et al. Effects of voluntary slow breathing on heart rate and heart rate variability: a systematic review and meta-analysis. <a href="https://eprints.bournemouth.ac.uk/38169/" target="_blank" rel="noopener">Neuroscience &amp; Biobehavioral Reviews, 2022</a>.</li>
-        <li id="s9">Eide EM, Hernes HM, Grønli J. Slow breathing techniques before bedtime and the effects on sleep: a systematic review. <a href="https://doi.org/10.1016/j.smrv.2026.102284" target="_blank" rel="noopener">Sleep Medicine Reviews, 2026</a>.</li>
-        <li id="s10">Honguten A, et al. Effects of lymphatic drainage therapy on autonomic nervous system responses in healthy subjects: a single blind randomized controlled trial. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1360859221000693" target="_blank" rel="noopener">Journal of Bodywork and Movement Therapies, 2021</a>.</li>
-        <li id="s11">Drouin JS, et al. Comparisons between manual lymph drainage, abdominal massage, and electrical stimulation on functional constipation outcomes: a randomized, controlled trial. <a href="https://www.mdpi.com/1660-4601/17/11/3924" target="_blank" rel="noopener">International Journal of Environmental Research and Public Health, 2020</a>.</li>
-        <li id="s12">Van Diest I, et al. Inhalation/exhalation ratio modulates the effect of slow breathing on heart rate variability and relaxation. <a href="https://pubmed.ncbi.nlm.nih.gov/25156003/" target="_blank" rel="noopener">Applied Psychophysiology and Biofeedback, 2014</a>.</li>
-        <li id="s13">Family Physicians Inquiries Network. <a href="https://www.aafp.org/afp/2026/0100/fpin-hda-abdnominal-massage-functional-constipation" target="_blank" rel="noopener">Abdominal massage for functional constipation in adults</a>. American Family Physician, January 2026.</li>
-        <li id="s14">Doğan et al. Abdominal massage in functional chronic constipation: a randomized placebo-controlled trial. <a href="https://pubmed.ncbi.nlm.nih.gov/35554601/" target="_blank" rel="noopener">Physical Therapy, 2022</a>.</li>
-        <li id="s15">Wang WL, et al. The effect of yoga on sleep quality and insomnia in women with sleep problems: a systematic review and meta-analysis. <a href="https://doi.org/10.1186/s12888-020-02566-4" target="_blank" rel="noopener">BMC Psychiatry, 2020</a>.</li>
-        <li id="s16">Tsai HJ, et al. Efficacy of paced breathing for insomnia: enhances vagal activity and improves sleep quality. <a href="https://doi.org/10.1111/psyp.12333" target="_blank" rel="noopener">Psychophysiology, 2015</a>.</li>
-        <li id="s17">Kim KW, Earm YE. Various factors influencing thoracic duct lymph flow in the dogs. <a href="https://koreascience.kr/article/JAKO197503038808567.pub" target="_blank" rel="noopener">Korean Journal of Physiology, 1975</a>.</li>
-        <li id="s18">Ezzo J, et al. Manual lymphatic drainage for lymphedema following breast cancer treatment. <a href="https://www.cochrane.org/evidence/CD003475_manual-lymphatic-drainage-lymphedema-following-breast-cancer-treatment" target="_blank" rel="noopener">Cochrane Database of Systematic Reviews, 2015</a>.</li>
-        <li id="s19">University Hospitals of Leicester NHS Trust. <a href="https://www.uhleicester.nhs.uk/wp-content/uploads/2025/06/1300_052022-Massaging-your-tummy-to-help-ease-constipation.pdf" target="_blank" rel="noopener">Massaging your tummy to help ease constipation</a> (patient leaflet).</li>
-        <li id="s20">Better Health Channel (Victorian Department of Health, with Healthy Bones Australia). <a href="https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/osteoporosis-and-exercise" target="_blank" rel="noopener">Osteoporosis and exercise</a>.</li>
-        <li id="s21">Concord Repatriation General Hospital. <a href="https://www.slhd.nsw.gov.au/Concord/Orthopaedics/pdf/TotalHipReplacement.pdf" target="_blank" rel="noopener">Total hip replacement</a> (patient information).</li>
-        <li id="s22">healthdirect Australia. <a href="https://www.healthdirect.gov.au/insomnia" target="_blank" rel="noopener">Insomnia</a>.</li>
-        <li id="s23">Sleep Health Foundation. <a href="https://www.sleephealthfoundation.org.au/sleep-disorders/cognitive-behavioural-therapy-for-insomnia-cbt-i" target="_blank" rel="noopener">Cognitive behavioural therapy for insomnia (CBT-I)</a>.</li>
-        <li id="s24">Grima NA, Bei B, Mansfield D. Insomnia management. <a href="https://www1.racgp.org.au/ajgp/2019/april/insomnia-management" target="_blank" rel="noopener">Australian Journal of General Practice, 2019</a>.</li>
-        <li id="s25">NHMRC. Nutrient Reference Values for Australia and New Zealand: <a href="https://www.eatforhealth.gov.au/nutrient-reference-values/nutrients/magnesium" target="_blank" rel="noopener">Magnesium</a> (upper limit 350 mg/day from supplements, adults).</li>
+        <li id="s1">Laborde S, et al. Effects of voluntary slow breathing on heart rate and heart rate variability: a systematic review and meta-analysis. <a href="https://eprints.bournemouth.ac.uk/38169/" target="_blank" rel="noopener">Neuroscience &amp; Biobehavioral Reviews, 2022</a>.</li>
+        <li id="s2">Van Diest I, et al. Inhalation/exhalation ratio modulates the effect of slow breathing on heart rate variability and relaxation. <a href="https://pubmed.ncbi.nlm.nih.gov/25156003/" target="_blank" rel="noopener">Applied Psychophysiology and Biofeedback, 2014</a>.</li>
+        <li id="s3">Ma X, et al. The effect of diaphragmatic breathing on attention, negative affect and stress in healthy adults. <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00874/full" target="_blank" rel="noopener">Frontiers in Psychology, 2017</a>.</li>
+        <li id="s4">Eide EM, Hernes HM, Grønli J. Slow breathing techniques before bedtime and the effects on sleep: a systematic review. <a href="https://doi.org/10.1016/j.smrv.2026.102284" target="_blank" rel="noopener">Sleep Medicine Reviews, 2026</a>.</li>
+        <li id="s5">Tsai HJ, et al. Efficacy of paced breathing for insomnia: enhances vagal activity and improves sleep quality. <a href="https://doi.org/10.1111/psyp.12333" target="_blank" rel="noopener">Psychophysiology, 2015</a>.</li>
+        <li id="s6">Wang WL, et al. The effect of yoga on sleep quality and insomnia in women with sleep problems: a systematic review and meta-analysis. <a href="https://doi.org/10.1186/s12888-020-02566-4" target="_blank" rel="noopener">BMC Psychiatry, 2020</a>.</li>
+        <li id="s7">Family Physicians Inquiries Network. <a href="https://www.aafp.org/afp/2026/0100/fpin-hda-abdnominal-massage-functional-constipation" target="_blank" rel="noopener">Abdominal massage for functional constipation in adults</a>. American Family Physician, January 2026.</li>
+        <li id="s8">Doğan et al. Abdominal massage in functional chronic constipation: a randomized placebo-controlled trial. <a href="https://pubmed.ncbi.nlm.nih.gov/35554601/" target="_blank" rel="noopener">Physical Therapy, 2022</a>.</li>
+        <li id="s9">University Hospitals of Leicester NHS Trust. <a href="https://www.uhleicester.nhs.uk/wp-content/uploads/2025/06/1300_052022-Massaging-your-tummy-to-help-ease-constipation.pdf" target="_blank" rel="noopener">Massaging your tummy to help ease constipation</a> (patient leaflet).</li>
+        <li id="s10">Macmillan Cancer Support. <a href="https://www.macmillan.org.uk/cancer-information-and-support/impacts-of-cancer/lymphoedema/lymphatic-drainage-for-lymphoedema" target="_blank" rel="noopener">Lymphatic drainage for lymphoedema</a>.</li>
+        <li id="s11">Thompson B, Koelmeyer L (Macquarie University). <a href="https://theconversation.com/can-you-really-drain-your-lymphatic-system-and-should-you-278411" target="_blank" rel="noopener">Can you really drain your lymphatic system, and should you?</a> The Conversation, June 2026.</li>
+        <li id="s12">Razavi MS, Munn LL, Padera TP. Mechanics of lymphatic pumping and lymphatic function. <a href="https://perspectivesinmedicine.cshlp.org/content/15/3/a041171.abstract" target="_blank" rel="noopener">Cold Spring Harbor Perspectives in Medicine, 2025</a>.</li>
+        <li id="s13">Kim KW, Earm YE. Various factors influencing thoracic duct lymph flow in the dogs. <a href="https://koreascience.kr/article/JAKO197503038808567.pub" target="_blank" rel="noopener">Korean Journal of Physiology, 1975</a>.</li>
+        <li id="s14">Ezzo J, et al. Manual lymphatic drainage for lymphedema following breast cancer treatment. <a href="https://www.cochrane.org/evidence/CD003475_manual-lymphatic-drainage-lymphedema-following-breast-cancer-treatment" target="_blank" rel="noopener">Cochrane Database of Systematic Reviews, 2015</a>.</li>
+        <li id="s15">Better Health Channel (Victorian Department of Health, with Healthy Bones Australia). <a href="https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/osteoporosis-and-exercise" target="_blank" rel="noopener">Osteoporosis and exercise</a>.</li>
+        <li id="s16">Concord Repatriation General Hospital. <a href="https://www.slhd.nsw.gov.au/Concord/Orthopaedics/pdf/TotalHipReplacement.pdf" target="_blank" rel="noopener">Total hip replacement</a> (patient information).</li>
+        <li id="s17">healthdirect Australia. <a href="https://www.healthdirect.gov.au/insomnia" target="_blank" rel="noopener">Insomnia</a>.</li>
+        <li id="s18">Sleep Health Foundation. <a href="https://www.sleephealthfoundation.org.au/sleep-disorders/cognitive-behavioural-therapy-for-insomnia-cbt-i" target="_blank" rel="noopener">Cognitive behavioural therapy for insomnia (CBT-I)</a>.</li>
+        <li id="s19">Grima NA, Bei B, Mansfield D. Insomnia management. <a href="https://www1.racgp.org.au/ajgp/2019/april/insomnia-management" target="_blank" rel="noopener">Australian Journal of General Practice, 2019</a>.</li>
       </ol>
     </details>
   </div>
@@ -857,13 +688,13 @@ body>main,.sd-foot{position:relative;z-index:1}
 <section class="closing">
   <div class="wrap">
     <div class="eyebrow">Tonight</div>
-    <h2>Nine minutes. No product needed.</h2>
-    <p class="lede">Lights low, phone where you can see the pacer, and press Start. If it helps you wind down, keep it. If sleep stays hard, ask your GP about CBT-I.</p>
+    <h2>Nine minutes. Lights low.</h2>
+    <p class="lede">If it helps you wind down, keep it going for a few weeks and see how you sleep. If sleep stays hard, ask your GP about CBT-I.</p>
     <div class="jump-row">
       <a class="mode-pill mp-l" href="#routine"><svg><use href="#ic-moon"/></svg>Start the routine</a>
-      <a class="mode-pill mp-k" href="#claims"><svg><use href="#ic-search"/></svg>The claims</a>
-      <a class="mode-pill mp-b" href="#evidence"><svg><use href="#ic-scale"/></svg>Evidence ladder</a>
-      <a class="mode-pill mp-c" href="#cautions"><svg><use href="#ic-shield"/></svg>Cautions</a>
+      <a class="mode-pill mp-b" href="#expect"><svg><use href="#ic-clock"/></svg>What to expect</a>
+      <a class="mode-pill mp-c" href="#evidence"><svg><use href="#ic-scale"/></svg>Evidence ladder</a>
+      <a class="mode-pill mp-k" href="#cautions"><svg><use href="#ic-shield"/></svg>Cautions</a>
     </div>
     <p class="companion-row"><a class="companion" href="https://www.selfdriven.health/vagus-nerve">Want more breathing practice? Try the pacer on the vagus nerve <span class="nw">guide<svg><use href="#ic-arrow"/></svg></span></a></p>
   </div>
