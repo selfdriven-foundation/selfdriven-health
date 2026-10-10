@@ -11,7 +11,7 @@ permalink: /run-sheet
 <style>:root{color-scheme:dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%2309090f%27/%3E%3Ccircle cx=%2721%27 cy=%2721%27 r=%279%27 fill=%27%23f5c842%27/%3E%3Ccircle cx=%2743%27 cy=%2721%27 r=%279%27 fill=%27%23ff5f7e%27/%3E%3Ccircle cx=%2721%27 cy=%2743%27 r=%279%27 fill=%27%237b6cff%27/%3E%3Ccircle cx=%2743%27 cy=%2743%27 r=%279%27 fill=%27%2300e5a0%27/%3E%3C/svg%3E">
 <title>Supplement run sheet - selfdriven Health</title>
-<meta name="description" content="A daily run sheet for six supplements: magnesium, omega-3, vitamin D3, alpha-GPC, creatine and L-glutamine, timed to your day and checked against Australian reference limits.">
+<meta name="description" content="A daily run sheet for seven supplements: magnesium, omega-3, vitamin D3, alpha-GPC, creatine, L-glutamine and CoQ10, timed to your day and checked against Australian reference limits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -177,9 +177,9 @@ button{font:inherit;color:inherit}
 .dose-pair label span{font-size:11.5px;color:var(--muted)}
 .caution{background:var(--warn-dim);border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.55}
 .caution b{color:var(--warn);font-weight:700}
-.card.meta{background:var(--surface);border-style:dashed;grid-column:1/-1}
+.card.meta{background:var(--surface);border-style:dashed;align-self:start}
+@media (min-width:1040px){.card.meta{grid-column:span 2}}
 .meta-body{display:grid;gap:12px}
-@media (min-width:1040px){.meta-body{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}
 .card.meta p{font-size:14px;color:var(--muted);line-height:1.65}
 .card.meta p strong{color:var(--text);font-weight:600}
 
@@ -236,7 +236,7 @@ button{font:inherit;color:inherit}
 .sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
 @media (max-width:1040px){.sd-links{display:none}}
 @media (max-width:560px){.sd-crumb,.sd-date{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
-@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+@media (max-width:420px){.sd-nav-in{gap:6px}.sd-nav .sd-logo{font-size:17px;gap:8px}.sd-cta{padding:8px 12px;font-size:12.5px}}
 
 .sd-glow{position:absolute;top:0;left:0;right:0;height:860px;overflow:hidden;pointer-events:none;z-index:0;-webkit-mask-image:linear-gradient(#000 45%,transparent);mask-image:linear-gradient(#000 45%,transparent)}
 .sd-glow i{position:absolute;display:block;border-radius:50%;filter:blur(110px);opacity:.17}
@@ -351,9 +351,9 @@ section[id]{scroll-margin-top:84px}
 <main class="wrap" id="top">
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">Daily run sheet · 6 supplements</p>
-      <h1>Six supplements, <em>three cues</em>, one day.</h1>
-      <p class="lead">A thread doing the rounds lists five supplements Andrew Huberman says he would keep for life. This sheet adds L-glutamine, puts all six on your clock, checks each dose against Australian and published safety limits, and gives you a box to tick.</p>
+      <p class="eyebrow">Daily run sheet · 7 supplements</p>
+      <h1>Seven supplements, <em>three cues</em>, one day.</h1>
+      <p class="lead">A thread doing the rounds lists five supplements Andrew Huberman says he would keep for life. This sheet adds L-glutamine and CoQ10, puts all seven on your clock, checks each dose against Australian and published safety limits, and gives you a box to tick.</p>
       <div class="units" aria-label="Units used">
         <span class="chip">1 µg vitamin D = 40 IU</span>
         <span class="chip">Mg doses as elemental</span>
@@ -364,7 +364,7 @@ section[id]{scroll-margin-top:84px}
       <div class="today-top">
         <div class="ring" id="ring">
           <svg viewBox="0 0 96 96" aria-hidden="true"><circle class="trk" cx="48" cy="48" r="40" fill="none" stroke-width="9"/><circle class="val" id="ringVal" cx="48" cy="48" r="40" fill="none" stroke-width="9" stroke-linecap="round" stroke-dasharray="251.33" stroke-dashoffset="251.33"/></svg>
-          <div class="ring-label"><span><span id="doneCount">0</span><small>/<span id="dueCount">6</span></small></span></div>
+          <div class="ring-label"><span><span id="doneCount">0</span><small>/<span id="dueCount">7</span></small></span></div>
         </div>
         <div class="today-meta">
           <p class="k">Today</p>
@@ -400,9 +400,9 @@ section[id]{scroll-margin-top:84px}
 
   <section aria-labelledby="fiveH">
     <div class="sec-head">
-      <p class="eyebrow">The six</p>
+      <p class="eyebrow">The seven</p>
       <h2 id="fiveH">What the thread says, and what to check</h2>
-      <p>#1 to #5 follow the thread's order. L-glutamine is a selfdriven.health addition. Edit "Your dose" and the run sheet updates.</p>
+      <p>#1 to #5 follow the thread's order. L-glutamine and CoQ10 are selfdriven.health additions. Edit "Your dose" and the run sheet updates.</p>
     </div>
     <div class="cards">
       <article class="card" aria-labelledby="c-mg">
@@ -497,6 +497,18 @@ section[id]{scroll-margin-top:84px}
         <p class="caution"><b>Caution.</b> With liver or kidney disease, only take it if your doctor agrees. If you're being treated for cancer, ask your oncologist first. Stay at or under 14 g a day.</p>
       </article>
 
+      <article class="card" aria-labelledby="c-cq">
+        <div class="card-top"><span class="rank">Added · not in the thread</span><h3 id="c-cq">CoQ10</h3><p class="form">Coenzyme Q10 · ubiquinone or ubiquinol</p></div>
+        <dl class="rows">
+          <div><dt>Thread says</dt><dd class="thread">Not in the thread. Added here; people mostly take it for energy, heart health and statin muscle aches.</dd></div>
+          <div><dt>Reference</dt><dd>Your body makes its own, and the evidence of benefit comes from people with heart disease, not healthy adults. In heart failure, the Q-SYMBIO trial (420 patients, <span class="num">100 mg × 3/day</span> for 2 years) cut major cardiac events from 26% to 15%. For statin muscle aches, meta-analyses disagree: a 2018 one found less pain, a 2020 one found no effect. A Cochrane review found it doesn't lower blood pressure. Observed safe level: <span class="num">1,200 mg/day</span>.</dd></div>
+          <div><dt><label for="dose-cq">Your dose</label></dt><dd><input class="dose-in" id="dose-cq" data-id="cq" type="text" autocomplete="off"></dd></div>
+          <div><dt>Take</dt><dd>With breakfast, alongside omega-3. It's fat-soluble and absorbs poorly, so the fat in the meal matters. Taking more than 100 mg? Split it across two meals.</dd></div>
+          <div><dt>Label check</dt><dd>An oil-filled softgel rather than a dry tablet, and the mg per softgel. Either form works, since the body converts between them; ubiquinol costs more and its absorption edge isn't settled.</dd></div>
+        </dl>
+        <p class="caution"><b>Caution.</b> On warfarin, it can weaken the effect, so don't start or stop it without your GP rechecking your INR. Tell your GP if you take blood pressure or diabetes medicine, or are having chemotherapy or radiation. Statins lower your body's CoQ10, but muscle aches on a statin need a GP check first.</p>
+      </article>
+
       <article class="card meta" aria-labelledby="c-src">
         <div class="card-top"><span class="rank">Source check</span><h3 id="c-src">Where this list comes from</h3></div>
         <div class="meta-body">
@@ -518,6 +530,11 @@ section[id]{scroll-margin-top:84px}
       <li>Zhou Q et al. <a href="https://pubmed.ncbi.nlm.nih.gov/30108163/" target="_blank" rel="noopener">Randomised placebo-controlled trial of dietary glutamine supplements for postinfectious irritable bowel syndrome</a>. Gut, 2019.</li>
       <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0261561418301730" target="_blank" rel="noopener">The effect of glutamine supplementation on athletic performance, body composition, and immune function: a systematic review and meta-analysis of clinical trials</a>. Clinical Nutrition, 2019.</li>
       <li>Shao A, Hathcock JN. <a href="https://pubmed.ncbi.nlm.nih.gov/18325648/" target="_blank" rel="noopener">Risk assessment for the amino acids taurine, L-glutamine and L-arginine</a>. Regulatory Toxicology and Pharmacology, 2008.</li>
+      <li>Mortensen SA et al. <a href="https://www.jacc.org/doi/10.1016/j.jchf.2014.06.008" target="_blank" rel="noopener">The effect of coenzyme Q10 on morbidity and mortality in chronic heart failure: results from Q-SYMBIO</a>. JACC: Heart Failure, 2014.</li>
+      <li>Qu H et al. <a href="https://www.ahajournals.org/doi/10.1161/JAHA.118.009835" target="_blank" rel="noopener">Effects of coenzyme Q10 on statin-induced myopathy: an updated meta-analysis of randomized controlled trials</a>. Journal of the American Heart Association, 2018.</li>
+      <li><a href="https://www.atherosclerosis-journal.com/article/S0021-9150(20)30138-6/fulltext" target="_blank" rel="noopener">Effect of coenzyme Q10 on statin-associated myalgia and adherence to statin therapy: a systematic review and meta-analysis</a>. Atherosclerosis, 2020.</li>
+      <li>Ho MJ et al. <a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD007435.pub3/abstract" target="_blank" rel="noopener">Blood pressure lowering efficacy of coenzyme Q10 for primary hypertension</a>. Cochrane Database of Systematic Reviews, 2016.</li>
+      <li>Hathcock JN, Shao A. <a href="https://pubmed.ncbi.nlm.nih.gov/16814438/" target="_blank" rel="noopener">Risk assessment for coenzyme Q10 (ubiquinone)</a>. Regulatory Toxicology and Pharmacology, 2006.</li>
     </ol>
   </section>
 </main>
@@ -539,12 +556,13 @@ section[id]{scroll-margin-top:84px}
   var KEY = 'sdh-runsheet-v1';
   var DEFAULTS = {
     settings: { wake:'06:30', focus:'09:00', bed:'22:30', active:true },
-    doses: { mg:'200 mg elemental', o3:'1,000 mg EPA', d3:'2,000 IU (50 µg)', ag:'300 mg', cr:'5 g', glam:'5 g', gl:'5 g' },
+    doses: { mg:'200 mg elemental', o3:'1,000 mg EPA', d3:'2,000 IU (50 µg)', ag:'300 mg', cr:'5 g', glam:'5 g', gl:'5 g', cq:'100 mg' },
     log: {}
   };
   var SUPPS = [
     { id:'d3', name:'Vitamin D3', cue:'meal' },
     { id:'o3', name:'Omega-3', cue:'meal' },
+    { id:'cq', name:'CoQ10', cue:'meal' },
     { id:'cr', name:'Creatine monohydrate', cue:'meal' },
     { id:'glam', name:'L-glutamine', cue:'meal', optional:true, note:'or take it all as one dose before bed' },
     { id:'ag', name:'Alpha-GPC', cue:'focus', situational:true },

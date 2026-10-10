@@ -1,0 +1,1329 @@
+---
+layout: null
+title: "Restless legs - selfdriven Health"
+permalink: /restless-legs
+---
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Restless legs - selfdriven Health</title>
+<meta name="description" content="Restless legs syndrome or a trapped nerve in the foot? How to tell the patterns apart, which nerve sits where, what the research shows, and what to ask your GP or podiatrist.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='27' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='40' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='53' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* selfdriven.health 4Cs system, dark by design (single look, shared with every guide).
+   Layout: night guide with two threads. Violet (Chill) carries restless legs syndrome, which lives in
+   the brain and shows at night; mint (Constructive) carries the trapped nerve, which lives in the foot.
+   Amber marks what is unproven or worth checking; rose marks red flags. */
+:root{
+  color-scheme:dark;
+  --bg:#09090f;--surface:#111118;--surface2:#18181f;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#f0eeff;--muted:#8f8bad;--muted2:#3d3a55;
+  --soft:rgba(240,238,255,.8);
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --curious-line:rgba(245,200,66,.3);--caring-line:rgba(255,95,126,.3);--constructive-line:rgba(0,229,160,.3);--chill-line:rgba(123,108,255,.34);
+  --neutral-dim:rgba(240,238,255,.07);
+  --ink:#09090f;
+  --pill:999px;
+  --sd-accent:var(--chill-bright);
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:24px}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--chill-bright);outline-offset:2px}
+a{color:inherit}
+
+/* the two threads */
+.t-rls{--c:var(--chill-bright);--c-dim:var(--chill-dim);--c-line:var(--chill-line)}
+.t-nrv{--c:var(--constructive);--c-dim:var(--constructive-dim);--c-line:var(--constructive-line)}
+.t-chk{--c:var(--curious);--c-dim:var(--curious-dim);--c-line:var(--curious-line)}
+.t-red{--c:var(--caring);--c-dim:var(--caring-dim);--c-line:var(--caring-line)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:136px 76px}
+.gblob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.16;z-index:0}
+.gb1{width:540px;height:540px;background:var(--chill);top:-180px;left:-170px;animation:gb 19s ease-in-out infinite}
+.gb2{width:440px;height:440px;background:var(--constructive);top:60px;right:-150px;animation:gb 23s ease-in-out infinite reverse}
+.gb3{width:300px;height:300px;background:var(--curious);bottom:-110px;left:38%;animation:gb 21s ease-in-out infinite 4s}
+@keyframes gb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(34px,-26px) scale(1.08)}70%{transform:translate(-22px,30px) scale(.93)}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 74% at 50% 50%,rgba(9,9,15,.86),rgba(9,9,15,.55) 46%,rgba(9,9,15,.18) 78%,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:56px;align-items:center}
+.hero-copy{min-width:0}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(9,9,15,.55);border:1px solid rgba(255,255,255,.22);border-radius:var(--pill);padding:8px 18px;font-size:12px;font-weight:500;color:rgba(240,238,255,.7);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--chill-bright);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(40px,6.2vw,74px);line-height:.98;letter-spacing:-.045em;margin:24px 0 20px}
+.grad{background:linear-gradient(90deg,var(--chill-bright),var(--constructive));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:560px;font-size:clamp(17px,2vw,19.5px);line-height:1.55;color:rgba(240,238,255,.9)}
+.byline{margin-top:18px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.byline b{color:var(--soft);font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+
+/* hero card: three ways the two connect */
+.ways{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border2);border-radius:22px;padding:22px 24px 10px;box-shadow:0 30px 70px rgba(0,0,0,.55);min-width:0}
+.ways-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px}
+.ways-title{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.035em}
+.ways-count{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.way-row{display:grid;grid-template-columns:58px minmax(0,1fr);gap:2px 16px;padding:16px 0;border-top:1px solid var(--border)}
+.way-row .glyph{grid-row:span 3;width:58px;height:36px;margin-top:2px}
+.way-row h3{font-size:18px}
+.way-row p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.way-row .chip{justify-self:start;margin-top:8px}
+.glyph .g-r{fill:var(--chill-dim);stroke:var(--chill-bright);stroke-width:1.5}
+.glyph .g-r-ghost{fill:none;stroke:var(--chill-bright);stroke-width:1.5;stroke-dasharray:3 3;opacity:.8}
+.glyph .g-n{fill:var(--constructive-dim);stroke:var(--constructive);stroke-width:1.5}
+.glyph .g-a{fill:none;stroke:var(--curious);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* pills + chips + buttons */
+.mode-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--pill);font-family:var(--display);font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.mode-pill:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.mode-pill svg{width:16px;height:16px}
+.mp-c{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.mp-k{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.mp-b{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.mp-l{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.mp-solid{background:var(--chill-bright);color:var(--ink);border-color:var(--chill-bright)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:var(--pill);font-family:var(--display);font-size:12.5px;font-weight:600;border:1px solid transparent;line-height:1.5;white-space:nowrap}
+.c-curious{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.c-caring{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.c-constructive{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.c-chill{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.c-neutral{background:var(--neutral-dim);color:var(--soft);border-color:var(--border2)}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--sans);font-size:13.5px;font-weight:600;transition:border-color .2s,transform .2s;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px}
+.btn.go{background:var(--chill-bright);border-color:var(--chill-bright);color:var(--ink)}
+.btn.warn{border-color:var(--caring-line);color:var(--caring)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+
+/* sections */
+section.block{padding-block:84px 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:500;color:var(--chill-bright)}
+.eyebrow.e-nrv b{color:var(--constructive)}
+.eyebrow.e-chk b{color:var(--curious)}
+.eyebrow.e-red b{color:var(--caring)}
+h2{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(31px,4.8vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 14px;max-width:880px}
+.lede{max-width:700px;font-size:17px;color:var(--soft)}
+h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+.note{margin-top:16px;font-size:14px;color:var(--muted);max-width:760px}
+.note b{color:var(--text);font-weight:600}
+.ref{font-family:var(--mono);font-size:.72em;font-weight:500;color:var(--muted);text-decoration:none;vertical-align:.32em;margin-left:1px;white-space:nowrap}
+.ref:hover{color:var(--chill-bright)}
+
+/* two problems */
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.prob{background:var(--surface);border:1px solid var(--c-line);border-radius:22px;padding:24px 24px 18px;min-width:0;position:relative;overflow:hidden}
+.prob::before{content:'';position:absolute;inset:0 0 auto 0;height:90px;background:linear-gradient(180deg,var(--c-dim),transparent);pointer-events:none}
+.prob-top{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.prob-top .chip,.tchips .chip{white-space:normal;text-align:left}
+.prob h3{font-size:clamp(22px,2.6vw,27px)}
+.prob dl{position:relative;margin-top:16px;display:grid}
+.prob dl div{display:grid;grid-template-columns:118px minmax(0,1fr);gap:12px;padding:11px 0;border-top:1px solid var(--border)}
+.prob dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);padding-top:3px}
+.prob dd{font-size:14.5px;color:var(--soft);line-height:1.5;min-width:0}
+.overlap{margin-top:14px;display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:14px 28px;align-items:center;padding:20px 24px;border-radius:20px;border:1px dashed var(--border2)}
+.ov-num{font-family:var(--display);font-weight:800;font-size:clamp(34px,4vw,44px);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.ov-num small{display:block;margin-top:6px;font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:0;color:var(--muted);max-width:190px;line-height:1.35}
+.ov-num.n1{color:var(--constructive)}.ov-num.n2{color:var(--chill-bright)}
+.ov-txt{font-size:14px;color:var(--soft);max-width:420px}
+
+/* pattern sorter */
+.sorter{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.qcol{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;min-width:0}
+.qcol-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.qcol h3{font-size:21px}
+.qcol .tally{font-family:var(--mono);font-size:12px;color:var(--c);font-variant-numeric:tabular-nums;white-space:nowrap}
+.qcol .sub{font-size:13.5px;color:var(--muted);margin-top:4px}
+.qlist{display:grid;gap:8px;margin-top:14px}
+.q{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:var(--surface2);font-size:15px;line-height:1.45;color:var(--soft);transition:border-color .2s,background .2s,color .2s}
+.q:hover{border-color:var(--border2);color:var(--text)}
+.q .box{width:22px;height:22px;border-radius:7px;border:1.5px solid var(--border2);flex:none;display:grid;place-items:center;margin-top:-1px;transition:background .2s,border-color .2s}
+.q .box svg{width:14px;height:14px;color:var(--ink);opacity:0}
+.q[aria-pressed="true"]{border-color:var(--c-line);background:var(--c-dim);color:var(--text)}
+.q[aria-pressed="true"] .box{background:var(--c);border-color:var(--c)}
+.q[aria-pressed="true"] .box svg{opacity:1}
+.verdict{margin-top:14px;background:var(--surface);border:1px solid var(--border2);border-radius:22px;padding:24px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px;align-items:start}
+.meters{display:grid;gap:16px}
+.meter .lab{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--soft)}
+.meter .lab b{font-family:var(--mono);font-weight:500;color:var(--c);font-variant-numeric:tabular-nums}
+.pips{display:flex;gap:6px;margin-top:8px}
+.pips i{flex:1;height:10px;border-radius:5px;background:var(--neutral-dim);border:1px solid var(--border);transition:background .25s,border-color .25s}
+.pips i.on{background:var(--c);border-color:var(--c)}
+.reset{margin-top:4px;justify-self:start}
+.outcomes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.oc{padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:var(--surface2);min-width:0;transition:border-color .25s,background .25s,opacity .25s}
+.oc h4{font-family:var(--display);font-weight:700;font-size:15.5px;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.oc h4 i{width:9px;height:9px;border-radius:50%;background:var(--c);flex:none}
+.oc p{font-size:13px;color:var(--muted);margin-top:2px;line-height:1.45}
+.outcomes.has-pick .oc{opacity:.45}
+.outcomes.has-pick .oc.pick{opacity:1;border-color:var(--c-line);background:var(--c-dim)}
+.oc-mixed{--c:var(--chill-bright);--c-dim:var(--chill-dim);--c-line:var(--chill-line)}
+.oc-mixed h4 i{background:linear-gradient(90deg,var(--chill-bright) 50%,var(--constructive) 50%)}
+.next{margin-top:12px;padding:16px 18px;border-radius:16px;border:1px dashed var(--border2);font-size:15px;color:var(--soft)}
+.next b{color:var(--text);font-weight:600}
+.next .k{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+
+/* foot map */
+.zbtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.zb{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface);font-family:var(--display);font-size:13.5px;font-weight:600;color:var(--soft);transition:border-color .2s,background .2s,color .2s}
+.zb small{font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.zb:hover{color:var(--text);border-color:rgba(255,255,255,.3)}
+.zb[aria-pressed="true"]{background:var(--constructive-dim);border-color:var(--constructive-line);color:var(--text)}
+.zb[aria-pressed="true"] small{color:var(--constructive)}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:16px;margin-top:14px;align-items:start}
+.mapfig{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:16px 16px 14px;min-width:0}
+.mapfig svg{display:block;width:100%;height:auto;max-width:600px;margin:0 auto}
+.mapfig figcaption{font-size:12.5px;color:var(--muted);text-align:center;margin-top:6px}
+.f-out{fill:var(--surface2);stroke:var(--border2);stroke-width:1.5}
+.zone{fill:var(--constructive);fill-opacity:.06;stroke:var(--surface);stroke-width:2;cursor:pointer;transition:fill-opacity .25s}
+.zone:hover{fill-opacity:.2}
+.zone.on{fill-opacity:.58}
+.mk{fill:var(--bg);stroke:var(--muted);stroke-width:2;transition:stroke .25s}
+.mk.on{stroke:var(--constructive)}
+.mk-ring{fill:none;stroke:var(--constructive);stroke-width:2;opacity:0;pointer-events:none}
+.mk-ring.on{animation:ring 1.8s ease-out infinite}
+@keyframes ring{0%{opacity:.8;r:8}100%{opacity:0;r:22}}
+.f-lab{fill:var(--muted);font-family:var(--mono);font-size:15px;letter-spacing:.12em}
+.f-mlab{fill:var(--soft);font-family:var(--sans);font-size:15px}
+.zd{background:var(--surface);border:1px solid var(--constructive-line);border-radius:24px;padding:26px;min-width:0;position:sticky;top:84px}
+.zd-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.zd h3{font-size:clamp(23px,2.7vw,29px)}
+.zd dl{margin-top:16px;display:grid}
+.zd dl div{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;padding:11px 0;border-top:1px solid var(--border)}
+.zd dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--constructive);padding-top:3px}
+.zd dd{font-size:14.5px;color:var(--soft);line-height:1.5;min-width:0}
+.zd .zn{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--chill-dim);border:1px solid var(--chill-line);font-size:13.5px;color:var(--soft)}
+.zd .zsrc{margin-top:14px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.zd .zsrc a{color:var(--soft);text-decoration:none}
+.zd .zsrc a:hover{color:var(--constructive)}
+.knee{display:flex;align-items:flex-start;gap:12px;margin-top:14px;padding:14px 18px;border-radius:16px;border:1px dashed var(--border2);font-size:14px;color:var(--soft);max-width:860px}
+.knee svg{width:18px;height:18px;flex:none;color:var(--chill-bright);margin-top:2px}
+
+/* evidence ladder */
+.ladder{display:grid;gap:8px;margin-top:30px}
+.lrow{display:grid;grid-template-columns:118px minmax(0,1fr);gap:6px 18px;align-items:start;padding:16px 20px;border-radius:18px;border:1px solid var(--border);background:var(--surface)}
+.lrow .chip{justify-self:start;margin-top:2px}
+.lrow h3{font-size:17.5px}
+.lrow p{grid-column:2;font-size:14px;color:var(--muted);line-height:1.5}
+.grade-solid{--c:var(--constructive)}
+.grade-mod{--c:var(--chill-bright)}
+.grade-early{--c:var(--curious)}
+.grade-no{--c:var(--caring)}
+.lrow{border-left:3px solid var(--c)}
+
+/* study spotlight */
+.spot{margin-top:18px;background:var(--surface);border:1px solid var(--border2);border-radius:24px;padding:28px;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:34px}
+.spot h3{font-size:clamp(22px,2.6vw,27px)}
+.spot .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--curious);margin-bottom:6px}
+.sfacts{margin-top:14px;display:grid}
+.sfacts div{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--border)}
+.sfacts dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.sfacts dd{font-size:14px;color:var(--soft);line-height:1.5;min-width:0;font-variant-numeric:tabular-nums}
+.sfacts dd b{color:var(--text);font-weight:600}
+.chart-k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.irls{margin-top:12px;padding-top:58px;position:relative}
+.bands{display:grid;grid-template-columns:10.5fr 10fr 10fr 9.5fr;height:38px;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+.bands span{display:flex;align-items:center;justify-content:flex-start;padding-left:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);border-left:1px solid var(--bg);white-space:nowrap;overflow:hidden}
+.bands span:first-child{border-left:0}
+.bands em{font-style:normal}.bands i{font-style:normal;display:none}
+.b1{background:rgba(240,238,255,.04)}.b2{background:rgba(245,200,66,.09)}.b3{background:rgba(255,95,126,.11)}.b4{background:rgba(255,95,126,.2)}
+.mkr{position:absolute;top:0;bottom:24px;width:0;border-left:2px solid var(--c)}
+.mkr::after{content:'';position:absolute;top:52px;left:-7px;width:12px;height:12px;border-radius:50%;background:var(--c);border:2px solid var(--surface)}
+.mkr .ml{position:absolute;top:0;white-space:nowrap;font-size:12.5px;color:var(--soft);line-height:1.3}
+.mkr .ml b{display:block;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.03em;color:var(--c);font-variant-numeric:tabular-nums}
+.mkr.before{--c:var(--caring)}
+.mkr.before .ml{left:8px}
+.mkr.after{--c:var(--constructive)}
+.mkr.after .ml{right:8px;text-align:right}
+.drop{position:absolute;top:38px;height:0;border-top:1.5px dashed var(--muted)}
+.drop span{position:absolute;left:50%;top:-11px;transform:translateX(-50%);background:var(--surface);padding:0 6px;font-family:var(--mono);font-size:11.5px;color:var(--text);white-space:nowrap}
+.ticks{position:relative;height:22px;margin-top:4px;font-family:var(--mono);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ticks span{position:absolute;top:0;transform:translateX(-50%)}
+.ticks span:first-child{transform:none}
+.ticks span:last-child{transform:translateX(-100%)}
+.cbars{margin-top:24px;display:grid;gap:10px}
+.cb{display:grid;grid-template-columns:150px minmax(0,1fr) 40px;gap:12px;align-items:center}
+.cb .cl{font-size:13px;color:var(--soft);line-height:1.3}
+.cb .track{position:relative;height:22px;border-radius:6px;background:var(--neutral-dim)}
+.cb .fill{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--c)}
+.cb .mcid{position:absolute;top:-5px;bottom:-5px;left:75%;width:16.667%;border-left:1px dashed var(--curious);border-right:1px dashed var(--curious);background:rgba(245,200,66,.08)}
+.cb .cv{font-family:var(--mono);font-size:13px;color:var(--text);text-align:right;font-variant-numeric:tabular-nums}
+.cb-axis{display:grid;grid-template-columns:150px minmax(0,1fr) 40px;gap:12px}
+.cb-axis .ticks{grid-column:2}
+.cleg{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:4px;font-size:12.5px;color:var(--muted)}
+.cleg i{display:inline-block;width:14px;height:10px;border:1px dashed var(--curious);background:rgba(245,200,66,.08);vertical-align:-1px;margin-right:6px}
+.takeaway{margin-top:16px;font-size:14.5px;color:var(--soft);max-width:860px}
+.takeaway b{color:var(--text);font-weight:600}
+
+/* getting checked */
+.path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px;counter-reset:step}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px 22px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.step .n{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--c);color:var(--c);font-family:var(--mono);font-size:13px}
+.step h3{font-size:18.5px}
+.step p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.step .who{margin-top:auto;padding-top:8px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
+.iron{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:14px;margin-top:14px}
+.icard{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px;min-width:0}
+.icard h3{font-size:21px}
+.icard .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--curious);margin-bottom:6px}
+.itab{margin-top:16px;display:grid;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.itab div{display:grid;grid-template-columns:86px minmax(0,1.1fr) minmax(0,1fr);gap:12px;padding:12px 14px;border-top:1px solid var(--border);font-size:14px;color:var(--soft);align-items:start}
+.itab div:first-child{border-top:0}
+.itab .ih{background:var(--surface2);font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.itab b{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+.itab .who{font-family:var(--display);font-weight:700;color:var(--text);letter-spacing:-.01em}
+.icard ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.icard li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px;font-size:14px;color:var(--soft);line-height:1.5}
+.icard li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--curious);margin-top:8px}
+.icard li b{color:var(--text);font-weight:600}
+.tests{display:grid;gap:0;margin-top:14px}
+.tests div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:12px;padding:10px 0;border-top:1px solid var(--border);font-size:14px}
+.tests dt{color:var(--text);font-weight:600}
+.tests dd{color:var(--muted)}
+
+/* diary */
+.diary{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:14px;margin-top:30px;align-items:start}
+.dform,.dlog{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;min-width:0}
+.dform h3,.dlog h3{font-size:20px}
+.dform .sub,.dlog .sub{font-size:13.5px;color:var(--muted);margin-top:2px}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.fld{display:flex;flex-direction:column;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld>label,.fld>.fl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fld input[type="date"],.fld select,.fld input[type="text"],.fld textarea{width:100%;min-width:0;padding:10px 12px;border-radius:12px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-size:14.5px;color-scheme:dark}
+.fld textarea{resize:vertical;min-height:120px;font-family:var(--mono);font-size:12.5px;line-height:1.55}
+.fld select:focus,.fld input:focus,.fld textarea:focus{outline:2px solid var(--chill-bright);outline-offset:1px}
+.feels{display:flex;flex-wrap:wrap;gap:6px}
+.feel{padding:6px 12px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface2);font-size:13.5px;color:var(--soft);transition:background .2s,border-color .2s,color .2s}
+.feel[aria-pressed="true"]{background:var(--chill-dim);border-color:var(--chill-line);color:var(--text)}
+.factions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px}
+.fmsg{font-size:13px;color:var(--muted)}
+.fmsg.err{color:var(--caring)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
+.stat{padding:12px;border-radius:14px;background:var(--surface2);border:1px solid var(--border);min-width:0}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stat span{display:block;font-size:12px;color:var(--muted);line-height:1.35;margin-top:2px}
+.stat.s-rls b{color:var(--chill-bright)}
+.stat.s-nrv b{color:var(--constructive)}
+.stat.s-area b{font-size:15.5px;white-space:normal;line-height:1.3;padding-block:4px 3px}
+.exnote{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;color:var(--curious)}
+.entries{list-style:none;display:grid;gap:8px;margin-top:12px;max-height:440px;overflow:auto;padding-right:2px}
+.entry{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:4px 14px;padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:var(--surface2)}
+.entry .ed{font-family:var(--mono);font-size:12px;color:var(--soft);line-height:1.35}
+.entry .ed small{display:block;color:var(--muted);font-size:10.5px;letter-spacing:.04em}
+.entry .eb{font-size:14px;color:var(--text);line-height:1.45;min-width:0}
+.entry .em{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:2px}
+.entry .del{align-self:start;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:var(--muted);border:1px solid transparent}
+.entry .del:hover{color:var(--caring);border-color:var(--caring-line)}
+.entry .del svg{width:14px;height:14px}
+.entry.ex{border-style:dashed}
+.entry.ex .tag{display:inline-block;margin-left:6px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--curious)}
+.dexport{margin-top:14px;display:grid;gap:10px}
+.dexport .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.private{font-size:12.5px;color:var(--muted)}
+
+/* what helps */
+.treat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.tcol{background:var(--surface);border:1px solid var(--c-line);border-radius:22px;padding:22px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.tcol h3{font-size:21px}
+.tcol .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.tstep{padding-top:12px;border-top:1px solid var(--border)}
+.tstep .tl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.tstep p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.tstep p b{color:var(--text);font-weight:600}
+.t-both{--c:var(--chill-bright);--c-line:var(--border2)}
+.t-both h3 .bi{display:inline-block;width:12px;height:12px;border-radius:50%;background:linear-gradient(90deg,var(--chill-bright) 50%,var(--constructive) 50%);margin-right:8px;vertical-align:1px}
+.trig{margin-top:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.trig>div{padding:20px 22px;border-radius:20px;border:1px dashed var(--border2);min-width:0}
+.trig h3{font-size:18px;margin-bottom:10px}
+.tchips{display:flex;flex-wrap:wrap;gap:6px}
+.trig p{font-size:13.5px;color:var(--muted);margin-top:10px}
+
+/* children + red flags */
+.kids{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:14px;margin-top:30px;align-items:start}
+.kcard{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px;min-width:0}
+.kcard ul{list-style:none;display:grid;gap:12px}
+.kcard li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:10px;font-size:15px;color:var(--soft);line-height:1.5}
+.kcard li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--chill-bright);margin-top:9px}
+.kcard li b{color:var(--text);font-weight:600}
+.flags{border-radius:22px;border:1px solid var(--caring-line);background:linear-gradient(180deg,var(--caring-dim),transparent 70%);padding:24px;min-width:0}
+.flags h3{font-size:21px;display:flex;align-items:center;gap:10px}
+.flags h3 svg{width:20px;height:20px;color:var(--caring)}
+.ftier{margin-top:16px}
+.ftier .tl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--caring)}
+.ftier .tl.soft{color:var(--curious)}
+.ftier ul{list-style:none;display:grid;gap:6px;margin-top:8px}
+.ftier li{font-size:14.5px;color:var(--soft);padding-left:16px;position:relative;line-height:1.45}
+.ftier li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:2px;background:var(--caring)}
+.ftier .tl.soft+ul li::before{background:var(--curious)}
+.flags .fs{margin-top:14px;font-size:12.5px;color:var(--muted)}
+
+/* questions */
+.ask{margin-top:30px;background:var(--surface);border:1px solid var(--border2);border-radius:24px;padding:26px 28px}
+.ask ol{list-style:none;counter-reset:q;display:grid;gap:0}
+.ask li{counter-increment:q;display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;padding:13px 0;border-top:1px solid var(--border);font-size:16px;color:var(--text);line-height:1.45}
+.ask li:first-child{border-top:0}
+.ask li::before{content:counter(q);font-family:var(--mono);font-size:12px;color:var(--chill-bright);width:28px;height:28px;border-radius:50%;border:1px solid var(--chill-line);display:grid;place-items:center;margin-top:-2px}
+.ask li span{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.ask-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:18px;padding-top:16px;border-top:1px solid var(--border)}
+.ask textarea{width:100%;margin-top:12px;min-height:150px;padding:12px;border-radius:12px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--mono);font-size:12.5px;color-scheme:dark}
+
+/* sources */
+.sources{margin-top:36px;border-top:1px solid var(--border);padding-top:18px}
+.sources summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary svg{width:16px;height:16px;transition:transform .2s;color:var(--muted)}
+.sources[open] summary svg{transform:rotate(90deg)}
+.sources summary span{font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--muted);border:1px solid var(--border2);border-radius:var(--pill);padding:1px 9px}
+.sources ol{margin:16px 0 0;padding-left:26px;display:grid;gap:8px;font-size:13.5px;color:var(--muted);max-width:900px}
+.sources li{padding-left:4px;scroll-margin-top:90px}
+.sources li:target{color:var(--soft)}
+.sources a{color:var(--soft);text-decoration-color:var(--border2);text-underline-offset:3px;overflow-wrap:anywhere}
+.sources a:hover{color:var(--chill-bright)}
+
+/* closing */
+.closing{padding-block:96px 12px;text-align:center;overflow:hidden}
+.closing h2{margin:10px auto 14px}
+.closing .lede{margin:0 auto}
+.jump-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.companion-row{margin-top:26px;max-width:100%}
+.companion{font-size:14.5px;line-height:1.7;color:var(--soft);text-decoration:underline;text-decoration-color:var(--border2);text-underline-offset:5px;text-decoration-thickness:1px}
+.companion:hover{color:var(--text);text-decoration-color:var(--soft)}
+.companion .nw{white-space:nowrap}
+.companion svg{display:inline-block;width:15px;height:15px;vertical-align:-2px;margin-left:6px}
+
+@media (prefers-reduced-motion:reduce){
+  .gblob,.hero-pill .dot,.mk-ring.on{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .ways{max-width:560px}
+  .mapgrid{grid-template-columns:1fr}
+  .zd{position:static}
+  .spot{grid-template-columns:1fr;gap:26px}
+  .treat{grid-template-columns:1fr}
+  .path{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .pair,.sorter,.iron,.diary,.kids,.trig{grid-template-columns:1fr}
+  .verdict{grid-template-columns:1fr}
+  .overlap{grid-template-columns:1fr 1fr}
+  .ov-txt{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .wrap{padding-inline:16px}
+  .hero{padding-block:116px 60px}
+  section.block{padding-top:64px}
+  .gblob{opacity:.14}
+  .ways{padding:18px 18px 6px}
+  .prob,.qcol,.verdict,.zd,.icard,.dform,.dlog,.tcol,.kcard,.flags{padding:18px}
+  .spot{padding:20px}
+  .ask{padding:18px}
+  .path{grid-template-columns:1fr}
+  .outcomes{grid-template-columns:1fr}
+  .prob dl div,.zd dl div,.sfacts div{grid-template-columns:1fr;gap:2px}
+  .lrow{grid-template-columns:1fr;padding:14px 16px}
+  .lrow p{grid-column:1}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fgrid{grid-template-columns:1fr}
+  .cb,.cb-axis{grid-template-columns:96px minmax(0,1fr) 36px;gap:8px}
+  .cb .cl{font-size:12px}
+  .itab div{grid-template-columns:1fr;gap:2px}
+  .itab .ih{display:none}
+  .tests div{grid-template-columns:1fr;gap:0}
+  .bands span{font-size:9.5px;letter-spacing:0;padding-left:5px}
+  .bands em{display:none}.bands i{display:inline}
+  .mkr .ml{font-size:11.5px}
+  .mkr .ml b{font-size:17px}
+}
+
+/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:var(--ink);font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:640px){.sd-nav-in{padding-inline:16px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+body>main,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,summary,select,[role="button"],[role="tab"],.zone{cursor:none}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="ic-foot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></symbol>
+  <symbol id="ic-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+  <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="ic-knee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+</svg>
+
+<div id="cur" aria-hidden="true"></div>
+
+<header class="sd-nav sd-fixed" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+    <span class="sd-crumb">/ Restless legs</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a href="#two">Two problems</a><a href="#pattern">Pattern</a><a href="#map">Foot map</a><a href="#evidence">Evidence</a><a href="#checked">Getting checked</a><a href="#ask">Questions</a></nav>
+    <a class="sd-cta" href="#diary">Start the diary</a>
+  </div>
+</header>
+
+<main>
+<header class="hero" id="top">
+  <div class="gblob gb1"></div><div class="gblob gb2"></div><div class="gblob gb3"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="hero-pill"><span class="dot"></span>Guide · Feel + Move</span>
+        <h1>Restless legs, or a <span class="grad">trapped nerve</span>?</h1>
+        <p class="sub">Both can make your legs feel wrong at night and push you to get up and move. They start in different places and need different fixes. This guide helps you spot which pattern fits, so the right things get checked.</p>
+        <p class="byline"><b>Checked against 19 sources</b> · Australian context · October 2026</p>
+        <div class="cta-row">
+          <a class="mode-pill mp-solid" href="#pattern"><svg><use href="#ic-moon"/></svg>Sort the pattern</a>
+          <a class="mode-pill mp-b" href="#map"><svg><use href="#ic-foot"/></svg>Open the foot map</a>
+        </div>
+      </div>
+
+      <aside class="ways" aria-label="How the two can connect">
+        <div class="ways-head"><span class="ways-title">How the two connect</span><span class="ways-count">3 possibilities</span></div>
+        <div class="way-row">
+          <svg class="glyph" viewBox="0 0 58 36" aria-hidden="true"><circle class="g-n" cx="20" cy="18" r="13"/><circle class="g-r-ghost" cx="38" cy="18" r="13"/></svg>
+          <h3>A look-alike</h3>
+          <p>A trapped nerve causes feelings that pass for RLS. If so, the nerve is what needs treating.</p>
+          <span class="chip c-constructive">Well recognised<a class="ref" href="#s1">[1]</a></span>
+        </div>
+        <div class="way-row">
+          <svg class="glyph" viewBox="0 0 58 36" aria-hidden="true"><circle class="g-n" cx="20" cy="18" r="13"/><circle class="g-r" cx="38" cy="18" r="13"/></svg>
+          <h3>Both at once</h3>
+          <p>RLS and nerve damage often turn up in the same person, and each adds its own discomfort.</p>
+          <span class="chip c-chill">Well documented<a class="ref" href="#s3">[3]</a></span>
+        </div>
+        <div class="way-row">
+          <svg class="glyph" viewBox="0 0 58 36" aria-hidden="true"><circle class="g-n" cx="11" cy="18" r="8"/><path class="g-a" d="M22 18h10m-4-4 4 4-4 4"/><circle class="g-r" cx="45" cy="18" r="12"/></svg>
+          <h3>The nerve feeds RLS</h3>
+          <p>An irritated nerve makes RLS worse in someone already prone to it. Plausible, and so far untested.</p>
+          <span class="chip c-curious">Unproven</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section class="block" id="two">
+  <div class="wrap">
+    <div class="eyebrow"><b>Two problems</b> · the same feeling</div>
+    <h2>One can feel just like the other. They start in different places.</h2>
+    <p class="lede">Restless legs syndrome (RLS) comes from the brain and spinal cord, and iron handling in the brain is thought to play a central part. A trapped nerve comes from a single spot where something presses on a nerve in the foot, ankle or leg.<a class="ref" href="#s16">[16]</a><a class="ref" href="#s10">[10]</a></p>
+
+    <div class="pair">
+      <article class="prob t-rls">
+        <div class="prob-top"><h3>Restless legs syndrome</h3><span class="chip c-chill">Also called Willis–Ekbom disease</span></div>
+        <dl>
+          <div><dt>Starts in</dt><dd>The brain and spinal cord. Iron and dopamine signalling are both involved.<a class="ref" href="#s16">[16]</a></dd></div>
+          <div><dt>Tell-tale sign</dt><dd>Builds when you sit or lie still, eases while you move, and is worse in the evening or at night.<a class="ref" href="#s1">[1]</a></dd></div>
+          <div><dt>Linked to</dt><dd>Low iron, pregnancy, kidney failure, some medicines, and a family history.<a class="ref" href="#s16">[16]</a></dd></div>
+          <div><dt>How common</dt><dd>About 3 in 100 adults have moderate to severe symptoms at least twice a week. About 2 in 100 children and teens have RLS.<a class="ref" href="#s14">[14]</a><a class="ref" href="#s15">[15]</a></dd></div>
+        </dl>
+      </article>
+      <article class="prob t-nrv">
+        <div class="prob-top"><h3>Trapped nerve</h3><span class="chip c-constructive">Entrapment neuropathy</span></div>
+        <dl>
+          <div><dt>Starts in</dt><dd>One spot, where a nerve is squeezed by a tight tunnel, swelling, bone, or scar tissue.<a class="ref" href="#s10">[10]</a></dd></div>
+          <div><dt>Tell-tale sign</dt><dd>Sits in one patch of skin, may bring numbness, and can be set off by pressure, shoes or a position.</dd></div>
+          <div><dt>Linked to</dt><dd>Injuries, surgery, repeated ankle sprains, swelling and tight footwear.<a class="ref" href="#s10">[10]</a></dd></div>
+          <div><dt>Scar tissue</dt><dd>A scar can bind a nerve so it can't glide as you move. Not every scar does this, and deep scarring may not show on the skin.</dd></div>
+        </dl>
+      </article>
+    </div>
+
+    <div class="overlap">
+      <div class="ov-num n1">21.5%<small>of people with nerve damage also have RLS</small></div>
+      <div class="ov-num n2">41.8%<small>of people with RLS also have nerve damage</small></div>
+      <p class="ov-txt">From a 2021 review that pooled many studies. These figures cover nerve damage in general, such as from diabetes, rather than trapped nerves alone. Studies used different criteria, so treat them as a rough guide.<a class="ref" href="#s3">[3]</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pattern">
+  <div class="wrap">
+    <div class="eyebrow"><b>Pattern sorter</b> · ten questions</div>
+    <h2>Which pattern fits your nights?</h2>
+    <p class="lede">Doctors diagnose RLS on four core features plus a fifth: nothing else explains it, such as cramps, sitting awkwardly or arthritis. A trapped nerve tends to leave different clues. Tick what is true most of the time. Your answers stay on this page.<a class="ref" href="#s1">[1]</a></p>
+
+    <div class="sorter">
+      <div class="qcol t-rls">
+        <div class="qcol-top"><h3>RLS features</h3><span class="tally" id="tallyR">0 of 4</span></div>
+        <p class="sub">The four core criteria, in plain words</p>
+        <div class="qlist">
+          <button class="q" type="button" data-g="r" id="qr1" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>An urge to move my legs, usually with an unpleasant feeling in them</span></button>
+          <button class="q" type="button" data-g="r" id="qr2" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>It starts or gets worse when I sit or lie still</span></button>
+          <button class="q" type="button" data-g="r" id="qr3" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>Moving eases it, at least for as long as I keep moving</span></button>
+          <button class="q" type="button" data-g="r" id="qr4" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>It is worse in the evening or at night, or only happens then</span></button>
+        </div>
+      </div>
+      <div class="qcol t-nrv">
+        <div class="qcol-top"><h3>Nerve clues</h3><span class="tally" id="tallyN">0 of 6</span></div>
+        <p class="sub">Signs that point to one nerve in one place</p>
+        <div class="qlist">
+          <button class="q" type="button" data-g="n" id="qn1" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>The feeling sits in one patch, such as the sole, inner ankle, outer edge, top of the foot or between two toes</span></button>
+          <button class="q" type="button" data-g="n" id="qn2" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>That patch also goes numb, burns, or gives electric zaps</span></button>
+          <button class="q" type="button" data-g="n" id="qn3" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>Pressing or tapping near a scar or the inner ankle sets it off</span></button>
+          <button class="q" type="button" data-g="n" id="qn4" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>Certain shoes, positions or activities bring it on</span></button>
+          <button class="q" type="button" data-g="n" id="qn5" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>I have had an injury, fracture, surgery or a scar near that area</span></button>
+          <button class="q" type="button" data-g="n" id="qn6" aria-pressed="false"><span class="box"><svg><use href="#ic-check"/></svg></span><span>It also happens in the day while I'm walking or standing</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="verdict" aria-live="polite">
+      <div class="meters">
+        <div class="meter t-rls"><div class="lab">RLS features <b id="mR">0 / 4</b></div><div class="pips" id="pipsR"><i></i><i></i><i></i><i></i></div></div>
+        <div class="meter t-nrv"><div class="lab">Nerve clues <b id="mN">0 / 6</b></div><div class="pips" id="pipsN"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <button class="btn reset" type="button" id="sortReset">Clear answers</button>
+      </div>
+      <div>
+        <div class="outcomes" id="outcomes">
+          <div class="oc t-rls" data-o="rls"><h4><i></i>Fits the RLS pattern</h4><p>All four features, few nerve clues</p></div>
+          <div class="oc oc-mixed" data-o="both"><h4><i></i>Could be both</h4><p>All four features, plus nerve clues</p></div>
+          <div class="oc t-nrv" data-o="nerve"><h4><i></i>Leans to a nerve</h4><p>Two or more nerve clues stand out</p></div>
+          <div class="oc t-chk" data-o="unclear"><h4><i></i>No clear pattern yet</h4><p>Not enough of either</p></div>
+        </div>
+        <p class="next" id="nextStep"><span class="k">What to do next</span>Tick what applies and your next step shows here.</p>
+      </div>
+    </div>
+    <p class="note"><b>This sorts patterns. It can't diagnose.</b> Only a clinician can confirm RLS, because the fifth criterion means ruling out other causes first. Many people have a mix of both.</p>
+  </div>
+</section>
+
+<section class="block" id="map">
+  <div class="wrap">
+    <div class="eyebrow e-nrv"><b>Foot map</b> · which nerve sits where</div>
+    <h2>Where you feel it is a strong clue.</h2>
+    <p class="lede">Each nerve in the foot covers its own patch of skin. Pick an area, or tap the drawing, to see what that nerve does, what can trap it and how it gets checked.<a class="ref" href="#s10">[10]</a></p>
+
+    <div class="zbtns" id="zbtns" role="group" aria-label="Nerves of the foot"></div>
+
+    <div class="mapgrid">
+      <figure class="mapfig">
+        <svg viewBox="0 0 600 470" role="img" aria-label="Schematic of the left foot from below and from above, with the area for the selected nerve highlighted">
+          <defs>
+            <clipPath id="footClip">
+              <path d="M118 412C84 412 70 388 72 352C74 304 62 266 52 222C44 186 36 150 40 120C43 98 60 88 80 88C118 84 168 92 198 108C214 126 210 168 200 210C188 260 178 300 172 340C168 386 150 412 118 412Z"/>
+              <ellipse cx="60" cy="58" rx="22" ry="31"/><ellipse cx="103" cy="62" rx="13" ry="20"/><ellipse cx="131" cy="66" rx="12" ry="18"/><ellipse cx="156" cy="76" rx="11" ry="16"/><ellipse cx="180" cy="90" rx="10" ry="13"/>
+            </clipPath>
+          </defs>
+          <!-- sole, seen from below: big toe on the left -->
+          <g transform="translate(70 10)">
+            <g class="f-out"><path d="M118 412C84 412 70 388 72 352C74 304 62 266 52 222C44 186 36 150 40 120C43 98 60 88 80 88C118 84 168 92 198 108C214 126 210 168 200 210C188 260 178 300 172 340C168 386 150 412 118 412Z"/><ellipse cx="60" cy="58" rx="22" ry="31"/><ellipse cx="103" cy="62" rx="13" ry="20"/><ellipse cx="131" cy="66" rx="12" ry="18"/><ellipse cx="156" cy="76" rx="11" ry="16"/><ellipse cx="180" cy="90" rx="10" ry="13"/></g>
+            <g clip-path="url(#footClip)">
+              <path class="zone" data-zones="tibial medial" data-pick="medial" d="M0 0H140L130 300H0Z"/>
+              <path class="zone" data-zones="tibial lateral" data-pick="lateral" d="M140 0H260V300H130Z"/>
+              <path class="zone" data-zones="tibial" data-pick="tibial" d="M0 300H260V440H0Z"/>
+              <path class="zone" data-zones="sural" data-pick="sural" d="M176 70L260 70L260 440L128 440L140 404L156 342L168 282L184 212L188 122Z"/>
+              <ellipse class="zone" data-zones="morton" data-pick="morton" cx="144" cy="100" rx="13" ry="30"/>
+            </g>
+            <circle class="mk-ring" data-zones="tibial" cx="68" cy="330" r="8"/>
+            <circle class="mk zone-mk" data-zones="tibial" data-pick="tibial" cx="68" cy="330" r="7"/>
+          </g>
+          <!-- top, seen from above: the same left foot, mirrored -->
+          <g transform="translate(540 10) scale(-1 1)">
+            <g class="f-out"><path d="M118 412C84 412 70 388 72 352C74 304 62 266 52 222C44 186 36 150 40 120C43 98 60 88 80 88C118 84 168 92 198 108C214 126 210 168 200 210C188 260 178 300 172 340C168 386 150 412 118 412Z"/><ellipse cx="60" cy="58" rx="22" ry="31"/><ellipse cx="103" cy="62" rx="13" ry="20"/><ellipse cx="131" cy="66" rx="12" ry="18"/><ellipse cx="156" cy="76" rx="11" ry="16"/><ellipse cx="180" cy="90" rx="10" ry="13"/></g>
+            <g clip-path="url(#footClip)">
+              <path class="zone" data-zones="superficial" data-pick="superficial" d="M0 0H260V310H0Z"/>
+              <path class="zone" data-zones="sural" data-pick="sural" d="M176 70L260 70L260 440L128 440L140 404L156 342L168 282L184 212L188 122Z"/>
+              <ellipse class="zone" data-zones="deep" data-pick="deep" cx="82" cy="92" rx="15" ry="26"/>
+            </g>
+            <circle class="mk-ring" data-zones="sural" cx="178" cy="352" r="8"/>
+            <circle class="mk zone-mk" data-zones="sural" data-pick="sural" cx="178" cy="352" r="7"/>
+          </g>
+          <text class="f-lab" x="196" y="458" text-anchor="middle">SOLE · BELOW</text>
+          <text class="f-lab" x="414" y="458" text-anchor="middle">TOP · ABOVE</text>
+        </svg>
+        <figcaption>Left foot, schematic and not to scale. The big toe marks the inner side. Dots mark the inner and outer ankle.</figcaption>
+      </figure>
+
+      <article class="zd" id="zd" aria-live="polite">
+        <div class="zd-top"><h3 id="zdName">Tibial nerve</h3><span class="chip c-constructive" id="zdShort">Inner ankle</span></div>
+        <dl>
+          <div><dt>Where</dt><dd id="zdWhere"></dd></div>
+          <div><dt>Feels like</dt><dd id="zdFeel"></dd></div>
+          <div><dt>Can be trapped by</dt><dd id="zdTrap"></dd></div>
+          <div><dt>How it's checked</dt><dd id="zdCheck"></dd></div>
+        </dl>
+        <p class="zn" id="zdNote" hidden></p>
+        <p class="zsrc" id="zdSrc"></p>
+      </article>
+    </div>
+
+    <div class="knee"><svg><use href="#ic-knee"/></svg><span><b>Outside the foot.</b> The common fibular (peroneal) nerve wraps around the bony bump on the outside of the knee, then splits into the deep and superficial branches. It was released in every patient in the 2026 surgery study below, so that research is about the lower leg as a whole, not foot scars in particular.<a class="ref" href="#s5">[5]</a></span></div>
+  </div>
+</section>
+
+<section class="block" id="evidence">
+  <div class="wrap">
+    <div class="eyebrow e-chk"><b>Evidence</b> · how sure we are</div>
+    <h2>What's solid, and what's still a hunch.</h2>
+    <p class="lede">The idea that a trapped nerve can drive restless legs has some early support. Most of what helps day to day rests on firmer ground.</p>
+
+    <div class="ladder">
+      <div class="lrow grade-solid"><span class="chip c-constructive">Solid</span><h3>RLS is diagnosed on five criteria, and look-alikes must be ruled out.</h3><p>The fifth criterion was added in 2014 so that cramps, positional discomfort, arthritis and similar problems stop being labelled RLS.<a class="ref" href="#s1">[1]</a></p></div>
+      <div class="lrow grade-solid"><span class="chip c-constructive">Solid</span><h3>Iron matters for RLS.</h3><p>The 2025 US sleep guideline says to check ferritin and transferrin saturation in people with RLS that needs treatment, and to treat low iron.<a class="ref" href="#s9">[9]</a></p></div>
+      <div class="lrow grade-solid"><span class="chip c-constructive">Solid</span><h3>Nerves in the foot and ankle can be trapped.</h3><p>Injury, scarring, fibrosis, swelling and tight tunnels are recognised causes. Care starts with footwear, orthotics and physio, with surgery kept for when those fail.<a class="ref" href="#s10">[10]</a><a class="ref" href="#s11">[11]</a></p></div>
+      <div class="lrow grade-mod"><span class="chip c-chill">Moderate</span><h3>RLS and nerve damage often occur together.</h3><p>A 2021 review found RLS was more common in people with nerve damage than in people without, and the reverse. It shows a link, and can't show that one causes the other.<a class="ref" href="#s3">[3]</a></p></div>
+      <div class="lrow grade-early"><span class="chip c-curious">Early</span><h3>Releasing nerves in the lower leg lowered RLS scores in 18 adults.</h3><p>One clinic, no comparison group, and the surgeon who does the operation led the study. Details below.<a class="ref" href="#s5">[5]</a></p></div>
+      <div class="lrow grade-early"><span class="chip c-curious">Early</span><h3>An earlier look-back at 42 patients reported less burning, tingling and crawling after the same surgery.</h3><p>It reviewed past records, used the clinic's own 0–10 symptom scales, and did not use the standard RLS rating scale.<a class="ref" href="#s4">[4]</a></p></div>
+      <div class="lrow grade-early"><span class="chip c-curious">Unclear</span><h3>Magnesium for restless legs.</h3><p>A 2019 review found one small trial, which showed no benefit, plus case reports. The 2025 guideline makes no recommendation either way.<a class="ref" href="#s13">[13]</a><a class="ref" href="#s9">[9]</a></p></div>
+      <div class="lrow grade-no"><span class="chip c-caring">Unproven</span><h3>A foot scar can cause true RLS.</h3><p>No study has tested this directly. The research so far looks at nerve damage in general or at lower-leg surgery, not at foot scars.</p></div>
+    </div>
+
+    <div class="spot">
+      <div>
+        <div class="k">Up close</div>
+        <h3>The 2026 surgery study</h3>
+        <dl class="sfacts">
+          <div><dt>People</dt><dd><b>30 enrolled, 18 analysed.</b> Five didn't have surgery and seven were lost to follow-up. Average age 59; 10 men, 8 women.</dd></div>
+          <div><dt>Diagnosis</dt><dd>Everyone had nerve damage in the legs. RLS was confirmed by the operating surgeon using the standard criteria.</dd></div>
+          <div><dt>Surgery</dt><dd>Common fibular at the knee (all), superficial fibular (95%), soleal sling (71%), deep fibular (29%), tarsal tunnel (14%).</dd></div>
+          <div><dt>Follow-up</dt><dd>About 18 weeks after surgery.</dd></div>
+          <div><dt>Sleep</dt><dd>Overall sleep quality scores improved. Sleep satisfaction didn't improve by more than chance could explain.</dd></div>
+          <div><dt>Who ran it</dt><dd>The lead author owns the clinic and performs the surgery. The same team wrote the 2017 look-back.<a class="ref" href="#s5">[5]</a><a class="ref" href="#s4">[4]</a></dd></div>
+        </dl>
+      </div>
+      <div>
+        <div class="chart-k">RLS rating scale · average score, 0 to 40</div>
+        <div class="irls" role="img" aria-label="Average RLS rating scale score fell from 28.8, in the severe band, to 17.6, in the moderate band">
+          <div class="mkr before" style="left:72%"><span class="ml"><b>28.8</b>before</span></div>
+          <div class="mkr after" style="left:44%"><span class="ml"><b>17.6</b>after</span></div>
+          <div class="drop" style="left:44%;width:28%"><span>−11.2</span></div>
+          <div class="bands"><span class="b1"><em>Mild</em><i>Mild</i></span><span class="b2"><em>Moderate</em><i>Mod</i></span><span class="b3"><em>Severe</em><i>Sev</i></span><span class="b4"><em>V. severe</em><i>V.sev</i></span></div>
+          <div class="ticks"><span style="left:0">0</span><span style="left:25%">10</span><span style="left:50%">20</span><span style="left:75%">30</span><span style="left:100%">40</span></div>
+        </div>
+        <p class="note" style="margin-top:4px">11 of 17 people moved down at least one band.<a class="ref" href="#s5">[5]</a><a class="ref" href="#s6">[6]</a></p>
+
+        <div class="chart-k" style="margin-top:22px">How big is an 11-point drop?</div>
+        <div class="cbars" role="img" aria-label="The surgery group improved by 11.2 points. Placebo groups in RLS drug trials improved by 6.6 points on average. A change of about 9 to 11 points is what patients rated as meaningful.">
+          <div class="cb" style="--c:var(--constructive)"><span class="cl">After surgery, 18 people</span><span class="track"><span class="fill" style="width:93.33%"></span><span class="mcid"></span></span><span class="cv">11.2</span></div>
+          <div class="cb" style="--c:var(--muted)"><span class="cl">Placebo groups in drug trials</span><span class="track"><span class="fill" style="width:55%"></span><span class="mcid"></span></span><span class="cv">6.6</span></div>
+          <div class="cb-axis"><div class="ticks"><span style="left:0">0</span><span style="left:25%">3</span><span style="left:50%">6</span><span style="left:75%">9</span><span style="left:100%">12</span></div></div>
+        </div>
+        <div class="cleg"><span><i></i>About 9–11 points: the smallest change linked to a meaningful improvement in drug trials</span></div>
+        <p class="takeaway"><b>Bigger than placebo on average, and still unproven.</b> Without a comparison group, the drop can't be separated from placebo, natural ups and downs, or the care that comes with surgery. No guideline recommends this surgery for RLS.<a class="ref" href="#s7">[7]</a><a class="ref" href="#s8">[8]</a><a class="ref" href="#s9">[9]</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="checked">
+  <div class="wrap">
+    <div class="eyebrow"><b>Getting checked</b> · in the order it usually goes</div>
+    <h2>Check both. Start with your GP.</h2>
+    <p class="lede">In Australia, a GP visit is the first step for restless legs, and blood tests including iron are routine.<a class="ref" href="#s17">[17]</a><a class="ref" href="#s18">[18]</a> If a podiatrist has raised a nerve problem, look into it alongside the RLS checks, and don't let it replace them.</p>
+
+    <div class="path">
+      <div class="step t-rls"><span class="n">1</span><h3>Your story</h3><p>When it happens, where it starts, whether moving helps, old injuries and scars, family history, and every medicine and supplement you take.</p><span class="who">GP · bring the diary</span></div>
+      <div class="step t-nrv"><span class="n">2</span><h3>Foot and nerve exam</h3><p>Feeling, strength, walking, footwear, and how the scar moves and feels. Tapping over a nerve that sets off tingling along it (Tinel's sign) supports entrapment. It isn't proof.<a class="ref" href="#s10">[10]</a></p><span class="who">GP · podiatrist · physio</span></div>
+      <div class="step t-chk"><span class="n">3</span><h3>Blood tests</h3><p>Iron studies first, then others that fit your situation. See the list below.<a class="ref" href="#s9">[9]</a></p><span class="who">GP</span></div>
+      <div class="step t-nrv"><span class="n">4</span><h3>Imaging, if a cause is suspected</h3><p>Ultrasound shows nerves near the surface, scars and neuromas. MRI suits deeper structures. A finding only counts if it matches your symptoms and exam.<a class="ref" href="#s10">[10]</a></p><span class="who">Ordered by GP or specialist</span></div>
+      <div class="step t-nrv"><span class="n">5</span><h3>Nerve tests, if still unclear</h3><p>Nerve conduction studies and EMG help confirm some entrapments. Evidence on their accuracy for tarsal tunnel syndrome is thin, so a normal result doesn't fully rule it out. They also miss the smallest nerve fibres.<a class="ref" href="#s12">[12]</a></p><span class="who">Neurologist</span></div>
+      <div class="step t-rls"><span class="n">6</span><h3>Treat what's found, then review</h3><p>Give one change a fair trial and track it in the diary. If it doesn't help, go back and question the diagnosis.</p><span class="who">GP · specialist</span></div>
+    </div>
+
+    <div class="iron">
+      <div class="icard">
+        <div class="k">Iron</div>
+        <h3>The RLS thresholds are higher than most lab ranges.</h3>
+        <div class="itab">
+          <div class="ih"><span>Who</span><span>Result</span><span>What may be offered</span></div>
+          <div><span class="who">Adults</span><span>Ferritin <b>75 µg/L or less</b>, or transferrin saturation <b>under 20%</b></span><span>Iron by mouth or by drip</span></div>
+          <div><span class="who">Adults</span><span>Ferritin <b>75–100 µg/L</b></span><span>Iron by drip</span></div>
+          <div><span class="who">Children</span><span>Ferritin <b>under 50 µg/L</b></span><span>Iron by mouth</span></div>
+        </div>
+        <ul>
+          <li><span><b>Test in the morning,</b> after 24 hours without iron supplements.</span></li>
+          <li><span>These cut-offs are expert consensus from the 2025 US sleep guideline, not trial results.<a class="ref" href="#s9">[9]</a></span></li>
+          <li><span><b>Don't take iron without a test.</b> Your GP will decide the type, dose and how long.</span></li>
+        </ul>
+      </div>
+      <div class="icard">
+        <div class="k">Other blood tests</div>
+        <h3>Not everyone needs every test.</h3>
+        <dl class="tests">
+          <div><dt>Ferritin</dt><dd>Stored iron</dd></div>
+          <div><dt>Transferrin saturation</dt><dd>Iron available in the blood</dd></div>
+          <div><dt>Full blood count</dt><dd>Anaemia</dd></div>
+          <div><dt>Vitamin B12</dt><dd>A cause of nerve damage</dd></div>
+          <div><dt>Glucose or HbA1c</dt><dd>Diabetes, a common cause of nerve damage</dd></div>
+          <div><dt>Thyroid function</dt><dd>When symptoms suggest it</dd></div>
+          <div><dt>Kidney function</dt><dd>Kidney failure is linked to RLS</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="diary">
+  <div class="wrap">
+    <div class="eyebrow"><b>Symptom diary</b> · one to two weeks</div>
+    <h2>Two weeks of notes beats a guess.</h2>
+    <p class="lede">Patterns that are hard to describe in a ten-minute appointment show up over several nights. Log each episode, then copy the summary for your GP or podiatrist.</p>
+
+    <div class="diary">
+      <form class="dform" id="dform" novalidate>
+        <h3>Log an episode</h3>
+        <p class="sub">Takes about 20 seconds</p>
+        <div class="fgrid">
+          <div class="fld"><label for="dDate">Date</label><input type="date" id="dDate" required></div>
+          <div class="fld"><label for="dTime">When</label>
+            <select id="dTime"><option>In bed or at night</option><option>Evening</option><option>Daytime</option></select></div>
+          <div class="fld"><label for="dWhere">Where</label>
+            <select id="dWhere"><option>Sole of foot</option><option>Inner ankle</option><option>Inner arch</option><option>Outer edge or outer ankle</option><option>Top of foot</option><option>Between toes</option><option>Heel</option><option>Calf or lower leg</option><option>Whole leg</option><option>Not sure</option></select></div>
+          <div class="fld"><label for="dMoved">Did moving help?</label>
+            <select id="dMoved"><option>Yes, while moving</option><option>A little</option><option>No</option><option>Didn't try</option></select></div>
+          <div class="fld full"><span class="fl" id="feelLab">What it felt like</span>
+            <div class="feels" role="group" aria-labelledby="feelLab" id="feels">
+              <button type="button" class="feel" aria-pressed="false">Urge to move</button>
+              <button type="button" class="feel" aria-pressed="false">Crawling</button>
+              <button type="button" class="feel" aria-pressed="false">Tingling</button>
+              <button type="button" class="feel" aria-pressed="false">Burning</button>
+              <button type="button" class="feel" aria-pressed="false">Numb</button>
+              <button type="button" class="feel" aria-pressed="false">Electric zaps</button>
+              <button type="button" class="feel" aria-pressed="false">Aching</button>
+            </div></div>
+          <div class="fld"><label for="dTrig">What set it off?</label>
+            <select id="dTrig"><option>Sitting or lying still</option><option>Shoes</option><option>Pressing near a scar</option><option>Walking or standing</option><option>Nothing obvious</option></select></div>
+          <div class="fld"><label for="dSleep">Effect on sleep</label>
+            <select id="dSleep"><option>None</option><option>Slow to fall asleep</option><option>Woke me up</option><option>Lost a lot of sleep</option></select></div>
+          <div class="fld full"><label for="dNote">Note (optional)</label><input type="text" id="dNote" maxlength="140" placeholder="e.g. new boots, long drive, coffee after 3pm"></div>
+        </div>
+        <div class="factions"><button class="btn go" type="submit">Add to diary</button><span class="fmsg" id="fmsg" role="status"></span></div>
+      </form>
+
+      <div class="dlog">
+        <h3>Your diary</h3>
+        <p class="sub private">Saved only in this browser on this device. Nothing is sent anywhere.</p>
+        <div class="stats">
+          <div class="stat"><b id="stN">0</b><span>episodes logged</span></div>
+          <div class="stat s-rls"><b id="stNight">0%</b><span>in the evening or at night</span></div>
+          <div class="stat s-rls"><b id="stMove">0%</b><span>eased while moving</span></div>
+          <div class="stat s-nrv s-area"><b id="stWhere">None</b><span>most common area</span></div>
+        </div>
+        <p class="exnote" id="exnote" hidden><svg width="16" height="16"><use href="#ic-alert"/></svg>These are examples. They disappear when you log your first episode.</p>
+        <ul class="entries" id="entries"></ul>
+        <div class="dexport">
+          <div class="row">
+            <button class="btn" type="button" id="dCopy"><svg><use href="#ic-copy"/></svg>Copy summary for GP</button>
+            <button class="btn warn" type="button" id="dClear">Clear diary</button>
+            <span class="fmsg" id="dmsg" role="status"></span>
+          </div>
+          <div class="fld"><textarea id="dOut" aria-label="Diary summary" readonly hidden></textarea></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="helps">
+  <div class="wrap">
+    <div class="eyebrow"><b>What helps</b> · treat what's actually there</div>
+    <h2>The fix depends on the cause.</h2>
+    <p class="lede">Treatments for a trapped nerve and for RLS are mostly different, which is why sorting the pattern first matters.</p>
+
+    <div class="treat">
+      <article class="tcol t-nrv">
+        <div class="k">If a nerve is trapped</div>
+        <h3>Take the pressure off</h3>
+        <div class="tstep"><p class="tl">First</p><p>Footwear changes, orthotics fitted to unload the nerve, physio, and easing off what flares it. A badly placed orthotic can press on the nerve and make things worse.<a class="ref" href="#s10">[10]</a></p></div>
+        <div class="tstep"><p class="tl">Next</p><p>An image-guided injection around the nerve. Relief from the numbing medicine supports the diagnosis without proving it.</p></div>
+        <div class="tstep"><p class="tl">Last</p><p>Surgery to free the nerve, when entrapment has been shown, symptoms are disabling and other care has failed. For tarsal tunnel surgery, <b>about 3 in 4</b> had good or excellent results across mostly low-quality studies. Long-standing symptoms and nerve scarring predicted worse results.<a class="ref" href="#s11">[11]</a></p></div>
+      </article>
+      <article class="tcol t-rls">
+        <div class="k">If it's RLS</div>
+        <h3>Iron, triggers, then medicine</h3>
+        <div class="tstep"><p class="tl">First</p><p>Correct low iron, and cut back the triggers listed below.<a class="ref" href="#s9">[9]</a></p></div>
+        <div class="tstep"><p class="tl">Medicines for adults</p><p>The 2025 guideline's strongest recommendations are the gabapentinoids, such as <b>gabapentin and pregabalin</b>, and iron by drip when iron is low. Older dopamine medicines (pramipexole, ropinirole, rotigotine) are now advised against for standard use, because over time they can make RLS worse.<a class="ref" href="#s9">[9]</a></p></div>
+        <div class="tstep"><p class="tl">Children</p><p>Iron by mouth, when tests show it's needed, is the only treatment with a guideline recommendation.<a class="ref" href="#s9">[9]</a></p></div>
+      </article>
+      <article class="tcol t-both">
+        <div class="k">If it's both</div>
+        <h3><span class="bi"></span>Treat each, one at a time</h3>
+        <div class="tstep"><p class="tl">Plan</p><p>Treat both problems, changing one thing at a time so you can tell what helped.</p></div>
+        <div class="tstep"><p class="tl">Track</p><p>Keep the diary going. A drop in one area, or in night-time episodes, tells you which treatment is working.</p></div>
+        <div class="tstep"><p class="tl">Medicines</p><p>If you take a dopamine medicine for RLS, don't stop it suddenly. Talk to your doctor about any change.</p></div>
+      </article>
+    </div>
+
+    <div class="trig">
+      <div>
+        <h3>Things that can make RLS worse</h3>
+        <div class="tchips"><span class="chip c-chill">Alcohol</span><span class="chip c-chill">Caffeine</span><span class="chip c-chill">Nicotine</span><span class="chip c-chill">Short sleep</span><span class="chip c-chill">Untreated sleep apnoea</span><span class="chip c-chill">Some sedating antihistamines</span><span class="chip c-chill">SSRI and SNRI antidepressants</span><span class="chip c-chill">Dopamine-blocking anti-nausea and antipsychotic medicines</span></div>
+        <p>Don't stop a prescribed medicine on your own. Ask your doctor or pharmacist whether it could be playing a part.<a class="ref" href="#s9">[9]</a><a class="ref" href="#s16">[16]</a></p>
+      </div>
+      <div>
+        <h3>Conditions linked to RLS</h3>
+        <div class="tchips"><span class="chip c-neutral">Iron deficiency</span><span class="chip c-neutral">Pregnancy, especially late</span><span class="chip c-neutral">Kidney failure and dialysis</span><span class="chip c-neutral">Nerve damage</span></div>
+        <p>They are worth checking for, because treating them can ease RLS.<a class="ref" href="#s16">[16]</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="children">
+  <div class="wrap">
+    <div class="eyebrow e-red"><b>Children</b> · and when to get help fast</div>
+    <h2>Children describe it differently.</h2>
+    <p class="lede">The same two patterns apply, but the words, the checks and the treatment change.</p>
+
+    <div class="kids">
+      <div class="kcard">
+        <ul>
+          <li><span><b>Use their words.</b> Ask your child to describe the feeling and write down exactly what they say. The children's criteria are built around the child's own description.<a class="ref" href="#s2">[2]</a></span></li>
+          <li><span><b>It isn't rare.</b> About 2 in 100 children aged 8 to 17 have RLS.<a class="ref" href="#s15">[15]</a></span></li>
+          <li><span><b>A scar alone proves nothing.</b> A past injury or scar doesn't by itself mean a nerve is damaged.</span></li>
+          <li><span><b>Treatment differs from adults.</b> Adult medicine recommendations don't carry over. Iron is the one treatment with a recommendation for children, and only when tests show it's needed.<a class="ref" href="#s9">[9]</a></span></li>
+          <li><span><b>Ask for the right specialist.</b> A paediatric neurologist, or a foot and ankle specialist who sees children, can help when symptoms persist.</span></li>
+        </ul>
+      </div>
+      <div class="flags">
+        <h3><svg><use href="#ic-alert"/></svg>Get help fast</h3>
+        <div class="ftier"><p class="tl">Now · call 000 or go to an emergency department</p>
+          <ul><li>Weakness in a leg that comes on suddenly or worsens over hours to days</li><li>New trouble walking</li><li>Numbness or weakness together with new bladder or bowel problems</li></ul></div>
+        <div class="ftier"><p class="tl soft">Soon · see your GP promptly</p>
+          <ul><li>Weakness that is slowly getting worse</li><li>Numbness or tingling that keeps spreading</li></ul></div>
+        <p class="fs">For anyone, child or adult. Adapted from the UK's NICE guidance for children with suspected neurological conditions.<a class="ref" href="#s19">[19]</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ask">
+  <div class="wrap">
+    <div class="eyebrow"><b>Questions</b> · for your next appointment</div>
+    <h2>Seven questions to take with you.</h2>
+    <p class="lede">They aim the next tests at a specific nerve and a specific cause, rather than scanning everything.</p>
+
+    <div class="ask">
+      <ol id="qlist">
+        <li><div>Which nerve could be involved, and where along it?<span>Ankle, arch, forefoot, top of the foot, or higher up the leg.</span></div></li>
+        <li><div>What makes you think scar tissue is pressing on it?<span>The exam, my injury history, or something on a scan.</span></div></li>
+        <li><div>Would an ultrasound of that area help?<span>It can show a nerve near the surface and the scar beside it.</span></div></li>
+        <li><div>Do my symptoms fit RLS, a nerve problem, or both?<span>And should I see a neurologist or sleep specialist?</span></div></li>
+        <li><div>Can we check my ferritin and transferrin saturation?<span>Ideally a morning test, with no iron supplements the day before.</span></div></li>
+        <li><div>Could any of my medicines be making this worse?<span>Including antihistamines, antidepressants and anti-nausea medicines.</span></div></li>
+        <li><div>What do we try first, and when do we judge whether it's working?<span>So there's a clear point to review.</span></div></li>
+      </ol>
+      <div class="ask-foot">
+        <button class="btn go" type="button" id="qCopy"><svg><use href="#ic-copy"/></svg>Copy the questions</button>
+        <span class="fmsg" id="qmsg" role="status"></span>
+      </div>
+      <textarea id="qOut" aria-label="Questions as text" readonly hidden></textarea>
+    </div>
+
+    <details class="sources">
+      <summary><svg><use href="#ic-chev"/></svg>Sources <span>19</span></summary>
+      <ol>
+        <li id="s1">Allen RP, Picchietti DL, Garcia-Borreguero D, et al. Restless legs syndrome/Willis–Ekbom disease diagnostic criteria: updated IRLSSG consensus criteria. <a href="https://pubmed.ncbi.nlm.nih.gov/25023924/" target="_blank" rel="noopener">Sleep Medicine, 2014</a>.</li>
+        <li id="s2">Picchietti DL, Bruni O, de Weerd A, et al. Pediatric restless legs syndrome diagnostic criteria: an update by the IRLSSG. <a href="https://pubmed.ncbi.nlm.nih.gov/24184054/" target="_blank" rel="noopener">Sleep Medicine, 2013</a>.</li>
+        <li id="s3">Jiménez-Jiménez FJ, Alonso-Navarro H, García-Martín E, Agúndez JAG. Association between restless legs syndrome and peripheral neuropathy: a systematic review and meta-analysis. <a href="https://pubmed.ncbi.nlm.nih.gov/33772991/" target="_blank" rel="noopener">European Journal of Neurology, 2021</a>.</li>
+        <li id="s4">Anderson JC, Fritz ML, Benson JM, Tracy BL. Nerve decompression and restless legs syndrome: a retrospective analysis. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5498562/" target="_blank" rel="noopener">Frontiers in Neurology, 2017</a>.</li>
+        <li id="s5">Anderson JC, Fritz ML, Tracy BL. Improved restless legs syndrome symptoms after lower leg nerve decompression surgery. <a href="https://link.springer.com/article/10.1007/s44337-025-00545-w" target="_blank" rel="noopener">Discover Medicine, 2026</a>.</li>
+        <li id="s6">Walters AS, et al. Validation of the International Restless Legs Syndrome Study Group rating scale for restless legs syndrome. <a href="https://pubmed.ncbi.nlm.nih.gov/14592342/" target="_blank" rel="noopener">Sleep Medicine, 2003</a>.</li>
+        <li id="s7">Ondo WG, et al. Post hoc analysis of data from two clinical trials evaluating the minimal clinically important change in International RLS Study Group rating scale scores. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4702193/" target="_blank" rel="noopener">Journal of Clinical Sleep Medicine, 2016</a>.</li>
+        <li id="s8">Silva MA, et al. Placebo and nocebo responses in restless legs syndrome: a systematic review and meta-analysis. <a href="https://doi.org/10.1212/WNL.0000000000004004" target="_blank" rel="noopener">Neurology, 2017</a>.</li>
+        <li id="s9">Winkelman JW, Berkowski JA, DelRosso LM, et al. Treatment of restless legs syndrome and periodic limb movement disorder: an American Academy of Sleep Medicine clinical practice guideline. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11701286/" target="_blank" rel="noopener">Journal of Clinical Sleep Medicine, 2025</a>.</li>
+        <li id="s10">Bojovic M, Dimitrijevic S, Olory BCR, et al. Overview of nerve entrapment syndromes in the foot and ankle. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11971194/" target="_blank" rel="noopener">International Orthopaedics, 2025</a>.</li>
+        <li id="s11">Haq II, Banerjee AA, Arshad Z, Iqbal AM, Bhatia M. The management of tarsal tunnel syndrome: a scoping review. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11296061/" target="_blank" rel="noopener">Journal of Clinical Orthopaedics and Trauma, 2024</a>.</li>
+        <li id="s12">Patel AT, Gaines K, Malamut R, et al. Usefulness of electrodiagnostic techniques in the evaluation of suspected tarsal tunnel syndrome: an evidence-based review. <a href="https://www.aanem.org/clinical-practice-resources/guidelines/guideline/usefulness-of-edx-techniques-in-the-evaluation-of-suspected-tarsal-tunnel-syndrome" target="_blank" rel="noopener">Muscle &amp; Nerve, 2005; AANEM</a>.</li>
+        <li id="s13">Marshall NS, Serinel Y, Killick R, et al. Magnesium supplementation for the treatment of restless legs syndrome and periodic limb movement disorder: a systematic review. <a href="https://doi.org/10.1016/j.smrv.2019.101218" target="_blank" rel="noopener">Sleep Medicine Reviews, 2019</a>.</li>
+        <li id="s14">Allen RP, et al. Restless legs syndrome prevalence and impact: REST general population study. <a href="https://pubmed.ncbi.nlm.nih.gov/15956009/" target="_blank" rel="noopener">Archives of Internal Medicine, 2005</a>.</li>
+        <li id="s15">Picchietti D, et al. Restless legs syndrome: prevalence and impact in children and adolescents. The Peds REST study. <a href="https://doi.org/10.1542/peds.2006-2767" target="_blank" rel="noopener">Pediatrics, 2007</a>.</li>
+        <li id="s16">National Institute of Neurological Disorders and Stroke. <a href="https://www.ninds.nih.gov/health-information/disorders/restless-legs-syndrome" target="_blank" rel="noopener">Restless legs syndrome</a>. Reviewed March 2026.</li>
+        <li id="s17">Sleep Health Foundation. <a href="https://www.sleephealthfoundation.org.au/sleep-disorders/restless-legs-syndrome" target="_blank" rel="noopener">Restless legs syndrome</a>. February 2026.</li>
+        <li id="s18">healthdirect Australia. <a href="https://www.healthdirect.gov.au/restless-legs-syndrome" target="_blank" rel="noopener">Restless legs syndrome</a>.</li>
+        <li id="s19">National Institute for Health and Care Excellence (UK). <a href="https://www.nice.org.uk/guidance/ng127" target="_blank" rel="noopener">Suspected neurological conditions: recognition and referral (NG127)</a>. Updated 2023.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Start tonight</div>
+    <h2>Log the next episode.</h2>
+    <p class="lede">Where it was, when it came, and whether moving helped. Two weeks of that gives your GP or podiatrist something real to work with.</p>
+    <div class="jump-row">
+      <a class="mode-pill mp-l" href="#pattern"><svg><use href="#ic-moon"/></svg>Pattern sorter</a>
+      <a class="mode-pill mp-b" href="#map"><svg><use href="#ic-foot"/></svg>Foot map</a>
+      <a class="mode-pill mp-c" href="#diary"><svg><use href="#ic-book"/></svg>Symptom diary</a>
+      <a class="mode-pill mp-k" href="#ask"><svg><use href="#ic-chat"/></svg>Questions to ask</a>
+    </div>
+    <p class="companion-row"><a class="companion" href="https://www.selfdriven.health/protocols#thread">Taking magnesium for sleep? See the supplement <span class="nw">checks<svg><use href="#ic-arrow"/></svg></span></a></p>
+  </div>
+</section>
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="https://www.selfdriven.health/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="https://www.selfdriven.health/the-undertow"><i style="background:var(--caring)"></i>The undertow</a><a href="https://www.selfdriven.health/obsessive-by-nature"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="https://www.selfdriven.health/depression"><i style="background:var(--chill-bright)"></i>Depression</a><a href="https://www.selfdriven.health/fascia"><i style="background:var(--constructive)"></i>Fascia</a><a href="https://www.selfdriven.health/eye-movement"><i style="background:var(--constructive)"></i>Eye movement</a><a href="https://www.selfdriven.health/walking"><i style="background:var(--constructive)"></i>Walking</a><a href="https://www.selfdriven.health/anti-inflammatory"><i style="background:var(--constructive)"></i>Anti-inflammatory</a><a href="https://www.selfdriven.health/protocols"><i style="background:var(--curious)"></i>Protocols</a><a href="https://www.selfdriven.health/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>Plain language, evidence-checked, and not medical advice.</b> This guide can't diagnose restless legs syndrome or a trapped nerve. Talk to your GP, podiatrist or specialist about your own symptoms, and before starting or stopping any medicine or supplement.</p>
+</footer>
+
+<script>
+/* pattern sorter */
+(function(){
+  var qs = Array.prototype.slice.call(document.querySelectorAll('.q'));
+  var oc = document.getElementById('outcomes');
+  var next = document.getElementById('nextStep');
+  var NEXT = {
+    rls: '<span class="k">What to do next</span>Your answers match the four core RLS features with few nerve clues. <b>Ask your GP about RLS and an iron check</b> (ferritin and transferrin saturation), and mention any medicines you take.',
+    both: '<span class="k">What to do next</span>You have the RLS features and some nerve clues too. <b>Ask for both an RLS assessment and a foot and nerve exam</b>, and use the foot map to point to where it starts.',
+    nerve: '<span class="k">What to do next</span>The nerve clues stand out. <b>Ask a GP or podiatrist to examine the nerves in that area</b>, and check the foot map for which nerve covers it. Iron is still worth testing.',
+    unclear: '<span class="k">What to do next</span>No clear pattern yet. <b>Keep the diary for one to two weeks.</b> Patterns often show up over several nights that are hard to recall in one go.',
+    none: '<span class="k">What to do next</span>Tick what applies and your next step shows here.'
+  };
+  function count(g){ return qs.filter(function(q){ return q.getAttribute('data-g') === g && q.getAttribute('aria-pressed') === 'true'; }).length; }
+  function pips(id, n){ Array.prototype.forEach.call(document.getElementById(id).children, function(p, i){ p.classList.toggle('on', i < n); }); }
+  function update(){
+    var r = count('r'), n = count('n'), o;
+    if (!r && !n) o = 'none';
+    else if (r === 4 && n <= 1) o = 'rls';
+    else if (r === 4) o = 'both';
+    else if (n >= 2) o = 'nerve';
+    else o = 'unclear';
+    document.getElementById('tallyR').textContent = r + ' of 4';
+    document.getElementById('tallyN').textContent = n + ' of 6';
+    document.getElementById('mR').textContent = r + ' / 4';
+    document.getElementById('mN').textContent = n + ' / 6';
+    pips('pipsR', r); pips('pipsN', n);
+    oc.classList.toggle('has-pick', o !== 'none');
+    Array.prototype.forEach.call(oc.children, function(c){ c.classList.toggle('pick', c.getAttribute('data-o') === o); });
+    next.innerHTML = NEXT[o];
+  }
+  qs.forEach(function(q){ q.addEventListener('click', function(){ q.setAttribute('aria-pressed', q.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); update(); }); });
+  document.getElementById('sortReset').addEventListener('click', function(){ qs.forEach(function(q){ q.setAttribute('aria-pressed', 'false'); }); update(); });
+  update();
+})();
+
+/* foot map */
+(function(){
+  var Z = {
+    tibial: {btn:'Tibial · tarsal tunnel', name:'Tibial nerve at the tarsal tunnel', short:'Inner ankle',
+      where:'Runs behind the inner ankle bone through a narrow tunnel, then splits into the branches that supply the sole and toes.',
+      feel:'Burning, tingling, numbness or electric zaps across the sole. Often worse after standing or walking, and it can flare at night.',
+      trap:'Ankle injuries and the scar tissue that follows, swelling, flat-foot mechanics, or a cyst or swollen vein inside the tunnel.',
+      check:'Tapping behind the inner ankle, a feeling and strength check, ultrasound or MRI to look for a cause, and nerve conduction studies, which can miss it.',
+      refs:[10,11,12]},
+    medial: {btn:'Medial plantar', name:'Medial plantar nerve', short:'Inner arch',
+      where:'A branch of the tibial nerve that runs along the inner arch and supplies the big-toe side of the sole.',
+      feel:'Burning, tingling or aching along the inner arch and into the first three toes.',
+      trap:'Pressure at the arch, including from an arch support that presses in the wrong place. In runners it is known as jogger’s foot.',
+      check:'Tapping and pressing along the inner arch, and a look at footwear and orthotics.',
+      refs:[10]},
+    lateral: {btn:'Lateral plantar', name:'Lateral plantar nerve', short:'Outer sole',
+      where:'The other branch of the tibial nerve. It supplies the outer sole and outer toes, and its first branch runs close to the inner heel.',
+      feel:'Tingling or numbness on the outer sole. Trouble in its first branch causes heel pain that is easy to mistake for plantar fasciitis.',
+      trap:'Strain at the heel and arch, tight muscles in the sole, and scar tissue after injury.',
+      check:'Examining the heel and sole, then ultrasound or MRI if a structural cause is suspected.',
+      refs:[10]},
+    sural: {btn:'Sural', name:'Sural nerve', short:'Outer edge',
+      where:'Runs down the back of the calf, behind the outer ankle bone, and along the outer edge of the foot to the little toe.',
+      feel:'Burning, shooting pain or touchiness along the outer ankle and the outer edge of the foot.',
+      trap:'Repeated ankle sprains, scars from ankle surgery, and tight boots.',
+      check:'Tapping is less reliable for this nerve. Ultrasound can show it where it passes a scar.',
+      refs:[10]},
+    superficial: {btn:'Superficial fibular', name:'Superficial fibular (peroneal) nerve', short:'Top of foot',
+      where:'Comes out between the muscles of the outer shin, about a hand-width above the ankle, and spreads over most of the top of the foot.',
+      feel:'Tingling, numbness or burning over the top of the foot and toes.',
+      trap:'Ankle sprains that stretch the nerve as the ankle rolls, and a tight opening where it passes out through the lining of the lower leg.',
+      check:'Tapping where it comes out above the ankle, and testing with the foot pointed and turned in.',
+      note:'One of the main nerves released in the 2026 surgery study: 95% of patients had it done.',
+      refs:[10,5]},
+    deep: {btn:'Deep fibular', name:'Deep fibular (peroneal) nerve', short:'First web space',
+      where:'Runs down the front of the ankle, under where you tie your laces, and ends in the web between the big and second toes.',
+      feel:'Numbness or tingling in that first web space, sometimes with an ache across the top of the foot.',
+      trap:'Tight shoes or laces, bony spurs on top of the foot, and swelling. Also called anterior tarsal tunnel syndrome.',
+      check:'Pressing over the front of the ankle and top of the foot, and nerve conduction studies.',
+      refs:[10]},
+    morton: {btn:'Interdigital', name:'Interdigital nerve (Morton’s neuroma)', short:'Between the toes',
+      where:'A small nerve between the long bones of the forefoot, most often between the third and fourth toes.',
+      feel:'Burning or tingling into two neighbouring toes, and a feeling of standing on a pebble.',
+      trap:'Narrow toe boxes and high heels that squeeze the forefoot.',
+      check:'Squeezing the forefoot from the sides, and ultrasound.',
+      refs:[10]}
+  };
+  var ORDER = ['tibial','medial','lateral','sural','superficial','deep','morton'];
+  var wrap = document.getElementById('zbtns');
+  var shapes = Array.prototype.slice.call(document.querySelectorAll('[data-zones]'));
+  var btns = {};
+  ORDER.forEach(function(k){
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'zb'; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = Z[k].btn + ' <small>' + Z[k].short + '</small>';
+    b.addEventListener('click', function(){ select(k); });
+    wrap.appendChild(b); btns[k] = b;
+  });
+  function set(id, t){ document.getElementById(id).textContent = t; }
+  function select(k){
+    var z = Z[k]; if (!z) return;
+    ORDER.forEach(function(o){ btns[o].setAttribute('aria-pressed', o === k ? 'true' : 'false'); });
+    shapes.forEach(function(s){ s.classList.toggle('on', s.getAttribute('data-zones').split(' ').indexOf(k) > -1); });
+    set('zdName', z.name); set('zdShort', z.short); set('zdWhere', z.where); set('zdFeel', z.feel); set('zdTrap', z.trap); set('zdCheck', z.check);
+    var note = document.getElementById('zdNote');
+    if (z.note) { note.textContent = z.note; note.hidden = false; } else { note.hidden = true; }
+    document.getElementById('zdSrc').innerHTML = 'Sources: ' + z.refs.map(function(r){ return '<a href="#s' + r + '">[' + r + ']</a>'; }).join(' ');
+  }
+  shapes.forEach(function(s){
+    var p = s.getAttribute('data-pick');
+    if (p) s.addEventListener('click', function(){ select(p); });
+  });
+  select('tibial');
+})();
+
+/* symptom diary */
+(function(){
+  var KEY = 'sdh-restless-diary-v1';
+  var entries = [];
+  var storeOk = true;
+  try { var raw = localStorage.getItem(KEY); entries = raw ? JSON.parse(raw) : []; if (!Array.isArray(entries)) entries = []; } catch (e) { entries = []; storeOk = false; }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(entries)); return true; } catch (e) { storeOk = false; return false; } }
+
+  function iso(d){ var m = d.getMonth() + 1, day = d.getDate(); return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day; }
+  function daysAgo(n){ var d = new Date(); d.setDate(d.getDate() - n); return iso(d); }
+  var EXAMPLES = [
+    {id:'ex1', date:daysAgo(0), time:'In bed or at night', where:'Sole of foot', feel:['Urge to move','Crawling'], moved:'Yes, while moving', trig:'Sitting or lying still', sleep:'Slow to fall asleep', note:'Eased after walking to the kitchen'},
+    {id:'ex2', date:daysAgo(1), time:'Daytime', where:'Inner ankle', feel:['Burning','Electric zaps'], moved:'No', trig:'Shoes', sleep:'None', note:'New work boots'},
+    {id:'ex3', date:daysAgo(2), time:'Evening', where:'Sole of foot', feel:['Urge to move','Tingling'], moved:'A little', trig:'Sitting or lying still', sleep:'Woke me up', note:''}
+  ];
+  var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function nice(s){ var p = (s || '').split('-'); if (p.length !== 3) return s; return parseInt(p[2], 10) + ' ' + MON[parseInt(p[1], 10) - 1]; }
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function sorted(list){ return list.slice().sort(function(a, b){ return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; }); }
+
+  function stats(list){
+    var n = list.length;
+    var night = list.filter(function(e){ return e.time !== 'Daytime'; }).length;
+    var moved = list.filter(function(e){ return e.moved === 'Yes, while moving'; }).length;
+    var urge = list.filter(function(e){ return (e.feel || []).indexOf('Urge to move') > -1; }).length;
+    var tally = {}, top = 'None', best = 0;
+    list.forEach(function(e){ tally[e.where] = (tally[e.where] || 0) + 1; if (tally[e.where] > best) { best = tally[e.where]; top = e.where; } });
+    return {n:n, night:night, moved:moved, urge:urge, top:top, pct:function(x){ return n ? Math.round(x / n * 100) + '%' : '0%'; }};
+  }
+
+  var ul = document.getElementById('entries');
+  function render(){
+    var showEx = entries.length === 0;
+    var list = showEx ? EXAMPLES : sorted(entries);
+    var s = stats(list);
+    document.getElementById('stN').textContent = s.n;
+    document.getElementById('stNight').textContent = s.pct(s.night);
+    document.getElementById('stMove').textContent = s.pct(s.moved);
+    document.getElementById('stWhere').textContent = s.top;
+    document.getElementById('stWhere').title = s.top;
+    document.getElementById('exnote').hidden = !showEx;
+    document.getElementById('dCopy').disabled = showEx;
+    document.getElementById('dClear').hidden = showEx;
+    ul.innerHTML = list.map(function(e){
+      var d = new Date(e.date + 'T12:00:00');
+      var wd = isNaN(d) ? '' : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()];
+      return '<li class="entry' + (showEx ? ' ex' : '') + '">' +
+        '<div class="ed">' + esc(nice(e.date)) + '<small>' + wd + '</small></div>' +
+        '<div><div class="eb">' + esc(e.where) + ' · ' + esc(e.time.toLowerCase()) + (showEx ? '<span class="tag">Example</span>' : '') + '</div>' +
+        '<div class="em">' + esc((e.feel && e.feel.length ? e.feel.join(', ') : 'No feeling recorded')) + ' · Moving: ' + esc(e.moved.toLowerCase()) + ' · Set off by: ' + esc(e.trig.toLowerCase()) + ' · Sleep: ' + esc(e.sleep.toLowerCase()) + (e.note ? ' · ' + esc(e.note) : '') + '</div></div>' +
+        (showEx ? '<span></span>' : '<button class="del" type="button" data-id="' + esc(e.id) + '" aria-label="Delete entry for ' + esc(nice(e.date)) + '"><svg><use href="#ic-x"/></svg></button>') +
+        '</li>';
+    }).join('');
+  }
+  ul.addEventListener('click', function(ev){
+    var b = ev.target.closest ? ev.target.closest('.del') : null; if (!b) return;
+    var id = b.getAttribute('data-id');
+    entries = entries.filter(function(e){ return e.id !== id; });
+    save(); render();
+    document.getElementById('dOut').hidden = true;
+  });
+
+  var feels = Array.prototype.slice.call(document.querySelectorAll('#feels .feel'));
+  feels.forEach(function(f){ f.addEventListener('click', function(){ f.setAttribute('aria-pressed', f.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); }); });
+
+  var dateIn = document.getElementById('dDate');
+  dateIn.value = iso(new Date());
+  var fmsg = document.getElementById('fmsg');
+  document.getElementById('dform').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var date = dateIn.value;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) { fmsg.textContent = 'Pick a date for this episode.'; fmsg.className = 'fmsg err'; dateIn.focus(); return; }
+    var e = {
+      id: 'e' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+      date: date,
+      time: document.getElementById('dTime').value,
+      where: document.getElementById('dWhere').value,
+      feel: feels.filter(function(f){ return f.getAttribute('aria-pressed') === 'true'; }).map(function(f){ return f.textContent; }),
+      moved: document.getElementById('dMoved').value,
+      trig: document.getElementById('dTrig').value,
+      sleep: document.getElementById('dSleep').value,
+      note: document.getElementById('dNote').value.trim().slice(0, 140)
+    };
+    entries.push(e);
+    var ok = save();
+    render();
+    feels.forEach(function(f){ f.setAttribute('aria-pressed', 'false'); });
+    document.getElementById('dNote').value = '';
+    fmsg.className = 'fmsg';
+    fmsg.textContent = ok ? 'Added for ' + nice(date) + '.' : 'Added. This browser is blocking storage, so it will be lost if you leave the page.';
+    document.getElementById('dOut').hidden = true;
+  });
+
+  function summary(){
+    var list = sorted(entries).reverse();
+    var s = stats(list);
+    var lines = [
+      'Restless legs and foot nerve diary (selfdriven.health)',
+      'Episodes: ' + s.n + (s.n ? ' (' + nice(list[0].date) + ' to ' + nice(list[list.length - 1].date) + ')' : ''),
+      'Evening or night: ' + s.night + ' of ' + s.n,
+      'Eased while moving: ' + s.moved + ' of ' + s.n,
+      'Urge to move: ' + s.urge + ' of ' + s.n,
+      'Most common area: ' + s.top,
+      ''
+    ];
+    list.forEach(function(e){
+      lines.push(nice(e.date) + ' | ' + e.time + ' | ' + e.where + ' | ' + ((e.feel && e.feel.length) ? e.feel.join(', ') : 'no feeling recorded') + ' | Moving helped: ' + e.moved + ' | Set off by: ' + e.trig + ' | Sleep: ' + e.sleep + (e.note ? ' | ' + e.note : ''));
+    });
+    return lines.join('\n');
+  }
+  var dmsg = document.getElementById('dmsg');
+  var out = document.getElementById('dOut');
+  document.getElementById('dCopy').addEventListener('click', function(){
+    var text = summary();
+    out.value = text; out.hidden = false;
+    copy(text, function(ok){
+      dmsg.className = 'fmsg';
+      if (ok) { dmsg.textContent = 'Copied. Paste it into a note or message.'; }
+      else { out.focus(); out.select(); dmsg.textContent = 'Select the text below and copy it.'; }
+    });
+  });
+  var clearBtn = document.getElementById('dClear'), armed = null;
+  clearBtn.addEventListener('click', function(){
+    if (!armed) {
+      clearBtn.textContent = 'Tap again to delete all';
+      armed = setTimeout(function(){ armed = null; clearBtn.textContent = 'Clear diary'; }, 4000);
+      return;
+    }
+    clearTimeout(armed); armed = null; clearBtn.textContent = 'Clear diary';
+    entries = []; save(); render(); out.hidden = true;
+    dmsg.className = 'fmsg'; dmsg.textContent = 'Diary cleared.';
+  });
+  if (!storeOk) { dmsg.textContent = 'This browser is blocking storage, so entries last only while the page is open.'; }
+  render();
+})();
+
+/* copy helper + questions */
+function copy(text, cb){
+  try {
+    navigator.clipboard.writeText(text).then(function(){ cb(true); }, function(){ cb(false); });
+  } catch (e) { cb(false); }
+}
+(function(){
+  var btn = document.getElementById('qCopy'), out = document.getElementById('qOut'), msg = document.getElementById('qmsg');
+  btn.addEventListener('click', function(){
+    var items = Array.prototype.map.call(document.querySelectorAll('#qlist li'), function(li, i){
+      var main = li.firstChild.firstChild.textContent.trim();
+      var sub = li.querySelector('span') ? li.querySelector('span').textContent.trim() : '';
+      return (i + 1) + '. ' + main + (sub ? ' ' + sub : '');
+    });
+    var text = 'Questions for my appointment\n' + items.join('\n');
+    copy(text, function(ok){
+      if (ok) { out.hidden = true; msg.textContent = 'Copied.'; }
+      else { out.value = text; out.hidden = false; out.focus(); out.select(); msg.textContent = 'Select the text below and copy it.'; }
+    });
+  });
+})();
+</script>
+
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,summary,select,input,textarea,[role="button"],[role="tab"],.zone,.zone-mk';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){ var t = e.target; if (!t || !t.closest) return; cur.classList.toggle('big', !!t.closest(HOT)); });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
+  Array.prototype.forEach.call(dotsList, function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+</body>
+</html>
