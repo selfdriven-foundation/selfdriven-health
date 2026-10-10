@@ -11,6 +11,16 @@ permalink: /restless-legs
 <title>Restless legs - selfdriven Health</title>
 <meta name="description" content="Restless legs syndrome or a trapped nerve in the foot? How to tell the patterns apart, which nerve sits where, what the research shows, and what to ask your GP or podiatrist.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='27' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='40' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='53' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="selfdriven.health">
+<meta property="og:title" content="Restless legs, or a trapped nerve?">
+<meta property="og:description" content="How to tell restless legs syndrome from a trapped nerve in the foot, what the research shows, and what to ask your GP. With an audio episode.">
+<meta property="og:url" content="https://www.selfdriven.health/restless-legs">
+<meta property="og:audio" content="https://www.selfdriven.health/assets/audio/Is_Your_Restless_Leg_a_Trapped_Nerve.m4a">
+<meta property="og:audio:type" content="audio/mp4">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AudioObject","name":"Is your restless leg a trapped nerve?","description":"Audio episode on restless legs syndrome and trapped nerves in the foot, from the selfdriven.health restless legs guide.","contentUrl":"https://www.selfdriven.health/assets/audio/Is_Your_Restless_Leg_a_Trapped_Nerve.m4a","encodingFormat":"audio/mp4","inLanguage":"en-AU","isPartOf":{"@type":"WebPage","name":"Restless legs - selfdriven Health","url":"https://www.selfdriven.health/restless-legs"},"publisher":{"@type":"Organization","name":"selfdriven Foundation","url":"https://selfdriven.foundation"}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -455,6 +465,52 @@ h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
   .mkr .ml b{font-size:17px}
 }
 
+/* listen: podcast player */
+.listen{padding-block:4px 0}
+.player{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 22px;align-items:center;padding:24px 26px 20px;border-radius:24px;background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border2);position:relative;overflow:hidden}
+.player::before{content:'';position:absolute;inset:auto -20% -60% 30%;height:180px;background:radial-gradient(ellipse at center,var(--chill-dim),transparent 70%);pointer-events:none}
+.pp{position:relative;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:var(--chill-bright);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.pp:hover{transform:scale(1.05);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+.pp svg{width:26px;height:26px}
+.pp .i-pause{display:none}
+.player.playing .pp .i-play{display:none}
+.player.playing .pp .i-pause{display:block}
+.pp::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--chill-bright);opacity:0;pointer-events:none}
+.player.playing .pp::after{animation:ppRing 2.4s ease-out infinite}
+.player.buffering .pp::after{opacity:.9;border-color:var(--chill-bright) transparent var(--chill-bright) transparent;animation:ppSpin 1s linear infinite}
+@keyframes ppRing{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(1.35)}}
+@keyframes ppSpin{to{transform:rotate(360deg)}}
+.pl-meta{min-width:0;position:relative}
+.player h2.pl-title{font-size:clamp(22px,2.9vw,31px);line-height:1.08;letter-spacing:-.035em;margin:6px 0 4px;max-width:none}
+.pl-sub{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.pl-sub b{color:var(--soft);font-weight:500;font-variant-numeric:tabular-nums}
+.pl-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:16px;position:relative}
+.skip{display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 12px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface);color:var(--soft);font-family:var(--mono);font-size:12px;transition:color .2s,border-color .2s}
+.skip:hover{color:var(--text);border-color:rgba(255,255,255,.3)}
+.skip svg{width:15px;height:15px}
+.spd{min-width:58px;justify-content:center;color:var(--constructive);border-color:var(--constructive-line)}
+.tm{font-family:var(--mono);font-size:12.5px;color:var(--soft);font-variant-numeric:tabular-nums;min-width:48px}
+.tm.rem{text-align:right;color:var(--muted)}
+.seek{flex:1 1 200px;min-width:0;-webkit-appearance:none;appearance:none;height:8px;border-radius:4px;cursor:pointer;background:linear-gradient(90deg,var(--chill-bright),var(--constructive)) 0 0/var(--p,0%) 100% no-repeat,var(--neutral-dim)}
+.seek:focus-visible{outline:2px solid var(--chill-bright);outline-offset:6px}
+.seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;background:var(--text);border:3px solid var(--bg);box-shadow:0 0 0 1px var(--border2)}
+.seek::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--text);border:3px solid var(--bg)}
+.seek::-moz-range-track{background:transparent}
+.player.failed .pp,.player.failed .pl-bar{opacity:.4;pointer-events:none}
+.pl-msg{grid-column:1/-1;margin-top:12px;font-size:13.5px;color:var(--soft);position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.pl-msg a{color:var(--chill-bright)}
+.pl-msg button{font-size:13px;color:var(--chill-bright);text-decoration:underline;text-underline-offset:3px}
+.pl-note{grid-column:1/-1;margin-top:10px;font-size:12.5px;color:var(--muted);position:relative}
+@media (max-width:640px){
+  .player{padding:18px;gap:4px 16px}
+  .pp{width:56px;height:56px}
+  .pp svg{width:22px;height:22px}
+  .seek{order:-1;flex-basis:100%}
+  .tm.rem{margin-left:auto}
+  .pl-bar{gap:10px}
+}
+@media (prefers-reduced-motion:reduce){.player.playing .pp::after{animation:none}}
+
 /* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
 .sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
 .sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
@@ -520,6 +576,11 @@ body>main,.sd-foot{position:relative;z-index:1}
   <symbol id="ic-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
   <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
   <symbol id="ic-knee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+  <symbol id="ic-play" viewBox="0 0 24 24"><path d="M8 5.2v13.6a1 1 0 0 0 1.52.85l10.9-6.8a1 1 0 0 0 0-1.7L9.52 4.35A1 1 0 0 0 8 5.2Z" fill="currentColor"/></symbol>
+  <symbol id="ic-pause" viewBox="0 0 24 24"><rect x="6" y="4.5" width="4" height="15" rx="1.2" fill="currentColor"/><rect x="14" y="4.5" width="4" height="15" rx="1.2" fill="currentColor"/></symbol>
+  <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="ic-fwd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+  <symbol id="ic-headphones" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
 </svg>
 
 <div id="cur" aria-hidden="true"></div>
@@ -547,6 +608,7 @@ body>main,.sd-foot{position:relative;z-index:1}
         <div class="cta-row">
           <a class="mode-pill mp-solid" href="#pattern"><svg><use href="#ic-moon"/></svg>Sort the pattern</a>
           <a class="mode-pill mp-b" href="#map"><svg><use href="#ic-foot"/></svg>Open the foot map</a>
+          <a class="mode-pill mp-c" href="#listen"><svg><use href="#ic-headphones"/></svg>Listen</a>
         </div>
       </div>
 
@@ -574,6 +636,30 @@ body>main,.sd-foot{position:relative;z-index:1}
     </div>
   </div>
 </header>
+
+<section class="listen" id="listen" aria-label="Listen to the episode">
+  <div class="wrap">
+    <div class="player" id="player">
+      <audio id="ep" preload="metadata" src="/assets/audio/Is_Your_Restless_Leg_a_Trapped_Nerve.m4a"></audio>
+      <button class="pp" id="ppBtn" type="button" aria-label="Play the episode"><svg class="i-play" aria-hidden="true"><use href="#ic-play"/></svg><svg class="i-pause" aria-hidden="true"><use href="#ic-pause"/></svg></button>
+      <div class="pl-meta">
+        <div class="eyebrow"><b>Listen</b> · audio episode</div>
+        <h2 class="pl-title">Is your restless leg a trapped nerve?</h2>
+        <p class="pl-sub"><span id="plDur">Length loading</span><span>selfdriven.health</span></p>
+      </div>
+      <div class="pl-bar">
+        <button class="skip" type="button" id="backBtn" aria-label="Back 15 seconds"><svg aria-hidden="true"><use href="#ic-back"/></svg>15</button>
+        <span class="tm" id="tCur">0:00</span>
+        <input class="seek" type="range" id="seek" min="0" max="1000" step="1" value="0" aria-label="Position in episode">
+        <span class="tm rem" id="tRem">−0:00</span>
+        <button class="skip" type="button" id="fwdBtn" aria-label="Forward 30 seconds">30<svg aria-hidden="true"><use href="#ic-fwd"/></svg></button>
+        <button class="skip spd" type="button" id="spdBtn" aria-label="Playback speed 1 times">1×</button>
+      </div>
+      <p class="pl-msg" id="plMsg" role="status" hidden></p>
+      <p class="pl-note">Audio companion to this guide. Where it and the written guide differ, the written guide has been checked against the sources listed below.</p>
+    </div>
+  </div>
+</section>
 
 <section class="block" id="two">
   <div class="wrap">
@@ -1282,6 +1368,90 @@ body>main,.sd-foot{position:relative;z-index:1}
   });
   if (!storeOk) { dmsg.textContent = 'This browser is blocking storage, so entries last only while the page is open.'; }
   render();
+})();
+
+/* listen: podcast player */
+(function(){
+  var a = document.getElementById('ep'); if (!a) return;
+  var player = document.getElementById('player'), pp = document.getElementById('ppBtn'), seek = document.getElementById('seek');
+  var tCur = document.getElementById('tCur'), tRem = document.getElementById('tRem'), plDur = document.getElementById('plDur');
+  var msg = document.getElementById('plMsg'), spd = document.getElementById('spdBtn');
+  var KEY = 'sdh-restless-audio-v1', SPEEDS = [1, 1.25, 1.5, 2, 0.75], si = 0, seeking = false, lastSave = 0, failed = false;
+  var TITLE = 'Is your restless leg a trapped nerve?';
+  function fmt(t){ if (!isFinite(t) || t < 0) t = 0; t = Math.floor(t); var h = Math.floor(t / 3600), m = Math.floor(t % 3600 / 60), x = t % 60; return (h ? h + ':' + (m < 10 ? '0' : '') : '') + m + ':' + (x < 10 ? '0' : '') + x; }
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { return {}; } }
+  function save(pos){ try { var o = load(); o.pos = pos; o.speed = SPEEDS[si]; localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+  function dur(){ return isFinite(a.duration) && a.duration > 0 ? a.duration : 0; }
+  function paint(){
+    var d = dur(), t = a.currentTime;
+    if (!seeking) seek.value = d ? Math.round(t / d * 1000) : 0;
+    seek.style.setProperty('--p', (seek.value / 10) + '%');
+    tCur.textContent = fmt(seeking && d ? seek.value / 1000 * d : t);
+    tRem.textContent = d ? '\u2212' + fmt(d - (seeking ? seek.value / 1000 * d : t)) : '\u22120:00';
+    seek.setAttribute('aria-valuetext', fmt(t) + (d ? ' of ' + fmt(d) : ''));
+  }
+  function fail(){
+    if (failed) return; failed = true;
+    player.classList.remove('playing', 'buffering'); player.classList.add('failed');
+    var onSite = /(^|\.)selfdriven\.health$/.test(location.hostname);
+    msg.innerHTML = onSite ? 'The episode couldn\u2019t load. Check your connection, then reload the page.'
+      : 'The episode plays on the live site, not in this preview. <a href="https://www.selfdriven.health/restless-legs#listen" target="_blank" rel="noopener">Listen on selfdriven.health</a>';
+    msg.hidden = false;
+    plDur.textContent = 'Audio unavailable here';
+  }
+  function setSpeed(i){ si = i; a.playbackRate = SPEEDS[si]; spd.textContent = SPEEDS[si] + '\u00d7'; spd.setAttribute('aria-label', 'Playback speed ' + SPEEDS[si] + ' times'); }
+  var st = load();
+  if (st.speed && SPEEDS.indexOf(st.speed) > -1) setSpeed(SPEEDS.indexOf(st.speed));
+  a.addEventListener('loadedmetadata', function(){
+    var d = dur();
+    if (d) {
+      var mins = Math.round(d / 60);
+      plDur.innerHTML = '<b>' + (mins < 1 ? 'Under 1' : mins) + ' min</b>';
+      var pos = load().pos;
+      if (pos > 10 && pos < d - 15) {
+        a.currentTime = pos;
+        msg.innerHTML = 'Picking up where you left off, at ' + fmt(pos) + '. <button type="button" id="restart">Start from the beginning</button>';
+        msg.hidden = false;
+        document.getElementById('restart').addEventListener('click', function(){ a.currentTime = 0; save(0); msg.hidden = true; paint(); });
+      }
+    }
+    a.playbackRate = SPEEDS[si];
+    paint();
+  });
+  a.addEventListener('timeupdate', function(){ paint(); var now = Date.now(); if (now - lastSave > 4000) { lastSave = now; save(a.currentTime); } });
+  a.addEventListener('play', function(){ player.classList.add('playing'); pp.setAttribute('aria-label', 'Pause the episode'); a.playbackRate = SPEEDS[si]; });
+  a.addEventListener('pause', function(){ player.classList.remove('playing', 'buffering'); pp.setAttribute('aria-label', 'Play the episode'); save(a.currentTime); });
+  a.addEventListener('ended', function(){ save(0); player.classList.remove('playing'); });
+  a.addEventListener('waiting', function(){ if (!a.paused) player.classList.add('buffering'); });
+  ['playing','canplay','seeked','pause'].forEach(function(ev){ a.addEventListener(ev, function(){ player.classList.remove('buffering'); }); });
+  a.addEventListener('error', fail);
+  pp.addEventListener('click', function(){
+    if (failed) return;
+    if (a.paused) { var pr = a.play(); if (pr && pr.catch) pr.catch(function(e){ if (!e || e.name !== 'AbortError') fail(); }); }
+    else a.pause();
+  });
+  seek.addEventListener('input', function(){ seeking = true; paint(); });
+  seek.addEventListener('change', function(){ var d = dur(); if (d) a.currentTime = seek.value / 1000 * d; seeking = false; paint(); save(a.currentTime); });
+  document.getElementById('backBtn').addEventListener('click', function(){ a.currentTime = Math.max(0, a.currentTime - 15); paint(); });
+  document.getElementById('fwdBtn').addEventListener('click', function(){ var d = dur(); a.currentTime = d ? Math.min(d - 0.5, a.currentTime + 30) : a.currentTime + 30; paint(); });
+  spd.addEventListener('click', function(){ setSpeed((si + 1) % SPEEDS.length); save(a.currentTime); });
+  if ('mediaSession' in navigator) {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: TITLE, artist: 'selfdriven.health', album: 'Restless legs guide',
+        artwork: [{src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%2309090f'/%3E%3Ccircle cx='136' cy='256' r='40' fill='%23f5c842'/%3E%3Ccircle cx='216' cy='256' r='40' fill='%23ff5f7e'/%3E%3Ccircle cx='296' cy='256' r='40' fill='%2300e5a0'/%3E%3Ccircle cx='376' cy='256' r='40' fill='%237b6cff'/%3E%3C/svg%3E", sizes: '512x512', type: 'image/svg+xml'}]
+      });
+      var H = {
+        play: function(){ a.play(); }, pause: function(){ a.pause(); },
+        seekbackward: function(d){ a.currentTime = Math.max(0, a.currentTime - ((d && d.seekOffset) || 15)); },
+        seekforward: function(d){ a.currentTime = Math.min(dur() || Infinity, a.currentTime + ((d && d.seekOffset) || 30)); },
+        seekto: function(d){ if (d && isFinite(d.seekTime)) a.currentTime = d.seekTime; }
+      };
+      Object.keys(H).forEach(function(k){ try { navigator.mediaSession.setActionHandler(k, H[k]); } catch (e) {} });
+    } catch (e) {}
+  }
+  if (a.error) fail();
+  paint();
 })();
 
 /* copy helper + questions */
