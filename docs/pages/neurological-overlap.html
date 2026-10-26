@@ -1,0 +1,1088 @@
+---
+layout: null
+title: "Neurological overlap - selfdriven Health"
+permalink: /neurological-overlap
+---
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Neurological overlap - selfdriven Health</title>
+<meta name="description" content="Numbness, odd leg sensations, restless nights and walking changes can have very different causes, and sometimes more than one. How clinicians tell them apart, and questions to take to your appointment.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='27' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='40' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='53' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="selfdriven.health">
+<meta property="og:title" content="Similar symptoms. Different causes. Sometimes more than one.">
+<meta property="og:description" content="Why neurological conditions can look alike or occur together, how clinicians localise symptoms, and questions to take to your appointment.">
+<meta property="og:url" content="https://www.selfdriven.health/neurological-overlap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* selfdriven.health 4Cs system, dark by design (shared with every guide).
+   Companion to /restless-legs. Colour threads carry over: violet (Chill) = restless legs,
+   mint (Constructive) = peripheral nerves. Amber (Curious) = brain, optic nerve and spinal cord.
+   Neutral = nerve roots and functional disorders. Rose (Caring) = red flags only. */
+:root{
+  color-scheme:dark;
+  --bg:#09090f;--surface:#111118;--surface2:#18181f;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#f0eeff;--muted:#8f8bad;--muted2:#3d3a55;
+  --soft:rgba(240,238,255,.8);
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --curious-line:rgba(245,200,66,.3);--caring-line:rgba(255,95,126,.3);--constructive-line:rgba(0,229,160,.3);--chill-line:rgba(123,108,255,.34);
+  --neutral:#d8d5f0;--neutral-dim:rgba(240,238,255,.07);--neutral-line:rgba(240,238,255,.22);
+  --ink:#09090f;
+  --pill:999px;
+  --sd-accent:var(--curious);
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:24px}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--curious);outline-offset:2px}
+a{color:inherit}
+
+/* threads */
+.t-cns{--c:var(--curious);--c-dim:var(--curious-dim);--c-line:var(--curious-line)}
+.t-nrv{--c:var(--constructive);--c-dim:var(--constructive-dim);--c-line:var(--constructive-line)}
+.t-rls{--c:var(--chill-bright);--c-dim:var(--chill-dim);--c-line:var(--chill-line)}
+.t-neu{--c:var(--neutral);--c-dim:var(--neutral-dim);--c-line:var(--neutral-line)}
+.t-red{--c:var(--caring);--c-dim:var(--caring-dim);--c-line:var(--caring-line)}
+
+/* draft banner */
+.draft{position:relative;z-index:2;margin-top:63px;background:var(--curious-dim);border-bottom:1px solid var(--curious-line);font-size:13.5px;color:var(--soft)}
+.draft .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding-block:10px}
+.draft b{color:var(--curious);font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:84px 72px}
+.gblob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.15;z-index:0}
+.gb1{width:520px;height:520px;background:var(--curious);top:-200px;left:-180px;animation:gb 19s ease-in-out infinite}
+.gb2{width:420px;height:420px;background:var(--constructive);top:80px;right:-160px;animation:gb 23s ease-in-out infinite reverse}
+.gb3{width:320px;height:320px;background:var(--chill);bottom:-120px;left:36%;animation:gb 21s ease-in-out infinite 4s}
+@keyframes gb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(34px,-26px) scale(1.08)}70%{transform:translate(-22px,30px) scale(.93)}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 74% at 50% 50%,rgba(9,9,15,.86),rgba(9,9,15,.55) 46%,rgba(9,9,15,.18) 78%,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:56px;align-items:center}
+.hero-copy{min-width:0}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(9,9,15,.55);border:1px solid rgba(255,255,255,.22);border-radius:var(--pill);padding:8px 18px;font-size:12px;font-weight:500;color:rgba(240,238,255,.7);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--curious);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(38px,5.8vw,68px);line-height:1;letter-spacing:-.045em;margin:24px 0 20px}
+.grad{background:linear-gradient(90deg,var(--curious),var(--constructive) 55%,var(--chill-bright));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:580px;font-size:clamp(17px,2vw,19px);line-height:1.55;color:rgba(240,238,255,.9)}
+.byline{margin-top:18px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.byline b{color:var(--soft);font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+
+.scope{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border2);border-radius:22px;padding:22px 24px;box-shadow:0 30px 70px rgba(0,0,0,.55);min-width:0}
+.scope-title{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.035em}
+.scope h3{font-size:13px;font-family:var(--mono);font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-top:16px}
+.scope .can h3{color:var(--constructive)}
+.scope .cant h3{color:var(--caring)}
+.scope ul{list-style:none;display:grid;gap:7px;margin-top:8px}
+.scope li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:8px;font-size:14.5px;color:var(--soft);line-height:1.45}
+.scope li svg{width:16px;height:16px;margin-top:3px}
+.scope .can svg{color:var(--constructive)}
+.scope .cant svg{color:var(--caring)}
+
+/* pills, chips, buttons */
+.mode-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--pill);font-family:var(--display);font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.mode-pill:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.mode-pill svg{width:16px;height:16px}
+.mp-c{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.mp-k{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.mp-b{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.mp-l{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.mp-solid{background:var(--curious);color:var(--ink);border-color:var(--curious)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:var(--pill);font-family:var(--display);font-size:12.5px;font-weight:600;border:1px solid transparent;line-height:1.5;white-space:nowrap}
+.c-curious{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.c-caring{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.c-constructive{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.c-chill{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.c-neutral{background:var(--neutral-dim);color:var(--soft);border-color:var(--border2)}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--sans);font-size:13.5px;font-weight:600;transition:border-color .2s,transform .2s;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px}
+.btn.go{background:var(--curious);border-color:var(--curious);color:var(--ink)}
+.btn.warn{border-color:var(--caring-line);color:var(--caring)}
+
+/* sections */
+section.block{padding-block:84px 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:500;color:var(--curious)}
+.eyebrow.e-nrv b{color:var(--constructive)}
+.eyebrow.e-rls b{color:var(--chill-bright)}
+.eyebrow.e-red b{color:var(--caring)}
+h2{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(31px,4.8vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 14px;max-width:880px}
+.lede{max-width:720px;font-size:17px;color:var(--soft)}
+h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+.note{margin-top:16px;font-size:14px;color:var(--muted);max-width:780px}
+.note b{color:var(--text);font-weight:600}
+.ref{font-family:var(--mono);font-size:.72em;font-weight:500;color:var(--muted);text-decoration:none;vertical-align:.32em;margin-left:1px;white-space:nowrap}
+.ref:hover{color:var(--curious)}
+
+/* safety */
+.safety{margin-top:0;border-radius:24px;border:1px solid var(--caring-line);background:linear-gradient(180deg,var(--caring-dim),transparent 75%),var(--surface);padding:26px 28px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px}
+.safety h2{font-size:clamp(26px,3.6vw,38px);margin-top:6px}
+.safety h2 svg{width:26px;height:26px;color:var(--caring);vertical-align:-3px;margin-right:8px}
+.safety .lede{font-size:15.5px}
+.ftier .tl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--caring)}
+.ftier .tl.soft{color:var(--curious)}
+.ftier+.ftier{margin-top:18px}
+.ftier ul{list-style:none;display:grid;gap:7px;margin-top:8px}
+.ftier li{font-size:15px;color:var(--soft);padding-left:16px;position:relative;line-height:1.45}
+.ftier li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:2px;background:var(--caring)}
+.ftier .tl.soft+ul li::before{background:var(--curious)}
+.callrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.call{display:inline-flex;flex-direction:column;padding:12px 18px;border-radius:16px;border:1px solid var(--caring-line);background:var(--surface);text-decoration:none;min-width:150px}
+.call b{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:-.03em;color:var(--caring);line-height:1.05}
+.call span{font-size:12.5px;color:var(--muted)}
+.call.soft{border-color:var(--border2)}
+.call.soft b{color:var(--text);font-size:20px;padding-top:4px}
+.safety .fs{margin-top:16px;font-size:12.5px;color:var(--muted)}
+
+/* body map */
+.lbtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.lb{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface);font-family:var(--display);font-size:13.5px;font-weight:600;color:var(--soft);transition:border-color .2s,background .2s,color .2s}
+.lb i{width:9px;height:9px;border-radius:50%;background:var(--c);flex:none}
+.lb:hover{color:var(--text);border-color:rgba(255,255,255,.3)}
+.lb[aria-pressed="true"]{background:var(--c-dim);border-color:var(--c-line);color:var(--text)}
+.mapgrid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:16px;margin-top:14px;align-items:start}
+.mapfig{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:18px 16px 14px;min-width:0;position:relative}
+.mapfig svg{display:block;width:100%;height:auto;max-width:340px;margin:0 auto}
+.mapfig figcaption{font-size:12.5px;color:var(--muted);text-align:center;margin-top:8px}
+.sil{fill:var(--surface2);stroke:var(--border2);stroke-width:1.5}
+.sil-l{fill:none;stroke:var(--surface2);stroke-linecap:round}
+.sil-o{fill:none;stroke:var(--border2);stroke-linecap:round}
+.nv{fill:none;stroke:rgba(240,238,255,.16);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s,fill .25s,opacity .25s}
+.nv-f{fill:rgba(240,238,255,.06);stroke:rgba(240,238,255,.16);stroke-width:2;transition:stroke .25s,fill .25s}
+.nv-d{fill:none;stroke:transparent;stroke-width:2;stroke-dasharray:5 5;transition:stroke .25s}
+.nv.on{stroke:var(--hc)}
+.nv-f.on{fill:var(--hc);fill-opacity:.32;stroke:var(--hc)}
+.nv-d.on{stroke:var(--hc)}
+.pulse-r{fill:none;stroke:var(--hc);stroke-width:2;opacity:0}
+.pulse-r.on{animation:ring 1.8s ease-out infinite}
+@keyframes ring{0%{opacity:.8;r:6}100%{opacity:0;r:20}}
+.m-lab{fill:var(--muted);font-family:var(--mono);font-size:10px;letter-spacing:.1em}
+.offmap{position:absolute;inset:18px;display:grid;place-items:center;text-align:center;padding:24px;border-radius:18px;background:rgba(17,17,24,.86);font-size:14.5px;color:var(--soft);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.offmap b{display:block;font-family:var(--display);font-size:19px;color:var(--text);margin-bottom:6px;letter-spacing:-.02em}
+.ld{background:var(--surface);border:1px solid var(--c-line);border-radius:24px;padding:26px;min-width:0;position:sticky;top:84px}
+.ld-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.ld h3{font-size:clamp(22px,2.6vw,28px)}
+.ld dl{margin-top:16px;display:grid}
+.ld dl div{display:grid;grid-template-columns:126px minmax(0,1fr);gap:12px;padding:11px 0;border-top:1px solid var(--border)}
+.ld dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);padding-top:3px}
+.ld dd{font-size:14.5px;color:var(--soft);line-height:1.5;min-width:0}
+.ld dd.not{color:var(--text)}
+.ld .ln{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--c-dim);border:1px solid var(--c-line);font-size:13.5px;color:var(--soft)}
+.ld .ln a{color:var(--text)}
+.ld .lsrc{margin-top:14px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.ld .lsrc a{color:var(--soft);text-decoration:none}
+.keyp{display:flex;align-items:flex-start;gap:12px;margin-top:14px;padding:14px 18px;border-radius:16px;border:1px dashed var(--border2);font-size:14px;color:var(--soft);max-width:900px}
+.keyp svg{width:18px;height:18px;flex:none;color:var(--curious);margin-top:2px}
+.keyp b{color:var(--text);font-weight:600}
+
+/* three possibilities */
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.pcard{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.pcard .glyph{width:64px;height:40px}
+.pcard h3{font-size:21px}
+.pcard p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.pcard .eg{font-size:13.5px;color:var(--muted);padding-top:10px;border-top:1px solid var(--border)}
+.pcard .eg b{color:var(--soft);font-weight:600}
+.pcard .chip{align-self:flex-start;margin-top:auto}
+.glyph .g-a{fill:var(--curious-dim);stroke:var(--curious);stroke-width:1.5}
+.glyph .g-b{fill:var(--constructive-dim);stroke:var(--constructive);stroke-width:1.5}
+.glyph .g-ghost{fill:none;stroke:var(--constructive);stroke-width:1.5;stroke-dasharray:3 3}
+.glyph .g-arr{fill:none;stroke:var(--chill-bright);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.glyph .g-c{fill:var(--chill-dim);stroke:var(--chill-bright);stroke-width:1.5}
+.cant-line{margin-top:14px;padding:16px 20px;border-radius:18px;border:1px dashed var(--border2);font-size:15px;color:var(--soft);max-width:900px}
+.cant-line b{color:var(--text);font-weight:600}
+
+/* evidence */
+.nums{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.num{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px 24px;min-width:0}
+.num .big{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.num .big b{font-family:var(--display);font-weight:800;font-size:clamp(38px,4.6vw,52px);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.num .big span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.num h3{font-size:18px;margin-top:10px}
+.num p{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.5}
+.num p b{color:var(--soft);font-weight:600}
+.vs{display:grid;gap:8px;margin-top:14px}
+.vrow{display:grid;grid-template-columns:120px minmax(0,1fr) 44px;gap:10px;align-items:center;font-size:13px;color:var(--soft)}
+.vrow .track{height:18px;border-radius:5px;background:var(--neutral-dim);position:relative}
+.vrow .fill{position:absolute;inset:0 auto 0 0;border-radius:5px;background:var(--c)}
+.vrow .v{font-family:var(--mono);text-align:right;color:var(--text);font-variant-numeric:tabular-nums}
+.ladder{display:grid;gap:8px;margin-top:14px}
+.lrow{display:grid;grid-template-columns:132px minmax(0,1fr);gap:6px 18px;align-items:start;padding:16px 20px;border-radius:18px;border:1px solid var(--border);border-left:3px solid var(--c);background:var(--surface)}
+.lrow .chip{justify-self:start;margin-top:2px;white-space:normal}
+.lrow h3{font-size:17px}
+.lrow p{grid-column:2;font-size:14px;color:var(--muted);line-height:1.5}
+.g-est{--c:var(--constructive)}
+.g-assoc{--c:var(--chill-bright)}
+.g-early{--c:var(--curious)}
+.g-hyp{--c:var(--curious)}
+.g-no{--c:var(--caring)}
+.criteria{margin-top:14px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:14px}
+.ccard{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px 24px;min-width:0}
+.ccard .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--curious);margin-bottom:6px}
+.ccard h3{font-size:20px}
+.ccard p{font-size:14.5px;color:var(--soft);margin-top:10px;line-height:1.55}
+.ccard ul{list-style:none;display:grid;gap:7px;margin-top:12px}
+.ccard li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px;font-size:14px;color:var(--soft);line-height:1.5}
+.ccard li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--curious);margin-top:8px}
+.ccard.news{border-style:dashed}
+.ccard.news .k{color:var(--muted)}
+
+/* notes builder */
+.builder{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:14px;margin-top:30px;align-items:start}
+.bform{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;min-width:0}
+.bgroup+.bgroup{margin-top:22px;padding-top:20px;border-top:1px solid var(--border)}
+.bgroup h3{font-size:19px}
+.bgroup .sub{font-size:13.5px;color:var(--muted);margin-top:2px}
+.alert{margin:0 0 16px;padding:16px 18px;border-radius:16px;border:1px solid var(--caring);background:var(--caring-dim);font-size:15px;color:var(--text)}
+.alert b{display:block;font-family:var(--display);font-size:19px;letter-spacing:-.02em;color:var(--caring);margin-bottom:4px}
+.alert a{color:var(--text);font-weight:700}
+.alert.soft{border-color:var(--curious-line);background:var(--curious-dim)}
+.alert.soft b{color:var(--curious)}
+.tq{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:center;padding:11px 0;border-top:1px solid var(--border)}
+.bgroup .tq:first-of-type{margin-top:12px}
+.tq .qt{font-size:14.5px;color:var(--soft);line-height:1.45}
+.seg{display:inline-flex;border:1px solid var(--border2);border-radius:var(--pill);overflow:hidden;background:var(--surface2)}
+.seg button{padding:6px 12px;font-size:13px;font-weight:600;color:var(--muted);border-left:1px solid var(--border2);white-space:nowrap;transition:background .2s,color .2s}
+.seg button:first-child{border-left:0}
+.seg button:hover{color:var(--text)}
+.seg button[aria-pressed="true"]{background:var(--neutral-dim);color:var(--text)}
+.seg button[data-v="yes"][aria-pressed="true"]{background:var(--curious);color:var(--ink)}
+.rf .seg button[data-v="yes"][aria-pressed="true"]{background:var(--caring);color:var(--ink)}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.fld{display:flex;flex-direction:column;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld>label,.fld>.fl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fld select,.fld input[type="text"],.fld textarea{width:100%;min-width:0;padding:10px 12px;border-radius:12px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-size:14.5px;color-scheme:dark}
+.fld textarea{resize:vertical;min-height:70px;font-family:var(--sans);line-height:1.5}
+.picks{display:flex;flex-wrap:wrap;gap:6px}
+.pick{padding:6px 12px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface2);font-size:13.5px;color:var(--soft);transition:background .2s,border-color .2s,color .2s}
+.pick[aria-pressed="true"]{background:var(--curious-dim);border-color:var(--curious-line);color:var(--text)}
+.bout{background:var(--surface);border:1px solid var(--border2);border-radius:22px;padding:22px;min-width:0;position:sticky;top:84px}
+.bout h3{font-size:20px}
+.bout .sub{font-size:13.5px;color:var(--muted);margin-top:2px}
+.bout textarea{width:100%;margin-top:14px;min-height:340px;padding:12px;border-radius:12px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--mono);font-size:12px;line-height:1.55;color-scheme:dark;resize:vertical}
+.brow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}
+.fmsg{font-size:13px;color:var(--muted)}
+.private{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:12.5px;color:var(--muted)}
+.private svg{width:15px;height:15px;flex:none;margin-top:2px;color:var(--constructive)}
+
+/* questions */
+.ask{margin-top:30px;background:var(--surface);border:1px solid var(--border2);border-radius:24px;padding:26px 28px}
+.ask ol{list-style:none;counter-reset:q;display:grid}
+.ask li{counter-increment:q;display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;padding:13px 0;border-top:1px solid var(--border);font-size:16px;color:var(--text);line-height:1.45}
+.ask li:first-child{border-top:0}
+.ask li::before{content:counter(q);font-family:var(--mono);font-size:12px;color:var(--curious);width:28px;height:28px;border-radius:50%;border:1px solid var(--curious-line);display:grid;place-items:center;margin-top:-2px}
+.ask li span{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.ask-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:18px;padding-top:16px;border-top:1px solid var(--border)}
+
+/* early research */
+.early{margin-top:30px;border-radius:24px;border:1px dashed var(--curious-line);padding:26px 28px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px}
+.early .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--curious);margin-bottom:6px}
+.early h3{font-size:clamp(21px,2.4vw,25px)}
+.early p{font-size:14.5px;color:var(--soft);margin-top:10px;line-height:1.55}
+.early p b{color:var(--text);font-weight:600}
+.hyp{display:grid;gap:10px}
+.hyp div{padding:14px 16px;border-radius:16px;background:var(--surface);border:1px solid var(--border)}
+.hyp h4{font-family:var(--display);font-weight:700;font-size:15.5px;letter-spacing:-.02em}
+.hyp h4 span{font-family:var(--mono);font-weight:500;font-size:11px;color:var(--curious);margin-right:8px}
+.hyp p{font-size:13.5px;color:var(--muted);margin-top:4px}
+
+/* review */
+.review{margin-top:30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.rv{padding:14px 16px;border-radius:16px;background:var(--surface);border:1px solid var(--border);min-width:0}
+.rv span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.rv b{display:block;margin-top:4px;font-family:var(--display);font-size:16px;letter-spacing:-.02em;color:var(--text);line-height:1.3}
+.rv.st b{color:var(--curious)}
+.rv a{color:var(--text)}
+
+/* sources */
+.sources{margin-top:36px;border-top:1px solid var(--border);padding-top:18px}
+.sources summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary svg{width:16px;height:16px;transition:transform .2s;color:var(--muted)}
+.sources[open] summary svg{transform:rotate(90deg)}
+.sources summary span{font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--muted);border:1px solid var(--border2);border-radius:var(--pill);padding:1px 9px}
+.sources ol{margin:16px 0 0;padding-left:26px;display:grid;gap:8px;font-size:13.5px;color:var(--muted);max-width:900px}
+.sources li{padding-left:4px;scroll-margin-top:90px}
+.sources li:target{color:var(--soft)}
+.sources a{color:var(--soft);text-decoration-color:var(--border2);text-underline-offset:3px;overflow-wrap:anywhere}
+.sources a:hover{color:var(--curious)}
+
+/* closing */
+.closing{padding-block:96px 12px;text-align:center;overflow:hidden}
+.closing h2{margin:10px auto 14px}
+.closing .lede{margin:0 auto}
+.jump-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.companion-row{margin-top:26px;max-width:100%}
+.companion{font-size:14.5px;line-height:1.7;color:var(--soft);text-decoration:underline;text-decoration-color:var(--border2);text-underline-offset:5px;text-decoration-thickness:1px}
+.companion:hover{color:var(--text);text-decoration-color:var(--soft)}
+.companion .nw{white-space:nowrap}
+.companion svg{display:inline-block;width:15px;height:15px;vertical-align:-2px;margin-left:6px}
+
+@media (prefers-reduced-motion:reduce){
+  .gblob,.hero-pill .dot,.pulse-r.on{animation:none}
+  html{scroll-behavior:auto}
+}
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .scope{max-width:560px}
+  .mapgrid{grid-template-columns:1fr}
+  .ld,.bout{position:static}
+  .three{grid-template-columns:1fr}
+  .builder{grid-template-columns:1fr}
+  .early{grid-template-columns:1fr;gap:20px}
+}
+@media (max-width:860px){
+  .safety,.nums,.criteria{grid-template-columns:1fr}
+  .review{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .wrap{padding-inline:16px}
+  .hero{padding-block:64px 56px}
+  section.block{padding-top:64px}
+  .safety,.ask,.early{padding:18px}
+  .ld,.bform,.bout,.pcard,.num,.ccard{padding:18px}
+  .ld dl div{grid-template-columns:1fr;gap:2px}
+  .lrow{grid-template-columns:1fr;padding:14px 16px}
+  .lrow p{grid-column:1}
+  .tq{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .vrow{grid-template-columns:96px minmax(0,1fr) 40px}
+}
+
+/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-links a.red{color:var(--caring)}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:var(--ink);font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:640px){.sd-nav-in{padding-inline:16px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+body>main,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,summary,select,[role="button"],.hit{cursor:none}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:660px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ic-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="ic-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v13"/><path d="M12 13 7 17"/><path d="m12 13 5 4"/></symbol>
+  <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="ic-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+  <symbol id="ic-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+  <symbol id="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+</svg>
+
+<div id="cur" aria-hidden="true"></div>
+
+<header class="sd-nav sd-fixed" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+    <span class="sd-crumb">/ Neurological overlap</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a class="red" href="#safety">Safety</a><a href="#map">Where it comes from</a><a href="#three">Three possibilities</a><a href="#evidence">Evidence</a><a href="#ask">Questions</a></nav>
+    <a class="sd-cta" href="#notes">Prepare your notes</a>
+  </div>
+</header>
+
+<main>
+<!-- Remove this banner once clinical review is signed off (see section 7 of the v0.1 spec). -->
+<div class="draft" role="note"><div class="wrap"><b>Draft v0.1</b><span>Research guide awaiting independent clinical review. Not a diagnostic or screening service.</span></div></div>
+
+<header class="hero" id="top">
+  <div class="gblob gb1"></div><div class="gblob gb2"></div><div class="gblob gb3"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="hero-pill"><span class="dot"></span>Guide · Feel + Move</span>
+        <h1>Similar symptoms. Different causes. <span class="grad">Sometimes more than one.</span></h1>
+        <p class="sub">Numbness, odd leg sensations, pain, restless sleep and difficulty moving can come from very different parts of the nervous system. Some conditions look alike, some occur together, and one can change while another stays. This guide shows how clinicians tell them apart, and helps you bring better questions to your appointment.</p>
+        <p class="byline"><b>Companion to Restless legs</b> · Australian context · October 2026</p>
+        <div class="cta-row">
+          <a class="mode-pill mp-k" href="#safety"><svg><use href="#ic-alert"/></svg>Start with safety</a>
+          <a class="mode-pill mp-c" href="#map"><svg><use href="#ic-map"/></svg>Where symptoms come from</a>
+          <a class="mode-pill mp-b" href="#notes"><svg><use href="#ic-note"/></svg>Prepare your notes</a>
+        </div>
+      </div>
+
+      <aside class="scope" aria-label="What this guide can and can't do">
+        <div class="scope-title">What this guide does</div>
+        <div class="can"><h3>Can</h3>
+          <ul>
+            <li><svg><use href="#ic-check"/></svg><span>Tell you when to get help now</span></li>
+            <li><svg><use href="#ic-check"/></svg><span>Explain how clinicians think about where symptoms come from</span></li>
+            <li><svg><use href="#ic-check"/></svg><span>Help you write clear notes and questions for an appointment</span></li>
+          </ul></div>
+        <div class="cant"><h3>Can't</h3>
+          <ul>
+            <li><svg><use href="#ic-x"/></svg><span>Diagnose you, or give you a chance of having MS</span></li>
+            <li><svg><use href="#ic-x"/></svg><span>Rule out MS, a trapped nerve, restless legs or anything serious</span></li>
+            <li><svg><use href="#ic-x"/></svg><span>Recommend tests, treatments or changes to your medicines</span></li>
+          </ul></div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section id="safety" aria-labelledby="safetyH">
+  <div class="wrap">
+    <div class="safety">
+      <div>
+        <div class="eyebrow e-red"><b>Safety first</b> · before anything else on this page</div>
+        <h2 id="safetyH"><svg><use href="#ic-alert"/></svg>Some symptoms can't wait.</h2>
+        <p class="lede">If any of these are happening, don't use this page. Get medical help straight away. These apply whatever diagnosis you already have.<a class="ref" href="#s10">[10]</a><a class="ref" href="#s16">[16]</a></p>
+        <div class="callrow">
+          <a class="call" href="tel:000"><b>000</b><span>Emergency, Australia</span></a>
+          <a class="call soft" href="tel:1800022222"><b>1800 022 222</b><span>healthdirect, if you're unsure</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="ftier"><p class="tl">Now · call 000 or go to an emergency department</p>
+          <ul>
+            <li>Sudden weakness or numbness of the face, arm or leg, especially on one side</li>
+            <li>Sudden trouble speaking, understanding, or seeing</li>
+            <li>Weakness or difficulty walking that is getting worse over hours to days</li>
+            <li>New bladder or bowel problems together with back or leg symptoms</li>
+            <li>New numbness around the groin, buttocks or inner thighs</li>
+            <li>Trouble breathing or swallowing</li>
+          </ul></div>
+        <div class="ftier"><p class="tl soft">Soon · see your GP promptly</p>
+          <ul>
+            <li>Weakness or clumsiness that is slowly getting worse</li>
+            <li>Numbness or tingling that keeps spreading</li>
+            <li>Blurred or lost vision in one eye over days, with or without pain when you move it</li>
+          </ul></div>
+        <p class="fs">Adapted from NICE NG127 and NSW Health emergency referral criteria. Wording awaiting Australian GP and neurology review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="map">
+  <div class="wrap">
+    <div class="eyebrow"><b>Where it may come from</b> · localise before labelling</div>
+    <h2>Clinicians ask where in the nervous system first.</h2>
+    <p class="lede">The same word, such as tingling, can come from the brain, the spinal cord, a nerve root, nerves throughout the body, one trapped nerve, or a sleep-related pattern. Pick a pattern to see what makes a clinician think of it, what it doesn't establish, and who usually assesses it.</p>
+
+    <div class="lbtns" id="lbtns" role="group" aria-label="Patterns clinicians consider"></div>
+
+    <div class="mapgrid">
+      <figure class="mapfig">
+        <svg id="bodymap" viewBox="0 0 360 540" role="img" aria-label="Schematic of the nervous system: brain, optic nerves, spinal cord, nerve roots, and nerves to the arms and legs. The parts relevant to the selected pattern are highlighted.">
+          <!-- silhouette -->
+          <circle class="sil" cx="180" cy="72" r="52"/>
+          <path class="sil" d="M128 136Q180 124 232 136L238 302Q180 316 122 302Z"/>
+          <path class="sil-o" stroke-width="22" d="M132 146L100 250L90 300M228 146L260 250L270 300M152 300L144 490M208 300L216 490"/>
+          <path class="sil-l" stroke-width="19.5" d="M132 146L100 250L90 300M228 146L260 250L270 300M152 300L144 490M208 300L216 490"/>
+          <ellipse class="sil" cx="134" cy="506" rx="24" ry="11"/><ellipse class="sil" cx="226" cy="506" rx="24" ry="11"/>
+          <!-- brain and optic nerves -->
+          <circle class="nv-d hit" data-l="rls" cx="180" cy="64" r="44"/>
+          <ellipse class="nv-f hit" data-l="cns" cx="180" cy="62" rx="34" ry="25"/>
+          <path class="nv hit" data-l="cns" d="M160 92L180 104L200 92"/>
+          <circle class="nv-f" data-l="cns" cx="160" cy="92" r="5"/><circle class="nv-f" data-l="cns" cx="200" cy="92" r="5"/>
+          <!-- spinal cord -->
+          <path class="nv hit" data-l="cns cord" stroke-width="6" d="M180 88V292"/>
+          <!-- nerve roots -->
+          <path class="nv hit" data-l="roots" d="M180 158L146 152M180 158L214 152M180 250L156 268M180 250L204 268M180 272L152 292M180 272L208 292"/>
+          <!-- arm nerves -->
+          <path class="nv" data-l="poly" stroke-width="2.4" d="M146 152L108 250L94 298M214 152L252 250L266 298"/>
+          <circle class="nv-f hit" data-l="poly" cx="92" cy="306" r="9"/><circle class="nv-f hit" data-l="poly" cx="268" cy="306" r="9"/>
+          <!-- leg nerves -->
+          <path class="nv hit" data-l="poly roots focal" d="M152 292L146 488"/>
+          <path class="nv hit" data-l="poly" d="M208 292L214 488"/>
+          <ellipse class="nv-f hit" data-l="poly" cx="134" cy="506" rx="20" ry="8"/><ellipse class="nv-f hit" data-l="poly" cx="226" cy="506" rx="20" ry="8"/>
+          <!-- RLS: felt in the lower legs -->
+          <rect class="nv-d" data-l="rls" x="122" y="372" width="48" height="148" rx="22"/>
+          <rect class="nv-d" data-l="rls" x="190" y="372" width="48" height="148" rx="22"/>
+          <!-- one trapped nerve -->
+          <circle class="pulse-r" data-l="focal" cx="146" cy="462" r="6"/>
+          <circle class="nv-f hit" data-l="focal" cx="146" cy="462" r="6"/>
+          <text class="m-lab" x="250" y="62">BRAIN</text>
+          <text class="m-lab" x="250" y="200">SPINAL CORD</text>
+          <text class="m-lab" x="10" y="440">NERVES</text>
+        </svg>
+        <div class="offmap" id="offmap" hidden><div><b>Not a place on this map</b>Functional neurological disorder is about how the nervous system is working, not damage in one spot.</div></div>
+        <figcaption>Schematic, not to scale. Highlighting shows where a pattern is usually considered, not where your problem is.</figcaption>
+      </figure>
+
+      <article class="ld" id="ld" aria-live="polite">
+        <div class="ld-top"><h3 id="ldName"></h3><span class="chip" id="ldChip"></span></div>
+        <dl>
+          <div><dt>Raises the question</dt><dd id="ldRaise"></dd></div>
+          <div><dt>Does not establish</dt><dd class="not" id="ldNot"></dd></div>
+          <div><dt>Who assesses it</dt><dd id="ldRoute"></dd></div>
+        </dl>
+        <p class="ln" id="ldNote" hidden></p>
+        <p class="lsrc" id="ldSrc"></p>
+      </article>
+    </div>
+
+    <div class="keyp"><svg><use href="#ic-info"/></svg><span><b>A description isn't a location.</b> What you feel is only half the picture. An examination can find signs a diary or questionnaire can't, which is why only a clinician can say where a problem sits. Patterns overlap, and exceptions are common.</span></div>
+  </div>
+</section>
+
+<section class="block" id="three">
+  <div class="wrap">
+    <div class="eyebrow e-rls"><b>Three possibilities</b> · keep them all open</div>
+    <h2>Look-alike, side by side, or making each other worse.</h2>
+    <p class="lede">The restless legs guide uses the same three ideas. They apply across neurology: when two conditions are in play, it's rarely a simple either/or.<a class="ref" href="#s5">[5]</a></p>
+
+    <div class="three">
+      <article class="pcard">
+        <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><circle class="g-a" cx="22" cy="20" r="14"/><circle class="g-ghost" cx="42" cy="20" r="14"/></svg>
+        <h3>A look-alike</h3>
+        <p>A symptom sounds like one condition but comes from another pathway. The fix is to treat what's actually there.</p>
+        <p class="eg"><b>For example:</b> foot tingling after an ankle injury may point to a local nerve, even if it first sounded like restless legs.</p>
+        <span class="chip c-constructive">Well recognised<a class="ref" href="#s6">[6]</a></span>
+      </article>
+      <article class="pcard">
+        <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><circle class="g-a" cx="22" cy="20" r="14"/><circle class="g-c" cx="42" cy="20" r="14"/></svg>
+        <h3>Two at once</h3>
+        <p>Two conditions are both present, and each brings its own symptoms. Finding one doesn't mean the other is gone.</p>
+        <p class="eg"><b>For example:</b> MS and restless legs, diabetes-related nerve damage and restless legs, or a central condition plus a trapped nerve.</p>
+        <span class="chip c-chill">Association documented<a class="ref" href="#s2">[2]</a></span>
+      </article>
+      <article class="pcard">
+        <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><circle class="g-b" cx="12" cy="20" r="9"/><path class="g-arr" d="M24 20h12m-4-4 4 4-4 4"/><circle class="g-c" cx="50" cy="20" r="12"/></svg>
+        <h3>One makes the other worse</h3>
+        <p>An injury, pain, poor sleep or an irritated nerve might worsen another problem that exists on its own. This is an idea to test, not a shared cause.</p>
+        <p class="eg"><b>Why it matters:</b> if one symptom improves, that doesn't mean the other condition has been reversed.</p>
+        <span class="chip c-curious">Hypothesis</span>
+      </article>
+    </div>
+    <p class="cant-line"><b>This page can't tell you which of these applies to you.</b> Only an assessment over time can, and the answer can change as new findings come in.</p>
+  </div>
+</section>
+
+<section class="block" id="evidence">
+  <div class="wrap">
+    <div class="eyebrow"><b>Evidence</b> · what's known and what isn't</div>
+    <h2>Misdiagnosis happens in both directions.</h2>
+    <p class="lede">MS is sometimes diagnosed when it isn't there, and sometimes missed when it is. Both cause harm. The numbers below justify careful assessment, not a new theory of disease.</p>
+
+    <div class="nums">
+      <div class="num t-cns">
+        <div class="big"><b style="color:var(--curious)">15%</b><span>95% CI 9–26%</span></div>
+        <h3>pooled MS misdiagnosis across six selected studies</h3>
+        <p>From a 2024 systematic review. Estimates varied widely and the studies had selection bias. <b>It isn't a probability for any one person.</b><a class="ref" href="#s1">[1]</a></p>
+      </div>
+      <div class="num">
+        <h3 style="margin-top:0">Restless legs is more common with MS</h3>
+        <div class="vs">
+          <div class="vrow t-rls"><span>People with MS or CIS</span><span class="track"><span class="fill" style="width:28%"></span></span><span class="v">28%</span></div>
+          <div class="vrow t-neu"><span>Comparison groups</span><span class="track"><span class="fill" style="width:8%"></span></span><span class="v">8%</span></div>
+        </div>
+        <p>From a 2022 review and meta-analysis. It shows the two often occur together. <b>It can't show that one causes the other.</b><a class="ref" href="#s2">[2]</a></p>
+      </div>
+    </div>
+
+    <div class="ladder">
+      <div class="lrow g-est"><span class="chip c-constructive">Established</span><h3>MS is sometimes misdiagnosed, and sometimes missed.</h3><p>Different study populations give very different estimates.<a class="ref" href="#s1">[1]</a><a class="ref" href="#s3">[3]</a></p></div>
+      <div class="lrow g-est"><span class="chip c-constructive">Established</span><h3>Several conditions can mimic MS clinically or on MRI.</h3><p>They include migraine and vascular changes in the brain's white matter, NMOSD and MOG-associated disease. Telling them apart is specialist work.<a class="ref" href="#s3">[3]</a><a class="ref" href="#s4">[4]</a></p></div>
+      <div class="lrow g-est"><span class="chip c-constructive">Established</span><h3>A trapped nerve can cause sensations mistaken for restless legs.</h3><p>That's why the restless legs criteria include a fifth: nothing else better explains the symptoms.<a class="ref" href="#s6">[6]</a></p></div>
+      <div class="lrow g-assoc"><span class="chip c-chill">Association</span><h3>Restless legs is more common in people with MS.</h3><p>28% versus 8%, with wide variation between studies and possible confounding.<a class="ref" href="#s2">[2]</a></p></div>
+      <div class="lrow g-assoc"><span class="chip c-chill">Association</span><h3>Nerve damage and restless legs often occur together.</h3><p>Supported by pooled observational studies, summarised in the restless legs guide.<a class="ref" href="#s5">[5]</a></p></div>
+      <div class="lrow g-early"><span class="chip c-curious">Early only</span><h3>Releasing nerves in the leg improves true restless legs.</h3><p>Small studies without comparison groups reported improvement. They can't show the surgery works, and no guideline recommends it.<a class="ref" href="#s5">[5]</a><a class="ref" href="#s7">[7]</a></p></div>
+      <div class="lrow g-hyp"><span class="chip c-curious">Hypothesis</span><h3>An irritated nerve could worsen restless legs that exist independently.</h3><p>Worth testing. Not demonstrated.</p></div>
+      <div class="lrow g-no"><span class="chip c-caring">Unsupported</span><h3>Treating a trapped nerve reverses MS, or explains brain and spinal cord findings.</h3><p>No good evidence supports this. A trapped nerve at the ankle can't explain, for example, changes in the optic nerve or lesions in the brain.</p></div>
+    </div>
+
+    <div class="criteria">
+      <div class="ccard">
+        <div class="k">How MS is diagnosed now</div>
+        <h3>The 2024 McDonald criteria, published 2025</h3>
+        <p>The current criteria add the optic nerve as a place where MS can be shown, and allow supporting evidence where appropriate.<a class="ref" href="#s8">[8]</a></p>
+        <ul>
+          <li><span>The central vein sign and paramagnetic rim lesions on MRI</span></li>
+          <li><span>Kappa free light chains in spinal fluid</span></li>
+          <li><span>All interpreted by a specialist, alongside history, examination and a search for other explanations<a class="ref" href="#s9">[9]</a></span></li>
+        </ul>
+        <p style="color:var(--muted);font-size:13.5px">No symptom checklist, including this one, can stand in for these criteria.</p>
+      </div>
+      <div class="ccard news">
+        <div class="k">In the news · October 2026</div>
+        <h3>When a diagnosis is revised</h3>
+        <p>Actor Christina Applegate said on 20 October 2026 that her medical team no longer considered her 2021 MS diagnosis correct, and that her symptoms continue while the cause is investigated.<a class="ref" href="#s14">[14]</a><a class="ref" href="#s15">[15]</a></p>
+        <p>Her experience shows how much a revised diagnosis can matter. Public interviews don't tell us what her condition is, and this guide doesn't speculate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="notes">
+  <div class="wrap">
+    <div class="eyebrow e-nrv"><b>Your notes</b> · for the appointment</div>
+    <h2>Describe what's happening. Leave the labels to the clinic.</h2>
+    <p class="lede">Answer what you can. "Not sure" is always fine, and anything you skip is recorded as not answered, never as no. The result is a summary of what you've noticed and questions to ask. It doesn't suggest a diagnosis or a test.</p>
+
+    <div class="builder">
+      <form class="bform" id="bform" novalidate onsubmit="return false">
+        <div class="alert" id="rfAlert" role="alert" hidden><b>Stop here and get help now.</b>You said yes to a symptom that needs urgent care. Call <a href="tel:000">000</a> or go to the nearest emergency department. Don't wait to finish these notes.</div>
+        <div class="alert soft" id="rfUnsure" hidden><b>Not sure is worth checking.</b>If you can't say no to one of these with confidence, call <a href="tel:1800022222">healthdirect on 1800 022 222</a> for advice now, or <a href="tel:000">000</a> if it's an emergency.</div>
+
+        <div class="bgroup rf">
+          <h3>1 · Right now</h3>
+          <p class="sub">Asked first, because these change what you should do today.</p>
+          <div id="qRed"></div>
+        </div>
+
+        <div class="bgroup">
+          <h3>2 · The pattern</h3>
+          <p class="sub">What you've noticed most of the time.</p>
+          <div class="fgrid">
+            <div class="fld"><label for="fOnset">How it started</label>
+              <select id="fOnset"><option value="">Not answered</option><option>Not sure</option><option>Suddenly, over minutes to hours</option><option>Over days to weeks</option><option>Gradually, over months or longer</option><option>Comes and goes in episodes</option></select></div>
+            <div class="fld"><label for="fCourse">Since then</label>
+              <select id="fCourse"><option value="">Not answered</option><option>Not sure</option><option>Getting worse</option><option>About the same</option><option>Getting better</option><option>Up and down</option></select></div>
+            <div class="fld full"><span class="fl" id="whereLab">Where you feel it · pick any that apply</span>
+              <div class="picks" role="group" aria-labelledby="whereLab" id="fWhere">
+                <button type="button" class="pick" aria-pressed="false">One patch of skin</button>
+                <button type="button" class="pick" aria-pressed="false">Both feet, starting at the toes</button>
+                <button type="button" class="pick" aria-pressed="false">Both hands</button>
+                <button type="button" class="pick" aria-pressed="false">Down one leg or arm</button>
+                <button type="button" class="pick" aria-pressed="false">One side of the body</button>
+                <button type="button" class="pick" aria-pressed="false">Both legs, deep inside</button>
+                <button type="button" class="pick" aria-pressed="false">Face or eyes</button>
+                <button type="button" class="pick" aria-pressed="false">Widespread</button>
+                <button type="button" class="pick" aria-pressed="false">Not sure</button>
+              </div></div>
+          </div>
+          <div id="qPattern"></div>
+        </div>
+
+        <div class="bgroup">
+          <h3>3 · Context</h3>
+          <p class="sub">Short notes are enough.</p>
+          <div class="fgrid">
+            <div class="fld full"><label for="fDx">Diagnoses you've already been given</label><textarea id="fDx" maxlength="400" placeholder="e.g. told it might be MS in 2023; type 2 diabetes"></textarea></div>
+            <div class="fld full"><label for="fConfirmed">Findings a clinician or test has confirmed</label><textarea id="fConfirmed" maxlength="400" placeholder="e.g. reduced reflexes on exam; nerve study in March"></textarea></div>
+            <div class="fld full"><label for="fMeds">Medicines and supplements, and recent changes</label><textarea id="fMeds" maxlength="400"></textarea></div>
+            <div class="fld full"><label for="fOdd">Anything that doesn't seem to fit</label><textarea id="fOdd" maxlength="400" placeholder="Symptoms nobody has explained yet"></textarea></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="bout">
+        <h3>Your appointment notes</h3>
+        <p class="sub">Updates as you answer.</p>
+        <textarea id="bOut" aria-label="Appointment notes" readonly></textarea>
+        <div class="brow">
+          <button class="btn go" type="button" id="bCopy"><svg><use href="#ic-copy"/></svg>Copy</button>
+          <button class="btn" type="button" id="bSave"><svg><use href="#ic-down"/></svg>Save as text file</button>
+          <button class="btn warn" type="button" id="bClear">Clear</button>
+          <span class="fmsg" id="bmsg" role="status"></span>
+        </div>
+        <p class="private"><svg><use href="#ic-lock"/></svg><span>Nothing is saved or sent. Your answers stay in this tab and disappear when you close it, unless you copy or save them yourself.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ask">
+  <div class="wrap">
+    <div class="eyebrow"><b>Questions</b> · for your clinician</div>
+    <h2>Six questions that keep the picture open.</h2>
+    <p class="lede">They don't ask for a particular diagnosis or test. They ask how the whole picture fits together, and what would change it.</p>
+
+    <div class="ask">
+      <ol id="qlist">
+        <li><div>What do the examination findings point to?<span>Brain, spinal cord, nerve roots, the nerves themselves, or a pattern like restless legs.</span></div></li>
+        <li><div>Which of my findings are still unexplained?<span>So nothing quietly drops out of the picture.</span></div></li>
+        <li><div>Could there be two problems happening at once?<span>And would each need its own plan?</span></div></li>
+        <li><div>What would make you change the working diagnosis?<span>A new symptom, a result, or a lack of response to treatment.</span></div></li>
+        <li><div>When should we review it?<span>A date or a trigger, so there's a clear point to look again.</span></div></li>
+        <li><div>Who should I contact if things change before then?<span>And which changes mean I shouldn't wait.</span></div></li>
+      </ol>
+      <div class="ask-foot">
+        <button class="btn go" type="button" id="qCopy"><svg><use href="#ic-copy"/></svg>Copy the questions</button>
+        <span class="fmsg" id="qmsg" role="status"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="research">
+  <div class="wrap">
+    <div class="eyebrow"><b>Early research</b> · kept separate on purpose</div>
+    <h2>What's being explored, and what isn't on offer.</h2>
+    <div class="early">
+      <div>
+        <div class="k">Nerve surgery and restless legs</div>
+        <h3>Small studies, no comparison groups</h3>
+        <p>Two reports from one clinic found lower restless legs scores after releasing nerves in the lower leg. Without a comparison group, the change can't be separated from placebo or natural ups and downs.<a class="ref" href="#s5">[5]</a></p>
+        <p><b>This guide doesn't recommend surgery.</b> No guideline endorses it for restless legs, and there is no evidence it changes MS. Never stop or change MS treatment on the strength of a nerve finding without your neurologist.<a class="ref" href="#s7">[7]</a></p>
+        <p style="font-size:13.5px;color:var(--muted)">Details and a chart of the 2026 study are in the <a href="/restless-legs#evidence" style="color:var(--soft)">restless legs guide</a>.</p>
+      </div>
+      <div class="hyp">
+        <div><h4><span>H1</span>Finding what's also there</h4><p>In people with a central diagnosis and troublesome leg sensations, could structured recording of restless legs and nerve symptoms help clinicians confirm additional problems? Measured by clinician-confirmed diagnoses, not website scores.</p></div>
+        <div><h4><span>H2</span>Each symptom on its own track</h4><p>When nerve damage and restless legs are both established, does treating the nerve change local pain while restless legs scores change differently?</p></div>
+        <div><h4><span>H3</span>Keeping the unexplained visible</h4><p>Could an "explained, partly explained, unexplained" list improve second-opinion notes? Measured by usefulness to neurologists, not by how many diagnoses change, because over- and under-diagnosis both harm.</p></div>
+      </div>
+    </div>
+    <p class="note">These are research questions that need ethics approval, clinician co-design and independent review before any result is claimed.</p>
+  </div>
+</section>
+
+<section class="block" id="review">
+  <div class="wrap">
+    <div class="eyebrow"><b>Review</b> · how this page is kept honest</div>
+    <h2>Every claim is sourced, dated and open to correction.</h2>
+    <div class="review">
+      <div class="rv"><span>Last checked</span><b>26 October 2026</b></div>
+      <div class="rv"><span>Evidence version</span><b>v0.1</b></div>
+      <div class="rv st"><span>Clinical review</span><b>Awaiting sign-off</b></div>
+      <!-- TODO: point to the real corrections channel before publishing -->
+      <div class="rv"><span>Spotted an error?</span><b><a href="https://selfdriven.foundation" target="_blank" rel="noopener">Report a correction</a></b></div>
+    </div>
+
+    <details class="sources">
+      <summary><svg><use href="#ic-chev"/></svg>Sources <span>16</span></summary>
+      <ol>
+        <li id="s1">Zürrer WE, et al. Misdiagnosis and underdiagnosis of multiple sclerosis: a systematic review and meta-analysis. <a href="https://doi.org/10.1177/13524585241274527" target="_blank" rel="noopener">Multiple Sclerosis Journal, 2024</a>.</li>
+        <li id="s2">The prevalence of restless legs syndrome in patients with multiple sclerosis: a systematic review and meta-analysis, an update. <a href="https://pubmed.ncbi.nlm.nih.gov/36058956/" target="_blank" rel="noopener">2022</a>.</li>
+        <li id="s3">Misdiagnosis of multiple sclerosis: past, present, and future. <a href="https://pubmed.ncbi.nlm.nih.gov/39243340/" target="_blank" rel="noopener">Current Neurology and Neuroscience Reports, 2024</a>.</li>
+        <li id="s4">Differential diagnosis of suspected multiple sclerosis: an updated consensus approach. <a href="https://pubmed.ncbi.nlm.nih.gov/37479377/" target="_blank" rel="noopener">Lancet Neurology, 2023</a>.</li>
+        <li id="s5">selfdriven.health. <a href="/restless-legs">Restless legs, or a trapped nerve?</a> Sources reviewed October 2026.</li>
+        <li id="s6">Allen RP, et al. Restless legs syndrome/Willis–Ekbom disease diagnostic criteria: updated IRLSSG consensus criteria. <a href="https://pubmed.ncbi.nlm.nih.gov/25023924/" target="_blank" rel="noopener">Sleep Medicine, 2014</a>.</li>
+        <li id="s7">Winkelman JW, et al. Treatment of restless legs syndrome and periodic limb movement disorder: an AASM clinical practice guideline. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11701286/" target="_blank" rel="noopener">Journal of Clinical Sleep Medicine, 2025</a>.</li>
+        <li id="s8">Montalban X, et al. Diagnosis of multiple sclerosis: 2024 revisions of the McDonald criteria. <a href="https://pubmed.ncbi.nlm.nih.gov/40975101/" target="_blank" rel="noopener">Lancet Neurology, 2025</a>.</li>
+        <li id="s9">NICE. <a href="https://www.nice.org.uk/guidance/ng220/chapter/Recommendations" target="_blank" rel="noopener">Multiple sclerosis in adults: management (NG220)</a>. Diagnosis recommendations, amended 2026.</li>
+        <li id="s10">NICE. <a href="https://www.nice.org.uk/guidance/ng127/chapter/Recommendations-for-adults-aged-over-16" target="_blank" rel="noopener">Suspected neurological conditions: recognition and referral (NG127)</a>.</li>
+        <li id="s11">Castelli G, Desai KM, Cantone RE. Peripheral neuropathy: evaluation and differential diagnosis. <a href="https://www.aafp.org/afp/2020/1215/p732" target="_blank" rel="noopener">American Family Physician, 2020</a>.</li>
+        <li id="s12">Winkelman JW, et al. AASM guideline, iron and aggravating-factor guidance. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11701286/" target="_blank" rel="noopener">Journal of Clinical Sleep Medicine, 2025</a>.</li>
+        <li id="s13">Managing functional neurological disorder: treatment recommendations for health professionals in Australia. <a href="https://neurologyopen.bmj.com/content/7/1/e000970" target="_blank" rel="noopener">BMJ Neurology Open, 2025</a>.</li>
+        <li id="s14">ABC News Australia. <a href="https://www.abc.net.au/news/2026-10-21/christina-applegate-says-she-was-misdiagnosed-with-ms/107291302" target="_blank" rel="noopener">Christina Applegate says she was misdiagnosed with MS</a>. 21 October 2026.</li>
+        <li id="s15">MS Society UK. <a href="https://www.mssociety.org.uk/research/news/christina-applegates-ms-misdiagnosis" target="_blank" rel="noopener">Christina Applegate's MS misdiagnosis</a>. 22 October 2026.</li>
+        <li id="s16">NSW Health. <a href="https://www.health.nsw.gov.au/outpatients/referrals/Pages/back-pain-adult.aspx" target="_blank" rel="noopener">Back pain in adult patients: emergency referral criteria</a>. 2026.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Before your next appointment</div>
+    <h2>Bring the whole picture.</h2>
+    <p class="lede">What you've noticed, what's been confirmed, and what still doesn't fit. Then ask how it all hangs together.</p>
+    <div class="jump-row">
+      <a class="mode-pill mp-k" href="#safety"><svg><use href="#ic-alert"/></svg>Safety</a>
+      <a class="mode-pill mp-c" href="#map"><svg><use href="#ic-map"/></svg>Where it comes from</a>
+      <a class="mode-pill mp-b" href="#notes"><svg><use href="#ic-note"/></svg>Your notes</a>
+      <a class="mode-pill mp-l" href="#ask"><svg><use href="#ic-chat"/></svg>Questions to ask</a>
+    </div>
+    <p class="companion-row"><a class="companion" href="/restless-legs">Legs restless at night? Restless legs, or a trapped <span class="nw">nerve<svg><use href="#ic-arrow"/></svg></span></a></p>
+  </div>
+</section>
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="https://www.selfdriven.health/restless-legs"><i style="background:var(--chill-bright)"></i>Restless legs</a><a href="https://www.selfdriven.health/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="https://www.selfdriven.health/the-undertow"><i style="background:var(--caring)"></i>The undertow</a><a href="https://www.selfdriven.health/obsessive-by-nature"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="https://www.selfdriven.health/depression"><i style="background:var(--chill-bright)"></i>Depression</a><a href="https://www.selfdriven.health/fascia"><i style="background:var(--constructive)"></i>Fascia</a><a href="https://www.selfdriven.health/eye-movement"><i style="background:var(--constructive)"></i>Eye movement</a><a href="https://www.selfdriven.health/walking"><i style="background:var(--constructive)"></i>Walking</a><a href="https://www.selfdriven.health/protocols"><i style="background:var(--curious)"></i>Protocols</a><a href="https://www.selfdriven.health/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>Plain language, evidence-checked, and not medical advice.</b> This guide can't diagnose or rule out multiple sclerosis, functional neurological disorder, restless legs syndrome or nerve damage. Suspected MS needs specialist assessment. New serious neurological symptoms need urgent care: in Australia, call 000.</p>
+</footer>
+
+<script>
+/* body map: patterns clinicians consider (conversation aid, not a classifier) */
+(function(){
+  var L = {
+    cns:{btn:'Brain, optic nerve, spinal cord', t:'t-cns', chip:'c-curious', tag:'Including MS', hc:'var(--curious)',
+      name:'Brain, optic nerve and spinal cord',
+      raise:'Signs on examination that involve the brain, optic nerve or spinal cord; characteristic episodes; MRI or spinal fluid results interpreted by a specialist.',
+      not:'Tingling, tiredness, or a single spot on an MRI doesn\u2019t on its own establish MS.',
+      route:'Neurologist or neuroimmunologist, applying current criteria and reviewing the conditions that can mimic MS.',
+      refs:[4,8,9]},
+    cord:{btn:'Spinal cord', t:'t-cns', chip:'c-curious', tag:'Myelopathy', hc:'var(--curious)',
+      name:'Spinal cord problems',
+      raise:'A change in walking, clumsy hands, changes in reflexes and muscle tone found on examination, and sometimes bladder or bowel changes.',
+      not:'Symptoms that are only in the feet don\u2019t rule out a problem higher up in the spinal cord.',
+      route:'Prompt medical assessment, or urgent if it\u2019s getting worse quickly.',
+      refs:[10]},
+    roots:{btn:'Nerve roots', t:'t-neu', chip:'c-neutral', tag:'Radiculopathy', hc:'var(--neutral)',
+      name:'Nerve roots near the spine',
+      raise:'Pain or tingling that runs down a limb in a band, linked to the neck or back, sometimes with weakness in one group of muscles.',
+      not:'Not all pain that radiates down a limb comes from a nerve root.',
+      route:'Clinical examination first; tests or imaging chosen selectively.',
+      refs:[10,11]},
+    poly:{btn:'Nerves throughout', t:'t-nrv', chip:'c-constructive', tag:'Polyneuropathy', hc:'var(--constructive)',
+      name:'Nerves throughout the body',
+      raise:'Numbness, burning or loss of feeling in both feet, starting at the toes, and sometimes later the hands. Causes include diabetes, low vitamin B12, toxins and some medicines.',
+      not:'A website score can\u2019t confirm it.',
+      route:'GP first, then neurology if needed; targeted blood tests and, selectively, nerve studies.',
+      refs:[11]},
+    focal:{btn:'One trapped nerve', t:'t-nrv', chip:'c-constructive', tag:'Entrapment', hc:'var(--constructive)',
+      name:'One trapped nerve',
+      raise:'Symptoms in the patch of skin one nerve supplies, linked to pressure, an injury, a scar, footwear or a position.',
+      not:'A scar doesn\u2019t prove a nerve is trapped, and a trapped nerve doesn\u2019t explain symptoms elsewhere in the nervous system.',
+      route:'A focused examination; imaging or nerve studies used selectively, knowing their limits.',
+      note:'The <a href="/restless-legs#map">foot map in the restless legs guide</a> shows which nerve covers which patch of the foot.',
+      refs:[5,11]},
+    rls:{btn:'Restless legs', t:'t-rls', chip:'c-chill', tag:'Willis\u2013Ekbom disease', hc:'var(--chill-bright)',
+      name:'Restless legs syndrome',
+      raise:'An urge to move the legs that builds at rest, eases with movement, is worse in the evening or at night, and isn\u2019t fully explained by something else.',
+      not:'Restless legs doesn\u2019t usually explain lasting weakness or lesions on a brain MRI.',
+      route:'A clinical diagnosis; iron studies and a check for aggravating factors where relevant.',
+      note:'Felt in the legs, arising in brain circuits. That\u2019s why the map marks both.',
+      refs:[6,7]},
+    fnd:{btn:'Functional disorder', t:'t-neu', chip:'c-neutral', tag:'FND', hc:'var(--neutral)', off:true,
+      name:'Functional neurological disorder',
+      raise:'Specific signs on examination of functional weakness or movement, recognised by a neurologist.',
+      not:'FND isn\u2019t diagnosed because tests are normal, because someone is distressed, or because a symptom is unexplained.',
+      route:'A neurologist makes a positive diagnosis. FND can occur alongside other conditions.',
+      refs:[13]}
+  };
+  var ORDER = ['cns','cord','roots','poly','focal','rls','fnd'];
+  var wrap = document.getElementById('lbtns'), svg = document.getElementById('bodymap'), off = document.getElementById('offmap'), ld = document.getElementById('ld');
+  var parts = Array.prototype.slice.call(svg.querySelectorAll('[data-l]'));
+  var btns = {};
+  ORDER.forEach(function(k){
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'lb ' + L[k].t; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = '<i></i>' + L[k].btn;
+    b.addEventListener('click', function(){ select(k); });
+    wrap.appendChild(b); btns[k] = b;
+  });
+  function set(id, t){ document.getElementById(id).textContent = t; }
+  function select(k){
+    var z = L[k];
+    ORDER.forEach(function(o){ btns[o].setAttribute('aria-pressed', o === k ? 'true' : 'false'); });
+    svg.style.setProperty('--hc', z.hc);
+    parts.forEach(function(p){ p.classList.toggle('on', p.getAttribute('data-l').split(' ').indexOf(k) > -1); });
+    off.hidden = !z.off;
+    ld.className = 'ld ' + z.t;
+    set('ldName', z.name); set('ldRaise', z.raise); set('ldNot', z.not); set('ldRoute', z.route);
+    var chip = document.getElementById('ldChip'); chip.className = 'chip ' + z.chip; chip.textContent = z.tag;
+    var n = document.getElementById('ldNote');
+    if (z.note) { n.innerHTML = z.note; n.hidden = false; } else { n.hidden = true; }
+    document.getElementById('ldSrc').innerHTML = 'Sources: ' + z.refs.map(function(r){ return '<a href="#s' + r + '">[' + r + ']</a>'; }).join(' ');
+  }
+  parts.forEach(function(p){
+    if (!p.classList.contains('hit')) return;
+    p.style.cursor = 'pointer';
+    p.addEventListener('click', function(){ select(p.getAttribute('data-l').split(' ')[0]); });
+  });
+  select('cns');
+})();
+
+/* notes builder: education and clinician conversation only.
+   Allowed outputs: urgent-care information, symptom summary, questions for clinician.
+   Never: a diagnosis, a probability, an exclusion, a test or treatment recommendation.
+   Unanswered = "Not answered"; "Not sure" is kept as said. Nothing is stored. */
+(function(){
+  var RED = [
+    ['r1','Sudden weakness or numbness of the face, arm or leg'],
+    ['r2','Sudden trouble speaking, understanding or seeing'],
+    ['r3','Weakness or difficulty walking getting worse over hours to days'],
+    ['r4','New bladder or bowel problems with back or leg symptoms'],
+    ['r5','New numbness around the groin, buttocks or inner thighs'],
+    ['r6','Trouble breathing or swallowing']
+  ];
+  var PAT = [
+    ['p1','An urge to move my legs'],
+    ['p2','It starts or worsens when I sit or lie still'],
+    ['p3','Moving eases it, at least while I keep moving'],
+    ['p4','It\u2019s worse in the evening or at night'],
+    ['p5','Weakness that I or someone else has noticed'],
+    ['p6','A change in walking or balance'],
+    ['p7','Clumsy hands or dropping things'],
+    ['p8','Changes in vision, or pain when moving an eye'],
+    ['p9','Bladder or bowel changes (not sudden)'],
+    ['p10','An injury, surgery or scar near where I feel it']
+  ];
+  var LABEL = {yes:'Yes', no:'No', unsure:'Not sure'};
+  var ans = {};
+  function seg(id, text, host){
+    var row = document.createElement('div'); row.className = 'tq';
+    row.innerHTML = '<span class="qt" id="t-' + id + '">' + text + '</span><span class="seg" role="group" aria-labelledby="t-' + id + '">' +
+      ['yes','no','unsure'].map(function(v){ return '<button type="button" data-q="' + id + '" data-v="' + v + '" aria-pressed="false">' + LABEL[v] + '</button>'; }).join('') + '</span>';
+    host.appendChild(row);
+  }
+  RED.forEach(function(q){ seg(q[0], q[1], document.getElementById('qRed')); });
+  PAT.forEach(function(q){ seg(q[0], q[1], document.getElementById('qPattern')); });
+
+  var form = document.getElementById('bform');
+  form.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('button[data-q]') : null; if (!b) return;
+    var q = b.getAttribute('data-q'), v = b.getAttribute('data-v');
+    ans[q] = ans[q] === v ? undefined : v;
+    Array.prototype.forEach.call(form.querySelectorAll('button[data-q="' + q + '"]'), function(x){ x.setAttribute('aria-pressed', ans[q] === x.getAttribute('data-v') ? 'true' : 'false'); });
+    update(q.charAt(0) === 'r' && v === 'yes' && ans[q] === 'yes');
+  });
+  var picks = Array.prototype.slice.call(document.querySelectorAll('#fWhere .pick'));
+  picks.forEach(function(p){ p.addEventListener('click', function(){ p.setAttribute('aria-pressed', p.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); update(); }); });
+  ['fOnset','fCourse','fDx','fConfirmed','fMeds','fOdd'].forEach(function(id){ document.getElementById(id).addEventListener('input', function(){ update(); }); });
+
+  function a(id){ return ans[id] ? LABEL[ans[id]] : 'Not answered'; }
+  function val(id){ var v = document.getElementById(id).value.trim(); return v || 'Not answered'; }
+  function today(){ var d = new Date(); return d.getDate() + ' ' + ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()] + ' ' + d.getFullYear(); }
+  function anyRed(v){ return RED.some(function(q){ return ans[q[0]] === v; }); }
+
+  var QS = Array.prototype.map.call(document.querySelectorAll('#qlist li'), function(li){ return li.firstChild.firstChild.textContent.trim(); });
+
+  function text(){
+    var where = picks.filter(function(p){ return p.getAttribute('aria-pressed') === 'true'; }).map(function(p){ return p.textContent; });
+    var L = [];
+    L.push('Notes for my appointment');
+    L.push('Prepared ' + today() + ' with the selfdriven.health neurological overlap guide');
+    L.push('These are my own observations, not examination or test findings.');
+    if (anyRed('yes')) { L.push(''); L.push('** I answered yes to an urgent symptom. If it is happening now, I need emergency care (000), not an appointment. **'); }
+    L.push('');
+    L.push('URGENT SYMPTOMS CHECKED');
+    RED.forEach(function(q){ L.push('- ' + q[1] + ': ' + a(q[0])); });
+    L.push('');
+    L.push('PATTERN');
+    L.push('- How it started: ' + val('fOnset'));
+    L.push('- Since then: ' + val('fCourse'));
+    L.push('- Where I feel it: ' + (where.length ? where.join('; ') : 'Not answered'));
+    PAT.forEach(function(q){ L.push('- ' + q[1] + ': ' + a(q[0])); });
+    L.push('');
+    L.push('CONTEXT');
+    L.push('- Diagnoses already given: ' + val('fDx'));
+    L.push('- Confirmed by a clinician or test: ' + val('fConfirmed'));
+    L.push('- Medicines, supplements, recent changes: ' + val('fMeds'));
+    L.push('- Things that don\u2019t seem to fit: ' + val('fOdd'));
+    L.push('');
+    L.push('QUESTIONS FOR MY CLINICIAN');
+    QS.forEach(function(q, i){ L.push((i + 1) + '. ' + q); });
+    return L.join('\n');
+  }
+  var out = document.getElementById('bOut');
+  var rfA = document.getElementById('rfAlert'), rfU = document.getElementById('rfUnsure');
+  function update(jump){
+    var yes = anyRed('yes');
+    rfA.hidden = !yes;
+    rfU.hidden = yes || !anyRed('unsure');
+    out.value = text();
+    if (jump) rfA.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth', block:'center'});
+  }
+  var msg = document.getElementById('bmsg');
+  document.getElementById('bCopy').addEventListener('click', function(){
+    copy(out.value, function(ok){ if (ok) msg.textContent = 'Copied.'; else { out.focus(); out.select(); msg.textContent = 'Select the text and copy it.'; } });
+  });
+  document.getElementById('bSave').addEventListener('click', function(){
+    try {
+      var blob = new Blob([out.value], {type:'text/plain'});
+      var u = URL.createObjectURL(blob), l = document.createElement('a');
+      l.href = u; l.download = 'appointment-notes.txt'; document.body.appendChild(l); l.click(); l.remove();
+      setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
+      msg.textContent = 'Saved to your device.';
+    } catch (e) { msg.textContent = 'Saving isn\u2019t available here. Use Copy instead.'; }
+  });
+  var clr = document.getElementById('bClear'), armed = null;
+  clr.addEventListener('click', function(){
+    if (!armed) { clr.textContent = 'Tap again to clear'; armed = setTimeout(function(){ armed = null; clr.textContent = 'Clear'; }, 4000); return; }
+    clearTimeout(armed); armed = null; clr.textContent = 'Clear';
+    ans = {};
+    Array.prototype.forEach.call(form.querySelectorAll('button[data-q]'), function(x){ x.setAttribute('aria-pressed', 'false'); });
+    picks.forEach(function(p){ p.setAttribute('aria-pressed', 'false'); });
+    ['fOnset','fCourse','fDx','fConfirmed','fMeds','fOdd'].forEach(function(id){ document.getElementById(id).value = ''; });
+    update(); msg.textContent = 'Cleared.';
+  });
+  update();
+})();
+
+/* copy helper + questions */
+function copy(text, cb){
+  try { navigator.clipboard.writeText(text).then(function(){ cb(true); }, function(){ cb(false); }); }
+  catch (e) { cb(false); }
+}
+(function(){
+  var btn = document.getElementById('qCopy'), msg = document.getElementById('qmsg');
+  btn.addEventListener('click', function(){
+    var items = Array.prototype.map.call(document.querySelectorAll('#qlist li'), function(li, i){
+      var main = li.firstChild.firstChild.textContent.trim();
+      var sub = li.querySelector('span') ? li.querySelector('span').textContent.trim() : '';
+      return (i + 1) + '. ' + main + (sub ? ' ' + sub : '');
+    });
+    copy('Questions for my clinician\n' + items.join('\n'), function(ok){ msg.textContent = ok ? 'Copied.' : 'Copying isn\u2019t available here.'; });
+  });
+})();
+</script>
+
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,summary,select,input,textarea,[role="button"],.hit';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){ var t = e.target; if (!t || !t.closest) return; cur.classList.toggle('big', !!t.closest(HOT)); });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots'), function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+</body>
+</html>
