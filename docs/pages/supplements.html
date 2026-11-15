@@ -11,7 +11,7 @@ permalink: /supplements
 <style>:root{color-scheme:dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%2309090f%27/%3E%3Ccircle cx=%2721%27 cy=%2721%27 r=%279%27 fill=%27%23f5c842%27/%3E%3Ccircle cx=%2743%27 cy=%2721%27 r=%279%27 fill=%27%23ff5f7e%27/%3E%3Ccircle cx=%2721%27 cy=%2743%27 r=%279%27 fill=%27%237b6cff%27/%3E%3Ccircle cx=%2743%27 cy=%2743%27 r=%279%27 fill=%27%2300e5a0%27/%3E%3C/svg%3E">
 <title>Supplement run sheet - selfdriven Health</title>
-<meta name="description" content="A daily run sheet for seven supplements: magnesium, omega-3, vitamin D3, alpha-GPC, creatine, L-glutamine and CoQ10, timed to your day and checked against Australian reference limits.">
+<meta name="description" content="A daily run sheet for ten supplements from two popular stacks, the Huberman thread and the Human Optimization Protocol deck: timed to your day, checked against Australian limits, with the deck's claims graded by evidence and a test-first loop in Australian units.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -200,6 +200,85 @@ button{font:inherit;color:inherit}
 .legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);margin-top:4px}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 
+/* sources: thread = amber, deck = violet, added here = grey */
+.sdot{width:7px;height:7px;border-radius:50%;display:inline-block;flex:none}
+.sdot.th{background:var(--curious)}.sdot.dk{background:var(--chill-bright)}.sdot.ad{background:var(--muted)}
+.dots{display:inline-flex;gap:3px;align-items:center}
+.src-legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--muted)}
+.src-legend span{display:inline-flex;align-items:center;gap:7px}
+.sec-head .src-legend,.sec-head .grade-key{font-size:12.5px;color:var(--muted)}
+.rank.dk{color:var(--chill-bright)}.rank.ad{color:var(--muted)}
+.thread{border-left-color:rgba(245,200,66,.45)}
+.thread.deck{border-left-color:var(--mid)}
+.thread.none{border-left-color:var(--rule)}
+
+/* stack chips: which items are on your sheet */
+.stack{flex-basis:100%;display:grid;gap:10px;padding-top:14px;border-top:1px dashed var(--rule)}
+.stack-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 14px}
+.stack-head>span{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.stack-head small{font-size:12px;color:var(--muted)}
+.stk-list{display:flex;flex-wrap:wrap;gap:8px}
+.stk{display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 9px;border-radius:999px;border:1.5px dashed var(--border2);background:transparent;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.stk:hover{border-color:rgba(255,255,255,.3);color:var(--text)}
+.stk[aria-pressed="true"]{border-style:solid;border-color:var(--accent-strong);background:var(--accent-dim);color:var(--text)}
+.stk .bx{width:16px;height:16px;border-radius:5px;border:1.5px solid var(--rule);display:grid;place-items:center;flex:none;transition:background .15s,border-color .15s}
+.stk .bx svg{width:11px;height:11px;stroke:var(--on-accent);opacity:0}
+.stk[aria-pressed="true"] .bx{background:var(--accent);border-color:var(--accent)}
+.stk[aria-pressed="true"] .bx svg{opacity:1}
+.sheet-empty{padding:22px 20px;font-size:14px;color:var(--muted)}
+
+/* deck range on the vitamin D scale */
+.scale .range.deck{top:3px;bottom:3px;border-radius:0;border-color:var(--chill-bright);background:repeating-linear-gradient(45deg,var(--mid-dim) 0 5px,transparent 5px 10px)}
+
+/* test first: the loop and the marker table */
+.loop{display:grid;gap:14px;counter-reset:lp}
+@media (min-width:720px){.loop{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1040px){.loop{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.step{background:var(--paper);border:1px solid var(--border);border-radius:var(--r);padding:18px;display:grid;gap:10px;align-content:start}
+.step::before{counter-increment:lp;content:counter(lp);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:14px;background:var(--mid-dim);color:var(--chill-bright);border:1.5px solid rgba(155,143,255,.4)}
+.step h3{font-size:17px;font-weight:700;letter-spacing:-.02em}
+.step .said{font-size:13px;color:var(--muted);border-left:3px solid var(--mid);padding-left:10px;line-height:1.5}
+.step p{font-size:14px;line-height:1.6;color:var(--soft)}
+.tbl-wrap{margin-top:16px;background:var(--paper);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.tbl-cap{padding:18px 20px 14px;display:grid;gap:4px}
+.tbl-cap h3{font-size:19px;font-weight:800}
+.tbl-cap p{font-size:13px;color:var(--muted)}
+.mtable{width:100%;border-collapse:collapse;font-size:13.5px}
+.mtable th{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:9px 14px;background:var(--surface);border-block:1px solid var(--border)}
+.mtable td{padding:14px;border-bottom:1px dashed var(--rule);vertical-align:top;line-height:1.5}
+.mtable tr:last-child td{border-bottom:0}
+.mtable td.mk{font-weight:600;color:var(--text)}
+.mtable td.n{font-family:var(--mono);white-space:nowrap}
+.mtable td.n .us{display:block;font-size:12px;color:var(--muted)}
+.mtable td.n .au{display:block;font-size:14px;font-weight:600;color:var(--chill-bright);margin-top:2px}
+.mtable td.nt{color:var(--soft);font-size:13px}
+.mtable .sub{display:block;font-family:var(--sans);font-size:11.5px;font-weight:400;color:var(--muted);white-space:normal}
+.tbl-key{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12px;color:var(--muted);margin-top:6px}
+.tbl-key b{font-family:var(--mono);font-weight:600}
+.tbl-key .k-us{color:var(--muted)}.tbl-key .k-au{color:var(--chill-bright)}
+@media (max-width:760px){
+  .mtable thead{display:none}
+  .mtable tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;padding:16px 18px;border-bottom:1px dashed var(--rule)}
+  .mtable tr:last-child{border-bottom:0}
+  .mtable td{padding:0;border:0}
+  .mtable td.mk,.mtable td.nt{grid-column:1/-1}
+  .mtable td.n{white-space:normal}
+  .mtable td[data-l]::before{content:attr(data-l);display:block;font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+}
+
+/* claim checks */
+.grade-key{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12.5px;color:var(--muted)}
+.grade-key span{display:inline-flex;align-items:center;gap:8px}
+.claim-grid{display:grid;gap:14px;margin-top:18px}
+@media (min-width:860px){.claim-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.claim{background:var(--paper);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;display:grid;gap:10px;align-content:start;margin:0}
+.claim-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.claim-top .src{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.grade{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.grade.g4{background:var(--constructive-dim)}.grade.g3{background:var(--mid-dim)}.grade.g2{background:var(--curious-dim)}.grade.g1{background:rgba(255,255,255,.05)}
+.claim blockquote{margin:0;font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:-.02em;line-height:1.3;color:var(--text)}
+.claim p{font-size:14px;line-height:1.65;color:var(--soft)}
+
 /* refs + footer */
 .refs{margin-top:56px;padding-top:22px;border-top:1px solid var(--border);display:grid;gap:12px}
 .refs h2{font-size:16px;font-weight:700;letter-spacing:-.01em}
@@ -351,11 +430,12 @@ section[id]{scroll-margin-top:84px}
 <main class="wrap" id="top">
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">Daily run sheet · 7 supplements</p>
-      <h1>Seven supplements, <em>three cues</em>, one day.</h1>
-      <p class="lead">A thread doing the rounds lists five supplements Andrew Huberman says he would keep for life. This sheet adds L-glutamine and CoQ10, puts all seven on your clock, checks each dose against Australian and published safety limits, and gives you a box to tick.</p>
+      <p class="eyebrow">Daily run sheet · 10 supplements · 2 sources</p>
+      <h1>Ten supplements, <em>four cues</em>, one day.</h1>
+      <p class="lead">Two stacks are doing the rounds. A thread lists five supplements Andrew Huberman says he would keep for life. A slide deck called the Human Optimization Protocol adds glycine, psyllium and a greens powder, and says to test your blood first. This sheet puts both on your clock with two additions of ours, checks every dose against Australian and published safety limits, and lets you switch off anything your results don't call for.</p>
       <div class="units" aria-label="Units used">
         <span class="chip">1 µg vitamin D = 40 IU</span>
+        <span class="chip">Vitamin D test: 1 ng/mL = 2.5 nmol/L</span>
         <span class="chip">Mg doses as elemental</span>
         <span class="chip">Omega-3 as EPA, not "fish oil"</span>
       </div>
@@ -382,45 +462,128 @@ section[id]{scroll-margin-top:84px}
   <section class="controls" aria-label="Your day">
     <label class="field" for="wake"><span>Wake</span><input type="time" id="wake" value="06:30"></label>
     <label class="field" for="focus"><span>First focus</span><input type="time" id="focus" value="09:00"></label>
+    <label class="field" for="dinner"><span>Dinner</span><input type="time" id="dinner" value="18:30"></label>
     <label class="field" for="bed"><span>Lights out</span><input type="time" id="bed" value="22:30"></label>
     <button class="switch push" id="activeDay" type="button" role="switch" aria-checked="true">
       <span class="trk"><span class="knob"></span></span>
       <span class="lbl"><b>Focus or training day</b><small>Off skips alpha-GPC</small></span>
     </button>
+    <div class="stack" role="group" aria-labelledby="stackH">
+      <div class="stack-head">
+        <span id="stackH">On my sheet</span>
+        <small class="src-legend"><span><i class="sdot th"></i>Thread</span><span><i class="sdot dk"></i>Deck</span><span><i class="sdot ad"></i>Added here</span></small>
+      </div>
+      <div class="stk-list" id="stack"></div>
+    </div>
   </section>
 
   <section class="sheet" aria-labelledby="sheetH">
     <div class="sheet-head">
       <h2 id="sheetH">Run sheet</h2>
-      <p class="mono">Times follow your settings · tick each item when taken</p>
+      <p class="mono" id="sheetNote">Times follow your settings · tick each item when taken</p>
     </div>
     <div class="cols" aria-hidden="true"><span>Time</span><span>Cue</span><span>Item · your dose</span></div>
     <ol class="cues" id="cues"></ol>
   </section>
 
+  <section aria-labelledby="testH" id="test">
+    <div class="sec-head">
+      <p class="eyebrow">From the deck · test first</p>
+      <h2 id="testH">Measure, choose, then measure again</h2>
+      <p>The deck's best idea is its loop, summed up in its last slide: stop guessing, start measuring. Get a baseline, pick inputs for what is actually low, add one at a time, then retest. Here's how each step works in Australia.</p>
+    </div>
+    <div class="loop">
+      <article class="step">
+        <h3>Get a baseline</h3>
+        <p class="said">Deck: a full nutrient blood panel every 6 to 12 months.</p>
+        <p>Ask your GP which tests make sense for you. Medicare only covers a vitamin D test if you meet set criteria, such as osteoporosis, deeply pigmented skin, or a long-term lack of sun because of work or other reasons. Otherwise you may pay for it yourself.</p>
+      </article>
+      <article class="step">
+        <h3>Choose by your results</h3>
+        <p class="said">Deck: never copy a stack blindly. Pick inputs for your own deficiencies.</p>
+        <p>Use the "On my sheet" switches above. Keep on only what your results, your diet or your GP point to. That goes for this page's stack too.</p>
+      </article>
+      <article class="step">
+        <h3>Add one at a time</h3>
+        <p class="said">Deck: test one new compound at a time.</p>
+        <p>Start one item, keep everything else the same, and note how you sleep, feel and train before adding the next. Start five at once and you can't tell which one did what.</p>
+      </article>
+      <article class="step">
+        <h3>Retest, then adjust</h3>
+        <p class="said">Deck: retest, because what suits you at 40 may need changing at 50.</p>
+        <p>For vitamin D, the RACGP advises waiting at least three months after a change and using the same lab. Once your level is normal and nothing has changed, it advises against retesting every year.</p>
+      </article>
+    </div>
+    <div class="tbl-wrap">
+      <div class="tbl-cap">
+        <h3>The deck's markers in Australian units</h3>
+        <p>The deck uses US units. Australian labs report most of these differently, so the same result can look very different on your report.</p>
+        <div class="tbl-key"><span><b class="k-us">grey</b> deck's US value</span><span><b class="k-au">violet</b> as an Australian lab reports it</span></div>
+      </div>
+      <table class="mtable">
+        <thead><tr><th scope="col">Marker</th><th scope="col">Deck's low flag</th><th scope="col">Deck's example</th><th scope="col">What to know</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="mk">Vitamin D<span class="sub">25(OH)D</span></td>
+            <td class="n" data-l="Low flag"><span class="us">&lt; 20 ng/mL</span><span class="au">&lt; 50 nmol/L</span></td>
+            <td class="n" data-l="Example"><span class="us">55 ng/mL</span><span class="au">≈ 137 nmol/L</span></td>
+            <td class="nt">Australia draws the deficiency line at 50 nmol/L too. Aim to stay above it at the end of winter. In 2022–24, 20.6% of Australian adults were below it: 26.1% in winter and 15.5% in summer.</td>
+          </tr>
+          <tr>
+            <td class="mk">Magnesium<span class="sub">Serum</span></td>
+            <td class="n" data-l="Low flag"><span class="us">&lt; 1.8 mg/dL</span><span class="au">&lt; 0.74 mmol/L</span></td>
+            <td class="n" data-l="Example"><span class="us">2.3 mg/dL</span><span class="au">≈ 0.95 mmol/L</span></td>
+            <td class="nt">Labs commonly use about 0.70–1.10 mmol/L. Less than 1% of your body's magnesium is in your blood, so a normal result can miss low stores.</td>
+          </tr>
+          <tr>
+            <td class="mk">Omega-3 index<span class="sub">EPA + DHA in red cells</span></td>
+            <td class="n" data-l="Low flag"><span class="us">&lt; 4%</span><span class="au">&lt; 4%</span></td>
+            <td class="n" data-l="Example"><span class="us">8.1%</span><span class="au">8.1%</span></td>
+            <td class="nt">Not part of standard blood tests; it's usually a private finger-prick kit. Studies link 8% or more with lower heart risk, but no trial has yet treated people to that target.</td>
+          </tr>
+          <tr>
+            <td class="mk">TSH<span class="sub">Thyroid</span></td>
+            <td class="n" data-l="Low flag"><span class="us">None given</span></td>
+            <td class="n" data-l="Example"><span class="us">2.1 µIU/mL</span><span class="au">2.1 mIU/L</span></td>
+            <td class="nt">Same number with a different unit label. It checks your thyroid; nothing on this sheet treats it.</td>
+          </tr>
+          <tr>
+            <td class="mk">HbA1c<span class="sub">3-month blood sugar</span></td>
+            <td class="n" data-l="Low flag"><span class="us">None given</span></td>
+            <td class="n" data-l="Example"><span class="us">5.0%</span><span class="au">31 mmol/mol</span></td>
+            <td class="nt">Australian reports often show both units. Diabetes is diagnosed at 6.5% (48 mmol/mol) or higher.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <section aria-labelledby="fiveH">
     <div class="sec-head">
-      <p class="eyebrow">The seven</p>
-      <h2 id="fiveH">What the thread says, and what to check</h2>
-      <p>#1 to #5 follow the thread's order. L-glutamine and CoQ10 are selfdriven.health additions. Edit "Your dose" and the run sheet updates.</p>
+      <p class="eyebrow">The ten</p>
+      <h2 id="fiveH">What each source says, and what to check</h2>
+      <p>#1 to #5 follow the thread's order. Glycine, psyllium and the greens powder come from the deck. L-glutamine and CoQ10 are selfdriven.health additions. Edit "Your dose" and the run sheet updates.</p>
+      <p class="src-legend"><span><i class="sdot th"></i>Thread says</span><span><i class="sdot dk"></i>Deck says</span><span><i class="sdot ad"></i>Added here</span></p>
     </div>
     <div class="cards">
       <article class="card" aria-labelledby="c-mg">
-        <div class="card-top"><span class="rank">#1 in the thread</span><h3 id="c-mg">Magnesium</h3><p class="form">glycinate (glycinate) or threonate</p></div>
+        <div class="card-top"><span class="rank">#1 in the thread · in the deck</span><h3 id="c-mg">Magnesium</h3><p class="form">Glycinate (bisglycinate) or threonate</p></div>
         <dl class="rows">
-          <div><dt>Thread says</dt><dd class="thread">glycinate, as part of his sleep routine. No dose given.</dd></div>
-          <div><dt>Reference</dt><dd>Australian upper limit from supplements: <span class="num">350 mg/day</span> elemental. Magnesium from food doesn't count toward it.</dd></div>
+          <div><dt>Thread says</dt><dd class="thread">Glycinate, as part of his sleep routine. No dose given.</dd></div>
+          <div><dt>Deck says</dt><dd class="thread deck">Glycinate, 200 to 400 mg at night, or in the morning before a high-stress day. Avoid citrate for sleep.</dd></div>
+          <div><dt>Reference</dt><dd>Australian upper limit from supplements: <span class="num">350 mg/day</span> elemental, so the deck's top dose is over it. Magnesium from food doesn't count toward the limit. For sleep, three small trials in older adults with insomnia found people fell asleep about 17 minutes faster, on low-quality evidence.</dd></div>
           <div><dt><label for="dose-mg">Your dose</label></dt><dd><input class="dose-in" id="dose-mg" data-id="mg" type="text" autocomplete="off"></dd></div>
-          <div><dt>Take</dt><dd>30 to 60 minutes before lights out.</dd></div>
+          <div><dt>Take</dt><dd>30 to 60 minutes before lights out. If you add a morning dose on a hard day, keep the day's total at or under 350 mg.</dd></div>
           <div><dt>Label check</dt><dd>Labels often show the compound weight. <span class="num">1,000 mg</span> of magnesium glycinate is about <span class="num">140 mg</span> elemental. Look for "equiv. magnesium".</dd></div>
         </dl>
         <p class="caution"><b>Caution.</b> Loose stools mean the dose is too high. With kidney disease, ask your GP first. Keep it 2 hours apart from some antibiotics and osteoporosis tablets.</p>
       </article>
 
       <article class="card" aria-labelledby="c-o3">
-        <div class="card-top"><span class="rank">#2 in the thread</span><h3 id="c-o3">Omega-3</h3><p class="form">Fish or algal oil, high in EPA</p></div>
+        <div class="card-top"><span class="rank">#2 in the thread · in the deck</span><h3 id="c-o3">Omega-3</h3><p class="form">Fish or algal oil, high in EPA</p></div>
         <dl class="rows">
           <div><dt>Thread says</dt><dd class="thread">At least 1 g of EPA a day, from a high-concentration EPA source.</dd></div>
+          <div><dt>Deck says</dt><dd class="thread deck">1 to 2 g of EPA and DHA a day to lower inflammation and help joints. Refrigerate the bottle once it's open. Take it any time.</dd></div>
           <div><dt>Reference</dt><dd>Count EPA per serving, not the "fish oil" figure on the front. To reach <span class="num">1 g EPA</span>:
             <div class="caps-row" aria-label="Six standard capsules versus two concentrate capsules">
               <div class="caps"><i class="cap"></i><i class="cap"></i><i class="cap"></i><i class="cap"></i><i class="cap"></i><i class="cap"></i></div>
@@ -433,26 +596,29 @@ section[id]{scroll-margin-top:84px}
           </dd></div>
           <div><dt><label for="dose-o3">Your dose</label></dt><dd><input class="dose-in" id="dose-o3" data-id="o3" type="text" autocomplete="off"></dd></div>
           <div><dt>Take</dt><dd>With breakfast. Fat in the meal helps absorption and cuts fishy reflux.</dd></div>
-          <div><dt>Label check</dt><dd>EPA and DHA in mg per serving, and how many capsules make a serving. Third-party tested for purity and oxidation (IFOS or similar). Bin it if it smells rancid.</dd></div>
+          <div><dt>Label check</dt><dd>EPA and DHA in mg per serving, and how many capsules make a serving. Third-party tested for purity and oxidation (IFOS or similar). The fridge is a sensible place once it's open. Bin it if it smells rancid.</dd></div>
         </dl>
         <p class="caution"><b>Caution.</b> On blood thinners, check with your GP. Trials link intakes above 1 g a day to a small rise in atrial fibrillation risk.</p>
       </article>
 
       <article class="card" aria-labelledby="c-d3">
-        <div class="card-top"><span class="rank">#3 in the thread</span><h3 id="c-d3">Vitamin D3</h3><p class="form">Cholecalciferol</p></div>
+        <div class="card-top"><span class="rank">#3 in the thread · in the deck</span><h3 id="c-d3">Vitamin D3</h3><p class="form">Cholecalciferol</p></div>
         <dl class="rows">
           <div><dt>Thread says</dt><dd class="thread">5,000 to 10,000 IU a day. His bloodwork looked better on 5,000 than on 3,000 IU.</dd></div>
-          <div><dt>Reference</dt><dd>Australian and NZ upper level for adults: <span class="num">80 µg (3,200 IU)/day</span>. The thread's range is <span class="num">125–250 µg</span>.
-            <div class="scale" role="img" aria-label="Vitamin D per day, 0 to 250 micrograms. Upper level 80 micrograms. Thread range 125 to 250 micrograms." id="d3Scale">
+          <div><dt>Deck says</dt><dd class="thread deck">2,000 to 4,000 IU in the morning, for better mood and less hunger. Likely low if you work indoors.</dd></div>
+          <div><dt>Reference</dt><dd>Australian and NZ upper level for adults: <span class="num">80 µg (3,200 IU)/day</span>. The deck's range is <span class="num">50–100 µg</span>, so its top dose is over it too. The thread's range is <span class="num">125–250 µg</span>.
+            <div class="scale" role="img" aria-label="Vitamin D per day, 0 to 250 micrograms. Upper level 80 micrograms. Deck range 50 to 100 micrograms. Thread range 125 to 250 micrograms." id="d3Scale">
               <span class="ul-lab" style="left:32%">UL 80</span>
               <div class="track">
                 <span class="ok-zone" style="width:32%"></span>
+                <span class="range deck" style="left:20%;width:20%"></span>
                 <span class="range" style="left:50%;width:50%"></span>
                 <span class="mine" id="d3Mine" style="left:20%"></span>
               </div>
               <div class="ticks"><span style="left:0">0</span><span style="left:50%;transform:translateX(-50%)">125</span><span style="right:0">250 µg</span></div>
             </div>
-            <div class="legend"><span><i style="background:var(--ok-dim);border:1px solid var(--ok)"></i>Within UL</span><span><i style="border:1px solid var(--warn);background:var(--warn-dim)"></i>Thread range</span><span><i style="background:var(--accent)"></i>Your dose</span></div>
+            <div class="legend"><span><i style="background:var(--ok-dim);border:1px solid var(--ok)"></i>Within UL</span><span><i style="border:1px solid var(--chill-bright);background:var(--mid-dim)"></i>Deck range</span><span><i style="border:1px solid var(--warn);background:var(--warn-dim)"></i>Thread range</span><span><i style="background:var(--accent)"></i>Your dose</span></div>
+            <p style="margin-top:10px">For mild deficiency, the usual Australian replacement dose is <span class="num">1,000–2,000 IU</span> a day. A five-year trial of 2,000 IU a day in 18,353 adults over 50 found no effect on depression or mood.</p>
           </dd></div>
           <div><dt><label for="dose-d3">Your dose</label></dt><dd><input class="dose-in" id="dose-d3" data-id="d3" type="text" autocomplete="off"></dd></div>
           <div><dt>Take</dt><dd>With breakfast. It's fat-soluble.</dd></div>
@@ -474,10 +640,11 @@ section[id]{scroll-margin-top:84px}
       </article>
 
       <article class="card" aria-labelledby="c-cr">
-        <div class="card-top"><span class="rank">#5 in the thread</span><h3 id="c-cr">Creatine</h3><p class="form">Creatine monohydrate</p></div>
+        <div class="card-top"><span class="rank">#5 in the thread · in the deck</span><h3 id="c-cr">Creatine</h3><p class="form">Creatine monohydrate</p></div>
         <dl class="rows">
           <div><dt>Thread says</dt><dd class="thread">5 to 10 g a day, taken since he was 17 or 18, to maintain and build strength.</dd></div>
-          <div><dt>Reference</dt><dd>Monohydrate is the studied form. <span class="num">3–5 g/day</span> fills muscle stores in about 3 to 4 weeks without a loading phase.</dd></div>
+          <div><dt>Deck says</dt><dd class="thread deck">5 g a day for muscle; 10 g as a "cognitive dose" for focus after 40. Getting 5 g from food takes about 1.1 kg (2.5 lb) of raw steak. Any time of day.</dd></div>
+          <div><dt>Reference</dt><dd>Monohydrate is the studied form. <span class="num">3–5 g/day</span> fills muscle stores in about 3 to 4 weeks without a loading phase. Raw beef holds roughly 4 to 5 g per kg, so the steak figure is about right. For memory, a corrected meta-analysis found a benefit only in adults aged 66 to 76, and the dose made no difference. No trial sets 10 g as a cognitive dose.</dd></div>
           <div><dt><label for="dose-cr">Your dose</label></dt><dd><input class="dose-in" id="dose-cr" data-id="cr" type="text" autocomplete="off"></dd></div>
           <div><dt>Take</dt><dd>Any time. Taking it every day matters more than the hour, so it sits with breakfast here.</dd></div>
           <div><dt>Label check</dt><dd>Plain creatine monohydrate. If you compete, choose a batch-tested product (HASTA or Informed Sport).</dd></div>
@@ -485,10 +652,46 @@ section[id]{scroll-margin-top:84px}
         <p class="caution"><b>Caution.</b> Creatine raises blood creatinine, which can make a kidney function test look worse than it is. Tell your GP before blood tests.</p>
       </article>
 
-      <article class="card" aria-labelledby="c-gl">
-        <div class="card-top"><span class="rank">Added · not in the thread</span><h3 id="c-gl">L-glutamine</h3><p class="form">Free-form L-glutamine powder</p></div>
+      <article class="card" aria-labelledby="c-gy">
+        <div class="card-top"><span class="rank dk">From the deck · not in the thread</span><h3 id="c-gy">Glycine</h3><p class="form">Plain glycine powder</p></div>
         <dl class="rows">
-          <div><dt>Thread says</dt><dd class="thread">Not in the thread. Added here; people mostly take it for gut health and training recovery.</dd></div>
+          <div><dt>Deck says</dt><dd class="thread deck">5 to 10 g directly before bed. Lowers core body temperature for more deep and REM sleep, and builds collagen for skin.</dd></div>
+          <div><dt>Reference</dt><dd>The sleep trials used <span class="num">3 g</span> about 30 minutes before bed, in small studies from Japan, several by researchers at Ajinomoto, which makes amino acids. People fell asleep faster, rated their sleep better and felt less tired the next day. The temperature drop is clearest in rats, with some support in people. Nobody has tested 5 to 10 g for sleep. Glycine is a building block of collagen, but the skin claim rests on that role, not on trials.</dd></div>
+          <div><dt><label for="dose-gy">Your dose</label></dt><dd><input class="dose-in" id="dose-gy" data-id="gy" type="text" autocomplete="off"></dd></div>
+          <div><dt>Take</dt><dd>At wind-down, stirred into water or tea, alongside magnesium. Start at 3 g, the studied dose.</dd></div>
+          <div><dt>Label check</dt><dd>Plain glycine, nothing added; it tastes mildly sweet. Magnesium glycinate already brings some glycine: <span class="num">200 mg</span> of magnesium as glycinate carries roughly <span class="num">1 g</span>.</dd></div>
+        </dl>
+        <p class="caution"><b>Caution.</b> Don't take it with clozapine: in a trial, glycine weakened the drug's effect. With kidney or liver disease, or if you're pregnant, ask your GP first. Large doses can cause nausea.</p>
+      </article>
+
+      <article class="card" aria-labelledby="c-ps">
+        <div class="card-top"><span class="rank dk">From the deck · not in the thread</span><h3 id="c-ps">Psyllium husk</h3><p class="form">Plantago ovata husk, whole or powdered</p></div>
+        <dl class="rows">
+          <div><dt>Deck says</dt><dd class="thread deck">2 tablespoons in 8 to 10 oz (240–300 mL) of water, 30 minutes before dinner. Curbs evening snacking, improves ApoB and stops the sulphur gas a high-protein diet can cause.</dd></div>
+          <div><dt>Reference</dt><dd>The best-supported item in the deck. A meta-analysis of 28 trials found about <span class="num">10 g/day</span> lowered LDL cholesterol by <span class="num">0.33 mmol/L</span> and ApoB by <span class="num">0.05 g/L</span>. Two level tablespoons of whole husk is roughly 10 g. The deck gives no source for the gas claim. Australian adults are advised to get <span class="num">25 g</span> (women) or <span class="num">30 g</span> (men) of fibre a day, mostly from food.</dd></div>
+          <div><dt><label for="dose-ps">Your dose</label></dt><dd><input class="dose-in" id="dose-ps" data-id="ps" type="text" autocomplete="off"></dd></div>
+          <div><dt>Take</dt><dd>Stir into a full glass of water and drink it straight away, about 30 minutes before dinner. Start with a teaspoon and build up over a week or two to avoid bloating.</dd></div>
+          <div><dt>Label check</dt><dd>Plain husk with no added sugar or flavour. Check grams per serve: a level tablespoon of whole husk is about 5 g, and powder packs more into the same spoon.</dd></div>
+        </dl>
+        <p class="caution"><b>Caution.</b> Never take it dry or with too little water, as it can swell and cause choking. Keep it 2 hours apart from medicines, because it can reduce how much you absorb. Skip it if you have trouble swallowing or a narrowed bowel.</p>
+      </article>
+
+      <article class="card" aria-labelledby="c-gr">
+        <div class="card-top"><span class="rank dk">From the deck · not in the thread</span><h3 id="c-gr">Greens powder or multivitamin</h3><p class="form">A greens blend or a standard multivitamin</p></div>
+        <dl class="rows">
+          <div><dt>Deck says</dt><dd class="thread deck">Not a replacement for vegetables. Baseline insurance for travel days, busy weeks and restaurant meals. Morning.</dd></div>
+          <div><dt>Reference</dt><dd>The deck's framing is the honest one. Among 390,124 healthy US adults followed for more than 20 years, daily multivitamin users didn't live any longer. Greens powders have little trial evidence of their own. That's why it's optional on the sheet: a backup for off days, not a daily must.</dd></div>
+          <div><dt><label for="dose-gr">Your dose</label></dt><dd><input class="dose-in" id="dose-gr" data-id="gr" type="text" autocomplete="off"></dd></div>
+          <div><dt>Take</dt><dd>With breakfast on days your eating is off track. On ordinary days, vegetables do this job better.</dd></div>
+          <div><dt>Label check</dt><dd>Amounts listed per serve, not hidden in a "proprietary blend". Add any vitamin D or magnesium in it to your daily totals, so you don't double up past the limits above.</dd></div>
+        </dl>
+        <p class="caution"><b>Caution.</b> On warfarin, a greens powder can carry enough vitamin K to shift your INR, so talk to your GP before starting. Some blends add herbs that interact with medicines; check with your pharmacist.</p>
+      </article>
+
+      <article class="card" aria-labelledby="c-gl">
+        <div class="card-top"><span class="rank ad">Added here · not in either list</span><h3 id="c-gl">L-glutamine</h3><p class="form">Free-form L-glutamine powder</p></div>
+        <dl class="rows">
+          <div><dt>Sources say</dt><dd class="thread none">Not in the thread or the deck. Added here; people mostly take it for gut health and training recovery.</dd></div>
           <div><dt>Reference</dt><dd>The strongest trial is in IBS with diarrhoea after a gut infection: <span class="num">5 g × 3/day</span> for 8 weeks helped 80% of 115 adults, against 6% on placebo. In healthy athletes, a 25-trial meta-analysis found no effect on performance, body composition or immune markers. Observed safe level for healthy adults: <span class="num">14 g/day</span>.</dd></div>
           <div><dt>Your dose</dt><dd class="dose-pair"><label for="dose-glam"><span>Morning · optional</span><input class="dose-in" id="dose-glam" data-id="glam" type="text" autocomplete="off"></label><label for="dose-gl"><span>Before bed</span><input class="dose-in" id="dose-gl" data-id="gl" type="text" autocomplete="off"></label></dd></div>
           <div><dt>Take</dt><dd>Split across the day, which is closest to the trial's schedule: one dose with breakfast in the creatine glass, one at wind-down. The morning dose is optional. Prefer one dose? Take the full amount before bed and the day still counts as complete.</dd></div>
@@ -498,9 +701,9 @@ section[id]{scroll-margin-top:84px}
       </article>
 
       <article class="card" aria-labelledby="c-cq">
-        <div class="card-top"><span class="rank">Added · not in the thread</span><h3 id="c-cq">CoQ10</h3><p class="form">Coenzyme Q10 · ubiquinone or ubiquinol</p></div>
+        <div class="card-top"><span class="rank ad">Added here · not in either list</span><h3 id="c-cq">CoQ10</h3><p class="form">Coenzyme Q10 · ubiquinone or ubiquinol</p></div>
         <dl class="rows">
-          <div><dt>Thread says</dt><dd class="thread">Not in the thread. Added here; people mostly take it for energy, heart health and statin muscle aches.</dd></div>
+          <div><dt>Sources say</dt><dd class="thread none">Not in the thread or the deck. Added here; people mostly take it for energy, heart health and statin muscle aches.</dd></div>
           <div><dt>Reference</dt><dd>Your body makes its own, and the evidence of benefit comes from people with heart disease, not healthy adults. In heart failure, the Q-SYMBIO trial (420 patients, <span class="num">100 mg × 3/day</span> for 2 years) cut major cardiac events from 26% to 15%. For statin muscle aches, meta-analyses disagree: a 2018 one found less pain, a 2020 one found no effect. A Cochrane review found it doesn't lower blood pressure. Observed safe level: <span class="num">1,200 mg/day</span>.</dd></div>
           <div><dt><label for="dose-cq">Your dose</label></dt><dd><input class="dose-in" id="dose-cq" data-id="cq" type="text" autocomplete="off"></dd></div>
           <div><dt>Take</dt><dd>With breakfast, alongside omega-3. It's fat-soluble and absorbs poorly, so the fat in the meal matters. Taking more than 100 mg? Split it across two meals.</dd></div>
@@ -510,13 +713,79 @@ section[id]{scroll-margin-top:84px}
       </article>
 
       <article class="card meta" aria-labelledby="c-src">
-        <div class="card-top"><span class="rank">Source check</span><h3 id="c-src">Where this list comes from</h3></div>
+        <div class="card-top"><span class="rank">Source check</span><h3 id="c-src">Where these lists come from</h3></div>
         <div class="meta-body">
-          <p>A thread posted on 26 September 2026 says Huberman named the first five when Steven Bartlett asked which supplements he would keep for life. They match what Huberman has discussed on his own podcast.</p>
-          <p><strong>The thread also links two products</strong>, a magnesium and a fish oil. Those are the thread's picks, not his. This sheet names no brands; buy by the label checks above.</p>
-          <p>The doses in the thread are one person's routine. A blood test and your GP are better guides for yours.</p>
+          <p><strong>The thread.</strong> Posted on 26 September 2026, it says Huberman named the first five when Steven Bartlett asked which supplements he would keep for life. They match what Huberman has discussed on his own podcast. The thread also links two products, a magnesium and a fish oil. Those are the thread's picks, not his.</p>
+          <p><strong>The deck.</strong> A 16-slide PDF titled "Engineering the 46-to-26 Paradigm Shift", labelled Human Optimization Protocol v1.0. It carries a Gemini Notebook watermark, which points to an AI tool, and it names no author and no sources. It's built on one person's story: years of clean eating, then low magnesium, vitamin D and omega-3 on blood tests at 40. It names no brands.</p>
+          <p>Neither does this sheet; buy by the label checks above. Both lists are one person's routine. A blood test and your GP are better guides for yours.</p>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="claimsH" id="claims">
+    <div class="sec-head">
+      <p class="eyebrow">Curious mode · claim check</p>
+      <h2 id="claimsH">Ten claims from the deck, checked</h2>
+      <p>Graded on the same scale as our other guides. The grade is for the claim as the deck states it, not for the supplement.</p>
+      <p class="grade-key">
+        <span><b class="grade g4">Solid</b>consistent trials</span>
+        <span><b class="grade g3">Moderate</b>some good trials</span>
+        <span><b class="grade g2">Limited</b>small, mixed or indirect</span>
+        <span><b class="grade g1">Unproven</b>no good evidence, or trials found no effect</span>
+      </p>
+    </div>
+    <div class="claim-grid">
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Magnesium</span><span class="grade g2">Limited</span></div>
+        <blockquote>75% of people in the West are low in magnesium because farm soils are depleted.</blockquote>
+        <p>Low intake is common: in 2023, 31% of Australians didn't get enough magnesium from food. That's intake, not proven deficiency. The soil link isn't shown. The best-known study of US vegetable data from 1950 to 1999 found falls in some nutrients, mostly put down to higher-yield crop varieties, and it didn't measure magnesium. The deck's chart of −30% for soil and −30% for indoor living cites nothing.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Magnesium</span><span class="grade g1">Unproven</span></div>
+        <blockquote>Magnesium citrate is poorly absorbed and acts mainly as a laxative.</blockquote>
+        <p>In a 60-day randomised trial, citrate was absorbed better than magnesium oxide and an amino-acid chelate. It does loosen stools at higher doses, so glycinate is a fair pick at night, but not because citrate isn't absorbed.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Glycine</span><span class="grade g2">Limited</span></div>
+        <blockquote>Glycine lowers core temperature and forces the body into more deep and REM sleep.</blockquote>
+        <p>Small trials of 3 g before bed found people fell asleep faster, rated their sleep better and felt less tired the next day. Sleep recordings showed they reached deep sleep sooner, with no change in the overall mix of sleep stages. The temperature drop is clearest in rats. "Forces" overstates it, and the deck's 5 to 10 g hasn't been tested for sleep.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Magnesium and vitamin D</span><span class="grade g2">Limited</span></div>
+        <blockquote>Magnesium is the catalyst vitamin D needs. The two must work as a team.</blockquote>
+        <p>The enzymes that make and break down vitamin D depend on magnesium, and a 2018 randomised trial found magnesium raised low vitamin D levels and lowered high ones. That's a reason to check both, not proof that everyone should take both.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Creatine</span><span class="grade g2">Limited</span></div>
+        <blockquote>10 g of creatine is the cognitive dose that sharpens maths and focus after 40.</blockquote>
+        <p>A meta-analysis first reported better memory overall. After the authors corrected a double-counting error, the benefit held only in adults aged 66 to 76, and dose made no difference. Nothing singles out 10 g.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Vitamin D3</span><span class="grade g1">Unproven</span></div>
+        <blockquote>Vitamin D3 lifts your baseline mood and reduces hunger.</blockquote>
+        <p>The VITAL trial gave 18,353 adults over 50 either 2,000 IU a day or a placebo for about five years, with no difference in depression or mood scores. The deck gives no source for the hunger claim. Correcting a real deficiency is a separate question for your GP.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Vitamin D3</span><span class="grade g2">Limited</span></div>
+        <blockquote>Live north of Atlanta or work indoors, and you're likely among the 70% who are deficient.</blockquote>
+        <p>A US rule of thumb. In Australia, 20.6% of adults were deficient in 2022–24, rising to 26.1% in winter. Indoor work is a real risk here too, but the latitude rule runs the other way: in Australia the risk rises as you go south.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Omega-3</span><span class="grade g2">Limited</span></div>
+        <blockquote>Processed diets flood you with omega-6, driving inflammation; 1 to 2 g of EPA and DHA rapidly lowers it and helps joints.</blockquote>
+        <p>Trials that raised linoleic acid, the main omega-6, found no rise in inflammation markers in healthy adults. Fish oil's benefit for joint pain comes mainly from people with rheumatoid arthritis and similar conditions, after 3 to 4 months, and it's small.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Omega-3</span><span class="grade g2">Limited</span></div>
+        <blockquote>Rancid omega-3s at room temperature cause biological harm, so refrigerate once opened.</blockquote>
+        <p>Cold storage is sensible: oxidised oil tastes worse and may work less well. But in a 7-week randomised trial, highly oxidised fish oil didn't change markers of oxidative stress or inflammation. Long-term effects aren't known.</p>
+      </figure>
+      <figure class="claim">
+        <div class="claim-top"><span class="src">Psyllium</span><span class="grade g4">Solid</span></div>
+        <blockquote>Psyllium before dinner improves ApoB, a predictor of heart disease.</blockquote>
+        <p>Across 28 randomised trials, about 10 g a day lowered ApoB and LDL cholesterol, and the ApoB result was rated high quality. The deck's two tablespoons is about that dose.</p>
+      </figure>
     </div>
   </section>
 
@@ -535,6 +804,27 @@ section[id]{scroll-margin-top:84px}
       <li><a href="https://www.atherosclerosis-journal.com/article/S0021-9150(20)30138-6/fulltext" target="_blank" rel="noopener">Effect of coenzyme Q10 on statin-associated myalgia and adherence to statin therapy: a systematic review and meta-analysis</a>. Atherosclerosis, 2020.</li>
       <li>Ho MJ et al. <a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD007435.pub3/abstract" target="_blank" rel="noopener">Blood pressure lowering efficacy of coenzyme Q10 for primary hypertension</a>. Cochrane Database of Systematic Reviews, 2016.</li>
       <li>Hathcock JN, Shao A. <a href="https://pubmed.ncbi.nlm.nih.gov/16814438/" target="_blank" rel="noopener">Risk assessment for coenzyme Q10 (ubiquinone)</a>. Regulatory Toxicology and Pharmacology, 2006.</li>
+      <li>Australian Bureau of Statistics. <a href="https://www.abs.gov.au/media-centre/media-releases/rise-proportion-australians-diabetes" target="_blank" rel="noopener">Rise in proportion of Australians with diabetes</a> (National Health Measures Survey 2022–24: vitamin D deficiency 20.6% of adults, 26.1% in winter, 15.5% in summer).</li>
+      <li>Australian Bureau of Statistics. <a href="https://www.abs.gov.au/media-centre/media-releases/australians-continue-need-more-calcium" target="_blank" rel="noopener">Australians continue to need more calcium</a> (Usual nutrient intakes 2023: 31% did not meet magnesium requirements from food).</li>
+      <li>RACGP. <a href="https://www.racgp.org.au/clinical-resources/clinical-guidelines/first-do-no-harm/gp-resources/vitamin-d-testing" target="_blank" rel="noopener">Vitamin D testing</a> (MBS item 66833 criteria, retesting and usual replacement doses).</li>
+      <li>Cancer Council Australia. <a href="https://www.cancer.org.au/about-us/policy-and-advocacy/prevention/uv-radiation/related-resources/vitamin-d" target="_blank" rel="noopener">Vitamin D</a> (deficiency below 50 nmol/L; target above 50 nmol/L at the end of winter).</li>
+      <li>Swaminathan R. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1855626/" target="_blank" rel="noopener">Magnesium metabolism and its disorders</a>. Clinical Biochemist Reviews, 2003 (serum range 0.70–1.10 mmol/L; under 1% of body magnesium is extracellular).</li>
+      <li>Harris WS, von Schacky C. <a href="https://pubmed.ncbi.nlm.nih.gov/15208005/" target="_blank" rel="noopener">The Omega-3 Index: a new risk factor for death from coronary heart disease?</a> Preventive Medicine, 2004.</li>
+      <li>Bannai M et al. <a href="https://pubmed.ncbi.nlm.nih.gov/22529837/" target="_blank" rel="noopener">The effects of glycine on subjective daytime performance in partially sleep-restricted healthy volunteers</a>. Frontiers in Neurology, 2012.</li>
+      <li>Kawai N et al. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4397399/" target="_blank" rel="noopener">The sleep-promoting and hypothermic effects of glycine are mediated by NMDA receptors in the suprachiasmatic nucleus</a>. Neuropsychopharmacology, 2015.</li>
+      <li>Evins AE et al. Placebo-controlled trial of glycine added to clozapine in schizophrenia. American Journal of Psychiatry, 2000.</li>
+      <li>Jovanovski E et al. <a href="https://pubmed.ncbi.nlm.nih.gov/30239559/" target="_blank" rel="noopener">Effect of psyllium fiber on LDL cholesterol and alternative lipid targets, non-HDL cholesterol and apolipoprotein B: a systematic review and meta-analysis of randomized controlled trials</a>. American Journal of Clinical Nutrition, 2018.</li>
+      <li>NHMRC, Nutrient Reference Values for Australia and New Zealand: <a href="https://www.eatforhealth.gov.au/sites/default/files/2022-10/n35-dietaryfibre_0.pdf" target="_blank" rel="noopener">Dietary fibre</a> (adequate intake 25 g/day women, 30 g/day men).</li>
+      <li>Loftfield E et al. <a href="https://doi.org/10.1001/jamanetworkopen.2024.18729" target="_blank" rel="noopener">Multivitamin use and mortality risk in 3 prospective US cohorts</a>. JAMA Network Open, 2024.</li>
+      <li>Walker AF et al. <a href="https://pubmed.ncbi.nlm.nih.gov/14596323/" target="_blank" rel="noopener">Mg citrate found more bioavailable than other Mg preparations in a randomised, double-blind study</a>. Magnesium Research, 2003.</li>
+      <li>Mah J, Pitre T. <a href="https://pubmed.ncbi.nlm.nih.gov/33865376/" target="_blank" rel="noopener">Oral magnesium supplementation for insomnia in older adults: a systematic review and meta-analysis</a>. BMC Complementary Medicine and Therapies, 2021.</li>
+      <li>Dai Q et al. <a href="https://pubmed.ncbi.nlm.nih.gov/30541089/" target="_blank" rel="noopener">Magnesium status and supplementation influence vitamin D status and metabolism: results from a randomized trial</a>. American Journal of Clinical Nutrition, 2018.</li>
+      <li>Prokopidis K et al. <a href="https://doi.org/10.1093/nutrit/nuac064" target="_blank" rel="noopener">Effects of creatine supplementation on memory in healthy individuals: a systematic review and meta-analysis of randomized controlled trials</a>. Nutrition Reviews, 2023, with the authors' <a href="https://doi.org/10.1093/nutrit/nuac111" target="_blank" rel="noopener">corrected analysis</a>.</li>
+      <li>Okereke OI et al. <a href="https://pubmed.ncbi.nlm.nih.gov/32749491/" target="_blank" rel="noopener">Effect of long-term vitamin D3 supplementation vs placebo on risk of depression or clinically relevant depressive symptoms and on change in mood scores</a>. JAMA, 2020.</li>
+      <li>Johnson GH, Fritsche K. <a href="https://pubmed.ncbi.nlm.nih.gov/22889633/" target="_blank" rel="noopener">Effect of dietary linoleic acid on markers of inflammation in healthy persons: a systematic review of randomized controlled trials</a>. Journal of the Academy of Nutrition and Dietetics, 2012.</li>
+      <li>Goldberg RJ, Katz J. <a href="https://pubmed.ncbi.nlm.nih.gov/17335973/" target="_blank" rel="noopener">A meta-analysis of the analgesic effects of omega-3 polyunsaturated fatty acid supplementation for inflammatory joint pain</a>. Pain, 2007.</li>
+      <li>Ottestad I et al. <a href="https://pubmed.ncbi.nlm.nih.gov/22136711/" target="_blank" rel="noopener">Oxidised fish oil does not influence established markers of oxidative stress in healthy human subjects: a randomised controlled trial</a>. British Journal of Nutrition, 2012.</li>
+      <li>Davis DR, Epp MD, Riordan HD. <a href="https://pubmed.ncbi.nlm.nih.gov/15637215/" target="_blank" rel="noopener">Changes in USDA food composition data for 43 garden crops, 1950 to 1999</a>. Journal of the American College of Nutrition, 2004.</li>
     </ol>
   </section>
 </main>
@@ -542,7 +832,7 @@ section[id]{scroll-margin-top:84px}
 <footer class="sd-foot">
   <a class="sd-logo" href="/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
   <div class="sd-tag">Feel · Grow · Move</div>
-  <nav class="sd-more" aria-label="More guides"><a href="/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="/undertow"><i style="background:var(--chill-bright)"></i>The undertow</a><a href="/obsessive-by-nature"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="/fascia"><i style="background:var(--constructive)"></i>Fascia</a><a href="/eye-movement"><i style="background:var(--constructive)"></i>Eye movement</a><a href="/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <nav class="sd-more" aria-label="More guides"><a href="/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="/the-undertow"><i style="background:var(--chill-bright)"></i>The undertow</a><a href="/obsessive-by-nature"><i style="background:var(--curious)"></i>Obsessive by nature</a><a href="/fascia"><i style="background:var(--constructive)"></i>Fascia</a><a href="/eye-movement"><i style="background:var(--constructive)"></i>Eye movement</a><a href="/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
   <div class="sd-divider"></div>
   <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
   <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
@@ -555,25 +845,43 @@ section[id]{scroll-margin-top:84px}
 (function(){
   var KEY = 'sdh-runsheet-v1';
   var DEFAULTS = {
-    settings: { wake:'06:30', focus:'09:00', bed:'22:30', active:true },
-    doses: { mg:'200 mg elemental', o3:'1,000 mg EPA', d3:'2,000 IU (50 µg)', ag:'300 mg', cr:'5 g', glam:'5 g', gl:'5 g', cq:'100 mg' },
+    settings: { wake:'06:30', focus:'09:00', dinner:'18:30', bed:'22:30', active:true },
+    doses: { mg:'200 mg elemental', o3:'1,000 mg EPA', d3:'2,000 IU (50 µg)', ag:'300 mg', cr:'5 g', glam:'5 g', gl:'5 g', cq:'100 mg', gy:'3 g', ps:'10 g (about 2 tbsp husk)', gr:'1 serve, per label' },
+    on: {},
     log: {}
   };
-  var SUPPS = [
-    { id:'d3', name:'Vitamin D3', cue:'meal' },
-    { id:'o3', name:'Omega-3', cue:'meal' },
-    { id:'cq', name:'CoQ10', cue:'meal' },
-    { id:'cr', name:'Creatine monohydrate', cue:'meal' },
-    { id:'glam', name:'L-glutamine', cue:'meal', optional:true, note:'or take it all as one dose before bed' },
-    { id:'ag', name:'Alpha-GPC', cue:'focus', situational:true },
-    { id:'mg', name:'Magnesium glycinate', cue:'bed' },
-    { id:'gl', name:'L-glutamine', cue:'bed' }
+  /* what can be switched on or off; src: th = thread, dk = deck, ad = added here */
+  var STACK = [
+    { key:'mg', name:'Magnesium', src:['th','dk'] },
+    { key:'o3', name:'Omega-3', src:['th','dk'] },
+    { key:'d3', name:'Vitamin D3', src:['th','dk'] },
+    { key:'ag', name:'Alpha-GPC', src:['th'] },
+    { key:'cr', name:'Creatine', src:['th','dk'] },
+    { key:'gy', name:'Glycine', src:['dk'] },
+    { key:'ps', name:'Psyllium', src:['dk'] },
+    { key:'gr', name:'Greens or multi', src:['dk'] },
+    { key:'gl', name:'L-glutamine', src:['ad'] },
+    { key:'cq', name:'CoQ10', src:['ad'] }
   ];
-  var REQUIRED_N = SUPPS.filter(function(s){ return !s.optional; }).length;
+  var SRC_LABEL = { th:'the thread', dk:'the deck' };
+  var SUPPS = [
+    { id:'d3', key:'d3', name:'Vitamin D3', cue:'meal' },
+    { id:'o3', key:'o3', name:'Omega-3', cue:'meal' },
+    { id:'cq', key:'cq', name:'CoQ10', cue:'meal' },
+    { id:'cr', key:'cr', name:'Creatine monohydrate', cue:'meal' },
+    { id:'glam', key:'gl', name:'L-glutamine', cue:'meal', optional:true, note:'or take it all as one dose before bed' },
+    { id:'gr', key:'gr', name:'Greens powder or multivitamin', cue:'meal', optional:true, note:'for travel, busy or off-track days' },
+    { id:'ag', key:'ag', name:'Alpha-GPC', cue:'focus', situational:true },
+    { id:'ps', key:'ps', name:'Psyllium husk', cue:'dinner', note:'in a full glass of water, 2 hours apart from medicines' },
+    { id:'mg', key:'mg', name:'Magnesium glycinate', cue:'bed' },
+    { id:'gy', key:'gy', name:'Glycine', cue:'bed' },
+    { id:'gl', key:'gl', name:'L-glutamine', cue:'bed' }
+  ];
   var CUES = [
-    { id:'meal',  label:'Breakfast stack', note:'With a meal that has some fat in it.', rel:'Wake +60 min', at:function(s){ return toMin(s.wake) + 60; } },
-    { id:'focus', label:'Pre-focus',       note:'Before your first focus block or training session.', rel:'Focus −30 min', at:function(s){ return toMin(s.focus) - 30; } },
-    { id:'bed',   label:'Wind-down',       note:'Screens down, lights low.', rel:'Lights out −45 min', at:function(s){ return toMin(s.bed) - 45; } }
+    { id:'meal',   label:'Breakfast stack', note:'With a meal that has some fat in it.', rel:'Wake +60 min', at:function(s){ return toMin(s.wake) + 60; } },
+    { id:'focus',  label:'Pre-focus',       note:'Before your first focus block or training session.', rel:'Focus −30 min', at:function(s){ return toMin(s.focus) - 30; } },
+    { id:'dinner', label:'Pre-dinner',      note:'Half an hour before your evening meal.', rel:'Dinner −30 min', at:function(s){ return toMin(s.dinner) - 30; } },
+    { id:'bed',    label:'Wind-down',       note:'Screens down, lights low.', rel:'Lights out −45 min', at:function(s){ return toMin(s.bed) - 45; } }
   ];
 
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
@@ -585,6 +893,7 @@ section[id]{scroll-margin-top:84px}
         var out = clone(DEFAULTS);
         Object.keys(s.settings || {}).forEach(function(k){ out.settings[k] = s.settings[k]; });
         Object.keys(s.doses || {}).forEach(function(k){ if (typeof s.doses[k] === 'string') out.doses[k] = s.doses[k]; });
+        Object.keys(s.on || {}).forEach(function(k){ out.on[k] = !!s.on[k]; });
         out.log = s.log && typeof s.log === 'object' ? s.log : {};
         return out;
       }
@@ -605,8 +914,10 @@ section[id]{scroll-margin-top:84px}
   function fmt(m){ m = wrap(m); var h = Math.floor(m / 60), mm = m % 60; return (h < 10 ? '0' : '') + h + ':' + (mm < 10 ? '0' : '') + mm; }
   function dayKey(d){ var y = d.getFullYear(), m = d.getMonth() + 1, dd = d.getDate(); return y + '-' + (m < 10 ? '0' : '') + m + '-' + (dd < 10 ? '0' : '') + dd; }
   function nowMin(){ var d = new Date(); return d.getHours() * 60 + d.getMinutes(); }
+  function keyOn(k){ return state.on[k] !== false; }
+  function isOn(s){ return keyOn(s.key); }
   function isRest(s){ return !!s.situational && !state.settings.active; }
-  function isDue(s){ return !s.optional && !isRest(s); }
+  function isDue(s){ return isOn(s) && !s.optional && !isRest(s); }
   function dueSupps(){ return SUPPS.filter(isDue); }
   function todayLog(create){
     var k = dayKey(new Date());
@@ -618,14 +929,32 @@ section[id]{scroll-margin-top:84px}
 
   var CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>';
 
+  /* cues in time order, holding only the items switched on; empty cues drop out */
   function schedule(){
     return CUES.map(function(c){
-      return { cue:c, min:wrap(c.at(state.settings)), supps:SUPPS.filter(function(s){ return s.cue === c.id; }) };
-    }).sort(function(a, b){ return a.min - b.min; });
+      return { cue:c, min:wrap(c.at(state.settings)), supps:SUPPS.filter(function(s){ return s.cue === c.id && isOn(s); }) };
+    }).filter(function(r){ return r.supps.length > 0; }).sort(function(a, b){ return a.min - b.min; });
+  }
+
+  function renderStack(){
+    document.getElementById('stack').innerHTML = STACK.map(function(t){
+      var on = keyOn(t.key);
+      var dots = t.src.map(function(c){ return '<i class="sdot ' + c + '"></i>'; }).join('');
+      var from = t.src[0] === 'ad' ? 'Added by selfdriven.health' : 'In ' + t.src.map(function(c){ return SRC_LABEL[c]; }).join(' and ');
+      return '<button type="button" class="stk" data-key="' + t.key + '" aria-pressed="' + on + '" title="' + esc(from) + '">' +
+        '<span class="bx">' + CHECK + '</span>' + esc(t.name) + '<span class="dots" aria-hidden="true">' + dots + '</span></button>';
+    }).join('');
   }
 
   function renderSheet(){
     var log = todayLog(false), now = nowMin(), rows = schedule();
+    var onCount = STACK.filter(function(t){ return keyOn(t.key); }).length;
+    document.getElementById('sheetNote').textContent = 'Times follow your settings · ' + onCount + ' of ' + STACK.length + ' on your sheet · tick each item when taken';
+    if (!rows.length) {
+      document.getElementById('cues').innerHTML = '<li class="sheet-empty">Nothing is on your sheet. Switch items on under "On my sheet" above.</li>';
+      document.getElementById('nextCue').innerHTML = '<strong>Nothing on your sheet.</strong> Pick what your results call for.';
+      return;
+    }
     var pending = rows.filter(function(r){
       return r.supps.some(function(s){ return isDue(s) && !log[s.id]; });
     });
@@ -656,7 +985,7 @@ section[id]{scroll-margin-top:84px}
 
     var nextEl = document.getElementById('nextCue');
     if (!pending.length) {
-      nextEl.innerHTML = '<strong>All done for today.</strong> Same again tomorrow.';
+      nextEl.innerHTML = dueSupps().length ? '<strong>All done for today.</strong> Same again tomorrow.' : '<strong>Nothing due today.</strong> Only optional or rest-day items are on.';
     } else if (nextRow) {
       var mins = nextRow.min - now;
       nextEl.innerHTML = 'Next: <strong>' + fmt(nextRow.min) + ' ' + esc(nextRow.cue.label) + '</strong>, ' + (mins === 0 ? 'now' : 'in ' + relDur(mins)) + '.';
@@ -673,17 +1002,17 @@ section[id]{scroll-margin-top:84px}
     document.getElementById('dueCount').textContent = due.length;
     var C = 251.33, frac = due.length ? done / due.length : 0;
     document.getElementById('ringVal').setAttribute('stroke-dashoffset', String(C * (1 - frac)));
-    document.getElementById('ring').classList.toggle('full', frac >= 1);
+    document.getElementById('ring').classList.toggle('full', due.length > 0 && frac >= 1);
 
     var wk = [], today = new Date();
     for (var i = 6; i >= 0; i--) {
       var d = new Date(today.getFullYear(), today.getMonth(), today.getDate() - i);
       var k = dayKey(d), l = state.log[k] || {};
-      var n = i === 0 ? due.length : (l._n || REQUIRED_N);
+      var n = i === 0 ? due.length : (l._n || due.length);
       var c = SUPPS.filter(function(s){ return !s.optional && !!l[s.id]; }).length;
       var f = Math.min(1, n ? c / n : 0);
       var wd = d.toLocaleDateString('en-AU', { weekday:'short' });
-      wk.push('<div class="day' + (i === 0 ? ' is-today' : '') + (f >= 1 ? ' full' : '') + '" title="' + wd + ' ' + d.getDate() + ': ' + c + ' of ' + n + '">' +
+      wk.push('<div class="day' + (i === 0 ? ' is-today' : '') + (f >= 1 ? ' full' : '') + '" title="' + wd + ' ' + d.getDate() + ': ' + Math.min(c, n) + ' of ' + n + '">' +
         '<div class="bar"><div class="fill" style="height:' + Math.round(f * 100) + '%"></div></div><span>' + wd.slice(0, 2) + ' ' + d.getDate() + '</span></div>');
     }
     document.getElementById('week').innerHTML = wk.join('');
@@ -706,8 +1035,10 @@ section[id]{scroll-margin-top:84px}
 
   function renderAll(){ renderSheet(); renderProgress(); renderD3(); }
 
+  function noteDueCount(){ if (state.log[dayKey(new Date())]) state.log[dayKey(new Date())]._n = dueSupps().length; }
+
   function initControls(){
-    ['wake', 'focus', 'bed'].forEach(function(id){
+    ['wake', 'focus', 'dinner', 'bed'].forEach(function(id){
       var el = document.getElementById(id);
       el.value = state.settings[id];
       el.addEventListener('change', function(){ if (el.value) { state.settings[id] = el.value; save(); renderAll(); } });
@@ -717,8 +1048,19 @@ section[id]{scroll-margin-top:84px}
     sw.addEventListener('click', function(){
       state.settings.active = !state.settings.active;
       sw.setAttribute('aria-checked', String(state.settings.active));
-      var l = todayLog(false); if (state.log[dayKey(new Date())]) l._n = dueSupps().length;
+      noteDueCount();
       save(); renderAll();
+    });
+    renderStack();
+    document.getElementById('stack').addEventListener('click', function(e){
+      var b = e.target.closest('.stk'); if (!b) return;
+      var k = b.getAttribute('data-key'), on = !keyOn(k);
+      state.on[k] = on;
+      b.setAttribute('aria-pressed', String(on));
+      noteDueCount();
+      save(); renderAll();
+      var t = STACK.filter(function(x){ return x.key === k; })[0];
+      if (t) toast(t.name + (on ? ' added to' : ' removed from') + ' your sheet');
     });
     Array.prototype.forEach.call(document.querySelectorAll('.dose-in'), function(inp){
       var id = inp.getAttribute('data-id');
@@ -739,10 +1081,13 @@ section[id]{scroll-margin-top:84px}
   function sheetText(){
     var d = new Date();
     var lines = ['selfdriven.health · Daily run sheet · ' + d.toLocaleDateString('en-AU', { weekday:'short', day:'numeric', month:'short', year:'numeric' }), ''];
-    schedule().forEach(function(r){
+    var rows = schedule();
+    if (!rows.length) lines.push('Nothing on the sheet yet.');
+    rows.forEach(function(r){
       lines.push(fmt(r.min) + '  ' + r.cue.label);
       r.supps.forEach(function(s){
-        lines.push('       ' + (isRest(s) ? '(skip) ' : '[ ] ') + s.name + ' · ' + state.doses[s.id] + (s.optional ? ' (optional, ' + s.note + ')' : ''));
+        var extra = s.optional ? ' (optional, ' + s.note + ')' : (s.note ? ' (' + s.note + ')' : '');
+        lines.push('       ' + (isRest(s) ? '(skip) ' : '[ ] ') + s.name + ' · ' + state.doses[s.id] + extra);
       });
     });
     lines.push('', 'General information, not medical advice.');

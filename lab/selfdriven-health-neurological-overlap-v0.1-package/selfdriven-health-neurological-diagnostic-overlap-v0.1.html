@@ -1,0 +1,323 @@
+<!DOCTYPE html><html lang="en-AU"><head><meta charset="utf-8"><title>Neurological Diagnostic Overlap - selfdriven.health</title><style>
+@page { size: A4; margin: 20mm 18mm 19mm; 
+ @top-right { content: 'SELFDRIVEN.HEALTH   /   RESEARCH v0.1'; color: #667b85; font: 8pt "DejaVu Sans"; } 
+ @bottom-left { content: '25 OCTOBER 2026  |  RESEARCH - NOT MEDICAL ADVICE'; color: #78929a; font: 7.2pt "DejaVu Sans"; }
+ @bottom-right { content: counter(page); color: #476873; font: 9pt "DejaVu Sans"; } }
+html, body {font-family: 'DejaVu Sans', sans-serif; color:#20343b; background:white;}
+body { font-size:9.2pt; line-height:1.43; }
+h1 {font-family:'DejaVu Sans',sans-serif; font-size:27pt; line-height:1.13; color:#0b3443; letter-spacing:-.8px; margin:4mm 0 3mm; border-bottom: 2.4pt solid #0e8891; padding-bottom:4mm;}
+h1 + p {font-size:11pt; color:#587581; margin-bottom:9mm;}
+h2 {font-size:14pt; color:#104c58; margin:8mm 0 2.8mm; padding-top:1.5mm; border-top:.7pt solid #d8e8e9; break-after:avoid;}
+h3 {font-size:10.8pt; color:#126c75; margin:5mm 0 1.7mm; break-after:avoid;}
+p {margin: 0 0 3.15mm; orphans:3; widows:3; }
+ul, ol {padding-left:6mm; margin-top:1.5mm; margin-bottom:4mm;}
+li {margin-bottom:1.1mm;}
+blockquote {border-left: 3px solid #0d8390; background:#eef6f6; padding:3.4mm 4mm; margin: 4mm 0 5mm; color:#254b54; border-radius:0 3mm 3mm 0;}
+blockquote p:last-child {margin-bottom:0;}
+table {width:100%; border-collapse:collapse; table-layout:fixed; font-size:8.1pt; margin:4mm 0 5mm;}
+th {background:#155665;color:white; font-weight:600; text-align:left; padding:2.6mm 2mm;}
+td {vertical-align:top; padding:2.35mm 2mm; border-bottom:.5pt solid #d5e0e2; overflow-wrap:anywhere;}
+tr:nth-child(even) td {background:#f4f9f9;}
+tr {break-inside:avoid;}
+table th:first-child,table td:first-child{width:26%;}
+code {font-family:'DejaVu Sans Mono',monospace; background:#f0f5f5; color:#0a515b; font-size:8pt; padding:.5px 2px;}
+pre {font-family:'DejaVu Sans Mono',monospace; font-size:7.2pt; white-space:pre-wrap; overflow-wrap:anywhere; background:#eaf2f3; padding:3.5mm 4mm; border-left:2px solid #16a1a5; border-radius:2mm; break-inside:avoid;}
+pre code {background:transparent; color:#163c45; padding:0;}
+a {color:#056e86; text-decoration:none; overflow-wrap:anywhere;}
+strong {color:#104c58;}
+hr {border:0; border-top:.8pt solid #bdd1d5; margin:6mm 0 3mm;}
+/* Keep bibliography links legible */
+h2#references ~ ol, h2#references ~ p {font-size:8.0pt;}
+@media print { p,li,td,th {hyphens:auto;} }
+</style></head><body><h1 id="neurological-diagnostic-overlap">Neurological Diagnostic Overlap</h1>
+<p><strong>MS mimics, peripheral nerve conditions and restless legs</strong><br />
+<strong>selfdriven.health | Research and implementation framework | v0.1 | 25 October 2026</strong></p>
+<blockquote>
+<p><strong>Purpose and limits.</strong> This is a research and patient-education design, not a diagnostic instrument, validated clinical pathway or medical advice. It must not be used to diagnose or exclude multiple sclerosis (MS), functional neurological disorder (FND), restless legs syndrome (RLS) or neuropathy. Suspected MS requires specialist assessment. New serious neurological symptoms require urgent clinical assessment, not an online pattern sorter. No individual discussed here has been clinically assessed by this project.</p>
+</blockquote>
+<h2 id="executive-summary">Executive summary</h2>
+<p>Neurological symptoms are frequently <strong>non-specific</strong>, while the diseases that produce them may involve different parts of the nervous system. Numbness, unusual leg sensations, sleep disruption, gait changes and pain can arise from central nervous system disease, nerve-root disease, peripheral neuropathy, focal nerve entrapment, RLS, or more than one disorder at once. Similar descriptions do not mean identical mechanisms.</p>
+<p>The existing <a href="https://www.selfdriven.health/restless-legs">selfdriven.health restless-legs guide</a> already separates three pathways: <strong>look-alike</strong>, <strong>coexistence</strong>, and the still-unproven possibility that nerve irritation <strong>aggravates RLS</strong>. This extension applies that disciplined approach to <strong>neurological diagnostic overlap</strong>, including MS mimics. The aim is to improve the <em>questions asked</em>, not automate a diagnosis.</p>
+<p>A 2024 systematic review reported a pooled <strong>15% MS misdiagnosis proportion</strong> (95% CI 9%-26%) across six selected studies, with marked variation and selection bias; it is <strong>not</strong> a reliable probability for an individual patient [1]. A separate systematic review reported RLS in <strong>28% of MS/CIS participants</strong> versus <strong>8% of controls</strong>, demonstrating association rather than causation [2]. These findings justify careful differential diagnosis and recognition of comorbidity - not the conclusion that nerve entrapment is an undiscovered cause of MS-like disease.</p>
+<p>The proposed framework has five commitments:</p>
+<ol type="1">
+<li><strong>Localise before labelling:</strong> distinguish signs pointing to the brain/spinal cord, spinal nerve roots, peripheral nerves, sleep-related sensorimotor symptoms, and mixed presentations.</li>
+<li><strong>Do not collapse overlapping explanations:</strong> allow two or more conditions to be recorded as simultaneously plausible or established.</li>
+<li><strong>Treat contradictions as important evidence:</strong> a diagnosis should account for the full clinical picture; unexplained signs must remain visible.</li>
+<li><strong>Keep safety and humans in control:</strong> urgent features override all educational pathways; only clinicians interpret examinations, MRIs, nerve studies and disease criteria.</li>
+<li><strong>Make every knowledge claim inspectable:</strong> attach a citation, an evidence grade and an update/review date to the information shown.</li>
+</ol>
+<h2 id="what-is-established-and-what-is-not">1. What is established, and what is not?</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Evidence or proposition</th>
+<th>Current interpretation</th>
+<th>Evidence status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MS is sometimes misdiagnosed, and MS can also be missed</td>
+<td>Yes. Different study populations yield very different estimates. Diagnostic errors matter in both directions [1,3].</td>
+<td><strong>Established; prevalence varies</strong></td>
+</tr>
+<tr class="even">
+<td>MS has several clinical and imaging mimics</td>
+<td>Yes. Migraine/vascular white-matter changes, NMOSD, MOG-associated disease and other conditions warrant specialist differential assessment [3,4].</td>
+<td><strong>Established</strong></td>
+</tr>
+<tr class="odd">
+<td>RLS is more common among people with MS than controls</td>
+<td>Meta-analysis reports 28% versus 8%, with heterogeneity and potential confounding [2].</td>
+<td><strong>Association established</strong></td>
+</tr>
+<tr class="even">
+<td>Peripheral neuropathy and RLS can coexist</td>
+<td>Supported in pooled observational studies, as summarised in the existing selfdriven.health guide [5].</td>
+<td><strong>Association supported</strong></td>
+</tr>
+<tr class="odd">
+<td>A local nerve entrapment can produce symptoms mistaken for RLS</td>
+<td>Plausible and well recognised as a differential: sensory symptoms can resemble the subjective experience of RLS, while RLS requires five criteria including exclusion of mimics [6].</td>
+<td><strong>Differential-diagnosis principle established</strong></td>
+</tr>
+<tr class="even">
+<td>Treating peripheral nerve entrapment reverses MS or explains extensive CNS findings</td>
+<td>No good evidence supports this. A focal ankle or leg nerve lesion cannot account for typical optic-nerve or brain lesions, for example.</td>
+<td><strong>Unsupported</strong></td>
+</tr>
+<tr class="odd">
+<td>Releasing peripheral nerves treats true RLS</td>
+<td>Small uncontrolled surgical studies reported improvement, but cannot establish efficacy and are not a guideline-endorsed RLS treatment [5,7].</td>
+<td><strong>Exploratory only</strong></td>
+</tr>
+<tr class="even">
+<td>Peripheral nerve irritation could worsen independently existing RLS</td>
+<td>Worth testing, but a causal relationship has not been demonstrated.</td>
+<td><strong>Hypothesis</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-current-ms-criteria-matter">Why current MS criteria matter</h3>
+<p>The <em>2024 revisions of the McDonald criteria</em> were published in 2025. They incorporate the optic nerve as an additional CNS location and, where appropriate, incorporate supportive evidence such as the central vein sign, paramagnetic rim lesions and CSF kappa free light chains [8]. Their use requires clinical context and expertise. A symptom questionnaire should never attempt to substitute for those criteria. NICE advises that specialist assessment should combine history, examination, MRI and laboratory evidence and exclude alternative diagnoses [9].</p>
+<h2 id="the-three-layer-model">2. The three-layer model</h2>
+<h3 id="layer-a---look-alikes">Layer A - Look-alikes</h3>
+<p>A symptom may sound similar across different conditions even when the underlying pathway differs. For example, unpleasant sensations at rest can be caused by RLS, positional discomfort, cramps or neuropathic symptoms. Intermittent foot tingling after ankle trauma can point toward a focal nerve problem. Neither pattern, by itself, establishes the cause.</p>
+<h3 id="layer-b---coexisting-conditions">Layer B - Coexisting conditions</h3>
+<p>MS and RLS can coexist; diabetes-related neuropathy and RLS can coexist; a person with central neurological disease can also have a mechanical nerve entrapment. The framework should allow multiple explanations to remain active and should not present every finding as either/or.</p>
+<h3 id="layer-c---possible-interactions">Layer C - Possible interactions</h3>
+<p>An injury, pain, insomnia or nerve irritation might worsen an established sleep-related sensorimotor problem, but this is an <em>interaction hypothesis</em>, not proof of a shared cause. Research should measure each dimension separately so that improvement in one symptom is not mistaken for reversal of another disease.</p>
+<h2 id="clinician-facing-localisation-map">3. Clinician-facing localisation map</h2>
+<p>The following table is a <strong>conversation aid</strong>, not a diagnostic classification algorithm. Presentations can overlap, and exceptions are common.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pattern being explored</th>
+<th>Findings that may raise the question</th>
+<th>What it does <strong>not</strong> establish</th>
+<th>Appropriate clinical route</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CNS inflammatory/demyelinating disease, including MS</strong></td>
+<td>Objective findings involving brain, optic nerve or spinal cord; characteristic clinical episodes; specialist-interpreted MRI/CSF evidence</td>
+<td>Tingling, fatigue or an incidental MRI lesion alone does not establish MS</td>
+<td>Neurologist/neuroimmunologist; current criteria and mimics review [4,8,9]</td>
+</tr>
+<tr class="even">
+<td><strong>Spinal cord disease / myelopathy</strong></td>
+<td>Gait change, hand clumsiness, upper motor-neuron signs; potential bladder/bowel symptoms</td>
+<td>A foot symptom does not exclude spinal cord pathology</td>
+<td>Prompt or urgent medical assessment according to severity [10]</td>
+</tr>
+<tr class="odd">
+<td><strong>Nerve-root disease / radiculopathy</strong></td>
+<td>Limb symptoms related to spine, radiating or dermatomal pain; possible focal weakness</td>
+<td>Not all radiating pain is nerve-root disease</td>
+<td>Clinical examination; selective testing or imaging [10,11]</td>
+</tr>
+<tr class="even">
+<td><strong>Length-dependent polyneuropathy</strong></td>
+<td>Symmetrical distal numbness, burning or sensory loss; possible diabetes, B12 deficiency, toxins, other causes</td>
+<td>Cannot be confirmed by a website score</td>
+<td>GP/neurology; targeted laboratory work-up and selective electrodiagnostics [11]</td>
+</tr>
+<tr class="odd">
+<td><strong>Focal entrapment neuropathy</strong></td>
+<td>Local distribution consistent with one nerve; relevant pressure, injury, scar, footwear or position</td>
+<td>A scar does not prove entrapment; an entrapment does not explain unrelated CNS features</td>
+<td>Focused exam; imaging/EMG selectively and with limitations [5,11]</td>
+</tr>
+<tr class="even">
+<td><strong>RLS / Willis-Ekbom disease</strong></td>
+<td>Urge to move, triggered by inactivity, eased by movement, evening/night predominance, <strong>not solely explained by a mimic</strong></td>
+<td>RLS does not ordinarily explain persistent objective motor loss or CNS MRI lesions</td>
+<td>Clinical diagnosis; check iron studies and aggravating factors where relevant [6,12]</td>
+</tr>
+<tr class="odd">
+<td><strong>FND or other functional symptoms</strong></td>
+<td>Positive examination signs of functional weakness/movement or other recognised FND features, assessed by a clinician</td>
+<td>FND should not be inferred from normal tests, distress or an unexplained symptom</td>
+<td>Neurologist-led <em>positive</em> diagnosis; recognise possible comorbidity [13]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key safety principle:</strong> reporting only a symptom <em>description</em> is not the same as establishing the anatomical site of disease. A clinician’s examination can reveal signs that a diary or questionnaire cannot.</p>
+<h2 id="how-this-relates-to-christina-applegates-announcement">4. How this relates to Christina Applegate’s announcement</h2>
+<p>On 20-21 October 2026, Christina Applegate publicly reported that her medical team no longer considered her original MS diagnosis correct; she also said her disabling symptoms continued and that the underlying explanation remained unresolved [14,15]. This illustrates how consequential diagnostic revision can be. It does <strong>not</strong> establish what her condition is, whether she has RLS, whether nerve entrapment contributes, or the reason her former diagnosis was reversed. Public interviews are not sufficient to interpret an individual’s MRI, CSF results or examination.</p>
+<p><strong>Permitted editorial treatment:</strong> use a short, respectful paragraph on <em>diagnostic uncertainty</em> with a source link; avoid modelling or speculating about her personal diagnosis. The argument for the framework stands independently of her case.</p>
+<h2 id="proposed-selfdriven.health-experience">5. Proposed selfdriven.health experience</h2>
+<p><strong>Suggested URL:</strong> <code>/neurological-overlap</code><br />
+<strong>Page heading:</strong> <em>Similar symptoms. Different causes. Sometimes more than one.</em><br />
+<strong>Cross-link from:</strong> <code>/restless-legs</code> within its “Both at once” and “Getting checked” sections.<br />
+<strong>Positioning:</strong> Educational research guide, Australian context, reviewed sources, not a diagnostic or screening service.</p>
+<h3 id="page-modules">Page modules</h3>
+<p><strong>01 - Start with safety.</strong> State clearly that sudden weakness, stroke-like symptoms, fast worsening weakness/imbalance, new bowel/bladder disturbance with back or leg symptoms, new saddle numbness, severe respiratory or swallowing problems may require immediate medical attention. In Australia use 000 for emergencies; do not delay for the site questionnaire. Details should follow current Australian/NICE referral guidance [10,16].</p>
+<p><strong>02 - Understand the nervous system.</strong> A simple illustration contrasting CNS (brain, optic nerve, spinal cord), nerve roots, distributed peripheral nerves and the RLS symptom pattern. Labels: “Where symptoms may come from”, not “Where your disease is”.</p>
+<p><strong>03 - Which features are present?</strong> Anonymous, optional questions: onset/trajectory; one patch vs bilateral distal vs widespread; urge to move; rest/movement relationship; time of day; persistent weakness or gait change; visual/hand/bladder/bowel symptoms; prior injury; existing diagnoses; current medicine and recent changes. Include “not sure” for each question.</p>
+<p><strong>04 - Three possibilities.</strong> Display <em>look-alike</em>, <em>coexisting conditions</em>, and <em>possible interaction</em> as independently explainable concepts. Explicitly say this page cannot establish any one of them in a person.</p>
+<p><strong>05 - Questions for your clinician.</strong> Produce a concise appointment summary without ranking diagnoses or telling the person which test to obtain. Examples: “What do the examination findings localise to?”; “Which findings remain unexplained?”; “Could there be two concurrent problems?”; “What would change the working diagnosis?”; “When should we review it?”</p>
+<p><strong>06 - Evidence and research hypotheses.</strong> Show citations and the source date next to each statement. Put investigational nerve-surgery research in a clearly separated “Early research” section; never market surgery or suggest it reverses MS.</p>
+<p><strong>07 - Review and correction.</strong> Prominently display last checked, evidence version and a correction channel. Clinical reviewer approval is needed before release.</p>
+<h3 id="interaction-contract---deliberately-non-diagnostic">Interaction contract - deliberately non-diagnostic</h3>
+<p>Inputs can produce only <strong>safety guidance</strong>, <strong>general explanations</strong> and <strong>a clinician conversation summary</strong>. They must <em>not</em> produce an MS likelihood score, a diagnosis label, a test ordering recommendation or a statement that a serious condition has been ruled out.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input group</th>
+<th>Permitted output</th>
+<th>Explicitly prohibited</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Red-flag answers</td>
+<td>Emergency/urgent-care message, localised to Australia</td>
+<td>“Low risk” reassurance from absent answers</td>
+</tr>
+<tr class="even">
+<td>Symptom pattern</td>
+<td>Educational explanation of which features clinicians consider</td>
+<td>“You have RLS”, “not MS”, “trapped nerve confirmed”</td>
+</tr>
+<tr class="odd">
+<td>Existing diagnosis</td>
+<td>Prompt to record uncertainty and unresolved findings</td>
+<td>Overriding a clinician’s diagnosis</td>
+</tr>
+<tr class="even">
+<td>Source claims</td>
+<td>Cited descriptions and graded uncertainty</td>
+<td>Unsourced causal statements or treatment promises</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reference-data-representation-implementation-sketch">Reference data representation (implementation sketch)</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;framework&quot;</span><span class="fu">:</span> <span class="st">&quot;selfdriven.health.neurological-overlap&quot;</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;version&quot;</span><span class="fu">:</span> <span class="st">&quot;0.1&quot;</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;intent&quot;</span><span class="fu">:</span> <span class="st">&quot;education-and-clinician-conversation&quot;</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;observations&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;symptom_distribution&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|focal|length-dependent|widespread|other&quot;</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;course&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|sudden|rapid|persistent|episodic&quot;</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;urge_to_move&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|yes|no&quot;</span><span class="fu">,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;rest_association&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|yes|no&quot;</span><span class="fu">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;movement_relief&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|yes|no&quot;</span><span class="fu">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;evening_predominance&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|yes|no&quot;</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;objective_weakness_reported&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|yes|no&quot;</span><span class="fu">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;walking_change_reported&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|yes|no&quot;</span><span class="fu">,</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;bladder_bowel_change_reported&quot;</span><span class="fu">:</span> <span class="st">&quot;unknown|yes|no&quot;</span><span class="fu">,</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;other_symptoms&quot;</span><span class="fu">:</span> <span class="ot">[]</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;outputs_allowed&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;urgent-care-information&quot;</span><span class="ot">,</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;symptom-summary&quot;</span><span class="ot">,</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;questions-for-clinician&quot;</span><span class="ot">,</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;evidence-explainer&quot;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;outputs_disallowed&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;diagnosis&quot;</span><span class="ot">,</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;probability-of-ms&quot;</span><span class="ot">,</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;exclusion-of-neurological-disease&quot;</span><span class="ot">,</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;treatment-prescription&quot;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>Every observation should separately record <strong>patient-reported</strong>, <strong>clinician-observed</strong> or <strong>test-confirmed</strong> provenance where applicable. “Unknown” must never be interpreted as “no”. Safety routing must not depend on completion of the rest of the form. Unless users explicitly opt in to saving data, the default should be local, ephemeral processing; consider an export-only workflow and accessible privacy notice.</p>
+<h2 id="testable-hypotheses-and-study-design">6. Testable hypotheses and study design</h2>
+<p><strong>H1 - Diagnostic complementarity.</strong> In people with a pre-existing central neurological diagnosis and troublesome leg sensations, standardised RLS and peripheral-nerve symptom recording may identify additional <em>clinician-confirmed</em> comorbid problems. <strong>Primary outcome:</strong> proportion with a secondary clinician-confirmed diagnosis; <strong>not</strong> proportion labelled by a web score.</p>
+<p><strong>H2 - Symptom-specific treatment response.</strong> Among people with independently established peripheral nerve disease and RLS, treating a confirmed peripheral cause may change local pain/paraesthesia while RLS-specific outcomes may change differently. <strong>Outcomes:</strong> validated IRLS scale where appropriate; sleep outcomes; objective examination; medication and iron status. This does <strong>not</strong> propose withdrawing MS therapy or running nerve surgery as an experiment.</p>
+<p><strong>H3 - Revisiting unexplained evidence.</strong> A structured “explained / partially explained / unexplained” evidence list, reviewed by neurologists, could improve the quality of second-opinion documentation. <strong>Outcomes:</strong> completeness, clinician usefulness, review time, discordance resolution and patient understanding. Avoid optimising for the number of diagnoses revised: both underdiagnosis and overdiagnosis can harm patients.</p>
+<h3 id="minimum-defensible-study-sequence">Minimum defensible study sequence</h3>
+<ol type="1">
+<li><strong>Evidence review</strong> - register questions, inclusion criteria and conflicts of interest; publish the traceable evidence graph.</li>
+<li><strong>Clinician co-design</strong> - neurologist/neuroimmunologist, sleep specialist, peripheral-nerve clinician, GP, patient representatives and privacy adviser; address disability access and patient comprehension.</li>
+<li><strong>Safety/usability testing</strong> - simulated emergency cases must <em>always</em> surface an immediate action message; test cases with multiple simultaneous conditions and missing information.</li>
+<li><strong>Prospective observational feasibility</strong> - with ethics approval where required, use consent-based symptom diaries and clinician assessment; no algorithm-directed treatment.</li>
+<li><strong>Validation before clinical claims</strong> - preregister outcomes, quantify false reassurance and diagnosis anchoring risk, analyse subgroup performance and submit results for independent review.</li>
+</ol>
+<h2 id="acceptance-criteria-for-a-first-release">7. Acceptance criteria for a first release</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />The page has no disease-probability scores, diagnoses or claims to exclude MS.</label></li>
+<li><label><input type="checkbox" />Every safety-critical route is available before any elective questions.</label></li>
+<li><label><input type="checkbox" />“Unknown / unsure” is an acceptable answer everywhere and never silently becomes “no”.</label></li>
+<li><label><input type="checkbox" />A user can select several overlapping symptom patterns; no mutually exclusive result is forced.</label></li>
+<li><label><input type="checkbox" />Statements about MS follow the current published criteria and do not interpret MRI/CSF for an individual.</label></li>
+<li><label><input type="checkbox" />RLS descriptions preserve all <strong>five</strong> essential criteria, especially exclusion of mimics.</label></li>
+<li><label><input type="checkbox" />All claims have traceable links, evidence level, last-reviewed date and revision ownership.</label></li>
+<li><label><input type="checkbox" />Applegate is discussed only as an example of diagnostic uncertainty, without a theory about her disease.</label></li>
+<li><label><input type="checkbox" />A GP/neurology reviewer has verified the urgent-care wording for Australia.</label></li>
+<li><label><input type="checkbox" />A prototype is tested with both <em>false MS</em> and <em>missed MS</em> scenarios, as well as comorbidity.</label></li>
+<li><label><input type="checkbox" />No treatment, medication withdrawal or surgery is recommended by an automated output.</label></li>
+<li><label><input type="checkbox" />The “Questions for your clinician” export can be produced without storing health data remotely.</label></li>
+</ul>
+<h2 id="recommended-editorial-copy-ready-for-adaptation">8. Recommended editorial copy (ready for adaptation)</h2>
+<blockquote>
+<p><strong>When neurological symptoms overlap</strong><br />
+Numbness, odd leg sensations, pain, restless sleep and difficulty moving may have very different causes. Some conditions resemble one another; some occur together; and a symptom can change even while another problem remains. A restless-legs pattern is not the same as a diagnosis of MS, nor does a trapped nerve explain every neurological symptom. This guide shows how clinicians distinguish patterns and what questions can make an appointment more productive. It cannot diagnose you or rule out serious neurological disease. If you develop sudden weakness, rapidly worsening difficulty walking, or new bladder or bowel problems, seek urgent medical assessment.</p>
+</blockquote>
+<p><strong>Suggested link text from the existing RLS guide:</strong> “Symptoms outside the legs, difficulty walking, or an existing neurological diagnosis? Explore why neurological conditions can overlap.”</p>
+<h2 id="evidence-limitations-and-governance">9. Evidence limitations and governance</h2>
+<p>The literature on misdiagnosis uses highly selected populations and changing criteria. The prevalence of RLS in MS is heterogeneous and does not resolve whether the conditions share mechanisms. Peripheral entrapment operations for RLS have not been shown effective by adequately controlled trials. This framework is therefore chiefly an <strong>information-quality and diagnostic-process</strong> research proposal, not a new disease theory.</p>
+<p>Any deployment must explicitly separate <strong>source fact</strong> from <strong>model inference</strong> and from <strong>editorial hypothesis</strong>. Source updates and clinical review should be logged with a version identifier. External use in clinical decision-making would require governance, validation, appropriate regulatory review and integration with clinical workflows.</p>
+<h2 id="references">References</h2>
+<ol type="1">
+<li>Zürrer WE, et al. <em>Misdiagnosis and underdiagnosis of multiple sclerosis: a systematic review and meta-analysis.</em> Mult Scler. 2024. <a href="https://doi.org/10.1177/13524585241274527">View source</a></li>
+<li><em>The prevalence of restless legs syndrome in patients with multiple sclerosis: a systematic review and meta-analysis - an update.</em> 2022. <a href="https://pubmed.ncbi.nlm.nih.gov/36058956/">View source</a></li>
+<li><em>Misdiagnosis of Multiple Sclerosis: Past, Present, and Future.</em> Curr Neurol Neurosci Rep. 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/39243340/">View source</a></li>
+<li><em>Differential diagnosis of suspected multiple sclerosis: an updated consensus approach.</em> Lancet Neurol. 2023. <a href="https://pubmed.ncbi.nlm.nih.gov/37479377/">View source</a></li>
+<li>selfdriven.health. <em>Restless legs, or a trapped nerve?</em> Sources and limitations reviewed October 2026. <a href="https://www.selfdriven.health/restless-legs">View source</a></li>
+<li>Allen RP, et al. <em>Restless legs syndrome/Willis-Ekbom disease diagnostic criteria: updated IRLSSG consensus criteria.</em> Sleep Med. 2014. <a href="https://pubmed.ncbi.nlm.nih.gov/25023924/">View source</a></li>
+<li>Winkelman JW, et al. <em>Treatment of RLS and periodic limb movement disorder: AASM clinical practice guideline.</em> J Clin Sleep Med. 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11701286/">View source</a></li>
+<li>Montalban X, et al. <em>Diagnosis of multiple sclerosis: 2024 revisions of the McDonald criteria.</em> Lancet Neurol. 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/40975101/">View source</a></li>
+<li>NICE. <em>Multiple sclerosis in adults: management</em> (NG220), diagnosis recommendations, amended 2026. <a href="https://www.nice.org.uk/guidance/ng220/chapter/Recommendations">View source</a></li>
+<li>NICE. <em>Suspected neurological conditions: recognition and referral</em> (NG127). <a href="https://www.nice.org.uk/guidance/ng127/chapter/Recommendations-for-adults-aged-over-16">View source</a></li>
+<li>Castelli G, Desai KM, Cantone RE. <em>Peripheral Neuropathy: Evaluation and Differential Diagnosis.</em> Am Fam Physician. 2020. <a href="https://www.aafp.org/afp/2020/1215/p732">View source</a></li>
+<li>Winkelman JW, et al. AASM guideline above; iron and aggravating-factor guidance [7]. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11701286/">View source</a></li>
+<li><em>Managing functional neurological disorder: treatment recommendations for health professionals in Australia.</em> BMJ Neurol Open. 2025. <a href="https://neurologyopen.bmj.com/content/7/1/e000970">View source</a></li>
+<li>ABC News Australia. <em>Christina Applegate says she was misdiagnosed with MS.</em> 21 October 2026. <a href="https://www.abc.net.au/news/2026-10-21/christina-applegate-says-she-was-misdiagnosed-with-ms/107291302">View source</a></li>
+<li>MS Society UK. <em>Christina Applegate’s MS misdiagnosis.</em> 22 October 2026. <a href="https://www.mssociety.org.uk/research/news/christina-applegates-ms-misdiagnosis">View source</a></li>
+<li>NSW Health. <em>Back pain in adult patients - emergency referral criteria.</em> 2026. <a href="https://www.health.nsw.gov.au/outpatients/referrals/Pages/back-pain-adult.aspx">View source</a></li>
+</ol>
+<hr />
+<p><strong>Document status:</strong> Research concept and product specification; not clinically endorsed.<br />
+<strong>Next gate:</strong> Clinical source review, safety validation, then web implementation.<br />
+<strong>Suggested ownership:</strong> selfdriven.health evidence/editorial team and independent clinical reviewers.</p>
+</body></html>
