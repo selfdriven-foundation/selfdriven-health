@@ -269,7 +269,8 @@ section[id]{scroll-margin-top:84px}
 .pt-soon{background:rgba(255,255,255,.06);color:var(--muted)}
 .pcard.soon{background:transparent;border:1.5px dashed var(--border2)}
 .pcard.soon:hover{transform:none;box-shadow:none}
-@media (min-width:921px){.pcards .pcard.soon{grid-column:1/-1}}
+/* Coming next fills the last cell while live guides = 3n+2 (14 now); use grid-column:1/-1 when live guides = 3n */
+@media (min-width:921px){.pcards .pcard.soon{grid-column:auto}}
 .soon-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:10px}
 .soon-list li{display:inline-flex;align-items:center;gap:8px;border:1.5px dashed var(--border2);border-radius:var(--pill);padding:6px 13px;font-size:13px;color:var(--soft)}
 .soon-list i{width:7px;height:7px;border-radius:50%;display:inline-block}
@@ -520,6 +521,8 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
             <li><a href="/fascia">Fascia and movement</a><span class="st on">Live</span></li>
             <li><a href="/eye-movement">Eye movement routine</a><span class="st on">Live</span></li>
             <li><a href="/vagus-nerve">Vagus nerve</a><span class="st on">Live</span></li>
+            <li><a href="/self-tests">Self-tests: DNA, stool and blood</a><span class="st on">Live</span></li>
+            <li><a href="/self-tests-ai">AI and your test results</a><span class="st on">Live</span></li>
           </ul>
         </article>
       </div>
@@ -696,6 +699,18 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
           <h3>The Vagus Nerve Reset</h3>
           <p>Anna Ferguson’s book on calming the nervous system from the body up. Six everyday levers graded by evidence, a five-minute breathing pacer, and where polyvagal theory stands now.</p>
           <div class="pmeta"><span class="mono">Book guide · 6 levers</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
+        </a>
+        <a class="pcard rev" href="/self-tests">
+          <div class="ptags"><span class="ptag pt-move">Physical</span></div>
+          <h3>Self-tests</h3>
+          <p>DNA, stool and blood tests you can order yourself in Australia, graded by evidence, starting with the ones that are free.</p>
+          <div class="pmeta"><span class="mono">Starting-point picker · 6 questions</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
+        </a>
+        <a class="pcard rev" href="/self-tests-ai">
+          <div class="ptags"><span class="ptag pt-move">Physical</span></div>
+          <h3>AI and your test results</h3>
+          <p>How to ask an AI chatbot about your blood, stool or DNA results without giving away who you are or trusting a wrong answer.</p>
+          <div class="pmeta"><span class="mono">Prompt builder · 6 checks</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
         </a>
         <div class="pcard soon rev">
           <div class="ptags"><span class="ptag pt-soon">Planned</span></div>

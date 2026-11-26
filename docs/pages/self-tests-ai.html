@@ -1,0 +1,979 @@
+---
+layout: null
+title: "AI and self-tests - selfdriven Health"
+permalink: /self-tests-ai
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI and self-tests - selfdriven Health</title>
+<meta name="description" content="How to use AI chatbots such as ChatGPT, Claude, Copilot and Gemini to understand blood, stool and DNA test results in Australia: what the research shows, what to remove before you paste, the settings to check, and a prompt builder that runs in your browser.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='27' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='40' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='53' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* selfdriven.health 4Cs system, dark by design (single look, shared with every guide).
+   Layout: practical guide, companion to /self-tests. Hero = a path of six uses, best first.
+   Amber (Curious) leads because this page is about checking before you act.
+   Colour grades the use: mint = good use, amber = limited, violet = DNA with a counsellor,
+   rose = don't, or take it to a person instead. */
+:root{
+  color-scheme:dark;
+  --bg:#09090f;--surface:#111118;--surface2:#18181f;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#f0eeff;--muted:#8f8bad;--muted2:#3d3a55;
+  --soft:rgba(240,238,255,.8);
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --curious-line:rgba(245,200,66,.3);--caring-line:rgba(255,95,126,.3);--constructive-line:rgba(0,229,160,.3);--chill-line:rgba(123,108,255,.34);
+  --neutral-dim:rgba(240,238,255,.07);
+  --ink:#09090f;
+  --pill:999px;
+  --sd-accent:var(--curious);
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:24px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--curious);outline-offset:2px}
+a{color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* evidence colour sets */
+.d-strong{--c:var(--constructive);--c-dim:var(--constructive-dim);--c-line:var(--constructive-line)}
+.d-depends{--c:var(--curious);--c-dim:var(--curious-dim);--c-line:var(--curious-line)}
+.d-skip{--c:var(--caring);--c-dim:var(--caring-dim);--c-line:var(--caring-line)}
+.d-dna{--c:var(--chill-bright);--c-dim:var(--chill-dim);--c-line:var(--chill-line)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:136px 76px}
+.gblob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.16;z-index:0}
+.gb1{width:520px;height:520px;background:var(--curious);top:-170px;left:-180px;animation:gb 17s ease-in-out infinite}
+.gb2{width:460px;height:460px;background:var(--constructive);top:40px;right:-150px;animation:gb 21s ease-in-out infinite reverse}
+.gb3{width:340px;height:340px;background:var(--chill);bottom:-90px;left:30%;animation:gb 23s ease-in-out infinite 3s}
+.gb4{width:280px;height:280px;background:var(--caring);bottom:20px;right:30%;animation:gb 19s ease-in-out infinite 8s}
+@keyframes gb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(34px,-26px) scale(1.08)}70%{transform:translate(-22px,30px) scale(.93)}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 74% at 50% 50%,rgba(9,9,15,.86),rgba(9,9,15,.55) 46%,rgba(9,9,15,.18) 78%,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:56px;align-items:center}
+.hero-copy{min-width:0}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(9,9,15,.55);border:1px solid rgba(255,255,255,.22);border-radius:var(--pill);padding:8px 18px;font-size:12px;font-weight:500;color:rgba(240,238,255,.7);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--curious);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(40px,6.3vw,76px);line-height:.98;letter-spacing:-.045em;margin:24px 0 20px}
+.grad{background:linear-gradient(90deg,var(--curious),var(--constructive));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:560px;font-size:clamp(17px,2vw,19.5px);line-height:1.55;color:rgba(240,238,255,.9)}
+.byline{margin-top:18px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.byline b{color:var(--soft);font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+
+/* the path card: six starting points, best evidence first */
+.path{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border2);border-radius:22px;padding:24px 26px 18px;box-shadow:0 30px 70px rgba(0,0,0,.55);min-width:0}
+.n-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--border2);margin-bottom:6px}
+.n-title{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.035em}
+.n-count{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.nb{white-space:nowrap}
+.line{position:relative}
+.line::before{content:'';position:absolute;left:11px;top:22px;bottom:22px;width:2px;border-radius:2px;background:linear-gradient(180deg,var(--constructive-line),var(--curious-line),var(--caring-line))}
+.pulses{position:absolute;left:0;top:0;bottom:0;width:24px;pointer-events:none}
+.pulses i{position:absolute;left:8px;width:8px;height:8px;border-radius:50%;opacity:0;background:var(--curious);box-shadow:0 0 10px var(--curious);animation:goDown 4.2s linear infinite}
+@keyframes goDown{0%{top:18px;opacity:0}12%{opacity:1}88%{opacity:1}100%{top:calc(100% - 26px);opacity:0}}
+.stations{list-style:none;position:relative}
+.stations a{position:relative;display:flex;align-items:baseline;gap:10px;padding:10px 0 10px 36px;text-decoration:none;color:var(--soft);font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:-.02em;transition:color .2s}
+.stations a::before{content:'';position:absolute;left:5px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--bg);border:2px solid var(--c);transition:background .2s,transform .2s}
+.stations li.origin a::before{background:var(--c)}
+.stations a:hover,.stations a:focus-visible{color:var(--text)}
+.stations a:hover::before,.stations a:focus-visible::before{background:var(--c);transform:scale(1.15)}
+.stations .lead{flex:1;min-width:16px;border-bottom:1.5px dotted var(--muted2);transform:translateY(-4px)}
+.stations .dom{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);white-space:nowrap}
+.n-foot{margin-top:10px;padding-top:12px;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 16px}
+.n-foot span{display:inline-flex;align-items:center;gap:7px}
+.n-foot i{width:8px;height:8px;border-radius:50%;display:inline-block}
+
+/* pills + chips + buttons */
+.mode-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--pill);font-family:var(--display);font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.mode-pill:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.mode-pill svg{width:16px;height:16px}
+.mp-c{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.mp-k{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.mp-b{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.mp-l{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.mp-solid{background:var(--curious);color:var(--ink);border-color:var(--curious)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:var(--pill);font-family:var(--display);font-size:12.5px;font-weight:600;border:1px solid transparent;line-height:1.5;white-space:nowrap}
+.c-curious{background:var(--curious-dim);color:var(--curious);border-color:var(--curious-line)}
+.c-caring{background:var(--caring-dim);color:var(--caring);border-color:var(--caring-line)}
+.c-constructive{background:var(--constructive-dim);color:var(--constructive);border-color:var(--constructive-line)}
+.c-chill{background:var(--chill-dim);color:var(--chill-bright);border-color:var(--chill-line)}
+.c-neutral{background:var(--neutral-dim);color:var(--soft);border-color:var(--border2)}
+.c-area{background:var(--c-dim);color:var(--c);border-color:var(--c-line)}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--sans);font-size:13.5px;font-weight:600;transition:border-color .2s,transform .2s;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px}
+.btn.go{background:var(--curious);border-color:var(--curious);color:var(--ink)}
+
+/* sections */
+section.block{padding-block:84px 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:500;color:var(--curious)}
+h2{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(31px,4.8vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 14px;max-width:880px}
+.lede{max-width:700px;font-size:17px;color:var(--soft)}
+h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+.note{margin-top:16px;font-size:14px;color:var(--muted);max-width:760px}
+.note b{color:var(--text);font-weight:600}
+.note a{color:var(--soft);text-underline-offset:3px}
+.ref{font-family:var(--mono);font-size:.72em;font-weight:500;color:var(--muted);text-decoration:none;vertical-align:.32em;margin-left:1px;white-space:nowrap}
+.ref:hover{color:var(--curious)}
+.lit{transition:border-color .35s,box-shadow .35s,background .35s}
+.lit.on{border-color:var(--c-line)!important;box-shadow:0 0 0 4px var(--c-dim)}
+.trow.lit.on{box-shadow:none;background:var(--c-dim)}
+
+/* start here: facts + two ways */
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.fact{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.fact .big{font-family:var(--display);font-weight:800;font-size:clamp(38px,4.6vw,52px);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.fact .big small{font-size:.38em;letter-spacing:-.01em;font-weight:700;margin-left:6px;color:var(--soft)}
+.fact p{font-size:14.5px;color:var(--muted);line-height:1.5}
+.f-amber .big{color:var(--curious)}.f-violet .big{color:var(--chill-bright)}.f-mint .big{color:var(--constructive)}
+.two-ways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.way{border-radius:20px;padding:20px 22px;border:1px dashed var(--border2);min-width:0}
+.way h3{font-size:19px;margin-bottom:4px}
+.way p{font-size:14.5px;color:var(--soft)}
+.way .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.way .k i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.way.solid{border:1px solid var(--c-line);background:var(--c-dim);border-style:solid}
+.way ul{list-style:none;display:grid;gap:8px;margin-top:10px}
+.way li{font-size:14.5px;color:var(--soft);display:grid;grid-template-columns:18px minmax(0,1fr);gap:8px;align-items:start}
+.way li svg{width:15px;height:15px;color:var(--c);margin-top:4px}
+.way li b{color:var(--text);font-weight:600}
+
+/* finder: find your starting point */
+.finder{margin-top:30px;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:18px;align-items:stretch}
+.fq{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:24px 24px 22px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.fq .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.fq .k b{color:var(--text);font-weight:500}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--border2);border-radius:20px;padding:3px;background:var(--bg);gap:2px}
+.seg button{padding:7px 13px;border-radius:var(--pill);font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap;transition:background .2s,color .2s}
+.seg button:hover{color:var(--text)}
+.seg button[aria-pressed="true"]{background:var(--curious-dim);color:var(--curious)}
+.seg.sym button[data-v="yes"][aria-pressed="true"]{background:var(--caring-dim);color:var(--caring)}
+.fr{border-radius:24px;padding:24px 24px 20px;border:1px dashed var(--border2);display:flex;flex-direction:column;gap:12px;min-width:0}
+.fr .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.recs{list-style:none;display:grid;gap:12px;counter-reset:rc}
+.recs li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;counter-increment:rc;font-size:14.5px;color:var(--soft)}
+.recs li::before{content:counter(rc);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--c,var(--curious));color:var(--c,var(--curious));font-family:var(--mono);font-size:12.5px}
+.recs li b{display:block;color:var(--text);font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em;margin-bottom:2px}
+.recs li a{color:var(--text);text-underline-offset:3px;text-decoration-color:var(--border2)}
+.recs li a:hover{color:var(--curious)}
+.recs .num{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.fr .fine{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);font-size:13px;color:var(--muted)}
+
+/* table rows (DNA) */
+.thread{margin-top:30px;background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden}
+.trow{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,.8fr) minmax(0,1.65fr);border-top:1px solid var(--border)}
+.trow:first-child{border-top:0}
+.trow>div{padding:18px 22px;min-width:0}
+.thead>div{padding-block:14px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tname{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.025em}
+.tname small{display:block;margin-top:4px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:0;color:var(--muted)}
+.tben{font-size:14.5px;color:var(--soft)}
+.tben .lbl{display:none}
+.tben .mono{font-family:var(--mono);font-size:13.5px;color:var(--text);font-variant-numeric:tabular-nums}
+.tcheck{display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-left:1px solid var(--border)}
+.tcheck p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.tcheck p b{color:var(--text);font-weight:600}
+.flag{display:flex;align-items:flex-start;gap:12px;margin-top:14px;padding:14px 18px;border-radius:16px;border:1px dashed var(--border2);font-size:14px;color:var(--soft);max-width:860px}
+.flag svg{width:18px;height:18px;flex:none;color:var(--c,var(--caring));margin-top:2px}
+.flag b{color:var(--text);font-weight:600}
+.flag .num{font-family:var(--mono);font-size:13px;color:var(--text);white-space:nowrap;text-decoration:none;border-bottom:1px solid var(--border2)}
+
+/* science-style cards (stool) */
+.sci{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.scard{border-radius:22px;padding:24px 24px 22px;border:1px solid var(--c-line);background:var(--c-dim);display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0}
+.scard h3{font-size:clamp(21px,2.4vw,25px)}
+.scard p{font-size:15px;color:var(--soft)}
+.scard p b{color:var(--text);font-weight:600}
+.scard .stat{display:flex;align-items:baseline;gap:10px;font-family:var(--display);font-weight:800;letter-spacing:-.04em;color:var(--c);font-size:44px;line-height:1}
+.scard .stat small{font-size:14px;letter-spacing:-.005em;font-weight:600;color:var(--soft);font-family:var(--sans)}
+.scard .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:4px}
+.oversimple{margin-top:14px;border-radius:20px;padding:20px 22px;border:1px dashed var(--border2);display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 18px;align-items:start}
+.oversimple .q{grid-row:span 2;font-family:var(--display);font-weight:800;font-size:44px;line-height:.8;color:var(--curious)}
+.oversimple h3{font-size:19px}
+.oversimple p{font-size:14.5px;color:var(--soft);max-width:820px}
+
+/* price menus */
+.menus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.menus.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.menu-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px 22px 14px;min-width:0}
+.menu-card .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.menu-card .k i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.menu-card h3{font-size:19px;margin-bottom:8px}
+.menu{list-style:none}
+.menu li{display:flex;align-items:baseline;gap:10px;padding:9px 0;border-top:1px solid var(--border)}
+.menu .nm{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:-.015em;min-width:0}
+.menu .nm small{display:block;font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:0;color:var(--muted)}
+.menu .lead{flex:1;min-width:12px;border-bottom:1.5px dotted var(--muted2);transform:translateY(-4px)}
+.menu .pr{font-family:var(--mono);font-size:13.5px;color:var(--text);font-variant-numeric:tabular-nums;white-space:nowrap}
+.menu .pr s{color:var(--muted);margin-right:6px;font-size:12px}
+
+/* steps (how it works, the check) */
+.steps{border-radius:24px;padding:26px 26px 22px;border:1px dashed var(--border2);display:flex;flex-direction:column;gap:14px;min-width:0}
+.steps ol{list-style:none;display:grid;gap:14px;counter-reset:st}
+.steps li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;align-items:start;counter-increment:st}
+.steps li::before{content:counter(st);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--curious);color:var(--curious);font-family:var(--mono);font-size:13px}
+.steps li h3{font-size:18px;margin-top:5px}
+.steps li p{font-size:14.5px;color:var(--soft);margin-top:2px}
+.steps .why6{margin-top:auto;padding-top:14px;border-top:1px solid var(--border);font-size:13.5px;color:var(--muted)}
+.steps .why6 b{color:var(--text);font-weight:600}
+.howto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:30px;align-items:start}
+.check6{margin-top:30px}
+.check6 ol{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;row-gap:18px}
+
+/* provider: i-screen */
+.prov{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:14px;margin-top:30px;align-items:stretch}
+.pcard{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--curious-line);border-radius:24px;padding:26px 26px 22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.pcard-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.pcard h3{font-size:clamp(26px,3vw,32px)}
+.pcard dl{display:grid;gap:9px;font-size:14px}
+.pcard dl div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding-top:9px;border-top:1px solid var(--border)}
+.pcard dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.pcard dd{color:var(--soft);min-width:0;overflow-wrap:anywhere}
+.pcard dd b{color:var(--text);font-weight:600}
+.pcard .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.pside{display:grid;gap:14px;min-width:0}
+.pside .way{display:flex;flex-direction:column}
+.others{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:14px}
+.others>div{padding:18px 20px;border-radius:18px;border:1px dashed var(--border2);display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0}
+.others h3{font-size:17px}
+.others p{font-size:14px;color:var(--soft)}
+.others .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+
+/* sources */
+.sources{margin-top:36px;border-top:1px solid var(--border);padding-top:18px}
+.sources summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary svg{width:16px;height:16px;transition:transform .2s;color:var(--muted)}
+.sources[open] summary svg{transform:rotate(90deg)}
+.sources summary span{font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--muted);border:1px solid var(--border2);border-radius:var(--pill);padding:1px 9px}
+.sources ol{margin:16px 0 0;padding-left:26px;display:grid;gap:8px;font-size:13.5px;color:var(--muted);max-width:900px}
+.sources li{padding-left:4px;scroll-margin-top:90px}
+.sources li:target{color:var(--soft)}
+.sources a{color:var(--soft);text-decoration-color:var(--border2);text-underline-offset:3px;overflow-wrap:anywhere}
+.sources a:hover{color:var(--curious)}
+
+/* closing */
+.closing{padding-block:96px 12px;text-align:center;overflow:hidden}
+.closing h2{margin:10px auto 14px}
+.closing .lede{margin:0 auto}
+.jump-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.companion-row{margin-top:26px;max-width:100%;display:flex;flex-direction:column;align-items:center;gap:6px}
+.companion{font-size:14.5px;line-height:1.7;color:var(--soft);text-decoration:underline;text-decoration-color:var(--border2);text-underline-offset:5px;text-decoration-thickness:1px}
+.companion:hover{color:var(--text);text-decoration-color:var(--soft)}
+.companion .nw{white-space:nowrap}
+.companion svg{display:inline-block;width:15px;height:15px;vertical-align:-2px;margin-left:6px}
+
+@media (prefers-reduced-motion:reduce){
+  .gblob,.hero-pill .dot{animation:none}
+  .pulses{display:none}
+  html{scroll-behavior:auto}
+  .lit{transition:none}
+}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .path{max-width:520px}
+  .finder,.howto,.prov{grid-template-columns:1fr}
+  .menus{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .others{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+  .facts,.two-ways,.sci,.menus.two{grid-template-columns:1fr}
+  .trow{grid-template-columns:1fr}
+  .thead{display:none}
+  .tben{padding-top:0!important}
+  .tben .lbl{display:inline;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+  .tcheck{border-left:0;padding-top:0!important}
+  .check6 ol{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap{padding-inline:16px}
+  .hero{padding-block:116px 60px}
+  section.block{padding-top:64px}
+  .gblob{opacity:.14}
+  .path{padding:20px 18px 16px}
+  .n-title{font-size:20px}
+  .n-count{font-size:10px;letter-spacing:.08em}
+  .menus,.others{grid-template-columns:1fr}
+  .trow>div{padding:16px 18px}
+  .fq,.fr,.steps,.pcard{padding:22px 18px 18px}
+  .pcard dl div{grid-template-columns:1fr;gap:2px}
+  .oversimple{grid-template-columns:1fr}
+  .oversimple .q{grid-row:auto;font-size:36px}
+}
+
+/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:var(--ink);font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:640px){.sd-nav-in{padding-inline:16px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+body>main,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,summary,select,[role="button"],[role="tab"]{cursor:none}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+
+/* ---------- page-specific: AI and self-tests ---------- */
+.grad{background-image:linear-gradient(90deg,var(--curious),var(--chill-bright))}
+.f-rose .big{color:var(--caring)}
+.others .row .btn.num{font-family:var(--mono);font-size:13px}
+.trow.ai{grid-template-columns:minmax(0,.62fr) minmax(0,1.19fr) minmax(0,1.19fr)}
+.tname .chip{margin-top:8px}
+
+/* prompt builder */
+.builder{margin-top:30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:stretch}
+.fld{display:flex;flex-direction:column;gap:8px;min-width:0}
+.fld>.k,.fld>label{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.fld>.k b,.fld>label b{color:var(--text);font-weight:500}
+.duo{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px}
+.inp{width:100%;min-width:0;background:var(--bg);border:1px solid var(--border2);border-radius:14px;padding:10px 14px;color:var(--text);font-family:var(--sans);font-size:14.5px;line-height:1.4;transition:border-color .2s}
+.inp::placeholder{color:var(--muted2)}
+.inp:hover{border-color:rgba(255,255,255,.24)}
+.inp:focus{outline:2px solid var(--curious);outline-offset:1px;border-color:var(--curious-line)}
+textarea.inp{min-height:168px;resize:vertical;font-family:var(--mono);font-size:12.5px;line-height:1.6}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.chk{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--soft);cursor:pointer}
+.chk input{accent-color:var(--curious);width:16px;height:16px;cursor:pointer}
+.scrub-msg{font-size:13.5px;color:var(--muted);line-height:1.5;min-height:1.5em}
+.scrub-msg b{color:var(--constructive);font-weight:600}
+.scrub-msg.none b{color:var(--curious)}
+.fr .k b{color:var(--text);font-weight:500}
+pre.prompt{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--bg);border:1px solid var(--border2);border-radius:16px;padding:16px 18px;font-family:var(--mono);font-size:12.5px;line-height:1.62;color:var(--soft);max-height:520px;overflow:auto;flex:1;min-height:260px}
+pre.prompt .ph{color:var(--curious)}
+.fups{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:4px}
+.fups button{width:100%;height:100%;text-align:left;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:13px 16px;border-radius:16px;border:1px solid var(--border2);background:var(--surface);font-size:14px;line-height:1.45;color:var(--soft);transition:border-color .2s,color .2s,transform .2s}
+.fups button:hover{border-color:var(--curious-line);color:var(--text);transform:translateY(-1px)}
+.fups svg{width:15px;height:15px;flex:none;margin-top:3px;color:var(--muted)}
+.fups button.done{border-color:var(--constructive-line)}
+.fups button.done svg{color:var(--constructive)}
+.follow{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.follow .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.follow .k b{color:var(--text);font-weight:500}
+.toast{position:fixed;left:50%;bottom:26px;z-index:200;transform:translate(-50%,16px);opacity:0;pointer-events:none;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--constructive);color:var(--ink);font-family:var(--display);font-weight:700;font-size:14px;box-shadow:0 14px 36px rgba(0,0,0,.5);transition:opacity .2s,transform .2s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.toast svg{width:15px;height:15px}
+
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+@media (max-width:980px){
+  .builder{grid-template-columns:1fr}
+  .fups{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+  .trow.ai{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .fups{grid-template-columns:1fr}
+  .duo{grid-template-columns:96px minmax(0,1fr)}
+  pre.prompt{padding:14px;font-size:12px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4"/><path d="M17 19h4"/></symbol>
+  <symbol id="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="ic-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></symbol>
+  <symbol id="ic-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></symbol>
+  <symbol id="ic-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ic-undo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+</svg>
+
+<div id="cur" aria-hidden="true"></div>
+
+<header class="sd-nav sd-fixed" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+    <span class="sd-crumb">/ AI and self-tests</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a href="#start">Start here</a><a href="#evidence">Evidence</a><a href="#by-test">By test</a><a href="#privacy">Privacy</a><a href="#check">Six checks</a></nav>
+    <a class="sd-cta" href="#builder">Build a prompt</a>
+  </div>
+</header>
+
+<main>
+<header class="hero" id="top">
+  <div class="gblob gb1"></div><div class="gblob gb2"></div><div class="gblob gb3"></div><div class="gblob gb4"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="hero-pill"><span class="dot"></span>Guide · AI and your test results</span>
+        <h1>Ask AI what it means. <span class="grad">Ask your GP what to do.</span></h1>
+        <p class="sub">You can paste a blood, stool or DNA report into an AI chatbot and get a plain-English explanation in seconds. Used well, that helps you understand your report and bring better questions to your GP. Used badly, it can falsely reassure you or scare you. This guide shows how to use it well.</p>
+        <p class="byline"><b>Blood · Stool · DNA</b> · settings checked November 2026</p>
+        <div class="cta-row">
+          <a class="mode-pill mp-solid" href="#builder"><svg><use href="#ic-spark"/></svg>Build a safe prompt</a>
+          <a class="mode-pill mp-c" href="#privacy"><svg><use href="#ic-lock"/></svg>Before you paste</a>
+        </div>
+      </div>
+
+      <nav class="path" aria-label="Six ways to use AI with test results, best first">
+        <div class="n-head"><span class="n-title">What to ask AI for</span><span class="n-count">Best use first</span></div>
+        <div class="line">
+          <div class="pulses" aria-hidden="true"><i></i><i style="animation-delay:1.4s"></i><i style="animation-delay:2.8s"></i></div>
+          <ol class="stations">
+            <li class="origin d-strong"><a href="#t-blood" data-lit="t-blood"><span>Explain a blood panel</span><span class="lead"></span><span class="dom">Good use</span></a></li>
+            <li class="d-strong"><a href="#t-fit" data-lit="t-fit"><span>Explain a screening letter</span><span class="lead"></span><span class="dom">Good use</span></a></li>
+            <li class="d-strong"><a href="#bq" data-lit="bq"><span>Write questions for your GP</span><span class="lead"></span><span class="dom">Good use</span></a></li>
+            <li class="d-depends"><a href="#t-micro" data-lit="t-micro"><span>Read a microbiome report</span><span class="lead"></span><span class="dom">Limited</span></a></li>
+            <li class="d-dna"><a href="#t-dna" data-lit="t-dna"><span>Prepare for genetic counselling</span><span class="lead"></span><span class="dom">Prep only</span></a></li>
+            <li class="d-skip"><a href="#t-raw" data-lit="t-raw"><span>Diagnose · read raw DNA</span><span class="lead"></span><span class="dom">Don't</span></a></li>
+          </ol>
+        </div>
+        <div class="n-foot"><span><i style="background:var(--constructive)"></i>Good use</span><span><i style="background:var(--curious)"></i>Limited</span><span><i style="background:var(--chill-bright)"></i>With a counsellor</span><span><i style="background:var(--caring)"></i>Don't</span></div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="block" id="start">
+  <div class="wrap">
+    <div class="eyebrow"><b>Start here</b> · Australian sources first</div>
+    <h2>Start with sources written for Australian reports.</h2>
+    <p class="lede">These free Australian services are built around Australian tests, units and care, and two of them already use AI with guardrails. Use them before a general chatbot, or alongside one.</p>
+
+    <div class="two-ways">
+      <div class="way solid d-strong"><div class="k"><i></i>To understand a result</div><h3>Read, then ask</h3><p>Look the marker up on Pathology Tests Explained first. Then, if you want more, ask a general AI using a careful prompt like the one the <a href="#builder" style="color:var(--text)">builder below</a> makes.</p></div>
+      <div class="way solid d-skip"><div class="k"><i></i>To decide what to do</div><h3>Ask a person</h3><p>See your GP, or call 1800MEDICARE on <a href="tel:1800633422" style="color:var(--text);white-space:nowrap">1800 633 422</a> any time. healthdirect's own guide says not to rely on AI for diagnosis, treatment decisions or <span class="nb">emergencies.<a class="ref" href="#s4">[4]</a></span></p></div>
+    </div>
+
+    <div class="others">
+      <div><span class="chip c-constructive">Not-for-profit</span><h3>Pathology Tests Explained</h3><p>Plain explanations of pathology tests, written and reviewed by practising pathologists and scientists, free of commercial <span class="nb">influence.<a class="ref" href="#s1">[1]</a></span> Its AI search, PIA, is trained only on that expert-reviewed content and works from Australian internet connections <span class="nb">only.<a class="ref" href="#s3">[3]</a></span></p><div class="row"><a class="btn" href="https://pathologytestsexplained.org.au/" target="_blank" rel="noopener">PTEx <svg><use href="#ic-out"/></svg></a><a class="btn" href="https://pathologytestsexplained.org.au/ai-assistant" target="_blank" rel="noopener">PIA <svg><use href="#ic-out"/></svg></a></div></div>
+      <div><span class="chip c-chill">Government</span><h3>healthdirect's AI guide</h3><p>Five safe prompts, privacy tips, and the things not to rely on AI <span class="nb">for.<a class="ref" href="#s4">[4]</a></span></p><div class="row"><a class="btn" href="https://www.healthdirect.gov.au/using-ai-to-understand-health-infographic" target="_blank" rel="noopener">healthdirect <svg><use href="#ic-out"/></svg></a></div></div>
+      <div><span class="chip c-caring">Free · 24/7</span><h3>1800MEDICARE</h3><p>A registered nurse helps you work out what to do. After hours, you may be offered a free GP telehealth <span class="nb">consult.<a class="ref" href="#s6">[6]</a><a class="ref" href="#s7">[7]</a></span></p><div class="row"><a class="btn num" href="tel:1800633422"><svg><use href="#ic-phone"/></svg>1800 633 422</a></div></div>
+      <div><span class="chip c-neutral">Invite-only trial</span><h3>healthdirect in ChatGPT</h3><p>A proof of concept that asks healthdirect's triage questions inside ChatGPT and can hand you to an Australian nurse. For now, only invited users can try <span class="nb">it.<a class="ref" href="#s5">[5]</a></span></p><div class="row"><a class="btn" href="https://about.healthdirect.gov.au/resources/news/an-ai-health-assistant-australians-can-trust-with-a-nurse-always-one-step-away" target="_blank" rel="noopener">About the trial <svg><use href="#ic-out"/></svg></a></div></div>
+    </div>
+    <p class="note"><b>Old number?</b> healthdirect's 1800 022 222 still works alongside 1800MEDICARE. In an emergency, call <a href="tel:000" style="color:var(--caring)">000</a><span class="nb">.<a class="ref" href="#s6">[6]</a></span> Haven't tested yet? Read <a href="https://www.selfdriven.health/self-tests">Self-tests: DNA, stool and blood</a> first.</p>
+  </div>
+</section>
+
+<section class="block" id="evidence">
+  <div class="wrap">
+    <div class="eyebrow"><b>Evidence</b> · what the research shows</div>
+    <h2>The model often knows the answer. The conversation is where it goes wrong.</h2>
+    <p class="lede">AI models now score highly on medical exams. The trouble starts when a real person, with half the details and a worry, starts typing.</p>
+
+    <div class="facts">
+      <div class="fact f-amber"><div class="big">1 in 10</div><p>Australians asked ChatGPT a health question in the first half of 2024. Of those, 61% asked at least one higher-risk question, the kind that usually needs a <span class="nb">clinician.<a class="ref" href="#s8">[8]</a></span></p></div>
+      <div class="fact f-violet"><div class="big">94.9<small>% → 34.5%</small></div><p>Tested alone, AI models named the right condition in 94.9% of cases. People using the same models got there under 34.5% of the time, no better than people who didn't use <span class="nb">AI.<a class="ref" href="#s9">[9]</a></span></p></div>
+      <div class="fact f-rose"><div class="big">100<small>%</small></div><p>Asked to warn people off a brand-name drug and onto its generic, which is the same medicine, GPT models went along with it every <span class="nb">time.<a class="ref" href="#s10">[10]</a></span></p></div>
+    </div>
+
+    <div class="two-ways">
+      <div class="way solid d-strong"><div class="k"><i></i>Where it helps</div>
+        <ul>
+          <li><svg><use href="#ic-check"/></svg><span><b>Plain language.</b> On 53 real lab-result questions, GPT-4's answers beat other models and human answers on a Q&amp;A site for relevance, correctness, helpfulness and <span class="nb">safety.<a class="ref" href="#s11">[11]</a></span></span></li>
+          <li><svg><use href="#ic-check"/></svg><span><b>How you ask matters.</b> In a proof-of-concept study, asking one question at a time and asking the AI to answer as a clinician made answers more <span class="nb">accurate.<a class="ref" href="#s12">[12]</a></span></span></li>
+          <li><svg><use href="#ic-check"/></svg><span><b>Language barriers.</b> In Australia, people born in non-English-speaking countries were more likely to use ChatGPT for <span class="nb">health.<a class="ref" href="#s8">[8]</a></span></span></li>
+        </ul>
+      </div>
+      <div class="way solid d-skip"><div class="k"><i></i>Where it fails</div>
+        <ul>
+          <li><svg><use href="#ic-x"/></svg><span><b>Missing details.</b> In 16 of 30 chats the researchers reviewed, people's first message left out information the AI <span class="nb">needed.<a class="ref" href="#s9">[9]</a></span></span></li>
+          <li><svg><use href="#ic-x"/></svg><span><b>Mixed answers.</b> Models suggested 2.21 conditions per chat on average, and only 34% were right. Two people with similar brain-bleed symptoms got opposite <span class="nb">advice.<a class="ref" href="#s9">[9]</a></span></span></li>
+          <li><svg><use href="#ic-x"/></svg><span><b>Wrong ranges.</b> In January 2026, Google removed AI Overviews for liver blood test ranges after the Guardian found they ignored age, sex and other <span class="nb">factors.<a class="ref" href="#s13">[13]</a></span></span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note"><b>Doctors are split.</b> In a US survey of 1,692 clinicians, about 70% said patients' chatbot use was positive or made no difference to their practice, but about half rarely or never want patients using AI to interpret test results. In one primary care study, 5% to 13% of chatbot answers to 222 patient questions were unsafe, depending on the <span class="nb">chatbot.<a class="ref" href="#s14">[14]</a></span></p>
+  </div>
+</section>
+
+<section class="block" id="by-test">
+  <div class="wrap">
+    <div class="eyebrow"><b>By test type</b> · blood, stool, DNA</div>
+    <h2>Good at blood panels. Not to be trusted with raw DNA.</h2>
+    <p class="lede">An AI explanation is only as good as the test behind it. Here's what it can do with each kind of result, and what to watch for.</p>
+
+    <div class="thread" role="table" aria-label="Using AI with each kind of test result">
+      <div class="trow thead" role="row"><div role="columnheader">Result</div><div role="columnheader">Use AI for</div><div role="columnheader">Watch for</div></div>
+      <div class="trow d-strong lit" id="t-blood" role="row">
+        <div class="tname" role="cell">Blood panel<small>Full blood count, iron, cholesterol, HbA1c, thyroid</small></div>
+        <div class="tben" role="cell"><span class="lbl">Use AI for</span>Explaining what each marker measures, grouping results, and listing questions for your GP.</div>
+        <div class="tcheck" role="cell"><p><b>Use the range on your report.</b> Reference intervals differ between labs, so PTEx says to use only the one from the lab that ran your <span class="nb">test.<a class="ref" href="#s1">[1]</a></span> With enough tests, one result just outside the range is likely by <span class="nb">chance.<a class="ref" href="#s2">[2]</a></span> Australian reports use SI units, and HbA1c comes in both mmol/mol and <span class="nb">%.<a class="ref" href="#s15">[15]</a></span> Many US sources use mg/dL instead, so a cholesterol of 5.2 mmol/L appears there as about 200.</p></div>
+      </div>
+      <div class="trow d-strong lit" id="t-fit" role="row">
+        <div class="tname" role="cell">Bowel screening result<small>The free program's FIT kit, or a paid FOBT</small></div>
+        <div class="tben" role="cell"><span class="lbl">Use AI for</span>Explaining what a positive or negative result means, and what a colonoscopy involves.</div>
+        <div class="tcheck" role="cell"><p><b>Don't let a chatbot talk you out of follow-up.</b> A positive result isn't a cancer diagnosis, but the program says to see your GP, who will probably refer you for a colonoscopy. Symptoms after a negative result also mean seeing your GP straight <span class="nb">away.<a class="ref" href="#s16">[16]</a></span></p></div>
+      </div>
+      <div class="trow d-depends lit" id="t-micro" role="row">
+        <div class="tname" role="cell">Microbiome report<small>Stool mapping of gut bacteria</small></div>
+        <div class="tben" role="cell"><span class="lbl">Use AI for</span>Defining terms such as diversity, and the names of bacteria.</div>
+        <div class="tcheck" role="cell"><p><b>The explanation can't be surer than the test.</b> Experts still call microbiome testing exploratory (see <a href="https://www.selfdriven.health/self-tests#stool" style="color:var(--text)">Self-tests</a>). An AI will explain the report as fluently as a blood test, so don't build a diet or supplement plan from it.</p></div>
+      </div>
+      <div class="trow d-dna lit" id="t-dna" role="row">
+        <div class="tname" role="cell">Clinical DNA report<small>From an accredited lab, with a genetic counsellor</small></div>
+        <div class="tben" role="cell"><span class="lbl">Use AI for</span>Learning terms like "pathogenic" or "variant of uncertain significance" before your appointment.</div>
+        <div class="tcheck" role="cell"><p><b>Your counsellor interprets it.</b> Your results can reveal information about your blood relatives, who may not want to <span class="nb">know.<a class="ref" href="#s17">[17]</a></span> Use AI to prepare questions, not answers.</p></div>
+      </div>
+      <div class="trow d-skip lit" id="t-raw" role="row">
+        <div class="tname" role="cell">Raw DNA file<small>Downloaded from an overseas ancestry kit</small></div>
+        <div class="tben" role="cell"><span class="lbl">Use AI for</span>Nothing health-related. Don't upload it.</div>
+        <div class="tcheck" role="cell"><p><b>The data itself is unreliable.</b> When a clinical lab rechecked them, 40% of the variants reported in raw data from direct-to-consumer tests were false <span class="nb">positives.<a class="ref" href="#s18">[18]</a></span> An AI reading the file inherits those errors. The file is also about your relatives, and Australian privacy protections don't apply to overseas <span class="nb">services.<a class="ref" href="#s17">[17]</a></span></p></div>
+      </div>
+    </div>
+
+    <div class="flag d-skip"><svg><use href="#ic-alert"/></svg><span><b>Has a lab or doctor contacted you about a result?</b> Act on what they told you. Don't ask a chatbot whether it matters. Not sure how urgent it is? Call 1800MEDICARE on <a class="num" href="tel:1800633422">1800 633 422</a>. In an emergency, call <a class="num" href="tel:000" style="color:var(--caring)">000</a><span class="nb">.<a class="ref" href="#s6">[6]</a></span></span></div>
+  </div>
+</section>
+
+<section class="block" id="privacy">
+  <div class="wrap">
+    <div class="eyebrow"><b>Before you paste</b> · privacy</div>
+    <h2>Take your name off it. Keep the numbers.</h2>
+    <p class="lede">An AI needs your results, units and reference intervals. It doesn't need to know who you are. healthdirect advises leaving out your address, Medicare number and full medical history, and reading the tool's privacy policy <span class="nb">first.<a class="ref" href="#s4">[4]</a></span></p>
+
+    <div class="two-ways">
+      <div class="way solid d-skip"><div class="k"><i></i>Take out</div>
+        <ul>
+          <li><svg><use href="#ic-x"/></svg><span><b>Name and date of birth.</b> Give your age instead.</span></li>
+          <li><svg><use href="#ic-x"/></svg><span><b>Address, phone and email.</b></span></li>
+          <li><svg><use href="#ic-x"/></svg><span><b>Medicare, lab, episode and request numbers.</b></span></li>
+          <li><svg><use href="#ic-x"/></svg><span><b>Your doctors' names</b> and the clinic's details.</span></li>
+        </ul>
+      </div>
+      <div class="way solid d-strong"><div class="k"><i></i>Keep in</div>
+        <ul>
+          <li><svg><use href="#ic-check"/></svg><span><b>Each result</b> with its units, reference interval and any H or L flag.</span></li>
+          <li><svg><use href="#ic-check"/></svg><span><b>Age and sex</b>, because many ranges depend on them.</span></li>
+          <li><svg><use href="#ic-check"/></svg><span><b>Why you were tested</b>, and whether you were fasting.</span></li>
+          <li><svg><use href="#ic-check"/></svg><span><b>Medicines and supplements</b> you take.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note"><b>Australia's privacy regulator goes further.</b> The OAIC recommends that organisations, as best practice, don't put personal information, and particularly sensitive information, into publicly available AI <span class="nb">chatbots.<a class="ref" href="#s19">[19]</a></span> That advice is written for businesses, but the reasoning applies to you too.</p>
+
+    <h3 style="font-size:clamp(22px,2.6vw,27px);margin-top:44px">Check these settings before you paste.</h3>
+    <p class="note" style="margin-top:8px">Four widely used assistants, listed alphabetically. Each lets you stop your chats being used for training. In Australia, none of them can connect to your medical records.</p>
+    <div class="thread" role="table" aria-label="Privacy settings and health features of four AI assistants">
+      <div class="trow ai thead" role="row"><div role="columnheader">Assistant</div><div role="columnheader">Your chats and training</div><div role="columnheader">Health features in Australia</div></div>
+      <div class="trow ai" role="row">
+        <div class="tname" role="cell">ChatGPT<small>OpenAI</small></div>
+        <div class="tben" role="cell"><span class="lbl">Training</span>Turn off <b>Improve the model for everyone</b> under Settings, then Data controls. Temporary chats aren't used to improve its models. Rating an answer can still send the whole conversation for training after you opt <span class="nb">out.<a class="ref" href="#s23">[23]</a></span></div>
+        <div class="tcheck" role="cell"><p>ChatGPT Health is a separate space whose chats aren't used to train OpenAI's foundation models. Connecting medical records works only in the <span class="nb">US.<a class="ref" href="#s20">[20]</a></span> It launched to all US adults in July <span class="nb">2026.<a class="ref" href="#s21">[21]</a></span> In Australia, it started as a limited rollout with a waitlist in January <span class="nb">2026.<a class="ref" href="#s22">[22]</a></span></p></div>
+      </div>
+      <div class="trow ai" role="row">
+        <div class="tname" role="cell">Claude<small>Anthropic</small></div>
+        <div class="tben" role="cell"><span class="lbl">Training</span>Turn off <b>Help improve Claude</b> under Settings, then <span class="nb">Privacy.<a class="ref" href="#s26">[26]</a></span> Incognito chats aren't used to improve Claude, whatever that setting <span class="nb">says.<a class="ref" href="#s27">[27]</a></span></div>
+        <div class="tcheck" role="cell"><p>Connectors for health records and lab results are for Pro and Max subscribers in the US <span class="nb">only.<a class="ref" href="#s24">[24]</a></span> Anthropic says it doesn't use health data from them to train its <span class="nb">models.<a class="ref" href="#s25">[25]</a></span></p></div>
+      </div>
+      <div class="trow ai" role="row">
+        <div class="tname" role="cell">Copilot<small>Microsoft</small></div>
+        <div class="tben" role="cell"><span class="lbl">Training</span>Turn off <b>Training on conversation activity</b> under Privacy. Conversation history is kept for 18 months unless you delete <span class="nb">it.<a class="ref" href="#s30">[30]</a></span></div>
+        <div class="tcheck" role="cell"><p>Copilot Health is rolling out in phases in the US, starting March <span class="nb">2026.<a class="ref" href="#s29">[29]</a></span> Microsoft says information in Copilot Health isn't used for model <span class="nb">training.<a class="ref" href="#s28">[28]</a></span></p></div>
+      </div>
+      <div class="trow ai" role="row">
+        <div class="tname" role="cell">Gemini<small>Google</small></div>
+        <div class="tben" role="cell"><span class="lbl">Training</span>From November 2026, training has its own setting, <b>Chat content including text &amp; attachments</b>. It's on by default unless you'd already turned off Keep <span class="nb">Activity.<a class="ref" href="#s31">[31]</a></span> Human reviewers read some <span class="nb">chats.<a class="ref" href="#s32">[32]</a></span> Temporary Chats aren't used to train Google's <span class="nb">models.<a class="ref" href="#s33">[33]</a></span></div>
+        <div class="tcheck" role="cell"><p>Google Health Coach, built with Gemini, has been available in Australia since May 2026 with Google Health Premium, at A$14.99 a month. It launched first for Fitbit and Pixel Watch <span class="nb">users.<a class="ref" href="#s34">[34]</a></span> Syncing medical records works only in the <span class="nb">US.<a class="ref" href="#s35">[35]</a></span></p></div>
+      </div>
+    </div>
+    <p class="note"><b>Not a medical device.</b> The TGA regulates AI as a medical device when it's meant for diagnosis, monitoring or treatment, and says a product with no medical purpose or claim is unlikely to be <span class="nb">one.<a class="ref" href="#s36">[36]</a></span> OpenAI, for example, says ChatGPT Health isn't intended for diagnosis or <span class="nb">treatment.<a class="ref" href="#s20">[20]</a></span> Settings change often. These were checked in November 2026.</p>
+  </div>
+</section>
+
+<section class="block" id="builder">
+  <div class="wrap">
+    <div class="eyebrow"><b>Prompt builder</b> · runs in your browser</div>
+    <h2>Build a prompt that asks the right way.</h2>
+    <p class="lede">Choose your test, add what matters, paste your results and remove identifiers. Then copy the prompt into any assistant. Nothing you type here is sent anywhere or saved, and it's gone when you leave the page.</p>
+
+    <div class="builder">
+      <div class="fq d-strong lit" id="bq">
+        <div class="fld"><div class="k" id="lb-test"><b>1</b> · What kind of result?</div>
+          <div class="seg" data-b="test" role="group" aria-labelledby="lb-test"><button type="button" data-v="blood" aria-pressed="true">Blood</button><button type="button" data-v="stool" aria-pressed="false">Bowel screening</button><button type="button" data-v="micro" aria-pressed="false">Microbiome</button><button type="button" data-v="dna" aria-pressed="false">DNA report</button></div>
+        </div>
+        <div class="fld"><div class="k" id="lb-goal"><b>2</b> · What do you want?</div>
+          <div class="seg" data-b="goal" role="group" aria-labelledby="lb-goal"><button type="button" data-v="understand" aria-pressed="true">Understand it</button><button type="button" data-v="gp" aria-pressed="false">Prepare for my GP</button><button type="button" data-v="compare" aria-pressed="false">Compare with last time</button></div>
+        </div>
+        <div class="fld"><div class="k" id="lb-about"><b>3</b> · About you · optional</div>
+          <div class="duo">
+            <input class="inp" id="age" type="text" inputmode="numeric" maxlength="3" placeholder="Age" aria-label="Age">
+            <div class="seg" data-b="sex" role="group" aria-label="Sex"><button type="button" data-v="female" aria-pressed="false">Female</button><button type="button" data-v="male" aria-pressed="false">Male</button><button type="button" data-v="" aria-pressed="true">Skip</button></div>
+          </div>
+          <input class="inp" id="ctx" type="text" maxlength="300" placeholder="e.g. not fasting, taking iron tablets, tested for tiredness" aria-label="Context: why you were tested, fasting, medicines">
+        </div>
+        <div class="fld"><label for="paste"><b>4</b> · Paste your results</label>
+          <textarea class="inp" id="paste" spellcheck="false" placeholder="Ferritin  18 ug/L  (30–500)  L&#10;Haemoglobin  128 g/L  (115–165)&#10;Vitamin D  48 nmol/L  (&gt;50)  L"></textarea>
+          <div class="acts">
+            <button type="button" class="btn go" id="scrub"><svg><use href="#ic-shield"/></svg>Remove identifiers</button>
+            <button type="button" class="btn" id="undo" hidden><svg><use href="#ic-undo"/></svg>Undo</button>
+            <label class="chk"><input type="checkbox" id="keepDates">Keep test dates</label>
+          </div>
+          <p class="scrub-msg" id="scrubMsg" aria-live="polite">Removes names after labels like "Patient:", dates of birth, Medicare and lab numbers, phone numbers, emails and street addresses. Always read what's left.</p>
+        </div>
+      </div>
+
+      <div class="fr">
+        <div class="k"><b>Your prompt</b> · copy into a new chat</div>
+        <pre class="prompt" id="promptOut" aria-live="off"></pre>
+        <div class="acts"><button type="button" class="btn go" id="copyPrompt"><svg><use href="#ic-copy"/></svg>Copy prompt</button></div>
+        <p class="fine">Use a temporary or incognito chat if your assistant has one. The prompt asks for urgent issues first, uses your report's own ranges, and pushes back on leading questions.</p>
+      </div>
+    </div>
+
+    <div class="follow">
+      <div class="k"><b>Then ask these</b> · one at a time · tap to copy</div>
+      <ul class="fups" id="fups">
+        <li><button type="button">How sure are you about that, and what would change your answer?<svg><use href="#ic-copy"/></svg></button></li>
+        <li><button type="button">What else could explain this result?<svg><use href="#ic-copy"/></svg></button></li>
+        <li><button type="button">Did you use the reference intervals on my report? Show me which ones.<svg><use href="#ic-copy"/></svg></button></li>
+        <li><button type="button">What have you assumed about me that I haven't told you?<svg><use href="#ic-copy"/></svg></button></li>
+        <li><button type="button">Which of these results would a GP probably not worry about, and why?<svg><use href="#ic-copy"/></svg></button></li>
+        <li><button type="button">Explain that again in simpler words.<svg><use href="#ic-copy"/></svg></button></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="check">
+  <div class="wrap">
+    <div class="eyebrow"><b>Before you act</b> · six checks</div>
+    <h2>Six checks before you trust an answer.</h2>
+    <p class="lede">These work with any assistant, including ones not on this page.</p>
+
+    <div class="steps check6">
+      <ol>
+        <li><div><h3>Did it use your report's numbers?</h3><p>Reference intervals differ between labs. PTEx says to use only the one on your own <span class="nb">report.<a class="ref" href="#s1">[1]</a></span></p></div></li>
+        <li><div><h3>Did you tell it enough?</h3><p>In the Oxford study, people's first message often left out what the AI <span class="nb">needed.<a class="ref" href="#s9">[9]</a></span> Age, sex, medicines and why you were tested all change the answer.</p></div></li>
+        <li><div><h3>Did you lead it?</h3><p>Models tend to go along with what a question assumes, even when they know <span class="nb">better.<a class="ref" href="#s10">[10]</a></span> Ask "what does this mean?", not "this is fine, isn't it?"</p></div></li>
+        <li><div><h3>Does an Australian source agree?</h3><p>Look the marker up on Pathology Tests Explained, which is written and reviewed by <span class="nb">pathologists.<a class="ref" href="#s1">[1]</a></span></p></div></li>
+        <li><div><h3>Does it hold up a second time?</h3><p>Ask again in a new chat, or ask a different assistant. Patient advocates suggest checking one AI's answer against <span class="nb">another.<a class="ref" href="#s12">[12]</a></span></p></div></li>
+        <li><div><h3>Have you told your GP?</h3><p>Bring your questions, and say you used AI so your GP can correct anything it got <span class="nb">wrong.<a class="ref" href="#s14">[14]</a></span></p></div></li>
+      </ol>
+    </div>
+
+    <details class="sources">
+      <summary><svg><use href="#ic-chev"/></svg>Sources <span>36</span></summary>
+      <ol>
+        <li id="s1">Pathology Tests Explained. <a href="https://pathologytestsexplained.org.au/understanding/overview-of-reference-intervals" target="_blank" rel="noopener">Reference intervals explained</a>. Use only the reference range from the lab that ran the test; content prepared and reviewed by practising pathologists and scientists.</li>
+        <li id="s2">Pathology Tests Explained. <a href="https://pathologytestsexplained.org.au/understanding" target="_blank" rel="noopener">Understanding your pathology report</a>. With enough tests, one or more results are likely to fall just outside the range by chance.</li>
+        <li id="s3">Pathology Tests Explained. <a href="https://pathologytestsexplained.org.au/ai-assistant" target="_blank" rel="noopener">PIA, the Pathology Information Assistant</a>, available from Australian connections only; and <a href="https://bsky.app/profile/ptex-social.bsky.social" target="_blank" rel="noopener">PTEx on Bluesky</a>, 22 January 2026: trained solely on PTEx's expert-written and reviewed Australian content.</li>
+        <li id="s4">healthdirect. <a href="https://www.healthdirect.gov.au/using-ai-to-understand-health-infographic" target="_blank" rel="noopener">Using AI to better understand health information</a>. Five prompts, privacy advice and what not to rely on AI for.</li>
+        <li id="s5">Healthdirect Australia. <a href="https://about.healthdirect.gov.au/resources/news/an-ai-health-assistant-australians-can-trust-with-a-nurse-always-one-step-away" target="_blank" rel="noopener">An AI health assistant Australians can trust, with a nurse always one step away</a>, 24 June 2026. Proof of concept for invited consumers.</li>
+        <li id="s6">Healthdirect Australia. <a href="https://about.healthdirect.gov.au/healthdirect" target="_blank" rel="noopener">healthdirect (1800MEDICARE)</a>. 1800 633 422 and 1800 022 222; nurse triage; 000 in an emergency.</li>
+        <li id="s7">South Eastern Melbourne PHN. <a href="https://www.semphn.org.au/1800medicare-supporting-patients-to-the-right-care-24-7" target="_blank" rel="noopener">1800MEDICARE: supporting patients to the right care, 24/7</a>, June 2026. Free after-hours GP telehealth where clinically appropriate.</li>
+        <li id="s8">Ayre J, Cvejic E, McCaffery KJ. <a href="https://www.mja.com.au/journal/2025/222/4/use-chatgpt-obtain-health-information-australia-2024-insights-nationally" target="_blank" rel="noopener">Use of ChatGPT to obtain health information in Australia, 2024</a>. Medical Journal of Australia, 2025. Nationally representative survey of 2,034 adults.</li>
+        <li id="s9">Bean AM, Payne RE, Mahdi A, et al. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12920132/" target="_blank" rel="noopener">Reliability of LLMs as medical assistants for the general public: a randomized preregistered study</a>. Nature Medicine, 2026; 1,298 UK participants.</li>
+        <li id="s10">Chen S, et al. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12534679/" target="_blank" rel="noopener">When helpfulness backfires: LLMs and the risk of false medical information due to sycophantic behavior</a>. npj Digital Medicine, 2025.</li>
+        <li id="s11">He Z, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/38630520" target="_blank" rel="noopener">Quality of answers of generative large language models versus peer users for interpreting laboratory test results for lay patients</a>. Journal of Medical Internet Research, 2024. Answers sometimes lacked personal context or references.</li>
+        <li id="s12">NPR. <a href="https://www.npr.org/sections/shots-health-news/2025/09/11/nx-s1-5537067/ai-medicine-privacy-test-results" target="_blank" rel="noopener">Running your lab results by ChatGPT? Here's what to keep in mind</a>, September 2025. Liz Salmi (OpenNotes) and patient advocate Dave deBronkart.</li>
+        <li id="s13">The Guardian. <a href="https://www.theguardian.com/technology/2026/jan/11/google-ai-overviews-health-guardian-investigation" target="_blank" rel="noopener">Google removes some of its AI summaries after users' health put at risk</a>, 11 January 2026; and <a href="https://techcrunch.com/2026/01/11/google-removes-ai-overviews-for-certain-medical-queries" target="_blank" rel="noopener">TechCrunch</a>.</li>
+        <li id="s14">McCaffery K, Laranjo L, Ayre J. <a href="https://www.sydney.edu.au/news-opinion/news/2026/11/04/using-chatgpt-before-a-medical-appointment-how-to-get-the-best-support-for-your-health-questions.html" target="_blank" rel="noopener">Using ChatGPT before a medical appointment</a>. University of Sydney and The Conversation, 4 November 2026.</li>
+        <li id="s15">Medical Journal of Australia. <a href="https://www.mja.com.au/journal/2011/195/1/change-hba1c-reporting-new-si-units" target="_blank" rel="noopener">Change of HbA1c reporting to the new SI units</a>, 2011. Both % and mmol/mol from July 2011.</li>
+        <li id="s16">Australian Government Department of Health. <a href="https://www.health.gov.au/our-work/national-bowel-cancer-screening-program/getting-a-bowel-screening-test/understanding-your-bowel-screening-test-results" target="_blank" rel="noopener">Understanding your bowel screening test results</a>.</li>
+        <li id="s17">National Health and Medical Research Council. <a href="https://www.nhmrc.gov.au/about-us/publications/understanding-direct-consumer-genetic-dna-testing" target="_blank" rel="noopener">Understanding direct-to-consumer genetic DNA testing</a>. Relatives, overseas services and privacy.</li>
+        <li id="s18">Tandy-Connor SL, et al. <a href="https://www.nature.com/articles/gim201838" target="_blank" rel="noopener">False-positive results released by direct-to-consumer genetic tests highlight the importance of clinical confirmation testing</a>. Genetics in Medicine, 2018; 49 patient samples.</li>
+        <li id="s19">Office of the Australian Information Commissioner. <a href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products" target="_blank" rel="noopener">Guidance on privacy and the use of commercially available AI products</a>.</li>
+        <li id="s20">OpenAI. <a href="https://openai.com/index/introducing-chatgpt-health/" target="_blank" rel="noopener">Introducing ChatGPT Health</a>, 7 January 2026. Separate space, not used to train foundation models, record integrations US only, not intended for diagnosis or treatment.</li>
+        <li id="s21">OpenAI. <a href="https://openai.com/index/health-in-chatgpt/" target="_blank" rel="noopener">Launching Health in ChatGPT</a>, 23 July 2026. US users 18 and older.</li>
+        <li id="s22">B&amp;T. <a href="https://www.bandt.com.au/chatgpt-health-launches-in-australia-draws-in-concern-among-experts/" target="_blank" rel="noopener">ChatGPT Health launches in Australia and draws concerns from experts</a>, 16 January 2026.</li>
+        <li id="s23">OpenAI Help Center. <a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance" target="_blank" rel="noopener">How your data is used to improve model performance</a>. Opt-out setting, temporary chats and feedback.</li>
+        <li id="s24">Anthropic. <a href="https://www.anthropic.com/news/healthcare-life-sciences" target="_blank" rel="noopener">Claude for Healthcare and life sciences announcement</a>, January 2026. Health record and lab connectors for US Pro and Max subscribers.</li>
+        <li id="s25">The Register. <a href="https://www.theregister.com/2026/01/12/claude_anthropic_healthcare/" target="_blank" rel="noopener">Claude joins the ward as Anthropic eyes US healthcare data</a>, 12 January 2026.</li>
+        <li id="s26">Anthropic Privacy Center. <a href="https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-setting" target="_blank" rel="noopener">How do I change my model improvement privacy setting?</a></li>
+        <li id="s27">Anthropic Privacy Center. <a href="https://privacy.claude.com/en/articles/10023580" target="_blank" rel="noopener">How chats are used for model improvement</a>. Incognito chats are not used to improve Claude.</li>
+        <li id="s28">Microsoft AI. <a href="https://microsoft.ai/news/introducing-copilot-health/" target="_blank" rel="noopener">Introducing Copilot Health</a>, March 2026.</li>
+        <li id="s29">Nurse.org. <a href="https://nurse.org/news/microsoft-copilot-health" target="_blank" rel="noopener">Microsoft launches Copilot Health 'hub' to access and interpret users' health data</a>. Announced 12 March 2026, phased US rollout for adults.</li>
+        <li id="s30">Microsoft Support. <a href="https://support.microsoft.com/topic/microsoft-copilot-privacy-controls-8e479f27-6eb6-48c5-8d6a-c134062e2be6" target="_blank" rel="noopener">Microsoft Copilot privacy controls</a>.</li>
+        <li id="s31">9to5Google. <a href="https://9to5google.com/?p=737886" target="_blank" rel="noopener">New Gemini setting lets you keep chat history, but turn off AI training</a>, November 2026.</li>
+        <li id="s32">Google. <a href="https://support.google.com/gemini/answer/13594961" target="_blank" rel="noopener">Gemini Apps Privacy Hub</a>. Human review of some data.</li>
+        <li id="s33">Google. <a href="https://blog.google/products-and-platforms/products/gemini/temporary-chats-privacy-controls/" target="_blank" rel="noopener">Gemini adds Temporary Chats and new personalization features</a>.</li>
+        <li id="s34">Google Australia. <a href="https://blog.google/intl/en-au/products/devices-services/google-health-coach-is-now-available-in-australia/" target="_blank" rel="noopener">Google Health Coach is now available in Australia</a>, May 2026.</li>
+        <li id="s35">Google. <a href="https://blog.google/products-and-platforms/products/google-health/google-health-app/" target="_blank" rel="noopener">Introducing the Google Health app</a>. Medical record sync in the US.</li>
+        <li id="s36">Therapeutic Goods Administration. <a href="https://tga.gov.au/artificial-intelligence-ai" target="_blank" rel="noopener">Artificial intelligence (AI)</a>. When AI is regulated as a medical device.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Start here</div>
+    <h2>Let AI explain it. Let your GP decide.</h2>
+    <p class="lede">Check an Australian source first. Remove who you are, ask neutral questions one at a time, and take what you learn to your GP.</p>
+    <div class="jump-row">
+      <a class="mode-pill mp-c" href="#builder"><svg><use href="#ic-spark"/></svg>Build a prompt</a>
+      <a class="mode-pill mp-b" href="#start"><svg><use href="#ic-compass"/></svg>Australian sources</a>
+      <a class="mode-pill mp-l" href="#by-test"><svg><use href="#ic-flask"/></svg>By test</a>
+      <a class="mode-pill mp-k" href="#privacy"><svg><use href="#ic-lock"/></svg>Privacy</a>
+      <a class="mode-pill mp-c" href="#check"><svg><use href="#ic-list"/></svg>Six checks</a>
+    </div>
+    <div class="companion-row">
+      <a class="companion" href="https://www.selfdriven.health/self-tests">Haven't tested yet? Read Self-tests: DNA, stool and <span class="nw">blood<svg><use href="#ic-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>selfdriven<em>.health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="https://www.selfdriven.health/self-tests"><i style="background:var(--curious)"></i>Self-tests</a><a href="https://www.selfdriven.health/probiotics"><i style="background:var(--constructive)"></i>Probiotics</a><a href="https://www.selfdriven.health/supplements"><i style="background:var(--constructive)"></i>Supplements</a><a href="https://www.selfdriven.health/walking"><i style="background:var(--constructive)"></i>Walking</a><a href="https://www.selfdriven.health/protocols"><i style="background:var(--curious)"></i>Protocols</a><a href="https://www.selfdriven.health/vagus-nerve-reset"><i style="background:var(--chill-bright)"></i>Vagus Nerve Reset</a><a href="https://www.selfdriven.health/depression"><i style="background:var(--chill-bright)"></i>Depression</a><a href="https://www.selfdriven.health/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>Plain language, evidence-checked, and not medical advice.</b> selfdriven.health has no relationship with any AI company on this page and earns nothing from them. Assistants are listed alphabetically. Features and settings are as each company described them in November 2026, and they change often. If you have symptoms, see your GP.</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><svg><use href="#ic-check"/></svg><span>Copied</span></div>
+
+<script>
+/* hero stations: jump to the matching card or row and light it */
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lit]'), function(a){
+    a.addEventListener('click', function(e){
+      var el = document.getElementById(a.getAttribute('data-lit'));
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'});
+      el.classList.remove('on'); void el.offsetWidth; el.classList.add('on');
+      setTimeout(function(){ el.classList.remove('on'); }, 1800);
+    });
+  });
+})();
+</script>
+
+<script>
+/* prompt builder: everything stays in this page. No storage, no network. */
+(function(){
+  var out = document.getElementById('promptOut');
+  if (!out) return;
+  var paste = document.getElementById('paste'), age = document.getElementById('age'), ctx = document.getElementById('ctx');
+  var keep = document.getElementById('keepDates'), msg = document.getElementById('scrubMsg');
+  var undoBtn = document.getElementById('undo'), toastEl = document.getElementById('toast');
+  var state = {test:'blood', goal:'understand', sex:''};
+  var before = null, toastT = null;
+
+  var LABEL = {blood:'blood test results', stool:'bowel screening (stool) test result', micro:'gut microbiome report', dna:'genetic test report'};
+  var TEST_LINE = {
+    blood: 'With many tests, one result just outside the range can happen by chance. Tell me which out-of-range results matter and which probably don’t.',
+    stool: 'If this is a bowel screening result (FIT or iFOBT), remind me what the National Bowel Cancer Screening Program says to do next, and don’t suggest skipping follow-up.',
+    micro: 'Microbiome testing is still exploratory. Tell me which parts of this report have clinical evidence behind them and which don’t, and don’t build a diet or supplement plan from it.',
+    dna: 'This report is from an accredited lab. Explain terms like “pathogenic” and “variant of uncertain significance”, and suggest questions for a genetic counsellor. Don’t reinterpret raw genotype data.'
+  };
+  var GOAL_LINE = {
+    understand: 'Finish with the 3 most useful questions to ask my GP.',
+    gp: 'Finish with a short list of questions for my GP, most important first, and say which results they’d likely want to repeat or follow up.',
+    compare: 'I’ve included earlier results with their dates. Say which changes are bigger than normal variation between tests, and which aren’t.'
+  };
+
+  function build(){
+    var a = (age.value || '').replace(/[^0-9]/g, '').slice(0, 3);
+    var who = [];
+    if (a) who.push(a + ' years old');
+    if (state.sex) who.push(state.sex);
+    var about = who.length ? 'About me: ' + who.join(', ') + '.' : 'About me: I haven’t given my age or sex. Tell me where they would change your answer.';
+    var c = (ctx.value || '').trim();
+    if (c) about += ' Context: ' + c.replace(/\s+/g, ' ') + (/[.!?]$/.test(c) ? '' : '.');
+    var steps = [
+      'If anything here could need prompt medical attention, tell me that first.',
+      'Explain each result in plain language: what it measures and whether it’s inside the reference interval printed on my report.',
+      'Use the units and reference intervals on my report. They’re Australian (SI units such as mmol/L) and can differ between labs, so don’t swap in ranges from elsewhere.',
+      TEST_LINE[state.test],
+      'Say how confident you are, and what else you’d need to know.',
+      'Don’t just reassure me or agree with me. If my question assumes something wrong, say so.',
+      GOAL_LINE[state.goal]
+    ];
+    var res = (paste.value || '').trim();
+    var head = 'I’m in Australia. Please help me understand my ' + LABEL[state.test] + '. I’m not asking for a diagnosis. Answer the way a careful clinician would explain results to a patient.\n\n' + about + '\n\nPlease:\n' +
+      steps.map(function(s, i){ return (i + 1) + '. ' + s; }).join('\n') + '\n\nMy results:\n---\n';
+    out.textContent = '';
+    out.appendChild(document.createTextNode(head));
+    if (res) out.appendChild(document.createTextNode(res));
+    else { var ph = document.createElement('span'); ph.className = 'ph'; ph.textContent = '[Paste your results above, with units and reference intervals]'; out.appendChild(ph); }
+    out.appendChild(document.createTextNode('\n---'));
+  }
+
+  /* identifier scrubber: common Australian report patterns, applied locally */
+  var LABELS = [
+    ['name', "patient(?:'s)? name|patient|full name|surname|family name|given names?|first name|last name|name"],
+    ['date of birth', 'd\\.?o\\.?b\\.?|date of birth|birth ?date|born'],
+    ['Medicare or ID number', 'medicare(?: card)?(?: no\\.?| number)?|ihi(?: no\\.?| number)?|dva(?: no\\.?| number)?'],
+    ['address', 'address|street|suburb|postcode'],
+    ['phone number', 'phone|mobile|tel'],
+    ['email', 'e-?mail'],
+    ['lab or record number', 'urn|mrn|ur(?: no\\.?| number)|lab(?:oratory)?(?: no\\.?| number| id| ref)|accession(?: no\\.?| number)?|episode(?: no\\.?| number)?|request(?: no\\.?| number| id)|ref(?:erence)?(?: no\\.?| number)|patient id|specimen(?: no\\.?| number| id)'],
+    ["doctor's name", 'requested by|referred by|referring (?:doctor|practitioner)|requesting (?:doctor|practitioner)|doctor|copy to|cc']
+  ];
+  var MONTH = '(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\\.?';
+  function scrub(text, keepDates){
+    var n = {}, total = 0;
+    function hit(k){ n[k] = (n[k] || 0) + 1; total++; }
+    LABELS.forEach(function(l){
+      var re = new RegExp('(^|\\t|[ ]{2,}|[|;][ ]*)(' + l[1] + ')([ \\t]*[:#][ \\t]*)([^\\t\\n|;]+?)(?=\\t|[ ]{2,}|[|;]|$)', 'gim');
+      text = text.replace(re, function(m, p, lab, sep, val){
+        if (/^\s*\[[A-Z .]+\]\s*$/.test(val)) return m;
+        hit(l[0]); return p + lab + sep + '[REMOVED]';
+      });
+    });
+    function rep(re, k, token){ text = text.replace(re, function(){ hit(k); return token; }); }
+    rep(/[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}/gi, 'email', '[EMAIL]');
+    rep(/\b(?:Mr|Mrs|Ms|Miss|Mx|Dr|Prof)\.?[ ]+[A-Z][A-Za-z'’\-]+(?:[ ]+[A-Z][A-Za-z'’\-]+){0,2}/g, 'name', '[NAME]');
+    rep(/\b\d{1,5}[A-Za-z]?(?:\/\d{1,5})?[ ]+(?:[A-Z][a-z]+[ ]){1,3}(?:Street|St|Road|Rd|Avenue|Ave|Drive|Dr|Court|Ct|Place|Pl|Lane|Ln|Crescent|Cres|Parade|Pde|Way|Highway|Hwy|Boulevard|Blvd|Terrace|Tce|Close|Cl|Circuit|Cct|Grove|Gr)\b\.?/g, 'address', '[ADDRESS]');
+    rep(/\b(?:NSW|VIC|QLD|SA|WA|TAS|NT|ACT)[ ]+\d{4}\b/g, 'address', '[STATE POSTCODE]');
+    rep(/(?:\+61[ \-]?|\(?0)[2-478]\)?(?:[ \-]?\d){8}(?!\d)/g, 'phone number', '[PHONE]');
+    rep(/\b\d{4}[ ]?\d{5}[ ]?\d(?:[ \/\-]?\d)?\b/g, 'Medicare or ID number', '[ID NUMBER]');
+    if (!keepDates) {
+      rep(/\b\d{1,2}([\/.\-])\d{1,2}\1(?:\d{4}|\d{2})\b/g, 'date', '[DATE]');
+      rep(/\b\d{4}-\d{2}-\d{2}\b/g, 'date', '[DATE]');
+      rep(new RegExp('\\b\\d{1,2}(?:st|nd|rd|th)?[ \\-]' + MONTH + '[ \\-,]+\\d{2,4}\\b', 'gi'), 'date', '[DATE]');
+    }
+    return {text: text, n: n, total: total};
+  }
+  function plural(k, c){
+    if (c === 1) return '1 ' + k;
+    if (k === 'address') return c + ' addresses';
+    if (k === 'date of birth') return c + ' dates of birth';
+    if (k === "doctor's name") return c + " doctors' names";
+    if (k === 'Medicare or ID number') return c + ' Medicare or ID numbers';
+    if (k === 'lab or record number') return c + ' lab or record numbers';
+    return c + ' ' + k + 's';
+  }
+  document.getElementById('scrub').addEventListener('click', function(){
+    var v = paste.value;
+    if (!v.trim()) { msg.className = 'scrub-msg none'; msg.innerHTML = '<b>Paste your results first.</b> Then remove identifiers before you copy the prompt.'; paste.focus(); return; }
+    var r = scrub(v, keep.checked);
+    if (r.total) {
+      before = v; paste.value = r.text; undoBtn.hidden = false;
+      var parts = Object.keys(r.n).map(function(k){ return plural(k, r.n[k]); });
+      msg.className = 'scrub-msg';
+      msg.innerHTML = '<b>Removed ' + r.total + ':</b> ' + parts.join(', ') + '. This catches common patterns, not everything, so read what’s left.';
+    } else {
+      msg.className = 'scrub-msg none';
+      msg.innerHTML = '<b>Nothing found</b> that looks like a name, date, number or address. Check it yourself anyway.';
+    }
+    build();
+  });
+  undoBtn.addEventListener('click', function(){
+    if (before === null) return;
+    paste.value = before; before = null; undoBtn.hidden = true;
+    msg.className = 'scrub-msg none'; msg.innerHTML = '<b>Restored</b> your original text. Nothing has been removed.';
+    build();
+  });
+  paste.addEventListener('input', function(){ if (before !== null) { before = null; undoBtn.hidden = true; } build(); });
+  age.addEventListener('input', function(){ age.value = age.value.replace(/[^0-9]/g, '').slice(0, 3); build(); });
+  ctx.addEventListener('input', build);
+
+  Array.prototype.forEach.call(document.querySelectorAll('.seg[data-b]'), function(seg){
+    var q = seg.getAttribute('data-b');
+    Array.prototype.forEach.call(seg.querySelectorAll('button'), function(b){
+      b.addEventListener('click', function(){
+        Array.prototype.forEach.call(seg.querySelectorAll('button'), function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        state[q] = b.getAttribute('data-v');
+        if (q === 'goal' && state.goal === 'compare') keep.checked = true;
+        build();
+      });
+    });
+  });
+
+  function toast(){
+    toastEl.classList.add('on');
+    clearTimeout(toastT); toastT = setTimeout(function(){ toastEl.classList.remove('on'); }, 1600);
+  }
+  function copy(text, done){
+    function fallback(){
+      var t = document.createElement('textarea');
+      t.value = text; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+      document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  }
+  document.getElementById('copyPrompt').addEventListener('click', function(){ copy(out.textContent, toast); });
+  Array.prototype.forEach.call(document.querySelectorAll('#fups button'), function(b){
+    b.addEventListener('click', function(){ copy(b.textContent.trim(), function(){ b.classList.add('done'); toast(); }); });
+  });
+  build();
+})();
+</script>
+
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,summary,select,[role="button"],[role="tab"]';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){ var t = e.target; if (!t || !t.closest) return; cur.classList.toggle('big', !!t.closest(HOT)); });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
+  Array.prototype.forEach.call(dotsList, function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+</body>
+</html>
