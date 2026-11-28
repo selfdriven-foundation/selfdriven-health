@@ -1,0 +1,1128 @@
+---
+layout: null
+title: Ketosis - selfdriven Health
+permalink: /ketosis
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ketosis - selfdriven Health</title>
+<meta name="description" content="What ketosis is, how the body switches from glucose to ketones, what blood ketone numbers mean, which keto claims the evidence supports, who should check first, and questions to take to your GP.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090f'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23f5c842'/%3E%3Ccircle cx='26.5' cy='32' r='6' fill='%23ff5f7e'/%3E%3Ccircle cx='39' cy='32' r='6' fill='%2300e5a0'/%3E%3Ccircle cx='51.5' cy='32' r='6' fill='%237b6cff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#09090f;--surface:#111118;--surface2:#18181f;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#f0eeff;--muted:#8f8bad;--muted2:#3d3a55;
+  --soft:rgba(240,238,255,.8);
+  --curious:#f5c842;--caring:#ff5f7e;--constructive:#00e5a0;--chill:#7b6cff;--chill-bright:#9b8fff;
+  --curious-dim:rgba(245,200,66,.13);--caring-dim:rgba(255,95,126,.13);--constructive-dim:rgba(0,229,160,.13);--chill-dim:rgba(123,108,255,.13);
+  --pill:999px;
+  --sd-accent:var(--constructive);
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --neutral-dim:rgba(240,238,255,.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+button{font:inherit;color:inherit;background:none;border:0}
+:focus-visible{outline:2px solid var(--chill-bright);outline-offset:2px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:148px 0 80px}
+.gblob{position:absolute;border-radius:50%;filter:blur(95px);opacity:.17;z-index:0}
+.gb1{width:520px;height:520px;background:var(--curious);top:-150px;left:-160px;animation:gb 15s ease-in-out infinite}
+.gb2{width:440px;height:440px;background:var(--constructive);top:40px;right:-130px;animation:gb 19s ease-in-out infinite reverse}
+.gb3{width:360px;height:360px;background:var(--caring);bottom:-60px;left:18%;animation:gb 23s ease-in-out infinite 3s}
+.gb4{width:320px;height:320px;background:var(--chill);bottom:20px;right:12%;animation:gb 17s ease-in-out infinite 8s}
+@keyframes gb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(34px,-26px) scale(1.08)}70%{transform:translate(-22px,30px) scale(.93)}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 74% at 50% 50%,rgba(9,9,15,.86),rgba(9,9,15,.55) 46%,rgba(9,9,15,.18) 78%,transparent)}
+.hero .wrap{position:relative;z-index:2;text-align:center}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(9,9,15,.55);border:1px solid rgba(255,255,255,.22);border-radius:var(--pill);padding:8px 18px;font-size:12px;font-weight:500;color:rgba(240,238,255,.7);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--constructive);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(40px,7.4vw,86px);line-height:.98;letter-spacing:-.045em;margin:24px auto 20px;max-width:980px}
+.grad{background:linear-gradient(90deg,var(--curious),var(--constructive));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:700px;margin:0 auto;font-size:clamp(17px,2.1vw,20px);line-height:1.55;color:rgba(240,238,255,.9)}
+.safety{display:inline-block;text-align:center;margin-top:26px;padding:10px 18px;border-radius:16px;background:rgba(9,9,15,.6);border:1px solid rgba(255,95,126,.3);font-size:14px;color:rgba(240,238,255,.86)}
+.safety a{color:var(--text);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,95,126,.5)}
+.hero .fine{margin-top:16px;font-size:13px;color:rgba(240,238,255,.62)}
+.jump-row{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+.hstats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:860px;margin:34px auto 0;text-align:left}
+.hstat{background:rgba(17,17,24,.72);border:1px solid var(--border2);border-radius:18px;padding:14px 16px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hstat b{display:block;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em;line-height:1.1}
+.hstat span{display:block;font-size:13px;color:var(--soft);margin-top:3px;line-height:1.4}
+.hstat i{display:block;width:22px;height:3px;border-radius:2px;margin-bottom:10px}
+
+/* mode pills + chips */
+.mode-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:var(--pill);font-family:var(--display);font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.mode-pill:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+.mode-pill svg{width:16px;height:16px}
+.mode-pill small{font-family:var(--sans);font-weight:500;font-size:13px;opacity:.85}
+.mp-c{background:var(--curious-dim);color:var(--curious);border-color:rgba(245,200,66,.28)}
+.mp-k{background:var(--caring-dim);color:var(--caring);border-color:rgba(255,95,126,.28)}
+.mp-b{background:var(--constructive-dim);color:var(--constructive);border-color:rgba(0,229,160,.28)}
+.mp-l{background:var(--chill-dim);color:var(--chill-bright);border-color:rgba(123,108,255,.28)}
+.chip{display:inline-flex;align-items:center;padding:2px 10px;border-radius:var(--pill);font-family:var(--display);font-size:12.5px;font-weight:600;border:1px solid transparent;line-height:1.5;white-space:nowrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface);color:var(--text);font-family:var(--sans);font-size:13px;font-weight:600;transition:border-color .2s,background .2s,transform .2s;white-space:nowrap}
+.btn:hover{border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px}
+.btn.ghost{background:transparent;color:var(--muted)}
+.btn.ghost:hover{color:var(--text)}
+
+/* sections */
+section.block{padding:84px 0 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:500;color:var(--text)}
+h2{text-wrap:balance;font-family:var(--display);font-weight:800;font-size:clamp(31px,4.8vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0 14px;max-width:880px}
+.lede{max-width:700px;font-size:17px;color:var(--soft)}
+.lede b{color:var(--text);font-weight:600}
+h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.15}
+.sub-h{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.2vw,32px);letter-spacing:-.035em;line-height:1.1;margin:56px 0 10px;text-wrap:balance}
+.note{margin-top:14px;font-size:14px;color:var(--muted);max-width:800px}
+.note b{color:var(--text);font-weight:600}
+.k-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.c-curious{background:var(--curious-dim);color:var(--curious);border-color:rgba(245,200,66,.28)}
+.c-caring{background:var(--caring-dim);color:var(--caring);border-color:rgba(255,95,126,.28)}
+.c-constructive{background:var(--constructive-dim);color:var(--constructive);border-color:rgba(0,229,160,.28)}
+.c-chill{background:var(--chill-dim);color:var(--chill-bright);border-color:rgba(123,108,255,.28)}
+.c-neutral{background:var(--neutral-dim);color:var(--soft);border-color:var(--border2)}
+.ref{font-family:var(--mono);font-size:.72em;font-weight:500;color:var(--muted);text-decoration:none;vertical-align:.32em;margin-left:1px;white-space:nowrap}
+.ref:hover{color:var(--constructive)}
+.punch{margin-top:16px;padding:18px 22px;border-radius:18px;background:linear-gradient(120deg,rgba(245,200,66,.12),rgba(0,229,160,.06));border:1px solid rgba(245,200,66,.32);font-size:15.5px;color:var(--soft)}
+.punch b{color:var(--text);font-weight:600}
+.punch .k-label{display:block;color:var(--curious);margin-bottom:6px}
+.seg{display:inline-flex;padding:4px;border-radius:var(--pill);background:var(--surface2);border:1px solid var(--border2);gap:4px;max-width:100%}
+.seg button{padding:8px 16px;border-radius:var(--pill);font-family:var(--display);font-weight:700;font-size:14px;color:var(--muted);transition:background .2s,color .2s;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--constructive-dim);color:var(--text);box-shadow:inset 0 0 0 1px var(--constructive)}
+
+/* 01 fuel switch + 02 ketone scale (shared slider card) */
+.fm{margin-top:28px;background:var(--surface);border:1px solid var(--border2);border-radius:24px;overflow:hidden}
+.fm-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:22px 24px 0}
+.fm-top .now{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums;min-width:120px}
+.fm-top .now small{font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+.fm-top .now em{font-family:var(--sans);font-style:normal;font-weight:500;font-size:14px;letter-spacing:0;color:var(--muted);margin-left:4px}
+.fm-top .sp{flex:1}
+.fm-track{padding:16px 24px 4px}
+.strip{display:grid;grid-template-columns:minmax(40px,4fr) 8fr 24fr 36fr;gap:3px;margin-bottom:6px}
+.strip>span{height:30px;border-radius:7px;background:var(--surface2);border:1px solid var(--border);font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;transition:background .25s,color .25s,border-color .25s;min-width:0}
+.strip>span.on{background:var(--constructive-dim);border-color:var(--constructive);color:var(--text)}
+.strip.bands{display:flex}
+.strip.bands>span{flex:0 0 auto}
+.strip.bands>span.on.n{background:var(--neutral-dim);border-color:rgba(240,238,255,.4)}
+.strip.bands>span.on.w{background:var(--curious-dim);border-color:var(--curious)}
+.strip.bands>span.on.r{background:var(--caring-dim);border-color:rgba(255,95,126,.7)}
+.fm input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;cursor:pointer}
+.fm input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:99px;background:linear-gradient(90deg,var(--chill-bright),var(--curious) 35%,var(--constructive))}
+.fm input[type=range]::-moz-range-track{height:6px;border-radius:99px;background:linear-gradient(90deg,var(--chill-bright),var(--curious) 35%,var(--constructive))}
+.fm.sc input[type=range]::-webkit-slider-runnable-track{background:linear-gradient(90deg,rgba(240,238,255,.45),var(--constructive) 12%,var(--constructive) 42%,var(--curious) 56%,var(--caring) 88%)}
+.fm.sc input[type=range]::-moz-range-track{background:linear-gradient(90deg,rgba(240,238,255,.45),var(--constructive) 12%,var(--constructive) 42%,var(--curious) 56%,var(--caring) 88%)}
+.fm input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:24px;height:24px;margin-top:-9px;border-radius:50%;background:var(--text);border:4px solid var(--bg);box-shadow:0 0 0 2px var(--constructive)}
+.fm input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--text);border:4px solid var(--bg);box-shadow:0 0 0 2px var(--constructive)}
+.fm-axis{position:relative;height:16px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.fm-axis span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+.fm-axis span:first-child{transform:none}
+.fm-axis span:last-child{transform:translateX(-100%)}
+.fm-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);border-top:1px solid var(--border);margin-top:14px}
+.fm-phase{padding:22px 24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.fm-phase .k-label{color:var(--constructive)}
+.fm-phase h3{font-size:clamp(24px,2.8vw,30px);letter-spacing:-.035em}
+.fm-phase p{font-size:15px;color:var(--soft)}
+.fm-phase p b{color:var(--text);font-weight:600}
+.fm-phase .tip{margin-top:auto;padding:12px 14px;border-radius:14px;background:var(--constructive-dim);border:1px solid rgba(0,229,160,.3);font-size:14px;color:var(--text);display:flex;gap:10px;align-items:flex-start}
+.fm-phase .tip svg{width:17px;height:17px;flex:none;margin-top:2px;color:var(--constructive)}
+.fm-phase .tip.w{background:var(--curious-dim);border-color:rgba(245,200,66,.4)}
+.fm-phase .tip.w svg{color:var(--curious)}
+.fm-phase .tip.r{background:var(--caring-dim);border-color:rgba(255,95,126,.5)}
+.fm-phase .tip.r svg{color:var(--caring)}
+.fm-meters{padding:22px 24px;border-left:1px solid var(--border);display:grid;gap:14px;align-content:start;background:rgba(9,9,15,.3);min-width:0}
+.mtr{display:grid;grid-template-columns:22px 128px minmax(0,1fr) 96px;gap:10px;align-items:center}
+.mtr svg{width:18px;height:18px;color:var(--muted)}
+.mtr .nm{font-size:13.5px;font-weight:600}
+.mtr .bar{position:relative;height:10px;border-radius:99px;background:var(--surface2)}
+.mtr .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--c);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.mtr .wd{font-family:var(--mono);font-size:11px;color:var(--c);text-align:right;white-space:nowrap}
+.lab{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.labc{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.labc .k-label{color:var(--accent)}
+.labc .fig{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.labc .fig small{font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:0;color:var(--muted)}
+.labc p{font-size:14px;color:var(--soft);line-height:1.5}
+.labc p b{color:var(--text);font-weight:600}
+.labc .ico{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--accent-dim);color:var(--accent);flex-shrink:0}
+.labc .ico svg{width:20px;height:20px}
+.labc h3{font-size:18px}
+
+/* DKA definition panel */
+.dka{padding:22px 24px;border-left:1px solid var(--border);background:rgba(9,9,15,.3);display:flex;flex-direction:column;gap:12px;min-width:0}
+.dka h3{font-size:18px}
+.dka ol{list-style:none;display:grid;gap:8px;counter-reset:d}
+.dka li{counter-increment:d;display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:14px;color:var(--soft);line-height:1.45}
+.dka li::before{content:counter(d);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--surface2);border:1px solid var(--border2);font-family:var(--mono);font-size:11px;color:var(--text)}
+.dka li b{color:var(--text);font-weight:600}
+.dka p{font-size:13.5px;color:var(--muted);line-height:1.5}
+
+/* 03 notes */
+.finds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.find{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;min-width:0}
+.find::before{content:'';position:absolute;left:0;top:0;right:0;height:3px;background:var(--accent)}
+.find .num{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:8px}
+.find .num svg{width:15px;height:15px}
+.find h3{font-size:22px;letter-spacing:-.03em}
+.find p{font-size:14.5px;color:var(--soft);line-height:1.5}
+.find p b{color:var(--text);font-weight:600}
+.find .said{padding:14px 16px;border-radius:16px;background:var(--surface2);border:1px solid var(--border);font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.015em;line-height:1.32;color:var(--text)}
+.find .said small{display:block;font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.verdicts{list-style:none;display:grid;gap:10px;padding:14px 16px;border-radius:16px;background:var(--surface2);border:1px solid var(--border)}
+.verdicts li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;font-size:14px;color:var(--soft);line-height:1.45}
+.verdicts li b{color:var(--text);font-weight:600}
+.verdicts .vi{width:22px;height:22px;border-radius:50%;display:grid;place-items:center}
+.verdicts .vi svg{width:13px;height:13px}
+.vi.y{background:var(--constructive-dim);color:var(--constructive)}
+.vi.n{background:var(--caring-dim);color:var(--caring)}
+.vi.m{background:var(--neutral-dim);color:var(--soft)}
+.find .take{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);font-size:14px;color:var(--text);display:flex;align-items:baseline;gap:10px}
+.find .take .chip{flex:none}
+.src-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:14.5px;color:var(--soft);text-decoration:none;border:1px solid var(--border2);border-radius:var(--pill);padding:10px 16px;transition:border-color .2s,color .2s}
+.src-link:hover{color:var(--text);border-color:rgba(255,255,255,.3)}
+.src-link svg{width:15px;height:15px}
+
+/* 04 evidence */
+.base{margin-top:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:0;background:var(--surface);border:1px solid var(--border2);border-radius:24px;overflow:hidden}
+.base-l{padding:22px 24px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.base-l h3{font-size:21px}
+.base-l p{font-size:15px;color:var(--soft)}
+.base-l p b{color:var(--text);font-weight:600}
+.base-r{padding:22px 24px;border-left:1px solid var(--border);display:grid;gap:18px;align-content:start;background:rgba(9,9,15,.3);min-width:0}
+.squares{display:grid;grid-template-columns:repeat(17,minmax(0,1fr));gap:5px}
+.squares i{aspect-ratio:1;border-radius:5px;background:var(--neutral-dim);border:1px solid var(--border2);display:block}
+.squares i.q4{background:var(--constructive);border-color:var(--constructive)}
+.squares i.q3{background:var(--chill-bright);border-color:var(--chill-bright)}
+.squares i.q2{background:rgba(245,200,66,.38);border-color:rgba(245,200,66,.6)}
+.people{height:22px;border-radius:8px;overflow:hidden;display:flex;background:var(--surface2)}
+.people i{display:block;height:100%}
+.base-r .cap{font-size:13px;color:var(--soft);line-height:1.45;margin-top:8px}
+.base-r .cap b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.base-key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted);margin-top:10px}
+.base-key span{display:inline-flex;align-items:center;gap:7px}
+.base-key i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.base-key b{font-family:var(--mono);font-weight:500;color:var(--text)}
+
+.tally{margin-top:22px}
+.tally-bar{display:flex;height:14px;border-radius:99px;overflow:hidden;gap:2px;background:var(--surface2)}
+.tally-bar i{display:block;height:100%}
+.tally-key{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:12.5px;color:var(--muted)}
+.tally-key span{display:inline-flex;align-items:center;gap:7px}
+.tally-key i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.tally-key b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.filters button{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--pill);border:1px solid var(--border2);background:var(--surface);font-family:var(--display);font-weight:700;font-size:13.5px;color:var(--muted);transition:border-color .2s,background .2s,color .2s}
+.filters button svg{width:15px;height:15px}
+.filters button span{font-family:var(--mono);font-weight:500;font-size:11px;color:var(--muted)}
+.filters button:hover{color:var(--text)}
+.filters button[aria-pressed="true"]{background:var(--constructive-dim);border-color:var(--constructive);color:var(--text)}
+.ladder{margin-top:14px;display:grid;gap:8px}
+.rung{display:grid;grid-template-columns:128px minmax(0,1fr) minmax(0,1.25fr);gap:16px;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:15px 20px}
+.rung .g{padding-top:2px}
+.rung .cl{font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em;line-height:1.3}
+.rung .in{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.rung .in svg{width:13px;height:13px}
+.rung .in.hl{color:var(--constructive)}
+.rung .ev{font-size:14px;color:var(--soft);line-height:1.5}
+.rung .ev b{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+.rung.no{border-color:rgba(255,95,126,.2)}
+.rung.risk{border-color:rgba(245,200,66,.28)}
+.rung.bf{border-color:rgba(255,95,126,.4)}
+.rung.bf .cl{text-decoration:line-through;text-decoration-color:rgba(255,95,126,.7);text-decoration-thickness:2px}
+.ladder .grp{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:14px 0 2px 4px;display:flex;align-items:center;gap:8px}
+.ladder .grp:first-child{margin-top:4px}
+.ladder .grp svg{width:14px;height:14px}
+
+/* 05 check first */
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.ck{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.ck .ico{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--accent-dim);color:var(--accent);flex-shrink:0}
+.ck .ico svg{width:20px;height:20px}
+.ck h3{font-size:18px}
+.ck p{font-size:14px;color:var(--soft);line-height:1.5}
+.ck p b{color:var(--text);font-weight:600}
+.ck.stop{border-color:rgba(255,95,126,.45);background:linear-gradient(180deg,rgba(255,95,126,.08),var(--surface) 55%)}
+.tel{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:var(--pill);background:var(--caring-dim);border:1px solid rgba(255,95,126,.55);color:var(--text);text-decoration:none;font-size:13px;font-weight:600;align-self:flex-start;margin-top:auto}
+.tel b{font-family:var(--mono);font-weight:500;color:var(--caring)}
+.tel.soft{background:var(--chill-dim);border-color:rgba(155,143,255,.5)}
+.tel.soft b{color:var(--chill-bright)}
+
+/* 06 ask your GP */
+.rt{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;margin-top:28px;align-items:start}
+.rt-card{background:var(--surface);border:1px solid var(--border2);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.rt-card>h3{font-size:15px;font-family:var(--mono);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rt-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.rt-head h3{font-size:15px;font-family:var(--mono);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rt-head .cnt{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.qs{display:grid;gap:8px}
+.q{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;text-align:left;width:100%;padding:13px 14px;border-radius:14px;border:1px solid var(--border2);background:var(--surface2);font-family:var(--sans);font-size:15px;line-height:1.45;color:var(--soft);transition:border-color .2s,background .2s,color .2s}
+.q:hover{border-color:rgba(255,255,255,.3)}
+.q .bx{width:22px;height:22px;border-radius:7px;border:1.5px solid var(--border2);display:grid;place-items:center;margin-top:1px;transition:background .2s,border-color .2s}
+.q .bx svg{width:13px;height:13px;opacity:0}
+.q[aria-checked="true"]{border-color:var(--constructive);background:var(--constructive-dim);color:var(--text)}
+.q[aria-checked="true"] .bx{background:var(--constructive);border-color:var(--constructive);color:#09090f}
+.q[aria-checked="true"] .bx svg{opacity:1}
+.acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.msg{font-family:var(--mono);font-size:12px;color:var(--constructive);min-height:1.2em}
+.copy-fallback{display:block;width:100%;min-height:160px;background:var(--bg);color:var(--text);border:1px solid var(--border2);border-radius:12px;padding:10px 12px;font-family:var(--mono);font-size:12px}
+.fineprint{font-size:12.5px;color:var(--muted)}
+.tl{list-style:none;display:grid;gap:0}
+.tl li{display:grid;grid-template-columns:104px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--border);font-size:14.5px;color:var(--soft);line-height:1.5}
+.tl li:first-child{border-top:0;padding-top:0}
+.tl li:last-child{padding-bottom:0}
+.tl .when{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.03em;color:var(--text);line-height:1.25}
+.tl li b{color:var(--text);font-weight:600}
+.caution{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:var(--caring-dim);border:1px solid rgba(255,95,126,.4);font-size:13.5px;color:var(--text);line-height:1.5}
+.caution svg{width:17px;height:17px;flex:none;margin-top:2px;color:var(--caring)}
+.caution a{color:var(--text);font-weight:600;text-decoration-color:var(--caring);text-underline-offset:3px}
+
+/* sources */
+.sources{margin-top:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:0 22px}
+.sources summary{list-style:none;display:flex;align-items:center;gap:10px;padding:18px 0;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em;cursor:pointer}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary svg{width:16px;height:16px;color:var(--muted);transition:transform .2s}
+.sources[open] summary svg{transform:rotate(90deg)}
+.sources summary span{font-family:var(--mono);font-weight:500;font-size:11.5px;color:var(--muted);margin-left:auto}
+.sources ol{padding:0 0 20px 24px;display:grid;gap:8px;font-size:13.5px;color:var(--soft)}
+.sources ol li{overflow-wrap:anywhere}
+.sources ol li::marker{color:var(--muted);font-family:var(--mono);font-size:11px}
+.sources a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2)}
+.sources a:hover{border-color:var(--chill-bright)}
+
+/* closing */
+.closing{padding:96px 0 12px;text-align:center;overflow:hidden}
+.closing h2{margin:10px auto 14px}
+.closing .lede{margin:0 auto}
+.closing .links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.companion{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;color:var(--soft);text-decoration:none;border:1px solid var(--border2);border-radius:var(--pill);padding:10px 16px;transition:border-color .2s,color .2s}
+.companion:hover{color:var(--text);border-color:rgba(255,255,255,.3)}
+.companion svg{width:15px;height:15px}
+
+@media (prefers-reduced-motion:reduce){
+  .gblob,.hero-pill .dot{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* responsive */
+@media (max-width:980px){
+  .finds{grid-template-columns:1fr}
+  .checks{grid-template-columns:1fr 1fr}
+  .rt{grid-template-columns:1fr}
+  .base{grid-template-columns:1fr}
+  .base-r{border-left:0;border-top:1px solid var(--border)}
+}
+@media (max-width:860px){
+  .fm-body{grid-template-columns:1fr}
+  .fm-meters,.dka{border-left:0;border-top:1px solid var(--border)}
+  .lab{grid-template-columns:1fr}
+  .hstats{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){.rung{grid-template-columns:1fr;gap:8px}}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .hero{padding:124px 0 60px}
+  section.block{padding-top:64px}
+  .gblob{opacity:.15}
+  .mode-pill{padding:10px 16px}
+  .checks{grid-template-columns:1fr}
+  .fm-top{padding:18px 16px 0}
+  .fm-track{padding:14px 16px 4px}
+  .fm-phase,.fm-meters,.dka{padding:18px 16px}
+  .strip>span{font-size:9px;letter-spacing:.02em}
+  .strip:not(.bands){grid-template-columns:minmax(32px,4fr) minmax(60px,8fr) 22fr 34fr}
+  .strip .lg{display:none}
+  .seg button{padding:8px 12px;font-size:13px}
+  .mtr{grid-template-columns:20px 104px minmax(0,1fr) 84px;gap:8px}
+  .mtr .nm{font-size:12.5px}
+  .mtr .wd{font-size:10.5px}
+  .base-l,.base-r{padding:18px 16px}
+  .squares{gap:3px}
+  .squares i{border-radius:4px}
+  .find,.rt-card{padding:18px}
+  .tl li{grid-template-columns:88px 1fr;gap:12px}
+}
+@media (max-width:420px){.hstats{gap:8px}.hstat{padding:12px}.hstat b{font-size:19px}.fm-top .now{font-size:28px}}
+
+/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+.sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
+.sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
+.sd-logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.sd-logo em{font-style:normal;color:var(--caring)}
+.sd-nav .markdots,.sd-foot .markdots{display:inline-flex;gap:3px;flex-shrink:0}
+.sd-nav .markdots i,.sd-foot .markdots i{width:7px;height:7px;border-radius:50%;display:block}
+.sd-nav .markdots i:nth-child(1),.sd-foot .markdots i:nth-child(1){background:var(--curious)}
+.sd-nav .markdots i:nth-child(2),.sd-foot .markdots i:nth-child(2){background:var(--caring)}
+.sd-nav .markdots i:nth-child(3),.sd-foot .markdots i:nth-child(3){background:var(--constructive)}
+.sd-nav .markdots i:nth-child(4),.sd-foot .markdots i:nth-child(4){background:var(--chill)}
+@keyframes sdWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.markdots.wave i{animation:sdWave .7s ease}
+.markdots.wave i:nth-child(2){animation-delay:.12s}.markdots.wave i:nth-child(3){animation-delay:.24s}.markdots.wave i:nth-child(4){animation-delay:.36s}
+.sd-crumb{font-family:var(--display);font-size:14.5px;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sd-sp{flex:1}
+.sd-links{display:flex;gap:22px}
+.sd-links a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+.sd-links a:hover{color:var(--text)}
+.sd-cta{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--sd-accent);color:#09090f;font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.sd-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+@media (max-width:1040px){.sd-links{display:none}}
+@media (max-width:560px){.sd-crumb{display:none}.sd-cta{padding:9px 14px;font-size:13px}}
+@media (max-width:640px){.sd-nav-in{padding-inline:16px}}
+@media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
+body>main,.sd-foot{position:relative;z-index:1}
+
+#cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,label,summary,[role="button"],[role="checkbox"],[role="tab"],input[type=range]{cursor:none}
+  textarea{cursor:text}
+  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
+  #cur.on{opacity:1}
+  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
+  #cur.off{opacity:0!important}
+}
+
+.sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
+.sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
+.sd-tag{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.sd-more{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 8px;max-width:760px}
+.sd-more a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--border2);color:var(--text);font-family:var(--display);font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.sd-more a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+.sd-more a i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.sd-divider{width:32px;height:1px;background:var(--border2);margin:10px auto 4px}
+.sd-init{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.sd-init a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border2);padding-bottom:1px;transition:color .2s,border-color .2s}
+.sd-init a:hover{color:var(--curious);border-color:var(--curious)}
+.sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
+.sd-note b{color:var(--text);font-weight:600}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-telescope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="13" r="3"/><path d="M3 7l5.5 2.5"/><path d="M3 7l2-4 14.5 6.5-2 4"/><path d="M8.5 9.5L6 20h5l1.5-4"/><path d="M17 16v4"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+  <symbol id="ic-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></symbol>
+  <symbol id="ic-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="ic-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ic-reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="ic-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="ic-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2Z"/></symbol>
+  <symbol id="ic-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+  <symbol id="ic-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+  <symbol id="ic-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="ic-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></symbol>
+  <symbol id="ic-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+  <symbol id="ic-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
+  <symbol id="ic-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></symbol>
+  <symbol id="ic-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+  <symbol id="ic-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></symbol>
+  <symbol id="ic-octagon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 9-6 6"/><path d="M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z"/><path d="m9 9 6 6"/></symbol>
+  <symbol id="ic-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="ic-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="ic-syringe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/></symbol>
+  <symbol id="ic-baby" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></symbol>
+  <symbol id="ic-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+  <symbol id="ic-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="ic-battery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/><line x1="6" x2="6" y1="11" y2="13"/><line x1="10" x2="10" y1="11" y2="13"/></symbol>
+</svg>
+
+<div id="cur" aria-hidden="true"></div>
+
+<header class="sd-nav sd-fixed" id="sdNav">
+  <div class="sd-nav-in">
+    <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><em>health</em></span></a>
+    <span class="sd-crumb">/ Ketosis</span>
+    <span class="sd-sp"></span>
+    <nav class="sd-links" aria-label="Sections"><a href="#switch">The switch</a><a href="#levels">Levels</a><a href="#notes">Three notes</a><a href="#evidence">Evidence</a><a href="#check">Check first</a><a href="#ask">Ask your GP</a></nav>
+    <a class="sd-cta" href="#levels">Read a ketone level</a>
+  </div>
+</header>
+
+<header class="hero" id="top">
+  <div class="gblob gb1"></div><div class="gblob gb2"></div><div class="gblob gb3"></div><div class="gblob gb4"></div>
+  <div class="wrap">
+    <span class="hero-pill"><span class="dot"></span>Move · Ketosis</span>
+    <h1>Ketosis is a real fuel switch.<br><span class="grad">The brain-boost claims outrun the evidence.</span></h1>
+    <p class="sub">Go long enough without carbohydrate and your liver starts turning fat into ketones, a second fuel your brain and muscles can run on. That part is settled physiology. The claims that ketones are a superior fuel, sharpen thinking or burn fat faster rest on much thinner evidence. This guide explains the switch, shows what blood ketone numbers mean, and grades the claims.</p>
+    <div class="safety">Type 1 diabetes, or taking an SGLT2 inhibitor (a “-gliflozin”)? <a href="#check">Read this before fasting or cutting carbs.</a></div>
+    <div class="hstats" aria-label="Ketosis in four numbers">
+      <div class="hstat"><i style="background:var(--curious)"></i><b>12–36 hours</b><span>Without food before the body switches to fat and ketones</span></div>
+      <div class="hstat"><i style="background:var(--constructive)"></i><b>0.5–3.0</b><span>mmol/L of blood ketones in nutritional ketosis</span></div>
+      <div class="hstat"><i style="background:var(--chill-bright)"></i><b>20–50 g</b><span>Carbohydrate a day on a ketogenic diet</span></div>
+      <div class="hstat"><i style="background:var(--caring)"></i><b>No change</b><span>In thinking, mood or sleep after 3 weeks of ketosis, in a controlled trial</span></div>
+    </div>
+    <div class="jump-row">
+      <a class="mode-pill mp-c" href="#switch"><svg><use href="#ic-telescope"/></svg>Curious <small>the fuel switch</small></a>
+      <a class="mode-pill mp-l" href="#evidence"><svg><use href="#ic-waves"/></svg>Chill <small>what holds up</small></a>
+      <a class="mode-pill mp-k" href="#check"><svg><use href="#ic-heart"/></svg>Caring <small>check first</small></a>
+      <a class="mode-pill mp-b" href="#ask"><svg><use href="#ic-hammer"/></svg>Constructive <small>questions for your GP</small></a>
+    </div>
+    <p class="fine">Plain language, evidence-checked, and not medical advice.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- 01 -->
+<section class="block" id="switch">
+  <div class="wrap">
+    <div class="eyebrow"><b>01</b> · The fuel switch</div>
+    <h2>Run low on carbs and your liver makes a second fuel.</h2>
+    <p class="lede">After a meal, insulin is high and you run mostly on glucose. As the hours pass without carbohydrate, insulin falls, the liver’s glucose store (glycogen) runs down, and fat is released from storage. The liver turns some of that fat into <b>ketones</b>: mostly beta-hydroxybutyrate (BHB) and acetoacetate, plus a little acetone that you breathe out.<a class="ref" href="#src-1">[1]</a> Researchers call the changeover the <b>metabolic switch</b>. It typically happens 12 to 36 hours after your last meal.<a class="ref" href="#src-2">[2]</a> Drag through it below.</p>
+
+    <div class="fm" id="fs">
+      <div class="fm-top">
+        <div class="now"><small>Since your last meal</small><span id="fsNow">2 h</span></div>
+        <div class="seg" role="group" aria-label="What you usually eat">
+          <button type="button" id="fsMixed" aria-pressed="true">Usual mixed diet</button>
+          <button type="button" id="fsKeto" aria-pressed="false">Ketogenic diet</button>
+        </div>
+        <span class="sp"></span>
+        <button type="button" class="btn" id="fsPlay"><svg><use href="#ic-play"/></svg><span>Play</span></button>
+      </div>
+      <div class="fm-track">
+        <div class="strip" aria-hidden="true" id="fsStrip">
+          <span data-p="0">Fed</span><span data-p="1">Glycogen</span><span data-p="2">The switch</span><span data-p="3">Ketosis</span>
+        </div>
+        <input type="range" id="fsR" min="0" max="72" step="1" value="2" aria-label="Hours since your last meal" aria-valuetext="2 hours: running on the meal">
+        <div class="fm-axis" aria-hidden="true"><span style="left:0">0 h</span><span style="left:16.67%">12</span><span style="left:33.33%">24</span><span style="left:50%">36</span><span style="left:66.67%">48</span><span style="left:100%">72 h</span></div>
+      </div>
+      <div class="fm-body">
+        <div class="fm-phase" aria-live="polite">
+          <span class="k-label" id="fsK">0–4 hours</span>
+          <h3 id="fsH">Running on the meal</h3>
+          <p id="fsP"></p>
+          <div class="tip"><svg><use href="#ic-arrow"/></svg><span id="fsTip"></span></div>
+        </div>
+        <div class="fm-meters" id="fsMeters"></div>
+      </div>
+    </div>
+    <p class="note">Illustrative levels to show the shape of the change, not measurements. Timing varies between people with how full their glycogen stores were, how active they are and what the last meal was.<a class="ref" href="#src-2">[2]</a></p>
+
+    <h3 class="sub-h">The brain takes what the blood offers.</h3>
+    <p class="lede">Ketones cross from blood into the brain on carrier proteins, and the brain uses them in step with the blood level.<a class="ref" href="#src-3">[3]</a><a class="ref" href="#src-4">[4]</a> So the share of the brain’s energy that comes from ketones depends on how high they are.</p>
+    <div class="lab">
+      <div class="labc" style="--accent:var(--chill-bright)"><span class="k-label">After an overnight fast</span><div class="fig">&lt;5% <small>of brain energy</small></div><p>Blood ketones are usually under <b>0.5 mmol/L</b> and barely register as brain fuel.<a class="ref" href="#src-3">[3]</a></p></div>
+      <div class="labc" style="--accent:var(--constructive)"><span class="k-label">At 1.5 mmol/L</span><div class="fig">~18% <small>of brain energy</small></div><p>Pooled human measurements, at a level <b>inside the ketogenic-diet range</b>.<a class="ref" href="#src-4">[4]</a></p></div>
+      <div class="labc" style="--accent:var(--curious)"><span class="k-label">Weeks into a fast</span><div class="fig">60%+ <small>of brain energy</small></div><p>In people studied after <b>5 to 6 weeks</b> of supervised starvation, ketones had replaced glucose as the brain’s main fuel.<a class="ref" href="#src-5">[5]</a><a class="ref" href="#src-1">[1]</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="block" id="levels">
+  <div class="wrap">
+    <div class="eyebrow"><b>02</b> · Reading the numbers</div>
+    <h2>Ketosis is not ketoacidosis.</h2>
+    <p class="lede">Both mean ketones in the blood. The difference is how much, and whether insulin is still in charge. In <b>nutritional ketosis</b>, insulin keeps ketone production in check and the blood stays at a normal pH. In <b>diabetic ketoacidosis (DKA)</b> there isn’t enough insulin, ketones climb unchecked and the blood turns acidic. DKA is a medical emergency.<a class="ref" href="#src-6">[6]</a> Slide the reading to see what a number usually means.</p>
+
+    <div class="fm sc" id="sc">
+      <div class="fm-top">
+        <div class="now"><small>Blood ketones (BHB)</small><span id="scNow">1.2</span><em>mmol/L</em></div>
+        <div class="seg" role="group" aria-label="Who is reading">
+          <button type="button" id="scNone" aria-pressed="true">No diabetes</button>
+          <button type="button" id="scDm" aria-pressed="false">Type 1 or SGLT2 inhibitor</button>
+        </div>
+      </div>
+      <div class="fm-track">
+        <div class="strip bands" aria-hidden="true" id="scBands"></div>
+        <input type="range" id="scR" min="0" max="6" step="0.1" value="1.2" aria-label="Blood ketone reading in millimoles per litre">
+        <div class="fm-axis" aria-hidden="true" id="scAxis"></div>
+      </div>
+      <div class="fm-body">
+        <div class="fm-phase" aria-live="polite">
+          <span class="k-label" id="scK"></span>
+          <h3 id="scH"></h3>
+          <p id="scP"></p>
+          <div class="tip" id="scTipBox"><svg><use href="#ic-arrow"/></svg><span id="scTip"></span></div>
+        </div>
+        <div class="dka">
+          <span class="k-label" style="color:var(--caring)">How doctors define DKA</span>
+          <h3>All three, not ketones alone.</h3>
+          <ol>
+            <li><span><b>Diabetes</b>, or blood glucose of 11.1 mmol/L or more</span></li>
+            <li><span><b>Ketones</b> of 3.0 mmol/L or more</span></li>
+            <li><span><b>Acidic blood</b>: pH under 7.3, or bicarbonate under 18 mmol/L</span></li>
+          </ol>
+          <p>From the 2024 international consensus report.<a class="ref" href="#src-10">[10]</a> A home meter shows only the middle one. Acidity takes a hospital blood test.</p>
+        </div>
+      </div>
+    </div>
+    <p class="note">General information, not a diagnosis. If you have diabetes, <b>your own sick day plan and your diabetes team’s advice come first</b>.</p>
+
+    <h3 class="sub-h">Three ways to measure, and they aren’t equal.</h3>
+    <div class="lab">
+      <div class="labc" style="--accent:var(--caring);--accent-dim:var(--caring-dim)"><span class="ico"><svg><use href="#ic-droplet"/></svg></span><h3>Blood</h3><span class="k-label">Measures BHB</span><p>A finger-prick meter. The reference method, and the one every number on this page uses.</p></div>
+      <div class="labc" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)"><span class="ico"><svg><use href="#ic-wind"/></svg></span><h3>Breath</h3><span class="k-label">Measures acetone</span><p>Tracked blood ketones reasonably well in a study of 12 adults eating ketogenic meals.<a class="ref" href="#src-12">[12]</a></p></div>
+      <div class="labc" style="--accent:var(--curious);--accent-dim:var(--curious-dim)"><span class="ico"><svg><use href="#ic-flask"/></svg></span><h3>Urine</h3><span class="k-label">Measures acetoacetate</span><p>Cheap strips, but not accurate for mild ketosis<a class="ref" href="#src-13">[13]</a> and not reliable if you take an SGLT2 inhibitor.<a class="ref" href="#src-11">[11]</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="block" id="notes">
+  <div class="wrap">
+    <div class="eyebrow"><b>03</b> · Three on-screen notes</div>
+    <h2>Three on-screen notes, checked.</h2>
+    <p class="lede">This guide started with an episode of The Diary Of A CEO about keto, where short notes labelled “Community Notes” appear on screen as the guest talks.<a class="ref" href="#src-14">[14]</a> Three of them are about ketosis. Two hold up. The third wraps a true statement around a number that doesn’t mean what it appears to.</p>
+
+    <div class="finds">
+      <article class="find" style="--accent:var(--constructive)">
+        <span class="num"><svg><use href="#ic-utensils"/></svg>Note 1 · The diet</span>
+        <div class="said"><small>The note, in short</small>Keto is high fat and low carb, so the body burns fat instead of carbohydrate. It’s used for weight loss and may help conditions such as epilepsy.</div>
+        <ul class="verdicts">
+          <li><span class="vi y"><svg><use href="#ic-check"/></svg></span><span><b>The definition is right.</b> A ketogenic diet means 20 to 50 g of carbohydrate a day, under 10% of energy.<a class="ref" href="#src-7">[7]</a></span></li>
+          <li><span class="vi y"><svg><use href="#ic-check"/></svg></span><span><b>Epilepsy is the strongest use,</b> not a maybe. Children with drug-resistant epilepsy were about 3 times as likely to become seizure-free as with usual care.<a class="ref" href="#src-15">[15]</a></span></li>
+          <li><span class="vi m"><svg><use href="#ic-minus"/></svg></span><span><b>Burning fat isn’t the same as losing more of it.</b> With calories held equal in a metabolic ward, a ketogenic diet didn’t speed up body-fat loss.<a class="ref" href="#src-16">[16]</a></span></li>
+        </ul>
+        <p class="take"><span class="chip c-constructive">Holds up</span><span>And undersells epilepsy.</span></p>
+      </article>
+
+      <article class="find" style="--accent:var(--chill-bright)">
+        <span class="num"><svg><use href="#ic-clock"/></svg>Note 2 · Fasting</span>
+        <div class="said"><small>The note, in short</small>Intermittent fasting can bring brief, mild ketosis even on a high-carb diet. It fades faster than on low carb, because carbs raise insulin and cut ketones.</div>
+        <ul class="verdicts">
+          <li><span class="vi y"><svg><use href="#ic-check"/></svg></span><span><b>The switch starts around 12 hours</b> without food, so longer daily fasts do reach it.<a class="ref" href="#src-2">[2]</a> In one trial an 18-hour daily fast raised morning ketones.<a class="ref" href="#src-17">[17]</a></span></li>
+          <li><span class="vi y"><svg><use href="#ic-check"/></svg></span><span><b>Eating flips it back.</b> On an 18-hour daily fast the switch is on for about six hours, until the next meal.<a class="ref" href="#src-2">[2]</a></span></li>
+          <li><span class="vi m"><svg><use href="#ic-minus"/></svg></span><span><b>“Mild” is doing the work.</b> After an overnight fast, ketones are usually under 0.5 mmol/L, the bottom of the nutritional ketosis range.<a class="ref" href="#src-3">[3]</a></span></li>
+        </ul>
+        <p class="take"><span class="chip c-constructive">Holds up</span><span>As long as you read “mild” literally.</span></p>
+      </article>
+
+      <article class="find" style="--accent:var(--curious)">
+        <span class="num"><svg><use href="#ic-brain"/></svg>Note 3 · The brain</span>
+        <div class="said"><small>The note, in short</small>Ketones give 25–30% more ATP per molecule than glucose and cross into the brain easily. Many people report sharper focus in ketosis.</div>
+        <ul class="verdicts">
+          <li><span class="vi n"><svg><use href="#ic-x"/></svg></span><span><b>Per molecule, glucose gives more.</b> About 30 ATP from one glucose against about 21.5 from one BHB, by standard textbook accounting.<a class="ref" href="#src-18">[18]</a></span></li>
+          <li><span class="vi y"><svg><use href="#ic-check"/></svg></span><span><b>They do reach the brain.</b> Carrier proteins move them across, and uptake rises with the blood level.<a class="ref" href="#src-3">[3]</a></span></li>
+          <li><span class="vi m"><svg><use href="#ic-minus"/></svg></span><span><b>People report it. A trial didn’t find it.</b> Three weeks of ketosis changed nothing on thinking tests in 11 healthy adults.<a class="ref" href="#src-19">[19]</a></span></li>
+        </ul>
+        <p class="take"><span class="chip c-curious">Half right</span><span>True on transport, wrong on the number.</span></p>
+      </article>
+    </div>
+
+    <div class="punch"><span class="k-label">Where “25–30%” comes from</span>In 1995, researchers pumped glucose through isolated rat hearts, then added ketones. The hearts did <b>about 25% more work for the oxygen they used</b>.<a class="ref" href="#src-20">[20]</a> A later paper counted 13 ATP from BHB against 10 from pyruvate, the half-molecule that glucose is split into.<a class="ref" href="#src-21">[21]</a> Both compare fuels per unit of oxygen or per fragment, in rat hearts. Neither says a ketone molecule carries more energy than a glucose molecule, and neither was measured in a human brain.</div>
+
+    <a class="src-link" href="https://youtu.be/sluOCy_nXHU" target="_blank" rel="noopener"><svg><use href="#ic-play"/></svg>The episode on YouTube</a>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="block" id="evidence">
+  <div class="wrap">
+    <div class="eyebrow"><b>04</b> · The evidence</div>
+    <h2>What holds up, and what doesn’t yet.</h2>
+    <p class="lede">One thing to know before the grades: most keto research is in people with <b>epilepsy, type 2 diabetes or obesity</b>, and most of it is short. Very little tests healthy adults looking for an edge.</p>
+
+    <div class="base">
+      <div class="base-l">
+        <span class="k-label" style="color:var(--constructive)">The largest review, 2023</span>
+        <h3>68 trials. Four findings rated high quality.</h3>
+        <p>An umbrella review pooled <b>17 meta-analyses covering 68 randomised trials</b>. It found 51 statistically significant effects, and graded the evidence behind each one.<a class="ref" href="#src-22">[22]</a></p>
+        <p>Only <b>four</b> were backed by high-quality evidence: fewer seizures in children with drug-resistant epilepsy, lower triglycerides at 3 and at 12 months in adults with type 2 diabetes, and <b>higher LDL cholesterol</b> at 12 months in the same group.</p>
+      </div>
+      <div class="base-r">
+        <div>
+          <span class="k-label" style="display:block;margin-bottom:10px">51 significant findings, by quality of evidence</span>
+          <div class="squares" id="squares" role="img" aria-label="Of 51 significant findings, 4 were high quality, 4 moderate, 17 low and 26 very low"></div>
+          <div class="base-key"><span><i style="background:var(--constructive)"></i>High <b>4</b></span><span><i style="background:var(--chill-bright)"></i>Moderate <b>4</b></span><span><i style="background:rgba(245,200,66,.5)"></i>Low <b>17</b></span><span><i style="background:rgba(240,238,255,.18)"></i>Very low <b>26</b></span></div>
+        </div>
+        <div>
+          <span class="k-label" style="display:block;margin-bottom:10px">How long the typical trial ran</span>
+          <div class="people" role="img" aria-label="Median follow-up 13 weeks, shown against one year"><i style="width:25%;background:var(--constructive)"></i></div>
+          <p class="cap"><b>13 weeks</b> at the midpoint, shown against a year. The middle half of trials ran 8 to 36 weeks.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-h">Every claim, graded.</h3>
+    <p class="lede">From settled physiology to not shown. Each row says who or what it was tested in.</p>
+    <div class="tally" aria-label="How the claims grade">
+      <div class="tally-bar" id="tallyBar"></div>
+      <div class="tally-key" id="tallyKey"></div>
+    </div>
+    <div class="filters" role="group" aria-label="Filter claims by area" id="filters"></div>
+    <div class="ladder" id="ladder" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="block" id="check">
+  <div class="wrap">
+    <div class="eyebrow"><b>05</b> · Check first</div>
+    <h2>Check these before fasting or cutting carbs.</h2>
+    <p class="lede">For most healthy adults a spell of mild ketosis is low risk. For the people below it can be dangerous, or it needs medicines adjusted first.<a class="ref" href="#src-7">[7]</a></p>
+    <div class="checks">
+      <div class="ck" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <span class="ico"><svg><use href="#ic-droplet"/></svg></span>
+        <h3>Type 1 diabetes</h3>
+        <p>Without enough insulin, ketones can climb unchecked into ketoacidosis.<a class="ref" href="#src-8">[8]</a> Fasting and very low carb eating both push ketones up, so they need <b>your diabetes team involved from the start</b>.<a class="ref" href="#src-7">[7]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <span class="ico"><svg><use href="#ic-pill"/></svg></span>
+        <h3>SGLT2 inhibitors</h3>
+        <p>Dapagliflozin, empagliflozin and other medicines ending in <b>-gliflozin</b> carry a small but definite risk of ketoacidosis, sometimes with near-normal blood glucose.<a class="ref" href="#src-11">[11]</a> Fasting and low-carb diets raise that risk.<a class="ref" href="#src-30">[30]</a><a class="ref" href="#src-6">[6]</a> Talk to your prescriber before either.</p>
+      </div>
+      <div class="ck" style="--accent:var(--curious);--accent-dim:var(--curious-dim)">
+        <span class="ico"><svg><use href="#ic-syringe"/></svg></span>
+        <h3>Insulin or sulfonylureas</h3>
+        <p>Cutting carbs lowers blood glucose quickly. Doses usually have to come down first, or you risk hypos. That’s a decision for your GP or diabetes team, <b>made before you start</b>.<a class="ref" href="#src-7">[7]</a></p>
+      </div>
+      <div class="ck" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)">
+        <span class="ico"><svg><use href="#ic-baby"/></svg></span>
+        <h3>Pregnant or breastfeeding</h3>
+        <p>Listed as a reason for caution in Australian Diabetes Society guidance on very low carb diets.<a class="ref" href="#src-7">[7]</a> Get individual advice before restricting carbs or fasting.</p>
+      </div>
+      <div class="ck" style="--accent:var(--chill-bright);--accent-dim:var(--chill-dim)">
+        <span class="ico"><svg><use href="#ic-heart"/></svg></span>
+        <h3>An eating disorder, past or present</h3>
+        <p>Strict food rules and fasting windows can feed disordered eating, and it’s listed as a caution in the same guidance.<a class="ref" href="#src-7">[7]</a> Butterfly’s National Helpline is free and confidential, 8am to midnight, 7 days.</p>
+        <a class="tel soft" href="tel:1800334673">Butterfly <b>1800 33 4673</b></a>
+      </div>
+      <div class="ck stop" style="--accent:var(--caring);--accent-dim:var(--caring-dim)">
+        <span class="ico"><svg><use href="#ic-octagon"/></svg></span>
+        <h3>Get help now if</h3>
+        <p>You’re very thirsty and passing a lot of urine, with <b>vomiting, stomach pain, fast breathing, breath that smells like nail polish remover, or drowsiness and confusion</b>. These are signs of ketoacidosis.<a class="ref" href="#src-6">[6]</a> Call triple zero.</p>
+        <a class="tel" href="tel:000">Emergency <b>000</b></a>
+      </div>
+    </div>
+    <p class="note">Also ruled out, or needing specialist advice: <b>end-stage liver failure</b>, rare inherited disorders of fat or ketone metabolism, and pancreatic disease that limits insulin.<a class="ref" href="#src-7">[7]</a> If you’ve had <b>kidney stones</b>, raise that with your GP too.<a class="ref" href="#src-29">[29]</a></p>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="block" id="ask">
+  <div class="wrap">
+    <div class="eyebrow"><b>06</b> · Ask your GP</div>
+    <h2>Want to try it? Take these to your GP first.</h2>
+    <p class="lede">If none of the cautions apply and you’d like to try a ketogenic diet or regular fasting, a short conversation first makes it safer. Tick the questions that fit, then copy the list.</p>
+
+    <div class="rt">
+      <div class="rt-card">
+        <div class="rt-head"><h3>Questions to take</h3><span class="cnt" id="qCnt">0 selected</span></div>
+        <div class="qs" id="qs"></div>
+        <div class="acts">
+          <button type="button" class="btn" id="copyQ"><svg><use href="#ic-copy"/></svg><span>Copy list</span></button>
+          <button type="button" class="btn ghost" id="allQ"><svg><use href="#ic-check"/></svg><span>Select all</span></button>
+          <span class="msg" id="qMsg" aria-live="polite"></span>
+        </div>
+        <p class="fineprint">Your ticks are saved in this browser only.</p>
+      </div>
+
+      <div class="rt-card">
+        <h3>What the trials saw, and when</h3>
+        <ol class="tl">
+          <li><span class="when">Week 1</span><span>“Keto flu” reports peak: <b>headache, fatigue, nausea, dizziness and brain fog</b>.<a class="ref" href="#src-23">[23]</a></span></li>
+          <li><span class="when">By week 4</span><span>Those early symptoms have mostly faded from people’s reports.<a class="ref" href="#src-23">[23]</a></span></li>
+          <li><span class="when">3 months</span><span>In adults with type 2 diabetes, <b>HbA1c about 0.6 points lower</b> and triglycerides about 0.2 mmol/L lower than on a regular diet.<a class="ref" href="#src-22">[22]</a></span></li>
+          <li><span class="when">12 months</span><span>Triglycerides still lower, by about 0.3 mmol/L. <b>LDL cholesterol about 0.16 mmol/L higher</b>.<a class="ref" href="#src-22">[22]</a> Few trials run longer.</span></li>
+        </ol>
+        <div class="caution"><svg><use href="#ic-alert"/></svg><span>Diabetes, or any glucose-lowering medicine? <a href="#check">Get your medicines reviewed before you change how you eat.</a></span></div>
+      </div>
+    </div>
+
+    <details class="sources">
+      <summary><svg><use href="#ic-chev"/></svg>Sources<span>30</span></summary>
+      <ol>
+        <li id="src-1">White H, Venkatesh B. <a href="https://doi.org/10.1186/cc10020" target="_blank" rel="noopener">Clinical review: ketones and brain injury</a>. Crit Care, 2011.</li>
+        <li id="src-2">Anton SD, Moehl K, Donahoo WT, et al. <a href="https://doi.org/10.1002/oby.22065" target="_blank" rel="noopener">Flipping the metabolic switch: understanding and applying the health benefits of fasting</a>. Obesity, 2018.</li>
+        <li id="src-3">Jensen NJ, Wodschow HZ, Nilsson M, Rungby J. <a href="https://www.mdpi.com/1422-0067/21/22/8767" target="_blank" rel="noopener">Effects of ketone bodies on brain metabolism and function in neurodegenerative diseases</a>. Int J Mol Sci, 2020.</li>
+        <li id="src-4">Cunnane S, Nugent S, Roy M, et al. <a href="https://doi.org/10.1016/j.nut.2010.07.021" target="_blank" rel="noopener">Brain fuel metabolism, aging, and Alzheimer’s disease</a>. Nutrition, 2011.</li>
+        <li id="src-5">Owen OE, Morgan AP, Kemp HG, Sullivan JM, Herrera MG, Cahill GF Jr. <a href="https://www.jci.org/articles/view/105650" target="_blank" rel="noopener">Brain metabolism during fasting</a>. J Clin Invest, 1967.</li>
+        <li id="src-6">healthdirect. <a href="https://www.healthdirect.gov.au/diabetic-ketoacidosis" target="_blank" rel="noopener">Diabetic ketoacidosis</a>. Reviewed November 2024.</li>
+        <li id="src-7">Australian Diabetes Society. <a href="https://www.diabetessociety.com.au/wp-content/uploads/2023/11/Managing-Type-2-Diabetes-with-Therapeutic-Carbohydrate-reduction-TCR-November-2023_Final.pdf" target="_blank" rel="noopener">Managing type 2 diabetes with therapeutic carbohydrate reduction (TCR)</a>. November 2023.</li>
+        <li id="src-8">National Diabetes Services Scheme (Diabetes Australia). <a href="https://youth.ndss.com.au/reduce-the-risk-of-ketoacidosis/" target="_blank" rel="noopener">Reduce the risk of diabetic ketoacidosis</a>.</li>
+        <li id="src-9">Baker Heart and Diabetes Institute. <a href="https://www.baker.edu.au/-/media/documents/fact-sheets/baker-institute-factsheet-hyperglycaemia-sick-day-management.pdf" target="_blank" rel="noopener">Hyperglycaemia and sick day management for adults with type 1 diabetes</a>. Fact sheet.</li>
+        <li id="src-10">Umpierrez GE, Davis GM, ElSayed NA, et al. <a href="https://doi.org/10.1007/s00125-024-05979-4" target="_blank" rel="noopener">Hyperglycaemic crises in adults with diabetes: a consensus report</a>. Diabetologia, 2024.</li>
+        <li id="src-11">Australian Diabetes Society, ADEA, ANZCA, NZSSD. <a href="https://diabetessociety.com.au/downloads/20220726%20ADS%20ADEA%20ANZCA%20NZSSD_DKA_SGLT2i_Alert_Ver%20July%202022.pdf" target="_blank" rel="noopener">Alert update: periprocedural diabetic ketoacidosis with SGLT2 inhibitor use</a>. July 2022.</li>
+        <li id="src-12">Musa-Veloso K, Likhodii SS, Cunnane SC. <a href="https://pubmed.ncbi.nlm.nih.gov/12081817/" target="_blank" rel="noopener">Breath acetone is a reliable indicator of ketosis in adults consuming ketogenic meals</a>. Am J Clin Nutr, 2002.</li>
+        <li id="src-13"><a href="https://doi.org/10.1002/osp4.432" target="_blank" rel="noopener">Urine dipsticks are not accurate for detecting mild ketosis during a severely energy restricted diet</a>. Obes Sci Pract, 2020.</li>
+        <li id="src-14">The Diary Of A CEO. <a href="https://youtu.be/sluOCy_nXHU" target="_blank" rel="noopener">Episode on the ketogenic diet, with on-screen “Community Notes”</a>. YouTube.</li>
+        <li id="src-15">Martin-McGill KJ, Bresnahan R, Levy RG, Cooper PN. <a href="https://doi.org/10.1002/14651858.CD001903.pub5" target="_blank" rel="noopener">Ketogenic diets for drug-resistant epilepsy</a>. Cochrane Database Syst Rev, 2020.</li>
+        <li id="src-16">Hall KD, Chen KY, Guo J, et al. <a href="https://doi.org/10.3945/ajcn.116.133561" target="_blank" rel="noopener">Energy expenditure and body composition changes after an isocaloric ketogenic diet in overweight and obese men</a>. Am J Clin Nutr, 2016.</li>
+        <li id="src-17">Jamshed H, Beyl RA, Della Manna DL, Yang ES, Ravussin E, Peterson CM. <a href="https://doi.org/10.3390/nu11061234" target="_blank" rel="noopener">Early time-restricted feeding improves 24-hour glucose levels and affects markers of the circadian clock, aging, and autophagy in humans</a>. Nutrients, 2019.</li>
+        <li id="src-18">Tymoczko JL, Berg JM, Stryer L. <a href="https://digfir-published.macmillanusa.com/tymoczko3e/tymoczko3e_answer_27.html" target="_blank" rel="noopener">Biochemistry: A Short Course, 3rd edition, chapter 27 answers</a>. 30 ATP per glucose, 10 per acetyl-CoA and 2.5 per NADH. One BHB gives two acetyl-CoA and one NADH, less one ATP equivalent spent activating it: 21.5.</li>
+        <li id="src-19">Iacovides S, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/31098615/" target="_blank" rel="noopener">Three consecutive weeks of nutritional ketosis has no effect on cognitive function, sleep, and mood compared with a high-carbohydrate, low-fat diet in healthy individuals: a randomized, crossover, controlled trial</a>. Am J Clin Nutr, 2019.</li>
+        <li id="src-20">Sato K, Kashiwaya Y, Keon CA, et al. <a href="https://doi.org/10.1096/fasebj.9.8.7768357" target="_blank" rel="noopener">Insulin, ketone bodies, and mitochondrial energy transduction</a>. FASEB J, 1995.</li>
+        <li id="src-21">Murray AJ, Knight NS, Cole MA, et al. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5102124" target="_blank" rel="noopener">Novel ketone diet enhances physical and cognitive performance</a>. FASEB J, 2016.</li>
+        <li id="src-22">Patikorn C, Saidoung P, Pham T, et al. <a href="https://doi.org/10.1186/s12916-023-02874-y" target="_blank" rel="noopener">Effects of ketogenic diet on health outcomes: an umbrella review of meta-analyses of randomized clinical trials</a>. BMC Med, 2023.</li>
+        <li id="src-23">Bostock ECS, Kirkby KC, Taylor BV, Hawrelak JA. <a href="https://doi.org/10.3389/fnut.2020.00020" target="_blank" rel="noopener">Consumer reports of “keto flu” associated with the ketogenic diet</a>. Front Nutr, 2020.</li>
+        <li id="src-24">Rong L, Peng Y, Shen Q, Chen K, Fang B, Li W. <a href="https://pubmed.ncbi.nlm.nih.gov/38943982/" target="_blank" rel="noopener">Effects of ketogenic diet on cognitive function of patients with Alzheimer’s disease: a systematic review and meta-analysis</a>. J Nutr Health Aging, 2024.</li>
+        <li id="src-25">Bonnechère B, Stephens EB, Boileau AC, Ducker M, Stubbs BJ. <a href="https://doi.org/10.1101/2025.09.17.25335999" target="_blank" rel="noopener">The effect of exogenous ketone bodies on cognition in patients with mild cognitive impairment, Alzheimer’s disease and in healthy adults: a systematic review and meta-analysis</a>. medRxiv preprint, 2025.</li>
+        <li id="src-26">Sethi S, Wakeham D, Ketter T, et al. <a href="https://doi.org/10.1016/j.psychres.2024.115866" target="_blank" rel="noopener">Ketogenic diet intervention on metabolic and psychiatric health in bipolar and schizophrenia: a pilot trial</a>. Psychiatry Res, 2024.</li>
+        <li id="src-27">Gibson AA, Seimon RV, Lee CMY, et al. <a href="https://doi.org/10.1111/obr.12230" target="_blank" rel="noopener">Do ketogenic diets really suppress appetite? A systematic review and meta-analysis</a>. Obes Rev, 2015.</li>
+        <li id="src-28">Burke LM, Ross ML, Garvican-Lewis LA, et al. <a href="https://doi.org/10.1113/JP273230" target="_blank" rel="noopener">Low carbohydrate, high fat diet impairs exercise economy and negates the performance benefit from intensified training in elite race walkers</a>. J Physiol, 2017.</li>
+        <li id="src-29">Acharya P, Acharya C, Thongprayoon C, et al. <a href="https://doi.org/10.3390/diseases9020039" target="_blank" rel="noopener">Incidence and characteristics of kidney stones in patients on ketogenic diet: a systematic review and meta-analysis</a>. Diseases, 2021.</li>
+        <li id="src-30">Therapeutic Goods Administration. <a href="https://www.tga.gov.au/news/safety-alerts/sodium-glucose-co-transporter-2-inhibitors" target="_blank" rel="noopener">Sodium glucose co-transporter 2 inhibitors: safety alert on diabetic ketoacidosis</a>.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Use it for what it’s good at</div>
+    <h2>A real state, with a narrow set of proven uses.</h2>
+    <p class="lede">Ketosis is normal physiology. A ketogenic diet is a proven therapy for hard-to-treat epilepsy and a recognised option for type 2 diabetes. For a healthy adult chasing sharper thinking, the evidence isn’t there yet.</p>
+    <div class="links">
+      <a class="companion" href="https://www.selfdriven.health/anti-inflammatory">Anti-inflammatory bowls <svg><use href="#ic-arrow"/></svg></a>
+      <a class="companion" href="https://www.selfdriven.health/walking">Walking <svg><use href="#ic-arrow"/></svg></a>
+      <a class="companion" href="https://www.selfdriven.health/self-tests">Self-tests <svg><use href="#ic-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="sd-foot">
+  <a class="sd-logo" href="https://www.selfdriven.health/" aria-label="selfdriven.health home"><span class="markdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><em>health</em></span></a>
+  <div class="sd-tag">Feel · Grow · Move</div>
+  <nav class="sd-more" aria-label="More guides"><a href="https://www.selfdriven.health/anti-inflammatory"><i style="background:var(--constructive)"></i>Anti-inflammatory</a><a href="https://www.selfdriven.health/good-gut-smoothies"><i style="background:var(--constructive)"></i>Good gut smoothies</a><a href="https://www.selfdriven.health/walking"><i style="background:var(--constructive)"></i>Walking</a><a href="https://www.selfdriven.health/self-tests"><i style="background:var(--constructive)"></i>Self-tests</a><a href="https://www.selfdriven.health/vagus-nerve"><i style="background:var(--chill-bright)"></i>Vagus nerve</a><a href="https://www.selfdriven.health/#guides"><i style="background:var(--caring)"></i>All guides</a></nav>
+  <div class="sd-divider"></div>
+  <div class="sd-init">Companion to <a href="https://selfdriven.you" target="_blank" rel="noopener">selfdriven.you</a></div>
+  <div class="sd-init">An initiative of the <a href="https://selfdriven.foundation" target="_blank" rel="noopener">selfdriven Foundation</a></div>
+  <p class="sd-note"><b>Plain language, evidence-checked, and not medical advice.</b> If you have diabetes or take glucose-lowering medicines, talk to your GP or diabetes team before fasting or cutting carbs. For signs of ketoacidosis, call 000.</p>
+</footer>
+
+<script>
+/* ================= 01 · the fuel switch ================= */
+(function(){
+  var R = document.getElementById('fsR'); if (!R) return;
+  var P = [
+    {t0:0, t1:4, k:'0–4 hours', h:'Running on the meal',
+     p:'Carbohydrate from the meal is being absorbed. Insulin is high, which tells the body to burn and store glucose, and tells the liver not to make ketones.',
+     tip:'Any meal with carbs brings you back here: insulin rises and ketone production shuts off.',
+     kp:'A meal with very little carbohydrate barely raises insulin, so the liver keeps making ketones straight through it.',
+     ktip:'A high-carb meal would raise insulin and switch ketone production back off.'},
+    {t0:4, t1:12, k:'4–12 hours', h:'Drawing on glycogen',
+     p:'The meal is absorbed. The liver releases stored glucose (glycogen) to keep blood sugar steady, insulin drifts down and fat release starts to rise. Ketones are still low: after an overnight fast they’re usually under 0.5 mmol/L.',
+     tip:'This is where a normal night ends. Breakfast takes you back to the start.',
+     kp:'On 20 to 50 g of carbs a day, glycogen stores are already low, so the body runs mostly on fat between meals.',
+     ktip:'Typical blood ketones on a ketogenic diet sit between 0.5 and 3.0 mmol/L.'},
+    {t0:12, t1:36, k:'12–36 hours', h:'The switch',
+     p:'Liver glycogen runs down. Fat pours out of storage and the liver turns part of it into ketones, which climb in the blood. Exactly when depends on how full your glycogen stores were and how active you are.',
+     tip:'Daily fasting windows of 14 to 18 hours only reach the first part of this phase.',
+     kp:'There’s no sharp switch to flip: you’re already on the far side of it. Ketones drift a little higher the longer you go without food.',
+     ktip:'This is why a ketogenic diet is the usual route to steady ketosis. No long fasts needed.'},
+    {t0:36, t1:73, k:'36 hours and on', h:'Ketosis',
+     p:'Ketones are now a major fuel for muscle and brain. If a fast runs on for days to weeks, blood levels climb far higher and ketones become the brain’s main fuel.',
+     tip:'Multi-day fasting needs medical supervision. It isn’t an everyday habit. A ketogenic diet reaches mild ketosis while you keep eating.',
+     kp:'Fasting on top of a ketogenic diet pushes ketones higher than the diet alone.',
+     ktip:'Multi-day fasting needs medical supervision. It isn’t an everyday habit.'}
+  ];
+  var M = [
+    {n:'Insulin', ic:'gauge', c:'var(--chill-bright)', v:[90,45,22,14], u:[35,22,15,12], w:['High','Falling','Low','Low'], wu:['Small rise','Low','Low','Low']},
+    {n:'Liver glycogen', ic:'battery', c:'var(--curious)', v:[88,60,22,8], u:[35,28,15,8], w:['Topped up','Draining','Running out','Nearly empty'], wu:['Low','Low','Lower','Nearly empty']},
+    {n:'Fat release', ic:'flame', c:'var(--caring)', v:[12,38,72,90], u:[60,70,82,90], w:['Switched off','Rising','High','High'], wu:['High','High','High','High']},
+    {n:'Blood ketones', ic:'droplet', c:'var(--constructive)', v:[3,8,35,70], u:[28,32,45,70], w:['Trace','Low','Rising','High'], wu:['Raised','Raised','Higher','High']},
+    {n:'Brain on ketones', ic:'brain', c:'var(--text)', v:[2,5,22,50], u:[15,18,28,50], w:['Almost none','Under 5%','Growing','Large share'], wu:['Some','Some','Growing','Large share']}
+  ];
+  var host = document.getElementById('fsMeters');
+  host.innerHTML = M.map(function(m,i){
+    return '<div class="mtr" style="--c:'+m.c+'"><svg aria-hidden="true"><use href="#ic-'+m.ic+'"/></svg><span class="nm">'+m.n+'</span><span class="bar" aria-hidden="true"><i id="fb'+i+'"></i></span><span class="wd" id="fw'+i+'"></span></div>';
+  }).join('');
+  var keto = false, strip = document.querySelectorAll('#fsStrip > span');
+  var now = document.getElementById('fsNow');
+  function phaseOf(h){ for (var i=0;i<P.length;i++){ if (h < P[i].t1) return i; } return P.length-1; }
+  var last = -1, lastK = null;
+  function render(){
+    var h = +R.value, pi = phaseOf(h), ph = P[pi];
+    now.textContent = h + ' h';
+    R.setAttribute('aria-valuetext', h + ' hours: ' + ph.h.toLowerCase());
+    if (pi === last && keto === lastK) return;
+    last = pi; lastK = keto;
+    document.getElementById('fsK').textContent = ph.k;
+    document.getElementById('fsH').textContent = ph.h;
+    document.getElementById('fsP').textContent = keto ? ph.kp : ph.p;
+    document.getElementById('fsTip').textContent = keto ? ph.ktip : ph.tip;
+    Array.prototype.forEach.call(strip, function(el,i){ el.classList.toggle('on', i === pi); });
+    M.forEach(function(m,i){
+      document.getElementById('fb'+i).style.width = (keto ? m.u : m.v)[pi] + '%';
+      document.getElementById('fw'+i).textContent = (keto ? m.wu : m.w)[pi];
+    });
+  }
+  R.addEventListener('input', function(){ stop(); render(); });
+  var bM = document.getElementById('fsMixed'), bK = document.getElementById('fsKeto');
+  function setK(v){ keto = v; bM.setAttribute('aria-pressed', String(!v)); bK.setAttribute('aria-pressed', String(v)); render(); }
+  bM.addEventListener('click', function(){ setK(false); });
+  bK.addEventListener('click', function(){ setK(true); });
+  var play = document.getElementById('fsPlay'), raf = null, t0 = 0, from = 0;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function setBtn(on){ play.innerHTML = on ? '<svg><use href="#ic-pause"/></svg><span>Pause</span>' : '<svg><use href="#ic-play"/></svg><span>Play</span>'; }
+  function stop(){ if (raf){ cancelAnimationFrame(raf); raf = null; setBtn(false); } }
+  function step(ts){
+    if (!t0) t0 = ts;
+    var h = Math.min(72, from + (ts - t0) / 1000 * 7); /* 72 hours in about 10 seconds */
+    R.value = Math.round(h); render();
+    if (h >= 72){ raf = null; setBtn(false); return; }
+    raf = requestAnimationFrame(step);
+  }
+  play.addEventListener('click', function(){
+    if (raf){ stop(); return; }
+    if (reduce){ var i = phaseOf(+R.value); R.value = P[(i+1) % P.length].t0 + 1; render(); return; }
+    from = +R.value >= 71 ? 0 : +R.value; t0 = 0; setBtn(true); raf = requestAnimationFrame(step);
+  });
+  render();
+})();
+
+/* ================= 02 · ketone scale ================= */
+(function(){
+  var R = document.getElementById('scR'); if (!R) return;
+  var MAX = 6;
+  var CTX = {
+    none: {
+      ticks: [0, 0.5, 3],
+      bands: [
+        {to:0.5, cls:'n', s:'Low', k:'Under 0.5 mmol/L', h:'Not in ketosis',
+         p:'The usual state when you eat carbohydrate regularly. A rise of a few tenths after an overnight fast is normal.<a class="ref" href="#src-3">[3]</a>', tip:'Nothing to act on.', tc:''},
+        {to:3.0001, cls:'', s:'Nutritional ketosis', k:'0.5 to 3.0 mmol/L', h:'Nutritional ketosis',
+         p:'The range a ketogenic diet of 20 to 50 g of carbs a day is expected to produce.<a class="ref" href="#src-7">[7]</a> A longer fast gets here too. Insulin is still in control, so the blood stays at a normal pH.', tip:'For scale: the healthy adults in the 3-week trial on this page averaged 1.0. Higher isn’t a target.', tc:''},
+        {to:99, cls:'w', s:'Above diet range', k:'Over 3.0 mmol/L', h:'Above the usual diet range',
+         p:'Higher than a ketogenic diet normally produces. Fasts lasting many days can reach 5 or more.<a class="ref" href="#src-1">[1]</a> If you haven’t been fasting, or you feel unwell, treat it as a warning sign.', tip:'With vomiting, stomach pain, fast breathing or drowsiness, get urgent medical help.', tc:'w'}
+      ]
+    },
+    dm: {
+      ticks: [0, 0.6, 1.5, 3],
+      bands: [
+        {to:0.6, cls:'n', s:'OK', k:'Under 0.6 mmol/L', h:'Normal',
+         p:'Small amounts of ketones are normal, for instance when you haven’t eaten overnight.<a class="ref" href="#src-8">[8]</a>', tip:'Nothing to act on.', tc:''},
+        {to:1.5, cls:'w', s:'Raised', k:'0.6 to under 1.5 mmol/L', h:'Raised',
+         p:'Above the normal range for someone with type 1 diabetes.<a class="ref" href="#src-8">[8]</a> If you take an SGLT2 inhibitor and eat low carb, Australian guidance is to keep readings under 1.5.<a class="ref" href="#src-7">[7]</a>', tip:'Follow your sick day action plan and re-check glucose and ketones every 2 to 4 hours.', tc:'w'},
+        {to:3.0, cls:'r', s:'Serious risk', k:'1.5 to under 3.0 mmol/L', h:'Serious risk of DKA',
+         p:'Diabetes Australia’s NDSS describes this range as a serious risk of DKA.<a class="ref" href="#src-8">[8]</a> For people on an SGLT2 inhibitor, guidance to clinicians is that the medicine is paused at 1.5 or above and medical advice sought.<a class="ref" href="#src-7">[7]</a>', tip:'Follow your sick day action plan and contact your diabetes team or GP now.', tc:'r'},
+        {to:99, cls:'r', s:'Emergency', k:'3.0 mmol/L and over', h:'Emergency range',
+         p:'Seek urgent medical attention.<a class="ref" href="#src-9">[9]</a> This is the ketone level used to define DKA, together with acidic blood.<a class="ref" href="#src-10">[10]</a> On an SGLT2 inhibitor, DKA can happen with normal or only slightly raised blood glucose.<a class="ref" href="#src-11">[11]</a>', tip:'Go to an emergency department. With vomiting, drowsiness or fast breathing, call 000.', tc:'r'}
+      ]
+    }
+  };
+  var ctx = 'none';
+  var bandsEl = document.getElementById('scBands'), axis = document.getElementById('scAxis');
+  var now = document.getElementById('scNow');
+  function bandOf(v){ var b = CTX[ctx].bands; for (var i=0;i<b.length;i++){ if (v < b[i].to) return i; } return b.length-1; }
+  function build(){
+    var b = CTX[ctx].bands, from = 0, html = '';
+    b.forEach(function(x, i){
+      var to = Math.min(MAX, Math.round(x.to * 10) / 10);
+      var w = (to - from) / MAX * 100;
+      html += '<span class="'+x.cls+'" data-i="'+i+'" style="width:calc('+w.toFixed(3)+'% - '+(i < b.length-1 ? '3' : '0')+'px)">'+x.s+'</span>';
+      from = to;
+    });
+    bandsEl.innerHTML = html;
+    var t = CTX[ctx].ticks;
+    axis.innerHTML = t.map(function(v){ return '<span style="left:'+(v/MAX*100)+'%">'+(v === 0 ? '0' : v.toFixed(1))+'</span>'; }).join('') + '<span style="left:100%">6+</span>';
+  }
+  var last = null;
+  function render(force){
+    var v = +R.value, i = bandOf(v), x = CTX[ctx].bands[i];
+    now.textContent = v.toFixed(1) + (v >= MAX ? '+' : '');
+    R.setAttribute('aria-valuetext', v.toFixed(1) + ' millimoles per litre: ' + x.h.toLowerCase());
+    var key = ctx + i;
+    if (!force && key === last) return;
+    last = key;
+    document.getElementById('scK').textContent = x.k;
+    document.getElementById('scH').textContent = x.h;
+    document.getElementById('scP').innerHTML = x.p;
+    document.getElementById('scTip').textContent = x.tip;
+    document.getElementById('scTipBox').className = 'tip' + (x.tc ? ' ' + x.tc : '');
+    Array.prototype.forEach.call(bandsEl.children, function(el, j){ el.classList.toggle('on', j === i); });
+  }
+  R.addEventListener('input', function(){ render(false); });
+  var bN = document.getElementById('scNone'), bD = document.getElementById('scDm');
+  function setC(c){ ctx = c; bN.setAttribute('aria-pressed', String(c === 'none')); bD.setAttribute('aria-pressed', String(c === 'dm')); build(); render(true); }
+  bN.addEventListener('click', function(){ setC('none'); });
+  bD.addEventListener('click', function(){ setC('dm'); });
+  build(); render(true);
+})();
+
+/* ================= 04 · evidence ================= */
+(function(){
+  var sq = document.getElementById('squares');
+  if (sq){
+    var cls = [], i;
+    for (i=0;i<4;i++) cls.push('q4');
+    for (i=0;i<4;i++) cls.push('q3');
+    for (i=0;i<17;i++) cls.push('q2');
+    for (i=0;i<26;i++) cls.push('q1');
+    sq.innerHTML = cls.map(function(c){ return '<i class="'+c+'"></i>'; }).join('');
+  }
+  var host = document.getElementById('ladder'); if (!host) return;
+  var G = {
+    est:{l:'Established', c:'c-constructive', col:'var(--constructive)'},
+    sup:{l:'Supported', c:'c-constructive', col:'#00b37d'},
+    some:{l:'Some evidence', c:'c-chill', col:'var(--chill-bright)'},
+    early:{l:'Early', c:'c-chill', col:'#6a5fd6'},
+    rep:{l:'Reported', c:'c-neutral', col:'rgba(240,238,255,.5)'},
+    no:{l:'Not shown', c:'c-caring', col:'var(--caring)'},
+    bf:{l:'Backfires', c:'c-caring', col:'#c2304e'},
+    risk:{l:'Risk', c:'c-curious', col:'var(--curious)'}
+  };
+  var ORDER = ['est','sup','some','early','rep','no','bf','risk'];
+  var A = [
+    {id:'brain', l:'Brain', ic:'brain'},
+    {id:'med', l:'Medical uses', ic:'shield'},
+    {id:'wt', l:'Weight & metabolism', ic:'flame'},
+    {id:'perf', l:'Performance', ic:'dumbbell'},
+    {id:'down', l:'Downsides', ic:'alert'}
+  ];
+  var IN = {
+    phys:['ic-activity','Human physiology'], healthy:['ic-users','Healthy adults'], kids:['ic-users','Children with epilepsy'],
+    t2d:['ic-droplet','Adults with type 2 diabetes'], ow:['ic-users','Adults with overweight'], ath:['ic-dumbbell','Athletes'],
+    rat:['ic-flask','Isolated rat hearts'], mix:['ic-users','Mixed groups'], ad:['ic-brain','Alzheimer’s or MCI'],
+    pilot:['ic-users','Pilot, no control group'], forum:['ic-message','Online reports'], self:['ic-message','Self-report'],
+    kd:['ic-users','People on ketogenic diets'], all:['ic-clock','All trials in the review']
+  };
+  var D = [
+    {a:'brain', g:'est', in:'phys', hl:1, t:'Ketones fuel the brain', n:'They cross from blood to brain on carrier proteins and are used in step with the blood level.<a class="ref" href="#src-3">[3]</a> After weeks of starvation they become the brain’s main fuel.<a class="ref" href="#src-5">[5]</a>'},
+    {a:'brain', g:'no', in:'healthy', hl:1, t:'Sharper thinking in healthy adults', n:'In a randomised crossover trial, <b>11 healthy adults</b> spent 3 weeks in ketosis, averaging 1.0 mmol/L. Speed and accuracy on thinking tests, mood and sleep were no different from a high-carb diet with the same calories.<a class="ref" href="#src-19">[19]</a>'},
+    {a:'brain', g:'no', in:'rat', t:'A more efficient fuel than glucose', n:'Molecule for molecule, glucose yields more ATP, about 30 against 21.5.<a class="ref" href="#src-18">[18]</a> The “25–30%” figure is work per unit of oxygen in isolated rat hearts.<a class="ref" href="#src-20">[20]</a><a class="ref" href="#src-21">[21]</a>'},
+    {a:'brain', g:'rep', in:'self', t:'Mental clarity', n:'Often described by people on the diet. In the first weeks the reports run the other way: “brain fog” was among the commonest complaints in online keto-flu posts.<a class="ref" href="#src-23">[23]</a>'},
+    {a:'brain', g:'some', in:'ad', t:'Better scores in Alzheimer’s or mild cognitive impairment', n:'A 2024 meta-analysis of 10 trials found modest gains on cognitive tests. Most used MCT supplements, not a ketogenic diet, and blood fats rose.<a class="ref" href="#src-24">[24]</a>'},
+    {a:'brain', g:'early', in:'mix', t:'Ketone drinks for thinking', n:'A 2025 pooled analysis of 18 trials found a small average benefit, with results varying widely between studies. It’s a preprint, not yet peer reviewed.<a class="ref" href="#src-25">[25]</a>'},
+    {a:'brain', g:'early', in:'pilot', t:'Help in serious mental illness', n:'One 4-month pilot enrolled <b>23 people</b> with schizophrenia or bipolar disorder, all staying on their medication. Metabolic health improved and symptom scores fell, but nobody was assigned to a comparison diet.<a class="ref" href="#src-26">[26]</a>'},
+    {a:'med', g:'sup', in:'kids', hl:1, t:'Fewer seizures in drug-resistant epilepsy', n:'The best-evidenced use. Children were about <b>3 times</b> as likely to become seizure-free and nearly <b>6 times</b> as likely to halve their seizures as with usual care. Certainty is low because the trials were small.<a class="ref" href="#src-15">[15]</a>'},
+    {a:'med', g:'sup', in:'t2d', t:'Lower HbA1c in type 2 diabetes', n:'About <b>0.6 percentage points</b> lower at 3 months than on a regular diet.<a class="ref" href="#src-22">[22]</a> The Australian Diabetes Society lists carbohydrate reduction as one option, with medicines reviewed first.<a class="ref" href="#src-7">[7]</a>'},
+    {a:'med', g:'some', in:'t2d', t:'Type 2 diabetes remission', n:'Possible in the short to medium term. Evidence from well-controlled trials beyond 2 years is limited.<a class="ref" href="#src-7">[7]</a>'},
+    {a:'wt', g:'sup', in:'t2d', t:'Faster early weight loss', n:'Quicker early loss than higher-carbohydrate diets in people with type 2 diabetes.<a class="ref" href="#src-7">[7]</a>'},
+    {a:'wt', g:'no', in:'ow', hl:1, t:'More fat loss at the same calories', n:'With calories and protein held constant in a metabolic ward, body-fat loss in <b>17 men</b> slowed, not sped up, after they switched to a ketogenic diet.<a class="ref" href="#src-16">[16]</a>'},
+    {a:'wt', g:'some', in:'ow', t:'Less hunger', n:'Across pooled studies, people in ketosis felt slightly less hungry and had less desire to eat, even while losing weight.<a class="ref" href="#src-27">[27]</a>'},
+    {a:'wt', g:'sup', in:'t2d', t:'Lower triglycerides', n:'Down about <b>0.2 mmol/L</b> at 3 months and <b>0.3</b> at 12 months. One of the few findings rated high quality.<a class="ref" href="#src-22">[22]</a>'},
+    {a:'perf', g:'est', in:'ath', t:'More fat burned during exercise', n:'Fat burning during exercise rises sharply once athletes adapt to the diet.<a class="ref" href="#src-28">[28]</a>'},
+    {a:'perf', g:'bf', in:'ath', t:'Better endurance performance', n:'In elite race walkers, about 3 weeks on a ketogenic diet raised the oxygen cost of walking at race pace and cancelled the performance gain that high-carb groups got from the same training.<a class="ref" href="#src-28">[28]</a>'},
+    {a:'down', g:'rep', in:'forum', t:'“Keto flu” in the first weeks', n:'Headache, fatigue, nausea, dizziness and brain fog. In online reports it peaked in week 1 and had mostly gone by week 4.<a class="ref" href="#src-23">[23]</a>'},
+    {a:'down', g:'risk', in:'t2d', hl:1, t:'Higher LDL cholesterol', n:'Up about <b>0.16 mmol/L</b> on average at 12 months, also rated high quality.<a class="ref" href="#src-22">[22]</a> There are no long-term trials of heart attacks or strokes on the diet.<a class="ref" href="#src-7">[7]</a>'},
+    {a:'down', g:'risk', in:'kd', t:'Kidney stones', n:'About <b>6%</b> of people on ketogenic diets developed stones over an average 3.7 years. The adult estimate, about 8%, is much less certain than the children’s.<a class="ref" href="#src-29">[29]</a>'},
+    {a:'down', g:'no', in:'all', t:'Safe and effective over years', n:'Half the trials in the largest review ran 13 weeks or less.<a class="ref" href="#src-22">[22]</a>'}
+  ];
+
+  var cnt = {}; ORDER.forEach(function(g){ cnt[g] = 0; }); D.forEach(function(d){ cnt[d.g]++; });
+  document.getElementById('tallyBar').innerHTML = ORDER.filter(function(g){ return cnt[g]; }).map(function(g){ return '<i style="flex-grow:'+cnt[g]+';background:'+G[g].col+'" title="'+G[g].l+': '+cnt[g]+'"></i>'; }).join('');
+  document.getElementById('tallyKey').innerHTML = ORDER.filter(function(g){ return cnt[g]; }).map(function(g){ return '<span><i style="background:'+G[g].col+'"></i>'+G[g].l+' <b>'+cnt[g]+'</b></span>'; }).join('');
+
+  var f = document.getElementById('filters'), cur = 'all';
+  var btns = [{id:'all', l:'All', ic:'list'}].concat(A);
+  f.innerHTML = btns.map(function(b){
+    var n = b.id === 'all' ? D.length : D.filter(function(d){ return d.a === b.id; }).length;
+    return '<button type="button" data-a="'+b.id+'" aria-pressed="'+(b.id==='all')+'"><svg aria-hidden="true"><use href="#ic-'+b.ic+'"/></svg>'+b.l+' <span>'+n+'</span></button>';
+  }).join('');
+  function row(d){
+    var g = G[d.g], tin = IN[d.in];
+    return '<div class="rung'+(d.g==='no'?' no':'')+(d.g==='bf'?' bf':'')+(d.g==='risk'?' risk':'')+'"><div class="g"><span class="chip '+g.c+'">'+g.l+'</span></div><div><div class="cl">'+d.t+'</div><span class="in'+(d.hl?' hl':'')+'"><svg aria-hidden="true"><use href="#'+tin[0]+'"/></svg>'+tin[1]+'</span></div><div class="ev">'+d.n+'</div></div>';
+  }
+  function draw(){
+    var html = '';
+    A.forEach(function(a){
+      if (cur !== 'all' && cur !== a.id) return;
+      var items = D.filter(function(d){ return d.a === a.id; });
+      if (cur === 'all') html += '<div class="grp"><svg aria-hidden="true"><use href="#ic-'+a.ic+'"/></svg>'+a.l+'</div>';
+      html += items.map(row).join('');
+    });
+    host.innerHTML = html;
+  }
+  f.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b) return;
+    cur = b.dataset.a;
+    Array.prototype.forEach.call(f.querySelectorAll('button'), function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+    draw();
+  });
+  draw();
+})();
+
+/* ================= 06 · questions for your GP ================= */
+(function(){
+  var host = document.getElementById('qs'); if (!host) return;
+  var KEY = 'sdh-ketosis-v1';
+  var Q = [
+    'Do any of my medicines need changing first, especially insulin, a sulfonylurea or an SGLT2 inhibitor?',
+    'Can I have my cholesterol and triglycerides checked now, and again in about three months?',
+    'Is there any reason I shouldn’t, given my kidneys, my liver or a history of kidney stones?',
+    'Should I measure ketones, and what reading should make me call you?',
+    'What would count as this working for me, and when should we review it?',
+    'Would a referral to an Accredited Practising Dietitian help me do this properly?'
+  ];
+  var sel = Q.map(function(){ return false; });
+  try { var v = JSON.parse(localStorage.getItem(KEY) || 'null'); if (v && Array.isArray(v.q)) sel = Q.map(function(_, i){ return !!v.q[i]; }); } catch(e){}
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify({q: sel})); } catch(e){} }
+  host.innerHTML = Q.map(function(q, i){
+    return '<button type="button" class="q" role="checkbox" aria-checked="false" data-i="'+i+'"><span class="bx" aria-hidden="true"><svg><use href="#ic-check"/></svg></span><span>'+q+'</span></button>';
+  }).join('');
+  var cnt = document.getElementById('qCnt'), msg = document.getElementById('qMsg'), all = document.getElementById('allQ');
+  function render(){
+    var n = 0;
+    Array.prototype.forEach.call(host.children, function(b, i){ b.setAttribute('aria-checked', String(sel[i])); if (sel[i]) n++; });
+    cnt.textContent = n + ' selected';
+    all.querySelector('span').textContent = n === Q.length ? 'Clear all' : 'Select all';
+  }
+  host.addEventListener('click', function(e){ var b = e.target.closest('.q'); if (!b) return; var i = +b.dataset.i; sel[i] = !sel[i]; msg.textContent = ''; save(); render(); });
+  all.addEventListener('click', function(){ var on = sel.some(function(x){ return !x; }); sel = sel.map(function(){ return on; }); msg.textContent = ''; save(); render(); });
+  document.getElementById('copyQ').addEventListener('click', function(){
+    var pick = Q.filter(function(_, i){ return sel[i]; });
+    if (!pick.length) pick = Q.slice();
+    var L = ['Questions for my GP: ketogenic diet or fasting', ''];
+    pick.forEach(function(q, i){ L.push((i+1) + '. ' + q); });
+    L.push('', 'From selfdriven.health/ketosis');
+    var s = L.join('\n');
+    var ok = function(){ msg.textContent = 'Copied.'; };
+    var fallback = function(){
+      var ta = document.getElementById('copyFallback');
+      if (!ta){ ta = document.createElement('textarea'); ta.id = 'copyFallback'; ta.className = 'copy-fallback'; ta.setAttribute('aria-label','Your questions to copy'); msg.parentNode.parentNode.insertBefore(ta, msg.parentNode.nextSibling); }
+      ta.value = s; ta.focus(); ta.select();
+      msg.textContent = 'Selected below. Copy it with your keyboard or long-press.';
+    };
+    try { navigator.clipboard.writeText(s).then(ok, fallback); } catch(e){ fallback(); }
+  });
+  render();
+})();
+</script>
+
+<script>
+/* selfdriven.health chrome: cursor + logo dot wave */
+(function(){
+  var cur = document.getElementById('cur');
+  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    var HOT = 'a,button,label,summary,[role="button"],[role="checkbox"],[role="tab"],input[type=range]';
+    var OFF = 'textarea';
+    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
+    document.addEventListener('mouseover', function(e){
+      var t = e.target; if (!t || !t.closest) return;
+      cur.classList.toggle('big', !!t.closest(HOT));
+      cur.classList.toggle('off', !!t.closest(OFF));
+    });
+    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
+  }
+  var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
+  Array.prototype.forEach.call(dotsList, function(dots){
+    function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
+    if (dots.closest('.sd-nav')) { if (document.readyState === 'complete') wave(); else window.addEventListener('load', wave); }
+    (dots.parentNode || dots).addEventListener('mouseenter', wave);
+  });
+})();
+</script>
+
+</body>
+</html>
