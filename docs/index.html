@@ -269,8 +269,8 @@ section[id]{scroll-margin-top:84px}
 .pt-soon{background:rgba(255,255,255,.06);color:var(--muted)}
 .pcard.soon{background:transparent;border:1.5px dashed var(--border2)}
 .pcard.soon:hover{transform:none;box-shadow:none}
-/* Coming next fills the last cell while live guides = 3n+2 (14 now); use grid-column:1/-1 when live guides = 3n */
-@media (min-width:921px){.pcards .pcard.soon{grid-column:auto}}
+/* Coming next fills the last cell while live guides = 3n+2; use grid-column:1/-1 when live guides = 3n (15 now) */
+@media (min-width:921px){.pcards .pcard.soon{grid-column:1/-1}}
 .soon-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:10px}
 .soon-list li{display:inline-flex;align-items:center;gap:8px;border:1.5px dashed var(--border2);border-radius:var(--pill);padding:6px 13px;font-size:13px;color:var(--soft)}
 .soon-list i{width:7px;height:7px;border-radius:50%;display:inline-block}
@@ -518,6 +518,7 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
             <li><a href="/anti-inflammatory">Anti-inflammatory bowls</a><span class="st on">Live</span></li>
             <li><a href="/good-gut-smoothies">Good gut smoothies</a><span class="st on">Live</span></li>
             <li><a href="/probiotics">Probiotics</a><span class="st on">Live</span></li>
+            <li><a href="/ketosis">Ketosis</a><span class="st on">Live</span></li>
             <li><a href="/fascia">Fascia and movement</a><span class="st on">Live</span></li>
             <li><a href="/eye-movement">Eye movement routine</a><span class="st on">Live</span></li>
             <li><a href="/vagus-nerve">Vagus nerve</a><span class="st on">Live</span></li>
@@ -711,6 +712,12 @@ footer{padding:52px 24px 40px;border-top:1px solid var(--border);display:flex;fl
           <h3>AI and your test results</h3>
           <p>How to ask an AI chatbot about your blood, stool or DNA results without giving away who you are or trusting a wrong answer.</p>
           <div class="pmeta"><span class="mono">Prompt builder · 6 checks</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
+        </a>
+        <a class="pcard rev" href="/ketosis">
+          <div class="ptags"><span class="ptag pt-move">Physical</span></div>
+          <h3>Ketosis</h3>
+          <p>How your body switches from glucose to ketones, what blood ketone numbers mean, and why ketosis isn’t ketoacidosis. Twenty keto claims graded, who should check first, and questions for your GP.</p>
+          <div class="pmeta"><span class="mono">Ketone reader · 20 claims</span><span class="go">Open guide <svg class="i" width="15" height="15"><use href="#ic-arrow-right"/></svg></span></div>
         </a>
         <div class="pcard soon rev">
           <div class="ptags"><span class="ptag pt-soon">Planned</span></div>

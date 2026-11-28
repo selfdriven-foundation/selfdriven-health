@@ -360,7 +360,7 @@ h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 }
 @media (max-width:420px){.hstats{gap:8px}.hstat{padding:12px}.hstat b{font-size:19px}.fm-top .now{font-size:28px}}
 
-/* ---------- selfdriven.health chrome: nav, cursor, footer (shared by every guide) ---------- */
+/* ---------- selfdriven.health chrome: nav, footer ---------- */
 .sd-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:rgba(9,9,15,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
 .sd-nav.sd-fixed{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px)}
 .sd-nav-in{max-width:1100px;margin:0 auto;padding-inline:24px;min-height:63px;display:flex;align-items:center;gap:14px}
@@ -388,15 +388,7 @@ h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 @media (max-width:420px){.sd-nav-in{gap:10px}.sd-nav .sd-logo{font-size:17px;gap:8px}}
 body>main,.sd-foot{position:relative;z-index:1}
 
-#cur{display:none}
-@media (hover:hover) and (pointer:fine){
-  body,a,button,label,summary,[role="button"],[role="checkbox"],[role="tab"],input[type=range]{cursor:none}
-  textarea{cursor:text}
-  #cur{display:block;opacity:0;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--curious);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .18s,height .18s,margin .18s,opacity .18s;will-change:transform}
-  #cur.on{opacity:1}
-  #cur.on.big{width:52px;height:52px;margin:-26px 0 0 -26px;opacity:.45}
-  #cur.off{opacity:0!important}
-}
+button,summary,[role="checkbox"],input[type=range]{cursor:pointer}
 
 .sd-foot{margin-top:104px;padding:56px 16px 44px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--bg);color:var(--muted)}
 .sd-foot .sd-logo{font-size:20px;margin-bottom:4px}
@@ -411,7 +403,7 @@ body>main,.sd-foot{position:relative;z-index:1}
 .sd-init a:hover{color:var(--curious);border-color:var(--curious)}
 .sd-note{font-family:var(--sans);font-size:12.5px;color:var(--muted);max-width:640px;line-height:1.6;margin:10px 0 0}
 .sd-note b{color:var(--text);font-weight:600}
-@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}#cur{transition:none}}
+@media (prefers-reduced-motion:reduce){.markdots.wave i{animation:none!important}}
 </style>
 </head>
 <body>
@@ -451,8 +443,6 @@ body>main,.sd-foot{position:relative;z-index:1}
   <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
   <symbol id="ic-battery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/><line x1="6" x2="6" y1="11" y2="13"/><line x1="10" x2="10" y1="11" y2="13"/></symbol>
 </svg>
-
-<div id="cur" aria-hidden="true"></div>
 
 <header class="sd-nav sd-fixed" id="sdNav">
   <div class="sd-nav-in">
@@ -1101,20 +1091,8 @@ body>main,.sd-foot{position:relative;z-index:1}
 </script>
 
 <script>
-/* selfdriven.health chrome: cursor + logo dot wave */
+/* selfdriven.health chrome: logo dot wave */
 (function(){
-  var cur = document.getElementById('cur');
-  if (cur && window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
-    var HOT = 'a,button,label,summary,[role="button"],[role="checkbox"],[role="tab"],input[type=range]';
-    var OFF = 'textarea';
-    document.addEventListener('mousemove', function(e){ cur.classList.add('on'); cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)'; }, {passive:true});
-    document.addEventListener('mouseover', function(e){
-      var t = e.target; if (!t || !t.closest) return;
-      cur.classList.toggle('big', !!t.closest(HOT));
-      cur.classList.toggle('off', !!t.closest(OFF));
-    });
-    document.documentElement.addEventListener('mouseleave', function(){ cur.classList.remove('on'); });
-  }
   var dotsList = document.querySelectorAll('.sd-nav .markdots, .sd-foot .markdots');
   Array.prototype.forEach.call(dotsList, function(dots){
     function wave(){ dots.classList.remove('wave'); void dots.offsetWidth; dots.classList.add('wave'); }
